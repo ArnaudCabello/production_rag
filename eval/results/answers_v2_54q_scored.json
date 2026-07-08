@@ -1,0 +1,488 @@
+[
+  {
+    "id": "q01",
+    "category": "factual",
+    "question": "What is ReAct and what does it prompt language models to do?",
+    "reference": "ReAct is a paradigm that prompts LLMs to generate both verbal reasoning traces and task-specific actions in an interleaved manner, so reasoning helps the model plan and act, and actions let it gather information from external sources.",
+    "answer": "ReAct is a novel prompt-based paradigm introduced to synergize reasoning and acting in language models for general task solving. It prompts LLMs to generate both verbal reasoning traces and actions pertaining to a task in an interleaved manner, which allows the model to perform dynamic reasoning to create, maintain, and adjust high-level plans for acting, while also interacting with the external environments to incorporate additional information into reasoning [1][4].",
+    "key_match": true,
+    "judge": "correct"
+  },
+  {
+    "id": "q02",
+    "category": "factual",
+    "question": "Which base language model was used for the main experiments in the ReAct paper?",
+    "reference": "PaLM-540B (a frozen large language model), with some GPT-3 results in the appendix.",
+    "answer": "The main experiments in the ReAct paper were done on PaLM (Chowdhery et al., 2022) [1].",
+    "key_match": true,
+    "judge": "partial"
+  },
+  {
+    "id": "q03",
+    "category": "factual",
+    "question": "On which four benchmarks was ReAct evaluated?",
+    "reference": "HotpotQA (question answering), FEVER (fact verification), ALFWorld (text-based game), and WebShop (webpage navigation).",
+    "answer": "ReAct was evaluated on four benchmarks: question answering (HotPotQA), fact verification (Fever), text-based game (ALFWorld), and webpage navigation (WebShop) [1][2].",
+    "key_match": true,
+    "judge": "correct"
+  },
+  {
+    "id": "q04",
+    "category": "factual",
+    "question": "By what absolute success rate does ReAct outperform imitation and reinforcement learning methods on ALFWorld and WebShop?",
+    "reference": "By an absolute 34% on ALFWorld and 10% on WebShop.",
+    "answer": "ReAct outperforms imitation and reinforcement learning methods by an absolute success rate of 34% on ALFWorld and by an absolute success rate of 10% on WebShop [2][3].",
+    "key_match": true,
+    "judge": "correct"
+  },
+  {
+    "id": "q05",
+    "category": "factual",
+    "question": "What are the three action types in the Wikipedia web API designed for ReAct?",
+    "reference": "search[entity] (returns first 5 sentences of the entity page or suggests similar entities), lookup[string] (returns the next sentence containing the string, like Ctrl+F), and finish[answer] (finishes the task with the answer).",
+    "answer": "The three action types in the Wikipedia web API designed for ReAct are:\n1. `search [entity]`, which returns the first 5 sentences from the corresponding entity wiki page if it exists, or else suggests top-5 similar entities from the Wikipedia search engine,\n2. `lookup [string]`, which returns the next sentence in the page containing the specified string, simulating the Ctrl+F functionality on the browser,\n3. `finish [answer]`, which finishes the current task with the given answer.\n\nThese are cited from source [1].",
+    "key_match": true,
+    "judge": "correct"
+  },
+  {
+    "id": "q06",
+    "category": "factual",
+    "question": "How many in-context exemplar cases were selected from the training sets for HotpotQA and for Fever?",
+    "reference": "6 cases for HotpotQA and 3 for Fever, manually composed into ReAct-format trajectories.",
+    "answer": "For HotpotQA, 6 cases were randomly selected from the training set, and for Fever, 3 cases were selected [1].",
+    "key_match": true,
+    "judge": "correct"
+  },
+  {
+    "id": "q07",
+    "category": "factual",
+    "question": "In ReAct, what is a 'thought' and how does it differ from other actions?",
+    "reference": "A thought (reasoning trace) is an action in the language space that does not affect the external environment and gets no observation feedback; it composes useful information by reasoning over the current context to support future reasoning or acting.",
+    "answer": "In ReAct, a 'thought', also referred to as a reasoning trace, is an action \\( \\hat{a}_t \\in L \\) in the space of language that does not affect the external environment and thus leads to no observation feedback. Instead, a thought aims to compose useful information by reasoning over the current context \\( c_t \\), and updates the context \\( c_t +1 = (c_t, \\hat{a}_t) \\) to support future reasoning or acting [1]. Unlike other actions that directly influence the environment, thoughts are internal reasoning steps that help the agent plan and adjust its course of action based on the accumulated context [1].",
+    "key_match": true,
+    "judge": "correct"
+  },
+  {
+    "id": "q08",
+    "category": "factual",
+    "question": "How many steps were ReAct trajectories limited to on HotpotQA and FEVER before backing off to CoT-SC?",
+    "reference": "7 steps for HotpotQA and 5 steps for FEVER.",
+    "answer": "ReAct trajectories were limited to 7 steps on HotpotQA and 5 steps on FEVER before backing off to CoT-SC [1].",
+    "key_match": true,
+    "judge": "correct"
+  },
+  {
+    "id": "q09",
+    "category": "factual",
+    "question": "How many trajectories were used to finetune the smaller PaLM models, and how were they obtained?",
+    "reference": "3,000 trajectories with correct answers generated by ReAct itself (a bootstrapping approach similar to STaR), used to finetune PaLM-8B and PaLM-62B.",
+    "answer": "The smaller PaLM models were finetuned using 3,000 trajectories with correct answers generated by ReAct [1].",
+    "key_match": true,
+    "judge": "partial"
+  },
+  {
+    "id": "q10",
+    "category": "factual",
+    "question": "What is ALFWorld?",
+    "reference": "A synthetic text-based game aligned with the embodied ALFRED benchmark, with 6 task types where an agent achieves high-level household goals via text actions.",
+    "answer": "ALFWorld (Shridhar et al., 2020b) is a synthetic text-based game designed to align with the embodied ALFRED benchmark (Shridhar et al., 2020a). It includes 6 types of tasks in which an agent needs to achieve a high-level goal (e.g., examine paper under desklamp) by navigating and interacting with a simulated household via text actions (e.g., go to coffeetable 1, take paper 2, use desklamp 1). [1]",
+    "key_match": true,
+    "judge": "correct"
+  },
+  {
+    "id": "q11",
+    "category": "factual",
+    "question": "How many products and human instructions does the WebShop environment contain?",
+    "reference": "1.18 million real-world products and 12k human instructions.",
+    "answer": "The WebShop environment contains 1.18M real-world products and 12k human instructions [1].",
+    "key_match": true,
+    "judge": "correct"
+  },
+  {
+    "id": "q12",
+    "category": "factual",
+    "question": "What frequent error pattern specific to ReAct was observed on HotpotQA?",
+    "reference": "The model repetitively generates previous thoughts and actions, failing to reason its way out of the loop; this was categorized as reasoning error.",
+    "answer": "The frequent error pattern specific to ReAct observed on HotpotQA is \"in which the model repetitively generates the previous thoughts and actions,\" categorized as part of'reasoning error' because the model fails to reason about what the proper next action to take is and jumps out of the loop [1].",
+    "key_match": true,
+    "judge": "correct"
+  },
+  {
+    "id": "q13",
+    "category": "factual",
+    "question": "What percentage of ReAct's error cases on HotpotQA were caused by non-informative search results?",
+    "reference": "23% of the error cases.",
+    "answer": "For ReAct's error cases on HotpotQA, noninformative search results account for 23%. This is directly stated in source [1].",
+    "key_match": true,
+    "judge": "correct"
+  },
+  {
+    "id": "q14",
+    "category": "factual",
+    "question": "What were the false positive (hallucinated) success rates of CoT versus ReAct on HotpotQA?",
+    "reference": "CoT had a 14% false positive rate versus 6% for ReAct.",
+    "answer": "The false positive (hallucinated) success rates for CoT and ReAct on HotpotQA were 14% for CoT and 6% for ReAct [2].",
+    "key_match": true,
+    "judge": "correct"
+  },
+  {
+    "id": "q15",
+    "category": "factual",
+    "question": "After finetuning with just 3,000 examples, how did PaLM-8B ReAct compare to larger prompted models?",
+    "reference": "Finetuned PaLM-8B ReAct outperformed all PaLM-62B prompting methods, and finetuned PaLM-62B ReAct outperformed all PaLM-540B prompting methods.",
+    "answer": "After finetuning with just 3,000 examples, PaLM-8B ReAct outperformed all PaLM-62B prompting methods [1].",
+    "key_match": true,
+    "judge": "partial"
+  },
+  {
+    "id": "q16",
+    "category": "factual",
+    "question": "Which prior work does the ReAct paper identify as the closest to ReAct in using an inner monologue for embodied agents, and what is its key limitation?",
+    "reference": "Inner Monologue (Huang et al., 2022b); its 'inner monologue' is limited to observations of the environment state and what needs to be completed, lacking flexible high-level reasoning like goal decomposition and commonsense.",
+    "answer": "The ReAct paper identifies Inner Monologue (IM) from Huang et al. (2022b) as the closest prior work to ReAct in using an inner monologue for embodied agents. The key limitation of IM is that its 'inner monologue' is limited to observations of the environment state and what needs to be completed by the agent for the goal to be satisfied, whereas ReAct allows for more flexible and sparse reasoning that includes diverse reasoning types [1].",
+    "key_match": true,
+    "judge": "correct"
+  },
+  {
+    "id": "q17",
+    "category": "factual",
+    "question": "By how much did ReAct outperform the IM-style prompting ablation (ReAct-IM) on ALFWorld overall?",
+    "reference": "71 vs 53 overall success rate.",
+    "answer": "ReAct outperformed the IM-style prompting ablation (ReAct-IM) on ALFWorld by 18 percentage points overall, with success rates of 71% for ReAct and 53% for ReAct-IM [1].",
+    "key_match": true,
+    "judge": "correct"
+  },
+  {
+    "id": "q18",
+    "category": "factual",
+    "question": "What NSF grant number supported the ReAct work?",
+    "reference": "National Science Foundation Grant No. 2107048.",
+    "answer": "The NSF grant number that supported the ReAct work is No. 2107048 [1].",
+    "key_match": true,
+    "judge": "correct"
+  },
+  {
+    "id": "q19",
+    "category": "abstract",
+    "question": "Summarize the main idea and headline results of this paper.",
+    "reference": "The paper introduces ReAct, which interleaves reasoning traces and actions in LLMs for greater synergy; on HotpotQA and Fever it reduces hallucination and error propagation by interacting with a Wikipedia API, and on ALFWorld and WebShop it beats imitation/RL methods by 34% and 10% absolute success rate with only one or two in-context examples.",
+    "answer": "The paper introduces ReAct, a new paradigm that integrates reasoning and acting within language models to enhance performance on various tasks, particularly in few-shot learning scenarios [1]. Key results include ReAct's consistent outperformance of an acting-only approach (Act) across benchmarks such as HotpotQA and Fever, highlighting the effectiveness of guided reasoning in synthesizing accurate final answers [2]. Additionally, the study reveals specific success rates where ReAct achieves a true positive success rate of 94%, compared to 86% for a chain-of-thought (CoT) method, indicating superior performance in generating correct reasoning traces [2].",
+    "key_match": false,
+    "judge": "partial"
+  },
+  {
+    "id": "q20",
+    "category": "abstract",
+    "question": "According to the abstract, on which tasks does ReAct overcome hallucination and error propagation issues of chain-of-thought reasoning, and how?",
+    "reference": "On question answering (HotpotQA) and fact verification (Fever), by interacting with a simple Wikipedia API and generating human-like, interpretable task-solving trajectories.",
+    "answer": "According to the abstract, ReAct overcomes hallucination and error propagation issues of chain-of-thought reasoning on question answering (HotpotQA) and fact verification (Fever) tasks by interacting with a simple Wikipedia API and generating human-like task-solving trajectories that are more interpretable than baselines without reasoning traces [1].",
+    "key_match": true,
+    "judge": "correct"
+  },
+  {
+    "id": "q21",
+    "category": "table",
+    "question": "What HotpotQA exact-match score did the ReAct -> CoT-SC combined method achieve in Table 1?",
+    "reference": "35.1 EM on HotpotQA (the best prompting result on that task).",
+    "answer": "The ReAct \u2192 CoT-SC combined method achieved a HotpotQA (EM) score of 35.1 in Table 1 [1].",
+    "key_match": true,
+    "judge": "correct"
+  },
+  {
+    "id": "q22",
+    "category": "table",
+    "question": "In the ALFWorld task-specific results, what success rate did ReAct (best of 6) achieve on the Pick task?",
+    "reference": "92% on Pick.",
+    "answer": "ReAct (best of 6) achieved a success rate of 92% on the Pick task in the ALFWorld [2].",
+    "key_match": true,
+    "judge": "correct"
+  },
+  {
+    "id": "q23",
+    "category": "table",
+    "question": "What score and success rate did ReAct achieve on WebShop, and how does that compare to the human expert?",
+    "reference": "ReAct scored 66.6 with a 40.0% success rate; human experts scored 82.1 with 59.6% success.",
+    "answer": "ReAct achieved a score of 66.6 and a success rate (SR) of 40.0 on WebShop [1]. Comparatively, the human expert achieved a score of 82.1 and a success rate (SR) of 59.6 [1].",
+    "key_match": true,
+    "judge": "correct"
+  },
+  {
+    "id": "q24",
+    "category": "table",
+    "question": "According to the failure-mode analysis table, what fraction of CoT failures were due to hallucination, and what fraction for ReAct?",
+    "reference": "Hallucination accounted for 56% of CoT failures versus 0% for ReAct.",
+    "answer": "According to the failure-mode analysis table, 56% of CoT failures were due to hallucination, and 0% for ReAct [2].",
+    "key_match": true,
+    "judge": "correct"
+  },
+  {
+    "id": "q25",
+    "category": "semantic",
+    "question": "How does the method let the model change course when something unexpected happens during a task?",
+    "reference": "Reasoning traces (thoughts) let the model handle exceptions and adjust its action plans according to the situation, e.g. tracking progress and updating plans in language.",
+    "answer": "The method lets the model change course based on specific heuristics:\n- **A) ReAct \u2192 CoT-SC**: When ReAct fails to return an answer within the given steps, it switches to CoT-SC. The steps are set to 7 for HotpotQA and 5 for FEVER.\n- **B) CoT-SC \u2192 ReAct**: When the majority answer among \\( n \\) CoT-SC samples occurs less than \\( n/2 \\) times, indicating uncertainty in internal knowledge, it switches back to ReAct.\n\nThese rules allow the model to adapt dynamically based on the task's progress and the confidence level of the generated answers. [1]",
+    "key_match": false,
+    "judge": "partial"
+  },
+  {
+    "id": "q26",
+    "category": "semantic",
+    "question": "Can a person step in and fix the agent's behavior while it is working on a task?",
+    "reference": "Yes \u2014 humans can control or correct the agent's behavior on the go by editing its thoughts (thought editing), as shown in Figure 5.",
+    "answer": "Yes, a person can step in and fix the agent's behavior while it is working on a task. According to the document, \"by simply removing a hallucinating sentence in Act 17 and adding some hints in Act 23, ReAct can be made to change its behavior drastically to align with these human thought edits and succeed in the task\" [3]. This indicates that human intervention can effectively correct the agent's behavior during task execution.",
+    "key_match": true,
+    "judge": "correct"
+  },
+  {
+    "id": "q27",
+    "category": "semantic",
+    "question": "Why is teaching a model to memorize facts considered worse than teaching it to look things up?",
+    "reference": "Finetuning Standard or CoT essentially teaches models to memorize potentially hallucinated knowledge facts, whereas finetuning ReAct or Act teaches models how to reason and act to access information from Wikipedia \u2014 a more generalizable skill.",
+    "answer": "Teaching a model to memorize facts is considered worse than teaching it to look things up because memorizing potentially hallucinated knowledge facts can lead to the model simply recalling incorrect or fabricated information. In contrast, teaching the model to (reason and) act to access information from a source like Wikipedia provides a more generalizable skill for knowledge reasoning, reducing reliance on potentially unreliable memorized data [1].",
+    "key_match": true,
+    "judge": "correct"
+  },
+  {
+    "id": "q28",
+    "category": "multi_chunk",
+    "question": "What success rates did ReAct achieve on ALFWorld (best trial) and on WebShop, and against which baselines?",
+    "reference": "On ALFWorld the best ReAct trial reached 71% average success (vs best Act 45% and BUTLER 37%); on WebShop ReAct reached a 40.0% success rate, about 10% absolute above the previous best IL/IL+RL methods.",
+    "answer": "ReAct achieved an average success rate of 71% on ALFWorld in its best trial, significantly outperforming the best Act (45%) and BUTLER (37%) trials [1]. On WebShop, ReAct achieved a success rate improvement of 10% over the previous best success rate, though the exact numerical success rate is not provided in the given sources [1][4].",
+    "key_match": true,
+    "judge": "partial"
+  },
+  {
+    "id": "q29",
+    "category": "semantic",
+    "question": "What safety concerns do the authors raise about connecting language models to the outside world?",
+    "reference": "Hooking an LLM to external environments has potential dangers such as looking up inappropriate or private information or taking harmful actions; their experiments limited interaction to safe websites (Wikipedia, WebShop) with no dangerous actions possible.",
+    "answer": "The authors raise concerns that connecting language models to the outside world could involve risks such as accessing inappropriate or private information, or performing harmful actions in the environment [1].",
+    "key_match": true,
+    "judge": "correct"
+  },
+  {
+    "id": "q30",
+    "category": "factual",
+    "question": "Who is the first author of the ReAct paper and where was the work done?",
+    "reference": "Shunyu Yao (Princeton University), with the work done during a Google internship in collaboration with Google Research, Brain team.",
+    "answer": "The first author of the ReAct paper is Shunyu Yao, and the work was done at both the Department of Computer Science, Princeton University and Google Research, Brain team. [4]",
+    "key_match": true,
+    "judge": "partial"
+  },
+  {
+    "id": "c01",
+    "category": "factual",
+    "question": "What oxidation law do the HfCxN1-x ceramics follow at 1800 degrees C, and whose theory explains it?",
+    "reference": "The oxidation kinetics basically follow a parabolic law, consistent with Wagner's theory, as shown by parabolic fits to the weight-gain data.",
+    "answer": "The HfCxN1-x ceramics follow a parabolic oxidation law at 1800 degrees C, as explained by Wagner's theory [2][3].",
+    "key_match": true,
+    "judge": "correct"
+  },
+  {
+    "id": "c02",
+    "category": "factual",
+    "question": "Which HfCxN1-x composition showed the best oxidation resistance at 1800 degrees C?",
+    "reference": "HfC0.3N0.7 \u2014 oxidation rate constants decreased with increasing nitrogen content, and HfC0.3N0.7 had the minimum kp.",
+    "answer": "The HfC0.3N0.7 sample showed the best oxidation resistance at 1800 degrees C, as indicated by its minimum k p value among the tested compositions [5].",
+    "key_match": true,
+    "judge": "correct"
+  },
+  {
+    "id": "c03",
+    "category": "factual",
+    "question": "What anomalous oxidation behavior did the HfC0.7N0.3 sample exhibit?",
+    "reference": "It deviated from the parabolic law: after 20 minutes of oxidation it showed rapid weight LOSS of \u221276.85 mg/cm\u00b2, attributed to accelerated oxidation from oxide film spallation.",
+    "answer": "The HfC0.7N0.3 sample exhibited an anomalous behavior, deviating from the established parabolic law. A rapid weight loss was observed after oxidation for 20 min, with a weight loss of GLYPH<0> 76.85 mg/cm\u00b2, potentially attributed to accelerated oxidation resulting from oxide film spallation [2][3].",
+    "key_match": true,
+    "judge": "partial"
+  },
+  {
+    "id": "c04",
+    "category": "factual",
+    "question": "Why did the SiB6-containing composite oxidize worse than the SiC-containing one?",
+    "reference": "HfC0.5N0.5-20 vol% SiB6 generates the volatilizable product B2O3, which results in poorer oxidation behavior compared to HfC0.5N0.5-20 vol% SiC.",
+    "answer": "The HfC0.5N0.5-20 vol% SiB6 sample oxidized worse than the HfC0.5N0.5-20 vol% SiC sample because it produced a significant volume of high vapor pressure B2O3 phase during oxidation, leading to substantial volatilization under high temperatures. This volatilization resulted in a reduction in the ultra-high temperature oxidation resistance of the HfC0.5N0.5-20 vol% SiB6 sample [3].",
+    "key_match": true,
+    "judge": "correct"
+  },
+  {
+    "id": "c05",
+    "category": "factual",
+    "question": "What happens to the SiC-containing ceramic when oxidized at low air pressure?",
+    "reference": "Low pressure leads to active oxidation of SiC: gaseous SiO forms and easily evaporates, gradually degrading the protective oxide layer \u2014 at 5 kPa the sample even lost weight (\u22122.56 mg/cm\u00b2).",
+    "answer": "When the HfC0.5N0.5-20 vol% SiC ceramic is oxidized at low air pressure, it undergoes active oxidation of SiC. This leads to the formation of gaseous SiO, which can easily evaporate, causing a gradual degradation of the protective oxide layer. Specifically, at 5 kPa air pressure, the sample transitions from oxidative weight gain to oxidative weight loss due to the promotion of active oxidation of SiC. This transition results in the generation of more gaseous SiO products rather than the molten SiO2 phase, which rapidly escapes and creates numerous pores in the oxide layer, thereby exacerbating the oxidation process [2][5].",
+    "key_match": true,
+    "judge": "partial"
+  },
+  {
+    "id": "c06",
+    "category": "factual",
+    "question": "What weight gains did HfC0.5N0.5 show after oxidation at 1800 degrees C in 5, 10, and 20 kPa air?",
+    "reference": "9.34, 12.33, and 13.46 mg/cm\u00b2 respectively \u2014 a clear trend of increasing weight gain with increasing air pressure.",
+    "answer": "After oxidation at 1800 degrees C for 30 minutes in 5 kPa, 10 kPa, and 20 kPa air, HfC0.5N0.5 showed weight gains of 9.34 mg/cm\u00b2, 12.33 mg/cm\u00b2, and 13.46 mg/cm\u00b2, respectively [1].",
+    "key_match": true,
+    "judge": "correct"
+  },
+  {
+    "id": "h01",
+    "category": "factual",
+    "question": "Which Hf1-xNbxC composition exhibited the best anti-oxidation property at 1700 degrees C for 30 h, and what oxide film did it form?",
+    "reference": "Hf0.8Nb0.2C \u2014 it formed a dense oxide film of bulky HfO2 bonded by lathy Nb2Hf8O21.",
+    "answer": "At 1700 degrees C for 30 h, Hf0.8Nb0.2C exhibited the best anti-oxidation property and formed a dense oxide film consisting of bulky HfO2 bonded by lathy Nb2Hf8O21 [5].",
+    "key_match": true,
+    "judge": "correct"
+  },
+  {
+    "id": "h02",
+    "category": "factual",
+    "question": "Which composition developed a free-standing single-phase HfO2 film under the oxyacetylene flame, and under what conditions?",
+    "reference": "Hf0.9Nb0.1C developed a dense 'free-standing' single-phase HfO2 film under an oxyacetylene flame at 4.2 MW/m\u00b2 for 40 s \u00d7 3, demonstrating excellent ablation resistance.",
+    "answer": "Hf0.9Nb0.1C developed a dense 'free-standing' single-phase HfO2 film under an oxyacetylene flame at 4.2 MW/m\u00b2 for 40 s \u00d7 3 [2].",
+    "key_match": true,
+    "judge": "correct"
+  },
+  {
+    "id": "h03",
+    "category": "table",
+    "question": "In the OA-III oxyacetylene ablation system, what maximum surface temperatures correspond to heat fluxes of 2.4 and 4.2 MW/m\u00b2?",
+    "reference": "2.4 MW/m\u00b2 gives Tmax of 2300 degrees C (120 s ablation); 4.2 MW/m\u00b2 gives 2700 degrees C (40 s \u00d7 3).",
+    "answer": "In the OA-III oxyacetylene ablation system, the maximum surface temperatures corresponding to heat fluxes of 2.4 MW/m\u00b2 and 4.2 MW/m\u00b2 are 2300 \u00b0C and 2700 \u00b0C, respectively [1].",
+    "key_match": true,
+    "judge": "partial"
+  },
+  {
+    "id": "h04",
+    "category": "factual",
+    "question": "At what temperature does NbC oxidize into a liquid state in air?",
+    "reference": "NbC oxidises into a liquid state at 1500 degrees C in air, and produces a dense filmy structure under an oxyacetylene flame in the 2000-2100 degrees C range.",
+    "answer": "NbC oxidizes into a liquid state at 1500 \u00ba C in air [14].",
+    "key_match": true,
+    "judge": "partial"
+  },
+  {
+    "id": "h05",
+    "category": "semantic",
+    "question": "How does adding niobium carbide help hafnium carbide protect against extreme heat over a wide temperature range?",
+    "reference": "NbC modification produces niobium oxides that bond and densify the HfO2 scale (e.g. Nb2Hf8O21/Nb2Hf6O17 phases), raising the antioxidant temperature limit (>=1700 C for Hf1-xNbxC with x<=0.2) and enabling dense protective films from static oxidation up to oxyacetylene ablation conditions.",
+    "answer": "Adding niobium carbide (NbC) to hafnium carbide (HfC) helps improve its protection against extreme heat over a wide temperature range in several ways:\n\n1. **Formation of Dense Oxide Films**: When HfC is modified with NbC, it can form a dense single-phase HfO2 film on the surface after ablation, which acts as a barrier to block the inward diffusion of oxygen [1].\n\n2. **Enhanced Morphology Control**: The NbC content influences the morphology and size of HfO2 grains. At specific concentrations, it promotes the formation of a dense HfO2 film rather than a porous one. For example, at x \u2264 0.2, the presence of NbC prevents the formation of an Nb-O liquid film, leading to the creation of small HfO2 cellular crystals that eventually form a dense HfO2 film at high temperatures [1].\n\n3. **Temperature Gradient Management**: The NbC-modified HfC (Hf1-xNbxC) can generate a temperature gradient that facilitates the formation of flaky Nb2Hf6O17 oriented along the surface normal direction, which contributes to better thermal protection [1].\n\nThese modifications enhance the material's ability to withstand oxidation and maintain structural integrity across a broad temperature spectrum, making it more effective in extreme environments.\n\n[1]",
+    "key_match": true,
+    "judge": "partial"
+  },
+  {
+    "id": "s01",
+    "category": "factual",
+    "question": "What three compositions did Singh et al. synthesize and by what method?",
+    "reference": "(Zr,Ti)B2, (Zr,Ti,Ta)C, and dual-phase (Zr,Ti,Ta)C,B2, synthesized by spark plasma sintering at 1850 degrees C, 40 MPa for 30 min, achieving ~99% densification.",
+    "answer": "Singh et al. synthesized three compositions: (i) (Zr,Ti)B2, (ii) (Zr,Ti,Ta)C, and (iii) dual-phase (Zr,Ti,Ta)C,B2, via spark plasma sintering at 1850 \u00b0C, 40 MPa for 30 min [2].",
+    "key_match": true,
+    "judge": "correct"
+  },
+  {
+    "id": "s02",
+    "category": "factual",
+    "question": "How do the flexural strength and fracture toughness of the dual-phase (Zr,Ti,Ta)C,B2 compare to single-phase (Zr,Ti)B2?",
+    "reference": "Dual phase: ~435 MPa flexural strength and 3.7 \u00b1 0.3 MPa\u00b7m^1/2 toughness, versus ~212 MPa and 2.4 \u00b1 0.3 MPa\u00b7m^1/2 for (Zr,Ti)B2 \u2014 a large enhancement, and very close to the single-phase carbide (~443 MPa).",
+    "answer": "The dual-phase (Zr,Ti,Ta)C,B2 has a flexural strength of 435 \u00b1 22 MPa, which is almost double that of the single-phase (Zr,Ti)B2, whose flexural strength is 212 \u00b1 16 MPa [4].\n\nRegarding fracture toughness, the dual-phase (Zr,Ti,Ta)C,B2 shows a value of 3.7 \u00b1 0.3 MPa.m\\(^{1/2}\\), whereas the single-phase (Zr,Ti)B2 has a fracture toughness of 2.4 \u00b1 0.3 MPa.m\\(^{1/2}\\) [2][5].",
+    "key_match": true,
+    "judge": "correct"
+  },
+  {
+    "id": "s03",
+    "category": "factual",
+    "question": "What are the boride and carbide phase fractions in the dual-phase (Zr,Ti,Ta)C,B2 composite?",
+    "reference": "About 42% boride and 58% carbide.",
+    "answer": "The volume fractions of the boride and carbide phases in the dual-phase (Zr,Ti,Ta)C,B2 composite are 42 % boride and 58 % carbide [1].\n\nAdditionally, phase analysis based on XRD peak intensities and areas under the peaks indicates that the carbide phase fraction is ~68 % and the boride phase fraction is ~32 % [3]. However, the primary reference for phase fractions is the direct measurement via digital image processing, which states 42 % boride and 58 % carbide [1].",
+    "key_match": true,
+    "judge": "partial"
+  },
+  {
+    "id": "s04",
+    "category": "factual",
+    "question": "In the dual-phase composite, which elements segregate preferentially into which phase?",
+    "reference": "Ta segregates primarily into the carbide phase (~49%) while Ti enriches into the boride phase (~44%); Zr distributes into both.",
+    "answer": "In the dual-phase composite, Ta primarily segregates into the carbide phase (~49%) while Ti enriches in the boride phase (~44%). Additionally, according to Smith II et al. [26], the boride phase is dominated by Nb and Ti, while the carbide phase is enriched in Ta and Hf. [1][2]",
+    "key_match": true,
+    "judge": "correct"
+  },
+  {
+    "id": "s05",
+    "category": "table",
+    "question": "What grain sizes were measured for (Zr,Ti)B2 versus the dual-phase composite?",
+    "reference": "(Zr,Ti)B2 grains are ~12 um (12.0 \u00b1 7.2), while the dual-phase (Zr,Ti,Ta)C,B2 is much finer at ~2.5 um (boride) / ~2.1 um (carbide) \u2014 microstructural refinement from the dual-phase design.",
+    "answer": "For (Zr,Ti)B2, the average grain size measured was 12.0 \u00b1 7.2 \u03bcm [1].\n\nFor the dual-phase (Zr,Ti,Ta)C,B2 composite, the average grain sizes were 2.1 \u00b1 2.0 \u03bcm for the carbide phase and 2.8 \u00b1 2.5 \u03bcm for the boride phase [1].",
+    "key_match": true,
+    "judge": "partial"
+  },
+  {
+    "id": "d01",
+    "category": "factual",
+    "question": "Which institution carried out the study on NbC-modified HfC ceramics?",
+    "reference": "Northwestern Polytechnical University (Carbon/Carbon Composites Research Center, Xi'an, China) \u2014 the He, Li, and Chang paper.",
+    "answer": "The study on NbC-modified HfC ceramics was carried out by the Shaanxi Key Laboratory of Fiber Reinforced Light Composite Materials, Carbon/Carbon Composites Research Center, Northwestern Polytechnical University, Xi'an 710072, China [2].",
+    "key_match": true,
+    "judge": "correct"
+  },
+  {
+    "id": "x01",
+    "category": "cross_document",
+    "question": "Compare the sintering techniques and conditions used to densify the ceramics in these three studies (HfCxN1-x, Hf1-xNbxC, and the (Zr,Ti,Ta) boride-carbide).",
+    "reference": "Chen et al. hot-pressed HfCxN1-x at 1950 C, 30 MPa, 1 h in argon; He et al. used vacuum hot-pressed sintering (VHPS, ~2000 C, 40 MPa); Singh et al. used spark plasma sintering at 1850 C, 40 MPa, 30 min.",
+    "answer": "The sintering techniques and conditions used to densify the ceramics in the three studies mentioned are as follows:\n\n1. For the synthesis of HfCxN1-x and Hf1-xNbxC, the document does not provide specific details about the sintering technique and conditions used. Therefore, direct comparison cannot be made for these materials based on the given information [1][2].\n\n2. For the (Zr,Ti,Ta) boride-carbide composite, spark plasma sintering (SPS) was employed at 1850 \u00b0C, 40 MPa for 30 minutes, achieving approximately 99% densification [1][3].\n\nThus, while detailed information is available for the (Zr,Ti,Ta) boride-carbide composite, the specific sintering methods and conditions for HfCxN1-x and Hf1-xNbxC are not provided within the cited sources [1][2].",
+    "key_match": false,
+    "judge": "partial"
+  },
+  {
+    "id": "x02",
+    "category": "cross_document",
+    "question": "At what temperatures and durations were the hafnium-based ceramics oxidation-tested in the Chen and He studies?",
+    "reference": "Chen et al. oxidized HfCxN1-x at 1800 C for 30 minutes (heated at ~30 C/s in graphite crucibles); He et al. oxidized Hf1-xNbxC in static air at 1700 C for 30 hours.",
+    "answer": "The hafnium-based ceramics were oxidation-tested at 1800 \u25e6 C for 30 min in air according to the provided sections [2][3][5].",
+    "key_match": false,
+    "judge": "partial"
+  },
+  {
+    "id": "x03",
+    "category": "cross_document",
+    "question": "What different additive strategies do these papers use to improve the oxidation resistance of HfC-based ceramics?",
+    "reference": "Chen et al. use anionic modification \u2014 nitrogen doping (HfCxN1-x, resistance improves with N content) plus SiB6/SiC silicide additions that form molten SiO2/HfSiO4; He et al. use cationic modification \u2014 NbC additions whose niobium oxides bond and densify the HfO2 scale.",
+    "answer": "The papers describe two main additive strategies to improve the oxidation resistance of HfC-based ceramics:\n\n1. **Nitrogen Doping**: The introduction of nitrogen into HfC ceramics, forming HfC x N1x (where x = 0.3, 0.4, 0.5, 0.6, 0.7), enhances their oxidation resistance. This strategy involves altering the chemical composition to create a more stable oxide layer, which minimizes the effects of thermal shock and reduces oxygen permeability [1][4].\n\n2. **Incorporation of Silicon-Containing Compounds**: Adding silicon-containing compounds, primarily SiC, improves the oxidation resistance by promoting the formation of a protective glassy SiO2 layer. This strategy helps form a robust and dense oxide barrier, enhancing the network structure of the oxide layer and delaying the spallation and release of oxidation products [3][4].\n\nThese strategies aim to either modify the fundamental structure and properties of the ceramics through compositional changes or to introduce secondary phases that form protective layers during oxidation.",
+    "key_match": false,
+    "judge": "partial"
+  },
+  {
+    "id": "m01",
+    "category": "multimodal",
+    "question": "In the macro photographs of the Chen paper (Fig. 10), what do the oxidized samples look like after 10, 20 and 30 minutes, and which sample's surface bulges?",
+    "reference": "The photos show small square samples turned white by the oxide scale, arranged by composition and oxidation time on a red background; the HfC0.5N0.5-SiC and -SiB6 composites stay relatively smooth while pure HfC0.5N0.5's oxide layer bulges.",
+    "answer": "In the macro photographs of the Chen paper (Fig. 10), the oxidized samples' appearances after 10, 20, and 30 minutes are not explicitly detailed; instead, the figure illustrates the samples after oxidation in atmospheric air at 1800 \u00b0C for varying durations. However, it is noted that the presence of an oxide layer is evident on the surface of all samples. The HfC0.5N0.5-20SiC and HfC0.5N0.5-20SiB6 samples exhibit relatively smooth surface characteristics, whereas the oxide layer surface of the HfC0.5N0.5 samples displays a bulging effect [2].\n\nRegarding the specific times mentioned (10, 20, and 30 minutes), the text does not provide distinct descriptions for each time point but rather focuses on the general appearance and phase changes after oxidation at 1800 \u00b0C for 30 minutes. Therefore, the exact visual differences at 10, 20, and 30 minutes are not specified in the given sources [2].",
+    "key_match": true,
+    "judge": "partial"
+  },
+  {
+    "id": "m02",
+    "category": "multimodal",
+    "question": "Based on the optical images after 30 h oxidation at 1700 degrees C in the He paper (Fig. 4a), which samples show visible cracks and which look rough and porous?",
+    "reference": "HfC and Hf0.9Nb0.1C show visible cracks in their oxide scales (HfC's runs across the surface); Hf0.7Nb0.3C and Hf0.6Nb0.4C appear rough and porous, while Hf0.8Nb0.2C shows a filmy surface with a central bulge.",
+    "answer": "Based on the optical images after 30 h oxidation at 1700 degrees C in the He paper (Fig. 4a), HfC shows visible cracks, while Hf0.7Nb0.3C looks rough and porous [1][2].",
+    "key_match": true,
+    "judge": "partial"
+  },
+  {
+    "id": "m03",
+    "category": "multimodal",
+    "question": "In the He paper's post-ablation optical images (Fig. 7), how does the HfC sample's surface differ from Hf0.9Nb0.1C after the 4.2 MW/m\u00b2 test?",
+    "reference": "The HfC disc is fractured by multiple large cracks across its surface, while Hf0.9Nb0.1C shows a more continuous grey-white oxide film with far less cracking (its film ruptures only locally).",
+    "answer": "In the He paper's post-ablation optical images (Fig. 7), the HfC sample's surface fractures due to the stress mismatch during cyclic ablation at 4.2 MW/m\u00b2. In contrast, after the introduction of 10 mol% NbC, a dense oxide film forms on the Hf0.9Nb0.1C sample, indicating that the doping with NbC alleviates the stress mismatch [1].",
+    "key_match": false,
+    "judge": "partial"
+  },
+  {
+    "id": "m04",
+    "category": "multimodal",
+    "question": "In the EDS elemental maps of the dual-phase composite in the Singh paper (Fig. 2), which elements show complementary spatial distributions and what does that indicate?",
+    "reference": "Ta (yellow) and B (cyan) maps are complementary, and Ti co-locates with B: Ta preferentially segregates into the carbide phase and Ti enriches the boride phase, while Zr spreads across both \u2014 direct visual evidence of the dual-phase element partitioning.",
+    "answer": "In the EDS elemental maps of the dual-phase composite in the Singh paper (Fig. 2), Ta primarily segregated into the carbide phase (~49 %) while Ti enriched into the boride phase (~44 %) [1]. This indicates that there is a complementary spatial distribution of Ta and Ti, with Ta being more concentrated in the carbide phase and Ti being more concentrated in the boride phase.",
+    "key_match": true,
+    "judge": "partial"
+  }
+]
