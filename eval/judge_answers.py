@@ -42,15 +42,17 @@ def llm_judge(pairs):
     from transformers import AutoModelForCausalLM, AutoTokenizer
 
     tokenizer = AutoTokenizer.from_pretrained(JUDGE_MODEL)
-    model = AutoModelForCausalLM.from_pretrained(JUDGE_MODEL, torch_dtype=torch.bfloat16, device_map="auto")
+    model = AutoModelForCausalLM.from_pretrained(JUDGE_MODEL, dtype=torch.bfloat16, device_map="auto")
 
     verdicts = []
     for item in pairs:
         prompt = JUDGE_PROMPT.format(**item)
         messages = [{"role": "user", "content": prompt}]
-        inputs = tokenizer.apply_chat_template(messages, add_generation_prompt=True, return_tensors="pt").to(model.device)
-        output = model.generate(inputs, max_new_tokens=8, do_sample=False, pad_token_id=tokenizer.eos_token_id)
-        reply = tokenizer.decode(output[0][inputs.shape[1]:], skip_special_tokens=True).strip().lower()
+        inputs = tokenizer.apply_chat_template(
+            messages, add_generation_prompt=True, return_tensors="pt", return_dict=True
+        ).to(model.device)
+        output = model.generate(**inputs, max_new_tokens=8, do_sample=False, pad_token_id=tokenizer.eos_token_id)
+        reply = tokenizer.decode(output[0][inputs["input_ids"].shape[1]:], skip_special_tokens=True).strip().lower()
         verdict = re.search(r"correct|partial|incorrect", reply)
         verdicts.append(verdict.group(0) if verdict else "unparseable")
     return verdicts
