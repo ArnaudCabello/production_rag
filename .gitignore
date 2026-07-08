@@ -5,4 +5,6 @@ __pycache__/
 temp_pdfs/
 .env
 chroma_db/
-data/
+data/docling/
+data/pdfs/*
+!data/pdfs/.gitkeep

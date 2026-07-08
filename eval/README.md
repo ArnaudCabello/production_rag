@@ -13,27 +13,31 @@ Each question carries:
 ## Retrieval eval (runs on CPU, no GPU needed)
 
 ```bash
-python eval/retrieval_eval.py --verify        # sanity-check the golden set itself
-python eval/retrieval_eval.py --retriever legacy --output eval/results/baseline_retrieval.json
+python eval/retrieval_eval.py --verify              # sanity-check golden set vs corpus
+python eval/retrieval_eval.py --retriever hybrid    # full stack: fusion + blended rerank
+python eval/retrieval_eval.py --retriever hybrid-norerank   # fusion only
+python eval/retrieval_eval.py --retriever dense             # dense only
 ```
 
-Reports hit@1/3/5/10 and MRR, overall and per category. `legacy` is a verbatim copy of the
-current `rag.py` scoring (see `legacy_adapter.py`) extended to return a ranked list.
-New retrievers get added as choices here so every change is measured against the same set.
+Reports hit@1/3/5/10 and MRR, overall and per category. Requires an ingested corpus
+(`python -m ingestion.run`). `--verify` also flags evidence that exists in the source
+documents but not in the chunk corpus — an ingestion gap and a guaranteed retrieval miss.
 
 ## Generation eval (needs GPU — run on Colab)
 
 ```bash
-python eval/generate_answers_legacy.py                         # answers with current pipeline
-python eval/judge_answers.py eval/results/answers_legacy.jsonl # key_match + local LLM judge
-python eval/judge_answers.py eval/results/answers_legacy.jsonl --no-judge  # key_match only, no GPU
+python eval/generate_answers_v2.py                        # answer golden set via the pipeline
+python eval/judge_answers.py eval/results/answers_v2.jsonl # key_match + local LLM judge
+python eval/judge_answers.py eval/results/answers_v2.jsonl --no-judge  # key_match only, no GPU
 ```
 
 The judge model (`Qwen/Qwen2.5-14B-Instruct`) grades each answer against the reference:
 correct / partial / incorrect. `key_match` is the objective substring check and runs anywhere.
 
-## Known corpus gaps (baseline)
+## Recorded results (eval/results/)
 
-`--verify` flags evidence that exists in the source PDF markdown but not in the chunk corpus.
-Currently q04 (partially), q19, q20 — the abstract is excluded by `chunks.py`. These are
-guaranteed retrieval misses until ingestion is fixed, and they are in the set on purpose.
+- `baseline_retrieval.json`, `answers_legacy*` — the pre-rewrite pipeline (code deleted in
+  Phase 5; numbers kept for history: hit@5 0.77, judge-correct 7/30, 7 incorrect)
+- `phase2_dense_retrieval.json` — new corpus, dense-only
+- `phase3_fusion_retrieval.json`, `phase3_hybrid_retrieval.json` — fusion, then + blended rerank
+- `answers_v2*` — current pipeline generation: key_match 28/30, judge 22 correct / 0 incorrect
