@@ -26,19 +26,9 @@ documents but not in the chunk corpus — an ingestion gap and a guaranteed retr
 ## Legacy baseline (pre-rewrite pipeline)
 
 The legacy pipeline (TF-IDF-first retrieval over a MiniLM/FAISS index, single-chunk
-LLaVA generation) is preserved verbatim in `legacy/` so the baseline can be re-measured
-on any corpus. Extra deps: `pip install -r legacy/requirements.txt`.
-
-```bash
-python legacy/run_ingestion.py                              # build legacy index over data/pdfs/
-python eval/retrieval_eval.py --retriever legacy            # retrieval metrics (CPU)
-python eval/generate_answers_legacy.py                      # answers (GPU: LLaVA 4-bit)
-python eval/judge_answers.py eval/results/answers_legacy_54q.jsonl
-```
-
-The golden set is verified against the new pipeline's document conversion; passages the
-legacy conversion drops (e.g. its chunker excludes abstracts) count as retrieval misses —
-that is part of what the baseline measures.
+LLaVA generation) is kept runnable on the `legacy-test` branch — `legacy/` holds the
+verbatim old code and the eval gains a `--retriever legacy` option there. Its recorded
+results live in `eval/results/` on every branch (`*_legacy*` files).
 
 ## Generation eval (needs GPU — run on Colab)
 
@@ -55,8 +45,9 @@ correct / partial / incorrect. `key_match` is the objective substring check and 
 
 - `baseline_retrieval.json`, `answers_legacy.jsonl`, `answers_legacy_scored.json` — the
   pre-rewrite pipeline on the 30-question ReAct set (hit@5 0.77, judge-correct 7/30,
-  7 incorrect). The code was deleted in Phase 5 and later restored under `legacy/` for
-  re-runs on new corpora.
+  7 incorrect). The runnable legacy code lives on the `legacy-test` branch.
+- `phase6_uhtc_retrieval_legacy.json`, `answers_legacy_54q*` — the legacy pipeline
+  re-measured on the 54-question / 4-document corpus (hit@5 0.70, key_match 24/54)
 - `phase2_dense_retrieval.json` — new corpus, dense-only
 - `phase3_fusion_retrieval.json`, `phase3_hybrid_retrieval.json` — fusion, then + blended rerank
 - `answers_v2*` — current pipeline generation: key_match 28/30, judge 22 correct / 0 incorrect
