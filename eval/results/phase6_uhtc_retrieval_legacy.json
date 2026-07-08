@@ -1,0 +1,340 @@
+{
+  "report": {
+    "overall": {
+      "hit@1": 0.4444444444444444,
+      "hit@3": 0.6851851851851852,
+      "hit@5": 0.7037037037037037,
+      "hit@10": 0.8148148148148148,
+      "mrr": 0.5642195767195767,
+      "n": 54
+    },
+    "abstract": {
+      "hit@1": 0.0,
+      "hit@3": 0.0,
+      "hit@5": 0.0,
+      "hit@10": 0.0,
+      "mrr": 0.0,
+      "n": 2
+    },
+    "cross_document": {
+      "hit@1": 0.0,
+      "hit@3": 0.0,
+      "hit@5": 0.0,
+      "hit@10": 0.3333333333333333,
+      "mrr": 0.03333333333333333,
+      "n": 3
+    },
+    "factual": {
+      "hit@1": 0.6363636363636364,
+      "hit@3": 0.7878787878787878,
+      "hit@5": 0.7878787878787878,
+      "hit@10": 0.9090909090909091,
+      "mrr": 0.7177128427128427,
+      "n": 33
+    },
+    "multi_chunk": {
+      "hit@1": 0.0,
+      "hit@3": 0.0,
+      "hit@5": 0.0,
+      "hit@10": 0.0,
+      "mrr": 0.0,
+      "n": 1
+    },
+    "multimodal": {
+      "hit@1": 0.0,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "hit@10": 1.0,
+      "mrr": 0.375,
+      "n": 4
+    },
+    "semantic": {
+      "hit@1": 0.2,
+      "hit@3": 0.6,
+      "hit@5": 0.8,
+      "hit@10": 1.0,
+      "mrr": 0.43666666666666665,
+      "n": 5
+    },
+    "table": {
+      "hit@1": 0.3333333333333333,
+      "hit@3": 0.6666666666666666,
+      "hit@5": 0.6666666666666666,
+      "hit@10": 0.6666666666666666,
+      "mrr": 0.5,
+      "n": 6
+    }
+  },
+  "per_question": [
+    {
+      "id": "q01",
+      "category": "factual",
+      "rank": 7
+    },
+    {
+      "id": "q02",
+      "category": "factual",
+      "rank": 8
+    },
+    {
+      "id": "q03",
+      "category": "factual",
+      "rank": 1
+    },
+    {
+      "id": "q04",
+      "category": "factual",
+      "rank": 1
+    },
+    {
+      "id": "q05",
+      "category": "factual",
+      "rank": 1
+    },
+    {
+      "id": "q06",
+      "category": "factual",
+      "rank": 1
+    },
+    {
+      "id": "q07",
+      "category": "factual",
+      "rank": 8
+    },
+    {
+      "id": "q08",
+      "category": "factual",
+      "rank": 1
+    },
+    {
+      "id": "q09",
+      "category": "factual",
+      "rank": 1
+    },
+    {
+      "id": "q10",
+      "category": "factual",
+      "rank": null
+    },
+    {
+      "id": "q11",
+      "category": "factual",
+      "rank": 1
+    },
+    {
+      "id": "q12",
+      "category": "factual",
+      "rank": 1
+    },
+    {
+      "id": "q13",
+      "category": "factual",
+      "rank": 1
+    },
+    {
+      "id": "q14",
+      "category": "factual",
+      "rank": 2
+    },
+    {
+      "id": "q15",
+      "category": "factual",
+      "rank": 1
+    },
+    {
+      "id": "q16",
+      "category": "factual",
+      "rank": 1
+    },
+    {
+      "id": "q17",
+      "category": "factual",
+      "rank": 1
+    },
+    {
+      "id": "q18",
+      "category": "factual",
+      "rank": 1
+    },
+    {
+      "id": "q19",
+      "category": "abstract",
+      "rank": null
+    },
+    {
+      "id": "q20",
+      "category": "abstract",
+      "rank": null
+    },
+    {
+      "id": "q21",
+      "category": "table",
+      "rank": null
+    },
+    {
+      "id": "q22",
+      "category": "table",
+      "rank": 1
+    },
+    {
+      "id": "q23",
+      "category": "table",
+      "rank": 2
+    },
+    {
+      "id": "q24",
+      "category": "table",
+      "rank": 2
+    },
+    {
+      "id": "q25",
+      "category": "semantic",
+      "rank": 10
+    },
+    {
+      "id": "q26",
+      "category": "semantic",
+      "rank": 4
+    },
+    {
+      "id": "q27",
+      "category": "semantic",
+      "rank": 1
+    },
+    {
+      "id": "q28",
+      "category": "multi_chunk",
+      "rank": null
+    },
+    {
+      "id": "q29",
+      "category": "semantic",
+      "rank": 3
+    },
+    {
+      "id": "q30",
+      "category": "factual",
+      "rank": null
+    },
+    {
+      "id": "c01",
+      "category": "factual",
+      "rank": 1
+    },
+    {
+      "id": "c02",
+      "category": "factual",
+      "rank": 2
+    },
+    {
+      "id": "c03",
+      "category": "factual",
+      "rank": 1
+    },
+    {
+      "id": "c04",
+      "category": "factual",
+      "rank": 3
+    },
+    {
+      "id": "c05",
+      "category": "factual",
+      "rank": 2
+    },
+    {
+      "id": "c06",
+      "category": "factual",
+      "rank": 3
+    },
+    {
+      "id": "h01",
+      "category": "factual",
+      "rank": 1
+    },
+    {
+      "id": "h02",
+      "category": "factual",
+      "rank": 1
+    },
+    {
+      "id": "h03",
+      "category": "table",
+      "rank": null
+    },
+    {
+      "id": "h04",
+      "category": "factual",
+      "rank": 1
+    },
+    {
+      "id": "h05",
+      "category": "semantic",
+      "rank": 2
+    },
+    {
+      "id": "s01",
+      "category": "factual",
+      "rank": null
+    },
+    {
+      "id": "s02",
+      "category": "factual",
+      "rank": 1
+    },
+    {
+      "id": "s03",
+      "category": "factual",
+      "rank": 8
+    },
+    {
+      "id": "s04",
+      "category": "factual",
+      "rank": 1
+    },
+    {
+      "id": "s05",
+      "category": "table",
+      "rank": 1
+    },
+    {
+      "id": "d01",
+      "category": "factual",
+      "rank": 1
+    },
+    {
+      "id": "x01",
+      "category": "cross_document",
+      "rank": null
+    },
+    {
+      "id": "x02",
+      "category": "cross_document",
+      "rank": null
+    },
+    {
+      "id": "x03",
+      "category": "cross_document",
+      "rank": 10
+    },
+    {
+      "id": "m01",
+      "category": "multimodal",
+      "rank": 3
+    },
+    {
+      "id": "m02",
+      "category": "multimodal",
+      "rank": 3
+    },
+    {
+      "id": "m03",
+      "category": "multimodal",
+      "rank": 3
+    },
+    {
+      "id": "m04",
+      "category": "multimodal",
+      "rank": 2
+    }
+  ]
+}
