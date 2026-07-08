@@ -21,28 +21,58 @@ def normalize(text: str) -> str:
 
 
 def chunk_search_text(chunk: dict) -> str:
-    """Text used for evidence matching (tables are already serialized into chunk text)."""
-    return normalize(chunk.get("text", ""))
+    """Text used for evidence matching. New-pipeline chunks already serialize tables
+    into the text; legacy chunks keep tables structured, so serialize them here."""
+    parts = [chunk.get("text", "")]
+    for table in chunk.get("tables", []):
+        if table.get("caption"):
+            parts.append(table["caption"])
+        if table.get("headers"):
+            parts.append(" | ".join(str(h) for h in table["headers"]))
+        for row in table.get("rows", []):
+            parts.append(" | ".join(str(cell) for cell in row))
+    return normalize(" ".join(parts))
 
 
 def load_golden():
     return json.loads(GOLDEN_SET.read_text(encoding="utf-8"))["questions"]
 
 
-def verify_evidence(corpus_texts):
-    """Every evidence string must exist in the source documents (ground truth,
-    exported from the cached DoclingDocuments). Strings present in the source
-    but absent from the chunk corpus are warnings: the ingestion pipeline
-    dropped that passage, so retrieval will (correctly) score a miss there
-    until ingestion is fixed."""
+def legacy_metadata_file():
+    legacy = REPO_ROOT / "legacy"
+    path = legacy / "metadata.json" if (legacy / "metadata.json").exists() else legacy / "metadata1.json"
+    if not path.exists():
+        sys.exit("No legacy index found — run `python legacy/run_ingestion.py` first.")
+    return path
+
+
+def load_source_texts(retriever_name):
+    """Ground-truth document text: the legacy pipeline's own markdown conversion
+    for legacy runs, the cached DoclingDocuments otherwise."""
+    if retriever_name == "legacy":
+        texts = [
+            normalize(p.read_text(encoding="utf-8"))
+            for p in (REPO_ROOT / "legacy" / "outputs").glob("*/*-referenced.md")
+        ]
+        if not texts:
+            sys.exit("No legacy conversion found — run `python legacy/run_ingestion.py` first.")
+        return texts
     from docling_core.types.doc import DoclingDocument
 
-    source_texts = [
+    texts = [
         normalize(DoclingDocument.model_validate_json(p.read_text(encoding="utf-8")).export_to_markdown())
         for p in (REPO_ROOT / "data" / "docling").glob("*.json")
     ]
-    if not source_texts:
+    if not texts:
         sys.exit("No converted documents in data/docling — run `python -m ingestion.run` first.")
+    return texts
+
+
+def verify_evidence(corpus_texts, source_texts):
+    """Every evidence string must exist in the source documents (ground truth).
+    Strings present in the source but absent from the chunk corpus are warnings:
+    the ingestion pipeline dropped that passage, so retrieval will (correctly)
+    score a miss there until ingestion is fixed."""
     bad, gaps = [], []
     for q in load_golden():
         for ev in q.get("evidence_any", []) + q.get("evidence_all", []):
@@ -123,27 +153,40 @@ def print_report(report, rows):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--verify", action="store_true", help="only verify evidence strings against the corpus")
-    parser.add_argument("--retriever", default="hybrid", choices=["dense", "hybrid", "hybrid-norerank"])
+    parser.add_argument("--retriever", default="hybrid", choices=["legacy", "dense", "hybrid", "hybrid-norerank"])
     parser.add_argument("--output", type=Path, default=None, help="write JSON report to this path")
     args = parser.parse_args()
 
     sys.path.insert(0, str(REPO_ROOT))
 
     if args.verify:
-        from ingestion.index import get_collection
-        corpus_texts = [normalize(doc) for doc in get_collection().get()["documents"]]
-        sys.exit(0 if verify_evidence(corpus_texts) else 1)
+        if args.retriever == "legacy":
+            corpus_texts = [chunk_search_text(c) for c in json.loads(legacy_metadata_file().read_text(encoding="utf-8"))]
+        else:
+            from ingestion.index import get_collection
+            corpus_texts = [normalize(doc) for doc in get_collection().get()["documents"]]
+        sys.exit(0 if verify_evidence(corpus_texts, load_source_texts(args.retriever)) else 1)
 
-    if args.retriever == "dense":
+    if args.retriever == "legacy":
+        from legacy_adapter import LegacyRetriever
+        engine = LegacyRetriever(REPO_ROOT / "legacy")
+        corpus_texts = [chunk_search_text(c) for c in engine.metadata]
+    elif args.retriever == "dense":
         from dense_adapter import DenseRetriever
         engine = DenseRetriever()
     else:
         from retrieval.retriever import HybridRetriever
         engine = HybridRetriever(rerank=args.retriever == "hybrid")
-    corpus_texts = [normalize(doc) for doc in engine.collection.get()["documents"]]
+    if args.retriever != "legacy":
+        corpus_texts = [normalize(doc) for doc in engine.collection.get()["documents"]]
 
-    if not verify_evidence(corpus_texts):
-        sys.exit("Fix the golden set before evaluating.")
+    verified = verify_evidence(corpus_texts, load_source_texts(args.retriever))
+    if not verified:
+        if args.retriever == "legacy":
+            print("\n⚠️  Continuing anyway: the golden set is verified against the new pipeline's "
+                  "conversion, so passages the legacy conversion lost score as retrieval misses.")
+        else:
+            sys.exit("Fix the golden set before evaluating.")
     print()
 
     report, rows = evaluate(engine.search, load_golden())

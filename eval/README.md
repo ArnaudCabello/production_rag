@@ -23,6 +23,23 @@ Reports hit@1/3/5/10 and MRR, overall and per category. Requires an ingested cor
 (`python -m ingestion.run`). `--verify` also flags evidence that exists in the source
 documents but not in the chunk corpus — an ingestion gap and a guaranteed retrieval miss.
 
+## Legacy baseline (pre-rewrite pipeline)
+
+The legacy pipeline (TF-IDF-first retrieval over a MiniLM/FAISS index, single-chunk
+LLaVA generation) is preserved verbatim in `legacy/` so the baseline can be re-measured
+on any corpus. Extra deps: `pip install -r legacy/requirements.txt`.
+
+```bash
+python legacy/run_ingestion.py                              # build legacy index over data/pdfs/
+python eval/retrieval_eval.py --retriever legacy            # retrieval metrics (CPU)
+python eval/generate_answers_legacy.py                      # answers (GPU: LLaVA 4-bit)
+python eval/judge_answers.py eval/results/answers_legacy_54q.jsonl
+```
+
+The golden set is verified against the new pipeline's document conversion; passages the
+legacy conversion drops (e.g. its chunker excludes abstracts) count as retrieval misses —
+that is part of what the baseline measures.
+
 ## Generation eval (needs GPU — run on Colab)
 
 ```bash
@@ -36,8 +53,10 @@ correct / partial / incorrect. `key_match` is the objective substring check and 
 
 ## Recorded results (eval/results/)
 
-- `baseline_retrieval.json`, `answers_legacy*` — the pre-rewrite pipeline (code deleted in
-  Phase 5; numbers kept for history: hit@5 0.77, judge-correct 7/30, 7 incorrect)
+- `baseline_retrieval.json`, `answers_legacy.jsonl`, `answers_legacy_scored.json` — the
+  pre-rewrite pipeline on the 30-question ReAct set (hit@5 0.77, judge-correct 7/30,
+  7 incorrect). The code was deleted in Phase 5 and later restored under `legacy/` for
+  re-runs on new corpora.
 - `phase2_dense_retrieval.json` — new corpus, dense-only
 - `phase3_fusion_retrieval.json`, `phase3_hybrid_retrieval.json` — fusion, then + blended rerank
 - `answers_v2*` — current pipeline generation: key_match 28/30, judge 22 correct / 0 incorrect
