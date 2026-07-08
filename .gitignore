@@ -4,3 +4,5 @@ __pycache__/
 .gradio/
 temp_pdfs/
 .env
+chroma_db/
+data/

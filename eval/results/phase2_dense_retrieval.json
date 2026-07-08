@@ -1,0 +1,204 @@
+{
+  "report": {
+    "overall": {
+      "hit@1": 0.43333333333333335,
+      "hit@3": 0.6666666666666666,
+      "hit@5": 0.8,
+      "hit@10": 0.8666666666666667,
+      "mrr": 0.5683333333333334,
+      "n": 30
+    },
+    "abstract": {
+      "hit@1": 0.5,
+      "hit@3": 0.5,
+      "hit@5": 0.5,
+      "hit@10": 0.5,
+      "mrr": 0.5,
+      "n": 2
+    },
+    "factual": {
+      "hit@1": 0.5789473684210527,
+      "hit@3": 0.7894736842105263,
+      "hit@5": 0.8421052631578947,
+      "hit@10": 0.8421052631578947,
+      "mrr": 0.6710526315789475,
+      "n": 19
+    },
+    "multi_chunk": {
+      "hit@1": 0.0,
+      "hit@3": 0.0,
+      "hit@5": 1.0,
+      "hit@10": 1.0,
+      "mrr": 0.2,
+      "n": 1
+    },
+    "semantic": {
+      "hit@1": 0.25,
+      "hit@3": 0.25,
+      "hit@5": 0.5,
+      "hit@10": 1.0,
+      "mrr": 0.37916666666666665,
+      "n": 4
+    },
+    "table": {
+      "hit@1": 0.0,
+      "hit@3": 0.75,
+      "hit@5": 1.0,
+      "hit@10": 1.0,
+      "mrr": 0.3958333333333333,
+      "n": 4
+    }
+  },
+  "per_question": [
+    {
+      "id": "q01",
+      "category": "factual",
+      "rank": 1
+    },
+    {
+      "id": "q02",
+      "category": "factual",
+      "rank": null
+    },
+    {
+      "id": "q03",
+      "category": "factual",
+      "rank": 1
+    },
+    {
+      "id": "q04",
+      "category": "factual",
+      "rank": 3
+    },
+    {
+      "id": "q05",
+      "category": "factual",
+      "rank": 3
+    },
+    {
+      "id": "q06",
+      "category": "factual",
+      "rank": 1
+    },
+    {
+      "id": "q07",
+      "category": "factual",
+      "rank": 1
+    },
+    {
+      "id": "q08",
+      "category": "factual",
+      "rank": 4
+    },
+    {
+      "id": "q09",
+      "category": "factual",
+      "rank": 1
+    },
+    {
+      "id": "q10",
+      "category": "factual",
+      "rank": 2
+    },
+    {
+      "id": "q11",
+      "category": "factual",
+      "rank": 1
+    },
+    {
+      "id": "q12",
+      "category": "factual",
+      "rank": 1
+    },
+    {
+      "id": "q13",
+      "category": "factual",
+      "rank": 1
+    },
+    {
+      "id": "q14",
+      "category": "factual",
+      "rank": 1
+    },
+    {
+      "id": "q15",
+      "category": "factual",
+      "rank": 3
+    },
+    {
+      "id": "q16",
+      "category": "factual",
+      "rank": 1
+    },
+    {
+      "id": "q17",
+      "category": "factual",
+      "rank": 1
+    },
+    {
+      "id": "q18",
+      "category": "factual",
+      "rank": null
+    },
+    {
+      "id": "q19",
+      "category": "abstract",
+      "rank": null
+    },
+    {
+      "id": "q20",
+      "category": "abstract",
+      "rank": 1
+    },
+    {
+      "id": "q21",
+      "category": "table",
+      "rank": 4
+    },
+    {
+      "id": "q22",
+      "category": "table",
+      "rank": 3
+    },
+    {
+      "id": "q23",
+      "category": "table",
+      "rank": 2
+    },
+    {
+      "id": "q24",
+      "category": "table",
+      "rank": 2
+    },
+    {
+      "id": "q25",
+      "category": "semantic",
+      "rank": 10
+    },
+    {
+      "id": "q26",
+      "category": "semantic",
+      "rank": 6
+    },
+    {
+      "id": "q27",
+      "category": "semantic",
+      "rank": 4
+    },
+    {
+      "id": "q28",
+      "category": "multi_chunk",
+      "rank": 5
+    },
+    {
+      "id": "q29",
+      "category": "semantic",
+      "rank": 1
+    },
+    {
+      "id": "q30",
+      "category": "factual",
+      "rank": null
+    }
+  ]
+}
