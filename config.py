@@ -7,6 +7,8 @@ REPO_ROOT = Path(__file__).resolve().parent
 EMBEDDING_MODEL = "BAAI/bge-m3"
 RERANKER_MODEL = "BAAI/bge-reranker-v2-m3"
 GENERATOR_MODEL = "Qwen/Qwen2.5-14B-Instruct"
+GENERATOR_PROVIDER = "huggingface"   # any LangChain provider: "huggingface", "ollama", ...
+MAX_NEW_TOKENS = 512
 
 # Ingestion
 OCR_ENABLED = False             # born-digital PDFs need no OCR; enable for scanned documents
@@ -23,3 +25,4 @@ COLLECTION_NAME = "production_rag"
 DENSE_TOP_K = 25                # candidates from the dense index
 BM25_TOP_K = 25                 # candidates from BM25
 RERANK_TOP_N = 5                # chunks passed to the generator after reranking
+RERANK_BLEND_LAMBDA = 2.0       # final = sigmoid(rerank) + lambda * RRF; measured sweep in eval/results

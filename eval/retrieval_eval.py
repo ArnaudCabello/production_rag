@@ -127,15 +127,20 @@ def print_report(report, rows):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--verify", action="store_true", help="only verify evidence strings against the corpus")
-    parser.add_argument("--retriever", default="legacy", choices=["legacy", "dense"])
+    parser.add_argument("--retriever", default="legacy", choices=["legacy", "dense", "hybrid", "hybrid-norerank"])
     parser.add_argument("--output", type=Path, default=None, help="write JSON report to this path")
     args = parser.parse_args()
 
-    if args.retriever == "dense" and not args.verify:
-        from dense_adapter import DenseRetriever
-        dense = DenseRetriever()
-        corpus_texts = [normalize(doc) for doc in dense.collection.get()["documents"]]
-        retriever = dense.search
+    if args.retriever in ("dense", "hybrid", "hybrid-norerank") and not args.verify:
+        sys.path.insert(0, str(REPO_ROOT))
+        if args.retriever == "dense":
+            from dense_adapter import DenseRetriever
+            engine = DenseRetriever()
+        else:
+            from retrieval.retriever import HybridRetriever
+            engine = HybridRetriever(rerank=args.retriever == "hybrid")
+        corpus_texts = [normalize(doc) for doc in engine.collection.get()["documents"]]
+        retriever = engine.search
     else:
         metadata = json.loads(METADATA_FILE.read_text(encoding="utf-8"))
         corpus_texts = [chunk_search_text(c) for c in metadata]

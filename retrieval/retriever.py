@@ -1,0 +1,66 @@
+"""Hybrid retrieval: dense (bge-m3/Chroma) ∪ BM25, fused with reciprocal-rank
+fusion, then reranked by a cross-encoder.
+
+No gates: either signal alone can surface a chunk, and the reranker decides
+final order. This replaces the legacy TF-IDF-gated scoring.
+"""
+import logging
+import math
+import re
+
+from rank_bm25 import BM25Okapi
+from sentence_transformers import CrossEncoder
+
+import config
+from ingestion.index import get_collection, get_embedder
+
+log = logging.getLogger(__name__)
+
+RRF_K = 60  # standard reciprocal-rank fusion constant
+
+
+def _tokenize(text: str) -> list[str]:
+    return re.findall(r"\w+", text.lower())
+
+
+class HybridRetriever:
+    def __init__(self, rerank: bool = True):
+        self.collection = get_collection()
+        data = self.collection.get()
+        self.ids = data["ids"]
+        self.chunks = {
+            cid: {"chunk_id": cid, "text": doc, **meta}
+            for cid, doc, meta in zip(data["ids"], data["documents"], data["metadatas"])
+        }
+        self.bm25 = BM25Okapi([_tokenize(self.chunks[cid]["text"]) for cid in self.ids])
+        self.embedder = get_embedder()
+        self.reranker = CrossEncoder(config.RERANKER_MODEL) if rerank else None
+        log.info(f"HybridRetriever ready: {len(self.ids)} chunks, rerank={'on' if rerank else 'off'}")
+
+    def _dense_ids(self, query: str) -> list[str]:
+        embedding = self.embedder.encode([query], normalize_embeddings=True)
+        n = min(config.DENSE_TOP_K, len(self.ids))
+        return self.collection.query(query_embeddings=embedding.tolist(), n_results=n)["ids"][0]
+
+    def _bm25_ids(self, query: str) -> list[str]:
+        scores = self.bm25.get_scores(_tokenize(query))
+        ranked = sorted(range(len(self.ids)), key=lambda i: scores[i], reverse=True)
+        return [self.ids[i] for i in ranked[: config.BM25_TOP_K] if scores[i] > 0]
+
+    def search(self, query: str, top_k: int = config.RERANK_TOP_N) -> list[dict]:
+        fused: dict[str, float] = {}
+        for id_list in (self._dense_ids(query), self._bm25_ids(query)):
+            for rank, cid in enumerate(id_list, 1):
+                fused[cid] = fused.get(cid, 0.0) + 1.0 / (RRF_K + rank)
+        candidates = sorted(fused, key=fused.get, reverse=True)
+
+        if self.reranker is not None:
+            pairs = [(query, self.chunks[cid]["text"]) for cid in candidates]
+            rerank_scores = self.reranker.predict(pairs)
+            blended = [
+                1.0 / (1.0 + math.exp(-float(r))) + config.RERANK_BLEND_LAMBDA * fused[cid]
+                for r, cid in zip(rerank_scores, candidates)
+            ]
+            candidates = [cid for _, cid in sorted(zip(blended, candidates), key=lambda x: -x[0])]
+
+        return [self.chunks[cid] for cid in candidates[:top_k]]
