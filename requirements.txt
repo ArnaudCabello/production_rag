@@ -1,0 +1,10 @@
+sentence-transformers
+faiss-cpu 
+torch 
+tqdm 
+numpy
+einops
+rank-bm25
+gradio
+tiktoken
+docling==2.42.0
