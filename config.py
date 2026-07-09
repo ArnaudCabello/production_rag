@@ -8,6 +8,8 @@ EMBEDDING_MODEL = "BAAI/bge-m3"
 RERANKER_MODEL = "BAAI/bge-reranker-v2-m3"
 GENERATOR_MODEL = "Qwen/Qwen2.5-14B-Instruct"
 GENERATOR_PROVIDER = "huggingface"   # any LangChain provider: "huggingface", "ollama", ...
+GENERATOR_LOAD_IN_4BIT = True        # ~8GB instead of ~28GB; leaves room for the vision model
+                                     # (bge-m3 + reranker also hold ~5GB GPU) on a 40GB A100
 MAX_NEW_TOKENS = 512
 
 # Vision (figure-grounded answers)

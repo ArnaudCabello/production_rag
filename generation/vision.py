@@ -39,6 +39,8 @@ def _load():
 
     log.info(f"Loading vision model {config.VISION_MODEL} "
              f"({'4-bit' if config.VISION_LOAD_IN_4BIT else 'bf16'})...")
+    if torch.cuda.is_available():
+        torch.cuda.empty_cache()  # release allocator blocks the text generator no longer uses
     kwargs = {"device_map": "auto"}
     if config.VISION_LOAD_IN_4BIT:
         from transformers import BitsAndBytesConfig
