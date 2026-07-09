@@ -5,12 +5,22 @@ them; multi-chunk and cross-document questions are answerable by construction.
 When retrieved chunks carry figures (and config.VISION_ENABLED), generation
 routes to the vision model, which sees the figure images alongside the sources.
 """
+import re
 from typing import TypedDict
 
 from langchain_core.messages import HumanMessage, SystemMessage
 from langgraph.graph import END, START, StateGraph
 
 import config
+
+# The vision model (7B, 4-bit) is weaker on pure text than the main generator,
+# so route to it only when the question itself asks about visual content AND
+# the retrieved chunks actually carry figures.
+VISUAL_QUESTION = re.compile(
+    r"\b(fig(?:ure)?s?\.?|images?|photos?|photographs?|pictures?|micrographs?"
+    r"|optical|maps?|diagrams?|plots?|graphs?)\b",
+    re.IGNORECASE,
+)
 
 SYSTEM_PROMPT = """You are a precise document question-answering assistant.
 Answer using ONLY the numbered sources provided. Rules:
@@ -44,7 +54,11 @@ def format_context(chunks: list[dict]) -> str:
 
 
 def needs_vision(state: RAGState) -> str:
-    if config.VISION_ENABLED and any(c.get("figures") for c in state["chunks"]):
+    if (
+        config.VISION_ENABLED
+        and VISUAL_QUESTION.search(state["question"])
+        and any(c.get("figures") for c in state["chunks"])
+    ):
         return "generate_vision"
     return "generate"
 
