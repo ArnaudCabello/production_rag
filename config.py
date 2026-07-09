@@ -10,11 +10,18 @@ GENERATOR_MODEL = "Qwen/Qwen2.5-14B-Instruct"
 GENERATOR_PROVIDER = "huggingface"   # any LangChain provider: "huggingface", "ollama", ...
 MAX_NEW_TOKENS = 512
 
+# Vision (figure-grounded answers)
+VISION_ENABLED = True                # route figure questions to the vision model (needs GPU)
+VISION_MODEL = "Qwen/Qwen2.5-VL-7B-Instruct"
+VISION_LOAD_IN_4BIT = True           # ~6GB — fits next to the resident 14B generator on a 40GB A100
+MAX_FIGURES_PER_ANSWER = 4           # most figures passed to the vision model in one prompt
+
 # Ingestion
 OCR_ENABLED = False             # born-digital PDFs need no OCR; enable for scanned documents
 CHUNK_MAX_TOKENS = 512          # HybridChunker target; bge-m3 handles up to 8192
 PDF_DIR = REPO_ROOT / "data" / "pdfs"
 DOCLING_CACHE = REPO_ROOT / "data" / "docling"   # converted DoclingDocument JSON, keyed by content hash
+FIGURES_DIR = REPO_ROOT / "data" / "figures"     # extracted figure images, {doc_hash}-fig{n}.png
 EXCLUDED_HEADINGS = {"references", "table of contents"}  # keep abstract and acknowledgments — both answer real queries
 
 # Vector store

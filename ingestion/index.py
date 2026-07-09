@@ -49,6 +49,10 @@ def index_chunks(collection, chunks: list[dict], batch_size: int = 32):
         ids=[c["chunk_id"] for c in chunks],
         embeddings=embeddings.tolist(),
         documents=texts,
-        metadatas=[{"doc_hash": c["doc_hash"], "pdf": c["pdf"], "headings": c["headings"]} for c in chunks],
+        metadatas=[
+            {"doc_hash": c["doc_hash"], "pdf": c["pdf"], "headings": c["headings"]}
+            | ({"figures": c["figures"]} if c.get("figures") else {})
+            for c in chunks
+        ],
     )
     log.info(f"Indexed {len(chunks)} chunks (collection now {collection.count()})")

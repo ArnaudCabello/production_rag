@@ -70,8 +70,24 @@ def build_document_card(doc_hash: str, doc_name: str, doc: DoclingDocument) -> d
     }
 
 
+def figure_map_by_caption_ref(doc_hash: str, doc: DoclingDocument) -> dict[str, str]:
+    """Map each figure caption's item ref to its saved image file, so chunks that
+    contain a caption can carry the figure. Numbering matches convert.save_figures."""
+    mapping = {}
+    for n, picture in enumerate(doc.pictures, 1):
+        path = config.FIGURES_DIR / f"{doc_hash}-fig{n:03d}.png"
+        if not path.exists():
+            continue
+        rel_path = str(path.relative_to(config.REPO_ROOT))
+        mapping[picture.self_ref] = rel_path  # chunker may emit the picture item or its caption
+        for caption_ref in picture.captions:
+            mapping[caption_ref.cref] = rel_path
+    return mapping
+
+
 def chunk_document(doc_hash: str, doc_name: str, doc: DoclingDocument) -> list[dict]:
     chunker = get_chunker()
+    figure_map = figure_map_by_caption_ref(doc_hash, doc)
     chunks = [build_document_card(doc_hash, doc_name, doc)]
     seq = 0
     for chunk in chunker.chunk(doc):
@@ -81,13 +97,19 @@ def chunk_document(doc_hash: str, doc_name: str, doc: DoclingDocument) -> list[d
         text = chunker.contextualize(chunk)  # heading-prefixed text, tables serialized
         if not text.strip():
             continue
-        chunks.append({
+        figures = [figure_map[item.self_ref] for item in chunk.meta.doc_items or []
+                   if item.self_ref in figure_map]
+        record = {
             "chunk_id": f"{doc_hash}-{seq:04d}",
             "doc_hash": doc_hash,
             "pdf": doc_name,
             "headings": " > ".join(headings),
             "text": text,
-        })
+        }
+        if figures:
+            record["figures"] = ",".join(dict.fromkeys(figures))  # Chroma metadata must be scalar
+        chunks.append(record)
         seq += 1
-    log.info(f"{doc_name}: {len(chunks)} chunks")
+    log.info(f"{doc_name}: {len(chunks)} chunks "
+             f"({sum(1 for c in chunks if c.get('figures'))} with figures)")
     return chunks

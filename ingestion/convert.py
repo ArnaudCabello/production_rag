@@ -32,14 +32,36 @@ def convert_pdf(pdf_path: Path) -> tuple[str, DoclingDocument]:
         return doc_hash, DoclingDocument.model_validate_json(cache_file.read_text(encoding="utf-8"))
 
     log.info(f"Converting {pdf_path.name} ({doc_hash})...")
-    pipeline_options = PdfPipelineOptions(do_ocr=config.OCR_ENABLED)
+    pipeline_options = PdfPipelineOptions(
+        do_ocr=config.OCR_ENABLED,
+        generate_picture_images=True,
+        images_scale=2.0,
+    )
     converter = DocumentConverter(
         format_options={InputFormat.PDF: PdfFormatOption(pipeline_options=pipeline_options)}
     )
     result = converter.convert(pdf_path)
     doc = result.document
+    save_figures(doc_hash, doc)
 
     config.DOCLING_CACHE.mkdir(parents=True, exist_ok=True)
     cache_file.write_text(json.dumps(doc.export_to_dict()), encoding="utf-8")
     log.info(f"Converted {pdf_path.name}: {doc.num_pages()} pages, cached at {cache_file}")
     return doc_hash, doc
+
+
+def save_figures(doc_hash: str, doc: DoclingDocument):
+    """Write each figure to data/figures/{doc_hash}-fig{n}.png (n = position in
+    doc.pictures, the same numbering chunking uses), then drop the in-memory
+    image payloads so the JSON cache stays lean."""
+    config.FIGURES_DIR.mkdir(parents=True, exist_ok=True)
+    saved = 0
+    for n, picture in enumerate(doc.pictures, 1):
+        image = picture.get_image(doc)
+        if image is None:
+            continue
+        image.save(config.FIGURES_DIR / f"{doc_hash}-fig{n:03d}.png")
+        picture.image = None
+        saved += 1
+    if saved:
+        log.info(f"Saved {saved} figure(s) for {doc_hash}")

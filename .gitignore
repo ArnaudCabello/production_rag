@@ -8,3 +8,4 @@ chroma_db/
 data/docling/
 data/pdfs/*
 !data/pdfs/.gitkeep
+data/figures/
