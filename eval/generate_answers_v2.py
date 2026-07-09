@@ -10,6 +10,7 @@ Writes eval/results/answers_v2.jsonl for judging with eval/judge_answers.py.
 """
 import argparse
 import json
+import pathlib
 import sys
 from pathlib import Path
 
@@ -27,6 +28,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--model", default=None, help="override config.GENERATOR_MODEL")
     parser.add_argument("--limit", type=int, default=None, help="only answer the first N questions")
+    parser.add_argument("--output", type=pathlib.Path, default=OUTPUT, help="answers jsonl path")
     args = parser.parse_args()
 
     golden = json.loads((Path(__file__).resolve().parent / "golden_set.json").read_text())["questions"]
@@ -35,8 +37,8 @@ def main():
 
     graph = build_graph(HybridRetriever(), get_llm(args.model))
 
-    OUTPUT.parent.mkdir(parents=True, exist_ok=True)
-    with OUTPUT.open("w", encoding="utf-8") as f:
+    args.output.parent.mkdir(parents=True, exist_ok=True)
+    with args.output.open("w", encoding="utf-8") as f:
         for q in golden:
             result = graph.invoke({"question": q["question"]})
             record = {
@@ -48,7 +50,7 @@ def main():
             f.write(json.dumps(record) + "\n")
             print(f"{q['id']}: {result['answer'][:120]}")
 
-    print(f"\nSaved: {OUTPUT}")
+    print(f"\nSaved: {args.output}")
 
 
 if __name__ == "__main__":
