@@ -46,13 +46,13 @@ class StubGraph:
         assert state["scope"] == ["ReAct.pdf"]
         return {"answer": "stub [1]", "chunks": [
             {"chunk_id": "x-0001", "pdf": "ReAct.pdf", "headings": "H", "text": "T",
-             "prov": "[[2, 1.0, 2.0, 3.0, 4.0]]", "figures": ""}]}
+             "prov": "[[2, 1.0, 2.0, 3.0, 4.0]]"}]}
 
 backend_main.get_graph = lambda: StubGraph()
 r = client.post("/api/ask", json={"question": "what is ReAct?", "files": ["ReAct.pdf"]}).json()
 src = r["sources"][0]
 assert r["answer"] == "stub [1]" and src["n"] == 1
-assert src["boxes"] == [[2, 1.0, 2.0, 3.0, 4.0]] and src["figures"] == []  # decoded, not stringly-typed
+assert src["boxes"] == [[2, 1.0, 2.0, 3.0, 4.0]]  # decoded, not stringly-typed
 print("ask: scope validation + structured boxes: OK")
 
 # regression: get_retriever must not deadlock when called from a caller holding no lock twice over

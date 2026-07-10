@@ -21,12 +21,19 @@ export default function PdfPanel({ source, onClose }) {
   useEffect(() => {
     const el = container.current
     if (!el) return
-    const measure = () => setPanelWidth(el.clientWidth - 24)
+    // quantized so a 1px drag doesn't re-rasterize every page canvas
+    const measure = () => setPanelWidth(Math.max(320, Math.round((el.clientWidth - 24) / 16) * 16))
     measure()
     const obs = new ResizeObserver(measure)
     obs.observe(el)
     return () => obs.disconnect()
   }, [])
+
+  // a different document means different page sizes — never reuse cached dims
+  useEffect(() => {
+    setPageDims({})
+    setNumPages(null)
+  }, [source.pdf])
 
   const boxesByPage = useMemo(() => {
     const byPage = {}
@@ -61,6 +68,9 @@ export default function PdfPanel({ source, onClose }) {
         <span className="pdf-title" title={source.pdf}>{source.pdf}</span>
         <button className="ghost" onClick={onClose} title="Close viewer">✕</button>
       </div>
+      {!(source.boxes || []).length && (
+        <div className="pdf-notice">This source has no location data — showing the document from page 1.</div>
+      )}
       <div className="pdf-scroll">
         <Document
           file={pdfUrl(source.pdf)}

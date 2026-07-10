@@ -5,7 +5,12 @@ const BASE = import.meta.env.VITE_API_BASE || ''
 async function request(path, options = {}) {
   const res = await fetch(`${BASE}${path}`, options)
   const body = await res.json().catch(() => ({ detail: res.statusText }))
-  if (!res.ok) throw new Error(body.detail || `Request failed (${res.status})`)
+  if (!res.ok) {
+    const detail = Array.isArray(body.detail) // FastAPI 422s carry a list of {loc, msg, ...}
+      ? body.detail.map((d) => d.msg || JSON.stringify(d)).join('; ')
+      : body.detail
+    throw new Error(detail || `Request failed (${res.status})`)
+  }
   return body
 }
 
@@ -29,11 +34,18 @@ export const ask = (question, files) =>
   })
 
 export async function uploadFiles(fileList) {
+  const failed = []
   for (const file of fileList) {
     const form = new FormData()
     form.append('file', file)
-    await request('/api/upload', { method: 'POST', body: form })
+    try {
+      await request('/api/upload', { method: 'POST', body: form })
+    } catch (e) {
+      failed.push(`${file.name}: ${e.message}`)
+    }
   }
+  // callers still ingest whatever made it up; failures are reported, not silent
+  if (failed.length) throw new Error(`Failed to upload — ${failed.join(', ')}`)
 }
 
 export const pdfUrl = (name) => `${BASE}/api/pdf/${encodeURIComponent(name)}`

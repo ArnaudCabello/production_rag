@@ -12,30 +12,30 @@ export default function Sidebar({
   const toggleScope = (name) =>
     setScope((s) => (s.includes(name) ? s.filter((n) => n !== name) : [...s, name]))
 
+  const runIngest = async () => {
+    setError(null)
+    try {
+      await startIngest()
+      await refreshFiles()
+    } catch (e) {
+      setError(e.message)
+    }
+  }
+
   const handleUpload = async (fileList) => {
     if (!fileList?.length) return
     setError(null)
     setUploading(true)
+    let uploadError = null
     try {
       await uploadFiles([...fileList])
-      await startIngest()
-      await refreshFiles()
     } catch (e) {
-      setError(e.message)
-    } finally {
-      setUploading(false)
-      if (fileInput.current) fileInput.current.value = ''
+      uploadError = e.message
     }
-  }
-
-  const rescan = async () => {
-    setError(null)
-    try {
-      await startIngest()
-      await refreshFiles()
-    } catch (e) {
-      setError(e.message)
-    }
+    await runIngest() // index whatever made it up, even if some files failed
+    if (uploadError) setError(uploadError)
+    setUploading(false)
+    if (fileInput.current) fileInput.current.value = ''
   }
 
   return (
@@ -66,7 +66,7 @@ export default function Sidebar({
       <section className="grow">
         <div className="section-head">
           <h2>File collection</h2>
-          <button className="ghost" onClick={rescan} title="Re-scan corpus folder">⟳</button>
+          <button className="ghost" onClick={runIngest} title="Re-scan corpus folder">⟳</button>
         </div>
         <p className="hint">
           {scope.length ? `Searching ${scope.length} selected file(s)` : 'Searching all files'}

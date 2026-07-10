@@ -26,7 +26,11 @@ log = logging.getLogger(__name__)
 app = FastAPI(title="production-rag backend")
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173", "http://127.0.0.1:5173", "tauri://localhost"],
+    allow_origins=[
+        "http://localhost:5173", "http://127.0.0.1:5173",   # vite dev
+        "http://localhost:4173", "http://127.0.0.1:4173",   # vite preview
+        "tauri://localhost", "https://tauri.localhost", "http://tauri.localhost",  # packaged shell
+    ],
     allow_methods=["*"],
     allow_headers=["*"],
 )
@@ -239,7 +243,6 @@ def ask(req: AskRequest):
                 "headings": c.get("headings", ""),
                 "text": c["text"],
                 "boxes": json.loads(c["prov"]) if c.get("prov") else [],
-                "figures": [f for f in c.get("figures", "").split(",") if f],
             }
             for i, c in enumerate(result["chunks"], 1)
         ],

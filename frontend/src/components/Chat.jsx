@@ -31,7 +31,7 @@ function SourceList({ sources, onCitationClick }) {
         {sources.map((s) => (
           <li key={s.n}>
             <button className="citation" onClick={() => onCitationClick(s)}>{s.n}</button>
-            <span className="source-meta">
+            <span className="source-meta" title={s.text?.slice(0, 400)}>
               {s.pdf}{s.headings ? ` — ${s.headings}` : ''}
             </span>
           </li>
@@ -71,6 +71,7 @@ export default function Chat({ conversation, updateConversation, scope, onCitati
         ...c,
         messages: [...c.messages, { role: 'error', text: e.message }],
       }))
+      setInput((cur) => cur || question) // don't lose the typed question on failure
     } finally {
       setBusy(false)
     }
@@ -108,7 +109,10 @@ export default function Chat({ conversation, updateConversation, scope, onCitati
           disabled={ingestRunning}
           onChange={(e) => setInput(e.target.value)}
           onKeyDown={(e) => {
-            if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); send() }
+            if (e.key === 'Enter' && !e.shiftKey && !e.nativeEvent.isComposing) {
+              e.preventDefault()
+              send()
+            }
           }}
         />
         <button className="primary" onClick={send} disabled={busy || ingestRunning || !input.trim()}>

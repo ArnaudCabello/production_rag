@@ -15,9 +15,11 @@ function loadConversations() {
   return [{ id: crypto.randomUUID(), title: 'New conversation', messages: [] }]
 }
 
+const initialConversations = loadConversations()
+
 export default function App() {
-  const [conversations, setConversations] = useState(loadConversations)
-  const [activeId, setActiveId] = useState(() => loadConversations()[0].id)
+  const [conversations, setConversations] = useState(initialConversations)
+  const [activeId, setActiveId] = useState(initialConversations[0].id)
   const [files, setFiles] = useState([])
   const [scope, setScope] = useState([]) // selected document names; empty = search all
   const [ingest, setIngest] = useState(null)
@@ -34,10 +36,10 @@ export default function App() {
       const [fileList, status] = await Promise.all([getFiles(), getStatus()])
       setFiles(fileList)
       setIngest(status.ingest)
-      return status
     } catch (e) {
-      setIngest({ running: false, error: `Backend unreachable: ${e.message}` })
-      return null
+      // keep the previous running state: one transient failure must not stop
+      // the ingest poll or re-enable the composer mid-ingest
+      setIngest((prev) => ({ ...(prev || { running: false }), error: `Backend unreachable: ${e.message}` }))
     }
   }, [])
 
@@ -90,6 +92,7 @@ export default function App() {
         onOpenSettings={() => setShowSettings(true)}
       />
       <Chat
+        key={active.id}  /* per-conversation instance: busy state can't leak across chats */
         conversation={active}
         updateConversation={updateActive}
         scope={scope}
