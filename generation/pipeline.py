@@ -45,9 +45,11 @@ The corpus contains these documents:
 
 Question: {question}
 
-If answering requires combining information from MULTIPLE documents (for example a
-comparison across papers or studies), write 2-4 short search queries, one per line,
-each targeting one document's part of the answer. Otherwise reply with exactly NONE."""
+Decide from the SHAPE of the question alone — do not judge whether the documents can
+answer it. If the question compares, contrasts, or combines findings across more than
+one paper/study/document, reply with one short search query per compared item (2-4
+lines, nothing else — no explanations). Build each query from the question's own terms
+for that item. Otherwise reply with exactly NONE."""
 
 
 class RAGState(TypedDict):
@@ -60,10 +62,12 @@ class RAGState(TypedDict):
 
 def parse_sub_queries(reply: str) -> list[str]:
     lines = [re.sub(r"^[\s\-*\d.)]+", "", line).strip() for line in reply.splitlines()]
-    queries = [line for line in lines if line and line.upper() != "NONE"]
-    if len(queries) < 2:  # a comparison needs at least two sides; anything less is noise
+    lines = [line for line in lines if line]
+    if not lines or lines[0].upper().startswith("NONE"):  # NONE + trailing prose is still NONE
         return []
-    return queries[: config.MAX_SUBQUERIES]
+    if len(lines) < 2:  # a comparison needs at least two sides; anything less is noise
+        return []
+    return lines[: config.MAX_SUBQUERIES]
 
 
 def format_context(chunks: list[dict]) -> str:
@@ -87,7 +91,11 @@ def needs_vision(state: RAGState) -> str:
 
 
 def build_graph(retriever, llm):
-    doc_names = sorted({c["pdf"] for c in retriever.chunks.values()})
+    # Document cards (file name + title + byline) tell the planner what each paper is
+    # actually about; bare file names made it wrongly conclude comparisons were unanswerable.
+    doc_names = sorted(
+        c["text"][:220] for c in retriever.chunks.values() if c["chunk_id"].endswith("-card")
+    ) or sorted({c["pdf"] for c in retriever.chunks.values()})
 
     def decompose(state: RAGState):
         if not config.DECOMPOSE_ENABLED:
