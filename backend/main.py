@@ -213,7 +213,15 @@ def ask(req: AskRequest):
         unknown = [f for f in scope if f not in known]
         if unknown:
             raise HTTPException(status_code=400, detail=f"Unknown documents: {unknown}")
-    result = get_graph().invoke({"question": req.question, "scope": scope})
+    try:
+        result = get_graph().invoke({"question": req.question, "scope": scope})
+    except HTTPException:
+        raise
+    except Exception as exc:
+        if getattr(exc, "status_code", None) == 401:
+            raise HTTPException(status_code=401,
+                                detail="The LLM provider rejected the configured API key — update it in settings")
+        raise
     return {
         "answer": result["answer"],
         "sources": [
