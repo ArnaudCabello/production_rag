@@ -9,7 +9,7 @@ torchvision must come from the same index or torchvision fails at import
 (~250MB instead of the ~6GB CUDA bundle).
 
 ```bash
-uvicorn backend.main:app --port 8642
+python -m uvicorn backend.main:app --port 8642
 ```
 
 Endpoints: `/api/status`, `/api/files`, `/api/ingest` (background, poll status),
