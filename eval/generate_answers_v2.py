@@ -50,11 +50,8 @@ def main():
                 "question": q["question"],
                 "answer": result["answer"],
                 "sources": [c["chunk_id"] for c in result["chunks"]],
-                "sub_queries": result.get("sub_queries", []),
-                "planner_reply": result.get("planner_reply", ""),
             }
             f.write(json.dumps(record) + "\n")
-            print(f"{q['id']} planner: {record['planner_reply'][:200]!r}")
             print(f"{q['id']}: {result['answer'][:120]}")
 
     print(f"\nSaved: {args.output}")

@@ -1,12 +1,12 @@
-"""Query pipeline as a LangGraph graph: decompose → retrieve → generate | generate_vision.
+"""Query pipeline as a LangGraph graph: retrieve → generate | generate_vision.
 
 The generator sees the top reranked chunks as numbered sources and must cite
 them; multi-chunk and cross-document questions are answerable by construction.
-A planner node first splits questions that span multiple documents into
-per-document sub-queries; their top chunks are appended to the main retrieval
-so a comparison across papers has sources from every paper. When retrieved
-chunks carry figures (and config.VISION_ENABLED), generation routes to the
-vision model, which sees the figure images alongside the sources.
+For questions worded across multiple documents ("these three studies", "the
+papers"), retrieval fans out: every document contributes its own best chunks,
+so a comparison always has sources from every paper. When retrieved chunks
+carry figures (and config.VISION_ENABLED), generation routes to the vision
+model, which sees the figure images alongside the sources.
 """
 import re
 from typing import TypedDict
@@ -25,6 +25,15 @@ VISUAL_QUESTION = re.compile(
     re.IGNORECASE,
 )
 
+# Cross-document questions announce themselves in their wording. An LLM planner
+# proved unreliable at both this judgment and at picking which documents matter,
+# so the fan-out is deterministic: match the wording, then query EVERY document.
+MULTI_DOC_QUESTION = re.compile(
+    r"\b(papers|studies|documents|articles|reports"
+    r"|these (?:two|three|four|five) \w+|both (?:papers|studies|documents))\b",
+    re.IGNORECASE,
+)
+
 SYSTEM_PROMPT = """You are a precise document question-answering assistant.
 Answer using ONLY the numbered sources provided. Rules:
 - Cite the sources you use inline, e.g. [1] or [2][3].
@@ -39,44 +48,11 @@ Question: {question}
 
 Answer (with [n] citations):"""
 
-# Whether to decompose is decided deterministically from the question's wording;
-# the LLM proved unreliable at that judgment but good at writing the sub-queries.
-MULTI_DOC_QUESTION = re.compile(
-    r"\b(papers|studies|documents|articles|reports"
-    r"|these (?:two|three|four|five) \w+|both (?:papers|studies|documents))\b",
-    re.IGNORECASE,
-)
-
-DECOMPOSE_PROMPT = """You are the retrieval planner for a document Q/A system.
-The corpus contains these documents:
-{documents}
-
-Question: {question}
-
-The question combines information from multiple documents. For each relevant document
-write one line formatted exactly as:
-file name.pdf :: short search query
-Use the document's own topic words (materials, methods) plus the question's subject in
-the query — never journal names. 2-4 lines total, nothing else (no headers, no quotes,
-no explanations)."""
-
 
 class RAGState(TypedDict):
     question: str
-    planner_reply: str
-    sub_queries: list[str]
     chunks: list[dict]
     answer: str
-
-
-def parse_sub_queries(reply: str) -> list[str]:
-    lines = [re.sub(r"^[\s\-*\d.)]+", "", line).strip() for line in reply.splitlines()]
-    lines = [line.strip("\"'") for line in lines if line and not line.endswith(":")]
-    if not lines or lines[0].upper().startswith("NONE"):  # NONE + trailing prose is still NONE
-        return []
-    if len(lines) < 2:  # a comparison needs at least two sides; anything less is noise
-        return []
-    return lines[: config.MAX_SUBQUERIES]
 
 
 def format_context(chunks: list[dict]) -> str:
@@ -100,33 +76,17 @@ def needs_vision(state: RAGState) -> str:
 
 
 def build_graph(retriever, llm):
-    # Document cards (file name + title + byline) tell the planner what each paper is
-    # actually about; bare file names made it wrongly conclude comparisons were unanswerable.
-    doc_names = sorted(
-        c["text"][:220] for c in retriever.chunks.values() if c["chunk_id"].endswith("-card")
-    ) or sorted({c["pdf"] for c in retriever.chunks.values()})
-
-    def decompose(state: RAGState):
-        if not (config.DECOMPOSE_ENABLED and MULTI_DOC_QUESTION.search(state["question"])):
-            return {"planner_reply": "", "sub_queries": []}
-        reply = llm.invoke([HumanMessage(content=DECOMPOSE_PROMPT.format(
-            documents="\n".join(f"- {name}" for name in doc_names),
-            question=state["question"]))]).content
-        return {"planner_reply": reply, "sub_queries": parse_sub_queries(reply)}
+    doc_names = sorted({c["pdf"] for c in retriever.chunks.values()})
 
     def retrieve(state: RAGState):
         chunks = retriever.search(state["question"])
-        seen = {c["chunk_id"] for c in chunks}
-        for sub_query in state["sub_queries"]:
-            doc, sep, query = sub_query.partition("::")
-            hits = retriever.search(query.strip() if sep else sub_query, top_k=20)
-            if sep:  # keep only the targeted document's chunks so every paper is represented
-                targeted = [c for c in hits if c["pdf"].lower() in doc.lower() or doc.strip().lower() in c["pdf"].lower()]
-                hits = targeted or hits
-            for chunk in hits[: config.SUBQUERY_TOP_K]:
-                if chunk["chunk_id"] not in seen:
-                    seen.add(chunk["chunk_id"])
-                    chunks.append(chunk)
+        if config.MULTI_DOC_FANOUT and MULTI_DOC_QUESTION.search(state["question"]):
+            seen = {c["chunk_id"] for c in chunks}
+            for pdf in doc_names:
+                for chunk in retriever.search(state["question"], top_k=config.PER_DOC_TOP_K, pdf=pdf):
+                    if chunk["chunk_id"] not in seen:
+                        seen.add(chunk["chunk_id"])
+                        chunks.append(chunk)
         return {"chunks": chunks}
 
     def generate(state: RAGState):
@@ -143,12 +103,10 @@ def build_graph(retriever, llm):
         return {"answer": answer_with_figures(state["question"], state["chunks"], format_context)}
 
     graph = StateGraph(RAGState)
-    graph.add_node("decompose", decompose)
     graph.add_node("retrieve", retrieve)
     graph.add_node("generate", generate)
     graph.add_node("generate_vision", generate_vision)
-    graph.add_edge(START, "decompose")
-    graph.add_edge("decompose", "retrieve")
+    graph.add_edge(START, "retrieve")
     graph.add_conditional_edges("retrieve", needs_vision)
     graph.add_edge("generate", END)
     graph.add_edge("generate_vision", END)
