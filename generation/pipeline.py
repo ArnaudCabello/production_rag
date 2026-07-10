@@ -51,6 +51,7 @@ Answer (with [n] citations):"""
 
 class RAGState(TypedDict):
     question: str
+    scope: list[str]      # optional: restrict to these document names
     chunks: list[dict]
     answer: str
 
@@ -79,11 +80,17 @@ def build_graph(retriever, llm):
     doc_names = sorted({c["pdf"] for c in retriever.chunks.values()})
 
     def retrieve(state: RAGState):
-        chunks = retriever.search(state["question"])
+        scope = state.get("scope") or None
+        chunks = retriever.search(state["question"], pdfs=scope)
         if config.MULTI_DOC_FANOUT and MULTI_DOC_QUESTION.search(state["question"]):
+            docs = scope or doc_names
+            if len(docs) > config.MULTI_DOC_MAX_DOCS:
+                # corpus too large to query every document: fan out only over the
+                # documents the main retrieval already surfaced
+                docs = list(dict.fromkeys(c["pdf"] for c in chunks))[: config.MULTI_DOC_MAX_DOCS]
             seen = {c["chunk_id"] for c in chunks}
-            for pdf in doc_names:
-                for chunk in retriever.search(state["question"], top_k=config.PER_DOC_TOP_K, pdf=pdf):
+            for pdf in docs:
+                for chunk in retriever.search(state["question"], top_k=config.PER_DOC_TOP_K, pdfs=[pdf]):
                     if chunk["chunk_id"] not in seen:
                         seen.add(chunk["chunk_id"])
                         chunks.append(chunk)
@@ -98,9 +105,13 @@ def build_graph(retriever, llm):
         return {"answer": llm.invoke(messages).content}
 
     def generate_vision(state: RAGState):
-        from generation.vision import answer_with_figures  # lazy: loads the VLM on first use
+        if config.GENERATOR_PROVIDER == "huggingface":
+            from generation.vision import answer_with_figures  # lazy: loads the local VLM on first use
 
-        return {"answer": answer_with_figures(state["question"], state["chunks"], format_context)}
+            return {"answer": answer_with_figures(state["question"], state["chunks"], format_context)}
+        from generation.vision import answer_with_figures_api  # API providers are multimodal already
+
+        return {"answer": answer_with_figures_api(llm, state["question"], state["chunks"], format_context)}
 
     graph = StateGraph(RAGState)
     graph.add_node("retrieve", retrieve)

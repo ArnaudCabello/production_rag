@@ -30,9 +30,10 @@ EXCLUDED_HEADINGS = {"references", "table of contents"}  # keep abstract and ack
 CHROMA_DIR = REPO_ROOT / "chroma_db"
 COLLECTION_NAME = "production_rag"
 
-# Cross-document questions: fan retrieval out over every document
+# Cross-document questions: fan retrieval out over every document in scope
 MULTI_DOC_FANOUT = True
 PER_DOC_TOP_K = 2               # chunks each document contributes, after the main retrieval
+MULTI_DOC_MAX_DOCS = 8          # above this, fan out only over documents the main retrieval surfaced
 
 # Retrieval
 DENSE_TOP_K = 25                # candidates from the dense index

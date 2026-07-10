@@ -8,10 +8,11 @@ import config
 log = logging.getLogger(__name__)
 
 
-def get_llm(model_name: str = None):
+def get_llm(model_name: str = None, provider: str = None):
     model_name = model_name or config.GENERATOR_MODEL
+    provider = provider or config.GENERATOR_PROVIDER
 
-    if config.GENERATOR_PROVIDER == "huggingface":
+    if provider == "huggingface":
         from langchain_huggingface import ChatHuggingFace, HuggingFacePipeline
 
         import torch
@@ -41,4 +42,5 @@ def get_llm(model_name: str = None):
 
     from langchain.chat_models import init_chat_model
 
-    return init_chat_model(model_name, model_provider=config.GENERATOR_PROVIDER)
+    log.info(f"Loading generator {model_name} via {provider} API...")
+    return init_chat_model(model_name, model_provider=provider, temperature=0)

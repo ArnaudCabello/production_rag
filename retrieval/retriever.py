@@ -37,24 +37,28 @@ class HybridRetriever:
         self.reranker = CrossEncoder(config.RERANKER_MODEL) if rerank else None
         log.info(f"HybridRetriever ready: {len(self.ids)} chunks, rerank={'on' if rerank else 'off'}")
 
-    def _dense_ids(self, query: str, pdf: str = None) -> list[str]:
+    def _dense_ids(self, query: str, pdfs: list[str] = None) -> list[str]:
         embedding = self.embedder.encode([query], normalize_embeddings=True)
         n = min(config.DENSE_TOP_K, len(self.ids))
+        where = None
+        if pdfs:
+            where = {"pdf": pdfs[0]} if len(pdfs) == 1 else {"pdf": {"$in": list(pdfs)}}
         return self.collection.query(
-            query_embeddings=embedding.tolist(), n_results=n,
-            where={"pdf": pdf} if pdf else None,
+            query_embeddings=embedding.tolist(), n_results=n, where=where,
         )["ids"][0]
 
-    def _bm25_ids(self, query: str, pdf: str = None) -> list[str]:
+    def _bm25_ids(self, query: str, pdfs: list[str] = None) -> list[str]:
+        allowed = set(pdfs) if pdfs else None
         scores = self.bm25.get_scores(_tokenize(query))
         ranked = sorted(range(len(self.ids)), key=lambda i: scores[i], reverse=True)
-        ids = (i for i in ranked if scores[i] > 0 and (pdf is None or self.chunks[self.ids[i]]["pdf"] == pdf))
+        ids = (i for i in ranked
+               if scores[i] > 0 and (allowed is None or self.chunks[self.ids[i]]["pdf"] in allowed))
         return [self.ids[i] for _, i in zip(range(config.BM25_TOP_K), ids)]
 
-    def search(self, query: str, top_k: int = config.RERANK_TOP_N, pdf: str = None) -> list[dict]:
-        """Hybrid search; pass pdf to restrict every stage to that document's chunks."""
+    def search(self, query: str, top_k: int = config.RERANK_TOP_N, pdfs: list[str] = None) -> list[dict]:
+        """Hybrid search; pass pdfs to restrict every stage to those documents' chunks."""
         fused: dict[str, float] = {}
-        for id_list in (self._dense_ids(query, pdf), self._bm25_ids(query, pdf)):
+        for id_list in (self._dense_ids(query, pdfs), self._bm25_ids(query, pdfs)):
             for rank, cid in enumerate(id_list, 1):
                 fused[cid] = fused.get(cid, 0.0) + 1.0 / (RRF_K + rank)
         candidates = sorted(fused, key=fused.get, reverse=True)

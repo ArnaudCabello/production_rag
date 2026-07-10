@@ -52,6 +52,7 @@ def index_chunks(collection, chunks: list[dict], batch_size: int = 32):
         metadatas=[
             {"doc_hash": c["doc_hash"], "pdf": c["pdf"], "headings": c["headings"]}
             | ({"figures": c["figures"]} if c.get("figures") else {})
+            | ({"prov": c["prov"]} if c.get("prov") else {})
             for c in chunks
         ],
     )

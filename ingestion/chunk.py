@@ -1,11 +1,14 @@
 """DoclingDocument → chunks via docling's HybridChunker.
 
-Chunks carry stable IDs ({doc_hash}-{seq}) and heading context. Tables are
-serialized into the chunk text by the chunker itself, so table content is
-searchable and visible to the LLM. Sections in config.EXCLUDED_HEADINGS are
-dropped (exact heading match) — the abstract and acknowledgments stay in.
-A per-document card chunk states file name, title, and byline as sentences.
+Chunks carry stable IDs ({doc_hash}-{seq}), heading context, and provenance
+(page number + bounding boxes, PDF points, origin bottom-left) so a citation
+can be highlighted in the original PDF. Tables are serialized into the chunk
+text by the chunker itself, so table content is searchable and visible to the
+LLM. Sections in config.EXCLUDED_HEADINGS are dropped (exact heading match) —
+the abstract and acknowledgments stay in. A per-document card chunk states
+file name, title, and byline as sentences.
 """
+import json
 import logging
 import re
 
@@ -85,6 +88,18 @@ def figure_map_by_caption_ref(doc_hash: str, doc: DoclingDocument) -> dict[str, 
     return mapping
 
 
+def chunk_provenance(chunk) -> str:
+    """JSON [[page, l, t, r, b], ...] for every item in the chunk — the rectangles
+    a PDF viewer needs to highlight the passage. Docling coordinates: PDF points,
+    origin bottom-left."""
+    boxes = []
+    for item in chunk.meta.doc_items or []:
+        for prov in getattr(item, "prov", None) or []:
+            bbox = prov.bbox
+            boxes.append([prov.page_no, round(bbox.l, 1), round(bbox.t, 1), round(bbox.r, 1), round(bbox.b, 1)])
+    return json.dumps(boxes) if boxes else ""
+
+
 def chunk_document(doc_hash: str, doc_name: str, doc: DoclingDocument) -> list[dict]:
     chunker = get_chunker()
     figure_map = figure_map_by_caption_ref(doc_hash, doc)
@@ -99,6 +114,7 @@ def chunk_document(doc_hash: str, doc_name: str, doc: DoclingDocument) -> list[d
             continue
         figures = [figure_map[item.self_ref] for item in chunk.meta.doc_items or []
                    if item.self_ref in figure_map]
+        prov = chunk_provenance(chunk)
         record = {
             "chunk_id": f"{doc_hash}-{seq:04d}",
             "doc_hash": doc_hash,
@@ -108,6 +124,8 @@ def chunk_document(doc_hash: str, doc_name: str, doc: DoclingDocument) -> list[d
         }
         if figures:
             record["figures"] = ",".join(dict.fromkeys(figures))  # Chroma metadata must be scalar
+        if prov:
+            record["prov"] = prov
         chunks.append(record)
         seq += 1
     log.info(f"{doc_name}: {len(chunks)} chunks "
