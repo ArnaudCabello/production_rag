@@ -53,10 +53,12 @@ The corpus contains these documents:
 
 Question: {question}
 
-The question combines information from multiple documents. Write one short search query
-per relevant document — 2-4 lines total, one query per line, nothing else (no headers,
-no quotes, no explanations). Build each query from that document's topic words plus the
-question's subject."""
+The question combines information from multiple documents. For each relevant document
+write one line formatted exactly as:
+file name.pdf :: short search query
+Use the document's own topic words (materials, methods) plus the question's subject in
+the query — never journal names. 2-4 lines total, nothing else (no headers, no quotes,
+no explanations)."""
 
 
 class RAGState(TypedDict):
@@ -116,7 +118,12 @@ def build_graph(retriever, llm):
         chunks = retriever.search(state["question"])
         seen = {c["chunk_id"] for c in chunks}
         for sub_query in state["sub_queries"]:
-            for chunk in retriever.search(sub_query, top_k=config.SUBQUERY_TOP_K):
+            doc, sep, query = sub_query.partition("::")
+            hits = retriever.search(query.strip() if sep else sub_query, top_k=20)
+            if sep:  # keep only the targeted document's chunks so every paper is represented
+                targeted = [c for c in hits if c["pdf"].lower() in doc.lower() or doc.strip().lower() in c["pdf"].lower()]
+                hits = targeted or hits
+            for chunk in hits[: config.SUBQUERY_TOP_K]:
                 if chunk["chunk_id"] not in seen:
                     seen.add(chunk["chunk_id"])
                     chunks.append(chunk)
