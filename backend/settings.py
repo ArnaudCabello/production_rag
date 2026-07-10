@@ -10,6 +10,9 @@ import stat
 from pathlib import Path
 
 import platformdirs
+from dotenv import load_dotenv
+
+load_dotenv(Path(__file__).resolve().parent.parent / ".env")  # keys + optional defaults
 
 log = logging.getLogger(__name__)
 
@@ -24,7 +27,10 @@ PROVIDER_ENV = {
     "openai": "OPENAI_API_KEY",
     "google_genai": "GOOGLE_API_KEY",
 }
-DEFAULTS = {"provider": "anthropic", "model": "claude-sonnet-5"}
+DEFAULTS = {
+    "provider": os.environ.get("RAG_PROVIDER", "anthropic"),
+    "model": os.environ.get("RAG_MODEL", "claude-sonnet-5"),
+}
 
 
 def load_settings() -> dict:
