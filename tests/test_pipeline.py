@@ -1,5 +1,6 @@
 """Multi-document fan-out tests with stubs (no models)."""
 import sys
+from pathlib import Path
 sys.path.insert(0, str(__import__("pathlib").Path(__file__).resolve().parent.parent))
 
 from generation.pipeline import build_graph, MULTI_DOC_QUESTION
@@ -47,6 +48,6 @@ assert [c["chunk_id"] for c in out["chunks"]] == ["a-1"] and len(ret.calls) == 1
 print("MULTI_DOC_FANOUT=False: OK")
 
 import json
-qs = json.load(open("/home/user/production_rag/eval/golden_set.json"))["questions"]
+qs = json.load(open(Path(__file__).resolve().parent.parent / "eval" / "golden_set.json"))["questions"]
 assert [q["id"] for q in qs if MULTI_DOC_QUESTION.search(q["question"])] == ["x01", "x02", "x03"]
 print("trigger still matches exactly x01-x03: OK")
