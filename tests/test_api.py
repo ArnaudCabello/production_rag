@@ -12,12 +12,13 @@ import backend.main as backend_main
 
 client = TestClient(backend_main.app)
 
-# status + files reflect the real index
+# status + files reflect the real index (any corpus with ReAct.pdf ingested)
 s = client.get("/api/status").json()
-assert s["documents"] == 1 and s["chunks"] > 50, s
+assert s["documents"] >= 1 and s["chunks"] > 50, s
 f = client.get("/api/files").json()
-assert f[0]["name"] == "ReAct.pdf" and f[0]["chunks"] == s["chunks"], f
-print("status/files: OK", s["chunks"], "chunks")
+assert {x["name"] for x in f} >= {"ReAct.pdf"}, f
+assert sum(x["chunks"] for x in f) == s["chunks"], (f, s)
+print("status/files: OK", s["documents"], "docs,", s["chunks"], "chunks")
 
 # pdf serving + traversal attempts
 assert client.get("/api/pdf/ReAct.pdf").status_code == 200
