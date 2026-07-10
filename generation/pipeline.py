@@ -39,17 +39,24 @@ Question: {question}
 
 Answer (with [n] citations):"""
 
+# Whether to decompose is decided deterministically from the question's wording;
+# the LLM proved unreliable at that judgment but good at writing the sub-queries.
+MULTI_DOC_QUESTION = re.compile(
+    r"\b(papers|studies|documents|articles|reports"
+    r"|these (?:two|three|four|five) \w+|both (?:papers|studies|documents))\b",
+    re.IGNORECASE,
+)
+
 DECOMPOSE_PROMPT = """You are the retrieval planner for a document Q/A system.
 The corpus contains these documents:
 {documents}
 
 Question: {question}
 
-Decide from the SHAPE of the question alone — do not judge whether the documents can
-answer it. If the question compares, contrasts, or combines findings across more than
-one paper/study/document, reply with one short search query per compared item (2-4
-lines, nothing else — no explanations). Build each query from the question's own terms
-for that item. Otherwise reply with exactly NONE."""
+The question combines information from multiple documents. Write one short search query
+per relevant document — 2-4 lines total, one query per line, nothing else (no headers,
+no quotes, no explanations). Build each query from that document's topic words plus the
+question's subject."""
 
 
 class RAGState(TypedDict):
@@ -62,7 +69,7 @@ class RAGState(TypedDict):
 
 def parse_sub_queries(reply: str) -> list[str]:
     lines = [re.sub(r"^[\s\-*\d.)]+", "", line).strip() for line in reply.splitlines()]
-    lines = [line for line in lines if line]
+    lines = [line.strip("\"'") for line in lines if line and not line.endswith(":")]
     if not lines or lines[0].upper().startswith("NONE"):  # NONE + trailing prose is still NONE
         return []
     if len(lines) < 2:  # a comparison needs at least two sides; anything less is noise
@@ -98,7 +105,7 @@ def build_graph(retriever, llm):
     ) or sorted({c["pdf"] for c in retriever.chunks.values()})
 
     def decompose(state: RAGState):
-        if not config.DECOMPOSE_ENABLED:
+        if not (config.DECOMPOSE_ENABLED and MULTI_DOC_QUESTION.search(state["question"])):
             return {"planner_reply": "", "sub_queries": []}
         reply = llm.invoke([HumanMessage(content=DECOMPOSE_PROMPT.format(
             documents="\n".join(f"- {name}" for name in doc_names),
