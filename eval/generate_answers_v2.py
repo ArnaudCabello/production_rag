@@ -28,10 +28,14 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--model", default=None, help="override config.GENERATOR_MODEL")
     parser.add_argument("--limit", type=int, default=None, help="only answer the first N questions")
+    parser.add_argument("--ids", default=None, help="only answer these question ids, comma-separated")
     parser.add_argument("--output", type=pathlib.Path, default=OUTPUT, help="answers jsonl path")
     args = parser.parse_args()
 
     golden = json.loads((Path(__file__).resolve().parent / "golden_set.json").read_text())["questions"]
+    if args.ids:
+        wanted = set(args.ids.split(","))
+        golden = [q for q in golden if q["id"] in wanted]
     if args.limit:
         golden = golden[: args.limit]
 
@@ -46,8 +50,11 @@ def main():
                 "question": q["question"],
                 "answer": result["answer"],
                 "sources": [c["chunk_id"] for c in result["chunks"]],
+                "sub_queries": result.get("sub_queries", []),
+                "planner_reply": result.get("planner_reply", ""),
             }
             f.write(json.dumps(record) + "\n")
+            print(f"{q['id']} planner: {record['planner_reply'][:200]!r}")
             print(f"{q['id']}: {result['answer'][:120]}")
 
     print(f"\nSaved: {args.output}")

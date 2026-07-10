@@ -52,6 +52,7 @@ each targeting one document's part of the answer. Otherwise reply with exactly N
 
 class RAGState(TypedDict):
     question: str
+    planner_reply: str
     sub_queries: list[str]
     chunks: list[dict]
     answer: str
@@ -90,11 +91,11 @@ def build_graph(retriever, llm):
 
     def decompose(state: RAGState):
         if not config.DECOMPOSE_ENABLED:
-            return {"sub_queries": []}
+            return {"planner_reply": "", "sub_queries": []}
         reply = llm.invoke([HumanMessage(content=DECOMPOSE_PROMPT.format(
             documents="\n".join(f"- {name}" for name in doc_names),
             question=state["question"]))]).content
-        return {"sub_queries": parse_sub_queries(reply)}
+        return {"planner_reply": reply, "sub_queries": parse_sub_queries(reply)}
 
     def retrieve(state: RAGState):
         chunks = retriever.search(state["question"])
