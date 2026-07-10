@@ -427,16 +427,16 @@
     "category": "cross_document",
     "question": "Compare the sintering techniques and conditions used to densify the ceramics in these three studies (HfCxN1-x, Hf1-xNbxC, and the (Zr,Ti,Ta) boride-carbide).",
     "reference": "Chen et al. hot-pressed HfCxN1-x at 1950 C, 30 MPa, 1 h in argon; He et al. used vacuum hot-pressed sintering (VHPS, ~2000 C, 40 MPa); Singh et al. used spark plasma sintering at 1850 C, 40 MPa, 30 min.",
-    "answer": "The sintering techniques and conditions used to densify the ceramics in the three studies differ as follows:\n\n1. **HfCxN1-x Ceramics**:\n   - Synthesized through a solid-phase reaction at 2400 \u00b0C in a nitrogen atmosphere, followed by hot pressing at 1950 \u00b0C for 1 hour with a uniaxial pressure of 30 MPa in a flowing argon environment [6].\n\n2. **(Hf, Zr, Ta, Cr, Ti)B2**:\n   - Consolidated via Spark Plasma Sintering (SPS) at 2000 \u00b0C for 10 minutes from oxides, achieving ~99.2 % relative density [5].\n\n3. **(Zr,Ti,Ta)C,B2 Composite**:\n   - Fabricated using Spark Plasma Sintering (SPS) at 1850 \u00b0C, 40 MPa for 30 minutes, achieving ~99 % densification [1][3].\n\nEach method employs different temperatures, pressures, and durations to achieve high densification levels, reflecting the unique characteristics and requirements of the materials being processed.",
-    "key_match": false,
-    "judge": "partial"
+    "answer": "The sintering techniques and conditions used to densify the ceramics in the three studies are as follows:\n\nFor HfCxN1-x ceramics:\n- Hot pressing at 1950 \u00b0C for 1 hour with a uniaxial pressure of 30 MPa in a flowing argon environment [6].\n\nFor Hf1-xNbxC ceramics:\n- Vacuum hot-pressed sintering (VHPS) technology was employed to synthesize NbC-modified HfC (Hf1-xNbxC) UHTCs [8].\n\nFor the (Zr,Ti,Ta) boride-carbide composite:\n- Spark plasma sintering (SPS) at 1850 \u00b0C, 40 MPa for 30 minutes, achieving ~99 % densification [1][3].",
+    "key_match": true,
+    "judge": "correct"
   },
   {
     "id": "x02",
     "category": "cross_document",
     "question": "At what temperatures and durations were the hafnium-based ceramics oxidation-tested in the Chen and He studies?",
     "reference": "Chen et al. oxidized HfCxN1-x at 1800 C for 30 minutes (heated at ~30 C/s in graphite crucibles); He et al. oxidized Hf1-xNbxC in static air at 1700 C for 30 hours.",
-    "answer": "In the Chen study, hafnium-based ceramics were oxidation-tested at 1800 \u25e6C for 30 min in air [1][2][3][4][5]. In the He study, the oxidation testing was conducted at 1700 \u25e6C for 30 hours in static air [6][7].",
+    "answer": "In the Chen study, hafnium-based ceramics were oxidation-tested at 1800 \u25e6C for 30 min in air [1][2][3][5].\n\nIn the He study, the anti-oxidation property of Hf1x Nb x C was tested in static air at 1700 \u25e6C for 30 h [6][7].",
     "key_match": true,
     "judge": "partial"
   },
@@ -445,8 +445,8 @@
     "category": "cross_document",
     "question": "What different additive strategies do these papers use to improve the oxidation resistance of HfC-based ceramics?",
     "reference": "Chen et al. use anionic modification \u2014 nitrogen doping (HfCxN1-x, resistance improves with N content) plus SiB6/SiC silicide additions that form molten SiO2/HfSiO4; He et al. use cationic modification \u2014 NbC additions whose niobium oxides bond and densify the HfO2 scale.",
-    "answer": "The papers describe several additive strategies to improve the oxidation resistance of HfC-based ceramics:\n\n1. **Nitrogen Doping**: The addition of nitrogen (N) to form HfC x N1x ceramics improves oxidation resistance. This is due to the formation of a more stable oxide layer and the increase in the oxygen absorption barrier on Hf atoms, which impedes initial oxygen adsorption [2][4].\n\n2. **Incorporation of Silicon-Containing Compounds**:\n   - **SiC Addition**: Adding 20 vol% SiC to HfC0.5N0.5 ceramics enhances oxidation resistance by promoting the formation of a protective glassy SiO2 layer. This layer helps in forming HfSiO4, which fills the porous HfO2 skeleton and inhibits the volatilization of SiO2 [3][4].\n   - **SiB6 Addition**: Similarly, adding 20 vol% SiB6 to HfC0.5N0.5 ceramics also improves oxidation resistance initially but produces volatile B2O3, leading to poorer oxidation behavior compared to SiC addition [4].\n\nThese strategies collectively aim to form protective oxide layers and inhibit the volatilization of reactive species, thereby enhancing the oxidation resistance of HfC-based ceramics.",
-    "key_match": false,
+    "answer": "These papers describe several additive strategies to improve the oxidation resistance of HfC-based ceramics:\n\n1. **Nitrogen Doping**: Incorporating nitrogen into HfC ceramics (forming HfC x N1x) improves oxidation resistance by increasing the oxygen absorption barrier on Hf atoms and forming a more stable oxide layer [1][2][4].\n   \n2. **Addition of Silicon-Containing Compounds**:\n   - **SiC**: Adding SiC to HfC0.5N0.5 ceramics promotes the formation of a protective glassy SiO2 layer, which helps in forming HfSiO4 and filling the porous HfO2 oxide scale, enhancing oxidation resistance [3][4][5].\n   - **SiB6**: Similar to SiC, adding SiB6 to HfC0.5N0.5 ceramics also improves oxidation resistance, but the formation of volatile B2O3 reduces its effectiveness compared to SiC under high temperatures [4].\n\n3. **Multi-Component Alloys**: The addition of multiple components like SiC and other elements (e.g., TaC, NbC) can modify the oxidation behavior of HfC ceramics. These modifications aim to form dense oxide scales that inhibit oxygen diffusion and prevent the formation of porous oxide layers [6][7].\n\nThese strategies collectively aim to create more stable and protective oxide layers, reducing the susceptibility of HfC ceramics to oxidation at high temperatures.",
+    "key_match": true,
     "judge": "partial"
   },
   {
