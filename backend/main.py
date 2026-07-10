@@ -1,7 +1,7 @@
 """FastAPI backend for the desktop app: ingest, scoped ask, settings, PDF serving.
 
 Run (repo root):
-    uvicorn backend.main:app --port 8642
+    python -m uvicorn backend.main:app --port 8642
 
 Heavy resources load lazily and are cached with separate locks and lifetimes:
 the retriever (invalidated when the corpus changes), the LLM client (invalidated
