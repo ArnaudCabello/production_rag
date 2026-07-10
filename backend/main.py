@@ -218,9 +218,16 @@ def ask(req: AskRequest):
     except HTTPException:
         raise
     except Exception as exc:
-        if getattr(exc, "status_code", None) == 401:
+        provider_status = getattr(exc, "status_code", None)
+        if provider_status == 401:
             raise HTTPException(status_code=401,
                                 detail="The LLM provider rejected the configured API key — update it in settings")
+        if provider_status == 404:
+            raise HTTPException(status_code=400,
+                                detail="The configured model name was not found at the provider — check settings")
+        if provider_status == 429:
+            raise HTTPException(status_code=429,
+                                detail="The LLM provider reports a rate/quota limit — check the account's billing or retry later")
         raise
     return {
         "answer": result["answer"],
