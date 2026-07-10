@@ -129,20 +129,31 @@ def ingest():
     return {"started": True}
 
 
+def _safe_corpus_path(name: str) -> Path | None:
+    """Resolve a client-supplied name to a file inside the corpus dir, or None."""
+    try:
+        path = (config.PDF_DIR / Path(name).name).resolve()
+        if path.parent == config.PDF_DIR.resolve() and path.suffix.lower() == ".pdf":
+            return path
+    except (ValueError, OSError):  # null bytes, over-long names, etc.
+        pass
+    return None
+
+
 @app.post("/api/upload")
 async def upload(file: UploadFile):
-    name = Path(file.filename or "").name
-    if not name.lower().endswith(".pdf"):
+    path = _safe_corpus_path(file.filename or "")
+    if path is None:
         raise HTTPException(status_code=400, detail="Only PDF files are accepted")
     config.PDF_DIR.mkdir(parents=True, exist_ok=True)
-    (config.PDF_DIR / name).write_bytes(await file.read())
-    return {"saved": name}
+    path.write_bytes(await file.read())
+    return {"saved": path.name}
 
 
 @app.get("/api/pdf/{name}")
 def pdf(name: str):
-    path = (config.PDF_DIR / Path(name).name).resolve()
-    if path.parent != config.PDF_DIR.resolve() or path.suffix.lower() != ".pdf" or not path.is_file():
+    path = _safe_corpus_path(name)
+    if path is None or not path.is_file():
         raise HTTPException(status_code=404, detail="Not found")
     return FileResponse(path, media_type="application/pdf")
 

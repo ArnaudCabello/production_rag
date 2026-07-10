@@ -57,7 +57,9 @@ def set_api_key(provider: str, api_key: str):
         import keyring
 
         keyring.set_password(APP_NAME, provider, api_key)
-    except Exception:
+    except (KeyboardInterrupt, SystemExit):
+        raise
+    except BaseException:  # keyring backends can raise native panics (BaseException)
         log.warning("No usable keyring backend; storing key in an owner-only file")
         keys = _fallback_keys()
         keys[provider] = api_key
@@ -71,7 +73,9 @@ def get_api_key(provider: str) -> str | None:
         key = keyring.get_password(APP_NAME, provider)
         if key:
             return key
-    except Exception:
+    except (KeyboardInterrupt, SystemExit):
+        raise
+    except BaseException:  # see set_api_key
         pass
     return _fallback_keys().get(provider) or os.environ.get(PROVIDER_ENV.get(provider, ""))
 
