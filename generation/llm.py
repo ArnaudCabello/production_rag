@@ -43,4 +43,5 @@ def get_llm(model_name: str = None, provider: str = None):
     from langchain.chat_models import init_chat_model
 
     log.info(f"Loading generator {model_name} via {provider} API...")
-    return init_chat_model(model_name, model_provider=provider, temperature=0)
+    # no temperature override: OpenAI reasoning models reject anything but their default
+    return init_chat_model(model_name, model_provider=provider)

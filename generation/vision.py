@@ -59,6 +59,19 @@ def collect_figures(chunks: list[dict]) -> list[str]:
     return list(dict.fromkeys(paths))[: config.MAX_FIGURES_PER_ANSWER]
 
 
+def build_figure_content(question: str, chunks: list[dict], format_context, image_entry) -> list[dict]:
+    """Shared prompt assembly for both vision backends: labeled figure blocks
+    (image_entry(path) supplies the backend-specific image block) then the
+    sources-and-question template."""
+    content = []
+    for i, path in enumerate(collect_figures(chunks)):
+        content.append({"type": "text", "text": f"Figure {chr(65 + i)}:"})
+        content.append(image_entry(path))
+    content.append({"type": "text", "text": USER_TEMPLATE.format(
+        context=format_context(chunks), question=question)})
+    return content
+
+
 def answer_with_figures_api(llm, question: str, chunks: list[dict], format_context) -> str:
     """Figure-grounded answer via a multimodal API model (Claude/GPT/Gemini):
     same sources-plus-labeled-images prompt, sent as data-URI image blocks."""
@@ -66,13 +79,11 @@ def answer_with_figures_api(llm, question: str, chunks: list[dict], format_conte
 
     from langchain_core.messages import HumanMessage, SystemMessage
 
-    content = []
-    for label, path in zip("ABCD", collect_figures(chunks)):
+    def image_entry(path):
         image_b64 = base64.b64encode((config.REPO_ROOT / path).read_bytes()).decode()
-        content.append({"type": "text", "text": f"Figure {label}:"})
-        content.append({"type": "image_url", "image_url": {"url": f"data:image/png;base64,{image_b64}"}})
-    content.append({"type": "text", "text": USER_TEMPLATE.format(
-        context=format_context(chunks), question=question)})
+        return {"type": "image_url", "image_url": {"url": f"data:image/png;base64,{image_b64}"}}
+
+    content = build_figure_content(question, chunks, format_context, image_entry)
     reply = llm.invoke([SystemMessage(content=SYSTEM_PROMPT), HumanMessage(content=content)])
     return reply.content if isinstance(reply.content, str) else str(reply.content)
 
@@ -81,13 +92,9 @@ def answer_with_figures(question: str, chunks: list[dict], format_context) -> st
     from qwen_vl_utils import process_vision_info
 
     _load()
-    figures = collect_figures(chunks)
-    content = []
-    for label, path in zip("ABCD", figures):
-        content.append({"type": "text", "text": f"Figure {label}:"})
-        content.append({"type": "image", "image": str(config.REPO_ROOT / path)})
-    content.append({"type": "text", "text": USER_TEMPLATE.format(
-        context=format_context(chunks), question=question)})
+    content = build_figure_content(
+        question, chunks, format_context,
+        lambda path: {"type": "image", "image": str(config.REPO_ROOT / path)})
     messages = [
         {"role": "system", "content": SYSTEM_PROMPT},
         {"role": "user", "content": content},

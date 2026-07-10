@@ -40,12 +40,12 @@ class HybridRetriever:
     def _dense_ids(self, query: str, pdfs: list[str] = None) -> list[str]:
         embedding = self.embedder.encode([query], normalize_embeddings=True)
         n = min(config.DENSE_TOP_K, len(self.ids))
-        where = None
-        if pdfs:
-            where = {"pdf": pdfs[0]} if len(pdfs) == 1 else {"pdf": {"$in": list(pdfs)}}
-        return self.collection.query(
+        where = {"pdf": {"$in": list(pdfs)}} if pdfs else None
+        ids = self.collection.query(
             query_embeddings=embedding.tolist(), n_results=n, where=where,
         )["ids"][0]
+        # the live collection may contain chunks upserted after this snapshot
+        return [cid for cid in ids if cid in self.chunks]
 
     def _bm25_ids(self, query: str, pdfs: list[str] = None) -> list[str]:
         allowed = set(pdfs) if pdfs else None

@@ -10,7 +10,7 @@ from pathlib import Path
 
 import config
 from ingestion.chunk import chunk_document
-from ingestion.convert import convert_pdf
+from ingestion.convert import content_hash, convert_pdf
 from ingestion.index import delete_doc, doc_is_indexed, get_collection, index_chunks
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
@@ -18,11 +18,12 @@ log = logging.getLogger(__name__)
 
 
 def ingest_pdf(collection, pdf_path: Path) -> int:
-    doc_hash, doc = convert_pdf(pdf_path)
+    doc_hash = content_hash(pdf_path)
     delete_doc(collection, pdf_path.name, keep_hash=doc_hash)
-    if doc_is_indexed(collection, doc_hash):
+    if doc_is_indexed(collection, doc_hash):  # before conversion/cache-load — unchanged files cost a hash only
         log.info(f"⏭️  {pdf_path.name} unchanged ({doc_hash}), skipping")
         return 0
+    doc_hash, doc = convert_pdf(pdf_path)
     chunks = chunk_document(doc_hash, pdf_path.name, doc)
     index_chunks(collection, chunks)
     return len(chunks)

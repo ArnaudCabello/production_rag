@@ -9,7 +9,7 @@ carry figures (and config.VISION_ENABLED), generation routes to the vision
 model, which sees the figure images alongside the sources.
 """
 import re
-from typing import TypedDict
+from typing import NotRequired, TypedDict
 
 from langchain_core.messages import HumanMessage, SystemMessage
 from langgraph.graph import END, START, StateGraph
@@ -51,7 +51,7 @@ Answer (with [n] citations):"""
 
 class RAGState(TypedDict):
     question: str
-    scope: list[str]      # optional: restrict to these document names
+    scope: NotRequired[list[str] | None]  # restrict to these document names
     chunks: list[dict]
     answer: str
 
@@ -76,7 +76,8 @@ def needs_vision(state: RAGState) -> str:
     return "generate"
 
 
-def build_graph(retriever, llm):
+def build_graph(retriever, llm, provider: str = None):
+    provider = provider or config.GENERATOR_PROVIDER  # captured at build time, with the llm it describes
     doc_names = sorted({c["pdf"] for c in retriever.chunks.values()})
 
     def retrieve(state: RAGState):
@@ -85,8 +86,9 @@ def build_graph(retriever, llm):
         if config.MULTI_DOC_FANOUT and MULTI_DOC_QUESTION.search(state["question"]):
             docs = scope or doc_names
             if len(docs) > config.MULTI_DOC_MAX_DOCS:
-                # corpus too large to query every document: fan out only over the
-                # documents the main retrieval already surfaced
+                # corpus too large to query every document: fall back to the documents
+                # the main retrieval surfaced (at most RERANK_TOP_N of them) — a real
+                # document-selection stage is the known follow-up for large corpora
                 docs = list(dict.fromkeys(c["pdf"] for c in chunks))[: config.MULTI_DOC_MAX_DOCS]
             seen = {c["chunk_id"] for c in chunks}
             for pdf in docs:
@@ -105,7 +107,7 @@ def build_graph(retriever, llm):
         return {"answer": llm.invoke(messages).content}
 
     def generate_vision(state: RAGState):
-        if config.GENERATOR_PROVIDER == "huggingface":
+        if provider == "huggingface":
             from generation.vision import answer_with_figures  # lazy: loads the local VLM on first use
 
             return {"answer": answer_with_figures(state["question"], state["chunks"], format_context)}

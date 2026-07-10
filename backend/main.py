@@ -3,10 +3,11 @@
 Run (repo root):
     uvicorn backend.main:app --port 8642
 
-The heavy pieces (retriever models, the LLM client, the graph) load lazily on
-first use and are cached; finishing an ingest invalidates the retriever so new
-documents become searchable without a restart.
+Heavy resources load lazily and are cached with separate locks and lifetimes:
+the retriever (invalidated when the corpus changes), the LLM client (invalidated
+when provider/model settings change), and the graph (depends on both).
 """
+import json
 import logging
 import threading
 from pathlib import Path
@@ -30,45 +31,72 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-_lock = threading.Lock()
+_retriever_lock = threading.Lock()
+_llm_lock = threading.Lock()
+_graph_lock = threading.Lock()
+_ingest_lock = threading.Lock()
+
 _retriever = None
+_files_cache: list[dict] | None = None
+_llm = None
+_llm_key = None    # (provider, model) the cached client was built for
 _graph = None
-_graph_key = None  # (provider, model) the cached graph was built with
+_graph_key = None  # (id(retriever), provider, model) the cached graph was built from
 _ingest = {"running": False, "processed": 0, "total": 0, "error": None}
 
 
 def get_retriever():
     global _retriever
-    with _lock:
-        if _retriever is None:
-            from retrieval.retriever import HybridRetriever
+    if _retriever is None:
+        with _retriever_lock:
+            if _retriever is None:
+                from retrieval.retriever import HybridRetriever
 
-            _retriever = HybridRetriever()
-        return _retriever
+                _retriever = HybridRetriever()
+    return _retriever
+
+
+def get_llm_client():
+    global _llm, _llm_key
+    s = app_settings.load_settings()
+    key = (s["provider"], s["model"])
+    if _llm is None or _llm_key != key:
+        with _llm_lock:
+            if _llm is None or _llm_key != key:
+                if s["provider"] != "huggingface" and not app_settings.export_key_to_env(s["provider"]):
+                    raise HTTPException(status_code=400, detail=f"No API key configured for {s['provider']}")
+                from generation.llm import get_llm
+
+                _llm = get_llm(s["model"], s["provider"])
+                _llm_key = key
+    return _llm, key
 
 
 def get_graph():
-    """Graph for the currently configured provider/model (rebuilt on change)."""
     global _graph, _graph_key
-    s = app_settings.load_settings()
-    key = (s["provider"], s["model"])
-    with _lock:
-        if _graph is None or _graph_key != key:
-            if s["provider"] != "huggingface" and not app_settings.export_key_to_env(s["provider"]):
-                raise HTTPException(status_code=400, detail=f"No API key configured for {s['provider']}")
-            from generation.llm import get_llm
-            from generation.pipeline import build_graph
+    retriever = get_retriever()        # heavy loads happen before the graph lock
+    llm, (provider, model) = get_llm_client()
+    key = (id(retriever), provider, model)
+    if _graph is None or _graph_key != key:
+        with _graph_lock:
+            if _graph is None or _graph_key != key:
+                from generation.pipeline import build_graph
 
-            config.GENERATOR_PROVIDER = s["provider"]  # vision routing reads this
-            _graph = build_graph(get_retriever(), get_llm(s["model"], s["provider"]))
-            _graph_key = key
-        return _graph
+                _graph = build_graph(retriever, llm, provider=provider)
+                _graph_key = key
+    return _graph
 
 
-def _invalidate():
-    global _retriever, _graph, _graph_key
-    with _lock:
-        _retriever, _graph, _graph_key = None, None, None
+def _corpus_changed():
+    """After an ingest: retriever and graph are stale, the LLM client is not."""
+    global _retriever, _files_cache, _graph, _graph_key
+    _retriever, _files_cache, _graph, _graph_key = None, None, None, None
+
+
+def _settings_changed():
+    """After a settings change: LLM client and graph are stale, the retriever is not."""
+    global _llm, _llm_key, _graph, _graph_key
+    _llm, _llm_key, _graph, _graph_key = None, None, None, None
 
 
 # ---------- corpus ----------
@@ -78,15 +106,25 @@ class AskRequest(BaseModel):
     files: list[str] | None = None  # restrict to these document names
 
 
+def _file_list() -> list[dict]:
+    global _files_cache
+    if _files_cache is None:
+        from ingestion.index import get_collection
+
+        counts: dict[str, int] = {}
+        for meta in get_collection().get(include=["metadatas"])["metadatas"]:
+            counts[meta["pdf"]] = counts.get(meta["pdf"], 0) + 1
+        _files_cache = sorted(({"name": n, "chunks": c} for n, c in counts.items()),
+                              key=lambda f: f["name"])
+    return _files_cache
+
+
 @app.get("/api/status")
 def status():
-    from ingestion.index import get_collection
-
-    collection = get_collection()
-    names = {m["pdf"] for m in collection.get(include=["metadatas"])["metadatas"]}
+    file_list = _file_list()
     return {
-        "documents": len(names),
-        "chunks": collection.count(),
+        "documents": len(file_list),
+        "chunks": sum(f["chunks"] for f in file_list),
         "corpus_dir": str(config.PDF_DIR),
         "ingest": _ingest,
     }
@@ -94,12 +132,7 @@ def status():
 
 @app.get("/api/files")
 def files():
-    from ingestion.index import get_collection
-
-    counts: dict[str, int] = {}
-    for meta in get_collection().get(include=["metadatas"])["metadatas"]:
-        counts[meta["pdf"]] = counts.get(meta["pdf"], 0) + 1
-    return sorted(({"name": n, "chunks": c} for n, c in counts.items()), key=lambda f: f["name"])
+    return _file_list()
 
 
 def _run_ingest():
@@ -108,12 +141,16 @@ def _run_ingest():
 
     try:
         pdfs = sorted(config.PDF_DIR.glob("*.pdf"))
-        _ingest.update(running=True, processed=0, total=len(pdfs), error=None)
+        _ingest.update(processed=0, total=len(pdfs), error=None)
         collection = get_collection()
         for pdf in pdfs:
-            ingest_pdf(collection, pdf)
+            try:
+                ingest_pdf(collection, pdf)
+            except Exception as exc:  # one bad PDF must not abort the rest
+                log.exception(f"Failed to ingest {pdf.name}")
+                _ingest["error"] = f"{pdf.name}: {exc}"
             _ingest["processed"] += 1
-        _invalidate()
+        _corpus_changed()
     except Exception as exc:  # surfaced via /api/status, not lost in a thread
         log.exception("Ingest failed")
         _ingest["error"] = str(exc)
@@ -123,8 +160,10 @@ def _run_ingest():
 
 @app.post("/api/ingest")
 def ingest():
-    if _ingest["running"]:
-        raise HTTPException(status_code=409, detail="Ingest already running")
+    with _ingest_lock:  # claim the running flag before the thread starts, so the guard holds
+        if _ingest["running"]:
+            raise HTTPException(status_code=409, detail="Ingest already running")
+        _ingest["running"] = True
     threading.Thread(target=_run_ingest, daemon=True).start()
     return {"started": True}
 
@@ -146,7 +185,9 @@ async def upload(file: UploadFile):
     if path is None:
         raise HTTPException(status_code=400, detail="Only PDF files are accepted")
     config.PDF_DIR.mkdir(parents=True, exist_ok=True)
-    path.write_bytes(await file.read())
+    partial = path.with_suffix(".partial")  # not *.pdf, so a concurrent ingest never globs it
+    partial.write_bytes(await file.read())
+    partial.replace(path)
     return {"saved": path.name}
 
 
@@ -164,7 +205,7 @@ def pdf(name: str):
 def ask(req: AskRequest):
     if _ingest["running"]:
         raise HTTPException(status_code=409, detail="Ingest in progress — try again when it finishes")
-    known = {f["name"] for f in files()}
+    known = {f["name"] for f in _file_list()}
     if not known:
         raise HTTPException(status_code=400, detail="No documents ingested yet")
     scope = req.files or None
@@ -182,8 +223,8 @@ def ask(req: AskRequest):
                 "pdf": c["pdf"],
                 "headings": c.get("headings", ""),
                 "text": c["text"],
-                "prov": c.get("prov", ""),
-                "figures": c.get("figures", ""),
+                "boxes": json.loads(c["prov"]) if c.get("prov") else [],
+                "figures": [f for f in c.get("figures", "").split(",") if f],
             }
             for i, c in enumerate(result["chunks"], 1)
         ],
@@ -221,5 +262,5 @@ def put_settings(req: SettingsRequest):
     app_settings.save_settings(s)
     if req.api_key:
         app_settings.set_api_key(s["provider"], req.api_key)
-    _invalidate()  # next ask rebuilds the graph with the new provider/model
+    _settings_changed()  # next ask rebuilds the LLM client + graph; retriever survives
     return get_settings()
