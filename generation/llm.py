@@ -14,16 +14,18 @@ def get_llm(model_name: str = None):
     if config.GENERATOR_PROVIDER == "huggingface":
         from langchain_huggingface import ChatHuggingFace, HuggingFacePipeline
 
+        import torch
+
+        quantize = config.GENERATOR_LOAD_IN_4BIT and torch.cuda.is_available()
         model_kwargs = {"dtype": "auto"}
-        if config.GENERATOR_LOAD_IN_4BIT:
-            import torch
+        if quantize:
             from transformers import BitsAndBytesConfig
 
             model_kwargs = {"quantization_config": BitsAndBytesConfig(
                 load_in_4bit=True, bnb_4bit_compute_dtype=torch.bfloat16, bnb_4bit_quant_type="nf4"
             )}
         log.info(f"Loading generator {model_name} (local HF, deterministic decoding, "
-                 f"{'4-bit' if config.GENERATOR_LOAD_IN_4BIT else 'full precision'})...")
+                 f"{'4-bit' if quantize else 'full precision'})...")
         pipe = HuggingFacePipeline.from_model_id(
             model_id=model_name,
             task="text-generation",

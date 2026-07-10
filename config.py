@@ -30,6 +30,11 @@ EXCLUDED_HEADINGS = {"references", "table of contents"}  # keep abstract and ack
 CHROMA_DIR = REPO_ROOT / "chroma_db"
 COLLECTION_NAME = "production_rag"
 
+# Query decomposition (cross-document questions)
+DECOMPOSE_ENABLED = True        # LLM planner splits multi-document questions into sub-queries
+MAX_SUBQUERIES = 4
+SUBQUERY_TOP_K = 2              # chunks appended per sub-query, after the main retrieval
+
 # Retrieval
 DENSE_TOP_K = 25                # candidates from the dense index
 BM25_TOP_K = 25                 # candidates from BM25
