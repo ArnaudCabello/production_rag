@@ -1,5 +1,11 @@
 # Backend (desktop app API)
 
+Requires **Python 3.11 or 3.12** — newer versions lack prebuilt wheels for
+several dependencies (lxml, torch, chromadb) and fall back to source builds
+that fail. On the API-generation path, install CPU-only torch first:
+`pip install torch --index-url https://download.pytorch.org/whl/cpu` (~200MB
+instead of the ~6GB CUDA bundle).
+
 ```bash
 uvicorn backend.main:app --port 8642
 ```
