@@ -32,6 +32,12 @@ COLLECT_ALL = [
     "uvicorn", "keyring", "platformdirs", "rank_bm25", "pypdfium2",
 ]
 
+# GPU-only or unused packages that must not ride along (GitHub Releases cap
+# assets at 2GB, so bundle size is a hard constraint). The packaged app
+# generates through API providers; local-GPU generation stays a dev feature.
+# Build with CPU torch (see the workflow) or the nvidia/triton libs come too.
+EXCLUDES = ["bitsandbytes", "triton", "faiss", "gradio"]
+
 
 def main():
     os.chdir(REPO_ROOT)
@@ -46,6 +52,8 @@ def main():
     ]
     for pkg in COLLECT_ALL:
         args += ["--collect-all", pkg]
+    for pkg in EXCLUDES:
+        args += ["--exclude-module", pkg]
 
     PyInstaller.__main__.run(args)
 
