@@ -9,6 +9,7 @@ when provider/model settings change), and the graph (depends on both).
 """
 import json
 import logging
+import sys
 import threading
 from contextlib import asynccontextmanager
 from pathlib import Path
@@ -343,7 +344,10 @@ def put_settings(req: SettingsRequest):
 
 # ---------- packaged frontend ----------
 
-FRONTEND_DIST = Path(__file__).resolve().parent.parent / "frontend" / "dist"
+if getattr(sys, "frozen", False):  # packaged executable: dist is bundled next to the code
+    FRONTEND_DIST = Path(sys._MEIPASS) / "frontend" / "dist"
+else:
+    FRONTEND_DIST = Path(__file__).resolve().parent.parent / "frontend" / "dist"
 if FRONTEND_DIST.is_dir():
     from fastapi.staticfiles import StaticFiles
 

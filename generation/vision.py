@@ -80,7 +80,7 @@ def answer_with_figures_api(llm, question: str, chunks: list[dict], format_conte
     from langchain_core.messages import HumanMessage, SystemMessage
 
     def image_entry(path):
-        image_b64 = base64.b64encode((config.REPO_ROOT / path).read_bytes()).decode()
+        image_b64 = base64.b64encode((config.DATA_ROOT / path).read_bytes()).decode()
         return {"type": "image_url", "image_url": {"url": f"data:image/png;base64,{image_b64}"}}
 
     content = build_figure_content(question, chunks, format_context, image_entry)
@@ -94,7 +94,7 @@ def answer_with_figures(question: str, chunks: list[dict], format_context) -> st
     _load()
     content = build_figure_content(
         question, chunks, format_context,
-        lambda path: {"type": "image", "image": str(config.REPO_ROOT / path)})
+        lambda path: {"type": "image", "image": str(config.DATA_ROOT / path)})
     messages = [
         {"role": "system", "content": SYSTEM_PROMPT},
         {"role": "user", "content": content},

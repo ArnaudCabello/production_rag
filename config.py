@@ -1,7 +1,18 @@
 """Central configuration for the RAG pipeline. All models are local/open-source."""
+import sys
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent
+
+# In the packaged executable (PyInstaller) the code lives in a read-only bundle,
+# so user data (corpus, index, figures) goes to the OS per-user data directory
+# instead of the repo tree. Development keeps everything under the repo.
+if getattr(sys, "frozen", False):
+    import platformdirs
+
+    DATA_ROOT = Path(platformdirs.user_data_dir("production-rag"))
+else:
+    DATA_ROOT = REPO_ROOT
 
 # Models (HuggingFace Hub IDs — downloaded once, cached locally)
 EMBEDDING_MODEL = "BAAI/bge-m3"
@@ -21,13 +32,13 @@ MAX_FIGURES_PER_ANSWER = 4           # most figures passed to the vision model i
 # Ingestion
 OCR_ENABLED = False             # born-digital PDFs need no OCR; enable for scanned documents
 CHUNK_MAX_TOKENS = 512          # HybridChunker target; bge-m3 handles up to 8192
-PDF_DIR = REPO_ROOT / "data" / "pdfs"
-DOCLING_CACHE = REPO_ROOT / "data" / "docling"   # converted DoclingDocument JSON, keyed by content hash
-FIGURES_DIR = REPO_ROOT / "data" / "figures"     # extracted figure images, {doc_hash}-fig{n}.png
+PDF_DIR = DATA_ROOT / "data" / "pdfs"
+DOCLING_CACHE = DATA_ROOT / "data" / "docling"   # converted DoclingDocument JSON, keyed by content hash
+FIGURES_DIR = DATA_ROOT / "data" / "figures"     # extracted figure images, {doc_hash}-fig{n}.png
 EXCLUDED_HEADINGS = {"references", "table of contents"}  # keep abstract and acknowledgments — both answer real queries
 
 # Vector store
-CHROMA_DIR = REPO_ROOT / "chroma_db"
+CHROMA_DIR = DATA_ROOT / "chroma_db"
 COLLECTION_NAME = "production_rag"
 
 # Cross-document questions: fan retrieval out over every document in scope

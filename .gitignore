@@ -9,3 +9,7 @@ data/docling/
 data/pdfs/*
 !data/pdfs/.gitkeep
 data/figures/
+build/
+dist/
+production-rag-*.zip
+*.spec

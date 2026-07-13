@@ -81,7 +81,7 @@ def figure_map_by_caption_ref(doc_hash: str, doc: DoclingDocument) -> dict[str, 
         path = config.FIGURES_DIR / f"{doc_hash}-fig{n:03d}.png"
         if not path.exists():
             continue
-        rel_path = str(path.relative_to(config.REPO_ROOT))
+        rel_path = str(path.relative_to(config.DATA_ROOT))
         mapping[picture.self_ref] = rel_path  # chunker may emit the picture item or its caption
         for caption_ref in picture.captions:
             mapping[caption_ref.cref] = rel_path
