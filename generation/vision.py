@@ -19,7 +19,11 @@ Answer using ONLY the sources and figures provided. Rules:
 - Cite the sources you use inline, e.g. [1] or [2][3]; refer to figures by their label, e.g. (Figure A).
 - Describe what is actually visible in the figures when the question asks about them.
 - If the sources and figures do not contain the answer, say so plainly — never guess.
-- Quote exact numbers and names from the sources; do not round or paraphrase figures."""
+- Quote exact numbers and names from the sources; do not round or paraphrase figures.
+- Write plain text only — your answer is displayed verbatim, not rendered. No Markdown
+  (**bold**, # headings, | tables) and no LaTeX ($...$, \\frac, $_{x}$ subscripts).
+  Write formulas with plain characters, e.g. HfC0.5N0.5, MPa m^1/2, 1800 C.
+  For lists, start lines with "- "."""
 
 USER_TEMPLATE = """Sources:
 
