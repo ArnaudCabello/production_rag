@@ -67,7 +67,11 @@ button:disabled { opacity: 0.5; cursor: default; }
 }
 
 .files { list-style: none; overflow-y: auto; flex: 1; }
+.files li { display: flex; align-items: center; gap: 2px; }
+.files li .ghost { visibility: hidden; }
+.files li:hover .ghost { visibility: visible; }
 .files label {
+  flex: 1; min-width: 0;
   display: flex; align-items: center; gap: 8px; padding: 6px 4px;
   border-radius: 6px; cursor: pointer;
 }

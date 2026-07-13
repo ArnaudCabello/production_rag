@@ -1,5 +1,5 @@
 import { useRef, useState } from 'react'
-import { startIngest, uploadFiles } from '../api.js'
+import { deleteDocument, startIngest, uploadFiles } from '../api.js'
 
 export default function Sidebar({
   conversations, activeId, onSelectConversation, onNewConversation, onDeleteConversation,
@@ -16,6 +16,18 @@ export default function Sidebar({
     setError(null)
     try {
       await startIngest()
+      await refreshFiles()
+    } catch (e) {
+      setError(e.message)
+    }
+  }
+
+  const removeDocument = async (name) => {
+    if (!window.confirm(`Remove "${name}" from the corpus? Its chunks and figures are deleted too.`)) return
+    setError(null)
+    try {
+      await deleteDocument(name)
+      setScope((s) => s.filter((n) => n !== name))
       await refreshFiles()
     } catch (e) {
       setError(e.message)
@@ -86,6 +98,9 @@ export default function Sidebar({
                 <span className="file-name">{f.name}</span>
                 <span className="chunks">{f.chunks}</span>
               </label>
+              <button className="ghost small" title={`Remove ${f.name} from the corpus`}
+                      disabled={ingest?.running}
+                      onClick={() => removeDocument(f.name)}>✕</button>
             </li>
           ))}
           {!files.length && <li className="hint">No documents ingested yet.</li>}

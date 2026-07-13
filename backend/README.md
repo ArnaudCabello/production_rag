@@ -12,10 +12,16 @@ torchvision must come from the same index or torchvision fails at import
 python -m uvicorn backend.main:app --port 8642
 ```
 
+Or, single-command app (serves the built frontend and the API from one process,
+opens the browser): `./run.sh` from the repo root. The Vite dev server + proxy
+remains the development workflow; the static mount only activates when
+`frontend/dist` exists.
+
 Endpoints: `/api/status`, `/api/files`, `/api/ingest` (background, poll status),
-`/api/upload`, `/api/pdf/{name}`, `/api/ask` (optional `files` scope),
-`/api/settings` (provider/model; API keys go to the OS credential store and are
-never returned).
+`/api/upload`, `/api/document/{name}` (DELETE: removes the PDF, its chunks,
+figures, and docling cache), `/api/pdf/{name}`, `/api/figure/{name}`,
+`/api/ask` (optional `files` scope), `/api/settings` (provider/model; API keys
+go to the OS credential store and are never returned).
 
 Tests (plain scripts; `test_api.py` needs an ingested corpus):
 

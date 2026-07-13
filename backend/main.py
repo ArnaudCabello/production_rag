@@ -221,6 +221,32 @@ def pdf(name: str):
     return FileResponse(path, media_type="application/pdf")
 
 
+@app.delete("/api/document/{name}")
+def delete_document(name: str):
+    """Remove a document everywhere: PDF file, its chunks, figures, docling cache."""
+    if _ingest["running"]:
+        raise HTTPException(status_code=409, detail="Ingest in progress — try again when it finishes")
+    path = _safe_corpus_path(name)
+    if path is None:
+        raise HTTPException(status_code=400, detail="Invalid document name")
+    from ingestion.index import get_collection
+
+    collection = get_collection()
+    chunks = collection.get(where={"pdf": path.name}, include=["metadatas"])
+    if not chunks["ids"] and not path.is_file():
+        raise HTTPException(status_code=404, detail="Not found")
+    doc_hashes = {meta["doc_hash"] for meta in chunks["metadatas"]}
+    if chunks["ids"]:
+        collection.delete(ids=chunks["ids"])
+    path.unlink(missing_ok=True)
+    for doc_hash in doc_hashes:  # derived artifacts, keyed by content hash
+        (config.DOCLING_CACHE / f"{doc_hash}.json").unlink(missing_ok=True)
+        for fig in config.FIGURES_DIR.glob(f"{doc_hash}-fig*.png"):
+            fig.unlink(missing_ok=True)
+    _corpus_changed()
+    return {"deleted": path.name, "chunks_removed": len(chunks["ids"])}
+
+
 @app.get("/api/figure/{name}")
 def figure(name: str):
     try:
@@ -313,3 +339,14 @@ def put_settings(req: SettingsRequest):
         app_settings.set_api_key(s["provider"], req.api_key)
     _settings_changed()  # next ask rebuilds the LLM client + graph; retriever survives
     return get_settings()
+
+
+# ---------- packaged frontend ----------
+
+FRONTEND_DIST = Path(__file__).resolve().parent.parent / "frontend" / "dist"
+if FRONTEND_DIST.is_dir():
+    from fastapi.staticfiles import StaticFiles
+
+    # Registered last: the /api/* routes above always win; everything else
+    # serves the built app, so one process is the whole application (run.sh).
+    app.mount("/", StaticFiles(directory=FRONTEND_DIST, html=True), name="frontend")

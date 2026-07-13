@@ -48,5 +48,8 @@ export async function uploadFiles(fileList) {
   if (failed.length) throw new Error(`Failed to upload — ${failed.join(', ')}`)
 }
 
+export const deleteDocument = (name) =>
+  request(`/api/document/${encodeURIComponent(name)}`, { method: 'DELETE' })
+
 export const pdfUrl = (name) => `${BASE}/api/pdf/${encodeURIComponent(name)}`
 export const figureUrl = (name) => `${BASE}/api/figure/${encodeURIComponent(name)}`
