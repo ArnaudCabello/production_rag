@@ -25,15 +25,35 @@ from backend import settings as app_settings
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
 log = logging.getLogger(__name__)
 
+def _available_ram_gb() -> float | None:
+    try:  # Linux; on macOS/Windows return None and let warm-up proceed
+        with open("/proc/meminfo") as f:
+            for line in f:
+                if line.startswith("MemAvailable"):
+                    return int(line.split()[1]) / 1e6
+    except OSError:
+        pass
+    return None
+
+
 def _warm_up():
-    """Load the embedder + reranker + BM25 index ahead of the first ask (a minute
-    or more on CPU). Failures are logged, not fatal — the first ask retries."""
+    """Pre-load the embedding model only — it is needed by both ingest and ask.
+    The full retriever (reranker + BM25) is another ~2.3GB and is deliberately
+    NOT warmed: on small-RAM machines it must not sit in memory while docling
+    converts PDFs (measured OOM on an 8GB laptop). The first ask loads it.
+    On machines with little free RAM, skip warming entirely — trading first-use
+    latency for not being the process the OOM killer picks."""
     try:
-        if _file_list():  # empty corpus: nothing to index yet, first ingest will populate
-            get_retriever()
-            log.info("Warm-up complete: retriever ready")
+        available = _available_ram_gb()
+        if available is not None and available < 6:
+            log.info(f"Warm-up skipped: {available:.1f}GB RAM available — models load on first use")
+            return
+        from ingestion.index import get_embedder
+
+        get_embedder()
+        log.info("Warm-up complete: embedder ready")
     except Exception:
-        log.exception("Warm-up failed (the first ask will load the retriever instead)")
+        log.exception("Warm-up failed (the first use will load models instead)")
 
 
 @asynccontextmanager
@@ -159,10 +179,17 @@ def files():
 
 
 def _run_ingest():
+    import gc
+
     from ingestion.index import get_collection
     from ingestion.run import ingest_pdf
 
     try:
+        # Docling peaks at gigabytes per document; drop the retriever (reranker +
+        # chunk snapshot) for the duration so the two never coexist in RAM. Asks
+        # are 409-blocked during ingest anyway, and the ask after rebuilds it.
+        _corpus_changed()
+        gc.collect()
         pdfs = sorted(config.PDF_DIR.glob("*.pdf"))
         _ingest.update(processed=0, total=len(pdfs), error=None)
         collection = get_collection()
@@ -173,6 +200,7 @@ def _run_ingest():
                 log.exception(f"Failed to ingest {pdf.name}")
                 _ingest["error"] = f"{pdf.name}: {exc}"
             _ingest["processed"] += 1
+            gc.collect()  # release this document's conversion before the next
         _corpus_changed()
     except Exception as exc:  # surfaced via /api/status, not lost in a thread
         log.exception("Ingest failed")
