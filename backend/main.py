@@ -203,6 +203,17 @@ def pdf(name: str):
     return FileResponse(path, media_type="application/pdf")
 
 
+@app.get("/api/figure/{name}")
+def figure(name: str):
+    try:
+        path = (config.FIGURES_DIR / Path(name).name).resolve()
+        if path.parent != config.FIGURES_DIR.resolve() or path.suffix.lower() != ".png" or not path.is_file():
+            raise HTTPException(status_code=404, detail="Not found")
+    except (ValueError, OSError):
+        raise HTTPException(status_code=404, detail="Not found")
+    return FileResponse(path, media_type="image/png")
+
+
 # ---------- ask ----------
 
 @app.post("/api/ask")
@@ -235,6 +246,8 @@ def ask(req: AskRequest):
         raise
     return {
         "answer": result["answer"],
+        # basenames only; the client turns them into /api/figure/{name} URLs
+        "figures": [Path(p).name for p in result.get("figures", [])],
         "sources": [
             {
                 "n": i,

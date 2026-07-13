@@ -49,3 +49,4 @@ export async function uploadFiles(fileList) {
 }
 
 export const pdfUrl = (name) => `${BASE}/api/pdf/${encodeURIComponent(name)}`
+export const figureUrl = (name) => `${BASE}/api/figure/${encodeURIComponent(name)}`

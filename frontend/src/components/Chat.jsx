@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import { ask } from '../api.js'
+import { ask, figureUrl } from '../api.js'
 
 /** Render answer text with [n] turned into clickable citation chips. */
 function AnswerText({ text, sources, onCitationClick }) {
@@ -18,6 +18,24 @@ function AnswerText({ text, sources, onCitationClick }) {
           </button>
         )
       })}
+    </div>
+  )
+}
+
+/** Figures the vision model was shown, in prompt order — so "Figure A" in the
+ *  answer text is the first image here. Click opens the full-size PNG. */
+function FigureStrip({ figures }) {
+  if (!figures?.length) return null
+  return (
+    <div className="figures">
+      {figures.map((name, i) => (
+        <figure key={name}>
+          <a href={figureUrl(name)} target="_blank" rel="noreferrer" title="Open full size">
+            <img src={figureUrl(name)} alt={`Figure ${String.fromCharCode(65 + i)}`} loading="lazy" />
+          </a>
+          <figcaption>Figure {String.fromCharCode(65 + i)}</figcaption>
+        </figure>
+      ))}
     </div>
   )
 }
@@ -64,7 +82,7 @@ export default function Chat({ conversation, updateConversation, scope, onCitati
       const res = await ask(question, scope)
       updateConversation((c) => ({
         ...c,
-        messages: [...c.messages, { role: 'assistant', text: res.answer, sources: res.sources }],
+        messages: [...c.messages, { role: 'assistant', text: res.answer, sources: res.sources, figures: res.figures }],
       }))
     } catch (e) {
       updateConversation((c) => ({
@@ -94,6 +112,7 @@ export default function Chat({ conversation, updateConversation, scope, onCitati
             {m.role === 'assistant'
               ? <AnswerText text={m.text} sources={m.sources} onCitationClick={onCitationClick} />
               : <div className="answer-text">{m.text}</div>}
+            {m.role === 'assistant' && <FigureStrip figures={m.figures} />}
             {m.role === 'assistant' && (
               <SourceList sources={m.sources} onCitationClick={onCitationClick} />
             )}

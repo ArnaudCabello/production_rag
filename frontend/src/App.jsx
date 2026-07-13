@@ -6,6 +6,10 @@ import Settings from './components/Settings.jsx'
 import { getFiles, getStatus } from './api.js'
 
 const STORE_KEY = 'rag-conversations-v1'
+const VIEWER_WIDTH_KEY = 'rag-viewer-width'
+const VIEWER_MIN = 380   // keep the chat usable while dragging
+const CHAT_MIN = 360
+const SIDEBAR_W = 280
 
 function loadConversations() {
   try {
@@ -26,6 +30,30 @@ export default function App() {
   const [showSettings, setShowSettings] = useState(false)
   // the source being viewed: {pdf, boxes, chunk_id, ...} or null (panel hidden)
   const [activeSource, setActiveSource] = useState(null)
+  const [viewerWidth, setViewerWidth] = useState(() => {
+    const saved = Number(localStorage.getItem(VIEWER_WIDTH_KEY))
+    return saved >= VIEWER_MIN ? saved : 620
+  })
+
+  useEffect(() => {
+    localStorage.setItem(VIEWER_WIDTH_KEY, String(viewerWidth))
+  }, [viewerWidth])
+
+  const startViewerResize = (e) => {
+    e.preventDefault()
+    const onMove = (ev) => {
+      const max = Math.max(VIEWER_MIN, window.innerWidth - SIDEBAR_W - CHAT_MIN)
+      setViewerWidth(Math.min(Math.max(VIEWER_MIN, window.innerWidth - ev.clientX), max))
+    }
+    const onUp = () => {
+      window.removeEventListener('pointermove', onMove)
+      window.removeEventListener('pointerup', onUp)
+      document.body.classList.remove('resizing')
+    }
+    document.body.classList.add('resizing')  // suppress text selection while dragging
+    window.addEventListener('pointermove', onMove)
+    window.addEventListener('pointerup', onUp)
+  }
 
   useEffect(() => {
     localStorage.setItem(STORE_KEY, JSON.stringify(conversations))
@@ -77,7 +105,10 @@ export default function App() {
   }, [conversations, activeId])
 
   return (
-    <div className={`app ${activeSource ? 'with-viewer' : ''}`}>
+    <div
+      className={`app ${activeSource ? 'with-viewer' : ''}`}
+      style={activeSource ? { gridTemplateColumns: `${SIDEBAR_W}px minmax(${CHAT_MIN}px, 1fr) 6px ${viewerWidth}px` } : undefined}
+    >
       <Sidebar
         conversations={conversations}
         activeId={active.id}
@@ -99,6 +130,9 @@ export default function App() {
         onCitationClick={setActiveSource}
         ingestRunning={!!ingest?.running}
       />
+      {activeSource && (
+        <div className="panel-divider" title="Drag to resize" onPointerDown={startViewerResize} />
+      )}
       {activeSource && (
         <PdfPanel source={activeSource} onClose={() => setActiveSource(null)} />
       )}

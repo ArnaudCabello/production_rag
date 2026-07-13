@@ -54,6 +54,7 @@ class RAGState(TypedDict):
     scope: NotRequired[list[str] | None]  # restrict to these document names
     chunks: list[dict]
     answer: str
+    figures: NotRequired[list[str]]  # figure image paths the vision model was shown, A/B/C order
 
 
 def format_context(chunks: list[dict]) -> str:
@@ -107,13 +108,18 @@ def build_graph(retriever, llm, provider: str = None):
         return {"answer": llm.invoke(messages).content}
 
     def generate_vision(state: RAGState):
+        from generation.vision import collect_figures
+
+        figures = collect_figures(state["chunks"])  # same list, same order as the prompt's A/B/C labels
         if provider == "huggingface":
             from generation.vision import answer_with_figures  # lazy: loads the local VLM on first use
 
-            return {"answer": answer_with_figures(state["question"], state["chunks"], format_context)}
-        from generation.vision import answer_with_figures_api  # API providers are multimodal already
+            answer = answer_with_figures(state["question"], state["chunks"], format_context)
+        else:
+            from generation.vision import answer_with_figures_api  # API providers are multimodal already
 
-        return {"answer": answer_with_figures_api(llm, state["question"], state["chunks"], format_context)}
+            answer = answer_with_figures_api(llm, state["question"], state["chunks"], format_context)
+        return {"answer": answer, "figures": figures}
 
     graph = StateGraph(RAGState)
     graph.add_node("retrieve", retrieve)

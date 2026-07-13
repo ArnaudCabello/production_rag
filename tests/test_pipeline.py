@@ -51,3 +51,19 @@ import json
 qs = json.load(open(Path(__file__).resolve().parent.parent / "eval" / "golden_set.json"))["questions"]
 assert [q["id"] for q in qs if MULTI_DOC_QUESTION.search(q["question"])] == ["x01", "x02", "x03"]
 print("trigger still matches exactly x01-x03: OK")
+
+# vision route returns the figures it was shown (A/B/C order); text route returns none
+import generation.vision as vision
+vision.answer_with_figures_api = lambda llm, q, chunks, fmt: "VISION ANSWER"
+config.MULTI_DOC_FANOUT = True
+
+class FigRetriever(StubRetriever):
+    def search(self, q, top_k=5, pdfs=None):
+        return [dict(chunk("a-1", "alpha.pdf"), figures="data/figures/x-fig002.png,data/figures/x-fig001.png")]
+
+out = build_graph(FigRetriever(), StubLLM(), provider="anthropic").invoke({"question": "what do the EDS maps show"})
+assert out["answer"] == "VISION ANSWER"
+assert out["figures"] == ["data/figures/x-fig002.png", "data/figures/x-fig001.png"], out["figures"]
+out = build_graph(FigRetriever(), StubLLM(), provider="anthropic").invoke({"question": "what is the hardness"})
+assert out["answer"] == "ANSWER" and not out.get("figures")
+print("vision route returns figures in prompt order; text route returns none: OK")

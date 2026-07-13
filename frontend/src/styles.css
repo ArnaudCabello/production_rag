@@ -25,7 +25,12 @@ body {
   grid-template-columns: 280px 1fr;
   height: 100vh;
 }
-.app.with-viewer { grid-template-columns: 280px minmax(360px, 1fr) minmax(380px, 42%); }
+/* fallback only — App.jsx sets the real columns inline so the viewer is drag-resizable */
+.app.with-viewer { grid-template-columns: 280px minmax(360px, 1fr) 6px minmax(380px, 42%); }
+
+.panel-divider { cursor: col-resize; background: var(--border); touch-action: none; }
+.panel-divider:hover, body.resizing .panel-divider { background: var(--accent); }
+body.resizing { user-select: none; cursor: col-resize; }
 
 button { font: inherit; cursor: pointer; border: none; background: none; color: inherit; }
 button:disabled { opacity: 0.5; cursor: default; }
@@ -102,6 +107,15 @@ button:disabled { opacity: 0.5; cursor: default; }
   vertical-align: text-bottom;
 }
 .citation:hover { background: var(--accent-dark); }
+
+.figures { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 12px; }
+.figures figure { margin: 0; max-width: 340px; }
+.figures img {
+  display: block; width: 100%; border: 1px solid var(--border); border-radius: 8px;
+  background: #fff; cursor: zoom-in;
+}
+.figures img:hover { border-color: var(--accent); }
+.figures figcaption { font-size: 11px; color: var(--muted); text-align: center; margin-top: 4px; }
 
 .sources { margin-top: 10px; font-size: 12px; }
 .sources summary { color: var(--muted); cursor: pointer; }
