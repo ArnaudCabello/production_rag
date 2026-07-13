@@ -93,7 +93,11 @@ def build_graph(retriever, llm, provider: str = None):
                 docs = list(dict.fromkeys(c["pdf"] for c in chunks))[: config.MULTI_DOC_MAX_DOCS]
             seen = {c["chunk_id"] for c in chunks}
             for pdf in docs:
-                for chunk in retriever.search(state["question"], top_k=config.PER_DOC_TOP_K, pdfs=[pdf]):
+                # rerank=False: the cross-encoder costs minutes per pass on CPU, and within
+                # a single document RRF fusion already ranks the top-2 well — only the main
+                # (cross-document) pass keeps the reranker
+                for chunk in retriever.search(state["question"], top_k=config.PER_DOC_TOP_K,
+                                              pdfs=[pdf], rerank=False):
                     if chunk["chunk_id"] not in seen:
                         seen.add(chunk["chunk_id"])
                         chunks.append(chunk)

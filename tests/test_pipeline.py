@@ -12,8 +12,8 @@ class StubRetriever:
     def __init__(self):
         self.chunks = {"a-1": chunk("a-1", "alpha.pdf"), "b-1": chunk("b-1", "beta.pdf")}
         self.calls = []
-    def search(self, q, top_k=5, pdfs=None):
-        self.calls.append((q, top_k, tuple(pdfs) if pdfs else None))
+    def search(self, q, top_k=5, pdfs=None, rerank=True):
+        self.calls.append((q, top_k, tuple(pdfs) if pdfs else None, rerank))
         if pdfs == ["alpha.pdf"]:
             return [chunk("a-1", "alpha.pdf"), chunk("a-2", "alpha.pdf")]
         if pdfs == ["beta.pdf"]:
@@ -29,10 +29,11 @@ class StubLLM:
 ret = StubRetriever()
 out = build_graph(ret, StubLLM()).invoke({"question": "compare these studies"})
 assert [c["chunk_id"] for c in out["chunks"]] == ["a-1", "a-2", "b-2", "b-3"]
-assert ret.calls == [("compare these studies", 5, None),
-                     ("compare these studies", 2, ("alpha.pdf",)),
-                     ("compare these studies", 2, ("beta.pdf",))], ret.calls
-print("multi-doc fan-out: every document contributes, deduped: OK")
+# the main pass reranks; fan-out passes skip the cross-encoder (minutes per pass on CPU)
+assert ret.calls == [("compare these studies", 5, None, True),
+                     ("compare these studies", 2, ("alpha.pdf",), False),
+                     ("compare these studies", 2, ("beta.pdf",), False)], ret.calls
+print("multi-doc fan-out: every document contributes, deduped, rerank only on main pass: OK")
 
 # single-doc wording -> plain retrieval only
 ret = StubRetriever()

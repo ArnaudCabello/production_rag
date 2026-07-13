@@ -12,7 +12,7 @@ class StubRetriever:
     def __init__(self, docs):
         self.chunks = {f"{d}-1": chunk(f"{d}-1", d) for d in docs}
         self.calls = []
-    def search(self, q, top_k=5, pdfs=None):
+    def search(self, q, top_k=5, pdfs=None, rerank=True):
         self.calls.append((top_k, tuple(pdfs) if pdfs else None))
         if pdfs:
             return [chunk(f"{p}-{i}", p) for p in pdfs for i in (1, 2)][:top_k]

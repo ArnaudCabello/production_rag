@@ -10,6 +10,7 @@ when provider/model settings change), and the graph (depends on both).
 import json
 import logging
 import threading
+from contextlib import asynccontextmanager
 from pathlib import Path
 
 from fastapi import FastAPI, HTTPException, UploadFile
@@ -23,7 +24,24 @@ from backend import settings as app_settings
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
 log = logging.getLogger(__name__)
 
-app = FastAPI(title="production-rag backend")
+def _warm_up():
+    """Load the embedder + reranker + BM25 index ahead of the first ask (a minute
+    or more on CPU). Failures are logged, not fatal — the first ask retries."""
+    try:
+        if _file_list():  # empty corpus: nothing to index yet, first ingest will populate
+            get_retriever()
+            log.info("Warm-up complete: retriever ready")
+    except Exception:
+        log.exception("Warm-up failed (the first ask will load the retriever instead)")
+
+
+@asynccontextmanager
+async def lifespan(_app):
+    threading.Thread(target=_warm_up, daemon=True).start()
+    yield
+
+
+app = FastAPI(title="production-rag backend", lifespan=lifespan)
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[

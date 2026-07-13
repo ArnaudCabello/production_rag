@@ -55,15 +55,18 @@ class HybridRetriever:
                if scores[i] > 0 and (allowed is None or self.chunks[self.ids[i]]["pdf"] in allowed))
         return [self.ids[i] for _, i in zip(range(config.BM25_TOP_K), ids)]
 
-    def search(self, query: str, top_k: int = config.RERANK_TOP_N, pdfs: list[str] = None) -> list[dict]:
-        """Hybrid search; pass pdfs to restrict every stage to those documents' chunks."""
+    def search(self, query: str, top_k: int = config.RERANK_TOP_N, pdfs: list[str] = None,
+               rerank: bool = True) -> list[dict]:
+        """Hybrid search; pass pdfs to restrict every stage to those documents' chunks.
+        rerank=False returns fusion (RRF) order — the cross-encoder dominates CPU
+        latency (~minutes per pass), so callers making many narrow passes skip it."""
         fused: dict[str, float] = {}
         for id_list in (self._dense_ids(query, pdfs), self._bm25_ids(query, pdfs)):
             for rank, cid in enumerate(id_list, 1):
                 fused[cid] = fused.get(cid, 0.0) + 1.0 / (RRF_K + rank)
         candidates = sorted(fused, key=fused.get, reverse=True)
 
-        if self.reranker is not None:
+        if rerank and self.reranker is not None:
             pairs = [(query, self.chunks[cid]["text"]) for cid in candidates]
             rerank_scores = self.reranker.predict(pairs)
             blended = [

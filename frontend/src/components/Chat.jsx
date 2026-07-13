@@ -59,6 +59,26 @@ function SourceList({ sources, onCitationClick }) {
   )
 }
 
+/** Live progress line while an ask is in flight: spinner + elapsed time, and a
+ *  gentle note once it's been long enough that "is it stuck?" becomes a fair question. */
+function Thinking() {
+  const [secs, setSecs] = useState(0)
+  useEffect(() => {
+    const t = setInterval(() => setSecs((s) => s + 1), 1000)
+    return () => clearInterval(t)
+  }, [])
+  return (
+    <div className="message assistant thinking">
+      <span className="spinner" />
+      <span>
+        Searching the corpus and generating the answer…
+        {secs >= 3 && <span className="elapsed"> {Math.floor(secs / 60) ? `${Math.floor(secs / 60)}m ` : ''}{secs % 60}s</span>}
+        {secs >= 90 && <div className="hint">Cross-document questions rerank against every paper — this can take a few minutes on CPU.</div>}
+      </span>
+    </div>
+  )
+}
+
 export default function Chat({ conversation, updateConversation, scope, onCitationClick, ingestRunning }) {
   const [input, setInput] = useState('')
   const [busy, setBusy] = useState(false)
@@ -118,7 +138,7 @@ export default function Chat({ conversation, updateConversation, scope, onCitati
             )}
           </div>
         ))}
-        {busy && <div className="message assistant thinking">Searching the corpus…</div>}
+        {busy && <Thinking />}
         <div ref={bottom} />
       </div>
       <div className="composer">
