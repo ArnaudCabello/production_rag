@@ -1,8 +1,11 @@
 # Evaluation harness
 
-Golden Q/A set: 30 questions over the ReAct paper corpus in `golden_set.json` —
-categories: `factual`, `table`, `abstract`, `semantic` (paraphrase, low keyword overlap),
-`multi_chunk` (evidence spans multiple chunks).
+Golden Q/A set: 54 questions in `golden_set.json` over a 4-paper corpus (the ReAct
+paper + 3 UHTC materials-science papers) — categories: `factual`, `table`, `abstract`,
+`semantic` (paraphrase, low keyword overlap), `multi_chunk` (evidence spans multiple
+chunks), `cross_document` (evidence must span 2+ papers; uses `evidence_all`), and
+`multimodal` (answer requires reading a figure — expected to fail until the vision
+phase; the caption chunks must still be retrieved).
 
 Each question carries:
 - `evidence_any` / `evidence_all` — substrings of the source document that identify the
@@ -40,4 +43,11 @@ correct / partial / incorrect. `key_match` is the objective substring check and 
   Phase 5; numbers kept for history: hit@5 0.77, judge-correct 7/30, 7 incorrect)
 - `phase2_dense_retrieval.json` — new corpus, dense-only
 - `phase3_fusion_retrieval.json`, `phase3_hybrid_retrieval.json` — fusion, then + blended rerank
-- `answers_v2*` — current pipeline generation: key_match 28/30, judge 22 correct / 0 incorrect
+- `answers_v2*` — current pipeline generation, ReAct 30-q set: key_match 28/30,
+  judge 22 correct / 0 incorrect
+- `phase6_uhtc_retrieval.json` — 54-q set on the 4-paper corpus: hit@1 0.61,
+  hit@5 0.87, hit@10 0.93, MRR 0.73; misses are q19, h05, x01, x02
+  (cross_document is the weak category: hit@10 0.33)
+- `answers_v2_54q*` — generation on the 54-q set: key_match 48/54, judge
+  33 correct / 21 partial / 0 incorrect. cross_document 0/3 and multimodal 0/4
+  correct (the latter by design — text-only pipeline; vision phase pending)

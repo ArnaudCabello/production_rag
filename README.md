@@ -57,12 +57,19 @@ token = userdata.get("GITHUB_TOKEN")                        # GitHub secret (pus
 A golden Q/A set with evidence-based retrieval metrics and an LLM judge lives in `eval/`
 (see `eval/README.md`). Every pipeline change is measured against it:
 
-| | Legacy pipeline | Current |
+| ReAct set (30 q) | Legacy pipeline | Current |
 |---|---|---|
 | retrieval hit@5 | 0.77 | **0.90** |
 | retrieval hit@10 | 0.80 | **1.00** |
 | answers judged correct | 7/30 | **22/30** |
 | answers judged incorrect | 7/30 | **0/30** |
+
+On the expanded 54-question set (4-paper corpus: ReAct + 3 UHTC materials-science
+papers, incl. cross-document and multimodal questions): retrieval hit@5 0.87 /
+hit@10 0.93 / MRR 0.73; generation 33 correct / 21 partial / **0 incorrect**,
+key_match 48/54. Known gaps: cross-document questions (hit@10 0.33 — single-query
+retrieval can't cover multiple papers at once) and multimodal questions (0/4 correct
+by design — text-only pipeline; the pending vision phase is measured against them).
 
 ```bash
 python eval/retrieval_eval.py --retriever hybrid    # retrieval metrics (CPU-friendly)
