@@ -106,7 +106,7 @@ def get_llm_client():
     if _llm is None or _llm_key != key:
         with _llm_lock:
             if _llm is None or _llm_key != key:
-                if s["provider"] != "huggingface" and not app_settings.export_key_to_env(s["provider"]):
+                if s["provider"] in app_settings.PROVIDER_ENV and not app_settings.export_key_to_env(s["provider"]):
                     raise HTTPException(status_code=400, detail=f"No API key configured for {s['provider']}")
                 from generation.llm import get_llm
 
@@ -350,7 +350,9 @@ def get_settings():
         "provider": s["provider"],
         "model": s["model"],
         "has_key": app_settings.get_api_key(s["provider"]) is not None,
-        "providers": sorted(app_settings.PROVIDER_ENV),
+        "providers": app_settings.PROVIDERS,
+        # first run (nothing saved yet): the UI keeps model/key locked until a provider is picked
+        "configured": app_settings.SETTINGS_FILE.exists(),
     }
 
 
@@ -358,13 +360,13 @@ def get_settings():
 def put_settings(req: SettingsRequest):
     s = app_settings.load_settings()
     if req.provider is not None:
-        if req.provider not in app_settings.PROVIDER_ENV:
+        if req.provider not in app_settings.PROVIDERS:
             raise HTTPException(status_code=400, detail=f"Unknown provider: {req.provider}")
         s["provider"] = req.provider
     if req.model is not None:
         s["model"] = req.model
     app_settings.save_settings(s)
-    if req.api_key:
+    if req.api_key and s["provider"] in app_settings.PROVIDER_ENV:
         app_settings.set_api_key(s["provider"], req.api_key)
     _settings_changed()  # next ask rebuilds the LLM client + graph; retriever survives
     return get_settings()

@@ -27,6 +27,8 @@ PROVIDER_ENV = {
     "openai": "OPENAI_API_KEY",
     "google_genai": "GOOGLE_API_KEY",
 }
+# ollama runs locally and needs no API key
+PROVIDERS = sorted([*PROVIDER_ENV, "ollama"])
 DEFAULTS = {
     "provider": os.environ.get("RAG_PROVIDER", "anthropic"),
     "model": os.environ.get("RAG_MODEL", "claude-sonnet-5"),

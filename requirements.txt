@@ -9,6 +9,7 @@ langchain
 langchain-anthropic
 langchain-google-genai
 langchain-huggingface
+langchain-ollama
 langchain-openai
 langgraph
 numpy

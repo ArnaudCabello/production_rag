@@ -28,7 +28,7 @@ COLLECT_ALL = [
     "chromadb", "onnxruntime", "tokenizers", "safetensors",
     "transformers", "sentence_transformers", "huggingface_hub",
     "langchain", "langchain_core", "langgraph",
-    "langchain_anthropic", "langchain_openai", "langchain_google_genai",
+    "langchain_anthropic", "langchain_openai", "langchain_google_genai", "langchain_ollama",
     "uvicorn", "keyring", "platformdirs", "rank_bm25", "pypdfium2",
 ]
 
