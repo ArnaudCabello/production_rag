@@ -49,7 +49,12 @@ def main():
     graph = build_graph(HybridRetriever(), get_llm(args.model, args.provider), provider=args.provider)
 
     args.output.parent.mkdir(parents=True, exist_ok=True)
-    with args.output.open("w", encoding="utf-8") as f:
+    done = set()
+    if args.output.exists():  # resume an interrupted run; delete the file for a fresh one
+        done = {json.loads(line)["id"] for line in args.output.read_text(encoding="utf-8").splitlines() if line}
+        golden = [q for q in golden if q["id"] not in done]
+        print(f"Resuming: {len(done)} answers already saved, {len(golden)} to go")
+    with args.output.open("a", encoding="utf-8") as f:
         for q in golden:
             result = graph.invoke({"question": q["question"]})
             record = {
@@ -59,6 +64,7 @@ def main():
                 "sources": [c["chunk_id"] for c in result["chunks"]],
             }
             f.write(json.dumps(record) + "\n")
+            f.flush()  # a crash mid-run must not lose finished answers to buffering
             print(f"{q['id']}: {result['answer'][:120]}")
 
     print(f"\nSaved: {args.output}")
