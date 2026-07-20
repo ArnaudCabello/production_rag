@@ -1,0 +1,101 @@
+[
+  {
+    "category": "semantic",
+    "question": "In the Hu et al. 2023 air-plasma-sprayed ZrB2-based ultra-high-temperature ceramic coatings, what chemical element becomes depleted during the high-temperature treatment process, and what oxide compound derived from this element remains in the sprayed deposit?",
+    "reference_answer": "Boron (B) element is lost from ZrB2 during air plasma spraying, while boron trioxide (B2O3) residue accumulates in the coating. The B element loss increases surface temperature and reduces the sintering of the zirconia outer layer, while the residual B2O3 evaporates at high temperature causing porosity damage.",
+    "answer_keys": [["boron", "b element"], ["b2o3", "oxide", "residual"], ["loss", "depleted"]],
+    "evidence_any": ["B element loss and residual B2O3 in the sprayed ZrB2 coating were observed"],
+    "source_docs": ["Hu_2023_MaterialsScience&Technology_Effectsofair.pdf"],
+    "excerpts": ["As for the air plasma sprayed ZrB2-based coatings, B content change caused by inevitable oxidation is predictable but commonly ignored. Affected by air plasma flame, the B element loss and residual B2O3 in the sprayed ZrB2 coating were observed. Moreover, how the B content change affects the microstructure, phase evolution, and ablation resistance (2.4 MW/m2, 60 s) of ZrB2-based coatings with different secondary phases (SiC, MoSi2, and TaC) was investigated. The B element loss contributed to the increase in surface temperature and the decline in the sintering degree of the ZrO2 layer. The evaporation of residual B2O3 caused damage to the coating structure in the form of pores, whose negative effect was enhanced and reduced by MoSi2 and TaC secondary phases, respectively."]
+  },
+  {
+    "category": "semantic",
+    "question": "In the Hu et al. 2023 study of air-plasma-sprayed ZrB2 coatings, what quantitative phase composition was measured in the treated powder using reference intensity ratio analysis, and what three distinct crystalline or amorphous phases comprise the sprayed deposit?",
+    "reference_answer": "The sprayed ZrB2 powder contains approximately 42 vol% unreacted ZrB2, 53 vol% monoclinic zirconia (m-ZrO2), and 5 vol% amorphous boron trioxide (B2O3). These proportions were determined through XRD analysis and confirmed by thermogravimetric studies showing reduced weight gain rates compared to pristine powder.",
+    "answer_keys": [["42", "53", "5", "volume"], ["zrb2", "zro2", "b2o3"], ["composition", "phases", "powder"]],
+    "evidence_any": ["the phase composition of sprayed ZrB2 powder can be inferred as 42 vol.%ZrB2, 53 vol.% m-ZrO2, and 5 vol.% B2O3"],
+    "source_docs": ["Hu_2023_MaterialsScience&Technology_Effectsofair.pdf"],
+    "excerpts": ["That is, the weight gain rate of ZrB2 powder after spraying will theoretically decrease by 57%, instead of a 64% decline. Considering that the amorphous phase cannot be effectively detected in the XRD test, the additional 7% difference may result from the residual amorphous B2O3 phase. That is, the phase composition of sprayed ZrB2 powder can be inferred as 42 vol.%ZrB2, 53 vol.% m-ZrO2, and 5 vol.% B2O3 (Here, assuming that the ZrB2 oxidation weight gain rate is consistent with the B2O3 evaporation weight loss rate). According to the DTA curves in Fig. 6(b), two endothermic peaks at ∼200 °C and ∼1200 °C and an exothermic peak at ∼650 °C are observed, respectively corresponding to B2O3 crystallization, B2O3 evaporation, and ZrB2 oxidation."]
+  },
+  {
+    "category": "semantic",
+    "question": "In Hu et al. 2023's investigation of ablation-resistant coatings incorporating titanium carbide (TaC) as a reinforcing phase alongside zirconium diboride, how did this secondary phase affect the detrimental effects of boron-oxide compound formation during thermal testing?",
+    "reference_answer": "In the ZrB2-TaC coating system studied by Hu et al. 2023, the tantalum carbide secondary phase reduced the negative effects of residual boron trioxide. The TaC oxidizes to form a low-eutectic Zr-Ta-O glass layer with improved heat-dissipation capacity compared to pure zirconia, which weakens the structural damage from boron trioxide evaporation.",
+    "answer_keys": [["tac", "tantalum"], ["negative", "reduced", "effect"], ["b2o3", "boron"]],
+    "evidence_any": ["the improved heat dissipation capacity of the Zr-Ta-O layer than the ZrO2 layer will weaken its negative effects"],
+    "source_docs": ["Hu_2023_MaterialsScience&Technology_Effectsofair.pdf"],
+    "excerpts": ["When considering TaC as the secondary phase, since Ta element can dissolve into ZrO2 lattice to form the low eutectic Zr-Ta-O glassy layer, the B content change will not directly affect ZrO2 particles. Generally, B2O3 is considered to help lower the viscosity of the glassy layer due to its low melting point. The lower the viscosity of the glassy layer is, the more easily macropores will form. From Fig. 12(g–i), with the decrease of B content, the size of macropores distributed in the formed Zr-Ta-O oxide layer decreases accordingly. Despite the existence of residual B2O3 in the sprayed ZrB2-TaC coating, the improved heat dissipation capacity of the Zr-Ta-O layer than the ZrO2 layer will weaken its negative effects on the coating structure damage."]
+  },
+  {
+    "category": "semantic",
+    "question": "In Hu et al. 2023, what measurement technique was used to quantify the resistance of ZrB2-based ceramic coatings to high-temperature erosion and mass loss, and what were the specific testing parameters employed in this evaluation method?",
+    "reference_answer": "Hu et al. 2023 employed oxyacetylene flame ablation testing to assess erosion resistance, using a constant thermal flux of 2.4 megawatts per square meter applied for 60 seconds. A two-color infrared thermometer measured surface temperatures during the test, with measurements taken at specific time points to track the material's performance under extreme thermal conditions.",
+    "answer_keys": [["oxyacetylene", "flame", "ablation"], ["2.4", "megawatt", "thermal flux"], ["60", "seconds", "time"]],
+    "evidence_any": ["The heat flux was 2.4 MW/m2 and the ablation time for all the samples lasted 60 s."],
+    "source_docs": ["Hu_2023_MaterialsScience&Technology_Effectsofair.pdf"],
+    "excerpts": ["The ablation properties of the Zr-based UHTC samples were tested by an oxyacetylene flame. The heat flux was 2.4 MW/m2 and the ablation time for all the samples lasted 60 s. An infrared measure temperature gun (Raytek MR1SCSF) was used to record the surface temperatures during the ablation process. Here, the heat flux was measured by a water-cooled calorimeter, revealing the average value of the oxyacetylene. The temperature field of ablation flame can be evaluated by Fluent software based on the method of Gibbs free energy minimization, which exhibits decreased heat flux from the center to the edge. The two-color infrared thermometer was applied to measure the surface temperatures to keep the tested results independent of the emissivity of ablated specimens."]
+  },
+  {
+    "category": "semantic",
+    "question": "In Zhang et al. 2019's directionally solidified ZrB2-SiC ultra-high-temperature ceramic composites, what was the characteristic architecture of the reinforcement phase at the microscale, and what was its measured thickness dimension?",
+    "reference_answer": "The Zhang et al. 2019 directionally solidified ZrB2-SiC eutectic composite exhibits a distinctive lamellar arrangement of alternating silicon carbide and zirconium diboride layers. The individual lamellae have a thickness of approximately 5 micrometers, creating a highly aligned microstructure.",
+    "answer_keys": [["lamellar", "lamellae", "layers"], ["5", "micrometer", "thickness"], ["sic", "silicon carbide"]],
+    "evidence_any": ["The bright phase is SiC and the dark phase is ZrB2. The lamella thickness is about 5 μm."],
+    "source_docs": ["Zhang_2019_AlloysandCompounds_Anovelmicrostructural.pdf"],
+    "excerpts": ["Fig. 5 shows a bright field TEM image of the ZrB2-SiC eutectic made by the melting technique. The bright phase is SiC and the dark phase is ZrB2. The lamella thickness is about 5 μm. SAEDs were taken from regions labeled (a) (b) (c) and (d) in Fig. 5. SAEDs of the SiC phase along the [111] zone axis can be indexed as cubic and corresponds to the 3C-SiC polytype (β-SiC) in the eutectic composition. Although, the SAEDs were taken from different regions, all of them have the same orientation, which confirms the single crystalline nature of the lamellae. Similarly, SAEDs taken from regions (c) (d) and (e) along the [0001] zone axis confirm the hexagonal symmetry of the ZrB2 grains. HRTEM of a ZrB2-SiC interface is shown in Fig. 5 (e), revealing an impurity-free grain boundary."]
+  },
+  {
+    "category": "semantic",
+    "question": "In Zhang et al. 2019's investigation of high-temperature air-exposure resistance in directionally solidified ZrB2-SiC composites, what was the magnitude of the protective oxide layer formed on different sample surfaces at 1873 Kelvin exposure, and how did orientation affect this protective layer thickness?",
+    "reference_answer": "At 1873 K (1600 degrees Celsius), the directionally solidified ZrB2-SiC composite formed oxide scales of dramatically different thicknesses depending on surface orientation. The side surface (parallel to the lamellar growth direction) developed a thin protective layer of 65 micrometers, while the top surface perpendicular to growth showed a thicker, less protective oxide scale of 205 micrometers due to differences in silicon carbide orientation.",
+    "answer_keys": [["65", "205", "micrometer"], ["orientation", "direction", "side", "top"], ["protective", "oxide", "scale"]],
+    "evidence_any": ["The measured oxide scales thicknesses are given in Table 1"],
+    "source_docs": ["Zhang_2019_AlloysandCompounds_Anovelmicrostructural.pdf"],
+    "excerpts": ["Fig. 8 shows polished cross-sections showing the microstructure of ZrB2-SiC after oxidation for 1 h at 1873K prepared using different techniques. The measured oxide scales thicknesses are given in Table 1. Fig. 8(a) shows a thin (<65 μm) oxygen-rich layer is formed on the side of the DS sample. The lamellae orientation has a strong effect on the oxidation resistance because the continuous layer of SiC facing the inward oxygen diffusion resulted in formation of a silica layer which was an effective barrier. The formation of a SiC continuous lamella of the DS sample side was promoted by the preferential solidification of SiC because of its lower melting/decomposition temperature compared ZrB2. On the top side the zirconia layer did not offer effective protection against oxidation and the scale thickness was about 205 μm, which is comparable to that reported for pure ZrB2."]
+  },
+  {
+    "category": "semantic",
+    "question": "In Zhang et al. 2019, what thermal processing method was employed to manufacture the directionally solidified ZrB2-SiC composite, and what were the key operational parameters that characterized this fabrication technique?",
+    "reference_answer": "Zhang et al. 2019 used crucibleless zone melting with induction heating to produce directionally solidified ZrB2-SiC. The powder mixture was melted at approximately 1000 Kelvin per minute heating rate, moved at 2 millimeters per minute relative to the inductor, under ultrapure helium atmosphere at one atmosphere pressure, producing composites with nearly 99% theoretical density.",
+    "answer_keys": [["zone melting", "crucibleless", "induction"], ["1000", "heating rate"], ["2", "movement", "speed"]],
+    "evidence_any": ["The billet was melted using an induction heater at a rate of about 1000 K/min"],
+    "source_docs": ["Zhang_2019_AlloysandCompounds_Anovelmicrostructural.pdf"],
+    "excerpts": ["The DS composite was produced by a floating zone method based on crucibleless zone melting of the compacted powders as described by Loboda. Cylindrical billets of powder mixtures of ZrB2 SiC, and boron 10 mm in diameter and 140 mm long (porosity 35–40%) were compacted using uniaxial pressing. The ingots were subjected to zone melting with induction heating in a Kristall-206 unit in an atmosphere of ultrapure helium (99.999 mass%) at a pressure of 1 atm. The billet was melted using an induction heater at a rate of about 1000 K/min under constant power, the speed of movement (relative to the inductor) was 2 mm per minute. Directionally solidified ZrB2-SiC with a molar composition of 80:20 vol% and a relative density close to 99% was obtained."]
+  },
+  {
+    "category": "semantic",
+    "question": "In Zhang et al. 2019's directionally solidified ZrB2-SiC composite, what quantitative measure of crystallographic alignment was achieved, and how does this numerical descriptor characterize the degree of grain orientation in the material?",
+    "reference_answer": "Zhang et al. 2019 achieved a Lotgering orientation factor as high as 0.97 in their directionally solidified ZrB2-SiC composite, measured from the (00l) diffraction peaks. The Lotgering factor on a scale from zero to one quantifies the preferential crystallographic orientation of grains, where 1.0 represents perfect alignment and 0.97 indicates excellent texturing of the grain structure.",
+    "answer_keys": [["lotgering", "orientation factor"], ["0.97", "high"], ["00l", "diffraction"]],
+    "evidence_any": ["The (00l) Lotgering orientation factor was as high as 0.97"],
+    "source_docs": ["Zhang_2019_AlloysandCompounds_Anovelmicrostructural.pdf"],
+    "excerpts": ["The high level of texturing is produced by the thermal gradients generated in the process. The (00l) Lotgering orientation factor was as high as 0.97. Fig. 5 shows a bright field TEM image of the ZrB2-SiC eutectic made by the melting technique. The bright phase is SiC and the dark phase is ZrB2. The lamella thickness is about 5 μm. SAEDs were taken from regions labeled (a) (b) (c) and (d) in Fig. 5. SAEDs of the SiC phase along the [111] zone axis can be indexed as cubic and corresponds to the 3C-SiC polytype (β-SiC) in the eutectic composition."]
+  },
+  {
+    "category": "semantic",
+    "question": "In Hu et al. 2023's study of thermally sprayed ZrB2 coatings, what crystalline boron-oxide phase remains in the deposited material after plasma treatment, and what specific temperature range characterizes the thermal behavior of this residual phase?",
+    "reference_answer": "Amorphous and residual boron trioxide (B2O3) phase persists in the plasma-sprayed ZrB2 coating. This residual B2O3 exhibits crystallization behavior around 200 degrees Celsius and evaporation peaks near 1200 degrees Celsius, with a relatively low melting point of approximately 450 degrees Celsius that causes it to vaporize during coating deposition.",
+    "answer_keys": [["b2o3", "boron trioxide", "oxide"], ["200", "1200", "450", "temperature"], ["crystallization", "evaporation", "thermal"]],
+    "evidence_any": ["The formed B2O3 phase with a low melting point (∼450 °C) in the ZrB2 powders will evaporate"],
+    "source_docs": ["Hu_2023_MaterialsScience&Technology_Effectsofair.pdf"],
+    "excerpts": ["Once oxygen participates, the consumption of ZrB2 (Reaction 3) will be inevitable according to the dramatically negative G value. The formed B2O3 phase with a low melting point (~450 °C) in the ZrB2 powders will evaporate during the coating preparation process and lead to the B element loss. For that the deposited ZrB2-based coatings on low-temperature substrates are also exposed to air, the oxidation of ZrB2 might lead to a B2O3 phase residual in the ZrB2-based coatings. Limited by the rapid cooling process and the narrow crystallization temperature range (200–250 °C), B2O3 oxidized from ZrB2 ceramic tends to be amorphous, which is difficult to be detected by XRD in Fig. 3(a)."]
+  },
+  {
+    "category": "semantic",
+    "question": "In Hu et al. 2023's ablation studies of ZrB2-SiC coatings at high thermal flux, what phenomenon was observed when comparing the outer-layer temperature of boron-rich ceramic samples to boron-depleted coating samples during thermal exposure?",
+    "reference_answer": "Hu et al. 2023 observed that sprayed ZrB2-SiC coatings with depleted boron content paradoxically exhibited lower surface temperatures during ablation testing compared to dense sintered ZrB2-SiC ceramics with abundant boron. This unexpected temperature reduction is attributed to evaporation of the residual boron trioxide phase in the spray-processed coating, which extracts substantial thermal energy from the surface.",
+    "answer_keys": [["temperature", "surface"], ["evaporation", "heat"], ["b2o3", "boron", "residual"]],
+    "evidence_any": ["the unusual decline might be attributed to the evaporation of the residual B2O3 phase in the sprayed ZrB2 coatings"],
+    "source_docs": ["Hu_2023_MaterialsScience&Technology_Effectsofair.pdf"],
+    "excerpts": ["Although the sprayed ZrB2 coatings exhibit lower boron content than that of ZrB2-based ceramics, the surface temperatures are instead lower. Owing to the protective effect of Zr-X-O (X = Si, Ta) compound film, the oxidation of inner ZrB2 ceramic and the formation of B2O3 were restricted. Hence, the unusual decline might be attributed to the evaporation of the residual B2O3 phase in the sprayed ZrB2 coatings. Fig. 12 presents the cross-sectional BSE images of ZrB2-based ceramics (B-rich), air plasma-sprayed ZrB2-based coatings (B-oxidized), and air plasma-sprayed ZrC-based coatings (B-removed) after 60 s ablation."]
+  },
+  {
+    "category": "semantic",
+    "question": "In Zhang et al. 2019's comparison of processing methods for ZrB2-SiC composites, how did the melt-solidified directionally aligned samples differ in oxidation protection from conventionally sintered samples prepared using spark-plasma techniques?",
+    "reference_answer": "Zhang et al. 2019 found that directionally solidified ZrB2-SiC composites via crucibleless zone melting demonstrated superior oxidation resistance compared to spark-plasma sintered samples. When oriented with the silicon-carbide lamellae facing the oxygen ingress direction, the melt-solidified samples formed a continuous silica-rich protective layer measuring 65 micrometers, compared to 80 micrometers in spark-plasma sintered material with random orientation, showing the benefit of lamellar alignment.",
+    "answer_keys": [["directional", "melt", "zone melting"], ["spark plasma", "sintered", "sps"], ["silica", "protective", "layer"]],
+    "evidence_any": ["The silica protective layer formed in directional solidified specimens was continuous and formed by the oxidation of SiC layers."],
+    "source_docs": ["Zhang_2019_AlloysandCompounds_Anovelmicrostructural.pdf"],
+    "excerpts": ["A novel design of a eutectic engineered microstructure improved the oxidation resistance of ultra-high temperature ceramic (UHTC) composites. Oxidation studies of solidified melt processed ZrB2-SiC with eutectic microstructures show that they could guide the design of UHTCs with improved oxidation resistance. The silica protective layer formed in directional solidified specimens was continuous and it was formed by the oxidation of SiC layers. Melt processing could add a further degree of freedom in designing the properties of UHTCs, in particular, low energy grain boundaries might further improve oxidation resistance."]
+  }
+]
