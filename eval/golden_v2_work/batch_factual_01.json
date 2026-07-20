@@ -1,0 +1,101 @@
+[
+  {
+    "category": "factual",
+    "question": "In the Hoque et al. 2023 study on high-entropy metal diboride (Hf0.2Zr0.2Ti0.2Ta0.2Nb0.2)B2, what was the room-temperature thermal conductivity value measured for the HEB specimen?",
+    "reference_answer": "The room-temperature thermal conductivity of the HEB sample is 27.8 ± 2.9 W m−1 K−1, as reported in Table 1 of Hoque et al. (2023). This value is significantly lower than monolithic diborides due to extensive electron and phonon scattering from lattice distortions and compositional disorder.",
+    "answer_keys": [["27.8", "27.8 ± 2.9"], ["thermal", "conductivity"], ["w m", "w m−1", "room temperature"]],
+    "evidence_any": ["The room-temperature thermal conductivity of the HEB sample is 27.8 ± 2.9"],
+    "source_docs": ["Hoque_2023_EuropeanCeramicSociety_Thermalandablation.pdf"],
+    "excerpts": ["The room-temperature thermal conductivity of the HEB sample is 27.8 ± 2.9 W m−1 K−1. This is in agreement with our previous publications [10,43]. As exhibited in Table 1, the thermal conductivity of the HEB is significantly lower compared to the monolithic diborides of similar relative densities. Both electrons and phonons contribute to the thermal conductivity of these diborides [42,53–55]. A small amount of impurities can reduce the thermal conductivity of the monolithic diborides significantly [56,57]. However, we attribute the thermal conductivity reduction in HEB to the significant electron and phonon scattering caused by the lattice distortions and compositional disorder [3,58]. The localized mass and interatomic bond strength differences among the five metal cations in the HEB cause lattice distortions as evident by the changes in lattice parameters compared to the single diboride counterparts [3,9,11,19]."]
+  },
+  {
+    "category": "factual",
+    "question": "According to Hoque et al. (2023), what maximum temperature was reached when measuring the thermal conductivity of the high-entropy diboride (Hf0.2Zr0.2Ti0.2Ta0.2Nb0.2)B2 using laser flash analysis (LFA)?",
+    "reference_answer": "The laser flash analysis (LFA) measurements reached a maximum temperature of 1267 °C to measure thermal diffusivity of the HEB, from which thermal conductivity was extracted and compared with SSTR and TDTR measurements at lower temperatures.",
+    "answer_keys": [["1267"], ["laser flash", "lfa"], ["temperature", "thermal", "conductivity"]],
+    "evidence_any": ["LFA is used to measure thermal diffusivity up to 1267 ◦C"],
+    "source_docs": ["Hoque_2023_EuropeanCeramicSociety_Thermalandablation.pdf"],
+    "excerpts": ["To measure the thermal conductivity of the HEB, we employed three different thermal characterization techniques: steady-state thermoreflectance (SSTR) [44], time-domain thermoreflectance (TDTR) [45–48], and laser flash analysis (LFA) [49]. SSTR and TDTR are used to measure the thermal conductivity up to 290 and 600 ◦C, respectively. LFA is used to measure thermal diffusivity up to 1267 ◦C from which we extract the thermal conductivity. Although SSTR can measure the thermal conductivity independent of heat capacity, TDTR and LFA measurements require knowledge of HEB heat capacity [50–52]. To this end, we assumed that the heat capacity of the HEB and ZrB2 is the same. This assumption is later verified in subsequent sections. Details of the thermal characterization techniques can be found in the Supporting Information."]
+  },
+  {
+    "category": "factual",
+    "question": "In the Hoque et al. (2023) paper on (Hf0.2Zr0.2Ti0.2Ta0.2Nb0.2)B2, what was the sintering temperature and duration used during the reactive spark plasma sintering process?",
+    "reference_answer": "The final sintering temperature was 2200 °C held for 30 minutes, reached by ramping at 30 °C/min after initial outgassing holds at 1400 and 1600 °C for 80 minutes each. A pressure of 80 MPa was applied at the maximum temperature.",
+    "answer_keys": [["2200"], ["sintering", "spark plasma", "sps"], ["30 min", "pressure 80 mpa"]],
+    "evidence_any": ["final sintering temperature of 2200 ◦C and held for 30 min"],
+    "source_docs": ["Hoque_2023_EuropeanCeramicSociety_Thermalandablation.pdf"],
+    "excerpts": ["The polycrystalline HEB sample for this study was fabricated by reactive spark plasma sintering of ball milled elemental powders [43]. During spark plasma sintering, the powders were first held at temperatures of 1400 and 1600 ◦C for 80 min each to allow for sufficient outgassing and native oxide reduction. The temperature was then raised at 30 ◦C/min to the final sintering temperature of 2200 ◦C and held for 30 min, prior to cooling to room temperature in 15–20 min. A pressure of 80 MPa was applied at the maximum temperature to enable full densification. The prepared specimen was highly dense (> 98% of theoretical density) and contained negligible amount of native oxide contaminants."]
+  },
+  {
+    "category": "factual",
+    "question": "What was the measured electrical conductivity of the high-entropy diboride (Hf0.2Zr0.2Ti0.2Ta0.2Nb0.2)B2 specimen reported by Hoque et al. (2023), and what does this value correspond to for electron contribution to thermal conductivity?",
+    "reference_answer": "The electrical conductivity of the HEB specimen was (2.42 ± 0.12) × 10^6 S/m, which corresponds to an electron contribution of 18.1 ± 0.9 W m−1 K−1, representing nearly 65% of the total thermal conductivity of HEB.",
+    "answer_keys": [["2.42", "2.42 ± 0.12", "10^6"], ["electrical conductivity", "electron contribution"], ["18.1", "65%"]],
+    "evidence_any": ["The measured electrical conductivity of the HEB specimen is (2.42 ± 0.12) × 106 S/m"],
+    "source_docs": ["Hoque_2023_EuropeanCeramicSociety_Thermalandablation.pdf"],
+    "excerpts": ["To approximate the electron contribution (ðð) to the thermal conductivity of the HEB, we use the Wiedemann–Franz law: ðð = ððð¿ð, where ðð, L, and T represent electrical conductivity, Lorentz number, and temperature, respectively [55]. For this purpose, we measure the electrical conductivity via the four-point probe method and use a Lorentz number of 2.45 × 10−8 W Ω K−2. This ideal Lorentz number has been previously used to estimate the ðð values of ZrB2 [66], HfB2 [67], ZrB2-TiB2 [66], and ZrB2-SiC [55] ceramics. The measured electrical conductivity of the HEB specimen is (2.42 ± 0.12) × 106 S/m. This value corresponds to an electron contribution of 18.1 ± 0.9 W m−1 K−1, nearly 65% of the total thermal conductivity of HEB. Thus, our measurement provides the first empirical evidence that the thermal conductivity of HEB is electron dominated."]
+  },
+  {
+    "category": "factual",
+    "question": "In the Hoque et al. (2023) ablation study, what were the measured laser ablation thresholds reported for the high-entropy diboride (Hf0.2Zr0.2Ti0.2Ta0.2Nb0.2)B2 and ZrB2, and what does this indicate about their bond strengths?",
+    "reference_answer": "The ablation thresholds were 0.018 ± 0.005 J/cm² for HEB and 0.023 ± 0.009 J/cm² for ZrB2, which are nearly the same within uncertainty, indicating that HEB and ZrB2 possess very similar bond strengths and hence nearly identical thermal ablation resistances.",
+    "answer_keys": [["0.018", "0.023"], ["ablation", "threshold", "j/cm"], ["bond strength", "ablation resistance"]],
+    "evidence_any": ["ablation thresholds are measured to be 0.018 ± 0.005 and 0.023 ± 0.009"],
+    "source_docs": ["Hoque_2023_EuropeanCeramicSociety_Thermalandablation.pdf"],
+    "excerpts": ["As exhibited in Fig. 4(b), the ablation thresholds are measured to be 0.018 ± 0.005 and 0.023 ± 0.009 J and ZrBcm−2, 2 re- spectively; nearly the same within uncertainty. This indicates that the HEB and ZrB2 possess very similar bond strengths and hence, nearly-identical thermal ablation resistances. To further verify this, we compare the elastic modulus of the two materials as it is also an indicator of bond strength [3,78]. Qin et al. [43] recently reported the elastic modulus of the HEB to be ∼525 GPa. Using nanoindentation [79,80], we measure the elastic modulus of the ZrB2 specimen to be 502 ± 30 GPa. In short, through a combination of laser-induced ablation measurements and nanoindentation, our results strongly suggest that the HEB studied in this work has very similar mechanical properties to those of ZrB2."]
+  },
+  {
+    "category": "factual",
+    "question": "According to the Hoque et al. (2023) paper, what was the average grain size of the high-entropy diboride specimen, and what crystal structure does this material possess?",
+    "reference_answer": "The average grain size of the HEB specimen was 15 ± 9.5 μm as measured by electron backscatter diffraction (EBSD). The HEB possessed a single-phase, hexagonal crystal structure (AlB2) with high symmetry.",
+    "answer_keys": [["15", "15 ± 9.5", "μm"], ["grain size", "ebsd"], ["hexagonal", "alb2"]],
+    "evidence_any": ["The average grain size of the HEB specimen was 15±9.5 μm"],
+    "source_docs": ["Hoque_2023_EuropeanCeramicSociety_Thermalandablation.pdf"],
+    "excerpts": ["The composition of the sample was measured by energy dispersive X-ray spectroscopy (EDS) to be 98% (Hf0.19Zr0.19Ti0.22Ta0.19Nb0.18W0.03)B2 with residual amount of carbide phase [43]. The average grain size of the HEB specimen was 15±9.5 μm, as measured by electron backscatter diffraction (EBSD). A detailed description of the HEB sample fabrication and characterization can be found in Qin et al. [43] The HEB specimen of this study and that of Ref. [43] were prepared following the same methodology. 3. Results and discussion 3.1. Thermal conductivity of the HEB The HEB studied in this work possesses a single-phase, hexagonal crystal structure (AlB2) [42] with high symmetry [9,19]. Fig. 1 shows the highly anisotropic layered crystal structure of the HEB consisting of alternating rigid two-dimensional (2D) boron nets and 2D layers of five metal cations (Hf, Zr, Ti, Ta, and Nb) [9]."]
+  },
+  {
+    "category": "factual",
+    "question": "In the Kelly et al. (2022) binder jet additive manufacturing study on ZrB2-MoSi2 ceramic heat exchangers, what target relative density was specified as the goal for the fabricated parts, and what is the significance of this density level?",
+    "reference_answer": "Kelly et al. aimed to achieve parts with relative density ≥ 92% of theoretical, which indicates the transition from intermediate to final stage sintering and is a requirement to inhibit gas permeability and enable sintering of complex shapes to full density with sinter-HIP technology.",
+    "answer_keys": [["92%", "≥ 92%"], ["target", "relative density"], ["gas permeability", "intermediate"]],
+    "evidence_any": ["We aimed to achieve parts with a relative density ≥ 92 % of theoretical"],
+    "source_docs": ["Kelly_2022_AdditiveManufacturing_Binderjet.pdf"],
+    "excerpts": ["We intended to demonstrate binder jet additive manufacturing feasibility of a UHTC-TPMS structure by printing and sintering a null candidate. We aimed to achieve parts with a relative density ≥ 92 % of theoretical and to provide a TPMS part demonstration. The target density indicates the transition from intermediate to final stage sintering, a requirement to inhibit gas permeability and for sintering complex near net shapes to full density with sinter-HIP technology. The goal of the TPMS part demonstration was to determine if printing and sintering parameters developed from test coupons apply to the complex geometries that will eventually be used in a heat exchanger design. Our objective was to print cubic TPMS parts with a 9 cm3 volume and sinter it without distorting and cracking."]
+  },
+  {
+    "category": "factual",
+    "question": "What particle size range was observed for the ZrB2 and MoSi2 powders selected for binder jet printing in the Kelly et al. (2022) study, and what manufacturing objectives did the choice of these fine particles support?",
+    "reference_answer": "Most particles were in the 1-5 μm range with no particles greater than 7 μm observed. These finer particle sizes were selected to retain good sintering characteristics and better properties while pushing the limits of what is typical for binder jet additive manufacturing.",
+    "answer_keys": [["1-5", "1-5 μm"], ["particle", "size"], ["fine", "sintering", "properties"]],
+    "evidence_any": ["Most of the particles were in the 1–5 µm range and no particles greater than 7 µm"],
+    "source_docs": ["Kelly_2022_AdditiveManufacturing_Binderjet.pdf"],
+    "excerpts": ["We wanted to retain the good sintering characteristics and better properties afforded by using smaller particles and push the limits of what is typical for binder jet additive manufacturing. We evaluated the flow behavior of multiple ZrB2 and MoSi2 powders and the results are shown in Table 2. ZrB2 Powder B and MoSi2 Powder D were selected for further testing and binder jet additive manufacturing trials. Images demonstrating particle morphology and particle size distributions for these powders are shown in Fig. 2. The powders both have an irregular, fragmented particle morphology that suggest the powders were made by comminution. There isn't any substantial phase contrast in the images, suggesting good phase purity. Most of the particles were in the 1–5 µm range and no particles greater than 7 µm were observed."]
+  },
+  {
+    "category": "factual",
+    "question": "According to Kelly et al. (2022), what sintering temperature and duration were ultimately used to achieve the target density for ZrB2-MoSi2 TPMS structures, and what volumetric shrinkage resulted from this process?",
+    "reference_answer": "Parts were sintered at 2000 °C for 18 hours in argon, achieving densities ranging from 93-98% of theoretical. The volumetric shrinkage was approximately 60% and was isotropic with insignificant difference between length, width, and height of the cubic parts.",
+    "answer_keys": [["2000", "2000 °c"], ["18", "18 hr", "18 hours"], ["60%", "shrinkage"]],
+    "evidence_any": ["sintering three samples at 2000ºC for 18 hrs resulted in densities ranging from 5.65"],
+    "source_docs": ["Kelly_2022_AdditiveManufacturing_Binderjet.pdf"],
+    "excerpts": ["Silvestroni and Sciti [28] were able to obtain ZrB2-MoSi2 composites with relative densities ranging from 86 % to 99 % of theoretical by sintering for 60 min at 1800–1950ºC in flowing argon. Our attempts to replicate these results with parts made by binder jet additive manufacturing using similar parameters only resulted in densities up to 69 % of theoretical and is believed to be due to the lower green density of the parts. Increasing the time at 1900ºC to 18 hrs resulted in one sample with a density of 5.66 g/cm3 (93 % of theoretical) while sintering three samples at 2000ºC for 18 hrs resulted in densities ranging from 5.65 to 5.94 g/cm3 or 93–98 % of theoretical. The volumetric shrinkage was approximately 60 % and was isotropic with insignificant difference between the length, width, and height of the cube."]
+  },
+  {
+    "category": "factual",
+    "question": "In the Kelly et al. (2022) study of binder jet-printed ZrB2-MoSi2 TPMS heat exchangers, what estimated power density was calculated for a heat exchanger based on Schwarz-D TPMS dimensions, and what maximum heat exchanger capacity could theoretically be produced with current commercial printers?",
+    "reference_answer": "The calculated power density for the UHTC-TPMS heat exchanger based on Schwarz-D dimensions and molten chloride salt TES inputs was up to 50 MW/m³. With the largest commercial binder jet printer's build volume, this would enable a one-piece heat exchanger with capacity rating up to 3 MW.",
+    "answer_keys": [["50", "50 mw/m", "mw/m³"], ["power density", "heat exchanger"], ["3 mw", "capacity"]],
+    "evidence_any": ["power density of up to 50 MW/m3 for a UHTC-TPMS heat exchanger"],
+    "source_docs": ["Kelly_2022_AdditiveManufacturing_Binderjet.pdf"],
+    "excerpts": ["Our own analysis using the methods described elsewhere [3,5, 6] and with CSP inputs based on a molten chloride salt TES [1,7,8] confirm the potential to achieve a power density of up to 50 MW/m3 for a UHTC-TPMS heat exchanger based on the Schwarz-D TPMS di- mensions we achieved and describe within. The feasibility to fabricate UHTC-TPMS heat exchangers by binder jet additive manufacturing has been demonstrated with a research grade printer by successfully printing and sintering the basic structural building block of the heat exchanger. The largest commercial binder jet printer currently on the market for powder processing has a build volume of 0.8 × 0.5 × 0.4 m or 0.16 m3. Applying the sintering shrinkage that we observed to those dimensions suggests that heat exchanger builds with the following dimensions are possible. The final unit size for the structure we manufactured has length of 1.25 cm with a wall thickness of 1.5 mm. Combining the size of this heat exchanger block with this power density estimate results in a heat exchanger capacity rating of up to 3 MW."]
+  },
+  {
+    "category": "factual",
+    "question": "What challenge related to warping was identified during the sintering process in Kelly et al. (2022), and what mitigation strategy proved effective for preventing distortion of the ZrB2-MoSi2 parts?",
+    "reference_answer": "Parts experienced significant warping during sintering accompanied by approximately 6% mass loss, suggesting a vaporization-driven distortion process. Spatial confinement in a carbon powder bed packing inside inverted crucibles effectively mitigated warping and eliminated the observed dimensional distortion.",
+    "answer_keys": [["warping", "distortion"], ["spatial confinement", "carbon"], ["6%", "mass loss", "vaporization"]],
+    "evidence_any": ["spatial confinement in a carbon packing was able to effectively mitigate warping"],
+    "source_docs": ["Kelly_2022_AdditiveManufacturing_Binderjet.pdf"],
+    "excerpts": ["It became evident from the initial sintering development that warping is an issue if left unmitigated. Distortion can be problematic for manufacturing larger parts or parts with complex geometry. Non-uniform structure or a non-uniform vaporization process are both known to cause non-uniform shrinkage that can result in warping [43, 44]. The fundamental nature of additive manufacturing, building layer-by-layer, creates the potential to generate a non-uniform structure. However, one of the primary advantages of binder jet additive manufacturing is the ability to achieve isotropic structure and properties [24]. We were also able to rule out non-uniform structure by inverting the part orientation in the furnace, but still observing warping in the same direction. We noted about 6 % mass loss occurring during the sintering process, which supports the notion that warping occurs because of a vaporization process. Spatial confinement has been used to inhibit vaporization when sintering non-oxide ceramics [45] or volatile oxide ceramics [46]. Indeed, we found that spatial confinement in a carbon packing was able to effectively mitigate warping (see Fig. 4)."]
+  }
+]
