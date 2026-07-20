@@ -13,3 +13,4 @@ build/
 dist/
 production-rag-*.zip
 *.spec
+.claude/settings.local.json
