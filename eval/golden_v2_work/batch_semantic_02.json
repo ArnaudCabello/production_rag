@@ -1,0 +1,145 @@
+[
+  {
+    "category": "semantic",
+    "question": "In the 2023 ablation study by SHAO et al. of protective coatings containing zirconium carbide, silicon carbide, and molybdenum disilicide on carbon composite substrates, how did the material loss rate under high-temperature flame exposure respond to progressively higher oxygen and acetylene flow rates when comparing coatings with lower versus higher zirconium content (34 wt% vs. 60 wt%)?",
+    "reference_answer": "In SHAO et al. 2023, the lower-zirconium coating (ZSM-L, 34 wt% Zr) exhibited material loss rates that increased initially but then decreased at the highest oxygen and acetylene flux conditions. The higher-zirconium coating (ZSM-H, 60 wt% Zr) showed material loss rates that continuously increased with greater heating flux, demonstrating that Zr content significantly influences how protective coatings respond to progressive thermal stress.",
+    "answer_keys": [
+      ["zirconi", "zr"],
+      ["loss", "rate", "ablat"],
+      ["flux", "flow"]
+    ],
+    "evidence_any": ["the linear ablation rates of ZSM-L samples increase firstly, and then decrease"],
+    "source_docs": ["SHAO_2023_TransactionsofNonferrousMetalsSocietyofChina_Ablationbehavior.pdf"],
+    "excerpts": ["The linear ablation rates of the ZSM-H and ZSM-L coated samples are shown in Fig. 3. With the increase of heat fluxes, the linear ablation rates of ZSM-H samples increase gradually, while those of ZSM-L samples increase firstly, and then decrease. In comparison, the linear ablation rates of ZSM-H samples are lower than those of ZSM-L samples under Conditions 1 and 2. Especially under Condition 1, the linear ablation rate of ZSM-H samples is zero, showing a non-ablation characteristic. However, under Condition 3, the linear ablation rate of ZSM-H samples (1.86×10−2 mm/s) is higher than that of ZSM-L samples (4.4×10−3 mm/s). This is mainly attributed to low adhesion of the oxides of ZSM-H samples, which are easy to be peeled off under high speed air-flow. However, the decrease of linear ablation rates of ZSM-L samples is mainly attributed to the volume expansion caused by SiO2 phase. In conclusion, Zr content in the coating has a great influence on the ablation performance."]
+  },
+  {
+    "category": "semantic",
+    "question": "In the 2013 research by Zapata-Solvas et al. measuring how heat transport through ultra-high-temperature diboride ceramics changes across elevated temperatures, why did adding lanthanum oxide to silicon-carbide-reinforced zirconium diboride materials produce markedly different heat flow behavior compared to silicon-carbide-reinforced zirconium diboride alone in the 1500-1900°C operating window?",
+    "reference_answer": "In Zapata-Solvas et al. 2013, La2O3-doped ZrB2-SiC composites maintained nearly constant thermal conductivity between 1500°C and 1900°C, whereas SiC-doped ZrB2 without La2O3 showed a 7% decrease in thermal conductivity over the same temperature interval. This stability in the rare-earth-doped composites resulted from La2O3 particles preventing contact loss between SiC grains and matrix grains, thereby maintaining consistent Kapitza resistance values.",
+    "answer_keys": [
+      ["lanthan", "la2o3"],
+      ["thermal", "conductiv"],
+      ["1500", "1900", "temp"]
+    ],
+    "evidence_any": ["Thermal conductivity was calculated from RT to 1900 ◦C for each UHTC"],
+    "source_docs": ["Zapata-Solvas_2013_EuropeanCeramicSociety_Thermalproperties.pdf"],
+    "excerpts": ["Thermal conductivity was calculated from RT to 1900 ◦C for each UHTC using Eq. (1) with the measured thermal expansion and thermal diffusivity, and with the calculated specific heat as shown in Fig. 3. Thermal conductivity behavior is similar to thermal diffusivity and the reduction of thermal conductivity from 1500 ◦C to 1900 ◦C is ∼7% for SiC-doped UHTCs, whereas it can be considered constant for La2O3-SiC-doped UHTCs. The most remarkable feature of the thermal conductivity behavior of UHTCs presented in this study, is the constant thermal conductivity between 1500 ◦C and 1900 ◦C of La2O3-SiC-doped UHTCs, whereas SiC-doped UHTCs thermal conductivity decreases 7% in this temperature range."]
+  },
+  {
+    "category": "semantic",
+    "question": "In SHAO et al. 2023, what were the primary crystalline phases identified in the oxidized surface layers formed on the zirconium carbide-silicon carbide-molybdenum disilicide coatings after exposure to oxyacetylene flames across all three heating conditions?",
+    "reference_answer": "In SHAO et al. 2023, the oxidized surfaces of the ZSM coatings after ablation were primarily composed of monoclinic zirconia (m-ZrO2) and zirconium silicate (ZrSiO4), formed through reaction between zirconia and silica oxides. Amorphous SiO2 glass phase was also present but not detected by X-ray diffraction.",
+    "answer_keys": [
+      ["zro2", "zirconia"],
+      ["oxide", "phase"],
+      ["surface", "layer", "ablat"]
+    ],
+    "evidence_any": ["The surface of the samples after ablation is composed of monoclinic ZrO2"],
+    "source_docs": ["SHAO_2023_TransactionsofNonferrousMetalsSocietyofChina_Ablationbehavior.pdf"],
+    "excerpts": ["Figure 5 displays the XRD patterns obtained in the central area of ZSM-L and ZSM-H samples after ablation under three conditions. The surface of the samples after ablation is composed of monoclinic ZrO2 (m-ZrO2) and ZrSiO4 (formed via the reaction between ZrO2 and SiO2). After ablation, amorphous SiO2 is formed, which cannot be detected by XRD due to its amorphous nature. The intensity of m-ZrO2 and ZrSiO4 shows the highest value under Condition 2, indicating the best crystalline of the oxidation products. Moreover, carbon peak is not observed, suggesting that the substrates are well protected. Figures 6(a−d) show the surface morphologies and EDX analysis results of the ZSM-L samples after ablation under Condition 1. In the central area, a typical structure with ZrO2 particles (Spot 2) embedded in glassy SiO2 phase (Spot 1) is formed."]
+  },
+  {
+    "category": "semantic",
+    "question": "According to Zapata-Solvas et al. 2013, what specific temperature-dependent thermal transport mechanism did lanthanum oxide addition provide to stabilize the heat flow properties of zirconium diboride-silicon carbide composite materials at ultra-high temperatures?",
+    "reference_answer": "Zapata-Solvas et al. 2013 attributed the constant thermal conductivity of La2O3-SiC-doped ZrB2 from 1500°C to 1900°C to La2O3's high coefficient of thermal expansion (10.2 × 10^-6 K^-1), which prevented contact loss between SiC particles and matrix grains during heating. This maintained consistent Kapitza resistance at grain boundaries, unlike SiC-doped ZrB2 alone where thermal conductivity decreased by 7% over the same temperature range.",
+    "answer_keys": [
+      ["lanthan", "la2o3"],
+      ["contact", "kapitza", "interface", "resist"],
+      ["sic", "grain"]
+    ],
+    "evidence_any": ["La2O3 prevents contact loss between SiC grains and the matrix grains"],
+    "source_docs": ["Zapata-Solvas_2013_EuropeanCeramicSociety_Thermalproperties.pdf"],
+    "excerpts": ["The most remarkable feature of the thermal conductivity behavior of UHTCs presented in this study, is the constant thermal conductivity between 1500 ◦C and 1900 ◦C of La2O3-SiC-doped UHTCs, whereas SiC-doped UHTCs thermal conductivity decreases 7% in this temperature range. This is important for designers, who could safely neglect any temperature dependence of thermal conductivity for applications in this temperature range. La2O3 was found in close proximity to SiC particles in a previous study, which could explain this the phenomena in terms of CTE mismatch. La2O3 CTE is the highest (10.2 × 10−6 K−1), while SiC CTE is the smallest (3.3 × 10−6 K−1). On heating, La2O3 prevents contact loss between SiC grains and the matrix grains keeping the Kapitza resistance values constant over the temperature range examined. Therefore, the thermal conductivity of La2O3-SiC-doped UHTCs remains constant from 1500 ◦C to 1900 ◦C."]
+  },
+  {
+    "category": "semantic",
+    "question": "In SHAO et al. 2023, how did increasing the zirconium content in the multi-component protective coating affect the dimensions and spatial arrangement of the individual crystalline particles within the deposited layer before heating exposure?",
+    "reference_answer": "SHAO et al. 2023 found that higher zirconium content (60 wt% Zr in ZSM-H) produced significantly smaller particle sizes of zirconium carbide and silicon carbide within the coating compared to lower zirconium content (34 wt% Zr in ZSM-L), and the particles were distributed more homogeneously throughout the matrix.",
+    "answer_keys": [
+      ["zr", "zirconi"],
+      ["particle", "size", "grain"],
+      ["smaller", "homogen", "distrib"]
+    ],
+    "evidence_any": ["the particle sizes of ZrC and SiC within the ZSM-H coating are smaller"],
+    "source_docs": ["SHAO_2023_TransactionsofNonferrousMetalsSocietyofChina_Ablationbehavior.pdf"],
+    "excerpts": ["In addition, compared with the ZSM-L coating, the particle sizes of ZrC and SiC within the ZSM-H coating are smaller, and the particles are distributed more homogeneously. In conclusion, Zr content plays an important role in the surface morphology and microstructure of the coatings. With the increase of heat fluxes, the linear ablation rates of ZSM-H samples increase gradually, while those of ZSM-L samples increase firstly, and then decrease. In comparison, the linear ablation rates of ZSM-H samples are lower than those of ZSM-L samples under Conditions 1 and 2. Especially under Condition 1, the linear ablation rate of ZSM-H samples is zero, showing a non-ablation characteristic. However, under Condition 3, the linear ablation rate of ZSM-H samples (1.86×10−2 mm/s) is higher than that of ZSM-L samples (4.4×10−3 mm/s)."]
+  },
+  {
+    "category": "semantic",
+    "question": "In Zapata-Solvas et al. 2013, what trend did the rate of heat diffusion through ultra-high-temperature zirconium diboride and hafnium diboride materials display as temperature increased from room conditions to 1900°C, and how did rare earth and silicon carbide doping alter this temperature dependence?",
+    "reference_answer": "In Zapata-Solvas et al. 2013, thermal diffusivity of both ZrB2-SiC and HfB2-SiC composites decreased with increasing temperature from room temperature to 1900°C. Importantly, La2O3-SiC-doped UHTCs showed only a 4% reduction in thermal diffusivity compared to 10% reduction in SiC-doped UHTCs alone, demonstrating that La2O3 addition stabilized the heat diffusion coefficient at elevated temperatures.",
+    "answer_keys": [
+      ["diffusiv"],
+      ["1500", "1900", "temp", "heat"],
+      ["sic", "lanthan", "la2o3"]
+    ],
+    "evidence_any": ["the reduction of thermal diffusivity from 1500 ◦C to 1900 ◦C is ∼10% for SiC-doped UHTCs"],
+    "source_docs": ["Zapata-Solvas_2013_EuropeanCeramicSociety_Thermalproperties.pdf"],
+    "excerpts": ["Fig. 2 plots thermal diffusivity of all UHTC compositions from RT to 1900 ◦C. It is noticeable that the spread of data is reduced with temperature, ZS20, ZS20La, HS20 and HS20La values being similar at 1900 ◦C. In fact, the reduction of thermal diffusivity from 1500 ◦C to 1900 ◦C is ∼10% for SiC-doped UHTCs and ∼4% for La2O3-SiC-doped UHTCs. Therefore, La2O3addition to ZS20 and HS20 UHTCs helps to stabilize thermal transport within the volume of UHTCs at high temperatures. Thermal conductivity was calculated from RT to 1900 ◦C for each UHTC using Eq. (1) with the measured thermal expansion and thermal diffusivity, and with the calculated specific heat as shown in Fig. 3. Thermal conductivity behavior is similar to thermal diffusivity and the reduction of thermal conductivity from 1500 ◦C to 1900 ◦C is ∼7% for SiC-doped UHTCs, whereas it can be considered constant for La2O3-SiC-doped UHTCs."]
+  },
+  {
+    "category": "semantic",
+    "question": "In SHAO et al. 2023 research on protective ceramic coatings for composite materials, how did the dominant degradation mechanisms of the zirconium carbide-silicon carbide-molybdenum disilicide coating transform across three sequential stages as the intensity of the oxyacetylene flame environment progressively increased?",
+    "reference_answer": "SHAO et al. 2023 identified three sequential ablation mechanisms for the ZSM coatings. In the initial stage, oxidation of carbides was the primary mechanism, consuming oxygen and controlling the ablation rate. In the middle stage, oxidation combined with evaporation of silica phases dominated, with diffusion of oxygen through the oxide layer controlling the rate. In the final stage, ablation was controlled by a combination of oxidation, evaporation, and mechanical denudation from high-speed gas flow.",
+    "answer_keys": [
+      ["oxidat", "evapor", "dendud"],
+      ["stage", "phase", "sequence"],
+      ["ablat", "mechanism"]
+    ],
+    "evidence_any": ["The ablation behavior of the coatings varies with different ablation conditions"],
+    "source_docs": ["SHAO_2023_TransactionsofNonferrousMetalsSocietyofChina_Ablationbehavior.pdf"],
+    "excerpts": ["The schematic of the ablation process of the coatings under three conditions is illustrated in Fig. 9. The ablation mechanisms of ZSM coatings are accompanied by a series of chemical erosion and mechanical denudation. Chemical erosion is mainly attributed to the reactions between ZSM coatings and oxygen. Mechanical denudation includes the release of volatile gas (CO2, CO, MoO3, SiO2, SiO), as well as peeling, cracking and melting caused by high-temperature, high-pressure gas flow. In summary, the ablation behavior of the coatings varies with different ablation conditions. Taking the ZSM-H as a sample: under Condition 1, oxidation is the main mechanism of ablation, and no obvious denudation appears on the surface of the coatings. Moreover, a mosaic structure is formed by the liquid phase and ZrO2 particles. Under Condition 2, pores increase rapidly, and ZrO2 grains aggregate. The main ablation mechanisms are oxidation associated with evaporation. Finally, under Condition 3, the formation of ablation pit is attributed to the denudation of gas flow. The ablation mechanisms are the combination of oxidation, evaporation and denudation."]
+  },
+  {
+    "category": "semantic",
+    "question": "In Zapata-Solvas et al. 2013, how did the spatial arrangement and connectivity of silicon carbide particles within the diboride matrix material correlate with the heat transport efficiency measured at elevated temperatures for both zirconium-diboride and hafnium-diboride based composites?",
+    "reference_answer": "Zapata-Solvas et al. 2013 found that homogeneously dispersed and well-connected SiC networks in ZrB2-based composites produced higher thermal conductivity compared to monolithic ZrB2, whereas SiC agglomerates in HfB2-based composites created Kapitza resistance barriers that reduced thermal conductivity below that of monolithic HfB2, demonstrating that secondary phase dispersion plays a leading role in thermal transport efficiency.",
+    "answer_keys": [
+      ["sic", "silicon carb"],
+      ["thermal", "conductiv", "transport"],
+      ["dispersion", "homogen", "agglomerat"]
+    ],
+    "evidence_any": ["dispersion of secondary phase throughout the composite volume plays a leading role in thermal"],
+    "source_docs": ["Zapata-Solvas_2013_EuropeanCeramicSociety_Thermalproperties.pdf"],
+    "excerpts": ["The relative decrease of thermal conductivity in UHTCs compared to monoliths is much higher in HfB2-based UHTCs (31%) than in ZrB2-based UHTCs (12%) at RT even with the greater HfB2 matrix grain size (∼5 μm) than ZrB2 matrix grain size (∼3 μm). At high temperatures the tendency is the same as ZrB2-based UHTCs thermal conductivity is even higher than that of monolithic ZrB2, while HfB2-based UHTCs thermal conductivities are always lower than that of monolithic HfB2. Microstructural characterization of these composites revealed a homogeneous SiC distribution throughout the ZrB2 matrix with SiC particle size ∼1–2 μm, whereas SiC agglomerates as high as 20 μm were found in HfB2-based composites. In conclusion, ZrB2-based UHTCs have a lower reduction of thermal conductivity than HfB2-based UHTCs compared to monolithic UHTCs, as a consequence of the SiC being agglomerate free and homogeneously dispersed. Therefore, dispersion of secondary phase throughout the composite volume plays a leading role in thermal transport efficiency."]
+  },
+  {
+    "category": "semantic",
+    "question": "In SHAO et al. 2023, how did the microstructural features and phase compositions of the oxidized coating surface differ between the central region (maximum heat exposure) and the surrounding transition region after the zirconium carbide-silicon carbide-molybdenum disilicide coated specimens were subjected to 60 seconds of oxyacetylene flame ablation?",
+    "reference_answer": "In SHAO et al. 2023, the central area of ablated ZSM coatings developed significant porosity from gas evolution, with oxide phases distributed irregularly, while the transition area showed smoother surfaces with more uniform distribution of zirconia and silica phases. Under lower heat flux conditions, the central area featured ZrO2 particles embedded in glassy SiO2, whereas the transition area contained white spherical ZrO2 particles in a glass-ceramic structure with ZrSiO4 molten phase.",
+    "answer_keys": [
+      ["central", "transition", "area"],
+      ["zro2", "phase", "oxide", "microstructur"],
+      ["void", "pore", "crack"]
+    ],
+    "evidence_any": ["In the central area, a typical structure with ZrO2 particles (Spot 2)"],
+    "source_docs": ["SHAO_2023_TransactionsofNonferrousMetalsSocietyofChina_Ablationbehavior.pdf"],
+    "excerpts": ["Figures 6(a−d) show the surface morphologies and EDX analysis results of the ZSM-L samples after ablation under Condition 1. In the central area, a typical structure with ZrO2 particles (Spot 2) embedded in glassy SiO2 phase (Spot 1) is formed. In this structure, voids created by the release of volatile gas can be filled by the glass phase, resulting in a compact coating surface. In the transition area, the smooth coating comprises white spherical ZrO2 particles, dark grey SiO2, and faint grey ZrSiO4 molten phase (Spot 3), forming a glass−ceramic skeleton structure. The molten ZrSiO4 phase, with a melting point of 1540 °C, can also fill in the ZrO2 skeleton and form a dense ZrO2−ZrSiO4 double-phase layer. In this case, ZrSiO4 can seal defects (micro-holes and cracks) and improve the stability of the SiO2 glass layer. Under Condition 2 (Figs. 6(e−h)), large ZrO2 grains are formed after ablation, with micro-cracks and pores also appearing in the central area."]
+  },
+  {
+    "category": "semantic",
+    "question": "In Zapata-Solvas et al. 2013, what was the role of the coefficient of thermal expansion differential between lanthanum oxide and silicon carbide phases in explaining the measured behavior of heat transport properties in the rare-earth-doped ultra-high-temperature ceramic composites?",
+    "reference_answer": "Zapata-Solvas et al. 2013 attributed constant thermal conductivity in La2O3-SiC-doped ZrB2 to controlled thermal expansion mismatch. La2O3 has the highest coefficient of thermal expansion (10.2 × 10^-6 K^-1) while SiC has the smallest (3.3 × 10^-6 K^-1). During heating, this mismatch allowed La2O3 to prevent contact loss between SiC and matrix grains, maintaining consistent Kapitza resistance at grain interfaces across the 1500-1900°C temperature range.",
+    "answer_keys": [
+      ["lanthan", "la2o3", "cte", "expansion"],
+      ["sic", "matrix", "grain"],
+      ["mismatch", "contact", "kapitza"]
+    ],
+    "evidence_any": ["La2O3 CTE is the highest (10.2 × 10−6 K−1), while SiC CTE is"],
+    "source_docs": ["Zapata-Solvas_2013_EuropeanCeramicSociety_Thermalproperties.pdf"],
+    "excerpts": ["The most remarkable feature of the thermal conductivity behavior of UHTCs presented in this study, is the constant thermal conductivity between 1500 ◦C and 1900 ◦C of La2O3-SiC-doped UHTCs, whereas SiC-doped UHTCs thermal conductivity decreases 7% in this temperature range. This is important for designers, who could safely neglect any temperature dependence of thermal conductivity for applications in this temperature range. La2O3 was found in close proximity to SiC particles in a previous study, which could explain this the phenomena in terms of CTE mismatch. La2O3 CTE is the highest (10.2 × 10−6 K−1), while SiC CTE is the smallest (3.3 × 10−6 K−1). On heating, La2O3 prevents contact loss between SiC grains and the matrix grains keeping the Kapitza resistance values constant over the temperature range examined. Therefore, the thermal conductivity of La2O3-SiC-doped UHTCs remains constant from 1500 ◦C to 1900 ◦C."]
+  },
+  {
+    "category": "semantic",
+    "question": "In SHAO et al. 2023, what roles did the aluminum oxide and cerium dioxide sintering aid additives play in achieving dense, homogeneously distributed multi-phase protective coatings on carbon composite substrates via slurry painting and high-temperature sintering?",
+    "reference_answer": "In SHAO et al. 2023, aluminum oxide promoted solid-state reactions and prevented coating cracking by combining with SiC to inhibit microcrack expansion, while cerium dioxide acted as a surfactant with high chemical activity. Together, Al2O3 and CeO2 improved wettability toward SiC and ZrC phases, increasing the driving force for sintering and promoting coating densification and homogeneous distribution of ZrC and SiC particles throughout the matrix.",
+    "answer_keys": [
+      ["al2o3", "ceo2", "additiv", "sinter"],
+      ["dense", "homogen", "distribut"],
+      ["crack", "wettabil"]
+    ],
+    "evidence_any": ["Al2O3 can promote solid reaction and prevent coating from cracking by"],
+    "source_docs": ["SHAO_2023_TransactionsofNonferrousMetalsSocietyofChina_Ablationbehavior.pdf"],
+    "excerpts": ["The coating surface is dense and intact, in which MoSi2 is distributed continuously around ZrC grains and fills the voids among ZrC grains effectively. Moreover, the good ductility and wettability of MoSi2 with ZrC promotes the densification of ZrC−SiC−MoSi2 coatings. Al2O3 can promote solid reaction and prevent coating from cracking by combining with SiC to inhibit microcracks expansion. CeO2 has high chemical activity, which is often used as surfactant. Moreover, Al2O3−CeO2 has good wettability to SiC, which is beneficial to the densification of the coating. In conclusion, the combination of Al2O3 and CeO2 is able to increase the driving force for sintering and well promote the density of the coating. As a result, the distribution of SiC and ZrC−MoSi2 phases is homogeneous under the combined action of MoSi2, Al2O3 and CeO2."]
+  }
+]
