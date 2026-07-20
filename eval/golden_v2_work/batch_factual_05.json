@@ -1,0 +1,140 @@
+[
+  {
+    "category": "factual",
+    "question": "In the Hong et al. 2009 study on ultra-high-porosity zirconia ceramics, what were the porosity and compressive strength values for samples produced from different zirconia contents?",
+    "reference_answer": "Hong et al. (2009) report that porosity varied between 82% and 67% as the solid loading was increased, while compressive strength was significantly improved from 41 to 63 MPa. Specifically, samples with 10 vol.% solid content showed 82% porosity and 41.4 ± 1.8 MPa strength, while 20 vol.% samples achieved 67% porosity and 62.8 ± 3.1 MPa strength.",
+    "answer_keys": [
+      ["porosity", "82", "67"],
+      ["compressive", "strength", "41", "63", "mpa"]
+    ],
+    "evidence_any": ["The porosity varied between 82% and 67%, while the compressive strength was significantly improved from 41 to 63 MPa"],
+    "source_docs": ["Hong_2009_ScriptaMaterialia_Ultra-high-porosityzirconia.pdf"],
+    "excerpts": ["Ultra-high-porosity zirconia ceramics with interconnected pores were prepared by freezing zirconia/camphene slurries with solid loading ranging from 10 to 20 vol.%, followed by freeze-drying in air and subsequent heat treatment at 1500 °C for 2 h. All of the fabricated samples showed highly porous microstructures with moderate pores ranging from 20 to 50 μm in size. The porosity varied between 82% and 67%, while the compressive strength was significantly improved from 41 to 63 MPa. The bulk density, open porosity and closed porosity of sintered bodies were measured using the water displacement method based on the Archimedes principle. Microstructure of the sintered bodies was observed with scanning electron microscopy (SEM; FEI Sirion, Philips, Holland). To determine the unidirectional compression strength of ordered porous zirconia sintered bulks, cylinders 12 mm in diameter and 25–30 mm high were tested (Instron-5569, UK)."]
+  },
+  {
+    "category": "factual",
+    "question": "What was the pore size range observed in the porous zirconia ceramics fabricated by Hong et al. 2009 using freeze-casting?",
+    "reference_answer": "Hong et al. (2009) report that the freeze-cast zirconia ceramics exhibited moderate pores with sizes ranging from 20 to 50 μm. This pore size was maintained across samples with different solid loadings.",
+    "answer_keys": [
+      ["pores", "size"],
+      ["20", "50", "μm", "micrometers"]
+    ],
+    "evidence_any": ["All of the fabricated samples showed highly porous microstructures with moderate pores ranging from 20 to 50 μm in size"],
+    "source_docs": ["Hong_2009_ScriptaMaterialia_Ultra-high-porosityzirconia.pdf"],
+    "excerpts": ["Ultra-high-porosity zirconia ceramics with interconnected pores were prepared by freezing zirconia/camphene slurries with solid loading ranging from 10 to 20 vol.%, followed by freeze-drying in air and subsequent heat treatment at 1500 °C for 2 h. All of the fabricated samples showed highly porous microstructures with moderate pores ranging from 20 to 50 μm in size. The porosity varied between 82% and 67%, while the compressive strength was significantly improved from 41 to 63 MPa. Recent work by Arianpour et al. and others has focused on producing tailored porous structures. In this method, the ceramic slurry is normally prepared by ball-milling and then cast into the mold at a temperature below its freezing temperature (i.e. the solidification temperature of the molten vehicle)."]
+  },
+  {
+    "category": "factual",
+    "question": "At what temperature and for how long were the freeze-dried cast bodies sintered in the Hong et al. 2009 study?",
+    "reference_answer": "Hong et al. (2009) sintered the freeze-dried cast bodies at 1500°C with a ramping rate of 2°C/min for 2 hours.",
+    "answer_keys": [
+      ["sintered", "1500"],
+      ["2", "hour", "hours"]
+    ],
+    "evidence_any": ["the cast bodies were sintered at 1500 oC (ramping rate of 2 oC min 1) for 2 h"],
+    "source_docs": ["Hong_2009_ScriptaMaterialia_Ultra-high-porosityzirconia.pdf"],
+    "excerpts": ["After casting, the slurries quickly started to solidify and, typically within about 4 min, the solidification was complete, yielding a solid green body. After demolding, these green bodies were placed in an ambient atmosphere with an airflow rate of 0.02–0.05 m s −1 to sublime the frozen camphene from the green bodies. Judging from the weight change, the sublimation process typically finished in 24 h. During this freeze-drying process, negligible shrinkage was observed. After the freeze-drying process, the cast bodies were sintered at 1500 oC (ramping rate of 2 oC min −1) for 2 h. The bulk density, open porosity and closed porosity of sintered bodies were measured using the water displacement method based on the Archimedes principle."]
+  },
+  {
+    "category": "factual",
+    "question": "What freezing vehicle and composition were used in the freeze-casting process described by Hong et al. 2009 for producing porous zirconia?",
+    "reference_answer": "Hong et al. (2009) used camphene (C10H16) as the freezing vehicle. The zirconia/camphene slurries were prepared with zirconia contents of 10, 15, and 20 vol.%, with camphene serving as the medium that would be sublimed away during freeze-drying.",
+    "answer_keys": [
+      ["camphene", "C10H16"],
+      ["freezing", "vehicle", "freeze-casting"]
+    ],
+    "evidence_any": ["camphene (C10H16, Guangzhou Huangpu Chemical Factory, Guangzhou, China) was used as the freezing vehicle"],
+    "source_docs": ["Hong_2009_ScriptaMaterialia_Ultra-high-porosityzirconia.pdf"],
+    "excerpts": ["Commercially available yttria-stabilized zirconia doped with 5 mol.% Y2O3 (0.4 μm, Fanmeiya Powders Co. Ltd., Jiangxi, China) was used as the ceramic framework and camphene (C10H16, Guangzhou Huangpu Chemical Factory, Guangzhou, China) was used as the freezing vehicle. To produce stable ZrO2 suspensions in liquid camphene, we used an amine derivative of a fatty acid condensation polymer (Beijing Huadong Polymer Co. Ltd., Beijing, China) as a dispersant. Zirconia/camphene slurries with various zirconia contents (10, 15 and 20 vol.%) were prepared by ball-milling at 60 oC for 20 h."]
+  },
+  {
+    "category": "factual",
+    "question": "What was the yttria dopant concentration in the zirconia ceramic powder used by Hong et al. 2009?",
+    "reference_answer": "Hong et al. (2009) used yttria-stabilized zirconia doped with 5 mol.% Y2O3. The powder had a particle size of 0.4 μm and was sourced from Fanmeiya Powders Co. Ltd., Jiangxi, China.",
+    "answer_keys": [
+      ["yttria", "stabilized", "Y2O3"],
+      ["5", "mol", "doped"]
+    ],
+    "evidence_any": ["Commercially available yttria-stabilized zirconia doped with 5 mol.% Y2O3 (0.4 μm, Fanmeiya"],
+    "source_docs": ["Hong_2009_ScriptaMaterialia_Ultra-high-porosityzirconia.pdf"],
+    "excerpts": ["Commercially available yttria-stabilized zirconia doped with 5 mol.% Y2O3 (0.4 μm, Fanmeiya Powders Co. Ltd., Jiangxi, China) was used as the ceramic framework and camphene (C10H16, Guangzhou Huangpu Chemical Factory, Guangzhou, China) was used as the freezing vehicle. To produce stable ZrO2 suspensions in liquid camphene, we used an amine derivative of a fatty acid condensation polymer (Beijing Huadong Polymer Co. Ltd., Beijing, China) as a dispersant. Zirconia/camphene slurries with various zirconia contents (10, 15 and 20 vol.%) were prepared by ball-milling at 60 oC for 20 h. The prepared warm slurries were poured into polyethylene (PE) molds in cool EtOH environment (about 5 °C) to produce a disc 30 mm in diameter and 5 mm thick."]
+  },
+  {
+    "category": "factual",
+    "question": "In the Makurunje et al. 2017 study of Cf/C-SiC-TiC-TaC composites, what was the nominal heat flux and duration of the oxyacetylene flame test?",
+    "reference_answer": "Makurunje et al. (2017) exposed the Cf/C-SiC-TiC-TaC composite to an oxyacetylene flame shot of 7.5 s with a nominal heat flux of 4 MW/m2. This test was performed according to the ASTM E285-80 (2002) standard test method.",
+    "answer_keys": [
+      ["oxyacetylene", "flame", "test"],
+      ["7.5", "seconds"],
+      ["4", "MW/m2", "heat", "flux"]
+    ],
+    "evidence_any": ["An oxyacetylene flame shot of 7.5 s (4 MW/m2 nominal heat flux)"],
+    "source_docs": ["Makurunje_2017_EuropeanCeramicSociety_Self-generatingoxidation.pdf"],
+    "excerpts": ["The ablation/oxidation resistance of a carbon fibre (Cf)/carbon matrix (C)-SiC-TiC-TaC ceramic matrix composite (CMC) produced by melt infiltration of alloy into a Cf/C preform and tested in severely oxidising conditions was quantitatively determined and discussed. An oxyacetylene flame shot of 7.5 s (4 MW/m2 nominal heat flux), as well as oxidising conditions imposed by a radiant furnace in air at 1873 K up to 480 s were the selected testing conditions. Detailed post-test microstructure investigations of the oxidised/ablated infiltrated CMC samples, compared to unprotected CMCs tested in nominally identical conditions, enabled to establish an increase in ablation/oxidation resistance of one order of magnitude."]
+  },
+  {
+    "category": "factual",
+    "question": "What were the temperature and maximum exposure time used in the oxidation testing of Cf/C and Cf/C-STT composites by Makurunje et al. 2017?",
+    "reference_answer": "Makurunje et al. (2017) studied oxidation resistance in air at 1873 K for up to 480 s nominal exposure time using a radiant furnace. Samples were exposed for various durations: 60 s, 120 s, 240 s, and 480 s.",
+    "answer_keys": [
+      ["1873 K", "1873"],
+      ["oxidation", "air", "furnace"],
+      ["480", "exposure"]
+    ],
+    "evidence_any": ["oxidising conditions imposed by a radiant furnace in air at 1873 K up to 480 s"],
+    "source_docs": ["Makurunje_2017_EuropeanCeramicSociety_Self-generatingoxidation.pdf"],
+    "excerpts": ["The ablation/oxidation resistance of a carbon fibre (Cf)/carbon matrix (C)-SiC-TiC-TaC ceramic matrix composite (CMC) produced by melt infiltration of alloy into a Cf/C preform and tested in severely oxidising conditions was quantitatively determined and discussed. An oxyacetylene flame shot of 7.5 s (4 MW/m2 nominal heat flux), as well as oxidising conditions imposed by a radiant furnace in air at 1873 K up to 480 s were the selected testing conditions. Detailed post-test microstructure investigations of the oxidised/ablated infiltrated CMC samples, compared to unprotected CMCs tested in nominally identical conditions, enabled to establish an increase in ablation/oxidation resistance of one order of magnitude."]
+  },
+  {
+    "category": "factual",
+    "question": "What were the bulk densities of the Cf/C and Cf/C-STT composites reported by Makurunje et al. 2017?",
+    "reference_answer": "Makurunje et al. (2017) report that the uninfiltrated Cf/C composite had a bulk density of 1.54 g/cm3, while the Cf/C-STT composite with the infiltrated alloy achieved a bulk density of 2.83 g/cm3.",
+    "answer_keys": [
+      ["densities", "bulk", "g/cm3"],
+      ["1.54", "2.83"],
+      ["Cf/C", "composite"]
+    ],
+    "evidence_any": ["The Cf/C and Cf/C-STT composites had densities of 1.54 g/cm3 and 2.83 g/cm3, respectively"],
+    "source_docs": ["Makurunje_2017_EuropeanCeramicSociety_Self-generatingoxidation.pdf"],
+    "excerpts": ["A 66.7Si-17.9Ti-15.4Ta alloy powder (−40 μm particle size) was brought into contact with the Cf/C composite, and the two were heated in a spark plasma sintering (SPS) furnace in a vacuum range of 10–100 Pa up to 1973 K using a graphite crucible. The alloy, prepared from TaSi2 (1–5 μm nominal particle size) and TiSi2 (−40 μm nominal particle size) powders (Alfa Aesar, South Africa), was arc-melted from a mixture of 67 wt.% and 33 wt.%, respectively. The conditions actuated the melt infiltration of the alloy in the pores (21 v.%) of the Cf/C composite and the reaction of the alloy constituents with the carbon matrix in the preform to give the Cf/C-STT composite. The graphite crucible used was hBN-coated on the inside to prevent the reactive interference of the graphite with the alloy and the Cf/C preform. Discs were cut out of the prepared composites and had dimensions (±0.2 mm) of 20 mm diameter and 3 mm thickness. The Cf/C and Cf/C-STT composites had densities of 1.54 g/cm3 and 2.83 g/cm3, respectively."]
+  },
+  {
+    "category": "factual",
+    "question": "To what maximum temperature was the Cf/C composite heated during spark plasma sintering in the Makurunje et al. 2017 study?",
+    "reference_answer": "Makurunje et al. (2017) heated the Cf/C composite with the alloy powder in a spark plasma sintering (SPS) furnace to a maximum temperature of 1973 K in a vacuum range of 10–100 Pa. The alloy powder was 66.7Si-17.9Ti-15.4Ta (−40 μm particle size).",
+    "answer_keys": [
+      ["heated", "spark plasma sintering", "SPS"],
+      ["1973 K", "1973"],
+      ["vacuum", "pa"]
+    ],
+    "evidence_any": ["the two were heated in a spark plasma sintering (SPS) furnace in a vacuum range of 10–100 Pa up to 1973 K"],
+    "source_docs": ["Makurunje_2017_EuropeanCeramicSociety_Self-generatingoxidation.pdf"],
+    "excerpts": ["A 66.7Si-17.9Ti-15.4Ta alloy powder (−40 μm particle size) was brought into contact with the Cf/C composite, and the two were heated in a spark plasma sintering (SPS) furnace in a vacuum range of 10–100 Pa up to 1973 K using a graphite crucible. The alloy, prepared from TaSi2 (1–5 μm nominal particle size) and TiSi2 (−40 μm nominal particle size) powders (Alfa Aesar, South Africa), was arc-melted from a mixture of 67 wt.% and 33 wt.%, respectively. The conditions actuated the melt infiltration of the alloy in the pores (21 v.%) of the Cf/C composite and the reaction of the alloy constituents with the carbon matrix in the preform to give the Cf/C-STT composite. The graphite crucible used was hBN-coated on the inside to prevent the reactive interference of the graphite with the alloy and the Cf/C preform."]
+  },
+  {
+    "category": "factual",
+    "question": "What were the measured mass ablation rates for Cf/C and Cf/C-STT composites exposed to oxyacetylene flame for 7.5 s according to Makurunje et al. 2017?",
+    "reference_answer": "Makurunje et al. (2017) measured mass ablation rates (Rm) of 40.2 ± 0.1 mg/s for the unprotected Cf/C composite and 3.9 ± 0.1 mg/s for the Cf/C-STT composite during 7.5 s oxyacetylene flame exposure at 4 MW/m2 nominal heat flux. The Cf/C-STT composite showed approximately a ten-fold reduction in ablation rate.",
+    "answer_keys": [
+      ["mass ablation", "Rm", "mg/s"],
+      ["40.2", "3.9"],
+      ["Cf/C", "composite"]
+    ],
+    "evidence_any": ["Mass (Rm) and linear (Rl,max) ablation rates of Cf/C and Cf/C-STT composites exposed to the oxyacetylene flame for 7.5 s"],
+    "source_docs": ["Makurunje_2017_EuropeanCeramicSociety_Self-generatingoxidation.pdf"],
+    "excerpts": ["The 3D surface profile of the ablated discs was imaged using the Bruker Contour GT-K 3D optical microscope: the maximum depth determined was used to calculate the linear ablation rate (Rl) using standard formula. The compounds formed from the burning of the Cf/C-STT composite were characterised by XRD and SEM (mod. EVO60 EP ZEISS). Table 2. Mass (Rm) and linear (Rl,max) ablation rates of Cf/C and Cf/C-STT composites exposed to the oxyacetylene flame for 7.5 s, and the maximum crater depth (Dmax) estimated from the ablated 3D surface profile. Composite Rm (mg/s) Rl,max (μm/s) Dmax (mm) Cf/C 40.2 ± 0.1 377 ± 1 2.83 ± 0.01 Cf/C-STT 3.9 ± 0.1 2.2 ± 0.5 0.020 ± 0.005"]
+  },
+  {
+    "category": "factual",
+    "question": "By what factor did the mass loss of the Cf/C-STT composite differ from the unprotected Cf/C composite during oxidation testing at 1873 K in the Makurunje et al. 2017 study?",
+    "reference_answer": "Makurunje et al. (2017) found that the Cf/C-STT composite exhibited net mass loss approximately one order of magnitude lower than the unprotected Cf/C composite when tested in air at 1873 K. The SiC and (Ta,Ti)C ceramic matrix additions provided substantial protection against oxidative attack.",
+    "answer_keys": [
+      ["mass loss", "one order of magnitude"],
+      ["Cf/C-STT", "protection", "lower"],
+      ["oxidation", "1873"]
+    ],
+    "evidence_any": ["a net mass loss (Δm) about one order of magnitude lower than that of Cf/C composites"],
+    "source_docs": ["Makurunje_2017_EuropeanCeramicSociety_Self-generatingoxidation.pdf"],
+    "excerpts": ["The visual appearance of the Cf/C and Cf/C-STT composite discs after oxidation is displayed in Fig. 2. The beneficial influence of the addition of both SiC and (Ta,Ti)C in the matrix is more obvious in Fig. 3. Compared to the Cf/C-STT composites, the Cf/C composites suffered a severe mass loss as shown in the net mass loss vs (offset) exposure time plotted in Fig. 3. In the case of the Cf/C-STT composites a net mass loss (Δm) about one order of magnitude lower than that of Cf/C composites was systematically measured. The major efficacy of the presence of SiC and (Ta,Ti)C started taking place after about a nominal duration of 240 s."]
+  }
+]

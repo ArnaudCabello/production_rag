@@ -1,0 +1,307 @@
+[
+  {
+    "category": "factual",
+    "question": "In Zapata-Solvas 2018, what were the calculated activation energies for the 20 vol% SiC-HfB2 (HS20) composite at different temperature ranges during compressive creep testing?",
+    "reference_answer": "The activation energies for Zapata-Solvas 2018's HS20 composite were 242 kJ/mol in the temperature range 1500-1800°C and 334 kJ/mol in the range 1900-2000°C, indicating a change in the active deformation mechanism with increasing temperature.",
+    "answer_keys": [
+      [
+        "242",
+        "kJ/mol",
+        "1500-1800"
+      ],
+      [
+        "334",
+        "kJ/mol",
+        "1900-2000"
+      ]
+    ],
+    "evidence_any": [
+      "calculated activation energies are 242 and 334 kJ/mol in the tem"
+    ],
+    "source_docs": [
+      "Zapata-Solvas_2018_EuropeanCeramicSociety_Hightemperature.pdf"
+    ],
+    "excerpts": [
+      "If we consider the results observed here and previous available data [26,39,40,43], including the effect of 1 wt.% B in SiC, it could be concluded that B also has a negative effect on the high temperature mechanical behavior of MeB2 + SiC systems. Fig. 4, shows XRD patterns of HS20 external surfaces before and after deformation revealing that at temperatures higher than 1800 °C, the formation of HfB is detected at the surface. However, XRD from an internal surface in the bulk does not show formation of HfB at any temperature. Plastic deformation is a phenomenon controlled by the bulk, so this observation could be considered as a confirmation of the existence of a B flux from the surface towards the bulk. Volatilization of B is unlikely as HfB2 and B are stable in low vacuum atmospheres (∼10−2 Torr). The calculated activation energies are 242 and 334 kJ/mol in the temperature ranges 1500–1800°C and 1900–2000°C respectively, suggesting the activation of different deformation mechanisms as the stress exponent also changes from 3 to 1 in these same temperature ranges."
+    ]
+  },
+  {
+    "category": "factual",
+    "question": "What powder particle sizes and densities were used in Zapata-Solvas 2018 for the HfB2, SiC, and La2O3 starting materials in the HS20 and HS20La composites?",
+    "reference_answer": "In Zapata-Solvas 2018, HfB2 powder had d50 ~5.0 μm and ρ = 10.5 g/cm³, SiC powder (α-SiC) had d50 ~0.7 μm and ρ = 3.217 g/cm³, and La2O3 had d50 ~10 μm and ρ = 6.51 g/cm³.",
+    "answer_keys": [
+      [
+        "HfB2",
+        "5.0",
+        "μm",
+        "10.5"
+      ],
+      [
+        "SiC",
+        "0.7",
+        "μm",
+        "3.217"
+      ],
+      [
+        "La2O3",
+        "10",
+        "μm",
+        "6.51"
+      ]
+    ],
+    "evidence_any": [
+      "HfB2 powder (> 99%, d50 ∼ 5.0 μm, ρ = 10.5 g/cm3"
+    ],
+    "source_docs": [
+      "Zapata-Solvas_2018_EuropeanCeramicSociety_Hightemperature.pdf"
+    ],
+    "excerpts": [
+      "HfB2 powder (> 99%, d50 ∼ 5.0 μm, ρ = 10.5 g/cm3, Sigma Aldrich, Gillingham, UK), SiC powder (α-SiC, 99%, d50 ∼ 0.7 μm, ρ = 3.217 g/cm3, Good Fellow Chemicals, Huntingdon, UK) and La2O3 (> 99%, d50 ∼ 10 μm, ρ = 6.51 g/cm3, Fluka chemicals supplied through Sigma Aldrich, Steinheim, Germany) were used to form different UHTC compositions; HfB2 + 20 vol.% SiC (HS20) and HfB2 + 20 vol.% SiC + 2 wt.% La2O3 (HS20La). Ceramic powders were processed and then sintered using Spark Plasma Sintering (SPS) as described previously [10]."
+    ]
+  },
+  {
+    "category": "factual",
+    "question": "What is the thermal conductivity range reported for ZrB2 and HfB2 diborides in Zapata-Solvas 2018 at high temperatures?",
+    "reference_answer": "According to Zapata-Solvas 2018, ZrB2 and HfB2 exhibit higher thermal conductivity of approximately 100 W/(m K) at room temperature and greater than 50 W/(m K) at 1900°C, which is higher than their respective carbides (less than 40 W/(m K) from room temperature to 800°C).",
+    "answer_keys": [
+      [
+        "100",
+        "room",
+        "thermal conductivity"
+      ],
+      [
+        "50",
+        "1900",
+        "W/(m K)"
+      ]
+    ],
+    "evidence_any": [
+      "ZrB2 and HfB2 exhibit higher thermal conductivity (∼100 W/(m K))"
+    ],
+    "source_docs": [
+      "Zapata-Solvas_2018_EuropeanCeramicSociety_Hightemperature.pdf"
+    ],
+    "excerpts": [
+      "Me borides and carbides (Me = Zr or Hf) with melting points in excess of 3000°C are promising candidates for thermal protection systems (TPS) in hypersonic vehicles, including sharp-leading edges (SLE) and sharp-nose cones (SNC) [1,2], and belong to a family of materials termed ultra-high temperature ceramics (UHTCs). Ideally, UHTCs components for hypersonic applications have to maintain a stable structure under the operating conditions, which involve no phase transformations and no shape changes during operating conditions. No shape changes require high creep resistance and, e.g the components should deform no further than the elastic limit to be reusable. In addition, UHTCs components require a combination of properties at high temperatures, such as high temperature strength, oxidation resistance, with high thermal conductivity being particularly desirable to maximize thermal transport during exposure in high-temperature reactive environments [3]. Me borides possess a better combination of oxidation resistance and thermal conductivity than Me carbides and have been the subject of intense research over the last 15 years [4,5]. Moreover, ZrB2 and HfB2 exhibit higher thermal conductivity (∼100 W/(m K)) at room temperature (and > 50 W/(m K) at 1900 °C) [6] than their respective carbides (<40 W/(m K) from room temperature to 800 °C) [5]."
+    ]
+  },
+  {
+    "category": "factual",
+    "question": "In Zapata-Solvas 2018, what was the elastic modulus value used for HS20 when calculating thermal strain rates for hypersonic heating conditions?",
+    "reference_answer": "For Zapata-Solvas 2018's HS20 composite, an elastic modulus of approximately 500 GPa was used when estimating thermal strain rates related to heating rates of 200-1000°C/min for hypersonic conditions.",
+    "answer_keys": [
+      [
+        "500",
+        "GPa",
+        "elastic modulus"
+      ],
+      [
+        "thermal strain",
+        "heating rate"
+      ]
+    ],
+    "evidence_any": [
+      "at an elastic modulus of ∼500 GPa [4]"
+    ],
+    "source_docs": [
+      "Zapata-Solvas_2018_EuropeanCeramicSociety_Hightemperature.pdf"
+    ],
+    "excerpts": [
+      "The strain rate range studied was estimated, at a first approximation, as the thermal strain rate related to a heating rate in the range from 200 °C/min to 1000 °C/min, which could be a realistic heating rate range for hypersonic conditions, relating the thermal expansion to the thermal strain according to Eq. (2); ε̇ = α E ΔT/Δt, where α is the coefficient of thermal expansion (CTE), E the elastic modulus and ΔT/Δt the heating rate. Heating rates of 200 °C/min and 1000 °C/min correspond to thermal strain rates of 2.8 × 10−5 s−1 and 1.4 × 10−4 s−1, respectively, at an elastic modulus of ∼500 GPa [4] and CTE previously reported [6], which are in the range of interest for hypersonic applications."
+    ]
+  },
+  {
+    "category": "factual",
+    "question": "According to Zapata-Solvas 2018, what phase was detected on the external surface of HS20 samples at temperatures higher than 1800°C during compressive deformation?",
+    "reference_answer": "In Zapata-Solvas 2018, formation of HfB (hafnium monoboride) was detected on the external surface of HS20 samples at temperatures higher than 1800°C as revealed by X-ray diffraction analysis, although it was not observed in the internal bulk.",
+    "answer_keys": [
+      [
+        "HfB",
+        "formation",
+        "1800"
+      ],
+      [
+        "surface",
+        "external",
+        "detected"
+      ]
+    ],
+    "evidence_any": [
+      "at temperatures higher than 1800 °C, the formation of HfB is detected"
+    ],
+    "source_docs": [
+      "Zapata-Solvas_2018_EuropeanCeramicSociety_Hightemperature.pdf"
+    ],
+    "excerpts": [
+      "If we consider the results observed here and previous available data [26,39,40,43], including the effect of 1 wt.% B in SiC, it could be concluded that B also has a negative effect on the high temperature mechanical behavior of MeB2 + SiC systems. Fig. 4, shows XRD patterns of HS20 external surfaces before and after deformation revealing that at temperatures higher than 1800 °C, the formation of HfB is detected at the surface. However, XRD from an internal surface in the bulk does not show formation of HfB at any temperature. Plastic deformation is a phenomenon controlled by the bulk, so this observation could be considered as a confirmation of the existence of a B flux from the surface towards the bulk."
+    ]
+  },
+  {
+    "category": "factual",
+    "question": "In Zapata-Solvas 2018, what maximum value of n in SiBn particles was observed in HS20La (HfB2+20vol%SiC+2wt%La2O3) after deformation at 2000°C?",
+    "reference_answer": "In Zapata-Solvas 2018, SiBn particles with n=12 were detected in HS20La after deformation at 2000°C, with some particles containing minor amounts of La, indicating that La played a role in forming new SiBn phases during high-temperature deformation.",
+    "answer_keys": [
+      [
+        "SiBn",
+        "n=12",
+        "2000"
+      ],
+      [
+        "HS20La",
+        "deformation",
+        "La"
+      ]
+    ],
+    "evidence_any": [
+      "the maximum n in HS20 is 2 whereas it is 12 for HS20La"
+    ],
+    "source_docs": [
+      "Zapata-Solvas_2018_EuropeanCeramicSociety_Hightemperature.pdf"
+    ],
+    "excerpts": [
+      "In a previous study, La2O3 particles were observed to be located next to SiC particles [19] which could have an influence on the SiC disociation as this phenomena was not observed in HS20. However, after deformation at 2000 °C there was no O in what were originally La2O3 particles as shown in Fig. 10. The remnant La2O3 particle contains La-Si-Hf-B after deformation, which suggests that O might react with C from SiC particles. Also, the stoichiometry of the SiBn particles is different in HS20 than HS20La: the maximum n in HS20 is 2 whereas it is 12 for HS20La. In addition, SiBn particles with n > 2 contain minor amounts of La, indicating that La plays a role in the formation of new SiBn phases during deformation, which are not formed otherwise."
+    ]
+  },
+  {
+    "category": "factual",
+    "question": "In Dai et al. 2022, what material composition was selected for the ZrC-SiC functionally graded UHTC (FG-UHTC) heat-resistant outer layer in the multilayer thermal protection system?",
+    "reference_answer": "In Dai et al. 2022, a ZrC-SiC functionally graded UHTC was used as the outer heat-resistant layer for the multilayer thermal protection system, chosen for its remarkable high temperature performance and excellent oxidation resistance.",
+    "answer_keys": [
+      [
+        "ZrC-SiC",
+        "FG-UHTC"
+      ],
+      [
+        "heat resistant",
+        "outer layer"
+      ],
+      [
+        "thermal protection",
+        "oxidation resistance"
+      ]
+    ],
+    "evidence_any": [
+      "theoretical model to study the thermal and mechanical behaviors of TPS"
+    ],
+    "source_docs": [
+      "Dai_2022_AerospaceScienceandTechnology_Thermo-mechanicalanalysis.pdf"
+    ],
+    "excerpts": [
+      "On the whole, most of the researches on FG-UHTCs focus on the fabrication methods and basic material properties. Whereas, performances of the material applying on a certain structure and the effect of material parameters on the responses of the structure are sometimes more important, especially for design and analysis of HFVs. In this paper, theoretical model to study the thermal and mechanical behaviors of TPS structures with ZrC-SiC FG-UHTC, which attracts considerable interest in recent years due to its combination of remarkable high temperature performance and excellent oxidation resistance [24]–[26], is established. Influences of component volume fractions, porosity as well as their gradient distribution parameters on the thermo-mechanical responses of the whole structure are studied by numerical examples."
+    ]
+  },
+  {
+    "category": "factual",
+    "question": "What were the constant material property parameters (thermal conductivity, density, elastic modulus) used for SiC ceramic in the verification example in Dai et al. 2022?",
+    "reference_answer": "In Dai et al. 2022's verification example, SiC ceramic had thermal conductivity λ = 60 W/(m K), density ρ = 2.4 g/cm³, elastic modulus E = 380 GPa, and Poisson's ratio ν = 0.18.",
+    "answer_keys": [
+      [
+        "60",
+        "W/(m K)",
+        "SiC"
+      ],
+      [
+        "2.4",
+        "g/cm³",
+        "density"
+      ],
+      [
+        "380",
+        "GPa",
+        "elastic"
+      ]
+    ],
+    "evidence_any": [
+      "SiC ceramic\n\nSiC aerogel\n\nTC4\n\nλ [W/(m K)]\n\n60"
+    ],
+    "source_docs": [
+      "Dai_2022_AerospaceScienceandTechnology_Thermo-mechanicalanalysis.pdf"
+    ],
+    "excerpts": [
+      "To verify accuracy of the numeric process used in this paper, a multilayer hollow cylinder with constant property parameters under a constant heat flux is investigated, and the results are compared with those achieved by ABAQUS. Geometric sizes of the cylinder are set as R₀ = 500 mm, hc = 8 mm, ha = 20 mm and hm = 5 mm. The heat flux exerted on the outer surface is qw = 300 kW/m², the rate of thermal radiation ε₀ = 0.8 and the Boltzmann constant σ₀ = 5.67×10⁻⁸ W/(m² K⁴). The outer temperature far away is assumed to be T∞ = 4 K. On the inner surface, adiabatic boundary condition as well as pressure of one atmosphere P₀ = 101.325 kPa are applied. Constant property parameters used in this verification example are listed in Table 1.\n\nTable 1: Constant property parameters used for verification example.\n\nSiC ceramic | λ [W/(m K)]: 60 | ρ [g/cm³]: 2.4 | c [J/(g K)]: 0.87 | α [10⁻⁶/K]: 4.7 | E [GPa]: 380 | ν: 0.18"
+    ]
+  },
+  {
+    "category": "factual",
+    "question": "In Dai et al. 2022, what constant heat flux value was applied to the outer surface in the verification example to test the numerical accuracy of the DQM and Newmark method solution?",
+    "reference_answer": "In Dai et al. 2022's verification example, a constant heat flux of 300 kW/m² was applied to the outer surface of the multilayer hollow cylinder structure to validate the accuracy of the differential quadrature method (DQM) and Newmark method numerical solution approach.",
+    "answer_keys": [
+      [
+        "300",
+        "kW/m²",
+        "heat flux"
+      ],
+      [
+        "constant",
+        "verification",
+        "DQM"
+      ]
+    ],
+    "evidence_any": [
+      "The heat flux exerted on the outer surface is qw = 300 kW/m²"
+    ],
+    "source_docs": [
+      "Dai_2022_AerospaceScienceandTechnology_Thermo-mechanicalanalysis.pdf"
+    ],
+    "excerpts": [
+      "To verify accuracy of the numeric process used in this paper, a multilayer hollow cylinder with constant property parameters under a constant heat flux is investigated, and the results are compared with those achieved by ABAQUS. Geometric sizes of the cylinder are set as R₀ = 500 mm, hc = 8 mm, ha = 20 mm and hm = 5 mm. The heat flux exerted on the outer surface is qw = 300 kW/m², the rate of thermal radiation ε₀ = 0.8 and the Boltzmann constant σ₀ = 5.67×10⁻⁸ W/(m² K⁴). The outer temperature far away is assumed to be T∞ = 4 K. On the inner surface, adiabatic boundary condition as well as pressure of one atmosphere P₀ = 101.325 kPa are applied."
+    ]
+  },
+  {
+    "category": "factual",
+    "question": "According to Dai et al. 2022, what multilayer structure was used for the thermal protection system (TPS) of the cylindrical cabin, including the materials of each layer?",
+    "reference_answer": "In Dai et al. 2022, the multilayer thermal protection system (TPS) consisted of three layers: an FG-UHTC (functionally graded ultrahigh-temperature ceramic) outer layer for heat resistance, a SiC aerogel middle layer for thermal insulation, and a TC4 inner layer for load bearing.",
+    "answer_keys": [
+      [
+        "FG-UHTC",
+        "heat resistance",
+        "outer"
+      ],
+      [
+        "SiC aerogel",
+        "insulation",
+        "middle"
+      ],
+      [
+        "TC4",
+        "load bearing",
+        "inner"
+      ]
+    ],
+    "evidence_any": [
+      "FG-UHTC) outer layer for heat resistance, a SiC aerogel middle layer"
+    ],
+    "source_docs": [
+      "Dai_2022_AerospaceScienceandTechnology_Thermo-mechanicalanalysis.pdf"
+    ],
+    "excerpts": [
+      "In this study, a multilayer thermal protection system (TPS) of hollow cylindrical structure for hypersonic flight vehicles (HFVs) is modeled and its thermo-mechanical responses are investigated. The multilayer structure has an ultrahigh-temperature ceramic (UHTC) or a functionally graded ultrahigh-temperature ceramic (FG-UHTC) outer layer for heat resistance, a SiC aerogel middle layer for thermal insulation, and a TC4 inner layer for load bearing. Temperature dependent material properties as well as time dependent boundary conditions are considered. Governing equations of the temperature and displacement fields are carried out and thermo-mechanical responses of the structure, especially of the heat resistance outer layer, are calculated by the differential quadrature method (DQM) and Newmark method."
+    ]
+  },
+  {
+    "category": "factual",
+    "question": "In Dai et al. 2022, what volume fraction equations were used to describe the gradient distributions of ZrC nanoparticles and micro pores in the FG-UHTC composite?",
+    "reference_answer": "In Dai et al. 2022, power law expressions were used to characterize the gradient distributions of ZrC and micro pores: V_ZrC(r) = V₀_ZrC[1-(R₀+h-r)/h_c]^n_ZrC and V_p(r) = V₀_p[(R₀+h-r)/h_c]^n_p, allowing independent control of component gradation in the radial direction.",
+    "answer_keys": [
+      [
+        "power law",
+        "gradient",
+        "distribution"
+      ],
+      [
+        "V_ZrC",
+        "V_p",
+        "radial"
+      ]
+    ],
+    "evidence_any": [
+      "power law can be used to characterize this kind of gradient distributions"
+    ],
+    "source_docs": [
+      "Dai_2022_AerospaceScienceandTechnology_Thermo-mechanicalanalysis.pdf"
+    ],
+    "excerpts": [
+      "To meet the requirements of both ablation resistance and lightweight, the volume fraction of ZrC nanoparticles should be relatively large near the outer surface of hc layer while the one of micro pores should be relatively small in this area. The following expressions obeying power law can be used to characterize this kind of gradient distributions. V_ZrC(r) = V₀_ZrC[1-(R₀+h-r)/h_c]^n_ZrC (R₀+h-h_c ≤ r ≤ R₀+h) and V_p(r) = V₀_p[(R₀+h-r)/h_c]^n_p (R₀+h-h_c ≤ r ≤ R₀+h) where h = h_m + h_a + h_c."
+    ]
+  }
+]
