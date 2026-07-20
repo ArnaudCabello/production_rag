@@ -1,0 +1,101 @@
+[
+  {
+    "category": "factual",
+    "question": "In Khoeini et al. 2015 study on ZrB2-SiC composites with pressureless sintering, what maximum relative density was achieved in the ZS10C2 composite sample?",
+    "reference_answer": "The maximum relative density of 99.65% was achieved in the ZS10C2 composite sample, which was sintered at 2000°C for 2 hours after holding at 1650°C for 2 hours. This represented among the highest densities obtained through pressureless sintering in that study.",
+    "answer_keys": [["99.65", "density"], ["zs10c2", "maximum"], ["sintered"]],
+    "evidence_any": ["maximum relative density of 99.65% has been achieved in ZS10C2 composite"],
+    "source_docs": ["Khoeini_2015_CeramicsInternational_Comprehensivestudy.pdf"],
+    "excerpts": ["In this study, maximum relative density of 99.65% has been achieved in ZS10C2 composite, which was sintered at 2000 1C for 2 h after holding at 1650 1C for 2 h. The values of relative densities obtained in this study are comparable with those of the pressure-less sintered ZrB2–SiC composites, reported in previous studies. Densification of ZrB2–SiC samples prepared via a pressure-less sintering technique was also investigated. It is found that a borosilicate liquid phase present on the particle surfaces has to be eliminated before the onset of coarsening. It seems to us that B2O3 on ZrB2 and SiO2 on SiC react to form a borosilicate liquid which promote coarsening of the ZrB2 grains. Carbon additions along with C combined to react with B2O3, SiO2 and remove the borosilicate liquid, thus allowing the system to be sintered nearing up to full density at temperatures from 1950 to 2000 1C. This process might be the main reason that the produced ZrB2–SiC composites showed mechanical properties similar to those obtained from hot pressing studies."]
+  },
+  {
+    "category": "factual",
+    "question": "According to Khoeini et al. 2015, what is the melting temperature of zirconium diboride (ZrB2)?",
+    "reference_answer": "Zirconium diboride (ZrB2) has a melting temperature of 3250°C. This ultra-high melting temperature is one of the key characteristics that makes ZrB2 of interest for high-temperature structural applications.",
+    "answer_keys": [["3250", "melting"], ["zrb2", "ultra-high"], ["temperature"]],
+    "evidence_any": ["Zirconium diboride (ZrB2) an ultra-high temperature ceramic with melting temperature of 3250 1C"],
+    "source_docs": ["Khoeini_2015_CeramicsInternational_Comprehensivestudy.pdf"],
+    "excerpts": ["Zirconium diboride (ZrB2) an ultra-high temperature ceramic with melting temperature of 3250 1C is of interest due to its high electrical and thermal conductivities as well as moderate density. The density of ZrB2 is lower than that of niobium-based refractory alloys which requires protection against oxidation and ablation for aerospace applications. With addition of SiC as reinforcement to ZrB2, its density and thermal expansion coefficients are further reduced whereas thermal conductivity, oxidation and ablation resistance as well as ability to retain strength at elevated temperature are significantly improved. This unique combination of properties makes the ZrB2 based materials attractive for various potential high-temperature thermal and structural applications at temperatures up to 2000 1C."]
+  },
+  {
+    "category": "factual",
+    "question": "In the Khoeini et al. 2015 pressureless sintering study, at what temperature was the maximum relative density achieved for ZrB2-SiC composites?",
+    "reference_answer": "The optimum temperature to achieve maximum relative density by pressureless sintering of ZrB2-SiC composites was 2000°C. Sintering at temperatures of 1800°C or 2100°C resulted in lower relative densities compared to 2000°C.",
+    "answer_keys": [["2000", "temperature"], ["optimum", "maximum"], ["pressureless"]],
+    "evidence_any": ["optimum temperature to achieve maximum relative density by pressureless sintering is 2000 1C"],
+    "source_docs": ["Khoeini_2015_CeramicsInternational_Comprehensivestudy.pdf"],
+    "excerpts": ["The variations of relative density of the sintered samples (as function of the sintering temperature and SiC volume fraction) are shown in Table 1 and Fig. 2. Fig. 3 indicates that the optimum temperature to achieve maximum relative density by pressureless sintering is 2000 1C, while the values of relative densities of the composites sintered at 1800–2100 1C have been found to be less. However, the results of an earlier study on ZrB2 (1–10 wt%) SiC composites with 1–2 wt% C have not shown significant changes. From the results shown in Fig. 5(b), the relative densities of the ZrB2–SiC composites are found to be about 99.52% of the corresponding theoretical calculated densities, while that of the ZBC is only ≈88%."]
+  },
+  {
+    "category": "factual",
+    "question": "What were the amounts of open-type and closed-type porosities measured in the Nayebi et al. 2016 ZrB2-40 vol% B4C composite?",
+    "reference_answer": "In the Nayebi et al. 2016 study, the amounts of open-type and closed-type porosities in the microstructure of the ZrB2-40 vol% B4C composite were calculated to be 24% and 7%, respectively. These two types of porosities were initiated from different factors during the hot pressing process.",
+    "answer_keys": [["24", "open"], ["7", "closed"], ["porosity", "nayebi"]],
+    "evidence_any": ["The amounts of open-type and closed-type porosities in the microstructure of ZrB2–40 vol% B4C ceramic composite were calculated to be ≈24% and 7%, respectively."],
+    "source_docs": ["Nayebi_2016_CeramicsInternational_Interfacialphenomena.pdf"],
+    "excerpts": ["Fig. 1 shows the SEM micrographs of fracture surface of the sample. The amounts of open-type and closed-type porosities in the microstructure of ZrB2–40 vol% B4C ceramic composite were calculated to be ≈24% and 7%, respectively. Although two types of porosities are presented in the structure of the discussed sample, it appears that they have been initiated from different motivators. The formation of closed pores can be related to the production of gaseous phases which release during the sintering process due to the reduction of surface oxide impurities of ZrB2 (zirconia and boria) by B4C (or free carbon existence). The presence of open channels is perhaps due to the intensive dissimilarity in the particle size of the starting raw materials or gas-caused gaps between adjacent particles which disturb the sinterability."]
+  },
+  {
+    "category": "factual",
+    "question": "According to Nayebi et al. 2016, what were the average particle sizes of the ZrB2 and B4C powders used in the hot pressing process?",
+    "reference_answer": "In the Nayebi et al. 2016 study, commercially available ZrB2 powder had an average particle size of 2 micrometers from Leung Hi-tech Co., China, while B4C powder had an average particle size of 20 micrometers from Mudanjiang Jingangzuan Boron Carbide Co., China.",
+    "answer_keys": [["2", "zrb2"], ["20", "b4c"], ["micrometers", "particle", "size"]],
+    "evidence_any": ["ZrB2 powder with an average particle size of 2 μm (Leung Hi-tech Co., China) and B4C powder with an average particle size of 20 μm"],
+    "source_docs": ["Nayebi_2016_CeramicsInternational_Interfacialphenomena.pdf"],
+    "excerpts": ["In this research, commercially available ZrB2 powder with an average particle size of 2 μm (Leung Hi-tech Co., China) and B4C powder with an average particle size of 20 μm (Mudanjiang Jingangzuan Boron Carbide Co., China) were purchased and used as raw materials. Such relatively large B4C particles were applied to promote the formation of open porosities in as-sintered sample. ZrB2 powder was dry-mixed with 40vol% B4C powder by ball mixing at 120 rpm for 60 min in zirconia media. Then the sample with a diameter of 25 mm and a thickness of 5 mm was loaded into a graphite die, which was sprayed with boron nitride (BN) and lined with flexible graphite foils."]
+  },
+  {
+    "category": "factual",
+    "question": "In the Nayebi et al. 2016 hot pressing study, what temperature and pressure conditions were used to sinter the ZrB2-B4C composite?",
+    "reference_answer": "The Nayebi et al. 2016 study used hot pressing at 1800°C for 30 minutes under an external pressure of 12 MPa to sinter the ZrB2-40 vol% B4C composite. The sample was initially heated at 15°C/min to 1000°C, held for 30 minutes, then heated at 12°C/min to reach 1800°C.",
+    "answer_keys": [["1800", "temperature"], ["12", "mpa", "pressure"], ["hot", "pressing"]],
+    "evidence_any": ["An external pressure of 12 MPa was applied to the sample, for 30 min, after the temperature reached 1800 °C."],
+    "source_docs": ["Nayebi_2016_CeramicsInternational_Interfacialphenomena.pdf"],
+    "excerpts": ["Sintering process was performed in a vacuum hot pressing furnace (Shenyang Weitai Science & Technology Development Co. Ltd., China). The powder mixture was initially heated at a rate of 15 °C/min up to 1000 °C and then the temperature was kept at 1000 °C for 30min. Finally the sample was heated at a rate of 12 °C/min up to 1800 °C. An external pressure of 12 MPa was applied to the sample, for 30 min, after the temperature reached 1800 °C. The sintering furnace was cooled down to the room temperature in a normal path gradually."]
+  },
+  {
+    "category": "factual",
+    "question": "What microhardness value was achieved for the ZS10C composite in Khoeini et al. 2015 when sintered at 2000°C for 2 hours?",
+    "reference_answer": "The ZS10C composite sintered at 2000°C for 2 hours achieved a microhardness value of 4502 Hv (Vickers hardness). This was significantly higher than the values recorded for the same composite sintered at 1800°C (3520 Hv) or 2100°C (3860 Hv).",
+    "answer_keys": [["4502", "hv"], ["zs10c", "microhardness"], ["2000"]],
+    "evidence_any": ["the average values of microhardness obtained for the ZS10C composite sintered for 2h at 1800 1C and 2100 1C are 3520Hv and 3860Hv, respectively"],
+    "source_docs": ["Khoeini_2015_CeramicsInternational_Comprehensivestudy.pdf"],
+    "excerpts": ["As shown in Fig. 10, the average microhardness of the composites sintered for 2 h increases by 55.5%, as their SiC content is increased from1 to 10 wt%, which is attributed to the combined effect of higher hardness of SiC than that of the ZrB2 matrix, as well as decrease in ZrB2 grain size and increased densification with increasing SiC content. The increase in ZrB2 grain size is also expected to cause increase in the amount of microcracking due to internal residual stresses generated during cooling from the processing temperature because of thermal expansion anisotropy between different crystallographic directions. The results in Figs. 9 and 10 showed that the average values of microhardness obtained for the ZS10C composite sintered for 2h at 1800 1C and 2100 1C are 3520Hv and 3860Hv, respectively, both of which are significantly lower than the value recorded for the composite sintered for same duration at 2000 1C (4502 Hv)."]
+  },
+  {
+    "category": "factual",
+    "question": "According to Nayebi et al. 2016, what liquid-phase compound forms at the sintering temperature of 1800°C in the ZrB2-B4C system?",
+    "reference_answer": "Diboron trioxide (B2O3) is the only liquid-state phase that can be formed at the sintering temperature of 1800°C in the ZrB2-B4C system, and it commonly solidifies as an amorphous phase. This amorphous B2O3 phase is detected on the surfaces of B4C particles and at ZrB2/B4C interfaces.",
+    "answer_keys": [["diboron trioxide", "b2o3"], ["liquid", "amorphous"], ["1800"]],
+    "evidence_any": ["diboron trioxide is the only liquid-state phase which can be formed at sintering temperature of 1800 °C in ZrB2–B4C system"],
+    "source_docs": ["Nayebi_2016_CeramicsInternational_Interfacialphenomena.pdf"],
+    "excerpts": ["It should be noted that diboron trioxide is the only liquid-state phase which can be formed at sintering temperature of 1800 °C in ZrB2–B4C system and commonly solidifies as amorphous phase. Therefore, it is anticipated to detect the feature of amorphous B2O3 phase on the surface of B4C particles in closer views. The detail explanation of this expectation is discussed later in TEM nanographs investigation section. Fig. 2 presents the XRD pattern of as-sintered ZrB2–40 vol% B4C composite. Apparently, the main detected crystalline phases are ZrB2 and B4C; however, the traces of ZrO2 and graphite are also perceivable. Moreover, no detectable sign of amorphous phase is observed in XRD pattern."]
+  },
+  {
+    "category": "factual",
+    "question": "In the Khoeini et al. 2015 study, how much did the microhardness of the composites increase as the SiC content was increased from 1 to 10 wt%?",
+    "reference_answer": "The microhardness of the composites sintered for 2 hours increased by 55.5% as their SiC content was increased from 1 to 10 wt%. This increase was attributed to the combined effects of SiC's higher hardness compared to the ZrB2 matrix, decreased ZrB2 grain size, and increased densification with higher SiC content.",
+    "answer_keys": [["55.5", "increase"], ["microhardness", "sic"], ["10 wt", "1 wt"]],
+    "evidence_any": ["the average microhardness of the composites sintered for 2 h increases by 55.5%, as their SiC content is increased from1 to 10 wt%"],
+    "source_docs": ["Khoeini_2015_CeramicsInternational_Comprehensivestudy.pdf"],
+    "excerpts": ["As shown in Fig. 10, the average microhardness of the composites sintered for 2 h increases by 55.5%, as their SiC content is increased from1 to 10 wt%, which is attributed to the combined effect of higher hardness of SiC than that of the ZrB2 matrix, as well as decrease in ZrB2 grain size and increased densification with increasing SiC content. The increase in ZrB2 grain size is also expected to cause increase in the amount of microcracking due to internal residual stresses generated during cooling from the processing temperature because of thermal expansion anisotropy between different crystallographic directions."]
+  },
+  {
+    "category": "factual",
+    "question": "What chemical reaction did Nayebi et al. 2016 propose occurs at the ZrB2/B4C interfaces to form submicron ZrB2 particles?",
+    "reference_answer": "Nayebi et al. 2016 proposed the reaction: 7ZrO2 + 5B4C → 7ZrB2 + 3B2O3(l) + 5CO(g). This reaction produces submicron ZrB2 particles that can float in the liquid boria (B2O3), potentially migrating from the ZrB2/B4C grain interfaces to other regions in the composite.",
+    "answer_keys": [["7zro2", "5b4c"], ["7zrb2", "3b2o3"], ["submicron", "particles"]],
+    "evidence_any": ["7ZrO2 þ 5B4C - 7ZrB2 þ 3B2O3 (l) þ 5CO (g)"],
+    "source_docs": ["Nayebi_2016_CeramicsInternational_Interfacialphenomena.pdf"],
+    "excerpts": ["Some submicron ZrB2 particles (marked) are formed on the surface of the main zirconium diboride grains in a bed of morphologically amorphous phase. The formation of such tiny particles is verified by the diffraction (DF) pattern (inset of Fig. 4) and may be a result of the following chemical reaction: 7ZrO2 þ 5B4C - 7ZrB2 þ 3B2O3 (l) þ 5CO (g) (1) As it can be paraphrased from Eq. (1), the formed submicron ZrB2 particles can float in liquid boria. It can be considered as a reason for some submicron ZrB2 particles moving toward regions other than interfaces of ZrB2/B4C grains."]
+  },
+  {
+    "category": "factual",
+    "question": "According to Nayebi et al. 2016, what mechanisms control the sintering process in the hot-pressed ZrB2-B4C composite?",
+    "reference_answer": "Nayebi et al. 2016 identified that the sintering process in hot-pressed ZrB2-B4C composite is controlled by a combination of interfacial phenomena including: formation of liquid phase at interfaces, plastic deformation of ZrB2 particles, and diffusion of carbon and/or boron atoms from B4C toward ZrB2 particles. These mechanisms work together to promote densification despite the presence of significant porosity.",
+    "answer_keys": [["liquid", "phase", "plastic", "deformation"], ["diffusion", "carbon", "boron"], ["sintering", "mechanisms"]],
+    "evidence_any": ["the sintering process is controlled by a combination of interfacial phenomena including the formation of liquid phase"],
+    "source_docs": ["Nayebi_2016_CeramicsInternational_Interfacialphenomena.pdf"],
+    "excerpts": ["Porous ZrB2–40vol% B4C composite were fabricated via hot pressing at 1800 °C for 30 min under a pressure of 12 MPa. The interfacial and microstructural characteristics of the composite were investigated by SEM, TEM and XRD analyses in order to understand the role of interfacial phenomena in progression of sintering process. The results revealed that the sintering process is controlled by a combination of interfacial phenomena including the formation of liquid phase at the interfaces, plastic deformation of the particles and the diffusion of carbon and/or boron atoms from B4C toward ZrB2 particles. Two types of porosity in the aforementioned composite and their roles in sintering process were also discussed. In addition, a summary of interfacial phenomena were depicted by a schematic model to simply present the investigation discussion."]
+  }
+]

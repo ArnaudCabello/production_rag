@@ -1,0 +1,110 @@
+[
+  {
+    "category": "factual",
+    "question": "In Ren et al. 2017's study on HfC nanowire-reinforced coatings, what was the estimated length of the synthesized HfC nanowires formed on the SiC coating surface?",
+    "reference_answer": "According to Ren et al. (2017), the HfC nanowires synthesized on the SiC coating via chemical vapor deposition formed a porous layer with lengths of approximately several hundred micrometers. The high-magnification image revealed that the nanowire diameter was 200–500 nm.",
+    "answer_keys": [["several hundred micrometers"], ["nanowires", "length"]],
+    "evidence_any": ["Plentiful long and straight nanowires form a porous layer, whose length is about several hundred micrometers."],
+    "source_docs": ["Ren_2017_SurfaceandCoatingsTechnology_UHTCcoating.pdf"],
+    "excerpts": ["Fig. 2(a) exhibits the surface morphology of the deposition products on SiC coating. Plentiful long and straight nanowires form a porous layer, whose length is about several hundred micrometers. The orientations of these nanowires are different and the distribution of theses nanowires is uniform. The high-magnification image (Fig. 2(b)) exhibits that the diameter of these nanowires is 200–500 nm. Fig. 2(c) is the fracture cross-section image of the nanowire coated sample, from which it can be seen that a nanowire layer is uniformly covered on SiC coating, whose thickness is about 60–130 μm. It also can be seen that the nanowire layer is porous and the orientation of nanowires is random."]
+  },
+  {
+    "category": "factual",
+    "question": "What was the mass ablation rate of the Ren 2017 ZrB2-SiC/SiC multilayer coating with HfC nanowires after 90 seconds of oxyacetylene torch ablation?",
+    "reference_answer": "In Ren et al. (2017), after 90 seconds of oxyacetylene torch ablation, the HfC nanowire-reinforced ZrB2-SiC coating showed a mass ablation rate of −0.12 mg/s, indicating mass gain rather than loss compared to the coating without nanowires which showed a mass ablation rate of 0.20 mg/s.",
+    "answer_keys": [["−0.12 mg/s"], ["ablation rate", "nanowires"]],
+    "evidence_any": ["the mass ablation rate of the coated sample with HfC nanowires was −0.12 mg/s"],
+    "source_docs": ["Ren_2017_SurfaceandCoatingsTechnology_UHTCcoating.pdf"],
+    "excerpts": ["Ablation performance of the coatings was measured under oxyacetylene flame. After being ablated for 90 s, the mass ablation rate of pure ZrB2-SiC/SiC coated C/C sample is 0.20 mg/s. While, the mass ablation rate of the coated sample with HfC nanowires is positive (−0.12 mg/s). During ablation, on the one hand, the coating would gain weight because of its oxidation; on the other hand, mechanical denudation and volatilization of oxide layer would lead to weight loss. By incorporating nanowires, the weight gain of the sample is predominant, so the mass ablation rate is minus. Above results imply that HfC nanowires could inhibit the oxidized layer being denudated, which could reduce the mass loss of the oxide layer."]
+  },
+  {
+    "category": "factual",
+    "question": "In the Ren et al. 2017 CVD synthesis of HfC nanowires, what was the temperature range maintained in the high-temperature deposition chamber?",
+    "reference_answer": "Ren et al. (2017) synthesized HfC nanowires via chemical vapor deposition by heating the high-temperature chamber to 1373–1473 K and maintaining that temperature for 3 hours to achieve nanowire formation on the SiC-coated C/C composite substrates.",
+    "answer_keys": [["1373–1473 K"], ["temperature", "deposition"]],
+    "evidence_any": ["The high-temperature deposition chamber was heated to 1373–1473 K and maintained for 3 h."],
+    "source_docs": ["Ren_2017_SurfaceandCoatingsTechnology_UHTCcoating.pdf"],
+    "excerpts": ["Then, HfC nanowires were synthesized on SiC coating by chemical vapor deposition (CVD). The SiC-coated C/C substrates were covered with catalyst particles (Ni(NO3)2) before deposition through means of soaking. HfCl4 powders acting as hafnium source were put in the low-temperature evaporation chamber; CH4, H2 and Ar served as carbon source, reducing gas and inert gas, respectively. The high-temperature deposition chamber was heated to 1373–1473 K and maintained for 3 h. The deposition pressure was set at 10–20 KPa. The flow rates of CH4,H2 and Ar were 200–300, 1000–2000 and 400–800 mL/min, respectively. After deposition, HfC nanowires were obtained on SiC coating."]
+  },
+  {
+    "category": "factual",
+    "question": "According to Ren et al. 2017, what was the percentage improvement in fracture toughness of the ZrB2-SiC coating after incorporating HfC nanowires?",
+    "reference_answer": "Ren et al. (2017) reported that incorporating HfC nanowires into the ZrB2-SiC coating resulted in a 48% increase in fracture toughness, increasing from 13.02 to 19.27 MPa·m^1/2. The hardness increased by 17.62% and elastic modulus by 14.13%.",
+    "answer_keys": [["48%"], ["fracture toughness", "increase"]],
+    "evidence_any": ["By adding HfC nanowires, the fracture toughness of the sprayed coating increases 48%"],
+    "source_docs": ["Ren_2017_SurfaceandCoatingsTechnology_UHTCcoating.pdf"],
+    "excerpts": ["Fig. 6 shows the load-displacement curves of the coatings during nano-indentation test. With HfC nanowires, the maximum load in the curve is larger, and that the slope of unloading part in the curve is also larger. This implies that HfC nanowires could increase both the hardness and elastic modulus of the ZrB2-SiC coating. As shown in Table 2, the hardness and elastic modulus of the sprayed ZrB2-SiC coating without nanowires are 12.24 and 169.72 GPa, respectively. While, those of the coating with HfC nanowires are 14.39 and 193.70 GPa, respectively. By adding HfC nanowires, the hardness, elastic modulus and fracture toughness of the sprayed coating increase 17.62%, 14.13% and 48%, respectively. The coating with higher toughness would inhibit coating cracking during preparation and ablation, which is conducive to improving the ablation resistance of the coated sample."]
+  },
+  {
+    "category": "factual",
+    "question": "What were the flow rates of CH₄, H₂, and Ar gases specified in Ren et al. 2017 for the CVD synthesis of HfC nanowires?",
+    "reference_answer": "In Ren et al. (2017), the gas flow rates during CVD synthesis were: CH₄ at 200–300 mL/min (carbon source), H₂ at 1000–2000 mL/min (reducing gas), and Ar at 400–800 mL/min (inert gas). The deposition pressure was maintained at 10–20 KPa.",
+    "answer_keys": [["200–300", "1000–2000", "400–800"], ["flow rates", "mL/min"]],
+    "evidence_any": ["The flow rates of CH4, H2 and Ar were 200–300, 1000–2000 and 400–800 mL/min, respectively."],
+    "source_docs": ["Ren_2017_SurfaceandCoatingsTechnology_UHTCcoating.pdf"],
+    "excerpts": ["HfCl4 powders acting as hafnium source were put in the low-temperature evaporation chamber; CH4, H2 and Ar served as carbon source, reducing gas and inert gas, respectively. The high-temperature deposition chamber was heated to 1373–1473 K and maintained for 3 h. The deposition pressure was set at 10–20 KPa. The flow rates of CH4,H2 and Ar were 200–300, 1000–2000 and 400–800 mL/min, respectively. After deposition, HfC nanowires were obtained on SiC coating. At last, ZrB2-SiC outer coating was synthesized by SAPS."]
+  },
+  {
+    "category": "factual",
+    "question": "In Ren et al. 2017's scratch test, at what load did the coating with HfC nanowires show the first detectable acoustic emission signal indicating debonding?",
+    "reference_answer": "According to Ren et al. (2017), the first obvious acoustic emission signal indicating debonding of the outer ZrB2-SiC coating with HfC nanowires occurred at 7.5 N during the scratch test, compared to 5.9 N for the coating without nanowires, demonstrating improved interface bonding strength.",
+    "answer_keys": [["7.5 N"], ["acoustic emission", "bonding"]],
+    "evidence_any": ["the first obvious AE signal is detected at 7.5 N for the coating with nanowires"],
+    "source_docs": ["Ren_2017_SurfaceandCoatingsTechnology_UHTCcoating.pdf"],
+    "excerpts": ["Good interface bonding strength between the inner and outer coatings is crucial in practical application. Weak bonding strength would result in the coating debonding or even failure during ablation. The effect of HfC nanowires on the interface bonding strength was investigated through scratch test. The AE signal-loading force curves are shown in Fig. 7. During the scratch test, the abrupt increase of AE signal implies the debonding of outer coating from the inner coating. The first obvious AE signal is detected at 5.9 N for the coating without HfC nanowires (Fig. 7(a)). While, the first obvious AE signal is detected at 7.5 N for the coating with nanowires (Fig. 7(b))."]
+  },
+  {
+    "category": "factual",
+    "question": "What was the thickness of the metallic niobium coating deposited on the Cf-ZrB2/SiC composite in Vinci et al. 2025 using magnetron sputtering?",
+    "reference_answer": "Vinci et al. (2025) deposited metallic niobium coatings with a thickness of approximately 13 ± 0.3 micrometers on Cf-ZrB2/SiC composite specimens using magnetron sputtering, applied uniformly across the specimen surface.",
+    "answer_keys": [["13 ± 0.3 µm"], ["thickness", "niobium"]],
+    "evidence_any": ["Metallic Nb coatings with a thickness of 13 ± 0.3 µm were applied by means of magnetron sputtering"],
+    "source_docs": ["Vinci_2025_CorrosionScience_Enhancedoxidation.pdf"],
+    "excerpts": ["The cleaned specimens were mounted on a steel frame. Metallic Nb coatings with a thickness of 13 ± 0.3 µm were applied by means of magnetron sputtering (Z400, Systec Vacuum Coating, Karlstadt, Germany). Selected specimens were annealed in vacuum with a heating rate of 5°C/min until 1500 °C and 2°C/min to 1800 °C. Subsequently, the temperature was held for 60 min at 1800 °C, cooled rapidly to 1750 °C and held for 180 min. Afterwards, specimens were cooled to room temperature with a rate of 10 °C/min."]
+  },
+  {
+    "category": "factual",
+    "question": "In Vinci et al. 2025, what was the measured oxide scale thickness of the annealed Cf-ZrB2/SiC specimen with NbB2/NbC coating after oxidation at 1700°C?",
+    "reference_answer": "Vinci et al. (2025) measured the oxide scale thickness of the vacuum-annealed NbB2/NbC-coated composite at approximately 79 ± 3 micrometers after oxidation at 1700°C in dry air, which was thinner and more homogeneous than the uncoated baseline material at 118 ± 9 µm.",
+    "answer_keys": [["79 µm"], ["oxide scale", "1700°C"]],
+    "evidence_any": ["The oxide scale thickness was measured as ≈79 µm and found to be homogeneous across the length"]],
+    "source_docs": ["Vinci_2025_CorrosionScience_Enhancedoxidation.pdf"],
+    "excerpts": ["The cross-sectional analysis revealed the layered oxide scale containing an outer compact scale of large ZrO2 grains surrounded by SiO2, and an intermediate porous layer of finer ZrO2-Nb2O5 grains. The oxide scale thickness was measured as ≈79 µm and found to be homogeneous across the length of the specimen (Figure 13 c). The high magnification picture of the outer scale showed the dendritic morphology of the Nb2O5 growing alongside the ZrO2 grains (Figure 13 d). After oxidation at 1700 °C, the oxide scale thickness of the uncoated specimen almost doubled, while the coated and annealed specimens were characterized by a considerably lower thickness increase. Table 1 shows the oxide scale thickness values for all conditions tested."]
+  },
+  {
+    "category": "factual",
+    "question": "According to Vinci et al. 2025, what was the peak temperature and duration for which it was maintained during the vacuum annealing of the niobium-coated composite?",
+    "reference_answer": "Vinci et al. (2025) conducted vacuum annealing of the Nb-coated composites with the temperature held at 1800°C for 60 minutes, then cooled rapidly to 1750°C and held for an additional 180 minutes to promote interdiffusion and coating adhesion.",
+    "answer_keys": [["1800 °C", "60 min"], ["annealing", "temperature"]],
+    "evidence_any": ["the temperature was held for 60 min at 1800 °C, cooled rapidly to 1750"],
+    "source_docs": ["Vinci_2025_CorrosionScience_Enhancedoxidation.pdf"],
+    "excerpts": ["The cleaned specimens were mounted on a steel frame. Metallic Nb coatings with a thickness of 13 ± 0.3 µm were applied by means of magnetron sputtering (Z400, Systec Vacuum Coating, Karlstadt, Germany). Selected specimens were annealed in vacuum with a heating rate of 5°C/min until 1500 °C and 2°C/min to 1800 °C. Subsequently, the temperature was held for 60 min at 1800 °C, cooled rapidly to 1750 °C and held for 180 min. Afterwards, specimens were cooled to room temperature with a rate of 10 °C/min."]
+  },
+  {
+    "category": "factual",
+    "question": "What were the measured density and porosity values of the sintered Cf-ZrB2/SiC baseline composite material in Vinci et al. 2025?",
+    "reference_answer": "Vinci et al. (2025) reported that the sintered carbon fiber-reinforced ZrB2/SiC composite baseline material had a density of 4.03 g/cm³ and a porosity of 9.2%. The composite also contained uniformly infiltrated carbon fibers with ZrB2 grains approximately 2.5 µm and SiC grains approximately 0.5 µm in size.",
+    "answer_keys": [["4.03 g/cm3"], ["porosity", "9.2%"]],
+    "evidence_any": ["The studied material had a density of 4.03 g/cm3 and a porosity of 9.2 %."],
+    "source_docs": ["Vinci_2025_CorrosionScience_Enhancedoxidation.pdf"],
+    "excerpts": ["3.1 Microstructure of the sintered material. The studied material had a density of 4.03 g/cm3 and a porosity of 9.2 %. Carbon fibres were homogeneously infiltrated with the ceramic matrix (Figure 1 a) and SiC was distributed preferentially at ZrB2 grain borders or near the fibres (Figure 1 b). No oxide phases were identified by EDS. The grain sizes of ZrB2 and SiC were unaffected by the sintering process and were \\~2.5 µm and \\~0.5 µm respectively. Fine porosity inside the ceramic matrix and slight signs of fibre degradation were observed from the microstructural investigation (Figure 1 b)."]
+  },
+  {
+    "category": "factual",
+    "question": "According to XRD analysis in Vinci et al. 2025, what were the main crystalline phases identified in the vacuum-annealed NbB2/NbC coating?",
+    "reference_answer": "Vinci et al. (2025) identified the main crystalline phases in the vacuum-annealed coating as NbC, NbB2, and ZrB2. XRD analysis showed that the boride phases formed solid solution between ZrB2 and NbB2, indicated by slight shifts of peaks from their usual positions.",
+    "answer_keys": [["NbC", "NbB2", "ZrB2"], ["phases", "annealed"]],
+    "evidence_any": ["The main phases identified were NbC (PDF#38-1364), NbB2 (PDF#75-1048) and ZrB2"],
+    "source_docs": ["Vinci_2025_CorrosionScience_Enhancedoxidation.pdf"],
+    "excerpts": ["3.3 Microstructure of the substrate with vacuum-annealed metallic Nb coating. Following the vacuum annealing step at 1800 °C, XRD analysis was carried out on the surface of the specimen (figure 3). The main phases identified were NbC (PDF\\#38-1364), NbB2 (PDF\\#75-1048) and ZrB2 (PDF\\#75-0964). The peaks corresponding to the borides were slightly shifted from their usual position, suggesting the formation of solid solution between ZrB2 and NbB2. The broad peak at 26° represents the typical carbon of the fibre (PDF\\#75-1621)."]
+  },
+  {
+    "category": "factual",
+    "question": "In Vinci et al. 2025, what was the oxide scale thickness of the uncoated baseline Cf-ZrB2/SiC composite after oxidation at 1700°C?",
+    "reference_answer": "Vinci et al. (2025) measured the oxide scale thickness of the uncoated baseline Cf-ZrB2/SiC composite at 118 ± 9 micrometers after oxidation at 1700°C in dry air. This thickness was significantly greater than at 1500°C where it measured 66 ± 2 µm, demonstrating accelerated oxidation at the higher temperature.",
+    "answer_keys": [["118 µm"], ["uncoated", "1700°C"]],
+    "evidence_any": ["After oxidation at 1700 °C, the oxide scale thickness of the uncoated specimen almost doubled"],
+    "source_docs": ["Vinci_2025_CorrosionScience_Enhancedoxidation.pdf"],
+    "excerpts": ["Table 1. Values of specific mass change and oxide thickness layer of the uncoated, coated and annealed specimens after oxidation testing at 1500 and 1700 °C. Temp. | Uncoated | Coated | Annealed; 1500 °C | Scale (µm): 66 ± 2; 1700 °C | Scale (µm): 118 ± 9. All specimens behaved similarly at 1500 °C, with comparable oxide scales in the range of 50 - 60 µm; in this temperature regime the oxidation resistance provided by the baseline ZrB2/SiC matrix is still effective, and no remarkable differences were observed. After oxidation at 1700 °C, the oxide scale thickness of the uncoated specimen almost doubled, while the coated and annealed specimens were characterized by a considerably lower thickness increase."]
+  }
+]

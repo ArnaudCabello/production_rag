@@ -1,0 +1,101 @@
+[
+  {
+    "category": "semantic",
+    "question": "What is the highest phase-transition temperature above which the spontaneous electric polarization in La1.97Li0.015Ce0.015Ti2O7:0.2MnO2 ceramic collapses?",
+    "reference_answer": "The Curie temperature (the critical point where ferroelectric ordering disappears) of the LLCTO:0.2Mn composition reaches 1415 degrees Celsius. This represents the maximum temperature at which the material can maintain ferroelectric behavior, above which spontaneous electric polarization is lost.",
+    "answer_keys": [["1415", "°c"], ["curie", "ferroelectric"], ["temperature", "transition"]],
+    "evidence_any": ["The LLCTO:0.2Mn ceramic has exhibited the high TC of 1415 ◦C"],
+    "source_docs": ["Jabeen_2024_SolidStateIonics_Novel,diverse.pdf"],
+    "excerpts": ["Finally, for the materials capable of being utilized in high-temperature piezoelectric devices, it is important for them to contain high Curie temperature (TC). Hence, the relative dielectric constant as a function of temperature plots are taken for the pure LTO and LLCTO:0.2Mn ceramics (Fig. 6a). From the image, it is clearly evident that all the samples have demonstrated the little relaxed peaks at the maximum relative dielectric constant, confirming the better ferroelectric behavior of the ceramics. Pure LTO has exhibited the εmax at the TC of 1430 ◦C; the value of TC has been reduced to 1424 ◦C for the LLCTO ceramic. Similar decrement behavior in the TC values has been observed for LLCTO:0.1Mn, LLCTO:0.2Mn, and LLCTO:0.3Mn ceramics, which are 1417 ◦C, 1415 ◦C, and 1405 ◦C, respectively (Fig. 6b)."]
+  },
+  {
+    "category": "semantic",
+    "question": "By what percentage does the piezoelectric strain coefficient of La1.97Li0.015Ce0.015Ti2O7:0.2MnO2 decrease when heated from room temperature to 1200 degrees Celsius?",
+    "reference_answer": "The piezoelectric d33 coefficient of LLCTO:0.2Mn decreases from 9 pC/N at room temperature to approximately 8.5 pC/N at 1200 degrees Celsius, representing only about a 5% reduction. This exceptional thermal stability makes the material suitable for high-temperature sensing and actuation applications.",
+    "answer_keys": [["8.5", "pC/N"], ["1200", "°c"], ["5%", "decrease", "reduction"]],
+    "evidence_any": ["LLCTO:0.2Mn ceramic has demonstrated a high d33 of \\~8.5 pC/N at 1200 ◦C"],
+    "source_docs": ["Jabeen_2024_SolidStateIonics_Novel,diverse.pdf"],
+    "excerpts": ["Thermally stable d33 behavior of piezoelectric materials at high temperatures (\\>1000 ◦C) is the demand of the time. Piezoelectric d33 analysis at varying annealing temperatures (50–1500 ◦C) of pure LTO and LLCTO:xMn (x = 0–0.3) ceramics is observed. It is noticed that all the ceramics have demonstrated a similar trend throughout the temperature range; all the d33 values remained constant until 1000 ◦C, after which the degradation in the d33 values have started to come; hence, 1000 ◦C can be described as the depolarization temperature (Td). At 1200 ◦C, the d33 value of LLCTO:0.2Mn ceramic has reduced to 8.5 pC/N, which is just 5% decrement at such high temperature."]
+  },
+  {
+    "category": "semantic",
+    "question": "What electrical resistivity per unit dimension does the Li/Ce-doped La2Ti2O7:0.2MnO2 ceramic retain when exposed to 1000 degrees Celsius?",
+    "reference_answer": "At 1000 degrees Celsius, LLCTO:0.2Mn maintains a resistivity of approximately 2.4 × 10^7 ohm-centimeters. This high electrical resistance at extreme temperature is consistent with the material's ability to preserve strong piezoelectric performance in the 1000-1200 degree Celsius range.",
+    "answer_keys": [["2.4", "10^7", "Ω.cm"], ["1000", "°c"], ["resistivity", "resistance"]],
+    "evidence_any": ["resistivity of \\~2.4 × 10^7 Ω.cm even at 1000 ◦C"],
+    "source_docs": ["Jabeen_2024_SolidStateIonics_Novel,diverse.pdf"],
+    "excerpts": ["Resistivity versus temperature plot of pure LTO and LLCTO:xMn (x = 0–0.3) ceramics is presented in Fig. 5d, which provides the identical response as that of impedance-frequency plots (Fig. 5d). It is observable that all the ceramics have maintained the high value of resistivity even at the high temperature of 1000 ◦C; specifically, LLCTO:0.2Mn ceramic has exhibited the resistivity of \\~2.4 × 10^7 Ω.cm even at 1000 ◦C. Which is consistent with the high d33 value of the ceramic at such high temperature. Moreover, the leakage current density as a function of applied electric field measurements of pristine LTO and LLCTO:xMn (x = 0, 0.2) ceramics are presented in Fig. S2, which demonstrate the consistency with the I-E (Fig. 5a), impedance versus frequency (Fig. 5c), and resistivity versus temperature (Fig. 5d) of the compositions."]
+  },
+  {
+    "category": "semantic",
+    "question": "What is the normalized measure of how readily La1.97Li0.015Ce0.015Ti2O7:0.2MnO2 stores electrical charge in an applied field, expressed as a ratio to vacuum?",
+    "reference_answer": "The relative dielectric constant (εr) of LLCTO:0.2Mn at room temperature is 46. This value indicates the material's capacity to be polarized and store electric charge per unit applied field, measured relative to the permittivity of free space.",
+    "answer_keys": [["46"], ["dielectric", "permittivity"], ["constant", "εr"]],
+    "evidence_any": ["relative dielectric constant (εr) of 46"],
+    "source_docs": ["Jabeen_2024_SolidStateIonics_Novel,diverse.pdf"],
+    "excerpts": ["In this study, Li/Ce dual doped La1.97Li0.015Ce0.015Ti2O7 ceramic composition has further been explored under the influence of multivalence Mn-ions as La1.97Li0.015Ce0.015Ti2O7:xwt%MnO2 (x = 0–0.3) ceramics (LLCTO:xMn) to improve their ferroelectric, dielectric, resistive, and piezoelectric properties. LLCTO:0.2Mn ceramic composition has demonstrated ideal results with Pr \\~ 1.84 μC/cm2, d33 of 9 pC/N, and resistivity of \\~1011 Ω.cm at room temperature. These properties remained very stable even at the varying temperature (\\>1000 ◦C) with d33 of \\~8.5 pC/N at 1200 ◦C and resistivity of \\~2.4 × 107 Ω.cm at 1000 ◦C."]
+  },
+  {
+    "category": "semantic",
+    "question": "What is the amount of permanent electric polarization that persists in the La1.97Li0.015Ce0.015Ti2O7:0.2MnO2 ceramic after removal of an external electric field?",
+    "reference_answer": "The remnant polarization (Pr) of LLCTO:0.2Mn is approximately 1.84 microcoulombs per square centimeter. This metric quantifies the residual spontaneous polarization that remains after the applied electric field is removed, which is a key indicator of ferroelectric strength.",
+    "answer_keys": [["1.84", "μc/cm2"], ["remnant", "polarization"], ["pr", "permanent"]],
+    "evidence_any": ["remnant polarization (Pr) of \\~1.84 μC/cm2"],
+    "source_docs": ["Jabeen_2024_SolidStateIonics_Novel,diverse.pdf"],
+    "excerpts": ["Ferroelectric analysis (P-E loops) of the pure LTO, and LLCTO:xMn (x = 0–0.3) ceramics has been presented in Fig. 3(a-f), where the compositional LLCTO:0.2Mn ceramic has shown the maximum Pr of \\~1.84 μC/cm2 and Pmax of \\~4.75 μC/cm2 (Fig. 3d), which is maximum of the till date reported ferroelectric behavior of LTO-based ceramics at 150 kV/cm. The LLCTO:0.1Mn, LLCTO:0.2Mn, and LLCTO:0.3Mn ceramics have exhibited well saturated P-E loops at 150 kV/cm and 1 Hz."]
+  },
+  {
+    "category": "semantic",
+    "question": "How does the introduction of manganese in the La1.97Li0.015Ce0.015Ti2O7:0.2MnO2 system influence the switching behavior of electric domains within the crystal lattice?",
+    "reference_answer": "Manganese acts as a soft dopant that enhances ferroelectric behavior by facilitating easier orientation of charge domain mobility. This soft-agent effect enables more facile domain switching, which explains the significant improvement in the piezoelectric d33 coefficient from 6.6 pC/N (pristine LLCTO) to 9 pC/N (LLCTO:0.2Mn).",
+    "answer_keys": [["soft agent", "soft"], ["domain", "switching"], ["ferroelectric", "behavior"]],
+    "evidence_any": ["the Mn additive, which possesses the ability to act as a soft agent"],
+    "source_docs": ["Jabeen_2024_SolidStateIonics_Novel,diverse.pdf"],
+    "excerpts": ["Increment in the ferroelectric behavior from LLCTO ceramic to LLCTO:0.2Mn ceramics (Fig. 3f) is associated with the Mn additive, which possesses the ability to act as a soft agent for LLCTO host counterpart and varies the charge domain mobility resulting the excessive domain switching in the ceramics \\[22\\]. While the decrement in the Pr and Pmax values for the LLCT:0.3Mn ceramic composition is related to the percolation threshold value of the MnO2 additive, which is the specific content of the additive, where its diffusion limit at the lattice spaces reaches and excessive additives ions start to accumulate at the grain boundaries, resulting in variation in the conductive nature of the ceramics in the form of leakage current and causing the degradation in ferroelectric properties \\[23\\]."]
+  },
+  {
+    "category": "semantic",
+    "question": "What minimum thermal decomposition point characterizes the class of materials known as ultra-high-temperature ceramics (UHTCs)?",
+    "reference_answer": "Ultra-high-temperature ceramics are defined by melting temperatures often exceeding 3000 degrees Celsius. This exceptionally high thermal stability threshold allows these materials to maintain structural integrity and functional properties in extreme temperature environments such as hypersonic vehicles and rocket engines.",
+    "answer_keys": [["3000", "°c"], ["melting", "temperatures"], ["excess", "ultra-high"]],
+    "evidence_any": ["Ultra High Temperature Ceramics (UHTCs) include materials characterised by melting temperatures often in excess of 3000 ° C"],
+    "source_docs": ["Cacciamani_2011_Calphad_Equilibriumbetween.pdf"],
+    "excerpts": ["Ultra High Temperature Ceramics (UHTCs) include materials characterised by melting temperatures often in excess of 3000 °C such as borides, carbides and nitrides of the Group 4 as well as Group 5 transition metals. Among them Ti, Zr and Hf diborides have structural, physical, transport, and thermodynamic properties which make them promising materials for use in extreme environments. In particular, the unique combination of high melting temperature, thermal conductivity, resistance to erosion, corrosion and thermal shock, makes them suitable for use in high performance applications, where high temperatures, high thermal fluxes and severe surface stresses are involved."]
+  },
+  {
+    "category": "semantic",
+    "question": "What synergistic combination of thermal and mechanical properties renders TiB2, ZrB2, and HfB2 diborides suitable as protective barriers in high-stress thermal environments?",
+    "reference_answer": "The diborides exhibit an exceptional combination of properties: very high melting temperatures (above 3000 degrees Celsius), excellent thermal conductivity for heat dissipation, and strong resistance to erosion, corrosion, and thermal shock. This multifunctional property set makes them ideal for thermal protection systems exposed to extreme thermal and mechanical stresses.",
+    "answer_keys": [["thermal conductivity", "high melting"], ["erosion", "corrosion", "shock"], ["suitable", "high performance"]],
+    "evidence_any": ["the unique combination of high melting temperature, thermal conductivity, resistance to erosion, corrosion and thermal shock"],
+    "source_docs": ["Cacciamani_2011_Calphad_Equilibriumbetween.pdf"],
+    "excerpts": ["Ultra High Temperature Ceramics (UHTCs) include materials characterised by melting temperatures often in excess of 3000 °C such as borides, carbides and nitrides of the Group 4 as well as Group 5 transition metals. Among them Ti, Zr and Hf diborides have structural, physical, transport, and thermodynamic properties which make them promising materials for use in extreme environments. In particular, the unique combination of high melting temperature, thermal conductivity, resistance to erosion, corrosion and thermal shock, makes them suitable for use in high performance applications, where high temperatures, high thermal fluxes and severe surface stresses are involved."]
+  },
+  {
+    "category": "semantic",
+    "question": "In which aerospace applications have TiB2, ZrB2, and HfB2 diborides been proposed for use as thermal insulating systems?",
+    "reference_answer": "Group 4 diborides are proposed for thermal protection systems in hypersonic aircraft, atmospheric re-entry vehicles for space missions, and rocket propulsion systems. These applications exploit the materials' exceptional melting temperatures and resistance to thermal shock in environments with extreme aerothermal heating.",
+    "answer_keys": [["hypersonic", "re-entry"], ["thermal protection"], ["rocket", "aircraft"]],
+    "evidence_any": ["as thermal protection systems in hypersonic flight, atmospheric re-entry vehicles, and rocket propulsion"],
+    "source_docs": ["Cacciamani_2011_Calphad_Equilibriumbetween.pdf"],
+    "excerpts": ["They can be employed, in particular, as thermal protection systems in hypersonic flight, atmospheric re-entry vehicles, and rocket propulsion \\[3\\],\\[4\\], as well as in nuclear plants \\[5\\],\\[6\\], refractory linings \\[7\\], electrodes \\[8\\],\\[9\\], microelectronics \\[10\\], and cutting tools \\[11\\]. In view of these potential applications it is then necessary to investigate, in addition to the individual properties of these materials, their interactions with materials they are supposed to protect: metals and alloys in particular."]
+  },
+  {
+    "category": "semantic",
+    "question": "What computational thermodynamic methodology did Cacciamani and colleagues use to predict phase stability and thermodynamic properties across multiple interacting metallic and ceramic components?",
+    "reference_answer": "The authors employed CALPHAD (Computer Coupling of Phase Diagrams and Thermochemistry) methodology to develop a thermodynamic database for the quinary B–Ni–Ti–Zr–Hf system. This approach integrates phase diagram data and thermodynamic models to calculate equilibrium phase distributions and thermodynamic properties.",
+    "answer_keys": [["calphad"], ["thermodynamic", "database"], ["phase", "equilibria"]],
+    "evidence_any": ["it has been developed a CALPHAD thermodynamic database for the calculation of phase equilibria and thermodynamic properties in the quinary system"],
+    "source_docs": ["Cacciamani_2011_Calphad_Equilibriumbetween.pdf"],
+    "excerpts": ["Then, as a contribution to the investigation of the interaction between Group 4 diborides and nickel, a CALPHAD thermodynamic database has been developed for the calculation of phase equilibria and thermodynamic properties in the quinary system B–Ni–Ti–Zr–Hf. Though only systems containing B, Ni and one among Ti, Zr and Hf are relevant to the investigation of Ni–diboride interactions, the database contains thermodynamic parameters for all the phases included in the 10 binary and 10 ternary sub-systems of B–Ni–Ti–Zr–Hf. Particular attention has been devoted to the determination of the most appropriate thermodynamic model for the different solid phases, especially those which are stable in more systems and are characterised by more or less extended solubility ranges."]
+  },
+  {
+    "category": "semantic",
+    "question": "What specific surface phenomena between Group 4 metal diborides and transition metal components have been experimentally characterized to understand their interaction mechanisms?",
+    "reference_answer": "Wettability (the degree to which liquid spreads on a solid surface) and interfacial tension at the contact interface between diborides and metals have been studied experimentally. These properties, along with joining behavior, provide crucial information about how well the ceramic and metallic components bond and interact at high temperatures.",
+    "answer_keys": [["wettability", "interfacial"], ["contact", "spreading"], ["joining", "diboride"]],
+    "evidence_any": ["Wettability and interfacial tension of Group 4 diborides in contact with metals"],
+    "source_docs": ["Cacciamani_2011_Calphad_Equilibriumbetween.pdf"],
+    "excerpts": ["Wettability and interfacial tension of Group 4 diborides in contact with metals as well as joining properties have been especially investigated at the IENI CNR \\[12–16\\] in two main temperature ranges, i.e. at around 1100 and 1500 °C. Results obtained from phase analysis and contact angle measurements by sessile-drop technique may be better understood if the relevant phase diagrams are known. However, most of the phase diagrams relevant to the interactions between Group 4 diborides and transition metals, e.g. nickel, are poorly known or not known at all."]
+  }
+]
