@@ -22,7 +22,7 @@ Module status board (update the table too):
 | M2 planner | done | agent/plans/M2_planner.md | Colab shape report pending (eval/planner_shapes.py) |
 | M3 retrieval loop | done | agent/plans/M3_retrieval_loop.md | check node = M4 seam |
 | M4 evidence check + refusal | done | agent/plans/M4_evidence_check.md | shape report + smoke passed after prompt recalibration |
-| M5 synthesis | done | agent/plans/M5_synthesis.md | Colab 3-q smoke pending |
+| M5 synthesis | done | agent/plans/M5_synthesis.md | smoke: cite✓ 100%, invalid=0, ev_recall 19.4% held |
 | M6 benchmark run + tuning | not started | — | baseline run in progress on Colab (results land in Drive eval_v2/results) |
 
 ---
@@ -53,11 +53,14 @@ Module status board (update the table too):
   eval/results_v2/bench_baseline.jsonl: cite✓ 98.6%, cited answers 80.1%
   (baseline_scored.json regenerated WITH --judge-file to keep judge columns —
   plain re-scoring drops them; judge✓ 49.2% confirmed intact).
-- Next step for the following agent: human runs the Colab 3-q smoke
-  (`python eval/run_benchmark.py --pipeline agentic --limit 3 --trace`):
-  expect [n] markers in answers, citations.valid non-empty on substantive
-  answers, invalid ≈ 0, dropped_chunks > 0 on the aggregation question. Then
-  plan M6 (full benchmark run + tuning). M6 carry-overs: factual 4/5
+- Colab 3-q smoke (human, accepted): cite✓ 100% (all markers valid, invalid=0),
+  cited answers 2/3 (v2q002 is a scoped no-evidence statement — nothing to
+  cite), ev_recall 19.4% and key_match 0% both identical to the M4 smoke on
+  the same aggregation ids — no regression from the context cap. Not yet
+  eyeballed: dropped_chunks per question (check the synthesize trace event on
+  the next Colab session). Mean latency 54s on these aggregation questions.
+- Next step for the following agent: plan M6 (full benchmark run + tuning)
+  with the human. M6 carry-overs: factual 4/5
   sufficient=false wastes a round; unanswerable burns all 4 rounds
   (~3 queries/round); closed-book control run adapter still to build.
 - Gotchas discovered: re-running score_benchmark.py without --judge/--judge-file
