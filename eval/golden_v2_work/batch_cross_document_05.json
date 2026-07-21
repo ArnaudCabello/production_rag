@@ -5,7 +5,7 @@
     "reference_answer": "Guo et al. (2024) achieved an SVR model R2 value of 0.88 for predicting ZrB2-SiC oxide layer thickness, while Li et al. (2025) identified the (Hf0.45Zr0.45Nb0.1)C composition, with Nb content around 10 mol%, as giving the best long-term ablation resistance.",
     "answer_keys": [["r2", "0.88"], ["10 mol", "nb0.1"]],
     "evidence_any": [
-      "the SVR model achieved a MAE of 31, MSE of 2489, and a R2 value of 0.88",
+      "The SVR model achieved a MAE of 31, MSE of 2489, and a R2 value of 0.88",
       "exhibited the best ablation property when the Nb content was around 10 mol"
     ],
     "source_docs": [
@@ -41,7 +41,7 @@
     "reference_answer": "Li et al. (2025) found that reducing the relative Ta or Nb content in (Hf-Zr-Ta-Nb)C coatings improved ablation resistance because more (Hf, Zr)O2 skeleton phase was retained, while Ujah and Olubambi (2025) report that the thermal conductivity of high entropy carbides (HECbs) generally tends to rise with increasing temperature.",
     "answer_keys": [["ta", "nb"], ["retained", "skeleton"], ["thermal conductivity"]],
     "evidence_any": [
-      "the decline of Ta or Nb relative content effectively improved ablation property, attributed to the supporting effect of more retained",
+      "was found effective to improve ablation property, attributed to the supporting effect of more retained",
       "thermal conductivity of HECbs tends to rise with temperature"
     ],
     "source_docs": [
@@ -95,7 +95,7 @@
     "reference_answer": "Li et al. (2025) demonstrated that reducing Ta or Nb relative content in (Hf-Zr-Ta-Nb)C coatings improved ablation resistance by retaining more (Hf, Zr)O2 skeleton phase, showing that careful composition tuning can overcome oxidation limitations, whereas Ujah and Olubambi (2025) note that poor oxidation resistance is still generally listed as an unresolved challenge for high entropy ceramics as a class.",
     "answer_keys": [["ta", "nb"], ["skeleton", "retained"], ["unresolved", "challenge"]],
     "evidence_any": [
-      "the decline of Ta or Nb relative content effectively improved ablation property, attributed to the supporting effect of more retained",
+      "was found effective to improve ablation property, attributed to the supporting effect of more retained",
       "poor oxidation resistance, low fracture toughness, and scalability of synthesis are the unresolved challenges affecting HECs"
     ],
     "source_docs": [
@@ -132,7 +132,7 @@
     "answer_keys": [["13.8", "23.5"], ["10 mol"]],
     "evidence_any": [
       "the critical addition amount of SiC in the ZrB2-SiC system is 13.8 vol%, and the optimal addition amount is 23.5",
-      "exhibited the best ablation property when the Nb content was around 10 mol"
+      "an excessive amount of Nb can lead to inadequate temperature resistance"
     ],
     "source_docs": [
       "Guo_2024_CorrosionScience_Explorationofhigh-temperature.pdf",
@@ -167,7 +167,7 @@
     "reference_answer": "Guo et al. (2024) describe ultra-high-temperature ceramics like ZrB2 and HfB2 as having melting points exceeding 3000 degrees Celsius, and Ujah and Olubambi (2025) similarly report that high entropy borides, nitrides, and carbides possess extremely high melting temperatures of above 3000 degrees Celsius.",
     "answer_keys": [["3000"], ["melting"]],
     "evidence_any": [
-      "with exceptionally high melting points exceeding 3000℃",
+      "transition metal borides, carbides, and nitrides with exceptionally high melting points exceeding 3000℃",
       "possess extremely high melting temperatures of above 3000"
     ],
     "source_docs": [

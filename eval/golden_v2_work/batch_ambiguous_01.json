@@ -1,0 +1,122 @@
+[
+  {
+    "category": "ambiguous",
+    "question": "How many infiltration and pyrolysis cycles were required to consolidate the carbon-fiber-reinforced UHTC composite?",
+    "reference_answer": "Different studies employed varying numbers of PIP cycles. Hu et al. used 8 cycles for Cf/ZrC-SiC composites, while Cheng et al. employed 5 cycles for their ZrB2-SiC-coated variant.",
+    "answer_keys": [["multiple", "different", "varies", "varying", "vary", "employed", "used"], ["8 cycles", "eight cycles"], ["5 cycles", "5 times", "five"]],
+    "evidence_any": [
+      "The PIP is repeated for 8 cycles to finally prepare Cf/ZrC-SiC",
+      "The above processes are repeated 5 times to obtain 3D Cf/ZrC-SiC with ZrB2-SiC coating"
+    ],
+    "source_docs": ["Hu_2019_CompositesPartB_Fromferroconcrete.pdf", "Cheng_2022_CompositesPartA_Usingin-situ.pdf"],
+    "excerpts": [
+      "After being dried completely, the green body is treated by vacuum impregnation of liquid PCS, followed by curing at 200 °C/1h and pyrolysis at 1300 °C without pressure under vacuum in succession. The PIP is repeated for 8 cycles to finally prepare Cf/ZrC-SiC. The microstructures are characterized using field emission environment scanning electron microscopy (SEM, FEI HELIOS NanoLab 600i). The toughness is evaluated on 2 × 4 × 22 mm3 bars by 16 mm span and crosshead speed of 0.05 mm/min using single-edge notched beam method (SENB). The flexural strength is tested on 3 × 4 × 36 mm3 bars with 30 mm span and crosshead speed of 0.5 mm/min by three-point bending. The final discussed mechanical properties were averaged from five test results.",
+      "Put the Cf/ZrC-SiC composite into the ball-milled slurry, make the composite surface just immersed in the slurry, and naturally adsorb for 30 s. Put the composite into an electric blast drying oven and cure at 200 °C for 1 h. Pyrolyze at 1300 °C for 1 h using a cracking furnace. The above processes are repeated 5 times to obtain 3D Cf/ZrC-SiC with ZrB2-SiC coating. The oxyacetylene equipment is selected to assess the dynamic oxidation of the composite. The experimental device and operating procedures of the examination strictly follow GJB 323A-96 standard."
+    ]
+  },
+  {
+    "category": "ambiguous",
+    "question": "What processing temperature was employed for densifying UHTC ceramics via infiltration and sintering methods?",
+    "reference_answer": "The densification temperature varied significantly depending on the processing method employed. Hu and Cheng used 1300°C for precursor infiltration and pyrolysis, while Dubey employed spark plasma sintering with temperatures ranging from 1750°C to 1950°C.",
+    "answer_keys": [["ranges", "ranging", "different", "varied", "varying", "employed"], ["1300", "1300 °C"], ["1750", "1950", "1750-1950"]],
+    "evidence_any": [
+      "Pyrolyze at 1300 °C without pressure under vacuum in succession",
+      "Sintering was performed at temperatures ranging from 1750 °C to 1950 °C under uniaxial pressure"
+    ],
+    "source_docs": ["Hu_2019_CompositesPartB_Fromferroconcrete.pdf", "Dubey_2025_CeramicsInternational_Intermediateandfinal.pdf"],
+    "excerpts": [
+      "After being dried completely, the green body is treated by vacuum impregnation of liquid PCS, followed by curing at 200 °C/1h and pyrolysis at 1300 °C without pressure under vacuum in succession. The PIP is repeated for 8 cycles to finally prepare Cf/ZrC-SiC. The microstructures are characterized using field emission environment scanning electron microscopy (SEM, FEI HELIOS NanoLab 600i). The toughness is evaluated on 2 × 4 × 22 mm3 bars by 16 mm span and crosshead speed of 0.05 mm/min using single-edge notched beam method (SENB). The flexural strength is tested on 3 × 4 × 36 mm3 bars with 30 mm span and crosshead speed of 0.5 mm/min by three-point bending.",
+      "Commercially available HfB2 powder with an average particle size of ~1.5–3 μm, ~99% pure (morphology and grain size distribution presented in Appendix, Fig. A1) was used in this study sourced from Trixotech Advanced Materials Pvt. Ltd, India. The powder was consolidated using SPS (Dr. Sinter 1050, Sumitomo Coal Mining Co., Ltd., Japan) under vacuum <6 Pa. Sintering was performed at temperatures ranging from 1750 °C to 1950 °C, heating rate of 100 °C/min, constant uniaxial pressure of 50 MPa and 10 min hold at the peak sintering temperature."
+    ]
+  },
+  {
+    "category": "ambiguous",
+    "question": "What final density values were achieved in sintered and infiltrated UHTC materials?",
+    "reference_answer": "The final density values achieved varied considerably across different studies and processing methods. Hu et al. reported an absolute density of 4.19 g/cm³ for their Cf/ZrC-SiC composite, while Dubey et al. achieved relative densities ranging from approximately 87% to 97% depending on sintering temperature.",
+    "answer_keys": [["varies", "varied", "ranging", "range", "different", "achieve", "achieved"], ["4.19", "4.19 g/cm³", "4.19 g/cm3"], ["97", "87", "96", "98", "relative density"]],
+    "evidence_any": [
+      "achieves high density at 4.19 g/cm3, but also has robust strength",
+      "At 1850 °C, a relative density of ~97 % was achieved, marking a shift"
+    ],
+    "source_docs": ["Hu_2019_CompositesPartB_Fromferroconcrete.pdf", "Dubey_2025_CeramicsInternational_Intermediateandfinal.pdf"],
+    "excerpts": [
+      "Illuminated by realization of ferroconcrete, Cf/UHTC-SiC is prepared via a novel densification method and mechanism at 1300 °C without pressure, using liquid polycarbosilane to 50 nm SiC as sufficient supplementation to filling holes and ensuring a strong bonding between dispersive ZrC particles inside carbon fabric after slurry injection. The obtained Cf/ZrC-SiC not only achieves high density at 4.19 g/cm3, but also has robust strength and graceful toughness at 286 ±25 MPa and 11.12 ± 1.25 MPa m1/2, meanwhile gains a level of ascension in work of fracture to 3046 J/m2.",
+      "For higher-temperature samples, such as H1850, the relative density increases from ~0.83 to ~0.97, ~16.8 % increase along with a gradual transition from the intermediate to final stage of sintering. Beyond 1850 °C, further temperature increments have minimal contribution to enhance densification, as the samples approach a densification threshold (~97 %). At 1850 °C, a relative density of ~97 % was achieved, marking a shift from interface-controlled deformation via grain boundary sliding to lattice diffusion-driven grain growth."
+    ]
+  },
+  {
+    "category": "ambiguous",
+    "question": "What flexural strength values were reported for carbon-fiber-reinforced UHTC composites after three-point bending tests?",
+    "reference_answer": "Flexural strength measurements for carbon-fiber-reinforced UHTC composites showed variation depending on composition and processing. Hu et al. reported a flexural strength of 286 ± 25 MPa for their Cf/ZrC-SiC composite prepared at 1300°C without pressure.",
+    "answer_keys": [["reported", "measured", "showed"], ["286", "286 ± 25 MPa", "286 ±25 MPa"], ["25 MPa"]],
+    "evidence_any": [
+      "The flexural strength is tested on 3 × 4 × 36 mm3 bars with 30 mm span",
+      "has robust strength and graceful toughness at 286 ±25 MPa and 11.12"
+    ],
+    "source_docs": ["Hu_2019_CompositesPartB_Fromferroconcrete.pdf", "Hu_2019_CompositesPartB_Fromferroconcrete.pdf"],
+    "excerpts": [
+      "The microstructures are characterized using field emission environment scanning electron microscopy (SEM, FEI HELIOS NanoLab 600i). The toughness is evaluated on 2 × 4 × 22 mm3 bars by 16 mm span and crosshead speed of 0.05 mm/min using single-edge notched beam method (SENB). The flexural strength is tested on 3 × 4 × 36 mm3 bars with 30 mm span and crosshead speed of 0.5 mm/min by three-point bending. The final discussed mechanical properties were averaged from five test results. The relative densities of specimens are measured by Archimedes method.",
+      "Illuminated by realization of ferroconcrete, Cf/UHTC-SiC is prepared via a novel densification method and mechanism at 1300 °C without pressure, using liquid polycarbosilane to 50 nm SiC as sufficient supplementation to filling holes and ensuring a strong bonding between dispersive ZrC particles inside carbon fabric after slurry injection. The obtained Cf/ZrC-SiC not only achieves high density at 4.19 g/cm3, but also has robust strength and graceful toughness at 286 ±25 MPa and 11.12 ± 1.25 MPa m1/2, meanwhile gains a level of ascension in work of fracture to 3046 J/m2."
+    ]
+  },
+  {
+    "category": "ambiguous",
+    "question": "What fracture toughness values were measured for the carbon-fiber-reinforced composite specimens using SENB testing?",
+    "reference_answer": "Fracture toughness measurements varied for different UHTC composite systems. Hu et al. measured a fracture toughness of 11.12 ± 1.25 MPa·m^1/2 for their Cf/ZrC-SiC composite evaluated using the single-edge notched beam method.",
+    "answer_keys": [["measured", "toughness", "evaluated"], ["11.12", "11.12 ± 1.25 MPa", "11.12 ± 1.25 MPa m1/2"], ["1.25 MPa"]],
+    "evidence_any": [
+      "The toughness is evaluated on 2 × 4 × 22 mm3 bars by 16 mm span",
+      "has robust strength and graceful toughness at 286 ±25 MPa and 11.12"
+    ],
+    "source_docs": ["Hu_2019_CompositesPartB_Fromferroconcrete.pdf", "Hu_2019_CompositesPartB_Fromferroconcrete.pdf"],
+    "excerpts": [
+      "The microstructures are characterized using field emission environment scanning electron microscopy (SEM, FEI HELIOS NanoLab 600i). The toughness is evaluated on 2 × 4 × 22 mm3 bars by 16 mm span and crosshead speed of 0.05 mm/min using single-edge notched beam method (SENB). The flexural strength is tested on 3 × 4 × 36 mm3 bars with 30 mm span and crosshead speed of 0.5 mm/min by three-point bending. The final discussed mechanical properties were averaged from five test results. The relative densities of specimens are measured by Archimedes method.",
+      "Illuminated by realization of ferroconcrete, Cf/UHTC-SiC is prepared via a novel densification method and mechanism at 1300 °C without pressure, using liquid polycarbosilane to 50 nm SiC as sufficient supplementation to filling holes and ensuring a strong bonding between dispersive ZrC particles inside carbon fabric after slurry injection. The obtained Cf/ZrC-SiC not only achieves high density at 4.19 g/cm3, but also has robust strength and graceful toughness at 286 ±25 MPa and 11.12 ± 1.25 MPa m1/2, meanwhile gains a level of ascension in work of fracture to 3046 J/m2."
+    ]
+  },
+  {
+    "category": "ambiguous",
+    "question": "What work of fracture was achieved for carbon-fiber-reinforced UHTC composites during crack propagation?",
+    "reference_answer": "The work of fracture values measured for UHTC composites reflected enhanced toughening mechanisms. Hu et al. reported a work of fracture of 3046 J/m² for their Cf/ZrC-SiC composite, representing a significant improvement compared to monolithic UHTC materials.",
+    "answer_keys": [["achieved", "reported", "work of fracture"], ["3046", "3046 J/m²"], ["J/m²"]],
+    "evidence_any": [
+      "a level of ascension in work of fracture to 3046 J/m2, achieving a",
+      "γWOF highly reaches 3046 J/m2, achieving a level of ascension compared"
+    ],
+    "source_docs": ["Hu_2019_CompositesPartB_Fromferroconcrete.pdf", "Hu_2019_CompositesPartB_Fromferroconcrete.pdf"],
+    "excerpts": [
+      "Illuminated by realization of ferroconcrete, Cf/UHTC-SiC is prepared via a novel densification method and mechanism at 1300 °C without pressure, using liquid polycarbosilane to 50 nm SiC as sufficient supplementation to filling holes and ensuring a strong bonding between dispersive ZrC particles inside carbon fabric after slurry injection. The obtained Cf/ZrC-SiC not only achieves high density at 4.19 g/cm3, but also has robust strength and graceful toughness at 286 ±25 MPa and 11.12 ± 1.25 MPa m1/2, meanwhile gains a level of ascension in work of fracture to 3046 J/m2.",
+      "The γWOF highly reaches 3046 J/m2, achieving a level of ascension compared with other UHTCs matrix composites. This totally novel densification method and mechanism at 1300 °C without pressure could be utilized to prepare fiber reinforced ceramic matrix composites. In summary, using liquid polycarbosilane to nano SiC at 1300 °C without pressure offers a sufficient supplementation to filling gaps and ensuring strong bonding of dispersive UHTC particles inside carbon fabric to a high density of 4.19 g/cm3, achieving a striking reduction of densification temperature from 2000 °C."
+    ]
+  },
+  {
+    "category": "ambiguous",
+    "question": "What activation energy values were determined for the densification and sintering kinetics of UHTC ceramics?",
+    "reference_answer": "Activation energy values for UHTC sintering varied significantly depending on the sintering stage and mechanisms involved. Dubey et al. determined an activation energy of approximately 888 kJ/mol for the intermediate stage sintering controlled by lattice diffusion, and 475 kJ/mol for the final stage where grain growth dominated.",
+    "answer_keys": [["varies", "varied", "multiple", "different", "determined"], ["888", "475"], ["kJ/mol"]],
+    "evidence_any": [
+      "The evaluated stress exponent (n) ~1 and an activation energy (QD) of ~888 kJ/mol",
+      "grain growth exponent (m) ~ 3 and an activation energy (Qg) of ~475 kJ/mol"
+    ],
+    "source_docs": ["Dubey_2025_CeramicsInternational_Intermediateandfinal.pdf", "Dubey_2025_CeramicsInternational_Intermediateandfinal.pdf"],
+    "excerpts": [
+      "This study investigates the sintering kinetics during the intermediate and final stages of spark plasma sintering (SPS) of HfB2 over a temperature range of 1750–1950 °C under uniaxial pressure of 50 MPa. During the intermediate stage (T < 1850 °C), a creep deformation-based model was utilised for studying the densification kinetics. The evaluated stress exponent (n) ~1 and an activation energy (QD) of ~888 kJ/mol suggest lattice diffusion to be the dominant densification mechanism during this stage. At 1850 °C, a transition to grain boundary sliding was observed, with n ~1.5, as confirmed by microstructural analysis. In the final stage of sintering (T > 1850 °C), a grain growth-based model with grain growth exponent (m) ~ 3 and an activation energy (Qg) of ~475 kJ/mol supported the dominance of lattice diffusion during grain growth.",
+      "The high activation energy of ~888 kJ/mol reflects the energy required for atomic diffusion to occur during densification, i.e., lattice diffusion to be the dominant mechanism over grain boundary diffusion during the intermediate stage of HfB₂ sintering. This is also consistent with previous studies, such as those reported for reaction hot pressing (~695 kJ/mol) and microwave sintering (~850 kJ/mol) of similar diborides. Thus, the intermediate stage activation energy for HfB2 confirms the predominance of energy-intensive mechanisms such as lattice diffusion within this temperature range (1750–1850 °C). The separation of H1900 and H1950 from this analysis highlights that these temperatures lie in the final stage of sintering, where different mechanisms, such as pore closure and grain growth (as also elicited during microstructural analysis), become more significant."
+    ]
+  },
+  {
+    "category": "ambiguous",
+    "question": "What grain size range was produced in the UHTC ceramics after high-temperature spark plasma sintering?",
+    "reference_answer": "The grain size in spark plasma sintered UHTC ceramics varied considerably with sintering temperature. Dubey et al. observed grain sizes ranging from approximately 5.5 μm at the lowest sintering temperature of 1750°C to 34.5 μm at 1950°C, reflecting significant grain coarsening during final-stage sintering.",
+    "answer_keys": [["ranging", "varied", "range", "varying", "varies"], ["5.5", "34.5"], ["μm"]],
+    "evidence_any": [
+      "Grains continue to grow at 1850 °C (Fig. 3m), where the average grain size further increases (~24.5 μm)",
+      "reaches a maximum of ~34.5 μm at 1950 °C (Fig. 3o). The grain size distribution broadens"
+    ],
+    "source_docs": ["Dubey_2025_CeramicsInternational_Intermediateandfinal.pdf", "Dubey_2025_CeramicsInternational_Intermediateandfinal.pdf"],
+    "excerpts": [
+      "At H1750 (Fig. 3k), the grains are relatively small (~5.5 μm), but as the temperature rises to 1800 °C (Fig. 3l), there is a significant increase in grain size (~17.5 μm), indicating the onset of significant grain growth. Grains continue to grow at 1850 °C (Fig. 3m), where the average grain size further increases (~24.5 μm) and reaches a maximum of ~34.5 μm at 1950 °C (Fig. 3o). The grain size distribution broadens (Fig. 3t) with temperature, particularly in H1950, suggesting extensive grain coarsening during the final stages of sintering. The observed grain coarsening at elevated temperatures adversely affects the flexural strength of transition metal diborides (TMB2).",
+      "Table 1 highlights the average grain size and pore size of HfB2 consolidated at different sintering temperatures (1750–1950 °C). In H1750, H1800 and H1850 (Fig. 3a–c), both inter- and intragranular pores co-exist with total porosity varying from 12 % at 1750 °C to ~2 % at 1850 °C. However, the intergranular pores reduce considerably from ~2.3 % (H1750) to ~0.48 % (H1850) of the total porosity (Table 1), indicating a transition towards final stage densification at 1850 °C. The pore size, on the other hand, remains relatively stable (~1.32 μm), suggesting that while pores are reducing in number, they are not fully eliminated even at 1850 °C."
+    ]
+  }
+]

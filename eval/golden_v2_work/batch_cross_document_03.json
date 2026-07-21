@@ -1,0 +1,167 @@
+[
+  {
+    "category": "cross_document",
+    "question": "How does the room-temperature-to-1800°C flexural strength trend of Demirskyi et al. (2017) TiB2–10 wt.% boron ceramic composites compare with the compressive-to-flexural strength degradation trend of Yan et al. (2025) C/C–ZrC–SiC (CZS) composites processed at 1800–2100 °C?",
+    "reference_answer": "Demirskyi et al. (2017) report that TiB2–10 wt.% boron ceramics rise in flexural strength from 740–910 MPa at room temperature to 850–1100 MPa at 1600 °C before collapsing to 480–620 MPa at 1800 °C, whereas Yan et al. (2025) report that raising RMI processing temperature from 1800 °C to 2100 °C monotonically degrades C/C–ZrC–SiC composites, cutting compressive strength by 27% and flexural strength by 48%. Both papers link the strength loss to temperature-induced microstructural damage, but Demirskyi's ceramic gains strength before failing while Yan's composite degrades continuously with increasing processing temperature.",
+    "answer_keys": [["demirskyi", "tib2"], ["yan", "czs", "c/c"], ["27", "48", "480", "620"]],
+    "evidence_any": [
+      "which followed by a rapid decrease at 1800 ◦C to 480–620 MPa",
+      "specimens treated at 2100 ◦C exhibited 27 % lower compressive strength and approximately 48 % reduced flexural strength"
+    ],
+    "source_docs": ["Demirskyi_2017_EuropeanCeramicSociety_Ultra-highelevated.pdf", "Yan_2025_CompositesPartB_Interlayermodulus.pdf"],
+    "excerpts": [
+      "Reactive spark plasma sintering of the TiB2–boron ceramics enabled consolidation of high-strength ceramics. TiB2–10 wt.% boron ceramics composites had high room temperature strength ranging from 740 to 910 MPa have been attributed to the formation of a fine boron carbide and titanium diboride grains that were located in the triple points and intergrains voids of the original powder system. The development of these phases during SPS consolidation resulted in the formation of ceramics with grain sizes equal to those of the initial powders. This yielded higher the strength twice higher than that reported for monolithic TiB2. Increase in flexural test temperature up to 1600 ◦C resulted in almost linear increase in the flexural strength of TiB2–boron specimens to the values of 850–1100 MPa, which followed by a rapid decrease at 1800 ◦C to 480–620 MPa. This is explained by a plastic deformation active in this temperature range, which is confirmed by the presence of creep-induced cavities at the TiB2 grains above 1400 ◦C.",
+      "The mechanical stability control of ultra-high temperature ceramic-modified carbon/carbon composites (UHTCs- C/C) during high-temperature synthesis remains a challenge for thermal protection systems. Mechanical degradation mechanisms of C/C–ZrC–SiC (CZS) composites fabricated via reactive melt infiltration (RMI) at 1800–2100 ◦C were investigated using digital image correlation (DIC) analysis of mechanical behaviors under compressive (single-stress) and three-point bending (combined-stress) loading conditions with a full-field strain measurement system. Notably, specimens treated at 2100 ◦C exhibited 27 % lower compressive strength and approximately 48 % reduced flexural strength compared to those processed at 1800 ◦C, alongside a progressively pronounced pseudo-ductile failure trend. Further investigations of strain responses revealed that elevated processing temperatures under single-stress conditions triggered periodic layered strain distributions, attributed to aggravated interlaminar modulus mismatch."
+    ]
+  },
+  {
+    "category": "cross_document",
+    "question": "How does the simple manufacturing route for TiB2–B4C ceramic composites proposed by Demirskyi et al. (2017) contrast with the reactive melt infiltration (RMI) route used by Yan et al. (2025) to fabricate C/C–ZrC–SiC (CZS) composites?",
+    "reference_answer": "Demirskyi et al. (2017) propose reaction spark plasma sintering of commercially available TiB2 and amorphous boron powders as a simpler alternative to the complex, size-limited eutectic preparation of B4C–TiB2 composites, while Yan et al. (2025) fabricate C/C–ZrC–SiC composites by reactive melt infiltration, in which a molten Zr–Si alloy infiltrates a porous carbon preform and reacts carbothermally above 1800 °C to form ZrC and SiC in situ. Both routes rely on in-situ reactive consolidation, but Demirskyi's method uses spark plasma sintering while Yan's uses melt infiltration.",
+    "answer_keys": [["demirskyi", "spark plasma", "tib2"], ["yan", "rmi", "melt infiltration", "czs"], ["reactive", "in-situ", "in situ"]],
+    "evidence_any": [
+      "commercially available powders of TiB2 and amorphous boron",
+      "RMI is widely used in manufacturing UHTCs-C/C composites, driven by its dual capability"
+    ],
+    "source_docs": ["Demirskyi_2017_EuropeanCeramicSociety_Ultra-highelevated.pdf", "Yan_2025_CompositesPartB_Interlayermodulus.pdf"],
+    "excerpts": [
+      "An obvious solution to this problem is the consolidation of composites. TiB2–TaC composites have demonstrated a flexural strength of 480 MPa at 1600 ◦C, which is twice of that for monolithic TiB2 ceramics. It was summarized that even in TiB2–TaC case a decrease in strength is expected at higher temperatures owing to electro-covalent nature of bonding in titanium diboride. Therefore in order to reach higher strength values TiB2-based ceramics armored with covalent compounds is proposed. This class of TiB2-based composites is naturally restricted to TiB2–AlN, TiB2–SiC and B4C–TiB2 ceramic composites, which show high room-temperature strength and toughness. High-temperature performance of these TiB2-based composite is scarcely reported and is limited to the B4C–TiB2 eutectic composites. The B4C–TiB2 eutectic composites are known to have a complex preparation route, and have a certain size limitation. Therefore, it was an objective of this study to propose a simple route for manufacturing TiB2–B4C composites, that is by the reaction spark plasma sintering using commercially available powders of TiB2 and amorphous boron.",
+      "The fabrication of ZrC-based ceramic modified C/C composites is predominantly achieved through the following methods: Reactive Melt Infiltration (RMI), Precursor Infiltration and Pyrolysis (PIP), and Chemical Vapor Infiltration (CVI). In industrial practice, RMI is widely used in manufacturing UHTCs-C/C composites, driven by its dual capability to maintain dimensional precision in net-shape forming and production cost minimization. A Zr–Si alloy melt is utilized as the infiltration medium, whereby the molten precursor is infiltrated into porous carbon preforms under controlled vacuum conditions. Subsequent in-situ carbothermal reactions between the metallic melt and carbon substrate are initiated, resulting in the simultaneous formation of ZrC and SiC phases, ultimately yielding C/C–ZrC–SiC composites. However, in silicon-containing systems, the decomposition temperature of the melt infiltrant during RMI is typically high, exceeding 1600 ◦C. Concurrently, to ensure sufficient content of UHTCs, which necessitates the complete reaction between the melt infiltrant and carbon, the reaction temperature is generally maintained above 1800 ◦C."
+    ]
+  },
+  {
+    "category": "cross_document",
+    "question": "What high-temperature application challenge motivates the material design in both Demirskyi et al. (2017) TiB2-based ceramics and Yan et al. (2025) UHTCs-C/C composites?",
+    "reference_answer": "Both papers target extreme high-temperature structural applications: Demirskyi et al. (2017) note that TiB2 is used in cutting tools, wear components, and lightweight armour but suffers a significant strength decrease above 1400 °C from grain-boundary sliding and creep, while Yan et al. (2025) note that hypersonic leading-edge components and rocket nozzles reach above 2500 °C under combined thermal-mechanical-oxidizing loads, motivating UHTC reinforcement of C/C composites.",
+    "answer_keys": [["demirskyi", "tib2", "1400"], ["yan", "hypersonic", "2500", "uhtc"], ["temperature", "thermal", "high-temperature"]],
+    "evidence_any": [
+      "the significant decrease of strength after 1400 ◦C is expected due to activation of the high-temperature plastic",
+      "the leading edge components and rocket engine nozzles are elevated to above 2500 ◦C"
+    ],
+    "source_docs": ["Demirskyi_2017_EuropeanCeramicSociety_Ultra-highelevated.pdf", "Yan_2025_CompositesPartB_Interlayermodulus.pdf"],
+    "excerpts": [
+      "Titanium diboride (TiB2) is an important ceramic material which is extensively used as a cutting tool material, wear components and lightweight armour for ballistic protection. High elastic modulus and good strength at room temperature is often reported for monolithic TiB2 and TiB2-based ceramic composites. In view of its refractory nature, high temperature applications are also within reach. In the latter case the significant decrease of strength after 1400 ◦C is expected due to activation of the high-temperature plastic deformation mechanisms such as grain-boundary sliding and creep.",
+      "With the development of hypersonic aircraft technology towards higher Mach numbers and longer service duration, thermal-end components are subjected to unprecedented challenges characterized by thermal-mechanical-oxidizing coupling environments. For instance, the leading edge components and rocket engine nozzles are elevated to above 2500 ◦C, and concurrent exposure is maintained to aerodynamic shear forces, high-frequency vibrational loads, and particulate erosion. Carbon/Carbon (C/C) composites have been identified as one of the most promising thermal structural materials for ultra-high temperature applications due to their advantageous combination of low density, high specific strength, superior thermal conductivity, and minimal thermal expansion. Nevertheless, the widespread implementation of these composites in high-temperature oxidative environments remains constrained by significant mechanical degradation caused by their inherent oxidative susceptibility. To overcome this challenge, the ultra-high temperature ceramics (UHTCs) have been strategically integrated into the C/C composites through prior research initiatives."
+    ]
+  },
+  {
+    "category": "cross_document",
+    "question": "Compare the magnitude of high-temperature flexural strength loss reported for TiB2–boron ceramics by Demirskyi et al. (2017) versus C/C–ZrC–SiC composites by Yan et al. (2025) when moving to the most severe processing or testing temperature examined.",
+    "reference_answer": "Demirskyi et al. (2017) found flexural strength of TiB2–boron ceramics fell from a peak of about 1105 MPa at 1600 °C to 480–620 MPa at 1800 °C testing temperature, while Yan et al. (2025) found the flexural strength of C/C–ZrC–SiC (CZS) composites processed at 2100 °C plummeted 48% relative to material processed at 1800 °C. Both papers attribute the strength loss to temperature-driven microstructural degradation, though Demirskyi's is a post-peak testing-temperature collapse and Yan's is a monotonic processing-temperature effect.",
+    "answer_keys": [["demirskyi", "tib2", "1800"], ["yan", "czs", "48"], ["strength", "flexural"]],
+    "evidence_any": [
+      "Increase in flexural test temperature up to 1600 ◦C resulted in almost linear increase",
+      "In bending (complex stress), flexural strength plummets 48 %"
+    ],
+    "source_docs": ["Demirskyi_2017_EuropeanCeramicSociety_Ultra-highelevated.pdf", "Yan_2025_CompositesPartB_Interlayermodulus.pdf"],
+    "excerpts": [
+      "Reactive spark plasma sintering of the TiB2–boron ceramics enabled consolidation of high-strength ceramics. TiB2–10 wt.% boron ceramics composites had high room temperature strength ranging from 740 to 910 MPa have been attributed to the formation of a fine boron carbide and titanium diboride grains that were located in the triple points and intergrains voids of the original powder system. The development of these phases during SPS consolidation resulted in the formation of ceramics with grain sizes equal to those of the initial powders. This yielded higher the strength twice higher than that reported for monolithic TiB2. Increase in flexural test temperature up to 1600 ◦C resulted in almost linear increase in the flexural strength of TiB2–boron specimens to the values of 850–1100 MPa, which followed by a rapid decrease at 1800 ◦C to 480–620 MPa.",
+      "Under compression (simple stress), strength decreases from 298.6 ± 10.8 MPa (1800 ◦C) to 217.9 ± 2.9 MPa (2100 ◦C, 27 % reduction) with failure mode transitioning from tensile-dominant to compressive-shear hybrid. In bending (complex stress), flexural strength plummets 48 % (from 259.9 ± 7.1 MPa to 133.5 ± 7.7 MPa), accompanied by tensile to tensile-shear failure transition."
+    ]
+  },
+  {
+    "category": "cross_document",
+    "question": "How do the peak flexural strength values of Demirskyi et al. (2017) TiB2–boron ceramics compare with the microwave dielectric performance targets of Gao et al. (2025) CuO-ZnO-B2O3 glass-ceramics, in terms of what each study identifies as its record-setting metric?",
+    "reference_answer": "Demirskyi et al. (2017) report that their TiB2–10 wt.% boron ceramic composites reached the highest flexural strength reported for non-oxide ceramics at 1600 °C, about 1105 MPa, while Gao et al. (2025) report that their CuO-ZnO-B2O3 glass-ceramic achieved the highest Q×f value among ULTCC-compatible glass-ceramics, 27,375 GHz, at an ultra-low sintering temperature of 650 °C. Both papers frame their central finding as record-setting performance for their respective ceramic classes.",
+    "answer_keys": [["demirskyi", "tib2", "1600", "1105"], ["gao", "cuo", "27,375", "650"], ["highest", "record"]],
+    "evidence_any": [
+      "Which is the highest strength reported for non-oxide ceramics at 1600",
+      "At a sintering temperature of 650 ◦C, it exhibits excellent microwave dielectric properties"
+    ],
+    "source_docs": ["Demirskyi_2017_EuropeanCeramicSociety_Ultra-highelevated.pdf", "Gao_2025_CeramicsInternational_Anovelhigh.pdf"],
+    "excerpts": [
+      "Spark plasma sintering of TiB2–boron ceramics using commercially available raw powders is reported. The B4C phase developed during reaction-driven consolidation at 1900 ◦C. The newly formed grains were located at the grain junctions and the triple point of TiB2 grains, forming a covalent and stiff skeleton of B4C. The flexural strength of the TiB2–10 wt.% boron ceramic composites reached 910 MPa at room temperature and 1105 MPa at 1600 ◦C. Which is the highest strength reported for non-oxide ceramics at 1600 ◦C. This was followed by a rapid decrease at 1800 ◦C to 480–620 MPa, which was confirmed by increased number of cavitated titanium diboride grains observed after flexural strength tests.",
+      "Borate glass-ceramics are one of the most suitable materials for ULTCC substrates. However, it is still difficult to prepare a glass-ceramic with both ultra-low sintering temperature and high quality-factor, for the complexity of crystallization behavior in borate glass network. Herein, 1.6mol% CuO doping promotes the transition of B3+ ions into three coordination and the increase of superstructural units with low connectivity, in CuO-ZnO-B2O3 glass. The variation of short-range and medium-range structure facilitates the complete transformation of the crystalline phase into Zn3B2O6 crystal. It optimizes the chemical bond characteristics and microstructure. This method increases the Q×f values by 40 %. At a sintering temperature of 650 ◦C, it exhibits excellent microwave dielectric properties of εr ~6.31, Q×f ~27,375 GHz, τf ~ − 8 ppm/◦C, Vickers hardness ~599 kgf/mm2 and good chemical compatibility with Ag or Al electrodes."
+    ]
+  },
+  {
+    "category": "cross_document",
+    "question": "Contrast the consolidation temperature used by Demirskyi et al. (2017) to fabricate TiB2–boron ceramics via spark plasma sintering with the sintering temperature used by Gao et al. (2025) to fabricate CuO-ZnO-B2O3 glass-ceramics for ULTCC substrates.",
+    "reference_answer": "Demirskyi et al. (2017) consolidated TiB2–10 wt.% boron ceramics by spark plasma sintering at 1900 °C, whereas Gao et al. (2025) sintered CuO-ZnO-B2O3 glass-ceramic pellets at only 650 °C, doping 1.6 mol% CuO to transform the crystalline phase into Zn3B2O6. The two studies target very different applications, ultra-high-temperature structural strength versus ultra-low-temperature-co-fired dielectric substrates, reflected in a more than 1200 °C difference in processing temperature.",
+    "answer_keys": [["demirskyi", "1900", "tib2"], ["gao", "650", "cuo"], ["sinter", "temperature"]],
+    "evidence_any": [
+      "Reactive spark plasma sintering of the TiB2–boron ceramics enabled consolidation of high-strength ceramics",
+      "1.6mol% CuO doping resulted in the main crystalline phase of glass-ceramic complete transformation into Zn3B2O6 crystal"
+    ],
+    "source_docs": ["Demirskyi_2017_EuropeanCeramicSociety_Ultra-highelevated.pdf", "Gao_2025_CeramicsInternational_Anovelhigh.pdf"],
+    "excerpts": [
+      "Reactive spark plasma sintering of the TiB2–boron ceramics enabled consolidation of high-strength ceramics. TiB2–10 wt.% boron ceramics composites had high room temperature strength ranging from 740 to 910 MPa have been attributed to the formation of a fine boron carbide and titanium diboride grains that were located in the triple points and intergrains voids of the original powder system. The development of these phases during SPS consolidation resulted in the formation of ceramics with grain sizes equal to those of the initial powders.",
+      "An optimization method for the quality factor of glass-ceramic was developed in this work. Based on the regulation of the glass network structure in the short-range and medium-range, the crystallization behavior of glass-ceramic is optimized by doping with trace amounts of CuO. 1.6mol% CuO doping resulted in the main crystalline phase of glass-ceramic complete transformation into Zn3B2O6 crystal. The chemical bond characteristics and microstructure of glass-ceramic have also been optimized. This increases the Q×f value of glass-ceramic by 40 %. At an ultra-low sintering temperature of 650 ◦C, the novel CuO-ZnO-B2O3 glass-ceramic exhibits satisfactory microwave dielectric properties of εr ~6.31, Q×f ~27,375 GHz, τf ~ − 8 ppm/◦C, Vickers hardness ~599 kgf/mm2 and good chemical compatibility with Ag or Al electrodes."
+    ]
+  },
+  {
+    "category": "cross_document",
+    "question": "How does the composite-design rationale for improving high-temperature strength in B4C–TiB2-family ceramics by Demirskyi et al. (2017) differ from the substrate-design rationale for improving quality-factor in borate glass-ceramics by Gao et al. (2025)?",
+    "reference_answer": "Demirskyi et al. (2017) pursue higher strength by reactively forming a B4C secondary phase within a TiB2 matrix via spark plasma sintering using commercially available powders of TiB2 and amorphous boron, whereas Gao et al. (2025) pursue higher Q×f (lower dielectric loss) in ULTCC substrates by doping CuO into a ZnO-B2O3 glass to promote low relative permittivity and ordered B-O bonding needed for high-frequency electronic devices. One targets mechanical strength for structural ceramics, the other targets dielectric loss for electronic substrates.",
+    "answer_keys": [["demirskyi", "tib2", "b4c"], ["gao", "cuo", "q×f", "ultcc"], ["strength", "dielectric"]],
+    "evidence_any": [
+      "commercially available powders of TiB2 and amorphous boron",
+      "high covalency of glass forming chemical bonds endow glass-ceramic materials with intrinsic low"
+    ],
+    "source_docs": ["Demirskyi_2017_EuropeanCeramicSociety_Ultra-highelevated.pdf", "Gao_2025_CeramicsInternational_Anovelhigh.pdf"],
+    "excerpts": [
+      "The B4C–TiB2 eutectic composites are known to have a complex preparation route, and have a certain size limitation. Therefore, it was an objective of this study to propose a simple route for manufacturing TiB2–B4C composites, that is by the reaction spark plasma sintering using commercially available powders of TiB2 and amorphous boron. A reactive consolidation approach was used in order to ensure homogeneous distribution of secondary phase, which is formed in situ during spark plasma sintering.",
+      "The application of 5G/6G high-frequency communication technology has promoted the development of low-temperature co-fired ceramics technology (LTCC) towards lower sintering temperatures, namely ultra-low temperature co-fired ceramics technology (ULTCC), to meet the requirements of miniaturization, low power consumption, high signal transmission rate, and high integration of electronic devices. The ULTCC substrate materials require a low relative permittivity (εr), a low dielectric loss and a near-zero resonant frequency temperature coefficient (τf) to meet the high-frequency communication performance of electronic substrates. The amorphous characteristic of glass network structure and the high covalency of glass forming chemical bonds endow glass-ceramic materials with intrinsic low εr and low sintering temperature, making them an ideal choice for electronic substrates."
+    ]
+  },
+  {
+    "category": "cross_document",
+    "question": "Both Demirskyi et al. (2017) and Gao et al. (2025) claim record-setting property values for their material systems. What are those claims, and what property does each concern?",
+    "reference_answer": "Demirskyi et al. (2017) claim the highest flexural strength reported for non-oxide ceramics at 1600 °C for TiB2–10 wt.% boron ceramics, reaching about 1105 MPa, while Gao et al. (2025) claim their CuO-ZnO-B2O3 glass-ceramic exhibits the highest Q×f value among currently reported ULTCC-candidate glass-ceramics, 27,375 GHz, alongside an extremely low sintering temperature. One record concerns mechanical flexural strength and the other concerns microwave dielectric quality factor.",
+    "answer_keys": [["demirskyi", "1105", "flexural", "non-oxide"], ["gao", "27,375", "q×f", "glass-ceramic"], ["highest"]],
+    "evidence_any": [
+      "flexural strength of the TiB2–10 wt.% boron ceramic composites reached 910 MPa at room",
+      "the novel CuO-ZnO-B2O3 glass-ceramic prepared in this work exhibits the highest Q×f value and extremely low sintering temperature"
+    ],
+    "source_docs": ["Demirskyi_2017_EuropeanCeramicSociety_Ultra-highelevated.pdf", "Gao_2025_CeramicsInternational_Anovelhigh.pdf"],
+    "excerpts": [
+      "Spark plasma sintering of TiB2–boron ceramics using commercially available raw powders is reported. The B4C phase developed during reaction-driven consolidation at 1900 ◦C. The newly formed grains were located at the grain junctions and the triple point of TiB2 grains, forming a covalent and stiff skeleton of B4C. The flexural strength of the TiB2–10 wt.% boron ceramic composites reached 910 MPa at room temperature and 1105 MPa at 1600 ◦C. Which is the highest strength reported for non-oxide ceramics at 1600 ◦C.",
+      "In the currently reported glass-ceramics with potential for ULTCC applications, the novel CuO-ZnO-B2O3 glass-ceramic prepared in this work exhibits the highest Q×f value and extremely low sintering temperature, as shown in Table 3. Trace CuO doping has been confirmed to cause changes in boron ion coordination and superstructural units in borate glasses. The variation of short-range and medium-range in glass network structure effectively affects the crystallization behavior of glass-ceramics. According to literature reports, even for glass-ceramic with the single crystal phase of Zn3B2O6, its Q×f value is only around 20,000 GHz. However, the Q×f value of CZB4 glass-ceramic reaches 27,375 GHz, which is around 40 % higher than that of undoped glass-ceramic."
+    ]
+  },
+  {
+    "category": "cross_document",
+    "question": "How do Yan et al. (2025) and Gao et al. (2025) each frame the application challenge motivating their respective UHTCs-C/C composite and CuO-ZnO-B2O3 glass-ceramic research?",
+    "reference_answer": "Yan et al. (2025) frame their work around the mechanical stability of UHTCs-C/C composites fabricated by reactive melt infiltration at 1800-2100 °C for thermal protection systems, whereas Gao et al. (2025) frame their work around achieving both an ultra-low sintering temperature and high quality-factor for ULTCC glass-ceramic substrates used in 5G/6G electronics. One concerns thermal-mechanical structural stability, the other concerns electronic substrate dielectric performance.",
+    "answer_keys": [["yan", "czs", "rmi", "1800"], ["gao", "ultcc", "cuo", "q×f"], ["substrate", "thermal protection", "composite"]],
+    "evidence_any": [
+      "Mechanical degradation mechanisms of C/C–ZrC–SiC (CZS) composites fabricated via reactive melt infiltration (RMI) at 1800–2100",
+      "difficult to prepare a glass-ceramic with both ultra-low sintering temperature and high quality-factor"
+    ],
+    "source_docs": ["Yan_2025_CompositesPartB_Interlayermodulus.pdf", "Gao_2025_CeramicsInternational_Anovelhigh.pdf"],
+    "excerpts": [
+      "The mechanical stability control of ultra-high temperature ceramic-modified carbon/carbon composites (UHTCs- C/C) during high-temperature synthesis remains a challenge for thermal protection systems. Mechanical degradation mechanisms of C/C–ZrC–SiC (CZS) composites fabricated via reactive melt infiltration (RMI) at 1800–2100 ◦C were investigated using digital image correlation (DIC) analysis of mechanical behaviors under compressive (single-stress) and three-point bending (combined-stress) loading conditions with a full-field strain measurement system.",
+      "Borate glass-ceramics are one of the most suitable materials for ULTCC substrates. However, it is still difficult to prepare a glass-ceramic with both ultra-low sintering temperature and high quality-factor, for the complexity of crystallization behavior in borate glass network. Herein, 1.6mol% CuO doping promotes the transition of B3+ ions into three coordination and the increase of superstructural units with low connectivity, in CuO-ZnO-B2O3 glass."
+    ]
+  },
+  {
+    "category": "cross_document",
+    "question": "How does the intended service temperature regime for UHTCs-C/C composites in Yan et al. (2025) compare with the processing temperature regime for ULTCC glass-ceramic substrates in Gao et al. (2025)?",
+    "reference_answer": "Yan et al. (2025) note that hypersonic leading-edge and rocket-nozzle components reach service temperatures above 2500 °C, motivating UHTC reinforcement of C/C composites, whereas Gao et al. (2025) target an ultra-low sintering temperature at or below the melting point of Al electrodes, roughly 650-660 °C, for ULTCC substrates. The two material systems differ by nearly 2000 °C in their characteristic thermal regimes.",
+    "answer_keys": [["yan", "2500", "hypersonic"], ["gao", "al electrode", "650", "ultcc"], ["temperature"]],
+    "evidence_any": [
+      "Carbon/Carbon (C/C) composites have been identified as one of the most promising thermal structural materials",
+      "lower than the melting point of the Al electrode"
+    ],
+    "source_docs": ["Yan_2025_CompositesPartB_Interlayermodulus.pdf", "Gao_2025_CeramicsInternational_Anovelhigh.pdf"],
+    "excerpts": [
+      "With the development of hypersonic aircraft technology towards higher Mach numbers and longer service duration, thermal-end components are subjected to unprecedented challenges characterized by thermal-mechanical-oxidizing coupling environments. For instance, the leading edge components and rocket engine nozzles are elevated to above 2500 ◦C, and concurrent exposure is maintained to aerodynamic shear forces, high-frequency vibrational loads, and particulate erosion. Carbon/Carbon (C/C) composites have been identified as one of the most promising thermal structural materials for ultra-high temperature applications due to their advantageous combination of low density, high specific strength, superior thermal conductivity, and minimal thermal expansion.",
+      "The application of 5G/6G high-frequency communication technology has promoted the development of low-temperature co-fired ceramics technology (LTCC) towards lower sintering temperatures (lower than the melting point of the Al electrode, ≤660 ◦C), namely ultra-low temperature co-fired ceramics technology (ULTCC), to meet the requirements of miniaturization, low power consumption, high signal transmission rate, and high integration of electronic devices."
+    ]
+  },
+  {
+    "category": "cross_document",
+    "question": "Contrast the fabrication method described by Yan et al. (2025) for forming ceramic phases in C/C–ZrC–SiC (CZS) composites with the fabrication method described by Gao et al. (2025) for forming the ceramic phase in CuO-ZnO-B2O3 glass-ceramics.",
+    "reference_answer": "Yan et al. (2025) form ZrC and SiC ceramic phases in situ through carbothermal reaction between an infiltrated molten Zr-Si alloy and a carbon fiber preform during reactive melt infiltration at 1800-2100 °C, whereas Gao et al. (2025) form the Zn3B2O6 ceramic phase through crystallization of a CuO-doped ZnO-B2O3 glass during pellet sintering at 620-670 °C. Both are in-situ reaction or crystallization routes, but one is a melt-carbon reaction and the other is a glass-crystallization process.",
+    "answer_keys": [["yan", "zrc", "sic", "melt"], ["gao", "zn3b2o6", "glass", "crystalliz"], ["in-situ", "in situ", "phase"]],
+    "evidence_any": [
+      "Subsequent in-situ carbothermal reactions between the metallic melt and carbon substrate are initiated",
+      "the crystallization behavior of glass-ceramic is optimized by doping with trace amounts of CuO"
+    ],
+    "source_docs": ["Yan_2025_CompositesPartB_Interlayermodulus.pdf", "Gao_2025_CeramicsInternational_Anovelhigh.pdf"],
+    "excerpts": [
+      "A Zr–Si alloy melt is utilized as the infiltration medium, whereby the molten precursor is infiltrated into porous carbon preforms under controlled vacuum conditions. Subsequent in-situ carbothermal reactions between the metallic melt and carbon substrate are initiated, resulting in the simultaneous formation of ZrC and SiC phases, ultimately yielding C/C–ZrC–SiC composites. However, in silicon-containing systems, the decomposition temperature of the melt infiltrant during RMI is typically high, exceeding 1600 ◦C.",
+      "An optimization method for the quality factor of glass-ceramic was developed in this work. Based on the regulation of the glass network structure in the short-range and medium-range, the crystallization behavior of glass-ceramic is optimized by doping with trace amounts of CuO. 1.6mol% CuO doping resulted in the main crystalline phase of glass-ceramic complete transformation into Zn3B2O6 crystal. The chemical bond characteristics and microstructure of glass-ceramic have also been optimized."
+    ]
+  }
+]
