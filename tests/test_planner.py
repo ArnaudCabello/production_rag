@@ -82,7 +82,8 @@ class PlannerLLM:
 
 def run_agentic(retriever, llm, question, **kw):
     graph = build_agentic_graph(retriever, llm, **kw)
-    state = {"question": question, "llm_calls": 0, "retrieval_calls": 0}
+    state = {"question": question, "llm_calls": 0, "retrieval_calls": 0,
+             "chunks": [], "rounds": 0, "pending_queries": [], "queries_run": []}
     if kw.get("trace"):
         state["trace"] = []
     return graph.invoke(state)

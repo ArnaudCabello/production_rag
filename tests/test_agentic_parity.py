@@ -41,9 +41,13 @@ class StubLLM:
         return R()
 
 
+INIT = {"llm_calls": 0, "retrieval_calls": 0, "chunks": [], "rounds": 0,
+        "pending_queries": [], "queries_run": []}
+
+
 def run_agentic(retriever, llm, question):
     graph = build_agentic_graph(retriever, llm)
-    return graph.invoke({"question": question, "llm_calls": 0, "retrieval_calls": 0})
+    return graph.invoke({"question": question, **INIT})
 
 
 # 1. parity on a plain (non-fanout, non-vision) question: same answer, same chunks
@@ -88,11 +92,11 @@ print("dedup by chunk_id: OK")
 ag = run_agentic(StubRetriever(), StubLLM(), "what is X")
 assert not ag.get("trace"), ag.get("trace")
 graph = build_agentic_graph(StubRetriever(), StubLLM(), trace=True)
-ag = graph.invoke({"question": "what is X", "llm_calls": 0,
-                   "retrieval_calls": 0, "trace": []})
-assert [e["node"] for e in ag["trace"]] == ["plan", "retrieve", "synthesize"], ag["trace"]
+ag = graph.invoke({"question": "what is X", **INIT, "trace": []})
+assert [e["node"] for e in ag["trace"]] == ["plan", "retrieve", "check", "synthesize"], ag["trace"]
 assert ag["trace"][0]["sub_queries"] == ["what is X"]
 assert ag["trace"][1] == {"node": "retrieve", "query": "what is X",
-                          "chunk_ids": ["a-1", "b-1"]}
-assert ag["trace"][2]["context_chunks"] == 2
+                          "chunk_ids": ["a-1", "b-1"], "round": 1, "broad": False}
+assert ag["trace"][2] == {"node": "check", "sufficient": True, "rounds": 1}
+assert ag["trace"][3]["context_chunks"] == 2
 print("trace: off by default, on records plan/retrieve/synthesize events: OK")

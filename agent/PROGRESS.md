@@ -20,12 +20,43 @@ Module status board (update the table too):
 |--------|--------|------|-------|
 | M1 skeleton + adapter | done | agent/plans/M1_skeleton.md | parity test green |
 | M2 planner | done | agent/plans/M2_planner.md | Colab shape report pending (eval/planner_shapes.py) |
-| M3 retrieval loop | not started | — | |
+| M3 retrieval loop | done | agent/plans/M3_retrieval_loop.md | check node = M4 seam |
 | M4 evidence check + refusal | not started | — | |
 | M5 synthesis | not started | — | |
 | M6 benchmark run + tuning | not started | — | baseline run in progress on Colab (results land in Drive eval_v2/results) |
 
 ---
+
+## 2026-07-21 M3 retrieval loop — done
+- What was done: retrieve is now a loop — graph is plan → retrieve ⇄ check →
+  synthesize. Round 1 runs the planner sub-queries; the check node may enqueue
+  `pending_queries` (cap MAX_PENDING_PER_ROUND=3/round) for further rounds;
+  hard cap MAX_ROUNDS=4 enforced in the conditional edge; cross-round dedup of
+  queries (normalized, `queries_run`) and chunks (chunk_id union). M3's check
+  is an always-sufficient stub injected via `build_agentic_graph(..., check=)`
+  — the exact seam M4's LLM sufficiency judgment fills. Aggregation recall
+  knob (confirmed with human): question keeps full reranked search, agg
+  sub/refinement queries use top_k=8, rerank=False (per Colab shape report:
+  only aggregation/comparative labels are reliable; multi_hop and
+  unanswerable_maybe never fire, so refinement must come from M4 gap
+  detection, not labels). 0 new LLM calls.
+- Files touched: agentic/graph.py, eval/run_benchmark.py (invoke init keys),
+  tests/test_retrieval_loop.py (new), tests/test_planner.py +
+  tests/test_agentic_parity.py (init keys + check node in trace),
+  agent/plans/M3_retrieval_loop.md (new)
+- Tests: `python tests/test_retrieval_loop.py` — passing;
+  test_planner.py / test_agentic_parity.py / test_pipeline.py — passing.
+  No Colab run needed (no LLM behaviour change).
+- Next step for the following agent: plan M4 (evidence check + refusal) with
+  the human — replace the stub check with an LLM sufficiency judgment that
+  emits `{"sufficient", "pending_queries"}` (and gap notes for M5); refusal
+  driven by evidence, NOT the unanswerable_maybe label. Budget: plan 1 +
+  synth 1 leaves ≤4 LLM calls for check rounds.
+- Gotchas discovered: `queries_run` must store NORMALIZED queries (raw
+  strings broke re-enqueue dedup). LangGraph raises KeyError if invoke input
+  lacks any state key a node reads — all invoke sites need the full init
+  dict. Trace node order now plan/retrieve/check/synthesize; retrieve events
+  carry round/broad.
 
 ## 2026-07-21 M2 planner — done (Colab shape report pending)
 - What was done: LLM planner replaces the pass-through plan node —

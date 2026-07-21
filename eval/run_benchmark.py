@@ -70,7 +70,9 @@ def build_agentic(model, provider, top_k, trace=False):
 
     def answer(question: str) -> dict:
         result = graph.invoke({"question": question, "llm_calls": 0,
-                               "retrieval_calls": 0, "trace": []})
+                               "retrieval_calls": 0, "chunks": [], "rounds": 0,
+                               "pending_queries": [], "queries_run": [],
+                               "trace": []})
         out = {
             "answer": result["answer"],
             "chunks": [{"chunk_id": c["chunk_id"], "text": c["text"]}
