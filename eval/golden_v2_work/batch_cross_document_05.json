@@ -1,0 +1,200 @@
+[
+  {
+    "category": "cross_document",
+    "question": "Comparing Guo et al. 2024's machine-learning study of ZrB2-SiC oxidation with Li et al. 2025's optimization of the (Hf-Zr-Ta-Nb)C ablative coating system, what R2 value did Guo's support vector machine regression model achieve, and what elemental composition did Li identify as giving the best long-term ablation resistance?",
+    "reference_answer": "Guo et al. (2024) achieved an SVR model R2 value of 0.88 for predicting ZrB2-SiC oxide layer thickness, while Li et al. (2025) identified the (Hf0.45Zr0.45Nb0.1)C composition, with Nb content around 10 mol%, as giving the best long-term ablation resistance.",
+    "answer_keys": [["r2", "0.88"], ["10 mol", "nb0.1"]],
+    "evidence_any": [
+      "the SVR model achieved a MAE of 31, MSE of 2489, and a R2 value of 0.88",
+      "exhibited the best ablation property when the Nb content was around 10 mol"
+    ],
+    "source_docs": [
+      "Guo_2024_CorrosionScience_Explorationofhigh-temperature.pdf",
+      "Li_2025_EuropeanCeramicSociety_Long-termperformance.pdf"
+    ],
+    "excerpts": [
+      "This study represents an effort to utilize published data and existing knowledge to develop a model for the rapid evaluation and design of high-temperature oxidation resistance in UHTCs. The findings unequivocally demonstrate the feasibility of employing data-driven methodologies to accurately model and predict the oxide thickness in UHT diborides. After Pearson correlation analysis and model evaluation of feature importance, 7 features are retained. Among the evaluated models, the SVR model exhibits superior prediction metrics, demonstrating exceptional accuracy and robustness compared to other models such as LR, RFR, XGBR, KNN, and MLPR. The SVR model achieved a MAE of 31, MSE of 2489, and a R2 value of 0.88. The SHAP analysis conducted on the SVR model reveals quantitatively that the TTE and TTI present a pronounced positive influence on the thickness of the oxide layer. Conversely, SiC demonstrates a substantial inhibitory effect on the oxide layer thickness. The mathematical explicit expression based on genetic algorithm symbolic regression also proves this conclusion. Furthermore, the SVR model suggests that the critical addition amount of SiC in the ZrB2-SiC system is 13.8 vol%, and the optimal addition amount is 23.5 vol%.",
+      "Based on the above analyses, the Hf-Zr-Nb-O oxide layer derived from the (Hf-Zr-Nb)C system exhibited the best ablation property when the Nb content was around 10 mol%. Nevertheless, affected by the distinct effect of Nb element on the bond length fluctuation of Hf-O and Zr-O, it is hard to evaluate which Hf/Zr molar ratio can be considered as the first choice. Therefore, the influence of N value (used to depict Hf/Zr relative content) in the Hf-Zr-Nb-O systems was further discussed through first-principles calculations. Considering that the main component of self-derived oxide scales (Nb10) in the optimized (Hf-Zr-Ta-Nb)C coating systems was (Hf, Zr)O2, which serves as the supporting skeletons to maintain coating structure. Generally, self-derived Hf/Zr-oxides are porous and the insufficient ablation resistance of (Hf, Zr)O2 was widely reported, whereas it can quickly densify with the introduction of Nb element via the breaking of Hf-O or Zr-O bonds. In the (Hf-Zr-Nb)C system, Hf/Zr-oxides serving as skeleton phases and Nb-based oxides functioned as sintering aids exhibited synergistic effects. However, an excessive amount of Nb can lead to inadequate temperature resistance. Therefore, (Hf0.45Zr0.45Nb0.1)C system shows the best ablation resistance due to combining the sintering-promoting and heat dissipation capability of Nb and maintaining the temperature resistance of the system."
+    ]
+  },
+  {
+    "category": "cross_document",
+    "question": "How does the role of SiC as a second-phase additive in ZrB2-SiC ceramics, as studied by Guo et al. 2024, compare to the general oxidation-resistance limitations of high entropy ceramics (HEBs, HENs, HECbs) described in Ujah and Olubambi 2025?",
+    "reference_answer": "Guo et al. (2024) found that SiC content is the most crucial feature suppressing oxide layer thickness in ZrB2-SiC, since an appropriate SiC content forms a protective composite oxide layer, whereas Ujah and Olubambi (2025) note that poor oxidation resistance remains one of the unresolved challenges broadly affecting high entropy ceramics.",
+    "answer_keys": [["sic"], ["oxidation resistance"], ["challenge", "unresolved"]],
+    "evidence_any": [
+      "the SiC content has become the most crucial feature influencing the oxidation resistance of UHTCs",
+      "poor oxidation resistance, low fracture toughness, and scalability of synthesis are the unresolved challenges affecting HECs"
+    ],
+    "source_docs": [
+      "Guo_2024_CorrosionScience_Explorationofhigh-temperature.pdf",
+      "Ujah_2025_NextMaterials_Evaluatingtheproperties.pdf"
+    ],
+    "excerpts": [
+      "By examining the SHAP values (Fig. 8(b)), the TTE and TTI emerged as the most critical testing conditions affecting the thickness of the oxide layer. Regarding the formulation, the SiC content has become the most crucial feature influencing the oxidation resistance of UHTCs. This is because an appropriate SiO2 content can form a composite oxide layer with higher viscosity with ZrO2 or HfO2, effectively hindering oxygen invasion and improving the high-temperature oxidation resistance of ZrB2 and HfB2. Therefore, SiC, MoSi2, etc. are an indispensable addition as a second-phase in current UHTCs. Moreover, the high-temperature oxidation resistance of UHTCs is also somewhat influenced by AGS and RD.",
+      "This study investigates the unique properties and prospective uses of high entropy ceramics, with special emphasis on borides (HEBs), carbides (HECbs), and nitrides (HENs). Being an innovative material, these ceramics consist of multiple principal elements chemically harmonized under severe lattice distortion and large configurational entropy, which control their unique thermal stability, mechanical hardness, and wear resistance. The principal objective of the research is to analyze the intrinsic characteristics of these high entropy systems and determine their applicability in ultra-high-temperature environments. Through a comprehensive literature review, focusing on critical assessment of experimental and computational works, the research discovered the prospective performance of HEBs, HECbs, and HENs in severe environments like aerospace, defense, and nuclear applications. Nevertheless, poor oxidation resistance, low fracture toughness, and scalability of synthesis are the unresolved challenges affecting HECs. The research recommends developing industrially viable synthesis methods like self-propagating high-temperature synthesis (SHS), flame spray pyrolysis, as well as combining machine learning with CALPHAD and DFT to design and develop more smart production of robust HECs with improved structural and functional performance."
+    ]
+  },
+  {
+    "category": "cross_document",
+    "question": "In terms of high-temperature protective performance, how does the reduction of Ta or Nb content in Li et al. 2025's (Hf-Zr-Ta-Nb)C ablative coatings compare with the general thermal conductivity behavior of high entropy carbides (HECbs) described by Ujah and Olubambi 2025?",
+    "reference_answer": "Li et al. (2025) found that reducing the relative Ta or Nb content in (Hf-Zr-Ta-Nb)C coatings improved ablation resistance because more (Hf, Zr)O2 skeleton phase was retained, while Ujah and Olubambi (2025) report that the thermal conductivity of high entropy carbides (HECbs) generally tends to rise with increasing temperature.",
+    "answer_keys": [["ta", "nb"], ["retained", "skeleton"], ["thermal conductivity"]],
+    "evidence_any": [
+      "the decline of Ta or Nb relative content effectively improved ablation property, attributed to the supporting effect of more retained",
+      "thermal conductivity of HECbs tends to rise with temperature"
+    ],
+    "source_docs": [
+      "Li_2025_EuropeanCeramicSociety_Long-termperformance.pdf",
+      "Ujah_2025_NextMaterials_Evaluatingtheproperties.pdf"
+    ],
+    "excerpts": [
+      "Fig. 6 exhibits the optical photos and surface morphology of Nb50, Nb20 and Nb10 coatings after 120 s ablation under the heat flux of 2.4 MW/m2. Significant ablation damage occurred in Nb50 coating, and the oxide layer showed a splashing characteristic with maximum ablation crater depth of 216.5 μm and surface roughness of 47.5 μm. Compared to Nb50 coating, both Nb20 and Nb10 coatings exhibited a complete oxide layer structure without any peeling bulging and splashing. Especially, Nb20 coating presented a few micro craters resulting from structural instability with surface roughness of 31.0 μm, while the Nb10 coating still exhibited a smooth surface with no apparent cracks or pores with surface roughness of only 16.2 μm. The XRD patterns of Nb50, Nb20 and Nb10 coatings were given in Fig. S4, where more (Hf, Zr)O2 phase was observed with the content decrease of Nb element. Hence, the decline of Ta or Nb relative content in the (Hf-Zr-Ta-Nb)C coating systems was found effective to improve ablation property, attributed to the supporting effect of more retained (Hf, Zr)O2 skeleton phases on the coating structure.",
+      "HECbs’ phase stability is a function of enthalpy and entropy of formation of the composite. As the composite is made up of multiple principal elements, its configurational entropy promotes the formation of single-phased solid solution composite notwithstanding the differences in atomic size and electronegativity of the elements. Even at high temperatures, there is single-phase stability because of the high entropy stabilization of the composite, making them suitable for elevated temperature applications. It was reported that the thermal conductivity of HECbs tends to rise with temperature. Just as a five-cation HECb exhibited increased thermal conductivity up to 1200 ◦C, which is in line with single-metal carbides. More so, there was a report that the thermal conductivity of (Hf, Ta, Zr, Nb)C HECb rose considerably at elevated temperature as a result of electron influences. Further research shows that thermal conductivity of HECbs is affected by the amount of carbon in the composite."
+    ]
+  },
+  {
+    "category": "cross_document",
+    "question": "How does the temperature-and-time-dependent trend of oxide layer growth in ZrB2-SiC ceramics reported by Guo et al. 2024 relate to the ablation morphology results for the Nb10-doped (Hf-Zr-Nb)C coating reported by Li et al. 2025?",
+    "reference_answer": "Guo et al. (2024) found that the ZrB2-SiC oxide layer thickness increases nearly linearly with oxidation time and exponentially with oxidation temperature, whereas Li et al. (2025) found that the Nb10-doped (Hf-Zr-Nb)C coating maintained a smooth, nearly damage-free surface with a low surface roughness of only 16.2 micrometers after 120 s ablation.",
+    "answer_keys": [["oxidation time", "oxidation temperature"], ["nb10"], ["16.2", "smooth surface"]],
+    "evidence_any": [
+      "the thickness of the oxidation layer of ZrB2-SiC increases nearly linearly with oxidation time and exponential increases with oxidation temperature",
+      "Nb10 coating still exhibited a smooth surface with no apparent cracks or pores with surface roughness of only 16.2"
+    ],
+    "source_docs": [
+      "Guo_2024_CorrosionScience_Explorationofhigh-temperature.pdf",
+      "Li_2025_EuropeanCeramicSociety_Long-termperformance.pdf"
+    ],
+    "excerpts": [
+      "The model also predicts the extent of damage to ZrB2-25vol%SiC formulations under various oxidation times and temperatures (Fig. 13(b) and Fig. 13(c)). It is evident that the model exhibits certain inaccuracies in predicting the thickness of the oxidation layer at different oxidation temperatures and durations. However, the predicted trend of the model is in close agreement with experimental results, i.e., the thickness of the oxidation layer of ZrB2-SiC increases nearly linearly with oxidation time and exponential increases with oxidation temperature. This is consistent with the patterns obtained through symbolic regression concerning the effects of oxidation time and temperature on the thickness of the oxidation layer.",
+      "Compared to Nb50 coating, both Nb20 and Nb10 coatings exhibited a complete oxide layer structure without any peeling bulging and splashing. Especially, Nb20 coating presented a few micro craters resulting from structural instability with surface roughness of 31.0 μm, while the Nb10 coating still exhibited a smooth surface with no apparent cracks or pores with surface roughness of only 16.2 μm. The XRD patterns of Nb50, Nb20 and Nb10 coatings were given in Fig. S4, where more (Hf, Zr)O2 phase was observed with the content decrease of Nb element. Hence, the decline of Ta or Nb relative content in the (Hf-Zr-Ta-Nb)C coating systems was found effective to improve ablation property, attributed to the supporting effect of more retained (Hf, Zr)O2 skeleton phases on the coating structure."
+    ]
+  },
+  {
+    "category": "cross_document",
+    "question": "Guo et al. 2024 fabricated ZrB2-SiC ceramics using spark plasma sintering for oxidation testing, while Ujah and Olubambi 2025 review high entropy ceramics that also rely on spark plasma sintering. What experimental processing conditions did Guo use, and what benefit does Ujah attribute to spark plasma sintering for high entropy ceramics?",
+    "reference_answer": "Guo et al. (2024) prepared ZrB2 ceramics with varying SiC contents using spark plasma sintering and oxidized them at 1600 degrees Celsius for 120 seconds, while Ujah and Olubambi (2025) note that spark plasma sintering permits swift densification at reduced sintering temperatures, retaining refined grains and a homogeneous microstructure in high entropy ceramics.",
+    "answer_keys": [["spark plasma sintering"], ["1600"], ["densification", "refined grains"]],
+    "evidence_any": [
+      "were prepared using spark plasma sintering and oxidized at 1600℃ for 120 s, and then compared with the SVR predicted",
+      "permit swift densification at reduced sintering temperatures and dwell times, retaining refined grains and homogenous microstructure"
+    ],
+    "source_docs": [
+      "Guo_2024_CorrosionScience_Explorationofhigh-temperature.pdf",
+      "Ujah_2025_NextMaterials_Evaluatingtheproperties.pdf"
+    ],
+    "excerpts": [
+      "To verify the accuracy of SVR prediction, ZrB2 blocks with different SiC contents (5–40 vol%) were prepared using spark plasma sintering and oxidized at 1600℃ for 120 s, and then compared with the SVR predicted values. The oxide layer thickness of the ZrB2-5–40vol%SiC is shown in Fig. 12, with values of about 210 μm, 200 μm, 140 μm, 130 μm, 45 μm, 105 μm, 110 μm, and 135 μm, respectively. The trend of forming an oxide thickness that initially increases and then decreases is attributed to the inability of low SiC content to repair porous ZrO2, making it susceptible to rapid oxygen invasion. Conversely, excessive SiC content can lead to evaporation and loss of SiO2, resulting in surface oxide voids and deterioration of antioxidant performance.",
+      "It is another challenging task to achieve full densification of HECs without affecting the nanostructure of the composite. Advanced fabrication techniques, like spark plasma sintering (SPS), have promising features for retaining the nanocrystalline microstructure. The advanced techniques permit swift densification at reduced sintering temperatures and dwell times, retaining refined grains and homogenous microstructure. SPS promotes good interfacial bonding with excellent mechanical, wear and thermal properties. However, it has its own challenges of high initial cost and scale-up which militates against its adoption for industrial production of HECs."
+    ]
+  },
+  {
+    "category": "cross_document",
+    "question": "Li et al. 2025 found that lowering Ta or Nb content improved ablation resistance in (Hf-Zr-Ta-Nb)C coatings. How does this composition-dependent improvement compare to the broader statement by Ujah and Olubambi 2025 that oxidation resistance remains an unresolved challenge across high entropy ceramics?",
+    "reference_answer": "Li et al. (2025) demonstrated that reducing Ta or Nb relative content in (Hf-Zr-Ta-Nb)C coatings improved ablation resistance by retaining more (Hf, Zr)O2 skeleton phase, showing that careful composition tuning can overcome oxidation limitations, whereas Ujah and Olubambi (2025) note that poor oxidation resistance is still generally listed as an unresolved challenge for high entropy ceramics as a class.",
+    "answer_keys": [["ta", "nb"], ["skeleton", "retained"], ["unresolved", "challenge"]],
+    "evidence_any": [
+      "the decline of Ta or Nb relative content effectively improved ablation property, attributed to the supporting effect of more retained",
+      "poor oxidation resistance, low fracture toughness, and scalability of synthesis are the unresolved challenges affecting HECs"
+    ],
+    "source_docs": [
+      "Li_2025_EuropeanCeramicSociety_Long-termperformance.pdf",
+      "Ujah_2025_NextMaterials_Evaluatingtheproperties.pdf"
+    ],
+    "excerpts": [
+      "Especially, Nb20 coating presented a few micro craters resulting from structural instability with surface roughness of 31.0 μm, while the Nb10 coating still exhibited a smooth surface with no apparent cracks or pores with surface roughness of only 16.2 μm. The XRD patterns of Nb50, Nb20 and Nb10 coatings were given in Fig. S4, where more (Hf, Zr)O2 phase was observed with the content decrease of Nb element. Hence, the decline of Ta or Nb relative content in the (Hf-Zr-Ta-Nb)C coating systems was found effective to improve ablation property, attributed to the supporting effect of more retained (Hf, Zr)O2 skeleton phases on the coating structure.",
+      "This study investigates the unique properties and prospective uses of high entropy ceramics, with special emphasis on borides (HEBs), carbides (HECbs), and nitrides (HENs). Being an innovative material, these ceramics consist of multiple principal elements chemically harmonized under severe lattice distortion and large configurational entropy, which control their unique thermal stability, mechanical hardness, and wear resistance. Through a comprehensive literature review, focusing on critical assessment of experimental and computational works, the research discovered the prospective performance of HEBs, HECbs, and HENs in severe environments like aerospace, defense, and nuclear applications. Nevertheless, poor oxidation resistance, low fracture toughness, and scalability of synthesis are the unresolved challenges affecting HECs."
+    ]
+  },
+  {
+    "category": "cross_document",
+    "question": "Guo et al. 2024 used machine learning (SVR, SHAP, and genetic algorithm symbolic regression) to design ZrB2-SiC formulations. How does this data-driven design approach compare to the future-research recommendation made by Ujah and Olubambi 2025 for high entropy ceramic development?",
+    "reference_answer": "Guo et al. (2024) already applied SVR machine learning, SHAP analysis, and genetic algorithm symbolic regression to optimize ZrB2-SiC oxidation resistance, while Ujah and Olubambi (2025) recommend that future high entropy ceramics research should combine machine learning with CALPHAD and DFT approaches to enable smarter, more robust production.",
+    "answer_keys": [["svr", "machine learning"], ["calphad", "dft"]],
+    "evidence_any": [
+      "The support vector machine regression (SVR) model exhibited superior prediction metrics with R2 of 0.88",
+      "combining machine learning with CALPHAD and DFT to design and develop more smart production"
+    ],
+    "source_docs": [
+      "Guo_2024_CorrosionScience_Explorationofhigh-temperature.pdf",
+      "Ujah_2025_NextMaterials_Evaluatingtheproperties.pdf"
+    ],
+    "excerpts": [
+      "This study employed machine learning that leverage historical experimental data to construct predictive models capable of estimating the oxidation resistance of ultra-high-temperature diboride. The support vector machine regression (SVR) model exhibited superior prediction metrics with R2 of 0.88. The Shapley-Additive-exPlanations and genetic algorithm symbolic regression models revealed that SiC content plays a crucial role in the antioxidant damage of UHT borides, and the results suggested that the critical addition amount of SiC in the ZrB2-SiC system is 13.8 vol%, and the optimal addition amount is 23.5 vol%. The trained SVR model promptly identified optimal formulas exhibiting exceptional oxidation resistance.",
+      "Nevertheless, poor oxidation resistance, low fracture toughness, and scalability of synthesis are the unresolved challenges affecting HECs. The research recommends developing industrially viable synthesis methods like self-propagating high-temperature synthesis (SHS), flame spray pyrolysis, as well as combining machine learning with CALPHAD and DFT to design and develop more smart production of robust HECs with improved structural and functional performance. The study further recommends that future research should inquire not only the structural roles of HECs but also their functional applications in energy storage, electronic barriers, and functional coatings, thereby expanding the impact of high entropy ceramics in emerging technologies."
+    ]
+  },
+  {
+    "category": "cross_document",
+    "question": "Guo et al. 2024 identified specific critical and optimal SiC content thresholds for ZrB2-SiC oxidation resistance. How does this precise threshold-based optimization compare to the Nb content optimization range identified by Li et al. 2025 for the (Hf-Zr-Nb)C ablative coating system?",
+    "reference_answer": "Guo et al. (2024) identified a critical SiC threshold of 13.8 vol% and an optimal addition of 23.5 vol% for ZrB2-SiC oxidation resistance, while Li et al. (2025) identified an Nb content of around 10 mol% as optimal, since raising Nb beyond about 10 mol% led to a decline in liquidus temperature and inadequate temperature resistance.",
+    "answer_keys": [["13.8", "23.5"], ["10 mol"]],
+    "evidence_any": [
+      "the critical addition amount of SiC in the ZrB2-SiC system is 13.8 vol%, and the optimal addition amount is 23.5",
+      "exhibited the best ablation property when the Nb content was around 10 mol"
+    ],
+    "source_docs": [
+      "Guo_2024_CorrosionScience_Explorationofhigh-temperature.pdf",
+      "Li_2025_EuropeanCeramicSociety_Long-termperformance.pdf"
+    ],
+    "excerpts": [
+      "Furthermore, the SVR model suggests that the critical addition amount of SiC in the ZrB2-SiC system is 13.8 vol%, and the optimal addition amount is 23.5 vol%. Experimental verification shows that although there is a certain error between the predicted oxide thickness values of the SVR model and the experimental values, it can accurately predict the extent and trend of damage for various ZrB2-SiC formulations, as well as for these formulations at different oxidation temperatures and durations.",
+      "In the (Hf-Zr-Nb)C system, Hf/Zr-oxides serving as skeleton phases and Nb-based oxides functioned as sintering aids exhibited synergistic effects. However, an excessive amount of Nb can lead to inadequate temperature resistance. When the content of Nb2O5 exceeds 0.1, the liquidus temperature significantly decreases. Therefore, (Hf0.45Zr0.45Nb0.1)C system shows the best ablation resistance due to combining the sintering-promoting and heat dissipation capability of Nb and maintaining the temperature resistance of the system."
+    ]
+  },
+  {
+    "category": "cross_document",
+    "question": "How does the smooth, low-damage ablation surface of the Nb10-doped (Hf-Zr-Nb)C coating reported by Li et al. 2025 relate to the description of high thermal stability and oxidation resistance of high entropy borides (HEBs) discussed by Ujah and Olubambi 2025?",
+    "reference_answer": "Li et al. (2025) found that the Nb10-doped (Hf-Zr-Nb)C coating retained a smooth surface with only 16.2 micrometer roughness and no cracking after ablation, while Ujah and Olubambi (2025) describe high entropy borides such as (Hf, Mo, Nb, Ta, Ti)B2 as retaining structural integrity and resisting oxidation up to 1200 degrees Celsius.",
+    "answer_keys": [["nb10", "16.2"], ["1200"]],
+    "evidence_any": [
+      "Nb10 coating still exhibited a smooth surface with no apparent cracks or pores with surface roughness of only 16.2",
+      "found to retain structural integrity and resist oxidation up to 1200"
+    ],
+    "source_docs": [
+      "Li_2025_EuropeanCeramicSociety_Long-termperformance.pdf",
+      "Ujah_2025_NextMaterials_Evaluatingtheproperties.pdf"
+    ],
+    "excerpts": [
+      "Significant ablation damage occurred in Nb50 coating, and the oxide layer showed a splashing characteristic with maximum ablation crater depth of 216.5 μm and surface roughness of 47.5 μm. Compared to Nb50 coating, both Nb20 and Nb10 coatings exhibited a complete oxide layer structure without any peeling bulging and splashing. Especially, Nb20 coating presented a few micro craters resulting from structural instability with surface roughness of 31.0 μm, while the Nb10 coating still exhibited a smooth surface with no apparent cracks or pores with surface roughness of only 16.2 μm.",
+      "HEBs exhibit excellent thermal stability as well as oxidation resistance at high temperatures. A sufficient configurational entropy is achieved through the incorporation of multiple principal elements in near equimolar ratios and stabilizes the single-phase solid solution while enhancing thermal properties. For example, (Hf, Mo, Nb, Ta, Ti)B₂ was found to retain structural integrity and resist oxidation up to 1200 ◦C. Furthermore, the coexistence of strong covalent B–B bonds and metallic M–B interactions in the relatively open AlB₂-type hexagonal structure are the contributing factors to high thermal conductivity as well as low thermal expansion coefficients, ultimately resulting in high thermal shock resistance."
+    ]
+  },
+  {
+    "category": "cross_document",
+    "question": "Guo et al. 2024 describe UHTCs such as ZrB2 and HfB2 as having melting points exceeding 3000 degrees Celsius. How does this melting-point range compare to the melting temperatures reported for high entropy borides, nitrides, and carbides by Ujah and Olubambi 2025?",
+    "reference_answer": "Guo et al. (2024) describe ultra-high-temperature ceramics like ZrB2 and HfB2 as having melting points exceeding 3000 degrees Celsius, and Ujah and Olubambi (2025) similarly report that high entropy borides, nitrides, and carbides possess extremely high melting temperatures of above 3000 degrees Celsius.",
+    "answer_keys": [["3000"], ["melting"]],
+    "evidence_any": [
+      "with exceptionally high melting points exceeding 3000℃",
+      "possess extremely high melting temperatures of above 3000"
+    ],
+    "source_docs": [
+      "Guo_2024_CorrosionScience_Explorationofhigh-temperature.pdf",
+      "Ujah_2025_NextMaterials_Evaluatingtheproperties.pdf"
+    ],
+    "excerpts": [
+      "Ultra-high-temperature ceramics (UHTCs) refer to a class of transition metal borides, carbides, and nitrides with exceptionally high melting points exceeding 3000℃. These materials possess remarkable properties such as superior high-temperature oxidation resistance, ablation resistance, and thermal shock resistance. The potential applications of UHTCs have been extended to propulsion and thermal management systems of hypersonic vehicles, as well as components like engines, nose cones, and nose edges in hypersonic aircraft. Notable examples of UHTCs include HfB2, ZrB2, HfC, and ZrC. In order to further enhance their resistance to high-temperature oxidation, UHTCs often incorporate additional phases, such as SiC and MoSi2.",
+      "HECs, especially high entropy borides (HEBs), high entropy nitrides (HENs), and high entropy carbides (HECbs), have attracted the attention of researchers recently because of their exceptional characteristics in harsh environments. Reports show that they possess extremely high melting temperatures of above 3000 ◦C, ultra-high hardness, superior resistance to oxidation with unique thermal stability. These properties are the reason for their applications in harsh environments, like in aerospace turbines, hypersonic cars, nuclear reactors, and high-temperature structural systems."
+    ]
+  },
+  {
+    "category": "cross_document",
+    "question": "Guo et al. 2024 used a combination of experimental literature data and machine learning to optimize ZrB2-SiC oxidation resistance, while Li et al. 2025 used a combination of first-principles calculations and oxyacetylene ablation experiments to optimize (Hf-Zr-Ta-Nb)C coatings. What methodology did each study primarily rely on for its optimization design?",
+    "reference_answer": "Guo et al. (2024) relied on machine learning models such as SVR trained on literature-derived experimental data to predict and optimize ZrB2-SiC oxidation resistance, whereas Li et al. (2025) relied on a combination of first-principles calculations and experimental oxyacetylene ablation analyses to optimize the (Hf-Zr-Ta-Nb)C coating composition.",
+    "answer_keys": [["machine learning", "svr"], ["first-principles", "oxyacetylene"]],
+    "evidence_any": [
+      "This study employed machine learning that leverage historical experimental data to construct predictive models",
+      "a combination of first-principles calculations and experimental analyses were proposed to conduct the optimization design"
+    ],
+    "source_docs": [
+      "Guo_2024_CorrosionScience_Explorationofhigh-temperature.pdf",
+      "Li_2025_EuropeanCeramicSociety_Long-termperformance.pdf"
+    ],
+    "excerpts": [
+      "This study employed machine learning that leverage historical experimental data to construct predictive models capable of estimating the oxidation resistance of ultra-high-temperature diboride. The support vector machine regression (SVR) model exhibited superior prediction metrics with R2 of 0.88. The Shapley-Additive-exPlanations and genetic algorithm symbolic regression models revealed that SiC content plays a crucial role in the antioxidant damage of UHT borides, and the results suggested that the critical addition amount of SiC in the ZrB2-SiC system is 13.8 vol%, and the optimal addition amount is 23.5 vol%. The trained SVR model promptly identified optimal formulas exhibiting exceptional oxidation resistance.",
+      "In this work, a combination of first-principles calculations and experimental analyses were proposed to conduct the optimization design. The detailed procedures are shown in Fig. 1. The (Hf-Zr-Ta-Nb)C system was primarily selected and optimized on the basis of A-B-O binary systems calculation, accompanied by experimental verification. Subsequently, the mechanism of various element types and complex morphology were investigated. Then guided by the optimization idea, a non-equimolar coating system was proposed and its long-duration oxyacetylene ablation property was further verified. This work is expected to provide a more insightful composition design route for thermal protection systems of carbon-based materials."
+    ]
+  }
+]

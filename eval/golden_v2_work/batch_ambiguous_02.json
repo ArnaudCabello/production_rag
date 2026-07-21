@@ -1,0 +1,107 @@
+[
+  {
+    "category": "ambiguous",
+    "question": "What sintering temperature was applied to consolidate the ultra-high temperature ceramic materials?",
+    "reference_answer": "Multiple sintering temperatures are reported across different UHTC systems. Hf6Ta2O17 was synthesized via spark plasma sintering at 1300°C, while ZrC ceramics with WC doping were consolidated using hot-pressing at 1950°C. Additionally, glass-ceramic glaze for protective layers was sintered at 1300°C. The choice of temperature depends on the specific ceramic composition and consolidation method employed.",
+    "answer_keys": [["multiple", "various", "range", "different", "differs", "depend"], ["1300", "1950"], ["°C", "temperature"]],
+    "evidence_any": [
+      "Samples were sintered at 1300 °C with a heating rate of 100 °C/min and applied external pressure of 60 MPa for 10 min under vacuum.",
+      "The ZrC ceramics were consolidated using mechanical hot pressing under vacuum at 1950°C and 40 MPa for 1 h."
+    ],
+    "source_docs": ["Nisar_2023_CeramicsInternational_SynthesisofHf6Ta2O17.pdf", "Wang_2025_EuropeanCeramicSociety_EffectofWC.pdf"],
+    "excerpts": [
+      "Samples were sintered at 1300 ◦C with a heating rate of 100 ◦C/min and applied external pressure of 60 MPa for 10 min under vacuum. During the sintering process, the temperature was recorded using a pyrometer focusing on the center of the graphite die. The SPS sintered samples were cylindrical with a diameter of 20 mm and thickness of 4.2 mm. The ram displacement data were also recorded to evaluate the rapid densification of the samples. The theoretical density is the apparent bulk density obtained using the He gas pycnometer. Further, hf, df, and di are respectively the thickness of the final sample, the maximum displacement of the final sample, and instantaneous displacement in the sample during SPS.",
+      "The ZrC ceramics were consolidated using mechanical hot pressing under vacuum at 1950°C and 40 MPa for 1 h. A preload of 3.7 MPa was applied at the beginning of heating. The specimens were placed in a graphite die whose inner wall was coated with BN to prevent adhesion. During heating, the temperature was increased at a rate of 10°C/min up to 1500°C, followed by a slower rate of 5°C/min from 1500°C to 1950°C. The pressure was gradually increased to 40 MPa from 1500°C onward and maintained throughout the dwell stage."
+    ]
+  },
+  {
+    "category": "ambiguous",
+    "question": "What external pressure was applied during ceramic sintering or consolidation?",
+    "reference_answer": "Different consolidation methods employed different pressures. Hf6Ta2O17 was synthesized via spark plasma sintering at 60 MPa applied pressure. In contrast, ZrC ceramics with WC doping used hot-pressing consolidation at 40 MPa. These pressure variations reflect the different sintering techniques and ceramic systems being processed.",
+    "answer_keys": [["multiple", "various", "different", "range", "differ", "varies"], ["60", "40"], ["MPa", "pressure"]],
+    "evidence_any": [
+      "applied external pressure of 60 MPa for 10 min under vacuum",
+      "consolidated using mechanical hot pressing under vacuum at 1950°C and 40 MPa for 1 h"
+    ],
+    "source_docs": ["Nisar_2023_CeramicsInternational_SynthesisofHf6Ta2O17.pdf", "Wang_2025_EuropeanCeramicSociety_EffectofWC.pdf"],
+    "excerpts": [
+      "Samples were sintered at 1300 ◦C with a heating rate of 100 ◦C/min and applied external pressure of 60 MPa for 10 min under vacuum. During the sintering process, the temperature was recorded using a pyrometer focusing on the center of the graphite die. The SPS sintered samples were cylindrical with a diameter of 20 mm and thickness of 4.2 mm.",
+      "The ZrC ceramics were consolidated using mechanical hot pressing under vacuum at 1950°C and 40 MPa for 1 h. A preload of 3.7 MPa was applied at the beginning of heating. The specimens were placed in a graphite die whose inner wall was coated with BN to prevent adhesion. During heating, the temperature was increased at a rate of 10°C/min up to 1500°C, followed by a slower rate of 5°C/min from 1500°C to 1950°C."
+    ]
+  },
+  {
+    "category": "ambiguous",
+    "question": "What heating rate was employed during ceramic processing?",
+    "reference_answer": "Multiple heating rates were reported depending on the ceramic system and processing method. Hf6Ta2O17 synthesis via spark plasma sintering employed a heating rate of 100°C/min. In comparison, ZrC ceramic consolidation used a variable heating rate: 10°C/min up to 1500°C, then 5°C/min from 1500°C to the final temperature of 1950°C.",
+    "answer_keys": [["multiple", "various", "different", "vary", "range", "varies"], ["100", "10", "5"], ["°C/min"]],
+    "evidence_any": [
+      "Samples were sintered at 1300 ◦C with a heating rate of 100 ◦C/min and applied external pressure",
+      "the temperature was increased at a rate of 10°C/min up to 1500°C, followed by a slower rate of 5°C/min from 1500°C to 1950°C"
+    ],
+    "source_docs": ["Nisar_2023_CeramicsInternational_SynthesisofHf6Ta2O17.pdf", "Wang_2025_EuropeanCeramicSociety_EffectofWC.pdf"],
+    "excerpts": [
+      "Samples were sintered at 1300 ◦C with a heating rate of 100 ◦C/min and applied external pressure of 60 MPa for 10 min under vacuum. During the sintering process, the temperature was recorded using a pyrometer focusing on the center of the graphite die. The SPS sintered samples were cylindrical with a diameter of 20 mm and thickness of 4.2 mm. The ram displacement data were also recorded to evaluate the rapid densification of the samples using the equations.",
+      "During heating, the temperature was increased at a rate of 10°C/min up to 1500°C, followed by a slower rate of 5°C/min from 1500°C to 1950°C. The pressure was gradually increased to 40 MPa from 1500°C onward and maintained throughout the dwell stage. After sintering, the samples were furnace-cooled at a controlled rate of 10°C/min to room temperature."
+    ]
+  },
+  {
+    "category": "ambiguous",
+    "question": "What holding or dwell time was used during sintering of the ceramic materials?",
+    "reference_answer": "Reported holding times vary significantly across the studies. Hf6Ta2O17 synthesis via spark plasma sintering employed a 10 minute holding time at 1300°C. In contrast, ZrC ceramics consolidated via hot-pressing used a 1 hour holding time at the maximum temperature of 1950°C. These different dwelling periods reflect distinct consolidation strategies for different ceramic compositions.",
+    "answer_keys": [["multiple", "various", "different", "vary", "varies", "range"], ["10", "1"], ["min", "hour", "time"]],
+    "evidence_any": [
+      "sintering at 1300 ◦C with a heating rate of 100 ◦C/min and applied external pressure of 60 MPa for 10 min under vacuum",
+      "consolidated using mechanical hot pressing under vacuum at 1950°C and 40 MPa for 1 h"
+    ],
+    "source_docs": ["Nisar_2023_CeramicsInternational_SynthesisofHf6Ta2O17.pdf", "Wang_2025_EuropeanCeramicSociety_EffectofWC.pdf"],
+    "excerpts": [
+      "The two composite powder mixtures were then sintered using spark plasma sintering (SPS, Model 104; Thermal Technologies, Santa Rosa, CA). The powders were placed in a 20 mm graphite die lined with a 1 mm thick graphite foil for easy removal of the samples after sintering. Samples were sintered at 1300 ◦C with a heating rate of 100 ◦C/min and applied external pressure of 60 MPa for 10 min under vacuum. During the sintering process, the temperature was recorded using a pyrometer focusing on the center of the graphite die.",
+      "The synthesized ZrC powder (100∼400 nm, theoretical density 6.59 g/cm3) and commercial WC powder (<10 μm, theoretical density 15.55 g/cm3, >99.5% purity, Macklin) were used as the starting materials. The ZrC ceramics were consolidated using mechanical hot pressing under vacuum at 1950°C and 40 MPa for 1 h. A preload of 3.7 MPa was applied at the beginning of heating. The specimens were placed in a graphite die whose inner wall was coated with BN to prevent adhesion."
+    ]
+  },
+  {
+    "category": "ambiguous",
+    "question": "What maximum temperature stability or operating temperature was achieved or tested for the ceramic systems?",
+    "reference_answer": "Maximum operational temperatures vary by ceramic system and testing method. In2O3/SiCNO thermistors with sandwich protective layers demonstrated stable operation up to 1300°C with low resistance drift rates. Hf6Ta2O17 materials were exposed to plasma conditions exceeding 2500°C during extreme testing simulating re-entry environments. These different temperature regimes reflect the distinct applications and evaluation methodologies for the different UHTC systems.",
+    "answer_keys": [["multiple", "various", "different", "range", "varying", "varies"], ["1300", "2500"], ["°C"]],
+    "evidence_any": [
+      "The sandwich protective layer enables the In2O3/SiCNO thermistor to achieve stable operation at 1300 ◦C with unparalleled resistance stability",
+      "The surface temperature was measured above 2500 ◦C with a velocity of 330 m/s"
+    ],
+    "source_docs": ["Zhou_2025_CompositesPartB_Combiningmolten.pdf", "Nisar_2023_CeramicsInternational_SynthesisofHf6Ta2O17.pdf"],
+    "excerpts": [
+      "The sandwich protective layer enables the In2O3/SiCNO thermistor to achieve stable operation at 1300 ◦C with unparalleled resistance stability (ΔR: 0.18 %/h). It resolves key challenges, including instability above 1100 ◦C, non-reproducible resistance-temperature behavior, non-monotonic characteristics, and sensitivity to environmental conditions. Additionally, this layer imparts monotonic and reproducible resistance-temperature characteristics, ensuring reliable performance in fields high-temperature-critical applications.",
+      "SPS processed samples with dimensions of 20 mm diameter and thickness of ∼4 mm was subjected to intense high-velocity plasma generated from the plasma torch. The surface temperature was measured above 2500 ◦C with a velocity of 330 m/s. With the re-entry simulated conditions associated with this setup, sample would experience both oxidation and ablation analogous to space vehicles under service."
+    ]
+  },
+  {
+    "category": "ambiguous",
+    "question": "What hardness values were measured for the ultra-high temperature ceramic materials?",
+    "reference_answer": "Hardness values reported in the studies vary substantially depending on ceramic composition and processing conditions. For Hf6Ta2O17 samples, hardness values ranged from approximately 11.0 to 13.3 GPa before plasma exposure. ZrC ceramics with WC doping showed a wider range, from 11.96 GPa for undoped samples to 17.79 GPa for optimally doped compositions. These variations reflect differences in densification, grain size, and phase composition across the different ceramic systems.",
+    "answer_keys": [["multiple", "various", "range", "different", "vary", "varies"], ["13", "11", "12", "14", "17", "GPa"]],
+    "evidence_any": [
+      "The hardness of the SPS processed samples before and after plasma arc jet exposure was measured using LM series Vickers' hardness tester at a load of 50 N. The reported value for 50HO-50TO sample was 13.2 ± 0.3 GPa before and 11.0 ± 0.5 GPa after plasma exposure.",
+      "The sample W4 exhibited a hardness of 17.79 ± 0.58 GPa and an elastic modulus of 452.9 ± 21.7 GPa. The undoped sample W0 exhibited a hardness of 11.96 GPa and an elastic modulus of 387.8 GPa."
+    ],
+    "source_docs": ["Nisar_2023_CeramicsInternational_SynthesisofHf6Ta2O17.pdf", "Wang_2025_EuropeanCeramicSociety_EffectofWC.pdf"],
+    "excerpts": [
+      "The hardness of the SPS processed samples before and after plasma arc jet exposure was measured using LM series Vickers' hardness tester (LM810AT, LECO, MI) at a load of 50 N and holding at maximum load for 15s. The reported value is an average of at least five measurements at the same loading conditions. The hardness of 50HO-50TO changes from 13.2 GPa to 11.0 GPa after plasma exposure. Similarly, the hardness in the 70HO-30TO sample decreases from 12.9 in the as-processed sample to 10.4 GPa post-exposure.",
+      "The effect of WC doping on the mechanical properties of the ZrC ceramics was investigated using nanoindentation tests. The measured hardness and elastic modulus values of ceramic were summarized in Table 2. The undoped sample W0 exhibited a hardness of 11.96 GPa and an elastic modulus of 387.8 GPa. The sample W4 exhibited a hardness of 17.79 ± 0.58 GPa and an elastic modulus of 452.9 ± 21.7 GPa. However, a sharp deterioration in mechanical properties was observed when the WC content was increased to 6 wt%."
+    ]
+  },
+  {
+    "category": "ambiguous",
+    "question": "What elastic modulus values were reported for the ceramic materials in these studies?",
+    "reference_answer": "Elastic modulus values vary considerably across the different ceramic systems and compositions studied. ZrC ceramics with WC doping exhibited elastic modulus ranging from 339.3 GPa to 452.9 GPa depending on WC content and densification. For comparison, the Hf6Ta2O17 superstructure showed an elastic modulus of 273.4 GPa from literature values cited in the work. These variations reflect differences in phase composition, solid-solution effects, and microstructural characteristics of the respective ceramic systems.",
+    "answer_keys": [["multiple", "various", "range", "different", "vary", "varies", "several"], ["273", "339", "387", "395", "452"], ["GPa"]],
+    "evidence_any": [
+      "The hardness, elastic modulus, and fracture toughness of Hf6Ta2O17 are 18.5 GPa, 273.4 GPa, and 2.6–3.1 MPam0.5, respectively",
+      "The undoped sample W0 exhibited a hardness of 11.96 GPa and an elastic modulus of 387.8 GPa. The sample W4 exhibited a hardness of 17.79 ± 0.58 GPa and an elastic modulus of 452.9 ± 21.7 GPa."
+    ],
+    "source_docs": ["Nisar_2023_CeramicsInternational_SynthesisofHf6Ta2O17.pdf", "Wang_2025_EuropeanCeramicSociety_EffectofWC.pdf"],
+    "excerpts": [
+      "McCormack et al. [20] investigated the phase diagram of the HfO2-Ta2O5 system and found that the complex mixed oxide, Hf6Ta2O17 phase is formed which is thermally stable up to 2250 ◦C. Hf6Ta2O17 is an ideal material for TPS with a melting temperature >2400 ◦C, low thermal conductivity and oxygen diffusion, and no phase transformation from RT up to the melting point [21]. The hardness, elastic modulus, and fracture toughness of Hf6Ta2O17 are 18.5 GPa, 273.4 GPa, and 2.6–3.1 MPam0.5, respectively [22].",
+      "The effect of WC doping on the mechanical properties of the ZrC ceramics was investigated using nanoindentation tests. The measured hardness and elastic modulus values of ceramic were summarized in Table 2. The undoped sample W0 exhibited a hardness of 11.96 GPa and an elastic modulus of 387.8 GPa. The sample W4 exhibited a hardness of 17.79 ± 0.58 GPa and an elastic modulus of 452.9 ± 21.7 GPa. However, a sharp deterioration in mechanical properties was observed when the WC content was increased to 6 wt%."
+    ]
+  }
+]
