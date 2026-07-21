@@ -1,0 +1,182 @@
+[
+  {
+    "category": "multi_chunk",
+    "question": "In the Galizia 2024 study, what was the sintering temperature and dwell time used for ZrB2-6WC (ZW6), and what thermal conductivity range was achieved after processing?",
+    "reference_answer": "ZrB2-6WC (ZW6) was sintered at 1931 ± 7 °C with a 30.1 minute dwell time, achieving thermal conductivity ranging from 53 to 63 W m−1 K−1 across room temperature to 1200 °C.",
+    "answer_keys": [
+      ["1931", "30.1"],
+      ["53", "63", "thermal conductivity"]
+    ],
+    "evidence_any": [
+      "ZrB2+6WC labelled ZW6 sintering temperature T t are 1931 ± 7 30.1",
+      "thermal conductivity ranged from 53 to 63 W m− 1 K− 1 for ZrB2-6WC"
+    ],
+    "source_docs": ["Galizia_2024_OpenCeramics_Thermalproperties.pdf"],
+    "excerpts": [
+      "A conventional ceramic processing route was employed to produce ZrB2 and HfB2 with 6 mol% WC compositions. First, powder mixtures of ZrB2 + 6 mol% WC (equivalent to 4.1 vol% and 10.0 wt%) and HfB2 + 6 mol% WC (equivalent to 4.0 vol% and 5.9 wt%) were ball milled. In particular, 277.05 g of ZrB2 plus 30.69 g of WC (labelled ZW6) and 239.48 g of HfB2 plus 14.96 g of WC (labelled HW6) were milled for 72 h using 15 mm WC-6 wt.% Co spheres in a PE bottle of 1 L with a powder/ spheres/ethanol weight ratio of 1/2.4/0.2. After drying via rotavapor at 85 ◦C, the powders were dry milled in the same previous bottles with the same milling media for 4 h in order to disaggregate the powders and make easier the following sieving at 250 μm. All powders were shaped in a disk of 45 mm of diameter under linear pressure of 60 bar. Then the disks were hot-pressed in the vacuum range of 0.1–1 mbar using an induction-heated graphite die, which allowed a heating rate above 1200 ◦C/h (the time required for the heating stage from 950 ◦C was about 25 min), and applying a constant uniaxial pressure of 35 MPa. The sintering temperatures and dwell times are detailed in Table 2.",
+      "Thermal conductivity ranged from 61 to 68 W m− 1 K− 1 for TiB2-2(WC-6Co), from 53 to 63 W m− 1 K− 1 for ZrB2-6WC, from 67 to 75 W m− 1 K− 1 for HfB2-6WC, and from 180 to 119 W m− 1 K− 1 for tungsten across the temperature range from room temperature to 1200 ◦C. The increasing trend of thermal effusivity, over 19000 J s− 0.5 m− 2 K− 1 at 1200 ◦C, justifies further testing and of UHTC materials for fusion applications."
+    ]
+  },
+  {
+    "category": "multi_chunk",
+    "question": "How did cobalt contamination from milling media affect the sintering behavior of TiB2-2(WC-6Co) (TW2) in the Galizia 2024 study, and what was the resulting densification onset temperature?",
+    "reference_answer": "Cobalt traces from milling with WC media promoted liquid sintering mechanisms at lower temperatures, resulting in TiB2-2(WC-6Co) (TW2) showing the lowest onset temperature (TON) of 1010 °C compared to other similar TiB2-based materials.",
+    "answer_keys": [
+      ["cobalt", "liquid sintering", "lower temperature"],
+      ["1010", "TW2", "onset"]
+    ],
+    "evidence_any": [
+      "Co which promotes liquid sintering mechanisms that require lower temperatures to be activated",
+      "TW2 samples showed the lowest onset temperature TON of 1010 ◦C"
+    ],
+    "source_docs": ["Galizia_2024_OpenCeramics_Thermalproperties.pdf"],
+    "excerpts": [
+      "For the TiB2-WC composition, WC was added through a high energy milling with WC-6 wt% Co spheres, as reported in Ref. [39], to improve the densification thanks to the synergistic action of WC impurities, acting as sintering aid, and size reduction of the starting TiB2 powders [40–43]. In particular, the starting TiB2 powders were milled by high energy milling in a WC jar using 0.5 mm WC-6Co spheres, in air. The powder mixtures were then separated from the spheres, weighted, dried via rotavapor and sieved. The contamination of WC was expected to be around 2 mol% (equivalents to 1.6 vol% and 5.4 wt%) and for this reason the as produced TiB2-WC composition was labelled TW2.",
+      "High-density samples (>97 %, see Table 2) were obtained despite a dwell time lower than that reported in literature [48,49]. TW2 samples showed the lowest onset temperature (TON) of 1010 ◦C. This temperature is quite low compared to other similar TiB2-based materials [50], and is in agreement with the previous work [39]. However, the sintering phenomena start to slow down before the maximum temperature is reached, as indicated by the peak of the densification rate curve occurring well before the dwell step and the plateauing of the curve at 97 % before the start of dwell time (Fig. 1a). This sintering behaviour can be attributed to the presence of Co, which promotes liquid sintering mechanisms that require lower temperatures to be activated, but were not sufficient to complete densification [51]."
+    ]
+  },
+  {
+    "category": "multi_chunk",
+    "question": "In the Galizia 2024 study, what plasma exposure conditions were used for HfB2-6WC, and why were thermal properties considered stable despite plasma irradiation?",
+    "reference_answer": "HfB2-6WC tiles were exposed to deuterium plasma irradiation at ion energies up to 400 eV for 5-10 hours. Thermal properties remained stable because surface damage penetrated only about 100 nm, representing only 0.01% of the sample volume, insufficient to affect bulk thermal diffusivity measurements.",
+    "answer_keys": [
+      ["deuterium plasma", "400 eV"],
+      ["100 nm", "0.01%", "thermal properties stable"]
+    ],
+    "evidence_any": [
+      "deuterium plasma irradiation in the linear device at ion energies of 50 eV 110 eV 230 eV 330 eV or 400 eV",
+      "Deuterium irradiation caused surface damage with penetration depth of about 100 nm which represents only 0.01 % of the sample's total volume"
+    ],
+    "source_docs": ["Galizia_2024_OpenCeramics_Thermalproperties.pdf"],
+    "excerpts": [
+      "To study the plasma interactions, the polished surface of sintered samples was subjected to deuterium plasma irradiation in the linear device GyM [44] at ion energies of 50 eV, 110 eV, 230 eV, 330 eV or 400 eV and a flux of 5e20 ions/(m2s), for 5 h, and 10 h, along with reference tungsten samples. For each irradiation condition, four samples (one tile for each material: TW2, ZW6, HW6 and reference W) were mounted in the sample holder as shown in Fig. 2, leaving an exposed surface of about 10 × 10 mm2. The reference tungsten, supplied by FB Tecno S.r.l., was produced through powders pressing and sintering, followed by thermomechanical deformation. It was characterized by a purity ≥99.95 %, density of 19.3 g/cm3, ultimate strength of 800 MPa, compressive strength of 1150 MPa, elastic modulus of 410 GPa, hardness HV30 of 460. The machined W samples had a roughness Ra ≤ 0.2um. During the exposures in GyM, the temperature of the samples reached approximately at 200 ◦C at − 22 V and 400 ◦C at − 375 V, with an estimated thermal load of about 50 kW/m2.",
+      "Similarly, thermal diffusivity analysis showed no clear trend related to plasma exposure or surface roughness among the investigated materials (Fig. 7). This result is somewhat expected, given that the samples were coated with a graphite layer, and the laser flash diffusivity technique measures bulk properties. Deuterium irradiation caused surface damage with a penetration depth of about 100 nm, which represents only 0.01 % of the sample's total volume. As a result, such surface damage is unlikely to significantly affect the measured thermal diffusivity."
+    ]
+  },
+  {
+    "category": "multi_chunk",
+    "question": "In the Galizia 2024 study, what distinct compositional preparation methods were used for TW2 versus ZW6, and how did this relate to their microstructural differences?",
+    "reference_answer": "TW2 was prepared by high-energy milling of TiB2 with WC-6Co spheres to achieve size reduction, while ZW6 was prepared by ball milling ZrB2 and WC without high-energy processing. These different processing routes resulted in TW2 having residual porosity while ZW6 formed a nearly pore-free microstructure with a more pronounced core-shell structure.",
+    "answer_keys": [
+      ["high-energy milling", "TW2"],
+      ["ball milling", "ZW6", "pore-free"]
+    ],
+    "evidence_any": [
+      "TiB2 powders were milled by high energy milling in WC jar using 0.5 mm WC-6Co spheres in air",
+      "SEM analysis confirmed low levels of residual porosity in TW2 and HW6 samples with nearly pores-free ZW6 sample"
+    ],
+    "source_docs": ["Galizia_2024_OpenCeramics_Thermalproperties.pdf"],
+    "excerpts": [
+      "A conventional ceramic processing route was employed to produce ZrB2 and HfB2 with 6 mol% WC compositions. First, powder mixtures of ZrB2 + 6 mol% WC (equivalent to 4.1 vol% and 10.0 wt%) and HfB2 + 6 mol% WC (equivalent to 4.0 vol% and 5.9 wt%) were ball milled. In particular, 277.05 g of ZrB2 plus 30.69 g of WC (labelled ZW6) and 239.48 g of HfB2 plus 14.96 g of WC (labelled HW6) were milled for 72 h using 15 mm WC-6 wt.% Co spheres in a PE bottle of 1 L with a powder/ spheres/ethanol weight ratio of 1/2.4/0.2. After drying via rotavapor at 85 ◦C, the powders were dry milled in the same previous bottles with the same milling media for 4 h in order to disaggregate the powders and make easier the following sieving at 250 μm. For the TiB2-WC composition, WC was added through a high energy milling with WC-6 wt% Co spheres, as reported in Ref. [39], to improve the densification thanks to the synergistic action of WC impurities, acting as sintering aid, and size reduction of the starting TiB2 powders [40–43]. In particular, the starting TiB2 powders were milled by high energy milling in a WC jar using 0.5 mm WC-6Co spheres, in air.",
+      "SEM analysis confirmed low levels of residual porosity in TW2 and HW6 samples, with nearly pores-free ZW6 sample (Fig. 3). A core-shell structure (more pronounced in ZW6 sample) was observed in all samples, indicating the formation of solid solutions of diborides with tungsten. The core consists of MB2, while the shell consists of (M, W)B2 solid solution cores (M = Ti, Zr, or Hf). This result confirms the active role of WC in effectively promoting densification during hot-pressing and indicates that the starting diborides and tungsten are mutually soluble at high temperatures, as previously reported [56,59,60]. The WB phase appeared as a lighter, homogeneously distributed phase. The ZW6 sample showed the presence of free carbon appearing as a dark elongated shape."
+    ]
+  },
+  {
+    "category": "multi_chunk",
+    "question": "In the Galizia 2024 study, why was a longer isothermal dwell time required for HfB2-6WC (HW6) compared to ZrB2-6WC, and how did this relate to the material's refractory characteristics?",
+    "reference_answer": "HfB2-6WC required a 47.7-minute dwell time at 1932 °C compared to ZrB2-6WC's 30.1-minute dwell, due to HfB2's more refractory nature characterized by higher melting point and lower atomic transport rates, which slowed the densification kinetics.",
+    "answer_keys": [
+      ["HW6", "47.7", "refractory"],
+      ["lower transport rates", "melting point", "HfB2"]
+    ],
+    "evidence_any": [
+      "HW6 samples required a longer isothermal hold due to the refractory nature of HfB2",
+      "The lower sinterability of the HfB2-based material indicated by higher TON of 1700 ◦C due to more refractory behaviour of HfB2 which includes higher melting point and lower transport rates"
+    ],
+    "source_docs": ["Galizia_2024_OpenCeramics_Thermalproperties.pdf"],
+    "excerpts": [
+      "ZW6 samples reached full densification quickly, while HW6 samples required a longer isothermal hold due to the refractory the nature of HfB2. In particular, highest densification rate value ZrB2-based of 7.3 % material showed min− 1 allowing full densification within a limited dwell time. It is worth noting that the observed TON of 1400 ◦C is lower than those reported for ZrB2 with other ceramic sintering aids (Si3N4, SiC, Y2O3, Al2O3, ZrN) [52–54]. A lower TON was only obtained when using Ni as the sintering aid [55]. However, Ni prevented grain growth, which is desired to increase the thermal conductivity. For this reason, although the activation of densification mechanisms at low temperature and reaching the plateau took less than 15 min, the isothermal hold was extended to 30 min to ensure a coarse and homogeneous microstructure and to raise the thermal conductivity.",
+      "The lower sinterability of the HfB2-based material, indicated by 1700 ◦C and lower densification rate (peak value the of higher 3.2 % minTON − of 1), was compensated by a longer isothermal hold. This requirement is due to the more refractory behaviour of HfB2 compared to ZrB2, which includes a higher melting point and lower transport rates [53, 54,58]."
+    ]
+  },
+  {
+    "category": "multi_chunk",
+    "question": "In the Chen 2025 first-principles study, how does the addition of titanium to zirconium carbide affect lattice parameters, and what causes this change in lattice constants?",
+    "reference_answer": "In the (Zr1−xTix)C solid solution studied by Chen 2025, adding titanium atoms reduces lattice constants and volume as titanium content increases, primarily due to titanium's smaller atomic radius compared to zirconium, causing lattice contraction.",
+    "answer_keys": [
+      ["lattice constants decrease", "Ti content"],
+      ["smaller atomic radius", "titanium"]
+    ],
+    "evidence_any": [
+      "lattice constants and volume of the solid solution decrease with increasing Ti content primarily due to smaller atomic radius of Ti compared to Zr",
+      "the three lattice constants a b c after TiC incorporation which arises from lattice distortion and reduced symmetry caused by heteroatom substitution"
+    ],
+    "source_docs": ["Chen_2025_CeramicsInternational_Structuraldesign.pdf"],
+    "excerpts": [
+      "The lattice constants and unit-cell volume obtained after structural optimization of the SQS model generated through first-principles calculations using ATAT are listed in Table 1. It can be observed that the lattice constant of zirconium carbide is 4.723 after structural optimization, which is close to the calculation result of Li's [43]. Moreover, the lattice constants and volume of the solid solution decrease with increasing Ti content, primarily due to the smaller atomic radius of Ti compared to Zr. Additionally, slight discrepancies are observed among the three lattice constants (a, b, c) after TiC incorporation, which arises from lattice distortion and reduced symmetry caused by heteroatom substitution and the stochastic nature of the SQS model. Nevertheless, the unit cell retains the FCC structure.",
+      "The formation and cohesive energies of carbide solid solutions with different compositions were calculated to analyze the influence of Ti atomic doping concentration on the structural stability of solid solutions (Fig. 2(a)). As revealed by Fig. 2(a), the formation energy increases with higher Ti content, indicating that Ti atomic incorporation reduces the structural stability of ZrC. This phenomenon can be explained by the gradual increase in the lattice distortion and elevated microscopic internal stress, which collectively increase the total energy. The bond lengths and angles changed when ZrC lattice incorporates titanium atoms, thereby causing lattice distortion. Moreover, since the atomic radius of titanium atoms is smaller than that of zirconium atoms, the lattice around the zirconium atoms will contract when titanium atoms occupy the sites of zirconium atoms, and tensile stress will be generated within the crystal."
+    ]
+  },
+  {
+    "category": "multi_chunk",
+    "question": "In the Chen 2025 study, how do the bonding characteristics of Ti-C versus Zr-C bonds in (Zr1−xTix)C solid solution relate to differences in elastic constants C11 and C44?",
+    "reference_answer": "In Chen 2025's analysis of (Zr1−xTix)C, Ti-C bonds exhibit shorter length (2.27 Å) but weaker bond strength (population 0.1435) compared to Zr-C bonds (length 2.36 Å, population 0.1896). This lower Ti-C bond strength causes elastic constants C11 and C44 to decrease with increasing titanium content.",
+    "answer_keys": [
+      ["Ti-C weaker bond", "elastic constants decrease"],
+      ["C11", "C44", "bond strength"]
+    ],
+    "evidence_any": [
+      "Ti-C bond exhibits shorter bond length 2.27 Å but weaker bond strength integral crystal orbital overlap population 0.1435",
+      "introduction of Ti atoms causes reduction in elastic constants C11 and C44 indicating weakened resistance"
+    ],
+    "source_docs": ["Chen_2025_CeramicsInternational_Structuraldesign.pdf"],
+    "excerpts": [
+      "Fig. 3(a) presents the elastic constants of solid solutions with different compositions calculated using first-principles methods. All solid solutions satisfy the criteria for mechanical stability: C11 − C12 > 0, C11 > 0, C44 > 0, and C11 + 2C12 > 0. Notably, the introduction of Ti atoms causes a reduction in the elastic constants C11 and C44, indicating weakened resistance to both uniaxial compressive stress and shear resistance [44]. This phenomenon results from the distinct bonding characteristics in the (Zr1− xTix)C solid solution. In particular, the Ti-C bond exhibits a shorter bond length (2.27 Å) but weaker bond strength (integral crystal orbital overlap population = 0.1435), whereas the Zr-C bond has a longer bond length (2.36 Å) and a higher population (0.1896). The lower population of Ti-C directly correlates with reduced elastic constants, as population reflects the covalent interaction strength between atoms.",
+      "The mechanical properties of materials are intrinsically linked to their electronic structures. The performance-modulation mechanisms can be better elucidated by analyzing the bonding characteristics of (Zr1− xTix)C solid solutions. Fig. 6 and Fig. S2 show the total DOS (TDOS) and partial DOS (PDOS) of ZrC, TiC, and (Zr1− xTix)C solid solutions, with EF set at 0 eV. All of them exhibit nonzero DOS at EF, confirming metallic behavior. In Fig. S2, the TDOS and PDOS of ZrC reveal that the dominant peak below EF arises from hybridization between Zr-4d and C- 2p orbitals, suggesting strong covalent bonding."
+    ]
+  },
+  {
+    "category": "multi_chunk",
+    "question": "In the Chen 2025 study, how does nitrogen doping affect the thermodynamic stability of (Zr1−xTix)C solid solution, and what does this mean for synthesis processing temperatures?",
+    "reference_answer": "In Chen 2025's analysis, nitrogen incorporation into (Zr1−xTix)C decreases formation energy and mixing enthalpy from 11.025 kJ/mol (0% N) to 0.59 kJ/mol (50% N), substantially lowering the synthesis temperature required because the critical temperature where ΔGmix equals zero decreases with N content.",
+    "answer_keys": [
+      ["N doping", "formation energy decreases"],
+      ["lower synthesis temperature", "ΔGmix"]
+    ],
+    "evidence_any": [
+      "incorporation of N reduces internal microstress within lattice thus reducing total energy enhanced energetic stability",
+      "ΔHmix decreases significantly from 11.025 kJ/mol 0 at% N to 0.59 kJ/mol 50 at% N"
+    ],
+    "source_docs": ["Chen_2025_CeramicsInternational_Structuraldesign.pdf"],
+    "excerpts": [
+      "The formation and cohesive energies of carbide solid solutions at different compositions were calculated; the results are shown in Fig. 7 (a). As revealed by Fig. 7(a), as the N content increases, the formation energy of the solid solution gradually decreases, signifying enhanced energetic stability of the (Zr1− xTix)C,N solid solution. The incorporation of N reduces internal microstress within the lattice, thus reducing the total energy of the system. Conversely, cohesion energy increases with N content. Cohesion energy reflects the strength of interatomic bonding in the unit cell, and its increase may be attributed to the formation of weaker chemical bonds (Zr-N and Ti-N) compared to the original Zr-C and Ti-C bonds.",
+      "Fig. 7(b) depicts the mixing enthalpy under different N contents, revealing that ΔHmix decreases significantly from 11.025 kJ/mol (0 at% N) to 0.59 kJ/mol (50 at% N) as the N content increases. A lower ΔHmix implies reduced heat absorption during solid solution formation. Additionally, nonmetallic sublattices in the (Zr1− xTix)C,N solid solution also possess configurational entropy. The mixed entropy of the system exhibits a gradual increase, as shown in Fig. 7(c). The decreasing ΔHmix and increasing ΔSmix jointly drive the critical temperature (where ΔGmix = 0) downward. Thus, the addition of N reduces the difficulty in preparing the (Zr1− xTix)C,N solid solution, as shown in Fig. 7(d)."
+    ]
+  },
+  {
+    "category": "multi_chunk",
+    "question": "In the Chen 2025 study, at what nitrogen concentration do mechanical properties of (Zr1−xTix)C,N reach their maximum values, and which properties show this peak?",
+    "reference_answer": "In Chen 2025's first-principles calculations, the (Zr1−xTix)C,N solid solution reaches maximum Young's modulus (422.7 GPa) and hardness (24.81 GPa) at 19 at% nitrogen content, both exceeding those of pure ZrC (396.5 and 22.37 GPa respectively).",
+    "answer_keys": [
+      ["19 at%", "nitrogen concentration"],
+      ["422.7 GPa", "24.81 GPa", "Young's modulus", "hardness"]
+    ],
+    "evidence_any": [
+      "Young's modulus and hardness of Zr1−xTixC,N solid solutions first increase and then decrease with increasing N reaching maximum values of 422.7 and 24.81 GPa at N content of 19 at%",
+      "melting point Debye temperature and thermal conductivity reach their maxima at nitrogen content of 19 at%"
+    ],
+    "source_docs": ["Chen_2025_CeramicsInternational_Structuraldesign.pdf"],
+    "excerpts": [
+      "Fig. 9 presents the mechanical properties of solid solutions under varying N atom contents. As shown in Fig. 9(a–d), the Young's modulus and hardness of the (Zr1− xTix)C,N solid solutions first increase and then decrease with increasing N content, reaching maximum values of 422.7 and 24.81 GPa at a N content of 19 at%, both exceeding those of ZrC (396.5 and 22.37 GPa, respectively). By contrast, Poisson's ratio and Cauchy pressure exhibit an initial decrease followed by an increase with higher N content, attaining minima at a N content of 19 at% (0.2080 and − 51.79 GPa, respectively), which are slightly lower than those of ZrC (0.2180 and − 38.77 GPa, respectively).",
+      "Fig. 8(c) displays the melting points derived from elastic constants, revealing that the melting temperature first increases and then decreases, subsequently rising again with N content, attaining a maximum of 3530 K at a N content of 19 at%. This trend demonstrates that N doping mitigates the melting point reduction induced by Ti substitution in ZrC-based UHTCs, surpassing the theoretical melting point of pristine ZrC (3400 K) calculated at 0 K and 0 Pa. Fig. 8(d) and Fig. S3 (phonon velocity data) reveal that both the Debye temperature (ΘD) and thermal conductivity (κ) peak at a N content of 19 at%, with values of 744 K and 1.510 W/m⋅K, respectively, which are higher than that of pure ZrC (693 K and 1.376 W/m⋅K, respectively)."
+    ]
+  },
+  {
+    "category": "multi_chunk",
+    "question": "In the Chen 2025 study, how does nitrogen doping enhance bonding between titanium and carbon atoms, and what evidence from charge density analysis supports this mechanism?",
+    "reference_answer": "In Chen 2025's charge density analysis of (Zr1−xTix)C,N, nitrogen doping creates stronger electron cloud formation between Ti and C atoms, as shown by comparison of regions with and without N neighbors. This strengthens Ti-C covalent bonds while enhancing overall pseudogap magnitude in the density of states.",
+    "answer_keys": [
+      ["N doping", "Ti-C bond strengthens"],
+      ["electron cloud", "charge density", "covalent bonds"]
+    ],
+    "evidence_any": [
+      "when both N and C atoms surround Ti atom stronger electron cloud formed between Ti C thereby strengthening covalent bond",
+      "pseudogap in DOS exhibits overall upward trend as N content increased indicating N atoms augments strength of covalent bonds"
+    ],
+    "source_docs": ["Chen_2025_CeramicsInternational_Structuraldesign.pdf"],
+    "excerpts": [
+      "Fig. 10 depicts the charge density distribution and charge density difference of the (Zr1− xTix)C,N solid solution. As demonstrated in Fig. 10 (a), the N atom exhibits the highest charge density, which is attributable to the high electronegativity of N. As shown in Fig. 10(b), the upper energy limit in the scale is adjusted, thereby enabling observation of the formation of a distinct chemical bond between N, C atoms and Zr, Ti atoms, which is typical covalent bonding. Moreover, a comparison of regions 1 and 2 reveals that when a Ti atom is surrounded by C atoms, the electrons surrounding the Ti atom and its neighboring C atoms are uniformly distributed, as illustrated in region 2. However, when both N and C atoms surround the Ti atom, a stronger electron cloud is formed between the Ti and C atoms, thereby strengthening the covalent bond between C and Ti atoms, as depicted in region 1 in Fig. 10(b).",
+      "Figs. 11 and 12 show the TDOS and PDOS for (Zr1− xTix)C,N solid solutions under varying N atom doping concentrations, with EF set at 0 eV. Nonzero DOS at EF in all (Zr1− xTix)C,N solid solutions confirms their metallic character, even after N incorporation. A distinct peak emerges at − 14 eV, intensifying with higher N content. PDOS analysis reveals that this peak originates from the hybridization between N-2p and Zr-4d orbitals. As the N content increases, the DOS at EF splits into dual peaks owing to the enhanced hybridization of Zr-4d, Ti-3d, C-2p, and N-2p orbitals, indicating stronger covalent bonds between N-2p and transition-metal d orbitals. The pseudogap (energy gap between sharp DOS peaks near EF) can be employed to indicate the strength of the overall covalent bonding within the crystal. As shown in Fig. S5, the magnitude of the pseudogap in the DOS exhibits an overall upward trend as the N content is increased. The maximum value is attained at a N content of 50 at%, indicating that the incorporation of N atoms improves the overall covalent bonding strength in the solid solution."
+    ]
+  }
+]

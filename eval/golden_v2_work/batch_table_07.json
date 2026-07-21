@@ -58,9 +58,9 @@
     "question": "What is the median grain diameter d50 in micrometers of the main TaC phase in the Manaud 2024 EBSD/EDS analysis?",
     "reference_answer": "The median grain diameter d50 of the main TaC phase is 1.79 micrometers.",
     "answer_keys": [["1.79"], ["micrometers", "micrometer"], ["tac"]],
-    "evidence_any": ["TaC Cubic 4.4430 1 0.92 0.98 1.79 4.1", "d50 of the main phase TaC or Ta2CxNy decreases monotonically"],
+    "evidence_any": ["The d50 of the main phase TaC or Ta2CxNy decreases monotonically", "The size distributions of the main phases listed in Table 2"],
     "source_docs": ["Manaud_2024_OpenCeramics_Sparkplasma.pdf"],
-    "excerpts": ["Table 2 Crystallography parameters determined by Rietveld refinement on PXRD diagrams and microstructural parameters measured on ion polished cross sections of each sample from TaC to TaN after SPS sintering.\n\nSample Phase Structure Unit cell parameters\n\n(Å)\n\n6 Volume fraction (− )\n\nd50 (μm)\n\nTaC TaC Cubic 4.4430(1) 0.92 0.98 1.79 4.1 5.2"]
+    "excerpts": ["Table 2 Crystallography parameters determined by Rietveld refinement on PXRD diagrams and microstructural parameters measured on ion-polished cross-sections of each sample from TaC to TaN after SPS sintering.\n\nSample Phase Structure Unit cell parameters (Å) Volume fraction d50 (μm)\n\nTaC TaC Cubic 4.4430(1) 0.92 0.98 1.79 4.1 5.2\n\nThe size distributions calculated based upon equivalent diameter filling with overlapping disks showed that the d50 of the main phase TaC or Ta2CxNy decreases monotonically by a factor of approximately two between the TaC and Ta2CN sample."]
   },
   {
     "category": "table",
