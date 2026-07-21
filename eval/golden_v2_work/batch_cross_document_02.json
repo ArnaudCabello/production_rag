@@ -3,25 +3,65 @@
     "category": "cross_document",
     "question": "How does the ZrB2-15vol%SiC composite (material A) studied by Alfano et al. 2010 for plasma oxidation compare to the ZrB2-SiC fiber composites fabricated by direct ink writing in Kemp et al. 2021 in terms of processing route and resulting density?",
     "reference_answer": "Alfano et al. 2010 processed material A (ZrB2 + 15 vol% SiC with 2 vol% MoSi2) by hot pressing to a bulk density of 5.61 g/cm3 (99% relative density), while Kemp et al. 2021 additively manufactured ZrB2-SiC fiber composites via direct ink writing and pyrolysis, achieving much lower Archimedes densities of 3.8-4.0 g/cm3 due to porosity from the polymer-derived ceramic conversion.",
-    "answer_keys": [["hot press", "hot-press"], ["direct ink writing", "diw", "additive"], ["5.61", "3.8", "3.8-4.0", "lower density", "porosity"]],
-    "evidence_any": [
-      "peak temperatures/dwell times/applied pressures were 1820", "The Archimedes’ determined bulk density was 3.8"
+    "answer_keys": [
+      [
+        "hot press",
+        "hot-press"
+      ],
+      [
+        "direct ink writing",
+        "diw",
+        "additive"
+      ],
+      [
+        "5.61",
+        "3.8",
+        "3.8-4.0",
+        "lower density",
+        "porosity"
+      ]
     ],
-    "source_docs": ["Alfano_2010_EuropeanCeramicSociety_Microstructuralcharacterization.pdf", "Kemp_2021_AdditiveManufacturing_Directink.pdf"],
+    "evidence_any": [
+      "peak temperatures/dwell times/applied pressures were 1820",
+      "The Archimedes\u2019 determined bulk density was 3.8"
+    ],
+    "source_docs": [
+      "Alfano_2010_EuropeanCeramicSociety_Microstructuralcharacterization.pdf",
+      "Kemp_2021_AdditiveManufacturing_Directink.pdf"
+    ],
     "excerpts": [
       "Nearly full dense UHTC composites were obtained by hot- pressing of the following powder compositions (vol.%): Material A: ZrB2 + 15 SiC. Material B: ZrB2 + 15 SiC + 10 HfB2. with 2 (vol.%) MoSi2 as a sintering aid. ZrB2 and beta-SiC raw powders were from H.C. Starck, HfB2 from Cerac Inc., and MoSi2 from Sigma-Aldrich. Table 1 summarizes some characteristics of the raw pow- ders used. The as-sintered materials A and B had bulk densities, evaluated using the Archimedes method (water as immersing medium), of 5.61 and 6.06g/cm3, respectively, which corresponds to relative densities of 99 and 98%. The powder mixtures were uniaxially hot-pressed in vac- uum using an inductively heated graphite die, lined with a BN-sprayed graphitized sheet. Peak temperatures/dwell times/applied pressures were 1820 C/15 min/30 MPa for mate- rial A, and 1900-1940 C/45 min/40 MPa for material B, with an average heating rate of 20 C/min.",
-      "All linear shrinkage measurements between as cured and pyrolyzed specimens are shown in Table 4. For the SMP-0f samples the height and length shrinkage only differ by 1.3%. Conversely, both fiber-containing inks had more anisotropic shrinkage with similar values (3.6-4%) for both height and width directions, while the length direction shrank less than 1%. Near zero shrinkage in the length direction is observed in these samples due to fiber alignment along the print direction. The linear shrinkage from the polymer-to-ceramic conversion of unfilled PCS is expected to be 20-30%, but the presence of ~50 vol% solids drastically reduces the total shrinkage of the composites through rigid constraint. While this is beneficial to the fabrication of near net shape UHTCMCs, the rigid network also contributes to the formation of porosity. The Archimedes' determined bulk density was 3.8 ± 0.1 g/cm3, 4.0 ± 0.1 g/cm3, and 2.7 ± 0.2 g/cm3 for SMP-0f, SMP-5f, and SMP-10f, respectively."
+      "All linear shrinkage measurements between as cured and pyrolyzed specimens are shown in Table 4. For the SMP-0f samples the height and length shrinkage only differ by 1.3%. Conversely, both fiber-containing inks had more anisotropic shrinkage with similar values (3.6-4%) for both height and width directions, while the length direction shrank less than 1%. Near zero shrinkage in the length direction is observed in these samples due to fiber alignment along the print direction. The linear shrinkage from the polymer-to-ceramic conversion of unfilled PCS is expected to be 20-30%, but the presence of ~50 vol% solids drastically reduces the total shrinkage of the composites through rigid constraint. While this is beneficial to the fabrication of near net shape UHTCMCs, the rigid network also contributes to the formation of porosity. The Archimedes' determined bulk density was 3.8 \u00b1 0.1 g/cm3, 4.0 \u00b1 0.1 g/cm3, and 2.7 \u00b1 0.2 g/cm3 for SMP-0f, SMP-5f, and SMP-10f, respectively."
     ]
   },
   {
     "category": "cross_document",
     "question": "What high-temperature exposure environment was used to test ZrB2-SiC based ceramics in Alfano et al. 2010, and how does it differ from the oxyacetylene flame environment used to ablate Ti2AlC ceramics in Song et al. 2011?",
     "reference_answer": "Alfano et al. 2010 exposed ZrB2-SiC and ZrB2-HfB2-SiC UHTC samples to a subsonic air microwave plasma in the MESOX solar furnace facility up to about 1750 degrees C, whereas Song et al. 2011 ablated Ti2AlC ceramics with a conventional oxyacetylene torch flame reaching temperatures up to about 3000 degrees C.",
-    "answer_keys": [["mesox", "plasma", "microwave"], ["oxyacetylene", "flame", "torch"], ["1750", "3000"]],
-    "evidence_any": [
-      "The air plasma was generated by a 300 W microwave discharge", "the material to be tested would be locally exposed to a flame temperature up to 3000"
+    "answer_keys": [
+      [
+        "mesox",
+        "plasma",
+        "microwave"
+      ],
+      [
+        "oxyacetylene",
+        "flame",
+        "torch"
+      ],
+      [
+        "1750",
+        "3000"
+      ]
     ],
-    "source_docs": ["Alfano_2010_EuropeanCeramicSociety_Microstructuralcharacterization.pdf", "Song_2011_EuropeanCeramicSociety_Ultra-hightemperature.pdf"],
+    "evidence_any": [
+      "The air plasma was generated by a 300 W microwave discharge",
+      "the material to be tested would be locally exposed to a flame temperature up to 3000"
+    ],
+    "source_docs": [
+      "Alfano_2010_EuropeanCeramicSociety_Microstructuralcharacterization.pdf",
+      "Song_2011_EuropeanCeramicSociety_Ultra-hightemperature.pdf"
+    ],
     "excerpts": [
       "The UHTC sample was put in a plasma reactor consisting of a silica tube (quartz), 50 cm length and 5 cm diameter with CaF2 viewports. The air plasma was generated by a 300 W microwave discharge surrounding the sample. A regulator, a gauge and a vacuum pump allowed for precise control of the total pressure during experiments. The airflow, coming from the top of the reac- tor and then pumped downward, was fixed at 4 l/h. Each sample was subjected to a step ramp in temper- ature from 600 C to approximately 1750 C at a total air pressure of 200 Pa.",
       "The ablation tests were implemented according to the standard GJB 323A-96 with an oxyacetylene flame. The pressure and the flow rate of acetylene were respectively, 0.095 MPa and 1.116 m3 h-1, and the pressure and the flow rate of oxygen were respectively, 0.4 MPa and 1.512 m3 h-1. The dis- tance between the flame gun mouth and ablation surface of the disk was fixed at 10 mm. Under such conditions the material to be tested would be locally exposed to a flame temperature up to 3000 C leading to hot gas flow induced material removal."
@@ -31,11 +71,31 @@
     "category": "cross_document",
     "question": "How do the oxide scale species that form on ZrB2-HfB2-SiC material B in Alfano et al. 2010 compare to those forming on Ti2AlC ceramics in Song et al. 2011 during high-temperature oxidative exposure?",
     "reference_answer": "In Alfano et al. 2010, oxidation of ZrB2-HfB2-SiC material B during plasma exposure to about 1550 degrees C produced a surface layer dominated by silica along with boria, zirconia, and hafnia, whereas Song et al. 2011 found that Ti2AlC ablated under an oxyacetylene flame forms an oxide outer layer consisting mainly of alpha-Al2O3 and TiO2 with some Al2TiO5.",
-    "answer_keys": [["silica", "boria", "zirconia", "hafnia"], ["al2o3", "tio2", "al2tio5"], ["zrb2", "ti2alc"]],
-    "evidence_any": [
-      "the main compound detected was sil- ica", "consisting mainly of α-Al2O3 and TiO2 and some Al2TiO5"
+    "answer_keys": [
+      [
+        "silica",
+        "boria",
+        "zirconia",
+        "hafnia"
+      ],
+      [
+        "al2o3",
+        "tio2",
+        "al2tio5"
+      ],
+      [
+        "zrb2",
+        "ti2alc"
+      ]
     ],
-    "source_docs": ["Alfano_2010_EuropeanCeramicSociety_Microstructuralcharacterization.pdf", "Song_2011_EuropeanCeramicSociety_Ultra-hightemperature.pdf"],
+    "evidence_any": [
+      "the main compound detected was sil- ica",
+      "consisting mainly of \u03b1-Al2O3 and TiO2 and some Al2TiO5"
+    ],
+    "source_docs": [
+      "Alfano_2010_EuropeanCeramicSociety_Microstructuralcharacterization.pdf",
+      "Song_2011_EuropeanCeramicSociety_Ultra-hightemperature.pdf"
+    ],
     "excerpts": [
       "In tested B-DLT, the main compound detected was sil- ica (28.7%, Si-O bond at 103.2 eV), followed by boria (10.5%, B-O bonds) and zirconia (3-4%, O-Zr bond at 530.8 eV). From Fig. 9, the weak Hf 4f5/2,7/2 photoelec- tron peak detected at about 18.0 eV could be attributed to Hf-O bonds in hafnia (about 0.2%). The peak temper- ature of 1550 C reached during the catalycity test resulted in the presence of silica along with hafnia and zirconia.",
       "The ablation surface exhibits a two-layer structure: an oxide outer layer, consisting mainly of alpha-Al2O3 and TiO2 and some Al2TiO5, and a porous sub-surface layer containing Ti2Al1-xC and TiCxOy. With increasing ablation time, the content of TiO2 and Al2TiO5 in the outer layer increased, and more pores developed in the sub-surface layer."
@@ -45,11 +105,30 @@
     "category": "cross_document",
     "question": "What sintering aid or processing agent enabled densification in Alfano et al. 2010's ZrB2-SiC UHTC composites, versus the binder-free approach used to consolidate ZrB2 in Kemp et al. 2021's direct ink writing inks?",
     "reference_answer": "Alfano et al. 2010 used 2 vol% MoSi2 as a sintering aid during hot pressing of the ZrB2-SiC compositions, whereas Kemp et al. 2021 used no separate sintering aid or solvent, instead relying on a preceramic polymer (SMP-10 allylhydridopolycarbosilane) that thermally converts to a SiC matrix binding the ZrB2 powder and SiC fibers during pyrolysis.",
-    "answer_keys": [["mosi2", "sintering aid"], ["preceramic polymer", "smp-10", "sic-yielding"], ["hot press", "pyrolysis", "diw"]],
-    "evidence_any": [
-      "with 2 (vol.%) MoSi2 as a sintering aid", "No additional dispersant or solvent was added to the PCS preceramic polymer"
+    "answer_keys": [
+      [
+        "mosi2",
+        "sintering aid"
+      ],
+      [
+        "preceramic polymer",
+        "smp-10",
+        "sic-yielding"
+      ],
+      [
+        "hot press",
+        "pyrolysis",
+        "diw"
+      ]
     ],
-    "source_docs": ["Alfano_2010_EuropeanCeramicSociety_Microstructuralcharacterization.pdf", "Kemp_2021_AdditiveManufacturing_Directink.pdf"],
+    "evidence_any": [
+      "with 2 (vol.%) MoSi2 as a sintering aid",
+      "No additional dispersant or solvent was added to the PCS preceramic polymer"
+    ],
+    "source_docs": [
+      "Alfano_2010_EuropeanCeramicSociety_Microstructuralcharacterization.pdf",
+      "Kemp_2021_AdditiveManufacturing_Directink.pdf"
+    ],
     "excerpts": [
       "Nearly full dense UHTC composites were obtained by hot- pressing of the following powder compositions (vol.%): Material A: ZrB2 + 15 SiC. Material B: ZrB2 + 15 SiC + 10 HfB2. with 2 (vol.%) MoSi2 as a sintering aid. ZrB2 and beta-SiC raw powders were from H.C. Starck, HfB2 from Cerac Inc., and MoSi2 from Sigma-Aldrich.",
       "A commercially available allylhydridopolycarbosilane SiC-yielding preceramic polymer, SMP-10 (Starfire Systems Inc., Schenectady, NY), was used in this study as the base for DIW inks. SMP-10 has a poly- dispersity index of 5.544 and a 72-78 wt% ceramic yield. Table 1 summarizes the three inks that were developed for this study, all contain only three components: PCS polymer, ZrB2 powder, and SiCf. No additional dispersant or solvent was added to the PCS preceramic polymer."
@@ -59,11 +138,30 @@
     "category": "cross_document",
     "question": "Compare the atomic oxygen recombination coefficients measured by Alfano et al. 2010 for ZrB2-SiC based UHTCs against the linear ablation rate reported by Song et al. 2011 for Ti2AlC, as measures of surface reactivity under thermal exposure.",
     "reference_answer": "Alfano et al. 2010 measured atomic oxygen recombination coefficients for ZrB2-SiC based materials that rose to about 0.1 at the highest temperatures in the MESOX plasma facility, while Song et al. 2011 reported that Ti2AlC exhibited a very low linear ablation rate that decreased from 0.14 micrometers per second at 30 seconds to 0.08 micrometers per second after 180 seconds under oxyacetylene flame ablation.",
-    "answer_keys": [["recombination coefficient", "0.1", "gamma"], ["ablation rate", "0.14", "0.08"], ["zrb2", "ti2alc"]],
-    "evidence_any": [
-      "these samples had low catalytic activity", "The lin- ear ablation rate for the Ti2AlC samples was 0.14"
+    "answer_keys": [
+      [
+        "recombination coefficient",
+        "0.1",
+        "gamma"
+      ],
+      [
+        "ablation rate",
+        "0.14",
+        "0.08"
+      ],
+      [
+        "zrb2",
+        "ti2alc"
+      ]
     ],
-    "source_docs": ["Alfano_2010_EuropeanCeramicSociety_Microstructuralcharacterization.pdf", "Song_2011_EuropeanCeramicSociety_Ultra-hightemperature.pdf"],
+    "evidence_any": [
+      "these samples had low catalytic activity",
+      "The lin- ear ablation rate for the Ti2AlC samples was 0.14"
+    ],
+    "source_docs": [
+      "Alfano_2010_EuropeanCeramicSociety_Microstructuralcharacterization.pdf",
+      "Song_2011_EuropeanCeramicSociety_Ultra-hightemperature.pdf"
+    ],
     "excerpts": [
       "Finally, these samples had low catalytic activity (about 10-2) when a borosilicate glassy layer with some zirconia was formed on the surface below 1550 C. When zirconia was present in higher concentrations, the recombination coefficient increased to about 0.1. Moreover, the presence of HfB2 in material B led to higher recombination coefficients, probably due to the higher catalycity of hafnia compared to zirconia.",
       "The linear and mass ablation rates as a function of the ablation time for the Ti2AlC samples are plotted in Fig. 2. The lin- ear ablation rate was 0.14 micrometers per second during the initial 30s, and decreased to 0.085 micrometers per second when the ablation time exceeded 180s. Such a decrease in the linear ablation rate with abla- tion time is generally attributed to the formation of an ablation layer on the base material."
@@ -73,11 +171,29 @@
     "category": "cross_document",
     "question": "How does the average particle size of the ZrB2 raw powder used by Kemp et al. 2021 for direct ink writing inks compare to the ZrB2 powder characteristics reported by Alfano et al. 2010 for hot-pressed UHTCs?",
     "reference_answer": "Kemp et al. 2021 used ZrB2 powder from H.C. Starck with an average particle size of 3.6 micrometers, later ball milled to about 1.3 micrometers, while Alfano et al. 2010 used ZrB2 powder also from H.C. Starck with a particle size range of 0.2-10 micrometers and specific surface area of 1 m2/g as determined by BET.",
-    "answer_keys": [["3.6", "1.3"], ["0.2–10", "0.2-10", "particle size range"], ["h.c. starck", "zrb2"]],
-    "evidence_any": [
-      "had an average particle size of 3.6", "particle size range (psr obtained by SEM)"
+    "answer_keys": [
+      [
+        "3.6",
+        "1.3"
+      ],
+      [
+        "0.2\u201310",
+        "0.2-10",
+        "particle size range"
+      ],
+      [
+        "h.c. starck",
+        "zrb2"
+      ]
     ],
-    "source_docs": ["Kemp_2021_AdditiveManufacturing_Directink.pdf", "Alfano_2010_EuropeanCeramicSociety_Microstructuralcharacterization.pdf"],
+    "evidence_any": [
+      "had an average particle size of 3.6",
+      "particle size range (psr obtained by SEM)"
+    ],
+    "source_docs": [
+      "Kemp_2021_AdditiveManufacturing_Directink.pdf",
+      "Alfano_2010_EuropeanCeramicSociety_Microstructuralcharacterization.pdf"
+    ],
     "excerpts": [
       "The as-received ZrB2 (H.C. Stark GmbH, Grade B, Goslar, Germany) used in this study had an average particle size of 3.6 micrometers, as measured via a multi-wavelength particle size analyzer (Beckman Coulter, LS 13 320 Particle Size Analyzer, Indianapolis, IN). Particle size reduction was achieved via ball milling for 24 h in ethanol with 5 mm diameter SiC milling media (average particle size 1.3 micrometers).",
       "Some characteristics of the raw powders: specific surface area (s.s.a. obtained by BET method), particle size range (psr obtained by SEM) and main impurities. ZrB2 H.C. Starck, Germany grade B 1 0.2-10 O: 1; Hf: 0.2. HfB2 Cerac, USA 325 mesh - 0.5-5 Zr: 0.5. SiC H.C. Starck, Germany BF12 11.6 0.05-2 O: 1.65."
@@ -87,11 +203,30 @@
     "category": "cross_document",
     "question": "What toughening or reinforcement strategy does Kemp et al. 2021 use to address brittle failure in ZrB2-based UHTCs, and how does this contrast with the microstructural failure modes discussed for Ti2AlC ablation in Song et al. 2011?",
     "reference_answer": "Kemp et al. 2021 addresses brittleness by incorporating chopped SiC fibers into ZrB2-SiC inks to enable fiber pullout as a toughening mechanism during direct ink writing, whereas Song et al. 2011 describes Ti2AlC's ablation resistance arising from decomposition into TiC0.5 twins and Al2O3 formation rather than fiber-based toughening, since Ti2AlC is a fiber-free monolithic MAX phase ceramic.",
-    "answer_keys": [["fiber pullout", "chopped sic fiber", "sicf"], ["tic0.5", "decompos", "twins"], ["ti2alc", "zrb2"]],
-    "evidence_any": [
-      "show evidence of some fiber pullout", "a twinned TiC0.5 structure might be generated due to the collapse"
+    "answer_keys": [
+      [
+        "fiber pullout",
+        "chopped sic fiber",
+        "sicf"
+      ],
+      [
+        "tic0.5",
+        "decompos",
+        "twins"
+      ],
+      [
+        "ti2alc",
+        "zrb2"
+      ]
     ],
-    "source_docs": ["Kemp_2021_AdditiveManufacturing_Directink.pdf", "Song_2011_EuropeanCeramicSociety_Ultra-hightemperature.pdf"],
+    "evidence_any": [
+      "show evidence of some fiber pullout",
+      "a twinned TiC0.5 structure might be generated due to the collapse"
+    ],
+    "source_docs": [
+      "Kemp_2021_AdditiveManufacturing_Directink.pdf",
+      "Song_2011_EuropeanCeramicSociety_Ultra-hightemperature.pdf"
+    ],
     "excerpts": [
       "SEM of the SMP-5f and SMP-10f fracture surfaces show evidence of some fiber pullout (Fig. 5C and D), which is an indicator of a weak fiber-matrix interface and a known toughening mechanism. Future work will focus on modification of the fiber-matrix interface (i.e., fiber coatings) to increase the amount of fiber pullout to improve fracture toughness.",
       "When the Al vacancy concentration exceeds a crit- ical point (50% vacancies on the Al sites according to the ab initio calculations of Wang et al. on Ti2AlC), a twinned TiC0.5 structure might be generated due to the collapse of Ti2AlxC structure. When Ti2AlC is exposed to the oxyacetylene flame with a temperature up to about 3000 C, the decomposition and oxidation of Ti2AlC will occur simultaneously."
@@ -101,11 +236,30 @@
     "category": "cross_document",
     "question": "How does the machining method used to shape ZrB2-SiC-based billets in Alfano et al. 2010 differ from the near-net-shape forming method for ZrB2-SiC composites demonstrated by Kemp et al. 2021?",
     "reference_answer": "Alfano et al. 2010 shaped hot-pressed ZrB2-SiC billets into their final form using either diamond-loaded tooling or electrical discharge machining after densification, while Kemp et al. 2021 directly formed near-net-shape ZrB2-SiC fiber composite parts by extruding preceramic polymer inks through direct ink writing before pyrolysis, avoiding post-densification machining.",
-    "answer_keys": [["diamond", "electrical discharge", "edm"], ["direct ink writing", "diw", "extrud"], ["near-net", "zrb2"]],
-    "evidence_any": [
-      "samples machined by diamond-loaded tooling (DLT) and samples machined by EDM", "creating near- net and complex shaped parts of SiCf-reinforced ZrB2-SiC"
+    "answer_keys": [
+      [
+        "diamond",
+        "electrical discharge",
+        "edm"
+      ],
+      [
+        "direct ink writing",
+        "diw",
+        "extrud"
+      ],
+      [
+        "near-net",
+        "zrb2"
+      ]
     ],
-    "source_docs": ["Alfano_2010_EuropeanCeramicSociety_Microstructuralcharacterization.pdf", "Kemp_2021_AdditiveManufacturing_Directink.pdf"],
+    "evidence_any": [
+      "samples machined by diamond-loaded tooling (DLT) and samples machined by EDM",
+      "creating near- net and complex shaped parts of SiCf-reinforced ZrB2-SiC"
+    ],
+    "source_docs": [
+      "Alfano_2010_EuropeanCeramicSociety_Microstructuralcharacterization.pdf",
+      "Kemp_2021_AdditiveManufacturing_Directink.pdf"
+    ],
     "excerpts": [
       "Within the MESOX experimental campaign, catalytic properties of two ZrB2-SiC UHTC compositions were determined; more specifi- cally, samples machined by diamond-loaded tooling (DLT) and samples machined by EDM were tested to assess the effect of the surface finish (different surface roughness, partial oxidation during machining) upon those properties.",
       "In this work, we show an example of additive manufacturing of UHTCMCs, ultimately creating near-net and complex shaped parts of SiCf-reinforced ZrB2-SiC. DIW inks containing ZrB2 powder, PCS, and chopped SiCf have been developed and characterized as a function of SiCf content. We demonstrate the ability of this ink to make geometri- cally complex ceramic composites with a low amount of linear shrinkage (< 5%)."
@@ -115,11 +269,31 @@
     "category": "cross_document",
     "question": "What role do voids and porosity play in the ablated sub-surface layer of Ti2AlC in Song et al. 2011 compared to the defects observed in pyrolyzed ZrB2-SiC fiber composites made by direct ink writing in Kemp et al. 2021?",
     "reference_answer": "In Song et al. 2011, porosity in the sub-surface layer of ablated Ti2AlC arises from volume shrinkage during the transformation of Ti2AlC into TiC0.5 twins plus emission of CO and CO2, while in Kemp et al. 2021, porosity in pyrolyzed ZrB2-SiC fiber composites results from entrapped air, boiling off of low-molecular-weight PCS oligomers during curing, and constrained shrinkage during pyrolysis.",
-    "answer_keys": [["tic0.5", "volume shrinkage", "co and co2"], ["oligomer", "entrapped air", "constrained shrinkage"], ["ti2alc", "pcs", "pyroly"]],
-    "evidence_any": [
-      "pores are created unavoidably", "attributed to either the volatil- ization of low-molecular-weight oligomers"
+    "answer_keys": [
+      [
+        "tic0.5",
+        "volume shrinkage",
+        "co and co2"
+      ],
+      [
+        "oligomer",
+        "entrapped air",
+        "constrained shrinkage"
+      ],
+      [
+        "ti2alc",
+        "pcs",
+        "pyroly"
+      ]
     ],
-    "source_docs": ["Song_2011_EuropeanCeramicSociety_Ultra-hightemperature.pdf", "Kemp_2021_AdditiveManufacturing_Directink.pdf"],
+    "evidence_any": [
+      "pores are created unavoidably",
+      "attributed to either the volatil- ization of low-molecular-weight oligomers"
+    ],
+    "source_docs": [
+      "Song_2011_EuropeanCeramicSociety_Ultra-hightemperature.pdf",
+      "Kemp_2021_AdditiveManufacturing_Directink.pdf"
+    ],
     "excerpts": [
       "Due to the higher density of TiCx (~4.93 g cm-3) compared to that of Ti2AlC (4.11 g cm-3), such a transformation will cause vol- ume shrinkage, and as a result, pores are created unavoidably. Both the Al vacancies and the subsequent pores will enhance the inward diffusion of oxygen into Ti2AlxC. With uptake of oxygen, TiC twins are re-constructed as TiCxOy.",
       "These voids were only observed in samples after both curing and pyrolysis and are attributed to either the volatil- ization of low-molecular-weight oligomers from the PCS during curing or the entrapment of air in the ink during the loading process. The lack of larger-scale, bulk processing of PDCs reported in literature makes it difficult to directly compare these porosity results."
@@ -129,11 +303,32 @@
     "category": "cross_document",
     "question": "How do the flexural strength values reported by Kemp et al. 2021 for direct-ink-written ZrB2-SiC fiber composites compare to conventionally processed dense ZrB2 and SiCf-based UHTC matrix composites they cite, and how does that strength gap relate to the porous oxide layers reported by Alfano et al. 2010 for hot-pressed ZrB2-SiC ceramics?",
     "reference_answer": "Kemp et al. 2021 measured average flexural strengths of only 51.9 MPa and 38.3 MPa for SMP-5f and SMP-10f direct-ink-written composites, far below the 240-600 MPa reported for dense conventionally processed ZrB2 and SiCf-based UHTCMCs, attributing the gap to large pores and defects; in contrast, Alfano et al. 2010's hot-pressed ZrB2-SiC material A reached 99% relative density (5.61 g/cm3) with only thin oxide surface layers forming upon plasma exposure rather than bulk porosity.",
-    "answer_keys": [["51.9", "38.3", "240", "600"], ["99%", "5.61", "relative density"], ["zrb2", "diw", "hot press"]],
-    "evidence_any": [
-      "The fracture strength is low compared to other dense ZrB2 and SiCf based UHTCMCs (240", "which corresponds to relative densities of 99 and 98%"
+    "answer_keys": [
+      [
+        "51.9",
+        "38.3",
+        "240",
+        "600"
+      ],
+      [
+        "99%",
+        "5.61",
+        "relative density"
+      ],
+      [
+        "zrb2",
+        "diw",
+        "hot press"
+      ]
     ],
-    "source_docs": ["Kemp_2021_AdditiveManufacturing_Directink.pdf", "Alfano_2010_EuropeanCeramicSociety_Microstructuralcharacterization.pdf"],
+    "evidence_any": [
+      "The fracture strength is low compared to other dense ZrB2 and SiCf based UHTCMCs (240",
+      "which corresponds to relative densities of 99 and 98%"
+    ],
+    "source_docs": [
+      "Kemp_2021_AdditiveManufacturing_Directink.pdf",
+      "Alfano_2010_EuropeanCeramicSociety_Microstructuralcharacterization.pdf"
+    ],
     "excerpts": [
       "The average fracture strength of the SMP-5f and SMP-10f pyrolyzed bars were 51.9 MPa and 38.3 MPa, respectively. The fracture strength is low compared to other dense ZrB2 and SiCf based UHTCMCs (240-600 MPa), due to the prevalence of large pores and defects (Fig. 5A and B).",
       "The as-sintered materials A and B had bulk densities, evaluated using the Archimedes method (water as immersing medium), of 5.61 and 6.06g/cm3, respectively, which corresponds to relative densities of 99 and 98%. The powder mixtures were uniaxially hot-pressed in vac- uum using an inductively heated graphite die, lined with a BN-sprayed graphitized sheet."
@@ -141,27 +336,33 @@
   },
   {
     "category": "cross_document",
-    "question": "How does the role of HfB2 addition in Alfano et al. 2010's ZrB2-HfB2-SiC composite affect surface catalytic behavior compared to the role of SiC fiber loading in Kemp et al. 2021's ZrB2-SiC direct ink writing composites on mechanical and microstructural behavior?",
-    "reference_answer": "In Alfano et al. 2010, adding HfB2 to ZrB2-SiC (material B) raised the surface catalytic recombination coefficient relative to material A because hafnia formed on the oxidized surface is more catalytically active than zirconia, while in Kemp et al. 2021, increasing SiC fiber loading from 5.75 to 10 vol% in ZrB2-SiC direct-ink-written composites increased porosity and reduced fiber alignment, lowering flexural strength from 51.9 MPa to 38.3 MPa.",
-    "answer_keys": [["hfb2", "hafnia", "catalytic"], ["fiber loading", "sicf", "10 vol%"], ["zrb2", "recombination", "flexural"]],
-    "evidence_any": [
-      "the presence of HfB2 in material B led to higher recombination coefficients", "An increase in porosity area fraction and size, along with a lower degree of fiber alignment, was observed"
-    ],
-    "source_docs": ["Alfano_2010_EuropeanCeramicSociety_Microstructuralcharacterization.pdf", "Kemp_2021_AdditiveManufacturing_Directink.pdf"],
-    "excerpts": [
-      "Moreover, the presence of HfB2 in material B led to higher recombination coefficients, probably due to the higher catalycity of hafnia compared to zirconia. This study highlighted the extreme complexity of UHTC oxidation behavior.",
-      "In this study, we have shown an example of UHTCMCs fabricated by DIW. An increase in porosity area fraction and size, along with a lower degree of fiber alignment, was observed in the pyrolyzed parts with the highest fiber content (10 vol% vs. 5.75 vol%). With increased fiber content, fiber misalignment and a change in orientation of shrinkage cracking were observed."
-    ]
-  },
-  {
-    "category": "cross_document",
     "question": "How do the ablation products formed on Ti2AlC ceramics under oxyacetylene flame exposure in Song et al. 2011 compare in stability to the oxide layers that form on hot-pressed ZrB2-SiC ceramics under plasma exposure above 1550 degrees C in Alfano et al. 2010?",
     "reference_answer": "In Song et al. 2011, the Al2O3, TiO2, and Al2TiO5 oxides formed on ablated Ti2AlC melt but do not totally evaporate up to about 3000 degrees C due to their relatively high melting points, whereas in Alfano et al. 2010, the silica layer on ZrB2-SiC becomes unstable and volatilizes above about 1550 degrees C, leaving only zirconia on the surface at the highest test temperature of 1750 degrees C.",
-    "answer_keys": [["al2o3", "tio2", "al2tio5", "melting point"], ["silica", "volatiliz", "zirconia"], ["ti2alc", "zrb2"]],
-    "evidence_any": [
-      "will melt, but do not totally evaporate due to their relative", "the maximum temperature recorded during the catalyc- ity test was about 1750"
+    "answer_keys": [
+      [
+        "al2o3",
+        "tio2",
+        "al2tio5",
+        "melting point"
+      ],
+      [
+        "silica",
+        "volatiliz",
+        "zirconia"
+      ],
+      [
+        "ti2alc",
+        "zrb2"
+      ]
     ],
-    "source_docs": ["Song_2011_EuropeanCeramicSociety_Ultra-hightemperature.pdf", "Alfano_2010_EuropeanCeramicSociety_Microstructuralcharacterization.pdf"],
+    "evidence_any": [
+      "will melt, but do not totally evaporate due to their relative",
+      "the maximum temperature recorded during the catalyc- ity test was about 1750"
+    ],
+    "source_docs": [
+      "Song_2011_EuropeanCeramicSociety_Ultra-hightemperature.pdf",
+      "Alfano_2010_EuropeanCeramicSociety_Microstructuralcharacterization.pdf"
+    ],
     "excerpts": [
       "The Al2O3, TiO2 and Al2TiO5 at the ablated surface will melt, but do not totally evaporate due to their relative high melting points (2053 C for Al2O3, 1843 C for TiO2 and 1850 C for Al2TiO5). Due to the existence of an octahedral Ti2C sub-lattice in the Ti2AlC lattice, the melting points of TiC0.5 twins may be very close to that of the subsequently formed TiC (~3250 C), which enables Ti2AlC to withstand the severe ablation at ultra-high temperatures.",
       "The volatilization and/or the active oxi- dation of SiC resulted in the absence of silica, considering that the maximum temperature recorded during the catalyc- ity test was about 1750 C. The presence of a dense and smooth borosilicate vitreous layer has been already detected on the same material that was only tested up to 1550 C, in accordance with the passive oxidation process expected for SiC."
