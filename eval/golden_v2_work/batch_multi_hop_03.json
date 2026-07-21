@@ -1,0 +1,152 @@
+[
+  {
+    "category": "multi_hop",
+    "question": "Huang et al. 2016 deposit a ZrB2-SiC coating on PIP-C/SiC composites by slurry and CVD method, while Borrelli et al. 2009 apply a ZrB2-SiC coating to the outer C/SiC dome of the Nose_2 reentry-vehicle nose cap by plasma spray deposition. Which coating is thicker, and roughly by what factor?",
+    "reference_answer": "The plasma-sprayed ZrB2-SiC coating on the Nose_2 outer dome in Borrelli et al. 2009 is about 500 micrometers thick, which is roughly ten times thicker than the approximately 50-micrometer ZrB2-SiC coating produced by slurry and CVD method on PIP-C/SiC composites in Huang et al. 2016.",
+    "answer_keys": [["500"], ["50"], ["thicker", "ten times"]],
+    "evidence_any": [
+      "The coating is about 50 mm thick. ZrB2 coating shows a porous structure and",
+      "was applied by plasma spray deposition technique on the external surface of the outer dome"
+    ],
+    "source_docs": ["Huang_2016_CompositesPartB_Thedegradationbehavior.pdf", "Borrelli_2009_ActaAstronautica_Thermo-structuralbehaviour.pdf"],
+    "excerpts": [
+      "Fig. 1 shows the surface and cross-section of ZrB2eSiC coating. The coating is about 50 mm thick. ZrB2 coating shows a porous structure and no visible cracks exist in the surface of the coatings. On the surface of the ZrB2 coating, dense CVD-SiC coating is prepared to prevent Oxygen from damaging the composites. The ZrB2 coating and SiC coating are confirmed by EDS. Fig. 2 shows the surface and cross-section of ZrCeSiC coating. As the same with ZrB2eSiC coating, the coating is about 50 mm thick, and ZrCeSiC coating is successfully fabricated by CVD method and slurry method, which is also confirmed by EDS.",
+      "The conical tip, which is intended to sustain the greatest thermal load in the whole nose cap structure, is made of ultra-high temperature ZrB2-SiC ceramic. The tip was produced by hot pressing sintering and then finished by EDM (electrical discharge machining). The outer dome is made of C/SiC and has the shape of a hollow frustum of cone. It was manufactured by polymer infiltration and pyrolis (PIP) process. Components obtained by PIP are usually characterized by high residual porosity so that a thin protective coating is needed to protect the fibres from oxidation. In this case, a ZrB2-SiC coating, about 500 micrometers thick, was applied by plasma spray deposition technique on the external surface of the outer dome."
+    ]
+  },
+  {
+    "category": "multi_hop",
+    "question": "Yang et al. 2025 sinter porous YB2C2 ceramics at the temperature required to obtain a phase-pure product, while Huang et al. 2016 deposit a CVD-SiC coating on PIP-C/SiC composites at a fixed reduced-pressure temperature. Which process uses the higher processing temperature?",
+    "reference_answer": "Yang et al. 2025 sinter porous YB2C2 ceramics at 1950 degrees C to obtain the phase-pure product, which is a much higher temperature than the 1100 degrees C used by Huang et al. 2016 to deposit the CVD-SiC coating on PIP-C/SiC composites.",
+    "answer_keys": [["1950"], ["1100"], ["higher"]],
+    "evidence_any": [
+      "phase-pure YB2C2 is obtained at 1950",
+      "The deposition temperature is controlled in the 1100 C for 5 h at reduced pressure"
+    ],
+    "source_docs": ["Yang_2025_AlloysandCompounds_Hierarchicaldesign.pdf", "Huang_2016_CompositesPartB_Thedegradationbehavior.pdf"],
+    "excerpts": [
+      "(1) Orthogonal parameter optimization (d=0.15 mm, v=30 mm/s, f= 130 %) yielded defect-minimized green bodies with a relative density of 98.23 %, providing a robust precursor for anisotropic ceramic formation. (2) A two-step solvent-thermal debinding route ensured uniform binder removal without cracking. Reaction pathway analysis revealed that phase-pure YB2C2 is obtained at 1950 degrees C, with graphite templates guiding phase formation through localized boro/carbothermal reduction. (3) A mechanistic model for texture generation was established, where printing-induced shear aligns graphite flakes that act as reactive templates. EBSD confirmed strong crystallographic texture, with maximum orientation intensities of 37.75 MUD (X-Y surface) and 26.16 MUD (X-Z surface). (4) Compressive strength decreased with porosity from 76.7 to 21.0 MPa in the X-Y direction, and from 50.0 to 3.2 MPa in the X-Z direction.",
+      "As for the CVD-SiC process, Methyltrichlorosilane (MTS, CH3SiCl3) (a molar ratio of 10 between H2 and MTS) is carried by bubbling hydrogen. Ar is used as the dilute gas to slow down the chemical reaction rate during deposition. The deposition temperature is controlled in the 1100 C for 5 h at reduced pressure of 3 kPa. CVD-SiC coating penetrated in the gaps among ZrB2 (ZrC)eSiC powders, then formed a mixture of ZrB2 (ZrC)eSiC coatings with a layer of dense SiC on the top."
+    ]
+  },
+  {
+    "category": "multi_hop",
+    "question": "In Huang et al. 2016, ZrC-SiC coated PIP-C/SiC composites have an initial (pre-thermal-cycling) flexural strength. In Borrelli et al. 2009, the massive ZrB2-SiC nose tip of the Nose_2 demonstrator reaches a maximum principal stress at the tip-pin coupling contact surface during the PWT test rebuilding analysis. Which value is larger?",
+    "reference_answer": "The 683.0 MPa initial flexural strength of ZrC-SiC coated PIP-C/SiC composites reported in Huang et al. 2016 is larger than the 211 MPa maximum principal stress found at the tip-pin contact surface of the Nose_2 ZrB2-SiC tip reported in Borrelli et al. 2009.",
+    "answer_keys": [["683"], ["211"], ["larger"]],
+    "evidence_any": [
+      "the strength of ZrCeSiC coated C/SiC composites before the tests is 683.0 MPa",
+      "the maximum principal stress is 211 MPa while the maximum F.I. value is about"
+    ],
+    "source_docs": ["Huang_2016_CompositesPartB_Thedegradationbehavior.pdf", "Borrelli_2009_ActaAstronautica_Thermo-structuralbehaviour.pdf"],
+    "excerpts": [
+      "As for ZrB2eSiC coated C/SiC samples, before the tests, the strength of C/SiC composites is 656.5 MPa; and then the strength decreased to 570.2 MPa after the tests, the flexural strength retention is 86.7%. Meanwhile, the strength of ZrCeSiC coated C/SiC composites before the tests is 683.0 MPa; and then the strength decreased to 602.9 MPa after the tests, the flexural strength retention is 88.3%. Compared to uncoated C/SiC composites, the coated C/SiC samples show higher strength through the thermal cycling tests, which means that the UHTCs based coatings are able to improve the mechanical properties of the composites.",
+      "The most stressed area in the tip is the contact surfaces with the coupling pin, where the maximum principal stress is 211 MPa while the maximum F.I. value is about 0.12, thus no critical stress concentration is predicted (Fig. 19). The F.I. found in this region is the most critical one for the entire model. The maximum principal stress at 72s found for the C/SiC frame is about 18 MPa and it is positioned on the C/SiC-pin contact surface."
+    ]
+  },
+  {
+    "category": "multi_hop",
+    "question": "Borrelli et al. 2009 describe how the ZrB2-SiC conical tip of the Nose_2 reentry-vehicle nose cap was fabricated, and Yang et al. 2025 describe how porous YB2C2 ceramics were fabricated. Which of these two ultra-high-temperature ceramic components was produced by additive manufacturing (powder extrusion printing) followed by reaction sintering, versus which was produced by hot pressing followed by machining?",
+    "reference_answer": "The porous YB2C2 ceramic in Yang et al. 2025 was produced by powder extrusion printing, an additive manufacturing technique, followed by in-situ boro/carbothermal reduction sintering, whereas the ZrB2-SiC conical tip of the Nose_2 nose cap in Borrelli et al. 2009 was produced by hot pressing sintering followed by EDM machining, not additive manufacturing.",
+    "answer_keys": [["powder extrusion printing", "additive manufacturing"], ["hot pressing"], ["yb2c2"]],
+    "evidence_any": [
+      "The tip was produced by hot pressing sintering and then finished by EDM",
+      "we demonstrate a novel strategy to fabricate architected porous YB2C2 ceramics"
+    ],
+    "source_docs": ["Borrelli_2009_ActaAstronautica_Thermo-structuralbehaviour.pdf", "Yang_2025_AlloysandCompounds_Hierarchicaldesign.pdf"],
+    "excerpts": [
+      "The conical tip, which is intended to sustain the greatest thermal load in the whole nose cap structure, is made of ultra-high temperature ZrB2-SiC ceramic. The tip was produced by hot pressing sintering and then finished by EDM (electrical discharge machining). The outer dome is made of C/SiC and has the shape of a hollow frustum of cone. It was manufactured by polymer infiltration and pyrolis (PIP) process.",
+      "Here, we demonstrate a novel strategy to fabricate architected porous YB2C2 ceramics exhibiting strong crystallographic and mechanical property anisotropy by synergizing powder extrusion printing with in-situ reaction synthesis. The core of our approach is a templated-growth mechanism, where shear forces during extrusion align sacrificial graphite flakes within the green body. These aligned flakes subsequently serve as heterogeneous nucleation and growth sites for plate-like YB2C2 grains during boro/carbothermal reduction, effectively translating the macro-scale printed path into a micro-scale crystallographic texture."
+    ]
+  },
+  {
+    "category": "multi_hop",
+    "question": "Huang et al. 2016 thermally cycle ZrB2-SiC and ZrC-SiC coated PIP-C/SiC composites over a specified hot-and-cold temperature range simulating low-Earth orbit, while Borrelli et al. 2009 assume an initial temperature at the start of the Nose_2 re-entry trajectory in their FEM model. Which is colder: the low end of Huang's thermal shock range, or Borrelli's assumed initial re-entry temperature of 300 K?",
+    "reference_answer": "The low end of Huang et al. 2016's thermal shock range, -100 degrees C, is colder than Borrelli et al. 2009's initial re-entry temperature of 300 K, which is about 27 degrees C.",
+    "answer_keys": [["-100"], ["300"], ["colder"]],
+    "evidence_any": [
+      "to 200 C; infrared heating and liquid nitrogen are used to heat",
+      "the initial temperature, that is, the temperature at the"
+    ],
+    "source_docs": ["Huang_2016_CompositesPartB_Thedegradationbehavior.pdf", "Borrelli_2009_ActaAstronautica_Thermo-structuralbehaviour.pdf"],
+    "excerpts": [
+      "Thermal shock tests are used to simulate space environment. The tests are carried out in Quality and Reliability Assurance Center in National University of Defense Technology, hot and cold range from -100 C to 200 C; infrared heating and liquid nitrogen are used to heat and cool down respectively, holding time is 10 min; temperature change rate is 50 C/min and thermal shock times are 200 times, the tests are carried out in vacuum environment.",
+      "adiabatic conditions have been applied over the interface between the AISI 304 flange and the model support system; the initial temperature, that is, the temperature at the begin of the re-entry trajectory, has been assumed to be equal to 300K; thermal contacts at all interfaces have been considered as perfect, that is, all the interfaces have been assumed glued."
+    ]
+  },
+  {
+    "category": "multi_hop",
+    "question": "Yang et al. 2025 report the relative density of the optimized printed porous YB2C2 green body fabricated by powder extrusion printing, and Huang et al. 2016 report the flexural strength retention rate of ZrC-SiC coated PIP-C/SiC composites after 200 thermal shock cycles. Which percentage is higher?",
+    "reference_answer": "The 98.23% relative density of the optimized printed YB2C2 green body reported in Yang et al. 2025 is higher than the 88.3% flexural strength retention rate of ZrC-SiC coated PIP-C/SiC composites after thermal cycling reported in Huang et al. 2016.",
+    "answer_keys": [["98.23"], ["88.3"], ["higher"]],
+    "evidence_any": [
+      "The printed green body achieved the relative density of 98.23 % with the dimensional errors",
+      "the strength decreased\n\nto 602.9 MPa after the tests, the flexural strength"
+    ],
+    "source_docs": ["Yang_2025_AlloysandCompounds_Hierarchicaldesign.pdf", "Huang_2016_CompositesPartB_Thedegradationbehavior.pdf"],
+    "excerpts": [
+      "The results of range analysis for relative density and dimensional errors are presented in Table 3 and Fig. 4. Within this work, the layer thickness d showed a positive relationship with the dimensional errors. In order to avoid dimensional errors and improve densification, the optimal printing parameters were selected as d = 0.15 mm, f = 130 %, and v = 30 mm/s. The printed green body achieved the relative density of 98.23 % with the dimensional errors of merely 2.50 %.",
+      "Meanwhile, the strength of ZrCeSiC coated C/SiC composites before the tests is 683.0 MPa; and then the strength decreased to 602.9 MPa after the tests, the flexural strength retention is 88.3%. Compared to uncoated C/SiC composites, the coated C/SiC samples show higher strength through the thermal cycling tests, which means that the UHTCs based coatings are able to improve the mechanical properties of the composites."
+    ]
+  },
+  {
+    "category": "multi_hop",
+    "question": "Yang et al. 2025 report the maximum compressive strength of porous YB2C2 ceramics at about 50% porosity, and Borrelli et al. 2009 report the maximum principal stress reached in the massive ZrB2-SiC nose tip of the Nose_2 demonstrator during the PWT test rebuilding. Which value is larger?",
+    "reference_answer": "The 211 MPa maximum principal stress found in the Nose_2 ZrB2-SiC tip reported by Borrelli et al. 2009 is larger than the 76.7 MPa maximum compressive strength of porous YB2C2 ceramics at about 50% porosity reported by Yang et al. 2025.",
+    "answer_keys": [["211"], ["76.7"], ["larger"]],
+    "evidence_any": [
+      "By tuning the printing parameters, the porosity can be precisely controlled, enabling a strength",
+      "the maximum principal stress is 211 MPa while the maximum F.I. value is about"
+    ],
+    "source_docs": ["Yang_2025_AlloysandCompounds_Hierarchicaldesign.pdf", "Borrelli_2009_ActaAstronautica_Thermo-structuralbehaviour.pdf"],
+    "excerpts": [
+      "Across the porosity range of 50-75 %, the compressive strength monotonically decreases with increasing porosity in both loading directions. When loaded perpendicular to the X-Y surface, the mean strength decreased from about 76.7 MPa to 21.0 MPa; when loaded perpendicular to the X-Z surface, it dropped from 50.0 MPa to 3.2 MPa. By tuning the printing parameters, the porosity can be precisely controlled, enabling a strength from about 3.2 MPa up to 76.7 MPa.",
+      "The most stressed area in the tip is the contact surfaces with the coupling pin, where the maximum principal stress is 211 MPa while the maximum F.I. value is about 0.12, thus no critical stress concentration is predicted (Fig. 19). The F.I. found in this region is the most critical one for the entire model."
+    ]
+  },
+  {
+    "category": "multi_hop",
+    "question": "Huang et al. 2016 cycle ZrB2-SiC and ZrC-SiC coated PIP-C/SiC composites up to an upper temperature during thermal shock testing, and Borrelli et al. 2009 report the temperature threshold below which the space shuttle orbiter's low-temperature reusable surface insulation (LRSI) tiles were designed to keep the structure. Converting Huang's upper cycling temperature to Kelvin, is it above or below the LRSI threshold reported by Borrelli et al. 2009?",
+    "reference_answer": "Huang et al. 2016 cycled the coated composites up to 200 degrees C, about 473 K, which is well below the 920 K threshold below which Borrelli et al. 2009 state the space shuttle orbiter's LRSI tiles were designed to keep structural temperatures.",
+    "answer_keys": [["200", "473"], ["920"], ["below"]],
+    "evidence_any": [
+      "to 200 C; infrared heating and liquid nitrogen are used to heat",
+      "consists of 8-in.-square silica tiles and covers the top of the vehicle where temperatures are less than 920"
+    ],
+    "source_docs": ["Huang_2016_CompositesPartB_Thedegradationbehavior.pdf", "Borrelli_2009_ActaAstronautica_Thermo-structuralbehaviour.pdf"],
+    "excerpts": [
+      "Thermal shock tests are used to simulate space environment. The tests are carried out in Quality and Reliability Assurance Center in National University of Defense Technology, hot and cold range from -100 C to 200 C; infrared heating and liquid nitrogen are used to heat and cool down respectively, holding time is 10 min; temperature change rate is 50 C/min and thermal shock times are 200 times, the tests are carried out in vacuum environment.",
+      "As an example, the current space shuttle orbiter TPS configuration has been designed to keep structural temperatures less than 450K. The thermal protection is composed of two types of reusable surface insulation (RSI) tiles. The RSI tiles covering the orbiter are made of coated silica fibre. The two types differ only in surface coating to provide protection for different temperature environments. The low-temperature insulation (LRSI) consists of 8-in.-square silica tiles and covers the top of the vehicle where temperatures are less than 920K. The high-temperature insulation (HRSI) consists of 6-in.-square tiles that cover the bottom and some leading edges of the orbiter where temperatures are below 1530K."
+    ]
+  },
+  {
+    "category": "multi_hop",
+    "question": "Yang et al. 2025 describe the fabrication route for porous YB2C2 ceramics, and Borrelli et al. 2009 describe the fabrication route for the outer C/SiC dome of the Nose_2 reentry-vehicle nose cap before its protective coating is applied. Which of these two ultra-high-temperature ceramic components is manufactured using an additive manufacturing (3D printing) technique?",
+    "reference_answer": "The porous YB2C2 ceramic in Yang et al. 2025 is fabricated using powder extrusion printing, an additive manufacturing technique, while the outer C/SiC dome of the Nose_2 nose cap in Borrelli et al. 2009 is manufactured by polymer infiltration and pyrolysis (PIP), not additive manufacturing.",
+    "answer_keys": [["powder extrusion printing", "additive manufacturing"], ["polymer infiltration and pyrolis", "pip"], ["yb2c2"]],
+    "evidence_any": [
+      "we demonstrate a novel strategy to fabricate architected porous YB2C2 ceramics",
+      "It was manufactured by polymer infiltration and pyrolis (PIP) process"
+    ],
+    "source_docs": ["Yang_2025_AlloysandCompounds_Hierarchicaldesign.pdf", "Borrelli_2009_ActaAstronautica_Thermo-structuralbehaviour.pdf"],
+    "excerpts": [
+      "Here, we demonstrate a novel strategy to fabricate architected porous YB2C2 ceramics exhibiting strong crystallographic and mechanical property anisotropy by synergizing powder extrusion printing with in-situ reaction synthesis. The core of our approach is a templated-growth mechanism, where shear forces during extrusion align sacrificial graphite flakes within the green body.",
+      "The outer dome is made of C/SiC and has the shape of a hollow frustum of cone. It was manufactured by polymer infiltration and pyrolis (PIP) process. Components obtained by PIP are usually characterized by high residual porosity so that a thin protective coating is needed to protect the fibres from oxidation. In this case, a ZrB2-SiC coating, about 500 micrometers thick, was applied by plasma spray deposition technique on the external surface of the outer dome."
+    ]
+  },
+  {
+    "category": "multi_hop",
+    "question": "Comparing porous YB2C2 ceramics at about 50% porosity fabricated by Yang et al. 2025 with ZrB2-SiC coated PIP-C/SiC composites after 200 thermal shock cycles fabricated by Huang et al. 2016: which material system reports the higher room-temperature strength value?",
+    "reference_answer": "ZrB2-SiC coated PIP-C/SiC composites in Huang et al. 2016 retain a flexural strength of 570.2 MPa after thermal cycling, which is far higher than the 76.7 MPa compressive strength of porous YB2C2 ceramics at about 50% porosity in Yang et al. 2025.",
+    "answer_keys": [["570.2"], ["76.7"], ["higher", "far higher"]],
+    "evidence_any": [
+      "the strength decreased\n\nto 570.2 MPa after the tests, the flexural strength",
+      "By tuning the printing parameters, the porosity can be precisely controlled, enabling a strength"
+    ],
+    "source_docs": ["Huang_2016_CompositesPartB_Thedegradationbehavior.pdf", "Yang_2025_AlloysandCompounds_Hierarchicaldesign.pdf"],
+    "excerpts": [
+      "As for ZrB2eSiC coated C/SiC samples, before the tests, the strength of C/SiC composites is 656.5 MPa; and then the strength decreased to 570.2 MPa after the tests, the flexural strength retention is 86.7%. Compared to uncoated C/SiC composites, the coated C/SiC samples show higher strength through the thermal cycling tests, which means that the UHTCs based coatings are able to improve the mechanical properties of the composites.",
+      "Across the porosity range of 50-75 %, the compressive strength monotonically decreases with increasing porosity in both loading directions. When loaded perpendicular to the X-Y surface, the mean strength decreased from about 76.7 MPa to 21.0 MPa. By tuning the printing parameters, the porosity can be precisely controlled, enabling a strength from about 3.2 MPa up to 76.7 MPa."
+    ]
+  }
+]

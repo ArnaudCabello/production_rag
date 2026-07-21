@@ -5,7 +5,7 @@
     "reference_answer": "Flexural/bending strength values reported for these UHTC composites range widely: a Cf/C-UHTC carbon-fabric composite had a bending strength of only 27.8 ± 0.7 MPa (Astapov et al.), continuous-fiber ZrB2/TiB2-based UHTCMCs reached 169-326 MPa (Failla et al.), and ZrB2-SiC-TaB2 dual composites reached as high as 736.33 ± 41.24 MPa (Buyakov et al.).",
     "answer_keys": [["27.8"], ["169", "326"], ["736"]],
     "evidence_any": [
-      "The bending strength and the elasticity modulus are 27.8 ± 0.7 MPa and 7.8 ± 0.2 GPa, respectively",
+      "the ultimate strength and elasticity modulus were 27.8 ± 0.7 MPa and 7.8 ± 0.2 GPa, respectively",
       "has the highest strength (~330 MPa) due to homogeneous microstructure",
       "DC40 736.33 ± 41.24 109.86 ± 21.1 219.72 ± 38.17"
     ],

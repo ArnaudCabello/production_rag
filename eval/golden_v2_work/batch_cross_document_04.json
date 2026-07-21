@@ -1,0 +1,167 @@
+[
+  {
+    "category": "cross_document",
+    "question": "How does the flexural strength reported for the continuous carbon fiber-reinforced ZrB2-based composite fabricated by Liu et al. (2021) via electrophoretic deposition plus hot pressing compare to the oxidation resistance limit reported by Didenko and Astapov (2025) for Cf/ZrB2-SiC composites processed by slurry infiltration and polymer infiltration/pyrolysis?",
+    "reference_answer": "Liu et al. (2021) measured a flexural strength of 199 ± 26 MPa for their EPD plus hot-pressed continuous Cf/ZrB2-based composite, while Didenko and Astapov (2025) report that Cf/ZrB2-SiC composites made by slurry infiltration and PIP retain high oxidation and ablation resistance up to about 2000 degrees C before degrading further at 2000-2800 degrees C. The two papers address different performance metrics (mechanical strength versus thermal oxidation limit) for related ZrB2-based fiber-reinforced ceramics.",
+    "answer_keys": [["199", "flexural strength"], ["2000", "oxidation", "ablation"]],
+    "evidence_any": [
+      "The Cf/ZrB2-based composite in the current work exhibited a flexural strength of 199",
+      "Cf/ ZrB2eSiC has high oxidation and ablation resistance up to 2000 C"
+    ],
+    "source_docs": ["Liu_2021_EuropeanCeramicSociety_Microstructureandmechanical.pdf", "Didenko_2025_LightweightMaterialsandManufacture_Advancescarbon-ceramic.pdf"],
+    "excerpts": [
+      "The flexural strength, fracture toughness, and the work of fracture for the Cf/ZrB2-based composite were measured by means of the 3-pt bending and SENB testing, respectively. The Cf/ZrB2-based composite in the current work exhibited a flexural strength of 199 ± 26 MPa. Similar strength values were obtained for ZrB2-based composites reinforced by continuous C and SiC fibers, and from other carbon fiber-reinforced UHTC-based composites. Generally, the flexural strength of the continuous fiber reinforced ZrB2-based composites is lower than those with short fiber (340-440 MPa) and the ZrB2-based ceramics (about 500 MPa), due to a change of the flaw population and flaw size during the incorporation of continuous or short fibers into matrix. For the fracture properties, with the introduction of continuous C fibers, the Cf/ZrB2-based composite exhibited high fracture toughness of 6.71 ± 1.29 MPa m1/2 and WOF of 754 ± 58 J/m2, which were clearly higher than those of the ZrB2-based ceramics and short fiber reinforced ZrB2-based composites.",
+      "The heterophase matrix exhibits a reduced tendency to high temperature decomposition and has superior anti-oxidation properties. Wang et al. concluded that Cf/ ZrB2eSiC has high oxidation and ablation resistance up to 2000 C, and a relatively low ablation rate in the temperature range of 2000e2800 C in an oxyacetylene flame for 20 s. And Mungiguerra et al. demonstrated that UHTCMC with a ZrB2-based matrix exhibited promising behavior under harsh conditions typical of hybrid rocket operation. The composites demonstrated superior erosion resistance compared to benchmark state-of-art materials. To evaluate the long-term ablation behavior, Zhang et al. exposed 3D Cf/ZrB2eSiC composites to an oxyacetylene flame for varying periods of time. After ablation at 2465 C for 100 s, the composites were coated with three-layer oxide films: a dense ZrO2 + SiO2 layer resulted from the coarsening of the ZrO2 phase and transformation of the glassy SiO2 phase, a porous ZrO2 + SiO2 layer owing to the limited molten SiO2 phases, and a porous ZrO2 layer resulted from the active oxidation of SiC."
+    ]
+  },
+  {
+    "category": "cross_document",
+    "question": "What processing route did Liu et al. (2021) use to fabricate their continuous carbon fiber-reinforced ZrB2-based composite, and how does it differ from the chemical vapor infiltration, polymer infiltration and pyrolysis, reactive melt infiltration, and slurry infiltration routes that Didenko and Astapov (2025) identify as the most commonly used technologies for producing UHTC matrix composites?",
+    "reference_answer": "Liu et al. (2021) combined electrophoretic deposition (EPD) with hot pressing to coat continuous carbon fibers with ZrB2-based UHTC particles before densification, whereas Didenko and Astapov (2025) identify chemical vapor infiltration/deposition, polymer infiltration and pyrolysis, reactive melt infiltration, and slurry infiltration as the most commonly used technologies for producing UHTC ceramic matrices. EPD combined with hot pressing is therefore a distinct route from the four dominant matrix-forming technologies surveyed in the review.",
+    "answer_keys": [["electrophoretic", "epd"], ["chemical vapor infiltration", "polymer infiltration", "reactive melt infiltration", "slurry infiltration"]],
+    "evidence_any": [
+      "combining electrophoretic deposition (EPD) with hot pressing (HP) was developed to fabricate continuous carbon fiber-reinforced ZrB2-based composites",
+      "chemical vapor infiltration/deposition (CVI/CVD), polymer infiltration and pyrolysis (PIP), reactive melt infiltration (RMI), and slurry infiltration (SI)"
+    ],
+    "source_docs": ["Liu_2021_EuropeanCeramicSociety_Microstructureandmechanical.pdf", "Didenko_2025_LightweightMaterialsandManufacture_Advancescarbon-ceramic.pdf"],
+    "excerpts": [
+      "A process combining electrophoretic deposition (EPD) with hot pressing (HP) was developed to fabricate continuous carbon fiber-reinforced ZrB2-based composites (Cf/ZrB2-based composites). ZrB2-based ultra-high temperature ceramic (UHTC) particles were uniformly pre-coated on continuous carbon fibers via EPD. Then, the UHTC-coated carbon fibers were stacked and hot pressed to prepare the Cf/ZrB2-based composites. Microstructure observations revealed that almost no micro-pores were found in the inter-bundle and intra-bundle regions of fibers after HP. The flexural strength, fracture toughness and the work of fracture of the Cf/ZrB2-based composite were measured as 199 ± 26 MPa, 6.71 ± 1.29 MPa m1/2, and 754 ± 58 J/m2, respectively.",
+      "In recent years, significant progress has been made in the development of UHTCMCs manufacturing technologies. A critical analysis of these achievements is presented in detail in the reviews, so there is no point in repeating them in this article. The most used technologies for producing ceramic matrices are chemical vapor infiltration/deposition (CVI/CVD), polymer infiltration and pyrolysis (PIP), reactive melt infiltration (RMI), and slurry infiltration (SI). A significant part of the research is devoted to a review of less common methods for obtaining UHTCMCs, such as hot pressing (HP), spark plasma sintering (SPS), in situ reaction, sol-gel infiltration, powder pre-infiltration (PPI), as well as the use of combined technologies."
+    ]
+  },
+  {
+    "category": "cross_document",
+    "question": "What toughening or crack-resistance mechanisms are emphasized by Liu et al. (2021) for their continuous Cf/ZrB2-based composite compared to the densification-related porosity problems that Didenko and Astapov (2025) describe for Cf/CeZrC composites prepared by controlled liquid vapor deposition (CLVD)?",
+    "reference_answer": "Liu et al. (2021) attribute the enhanced fracture properties of their Cf/ZrB2-based composite to multiple toughening mechanisms including fiber pull-out and fiber bridging, achieved through a nearly pore-free microstructure from the EPD plus hot-pressing route. Didenko and Astapov (2025) instead describe how poor densification behavior in the CLVD process for Cf/CeZrC composites leads to high porosity and low ceramic content, which degrades ablation resistance rather than improving toughness.",
+    "answer_keys": [["fiber pull-out", "fiber bridging", "toughening"], ["porosity", "densification", "clvd"]],
+    "evidence_any": [
+      "The enhanced fracture properties could be associated with the multiple toughening mechanisms, including fiber pull-out, fiber bridging",
+      "the poor densification behavior produced by the high temperature in CLVD process, which resulted in a low density"
+    ],
+    "source_docs": ["Liu_2021_EuropeanCeramicSociety_Microstructureandmechanical.pdf", "Didenko_2025_LightweightMaterialsandManufacture_Advancescarbon-ceramic.pdf"],
+    "excerpts": [
+      "Continuous Cf/ZrB2-based composites were fabricated by combined electrophoretic deposition and sintering processes, where the electrophoretic deposition (EPD) was developed to form the green bodies and the hot pressing (HP) was employed to densify the composites. The EPD process can deposit UHTC particles on continuous carbon fibers and control the thickness of UHTC coating by changing the process time. Thanks to the uniform UHTC coatings on the carbon fibers, after hot pressing, no pores on a micro-scale level were observed in the continuous Cf/ZrB2-based composite. The good mechanical properties could be attributed to the intact fibers and the suitable fiber-matrix bonding interface. The enhanced fracture properties could be associated with the multiple toughening mechanisms, including fiber pull-out, fiber bridging, crack deflection and branching along the interfaces.",
+      "He et al. investigated the effect of different deposition temperatures (800-1100 C) on densification behavior and ablation properties of Cf/CeZrC composites under oxyacetylene flame with a heat flux of 4.2 MW/m2 for 60 s. The results showed that the mass gain, densification rate, and density of the samples increased when the deposition temperature was elevated from 800 to 900 C and then decreased with further temperature increase. The linear and mass ablation rates of the composite obtained at 900 C were found to be lower than those of the composite obtained at 1100 C. These phenomena are primarily attributed to the poor densification behavior produced by the high temperature in CLVD process, which resulted in a low density, poor ZrC ceramic content and its uneven distribution."
+    ]
+  },
+  {
+    "category": "cross_document",
+    "question": "How does the near-pore-free microstructure achieved by Liu et al. (2021) in continuous Cf/ZrB2-based composites via EPD contrast with the porosity increase Didenko and Astapov (2025) describe for PIP-prepared Cf/ZrC composites synthesized at higher temperatures?",
+    "reference_answer": "Liu et al. (2021) found that combining electrophoretic deposition with hot pressing produced almost no micro-pores in the inter-bundle and intra-bundle fiber regions of their continuous Cf/ZrB2-based composite. In contrast, Didenko and Astapov (2025) note that as the PIP preparation temperature for Cf/ZrC composites increased, the open porosity of the composites increased, allowing greater oxidant transport and weakening ablation resistance.",
+    "answer_keys": [["epd", "electrophoretic", "hot pressing"], ["porosity", "pip", "preparation temperature"]],
+    "evidence_any": [
+      "almost no micro-pores were found in the inter-bundle and intra-bundle regions of fibers after HP",
+      "As the preparation temperature increased, the open porosity of the composites increased, allowing greater oxidant"
+    ],
+    "source_docs": ["Liu_2021_EuropeanCeramicSociety_Microstructureandmechanical.pdf", "Didenko_2025_LightweightMaterialsandManufacture_Advancescarbon-ceramic.pdf"],
+    "excerpts": [
+      "A process combining electrophoretic deposition (EPD) with hot pressing (HP) was developed to fabricate continuous carbon fiber-reinforced ZrB2-based composites (Cf/ZrB2-based composites). ZrB2-based ultra-high temperature ceramic (UHTC) particles were uniformly pre-coated on continuous carbon fibers via EPD. Then, the UHTC-coated carbon fibers were stacked and hot pressed to prepare the Cf/ZrB2-based composites. Microstructure observations revealed that almost no micro-pores were found in the inter-bundle and intra-bundle regions of fibers after HP. The flexural strength, fracture toughness and the work of fracture of the Cf/ZrB2-based composite were measured as 199 ± 26 MPa, 6.71 ± 1.29 MPa m1/2, and 754 ± 58 J/m2, respectively.",
+      "Li et al. evaluated ablation properties of PIP-prepared Cf/ZrC composites under oxyacetylene flame with a heat flux of 4.187 MW/m2 for 60 s depending on the synthesis temperature (1500, 1550, or 1600 C). As the preparation temperature increased, the open porosity of the composites increased, allowing greater oxidant transport into the composite volume, which in turn weakened the ablation resistance. So, the authors concluded that the optimal preparation temperature is 1500 C."
+    ]
+  },
+  {
+    "category": "cross_document",
+    "question": "What surface temperatures were achieved on ZrB2-WC-SiC ceramic buttons in the supersonic arc-jet tests of Silvestroni et al. (2019), and how do these compare with the temperature range over which Didenko and Astapov (2025) say the glassy SiO2 protective layer on ZrB2-SiC composites remains stable before volatilizing or peeling off?",
+    "reference_answer": "Silvestroni et al. (2019) tested ZrB2-WC-SiC buttons in a supersonic arc-jet wind tunnel and achieved surface temperatures up to 2650 K in simulated air and 2800 K in pure nitrogen. Didenko and Astapov (2025) report that the glassy SiO2 layer protecting Cf/ZrB2-SiC composites is stable up to about 1850 degrees C, after which it volatilizes or peels off, a lower threshold than the peak temperatures reached in the Silvestroni arc-jet tests.",
+    "answer_keys": [["2650", "2800", "arc-jet"], ["1850", "glassy sio2", "volatiliz"]],
+    "evidence_any": [
+      "achieving temperatures up to 2650 and 2800 K",
+      "the poor densification behavior produced by the high temperature in CLVD process, which resulted in a low density"
+    ],
+    "source_docs": ["Silvestroni_2019_CorrosionScience_Effectofhypersonic.pdf", "Didenko_2025_LightweightMaterialsandManufacture_Advancescarbon-ceramic.pdf"],
+    "excerpts": [
+      "Two ZrB2-SiC-WC coupons were exposed to an arc-jet flow composed of simulated air, with oxygen partial pressure in the order of thousands of Pa, or pure nitrogen, with oxygen residual partial pressure two orders of magnitude lower, achieving temperatures up to 2650 and 2800 K, respectively. Microstructural analysis enabled to propose the mechanism underpinning the oxidation behavior of this system in extreme environment containing diverse fractions of oxygen. A ZrB2 - 5 vol% SiC - 5 vol% WC ceramic pellet was sintered to full density.",
+      "As the operating temperature approached 1300 C or above, the glassy SiO2 phase formed by passive oxidation of SiC particles accumulated under capillary forces. This glassy SiO2 gas-tight oxide layer protected the composites from ablation up to 1850 C. With a further increase in temperature, the glassy SiO2 layer was either volatilized or peeled off. The losses were compensated by the upwelling of the SiO2 internal phase under the action of capillary forces and high SiO vapor pressure, forming a dense layer of ZrO2 + SiO2 on the surface and a porous layer under it. Thereafter, SiC was subjected to active oxidation, resulting in the formation of a SiC-depleted layer."
+    ]
+  },
+  {
+    "category": "cross_document",
+    "question": "How does the temperature jump phenomenon observed by Silvestroni et al. (2019) during arc-jet testing of ZrB2-WC-SiC ceramics relate to the beneficial role of oxygen partial pressure that Didenko and Astapov (2025) attribute to protective oxide film formation on carbon-ceramic composites in general?",
+    "reference_answer": "Silvestroni et al. (2019) observed temperature jumps of 500-600 K in both simulated air and nitrogen flows during arc-jet testing of ZrB2-WC-SiC ceramics, and found that the presence of oxygen in the incoming flow was beneficial for retarding material consumption by enabling formation of a protective silica glass layer. Didenko and Astapov (2025) similarly emphasize that formation of protective, passivating oxide films on carbon-ceramic UHTC composites slows mass transfer of reagents and improves resistance to erosion and denudation.",
+    "answer_keys": [["temperature jump", "500", "600"], ["oxide film", "protective", "passivat"]],
+    "evidence_any": [
+      "Temperature jumps of 500–600 K were observed in both environments at constant flow conditions",
+      "presence of oxygen in the incoming flow is beneficial for retarding the material consumption"
+    ],
+    "source_docs": ["Silvestroni_2019_CorrosionScience_Effectofhypersonic.pdf", "Didenko_2025_LightweightMaterialsandManufacture_Advancescarbon-ceramic.pdf"],
+    "excerpts": [
+      "A super-strong ZrB2 ceramic containing WC and SiC was tested in a supersonic arc-jet wind tunnel by exposure to flows with two chemical compositions, simulated air or pure nitrogen, at temperatures of 2650 and 2800 K. Temperature jumps of 500–600 K were observed in both environments at constant flow conditions. SEM analyses revealed that oxygen in the high-enthalpy flow retards the material consumption owing to the formation of partially protective glass. It is our opinion that the presence of oxygen in the incoming flow is beneficial for retarding the material consumption thanks to the activation of a partially healing mechanism by SiC oxidation and B2O3 retention into a protective silica glass.",
+      "The workability of the composites is provided by the formation and evolution of passivating heterogeneous oxide films, which are represented mainly by the refractory MeO2 phase and the glass phase modified by Me4+ cations. The protective oxide layers slow down the mass transfer of reagents (due to the high gas density caused by the presence of phases in a viscous-fluid state) and resist mechanical erosion and denudation (due to the framework structure provided by the partial sintering of refractory phase grains)."
+    ]
+  },
+  {
+    "category": "cross_document",
+    "question": "How does the effect of a small volume fraction of W-compounds on the sub-surface oxide architecture of ZrB2-based ceramics, as reported by Silvestroni et al. (2019), compare to the effect of ZrB2 particle addition on the ablation resistance of Cf/C composites discussed by Didenko and Astapov (2025)?",
+    "reference_answer": "Silvestroni et al. (2019) found that even 5 vol% of W-compounds in a ZrB2-SiC-WC ceramic is sufficient to alter the sub-scale oxide configuration into a multi-layered cell-like architecture typical of tungsten oxidation. Didenko and Astapov (2025) report a different, beneficial additive effect: ZrB2 particle addition to Cf/C composites significantly improved ablation resistance because the molten ZrO2 formed hinders oxygen diffusion.",
+    "answer_keys": [["w-compound", "tungsten", "5 vol"], ["zrb2 addition", "ablation resistance", "cf/c"]],
+    "evidence_any": [
+      "even 5 vol% of W-compounds is sufficient to modify the subscale oxide configuration",
+      "ZrB2 addition to the Cf/C composites significantly improved the ablation resistance of the materials"
+    ],
+    "source_docs": ["Silvestroni_2019_CorrosionScience_Effectofhypersonic.pdf", "Didenko_2025_LightweightMaterialsandManufacture_Advancescarbon-ceramic.pdf"],
+    "excerpts": [
+      "SEM analyses revealed that oxygen in the high-enthalpy flow retards the material consumption owing to the formation of partially protective glass. Then, it appears that even 5 vol% of W-compounds is sufficient to modify the subscale oxide configuration and form a cell-like multi-layered architecture typical of tungsten, rather than that typical of ZrB2. This crucial observation leads to propose that the volume fraction of W-compounds should be well below this value in order to improve oxidation resistance in hypersonic environments.",
+      "One potential method to enhance the oxidation resistance and thermal shock resistance of UHTCs is to introduce large quantities of ZrB2- or HfB2-based ceramic particles into Cf/C composites. This approach is proposed due to the high melting points of ZrB2 and HfB2 coupled with the ability to form refractory oxide scales capable to withstand temperatures up to 2500 C. Tang et al. determined that the ZrB2 addition to the Cf/C composites significantly improved the ablation resistance of the materials under a 3.92 MW/m2 heat flux. The improved behavior was mainly attributed to the molten ZrO2 hindering the oxygen diffusion."
+    ]
+  },
+  {
+    "category": "cross_document",
+    "question": "How does the core-shell (Zr,W)B2 microstructure of the ZrB2-WC-SiC ceramic studied by Silvestroni et al. (2019) relate to the flexural strength values Liu et al. (2021) report for continuous carbon fiber-reinforced ZrB2-based composites made without WC additions?",
+    "reference_answer": "Silvestroni et al. (2019) studied a ZrB2-WC-SiC ceramic whose boride matrix displayed a core-shell substructure with ZrB2 as the core and a (Zr,W)B2 solid solution as the shell, giving it very high strength retention at elevated temperature. Liu et al. (2021) instead studied a continuous carbon fiber-reinforced ZrB2-ZrSi2 composite without WC, measuring a lower flexural strength of 199 ± 26 MPa, reflecting the different reinforcement strategy (fiber toughening versus solid-solution core-shell strengthening).",
+    "answer_keys": [["core-shell", "zr,w", "wc"], ["199", "flexural strength", "fiber"]],
+    "evidence_any": [
+      "displaying the typical core-shell substructure, with ZrB2 being the core and a (Zr,W)B2 solid solution the shell",
+      "The Cf/ZrB2-based composite in the current work exhibited a flexural strength of 199"
+    ],
+    "source_docs": ["Silvestroni_2019_CorrosionScience_Effectofhypersonic.pdf", "Liu_2021_EuropeanCeramicSociety_Microstructureandmechanical.pdf"],
+    "excerpts": [
+      "The microstructure of this ceramic has been extensively studied and described in previous papers. To briefly summarize the main aspects and to understand the microstructure variation upon the arc-jet flow tests, the boride matrix had mean grain size around 1.8 microns displaying the typical core-shell substructure, with ZrB2 being the core and a (Zr,W)B2 solid solution the shell. The secondary phases were homogeneously distributed: SiC is recognizable with dark contrast, WB has white aspect, whilst residual WC is light grey.",
+      "The flexural strength, fracture toughness, and the work of fracture for the Cf/ZrB2-based composite were measured by means of the 3-pt bending and SENB testing, respectively. The Cf/ZrB2-based composite in the current work exhibited a flexural strength of 199 ± 26 MPa. Similar strength values were obtained for ZrB2-based composites reinforced by continuous C and SiC fibers, and from other carbon fiber-reinforced UHTC-based composites."
+    ]
+  },
+  {
+    "category": "cross_document",
+    "question": "What role does silicon carbide play in the oxidation resistance of the ZrB2-WC-SiC ceramic tested by Silvestroni et al. (2019) in an arc-jet wind tunnel, compared to the role of SiC discussed by Didenko and Astapov (2025) in the general oxidation mechanism of Cf/ZrB2-SiC composites?",
+    "reference_answer": "Silvestroni et al. (2019) found that in their ZrB2-WC-SiC ceramic, silicon carbide forms an outermost SiO2 glassy coating that mitigates bursting phenomena during arc-jet exposure to air, providing a partially healing oxidation mechanism. Didenko and Astapov (2025) describe an analogous role for SiC in Cf/ZrB2-SiC composites, where passive oxidation of SiC forms a glassy SiO2 gas-tight oxide layer that protects the composite from ablation up to about 1850 degrees C before it eventually volatilizes.",
+    "answer_keys": [["sic", "silica", "glass"], ["passive oxidation", "gas-tight", "1850"]],
+    "evidence_any": [
+      "presence of oxygen in the incoming flow is beneficial for retarding the material consumption",
+      "As the preparation temperature increased, the open porosity of the composites increased, allowing greater oxidant"
+    ],
+    "source_docs": ["Silvestroni_2019_CorrosionScience_Effectofhypersonic.pdf", "Didenko_2025_LightweightMaterialsandManufacture_Advancescarbon-ceramic.pdf"],
+    "excerpts": [
+      "In the sample exposed to air, formation of surface silica-based glass mitigated bursting phenomena. The solid crystalline compounds, ZrO2, W and WO3 were present in a wide spectrum of morphologies, testifying large partial pressure variation from point-to-point. It is our opinion that the presence of oxygen in the incoming flow is beneficial for retarding the material consumption thanks to the activation of partially healing mechanism by SiC oxidation and B2O3 retention into a protective silica glass.",
+      "Li et al. evaluated ablation properties of PIP-prepared Cf/ZrC composites under oxyacetylene flame with a heat flux of 4.187 MW/m2 for 60 s depending on the synthesis temperature (1500, 1550, or 1600 C). As the preparation temperature increased, the open porosity of the composites increased, allowing greater oxidant transport into the composite volume, which in turn weakened the ablation resistance."
+    ]
+  },
+  {
+    "category": "cross_document",
+    "question": "How do the crack-tolerance and toughening mechanisms reported by Liu et al. (2021) for continuous Cf/ZrB2-based composites compare to the ablation performance data Didenko and Astapov (2025) report for 3D Cf/ZrB2-SiC composites exposed to oxyacetylene torch flames with different heat fluxes?",
+    "reference_answer": "Liu et al. (2021) attribute the enhanced mechanical toughness of their continuous Cf/ZrB2-based composite to fiber pull-out, fiber bridging, crack deflection and branching enabled by a clean fiber-matrix interface. Didenko and Astapov (2025) report that Cf/ZrB2-SiC composites were separately evaluated for ablation properties under oxyacetylene torch flames with different heat fluxes, showing that ablation performance and mechanical toughness are studied as distinct characteristics of these ZrB2-based composite systems.",
+    "answer_keys": [["fiber pull-out", "fiber bridging", "toughening"], ["ablation", "oxyacetylene", "heat flux"]],
+    "evidence_any": [
+      "The enhanced fracture properties could be associated with the multiple toughening mechanisms, including fiber pull-out, fiber bridging",
+      "The ablation properties of Cf/CeZrB2eSiC composite were studied under an oxyacetylene torch flame with different heat fluxes"
+    ],
+    "source_docs": ["Liu_2021_EuropeanCeramicSociety_Microstructureandmechanical.pdf", "Didenko_2025_LightweightMaterialsandManufacture_Advancescarbon-ceramic.pdf"],
+    "excerpts": [
+      "Fig. 10 shows the typical morphologies of the fractured SENB specimen. A large number of fibers pull-out and holes left by fiber pull-out were clearly observed on the fractured surfaces. Long pull-out length of fibers and smooth fiber surfaces indicated an appropriate matrix-fiber interfacial bonding formed in the composite. High fracture toughness should be attributed to the long length and significant fraction of fiber pull-out. The enhanced fracture properties could be associated with the multiple toughening mechanisms, including fiber pull-out, fiber bridging, crack deflection and branching along the interfaces.",
+      "The ablation properties of Cf/CeZrB2eSiC composite were studied under an oxyacetylene torch flame with different heat fluxes. Composites with a high ZrB2 content demonstrated superior resistance under these test conditions, with the microstructure evolution of the oxide layers governing the different ablation mechanisms observed for Cf/CeZrB2eSiC composites."
+    ]
+  },
+  {
+    "category": "cross_document",
+    "question": "How does the tungsten-rich sub-surface architecture observed by Silvestroni et al. (2019) after arc-jet exposure of ZrB2-WC-SiC ceramics compare to the densification-porosity relationship Didenko and Astapov (2025) describe for Cf/CeZrC composites made by CLVD at different deposition temperatures?",
+    "reference_answer": "Silvestroni et al. (2019) found that even a modest 5 vol% of W-compounds in a ZrB2-WC-SiC ceramic causes the sub-scale oxide to develop a multi-layered, cell-like architecture typical of tungsten oxidation rather than plain ZrB2. Didenko and Astapov (2025) instead show that in Cf/CeZrC composites made by CLVD, densification behavior degrades and porosity increases at higher deposition temperatures such as 1100 degrees C, reducing ablation resistance rather than changing the oxide phase architecture.",
+    "answer_keys": [["w-compound", "tungsten", "cell-like"], ["clvd", "deposition temperature", "densification"]],
+    "evidence_any": [
+      "even 5 vol% of W-compounds is sufficient to modify the subscale oxide configuration",
+      "the poor densification behavior produced by the high temperature in CLVD process, which resulted in a low density"
+    ],
+    "source_docs": ["Silvestroni_2019_CorrosionScience_Effectofhypersonic.pdf", "Didenko_2025_LightweightMaterialsandManufacture_Advancescarbon-ceramic.pdf"],
+    "excerpts": [
+      "One interesting aspect to underline regards the effect of the even relatively low volume fraction of W-compounds on the oxidation behavior of this strong UHTC. Cross section views revealed that, under the outermost external layer, a relatively dense scale with periodic bands of cavities or empty cells, was present. Then, it appears that even 5 vol% of W-compounds is sufficient to modify the subscale oxide configuration and form a cell-like multi-layered architecture typical of tungsten, rather than that typical of ZrB2.",
+      "He et al. investigated the effect of different deposition temperatures (800-1100 C) on densification behavior and ablation properties of Cf/CeZrC composites under oxyacetylene flame with a heat flux of 4.2 MW/m2 for 60 s. The results showed that the mass gain, densification rate, and density of the samples increased when the deposition temperature was elevated from 800 to 900 C and then decreased with further temperature increase. These phenomena are primarily attributed to the poor densification behavior produced by the high temperature in CLVD process, which resulted in a low density, poor ZrC ceramic content and its uneven distribution."
+    ]
+  }
+]
