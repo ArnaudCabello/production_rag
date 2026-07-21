@@ -1,5 +1,23 @@
 # Evaluation harness
 
+## v2 benchmark (306 questions, baseline vs agentic) — current
+
+`golden_set_v2.json`: 306 questions over the 500-paper UHTC corpus in 9
+categories (factual, semantic, table / cross_document, multi_hop, aggregation,
+multi_chunk / unanswerable, ambiguous). Built by `golden_v2_work/` (see its
+PROGRESS.md); results go to `eval/results_v2/`, NOT `eval/results/`.
+
+```bash
+python eval/run_benchmark.py --pipeline baseline --model Qwen/Qwen3-14B  # answers (GPU, resumable)
+python eval/score_benchmark.py eval/results_v2/bench_baseline.jsonl --judge  # metrics + judge (resumable)
+python eval/compare.py eval/results_v2/bench_baseline_scored.json eval/results_v2/bench_agentic_scored.json
+```
+
+Everything below this line documents the LEGACY 30/54-question harness; its
+recorded results stay in `eval/results/`.
+
+---
+
 Golden Q/A set: 30 questions over the ReAct paper corpus in `golden_set.json` —
 categories: `factual`, `table`, `abstract`, `semantic` (paraphrase, low keyword overlap),
 `multi_chunk` (evidence spans multiple chunks).

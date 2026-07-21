@@ -76,7 +76,7 @@ def main():
     ap.add_argument("--golden", type=Path,
                     default=Path(__file__).resolve().parent / "golden_set_v2.json")
     ap.add_argument("--output", type=Path, default=None,
-                    help="default: eval/results/bench_<pipeline>.jsonl")
+                    help="default: eval/results_v2/bench_<pipeline>.jsonl")
     ap.add_argument("--model", default=None, help="override config.GENERATOR_MODEL")
     ap.add_argument("--provider", default=None, help="override config.GENERATOR_PROVIDER")
     ap.add_argument("--top-k", type=int, default=None,
@@ -85,7 +85,7 @@ def main():
     ap.add_argument("--ids", default=None, help="comma-separated question ids")
     args = ap.parse_args()
 
-    output = args.output or (Path(__file__).resolve().parent / "results"
+    output = args.output or (Path(__file__).resolve().parent / "results_v2"
                              / f"bench_{args.pipeline}.jsonl")
     golden = json.loads(args.golden.read_text())["questions"]
     if args.ids:
