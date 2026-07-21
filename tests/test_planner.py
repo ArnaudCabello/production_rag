@@ -83,7 +83,8 @@ class PlannerLLM:
 def run_agentic(retriever, llm, question, **kw):
     graph = build_agentic_graph(retriever, llm, **kw)
     state = {"question": question, "llm_calls": 0, "retrieval_calls": 0,
-             "chunks": [], "rounds": 0, "pending_queries": [], "queries_run": []}
+             "chunks": [], "rounds": 0, "pending_queries": [], "queries_run": [],
+             "gaps": []}
     if kw.get("trace"):
         state["trace"] = []
     return graph.invoke(state)
@@ -96,10 +97,10 @@ ag = run_agentic(ret, llm, Q)
 assert [c[0] for c in ret.calls] == [Q, "ZrB2 hardness", "HfB2 hardness"], ret.calls
 assert ag["sub_queries"][0] == Q
 assert ag["category"] == "comparative"
-assert ag["llm_calls"] == 2 and ag["retrieval_calls"] == 3
+assert ag["llm_calls"] == 3 and ag["retrieval_calls"] == 3  # M4: +1 check call
 assert [c["chunk_id"] for c in ag["chunks"]] == ["a-1", "b-1"]  # deduped union
 assert ag["answer"] == "ANSWER"
-print("graph: planner queries drive retrieval, question first, counters 2/3: OK")
+print("graph: planner queries drive retrieval, question first, counters 3/3: OK")
 
 # 7. sub-query duplicating the question (case/space-insensitive) is not re-run
 ret = StubRetriever()
@@ -119,7 +120,7 @@ print("graph: retrieval capped at 1 + MAX_SUB_QUERIES: OK")
 ret = StubRetriever()
 ag = run_agentic(ret, PlannerLLM("ANSWER"), Q)
 assert [c[0] for c in ret.calls] == [Q]
-assert ag["category"] == "simple" and ag["llm_calls"] == 2
+assert ag["category"] == "simple" and ag["llm_calls"] == 3  # M4: +1 check call
 print("graph: fallback degrades to single-query retrieval: OK")
 
 # 10. trace: plan event carries category/sub_queries/fallback/raw

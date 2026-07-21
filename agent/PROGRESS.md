@@ -21,11 +21,61 @@ Module status board (update the table too):
 | M1 skeleton + adapter | done | agent/plans/M1_skeleton.md | parity test green |
 | M2 planner | done | agent/plans/M2_planner.md | Colab shape report pending (eval/planner_shapes.py) |
 | M3 retrieval loop | done | agent/plans/M3_retrieval_loop.md | check node = M4 seam |
-| M4 evidence check + refusal | not started | — | |
+| M4 evidence check + refusal | done | agent/plans/M4_evidence_check.md | Colab shape report pending (eval/check_shapes.py); GPU smoke pending |
 | M5 synthesis | not started | — | |
 | M6 benchmark run + tuning | not started | — | baseline run in progress on Colab (results land in Drive eval_v2/results) |
 
 ---
+
+## 2026-07-21 M4 evidence check + refusal — done (Colab shape report + GPU smoke pending)
+- What was done: LLM evidence check replaces the always-sufficient stub —
+  `agentic/checker.py` (CHECK_SYSTEM/CHECK_USER prompts, `parse_check` with
+  strict validation + fail-safe fallback {"sufficient": True}, `make_check`
+  building a compact evidence view of chunk_id + text[:300]). Check is now the
+  DEFAULT check_fn in build_agentic_graph (check= still injects test stubs);
+  check node threads llm_calls and gaps (verdict "missing", last verdict wins)
+  through state; synthesize prepends GAP_NOTE (refuse/hedge instruction whose
+  "not available in the corpus" wording trips score_benchmark's REFUSAL regex)
+  when gaps remain, byte-identical baseline prompt otherwise. run_benchmark
+  agentic adapter inits + records "gaps". eval/check_shapes.py (mirrors
+  planner_shapes.py, reuses planner_slice.json fixture) for the Colab shape
+  report. Budget worst case: 1 plan + 4 checks + 1 synth = 6 = PRD cap.
+- Files touched: agentic/checker.py (new), agentic/graph.py,
+  eval/run_benchmark.py, eval/check_shapes.py (new), tests/test_check.py (new),
+  tests/test_retrieval_loop.py + tests/test_planner.py +
+  tests/test_agentic_parity.py (gaps init key; intentional counter
+  redefinition 2→3: every question now includes one check call),
+  agent/plans/M4_evidence_check.md
+- Tests: `python tests/test_check.py` — passing (12 checks); also passing:
+  test_retrieval_loop.py, test_planner.py, test_agentic_parity.py,
+  test_pipeline.py. NOT run (no GPU here): 3-question benchmark smoke
+  (`python eval/run_benchmark.py --pipeline agentic --limit 3`) and
+  `python eval/check_shapes.py --model Qwen/Qwen3-14B` — human runs both on
+  Colab before M5 relies on gap notes.
+- Next step for the following agent: human reviews check_shapes report
+  (watch: unanswerable → sufficient=false + missing, factual → sufficient=true,
+  and the fallback rate — a high fallback rate silently degrades to M3); then
+  plan M5 (synthesis with citations) with the human. M5 gets gap notes via
+  state["gaps"].
+- Gotchas discovered: LangGraph nodes reading state["gaps"] need it in every
+  invoke init dict (M3 gotcha holds). Trace check events now carry
+  missing/fallback (and queries when non-empty) — exact-dict trace asserts in
+  older tests had to add those keys. checker.py can't import
+  MAX_PENDING_PER_ROUND from graph.py (graph imports checker) — local
+  MAX_CHECK_QUERIES=3 mirrors it.
+- What was done: plan written with the human (agent/plans/M4_evidence_check.md).
+  Decisions confirmed: check runs on EVERY question (labels unreliable except
+  aggregation/comparative; check is the only unanswerable detector); minimal
+  gap injection — check writes state["gaps"], synthesize prepends a
+  refuse/hedge instruction when gaps remain (full cited synthesis stays M5);
+  parse failure ⇒ fail-safe sufficient=true. Budget worst case 6 LLM calls
+  (plan 1 + 4 checks + synth 1) = PRD cap.
+- Files touched: agent/plans/M4_evidence_check.md (new), agent/PROGRESS.md
+- Tests: none yet — /build M4 writes tests/test_check.py FIRST.
+- Next step for the following agent: `/build M4` per the plan. Note: parity
+  test counters intentionally become 3/1 (check adds 1 call).
+- Gotchas discovered: graph.py's check node currently drops verdict keys
+  other than pending_queries — llm_calls/gaps threading must be added there.
 
 ## 2026-07-21 M3 retrieval loop — done
 - What was done: retrieve is now a loop — graph is plan → retrieve ⇄ check →

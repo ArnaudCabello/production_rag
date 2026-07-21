@@ -4,9 +4,11 @@ M2: the planner classifies the question and emits sub-queries (agentic/planner.p
 on unparseable planner output it falls back to [question], matching the M1
 pass-through. M3: retrieval loops — round 1 runs the planner sub-queries, the
 check node may enqueue refined queries for further rounds (hard cap MAX_ROUNDS,
-cross-round dedup of queries and chunks). The M3 check is an always-sufficient
-stub; M4 supplies the real sufficiency judgment via the check= hook.
-M4-M5 replace node internals without changing this structure. No multi-doc
+cross-round dedup of queries and chunks). M4: the check is an LLM sufficiency
+judgment (agentic/checker.py) that enqueues refinement queries and records
+uncovered gaps; remaining gaps make synthesize prepend a refuse/hedge
+instruction. The check= hook still injects stubs in tests.
+M5 replaces the synthesize internals without changing this structure. No multi-doc
 fan-out or vision routing: the planner/loop modules replace the former, and
 vision is out of scope for the agentic pipeline.
 """
@@ -15,12 +17,22 @@ from typing import TypedDict
 from langchain_core.messages import HumanMessage, SystemMessage
 from langgraph.graph import END, START, StateGraph
 
+from agentic.checker import make_check
 from agentic.planner import MAX_SUB_QUERIES, make_plan
 from generation.pipeline import SYSTEM_PROMPT, USER_TEMPLATE, format_context
 
 MAX_ROUNDS = 4              # hard cap on retrieval rounds (PRD §4)
 AGG_SUBQUERY_TOP_K = 8      # broad, un-reranked recall for aggregation sub-queries
-MAX_PENDING_PER_ROUND = 3   # refinement queries per round (M4 fills pending_queries)
+MAX_PENDING_PER_ROUND = 3   # refinement queries per round (the check fills pending_queries)
+
+# Prepended to the synthesis user message when the check left uncovered gaps.
+# "not available in the corpus" wording matches eval/score_benchmark.py's REFUSAL regex.
+GAP_NOTE = """Note: retrieval found no evidence in the corpus for the following point(s):
+{gaps}
+Do not guess or use outside knowledge for these. If the context below does not support \
+an answer to the question at all, reply that this information is not available in the corpus.
+
+"""
 
 
 def _norm(q):
@@ -38,11 +50,12 @@ class AgentState(TypedDict):
     rounds: int  # retrieval rounds completed
     pending_queries: list[str]  # enqueued for the next round; M4's check populates
     queries_run: list[str]  # normalized queries already searched (cross-round dedup)
+    gaps: list[str]  # uncovered parts per the last check verdict; drives refusal/hedging
     trace: list[dict]  # per-node events when trace=True; init to [] in the invoke input
 
 
 def build_agentic_graph(retriever, llm, trace: bool = False, check=None):
-    check_fn = check or (lambda state: {"sufficient": True})  # M4 replaces
+    check_fn = check or (lambda state: make_check(llm, state, MAX_ROUNDS))
     def plan(state: AgentState):
         p = make_plan(llm, state["question"])
         queries = [state["question"]]  # question always first — sub-queries only add recall
@@ -94,14 +107,23 @@ def build_agentic_graph(retriever, llm, trace: bool = False, check=None):
         return update
 
     def check(state: AgentState):
-        verdict = check_fn(state)  # M3: always sufficient, no LLM; M4 judges
-        update = {}  # M4 may add llm_calls / pending_queries
+        verdict = check_fn(state)  # LLM judgment by default; tests inject stubs
+        update = {}
         if "pending_queries" in verdict:
             update["pending_queries"] = verdict["pending_queries"]
+        if "missing" in verdict:  # last verdict wins — a later round may close gaps
+            update["gaps"] = verdict["missing"]
+        if verdict.get("llm_calls"):
+            update["llm_calls"] = state["llm_calls"] + verdict["llm_calls"]
         if trace:
-            update["trace"] = state["trace"] + [
-                {"node": "check", "sufficient": verdict["sufficient"],
-                 "rounds": state["rounds"]}]
+            event = {"node": "check", "sufficient": verdict["sufficient"],
+                     "rounds": state["rounds"]}
+            for key in ("missing", "fallback"):
+                if key in verdict:
+                    event[key] = verdict[key]
+            if verdict.get("pending_queries"):
+                event["queries"] = verdict["pending_queries"]
+            update["trace"] = state["trace"] + [event]
         return update
 
     def route_after_check(state: AgentState):
@@ -110,10 +132,13 @@ def build_agentic_graph(retriever, llm, trace: bool = False, check=None):
         return "retrieve" if state["pending_queries"] else "synthesize"
 
     def synthesize(state: AgentState):
+        user = USER_TEMPLATE.format(
+            context=format_context(state["chunks"]), question=state["question"])
+        if state["gaps"]:  # evidence-driven refusal/hedging (M4); full synthesis is M5
+            user = GAP_NOTE.format(gaps="\n".join(f"- {g}" for g in state["gaps"])) + user
         messages = [
             SystemMessage(content=SYSTEM_PROMPT),
-            HumanMessage(content=USER_TEMPLATE.format(
-                context=format_context(state["chunks"]), question=state["question"])),
+            HumanMessage(content=user),
         ]
         update = {"answer": llm.invoke(messages).content,
                   "llm_calls": state["llm_calls"] + 1}

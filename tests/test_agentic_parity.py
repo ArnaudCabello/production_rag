@@ -2,8 +2,10 @@
 
 M2 redefinition: the StubLLM's "ANSWER" output is unparseable planner JSON, so
 the planner falls back to [question] — behavioural parity (same retrieval, same
-final prompt) holds, but llm_calls == 2 (planner + synthesis) and the baseline
-prompt is the LAST llm call.
+final prompt) holds, but the baseline prompt is the LAST llm call.
+M4 redefinition: the check node is an LLM call too; "ANSWER" is unparseable
+check JSON → fail-safe sufficient (no gaps, no extra rounds), so parity holds
+with llm_calls == 3 (planner + check + synthesis).
 """
 import sys
 from pathlib import Path
@@ -42,7 +44,7 @@ class StubLLM:
 
 
 INIT = {"llm_calls": 0, "retrieval_calls": 0, "chunks": [], "rounds": 0,
-        "pending_queries": [], "queries_run": []}
+        "pending_queries": [], "queries_run": [], "gaps": []}
 
 
 def run_agentic(retriever, llm, question):
@@ -60,16 +62,16 @@ assert [c["chunk_id"] for c in ag["chunks"]] == [c["chunk_id"] for c in base["ch
 print("parity: same answer and chunk sequence as baseline: OK")
 
 # 2. prompt parity: the final (synthesis) call has identical system + user text;
-# the extra first call is the planner
-assert len(ag_llm.messages) == 2 and len(base_llm.messages) == 1
+# the extra calls are the planner (first) and the check
+assert len(ag_llm.messages) == 3 and len(base_llm.messages) == 1
 assert [m.content for m in ag_llm.messages[-1]] == [m.content for m in base_llm.messages[0]]
 print("parity: identical synthesis prompts (system + user): OK")
 
-# 3. retriever-call parity: one search with baseline defaults; counters 2 (planner
-# + synthesis) / 1
+# 3. retriever-call parity: one search with baseline defaults; counters 3 (planner
+# + check + synthesis) / 1
 assert ag_ret.calls == [("what is X", 5, None, True)], ag_ret.calls
-assert ag["llm_calls"] == 2 and ag["retrieval_calls"] == 1
-print("parity: single search with baseline defaults, counters 2/1: OK")
+assert ag["llm_calls"] == 3 and ag["retrieval_calls"] == 1
+print("parity: single search with baseline defaults, counters 3/1: OK")
 
 # 4. deliberate divergence: no multi-doc fan-out in the M1 skeleton — the M2
 # planner + M3 loop replace it with targeted sub-queries
@@ -97,6 +99,7 @@ assert [e["node"] for e in ag["trace"]] == ["plan", "retrieve", "check", "synthe
 assert ag["trace"][0]["sub_queries"] == ["what is X"]
 assert ag["trace"][1] == {"node": "retrieve", "query": "what is X",
                           "chunk_ids": ["a-1", "b-1"], "round": 1, "broad": False}
-assert ag["trace"][2] == {"node": "check", "sufficient": True, "rounds": 1}
+assert ag["trace"][2] == {"node": "check", "sufficient": True, "rounds": 1,
+                          "missing": [], "fallback": True}  # M4 fail-safe verdict
 assert ag["trace"][3]["context_chunks"] == 2
 print("trace: off by default, on records plan/retrieve/synthesize events: OK")

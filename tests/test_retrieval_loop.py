@@ -41,22 +41,24 @@ class PlannerLLM:
 def run_agentic(retriever, llm, question, **kw):
     graph = build_agentic_graph(retriever, llm, **kw)
     state = {"question": question, "llm_calls": 0, "retrieval_calls": 0,
-             "chunks": [], "rounds": 0, "pending_queries": [], "queries_run": []}
+             "chunks": [], "rounds": 0, "pending_queries": [], "queries_run": [],
+             "gaps": []}
     if kw.get("trace"):
         state["trace"] = []
     return graph.invoke(state)
 
 
-# 1. default path (no check injection): 1 round, counters as M2, straight to synthesize
+# 1. default path (no check injection): the M4 LLM check runs; PlannerLLM's "ANSWER"
+#    is unparseable → fail-safe sufficient, 1 round, llm_calls 3 (plan+check+synth)
 ret = StubRetriever()
 ag = run_agentic(ret, PlannerLLM(), Q, trace=True)
 assert ag["rounds"] == 1
-assert ag["llm_calls"] == 2 and ag["retrieval_calls"] == 1
+assert ag["llm_calls"] == 3 and ag["retrieval_calls"] == 1
 assert [e["node"] for e in ag["trace"]] == ["plan", "retrieve", "check", "synthesize"]
 check_ev = ag["trace"][2]
 assert check_ev["sufficient"] is True and check_ev["rounds"] == 1
 assert ag["answer"] == "ANSWER"
-print("default: 1 round, always-sufficient check, counters 2/1: OK")
+print("default: 1 round, fail-safe LLM check, counters 3/1: OK")
 
 # 2. termination at cap: check always insufficient with fresh queries → exactly MAX_ROUNDS
 ret = StubRetriever()

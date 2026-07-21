@@ -72,13 +72,14 @@ def build_agentic(model, provider, top_k, trace=False):
         result = graph.invoke({"question": question, "llm_calls": 0,
                                "retrieval_calls": 0, "chunks": [], "rounds": 0,
                                "pending_queries": [], "queries_run": [],
-                               "trace": []})
+                               "gaps": [], "trace": []})
         out = {
             "answer": result["answer"],
             "chunks": [{"chunk_id": c["chunk_id"], "text": c["text"]}
                        for c in result["chunks"]],
             "llm_calls": result["llm_calls"],
             "retrieval_calls": result["retrieval_calls"],
+            "gaps": result["gaps"],
         }
         if trace:
             out["trace"] = result["trace"]
