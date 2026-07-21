@@ -1,0 +1,170 @@
+[
+  {
+    "category": "aggregation",
+    "question": "What range of flexural (bending) strength values has been reported for ultra-high-temperature ceramic (UHTC) composites such as ZrB2-SiC-TaB2 dual composites, ZrB2/TiB2-based carbon-fiber UHTCMCs, and Cf/C-UHTC carbon-fabric composites?",
+    "reference_answer": "Flexural/bending strength values reported for these UHTC composites range widely: a Cf/C-UHTC carbon-fabric composite had a bending strength of only 27.8 ± 0.7 MPa (Astapov et al.), continuous-fiber ZrB2/TiB2-based UHTCMCs reached 169-326 MPa (Failla et al.), and ZrB2-SiC-TaB2 dual composites reached as high as 736.33 ± 41.24 MPa (Buyakov et al.).",
+    "answer_keys": [["27.8"], ["169", "326"], ["736"]],
+    "evidence_any": [
+      "The bending strength and the elasticity modulus are 27.8 ± 0.7 MPa and 7.8 ± 0.2 GPa, respectively",
+      "has the highest strength (~330 MPa) due to homogeneous microstructure",
+      "DC40 736.33 ± 41.24 109.86 ± 21.1 219.72 ± 38.17"
+    ],
+    "source_docs": [
+      "Buyakov_2023_CeramicsInternational_Dualcomposite.pdf",
+      "Astapov_2024_LightweightMaterialsandManufacture_DevelopmentofCfC-UHTC.pdf",
+      "Failla_2019_AlloysandCompounds_Tougheningeffect.pdf"
+    ],
+    "excerpts": [
+      "Of equal interest, in addition to the ability to fill a defect by forming new phases, is the residual strength of the studied composites. The tensile strength at three-point bending showed that the strength of the HC is quite consistent with the known data from the literature. An increase in the content of composite inclusions is accompanied by an increase in strength, the maximum of which is reached at 40 vol % of inclusions. A further increase in the content of composite inclusions is characterized by a decrease in flexural strength, Table 4. Table 4 Three-point bending strength of dual composite samples with dual composite structure before and after self-healing of a surface defect. Designation Strength of specimens without defects, MPa Strength of ceramics with a defect, before self-healing, MPa Residual strength after self-healing, MPa DC10 348.03 ± 24 200.1 ± 13.7 250.72 ± 19.5 DC20 400.2 ± 36.1 125.36 ± 7.8 302.8 ± 14.22 DC30 588.74 ± 11.9 169.06 ± 17.8 338.13 ± 26 DC40 736.33 ± 41.24 109.86 ± 21.1 219.72 ± 38.17 DC50 619.73 ± 27.07 104.6 ± 20.1 209.2 ± 11 HC 348.19 ± 19 200.1 ± 19.8 230 ± 17.5",
+      "According to the results of three-point transverse bending tests of the samples, the ultimate strength and elasticity modulus were 27.8 ± 0.7 MPa and 7.8 ± 0.2 GPa, respectively, and the critical strains were 0.85 ± 0.05%. A typical example of the experimental diagram in stress-strain coordinates and a photograph of the specimen appearance after the test are presented in Fig. 3. The failure of the specimens started with the formation of cracks in the compression region (on the loading punch side) and was further accompanied by interlayer delamination. Delamination is typical for 2D reinforced composites with a layered structure. The low values of mechanical characteristics are primarily related to the significant discontinuity in the structure of the Cf/C-UHTC composite, which is caused by the vast number of macropores.",
+      "Values of strength and fracture toughness for the produced samples are reported in Table 2. The uncoated material, Z, has the highest strength (~330 MPa) due to homogeneous microstructure, which ensures the good mechanical stresses transfer between matrix and fibers. ZZ and ZT, with ZrB2 matrix and ZrB2 or TiB2 coating respectively, both display a strength of ~280 MPa, independent of the different nature of the coating and the different fraction of residual porosity. Sample TZ, with TiB2 matrix and ZrB2 coating has the lowest strength, ~170 MPa, probably due to the lowest fiber volume content."
+    ]
+  },
+  {
+    "category": "aggregation",
+    "question": "What range of bulk/true/theoretical density values (g/cm3) has been reported for UHTC systems including ZrB2-SiC-TaB2 dual composites, Cf/C-UHTC carbon-fabric composites, and ZrB2/TiB2-based carbon-fiber UHTCMCs?",
+    "reference_answer": "Reported densities span roughly 2.79-2.91 g/cm3 as the true density of a porous Cf/C-UHTC composite (Astapov et al.), 3.8-4.1 g/cm3 for ZrB2/TiB2-based UHTCMC samples (Failla et al.), and 5.9-7.52 g/cm3 as the theoretical density of ZrB2-SiC-TaB2 dual composites (Buyakov et al.).",
+    "answer_keys": [["2.79", "2.91"], ["3.8", "4.1"], ["5.9", "7.52"]],
+    "evidence_any": [
+      "were 18e22%, 2.25e2.29 g/cm3 and 2.79e2.91 g/cm3, respectively",
+      "relative density of 4.1 g/cm3 and a residual porosity of just 2.1 vol%",
+      "DC50 7.52 0.95 ± 0.03 HC 5.9 0.98 ± 0.02"
+    ],
+    "source_docs": [
+      "Astapov_2024_LightweightMaterialsandManufacture_DevelopmentofCfC-UHTC.pdf",
+      "Failla_2019_AlloysandCompounds_Tougheningeffect.pdf",
+      "Buyakov_2023_CeramicsInternational_Dualcomposite.pdf"
+    ],
+    "excerpts": [
+      "The average values of open porosity and the apparent and true density of the composite (as determined by hydrostatic weighing) were 18e22%, 2.25e2.29 g/cm3 and 2.79e2.91 g/cm3, respectively. According to the results of three-point transverse bending tests of the samples, the ultimate strength and elasticity modulus were 27.8 ± 0.7 MPa and 7.8 ± 0.2 GPa, respectively, and the critical strains were 0.85 ± 0.05%.",
+      "ZZ (ZrB2-based matrix and ZrB2 coating) is characterized by a fully dense microstructure with a relative density of 4.1 g/cm3 and a residual porosity of just 2.1 vol%. The material has 40 vol% of fiber and shows a non-periodic structure (so called salami structure) due to the discrete distribution of the bundles inside the matrix, favored by EPD. ZT (ZrB2-based matrix and TiB2 coating) is well densified and presents characteristics in common with both the first two samples: relative density of 3.8g/cm3, 37vol% of fiber, jagged TiB2-coating/matrix interface, and discrete distribution (non-periodic) of fiber bundles in the matrix.",
+      "The theoretical density of dual composites (DC) was estimated by the mixture rule using the available literature data, Table 2. The presence of residual porosity after sintering and a decrease in the relative density of ceramics with increasing concentration of composite inclusions were probably due to the presence of pores in the granules. Table 2 Density of the studied ceramic samples. Designation Theoretical density, g cm-3 Relative density, % DC10 5.904 0.97 ± 0.015 DC20 6.308 0.97 ± 0.02 DC30 6.712 0.96 ± 0.02 DC40 7.116 0.96 ± 0.02 DC50 7.52 0.95 ± 0.03 HC 5.9 0.98 ± 0.02"
+    ]
+  },
+  {
+    "category": "aggregation",
+    "question": "What consolidation or heat-treatment temperatures have been used to fabricate UHTC materials such as ZrB2-SiC-TaB2 dual composites, ZrB2/TiB2-based carbon-fiber UHTCMCs, and Cf/C-UHTC carbon-fabric composites?",
+    "reference_answer": "Reported consolidation/heat-treatment temperatures range from about 1750 C, used for the argon heat treatment of a Cf/C-UHTC composite (Astapov et al.), to 1800 C for hot-pressing ZrB2-SiC-TaB2 dual composites (Buyakov et al.), and 1800-1900 C for hot-pressing ZrB2/TiB2-based UHTCMCs (Failla et al.).",
+    "answer_keys": [["1750"], ["1800"], ["1900"]],
+    "evidence_any": [
+      "high-temperature heat treatment in argon medium at 1750 C and 100 Pa for 30 min",
+      "at a temperature of 1800 ◦C in a vacuum with holding for 20 min",
+      "using an induction-heated graphite die with a uniaxial pressure of 30e40 MPa, at 1800e1900 C"
+    ],
+    "source_docs": [
+      "Astapov_2024_LightweightMaterialsandManufacture_DevelopmentofCfC-UHTC.pdf",
+      "Buyakov_2023_CeramicsInternational_Dualcomposite.pdf",
+      "Failla_2019_AlloysandCompounds_Tougheningeffect.pdf"
+    ],
+    "excerpts": [
+      "Experimental samples of Cf/C-UHTC composite were made in accordance with the following technological conversion stages: obtaining a prepreg consisting of 11-12 layers of carbon fabric impregnated with a binder; shaping the blanks and curing the resin in the air at 220e230 C; carbonizing in an inert gas environment at 850e900 C and atmospheric pressure; high-temperature heat treatment in argon medium at 1750 C and 100 Pa for 30 min; pyrocompaction in a methane environment at 950e1000 C and 4e5 kPa until a relative weight gain of 11e12% is achieved.",
+      "The matrix phase and the granules were mixed in a magnetic mixer in an ethanol medium. The final sintering of the studied materials was carried out under a pressure of about 150 MPa at a temperature of 1800 ◦C in a vacuum with holding for 20 min. Fig. 2 illustrates the structure of the formed composites.",
+      "Three different combinations of coating and matrix were produced, see Table 1. Finally, sintering was carried out by hot pressing in low vacuum range using an induction-heated graphite die with a uniaxial pressure of 30e40 MPa, at 1800e1900 C. For the sake of comparison, an uncoated sample was also produced with the same composition of ZrB2+5 vol% B4C."
+    ]
+  },
+  {
+    "category": "aggregation",
+    "question": "What sizes of starting ceramic powder particles (ZrB2, TaB2, SiC, and refractory metal powders) have been used to fabricate UHTC composites across different studies?",
+    "reference_answer": "Starting powder particle sizes used in these UHTC studies span roughly 0.5 to 4.51 micrometers for boride and carbide powders such as ZrB2, TaB2, and SiC (Buyakov et al.; Zhou et al.), up to 40-63 micrometers for niobium metal powder (Astapov et al.).",
+    "answer_keys": [["0.5"], ["2.33", "4.51"], ["40", "63"]],
+    "evidence_any": [
+      "average particle size of ZrB2 in the mixture was 2.33 ± 1.65 μm, TaB2 1.7",
+      "Commercially available ZrB2 powder (2 µm, Northwest Institute for Non–ferrous Metal Research, China) and SiC particles (0.5µm",
+      "NB-1 niobium powder, 99.8% purity, 40e63 mm particle size"
+    ],
+    "source_docs": [
+      "Buyakov_2023_CeramicsInternational_Dualcomposite.pdf",
+      "Zhou_2017_CeramicsInternational_Residualstress.pdf",
+      "Astapov_2024_LightweightMaterialsandManufacture_DevelopmentofCfC-UHTC.pdf"
+    ],
+    "excerpts": [
+      "The samples were prepared by high-energy mechanical activation of ZrB2, SiC, and TaB2 powders in a planetary ball mill for 3 min at 1820 rpm with Y-TZP milling balls in a protective gas environment (argon). The average particle size of ZrB2 in the mixture was 2.33 ± 1.65 μm, TaB2 1.7 ± 0.9 μm, and SiC 4.51 ± 3.01 μm.",
+      "Commercially available ZrB2 powder (2 µm, Northwest Institute for Non–ferrous Metal Research, China) and SiC particles (0.5µm, Weifang Kaihua Micro–powder Co. Ltd., China) were used as raw powders. The preparation procedure of the laminated ZrB2–SiC ceramics included 3 steps: (a) Ball milling of powders, (b) stacking layers in alternated sequence and (c) hot–pressing.",
+      "The initial raw materials used to prepare the reaction mixture were: HFM-1 hafnium powder, 99.9% purity, 1e3 mm particle size; NB-1 niobium powder, 99.8% purity, 40e63 mm particle size; boron carbide powder, 99.6% purity, 63e80 mm particle size; titanium carbide powder, 98.5% purity, 14e20 mm particle size; titanium diboride powder, 98.5% purity, 7e14 mm particle size."
+    ]
+  },
+  {
+    "category": "aggregation",
+    "question": "What range of porosity or relative density percentages has been reported for sintered UHTC composites such as ZrB2-SiC-TaB2 dual composites, Cf/C-UHTC carbon-fabric composites, and ZrB2/TiB2-based UHTCMCs?",
+    "reference_answer": "Reported porosity/relative-density levels vary widely: ZrB2-SiC-TaB2 dual composites reached about 95-98% relative density (Buyakov et al.), a Cf/C-UHTC carbon-fabric composite retained 18-22% open porosity (Astapov et al.), and a fully densified ZrB2-based UHTCMC had as little as 2.1% residual porosity (Failla et al.).",
+    "answer_keys": [["95", "98"], ["18", "22"], ["2.1"]],
+    "evidence_any": [
+      "DC10 5.904 0.97 ± 0.015 DC20 6.308 0.97 ± 0.02",
+      "were 18e22%, 2.25e2.29 g/cm3 and 2.79e2.91 g/cm3, respectively",
+      "relative density of 4.1 g/cm3 and a residual porosity of just 2.1 vol%"
+    ],
+    "source_docs": [
+      "Buyakov_2023_CeramicsInternational_Dualcomposite.pdf",
+      "Astapov_2024_LightweightMaterialsandManufacture_DevelopmentofCfC-UHTC.pdf",
+      "Failla_2019_AlloysandCompounds_Tougheningeffect.pdf"
+    ],
+    "excerpts": [
+      "Table 2 Density of the studied ceramic samples. Designation Theoretical density, g cm-3 Relative density, % DC10 5.904 0.97 ± 0.015 DC20 6.308 0.97 ± 0.02 DC30 6.712 0.96 ± 0.02 DC40 7.116 0.96 ± 0.02 DC50 7.52 0.95 ± 0.03 HC 5.9 0.98 ± 0.02",
+      "The average values of open porosity and the apparent and true density of the composite (as determined by hydrostatic weighing) were 18e22%, 2.25e2.29 g/cm3 and 2.79e2.91 g/cm3, respectively. According to the results of three-point transverse bending tests of the samples, the ultimate strength and elasticity modulus were 27.8 ± 0.7 MPa and 7.8 ± 0.2 GPa, respectively.",
+      "ZZ (ZrB2-based matrix and ZrB2 coating) is characterized by a fully dense microstructure with a relative density of 4.1 g/cm3 and a residual porosity of just 2.1 vol%. The material has 40 vol% of fiber and shows a non-periodic structure due to the discrete distribution of the bundles inside the matrix, favored by EPD."
+    ]
+  },
+  {
+    "category": "aggregation",
+    "question": "What elastic (Young's) modulus values have been reported across these UHTC studies, for materials ranging from a Cf/C-UHTC composite to the ZrB2 phase and carbon-fiber reinforcement used in UHTC composites?",
+    "reference_answer": "Reported elastic modulus values span from about 7.8 ± 0.2 GPa for a Cf/C-UHTC composite tested in bending (Astapov et al.), to 490 GPa for the ZrB2 phase used in residual-stress calculations of laminated ZrB2-SiC ceramics (Zhou et al.), up to 780 GPa for the Granoc XN80-6K carbon fiber reinforcement used in UHTCMCs (Failla et al.).",
+    "answer_keys": [["7.8"], ["490"], ["780"]],
+    "evidence_any": [
+      "The elastic modulus (E) and Poisson ratio (υ) to ZrB2 is 490 GPa and 0.17 for stress constant calculation",
+      "the elasticity modulus are 27.8 ± 0.7 MPa and 7.8 ± 0.2 GPa, respectively",
+      "tensile modulus of 780GPa and tensile strength 3.4GPa) were used as substrate in EPD"
+    ],
+    "source_docs": [
+      "Zhou_2017_CeramicsInternational_Residualstress.pdf",
+      "Astapov_2024_LightweightMaterialsandManufacture_DevelopmentofCfC-UHTC.pdf",
+      "Failla_2019_AlloysandCompounds_Tougheningeffect.pdf"
+    ],
+    "excerpts": [
+      "The characteristic peaks of the ZrB2 phase were therefore chosen for evaluating the residual surface stress. The diffraction data of (302) crystal plane of ZrB2 was selected to determine the residual stress on the surface of laminated ZrB2-SiC ceramic samples. The elastic modulus (E) and Poisson ratio (υ) to ZrB2 is 490 GPa and 0.17 for stress constant calculation, respectively.",
+      "According to the results of three-point transverse bending tests of the samples, the ultimate strength and elasticity modulus were 27.8 ± 0.7 MPa and 7.8 ± 0.2 GPa, respectively, and the critical strains were 0.85 ± 0.05%. A typical example of the experimental diagram in stress-strain coordinates and a photograph of the specimen appearance after the test are presented in Fig. 3.",
+      "Carbon fibers (Granoc XN80-6K: density 2.17g/cm3, fabric thickness 330 mm, mass per unit area 330 g/m2, fiber diameter 10 mm, sized with epoxy resin about 1wt%, CTE -1.5 10-6/K, tensile modulus of 780GPa and tensile strength 3.4GPa) were used as substrate in EPD."
+    ]
+  },
+  {
+    "category": "aggregation",
+    "question": "What consolidation pressures have been applied when fabricating UHTC composites such as ZrB2-SiC-TaB2 dual composites, ZrB2/TiB2-based UHTCMCs, and Cf/C-UHTC carbon-fabric composites?",
+    "reference_answer": "Reported consolidation pressures range from 30-40 MPa during hot pressing of ZrB2/TiB2-based UHTCMCs (Failla et al.), to about 60 MPa during prepreg curing of a Cf/C-UHTC composite (Astapov et al.), up to 150 MPa during hot pressing of ZrB2-SiC-TaB2 dual composites (Buyakov et al.).",
+    "answer_keys": [["30", "40"], ["60"], ["150"]],
+    "evidence_any": [
+      "using an induction-heated graphite die with a uniaxial pressure of 30e40 MPa, at 1800e1900 C",
+      "specific pressure and pressing time of 60 MPa and 45 min, respectively",
+      "carried out under a pressure of about 150 MPa at a temperature of 1800"
+    ],
+    "source_docs": [
+      "Failla_2019_AlloysandCompounds_Tougheningeffect.pdf",
+      "Astapov_2024_LightweightMaterialsandManufacture_DevelopmentofCfC-UHTC.pdf",
+      "Buyakov_2023_CeramicsInternational_Dualcomposite.pdf"
+    ],
+    "excerpts": [
+      "Three different combinations of coating and matrix were produced, see Table 1. Finally, sintering was carried out by hot pressing in low vacuum range using an induction-heated graphite die with a uniaxial pressure of 30e40 MPa, at 1800e1900 C. For the sake of comparison, an uncoated sample was also produced with the same composition of ZrB2+5 vol% B4C, just using the slurry impregnation and sintering.",
+      "shaping the blanks and curing the resin in the air at 220e230 C, specific pressure and pressing time of 60 MPa and 45 min, respectively; carbonizing in an inert gas environment at 850e900 C and atmospheric pressure; high-temperature heat treatment in argon medium at 1750 C and 100 Pa for 30 min.",
+      "The matrix phase and the granules were mixed in a magnetic mixer in an ethanol medium. The final sintering of the studied materials was carried out under a pressure of about 150 MPa at a temperature of 1800 ◦C in a vacuum with holding for 20 min. Fig. 2 illustrates the structure of the formed composites."
+    ]
+  },
+  {
+    "category": "aggregation",
+    "question": "What powder ball-milling or mixing times have been used when preparing raw powders for UHTC composites like ZrB2-SiC-TaB2 dual composites, laminated ZrB2-SiC ceramics, and Hf-Nb-B4C-TiC-TiB2 based Cf/C-UHTC composites?",
+    "reference_answer": "Powder milling/mixing times used to prepare these UHTC materials range from just 3 minutes for mechanical activation of ZrB2, SiC, and TaB2 powders (Buyakov et al.) and 10 minutes for mixing the Hf-Nb-B4C-TiC-TiB2 reaction mixture (Astapov et al.), up to 10 hours of ball milling for ZrB2 and SiC powders (Zhou et al.).",
+    "answer_keys": [["3 min"], ["10 min"], ["10 h"]],
+    "evidence_any": [
+      "high-energy mechanical activation of ZrB2, SiC, and TaB2 powders in a planetary ball mill for 3 min at 1820 rpm",
+      "were ball–milled for 10 h in a polyethylene bottle using ZrO2 balls and ethanol as the grinding media",
+      "for 10 min in argon, with drum rotation speed of 700 rpm and a 1/15"
+    ],
+    "source_docs": [
+      "Buyakov_2023_CeramicsInternational_Dualcomposite.pdf",
+      "Zhou_2017_CeramicsInternational_Residualstress.pdf",
+      "Astapov_2024_LightweightMaterialsandManufacture_DevelopmentofCfC-UHTC.pdf"
+    ],
+    "excerpts": [
+      "The investigation was performed on ceramic composite samples obtained from ZrB2, SiC, and TaB2 powders. The samples were prepared by high-energy mechanical activation of ZrB2, SiC, and TaB2 powders in a planetary ball mill for 3 min at 1820 rpm with Y-TZP milling balls in a protective gas environment (argon).",
+      "Commercially available ZrB2 powder (2 µm) and SiC particles (0.5µm) were used as raw powders. The preparation procedure of the laminated ZrB2–SiC ceramics included 3 steps: (a) Ball milling of powders, (b) stacking layers in alternated sequence and (c) hot–pressing. The mixed powders of ZrB2+20 vol% SiC or ZrB2+30 vol% SiC were made, which were ball–milled for 10 h in a polyethylene bottle using ZrO2 balls and ethanol as the grinding media.",
+      "The initial raw materials used to prepare the reaction mixture were: HFM-1 hafnium powder, NB-1 niobium powder, boron carbide powder, titanium carbide powder, titanium diboride powder. The powders were mixed in an Activator-2S planetary mill for 10 min in argon, with drum rotation speed of 700 rpm and a 1/15 weight ratio between the mixture and the grinding bodies. The mixture was dried in a vacuum dryer at 95 C for 8 h."
+    ]
+  }
+]

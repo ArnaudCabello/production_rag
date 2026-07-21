@@ -1,0 +1,182 @@
+[
+  {
+    "category": "multi_hop",
+    "question": "Kai Zhao's ZrC-SiC closed-cell ceramic sample S-30 (30 vol.% ZrC hollow microspheres) has 14.05% closed porosity; is its thermal conductivity higher or lower than the 0.94 W/(m·K) thermal conductivity Zhuojie Shao reports for single-component porous ZrC at 85% porosity?",
+    "reference_answer": "Kai Zhao's S-30 ZrC-SiC closed-cell ceramic has a thermal conductivity of 1.69 W/(m·K), which is higher than the 0.94 W/(m·K) thermal conductivity that Zhuojie Shao reports for single-component porous ZrC at 85% porosity, even though S-30 has much lower total porosity.",
+    "answer_keys": [["1.69"], ["0.94"], ["higher"]],
+    "evidence_any": [
+      "and a thermal conductivity of 1.69 W (m K)–1.",
+      "high entropy carbide is distinctly smaller than that (0.94 W/(m&#2;K) for 85.0%) of"
+    ],
+    "source_docs": [
+      "Zhao_2024_MaterialsScience&Technology_ZrC-SiCclosed-cell.pdf",
+      "Shao_2022_MaterialsScience&Technology_Highentropy.pdf"
+    ],
+    "excerpts": [
+      "The pore structure of the samples was characterized by mercury intrusion (MicroActive AutoPore V 9600, USA). The thermal conductivity (κ, W (m K)–1) of the ZrC-SiC closed-cell ceramics was calculated by Eq. (1) κ = α × ρ × Cp. The results indicate that when the content of ZrC HMs is 30 vol.%, the density of the prepared porous ceramics is 2.09 g cm–3, with a closed porosity of 14.05% and a thermal conductivity of 1.69 W (m K)–1. The results clearly prove that the CVI process can successfully convert ZrC HMs into closed pore structures within porous ceramics. The introduction of ZrC HMs suppresses the contribution of free electrons to thermal conductivity and brings about a large number of solid-gas interfaces, which increases the interfacial thermal resistance and significantly reduces the phonon thermal conductivity.",
+      "Thermal conductivity of the present sample is lower than the same material system with porosity of 80.99% [12], which is benefited from higher porosity obtained by foam-gelcasting-freeze drying method. More importantly, it is worth noting that thermal conductivity of high entropy carbide is distinctly smaller than that (0.94 W/(m&#2;K) for 85.0%) of single-component ZrC [34]. This is because high entropy effect can efficiently reduce thermal conductivity of solid skeleton due to significant phonon scattered at the disordered cation sublattice."
+    ]
+  },
+  {
+    "category": "multi_hop",
+    "question": "Which process reaches a higher temperature: Kai Zhao's chemical vapor infiltration (CVI) deposition of SiC into ZrC hollow-microsphere preforms, or Ambreen Nisar's spark plasma sintering (SPS) consolidation of (Ta,Nb,Hf,Ti)C multicomponent ultra-high temperature carbide powders?",
+    "reference_answer": "Ambreen Nisar's spark plasma sintering of the (Ta,Nb,Hf,Ti)C multicomponent carbides was carried out at 1850 degrees Celsius, which is higher than the 1100 degrees Celsius deposition temperature Kai Zhao used for the CVI process that produces the ZrC-SiC closed-cell ceramics.",
+    "answer_keys": [["spark plasma", "sps"], ["1850"], ["higher"]],
+    "evidence_any": [
+      "temperature was kept at 1100 °C for a duration of 80 h.",
+      "spark plasma sintering (SPS, Model 104, Thermal Technologies, Santa Rosa, CA, USA) at the 1850 ◦C, 60 MPa"
+    ],
+    "source_docs": [
+      "Zhao_2024_MaterialsScience&Technology_ZrC-SiCclosed-cell.pdf",
+      "Nisar_2024_RefractoryMetalsandHardMaterials_In-situcrack.pdf"
+    ],
+    "excerpts": [
+      "The SiC matrix was deposited into the ZrC HMs preform via CVI, employing methyl trichlorosilane (MTS, CH3SiCl3) as the precursor. Transport of MTS vapor was facilitated by bubbling hydrogen through the system, with the inclusion of argon as a dilution gas to adjust the chemical reaction rate during deposition. The specific deposition parameters employed in this work were as follows: a mixture of MTS and H2 accorded with a ratio of 1:10, the reactor system was maintained at a pressure of 3 kPa, and the deposition temperature was kept at 1100 °C for a duration of 80 h.",
+      "Powders were mixed in equimolar concentrations via ball-milling (Across International LLC, Livingston, NJ, USA) for 1 h with a powder ratio of 1:3 to obtain binary, ternary, and quaternary UHTCs. The powder mixture was consolidated using spark plasma sintering (SPS, Model 104, Thermal Technologies, Santa Rosa, CA, USA) at the 1850 ◦C, 60 MPa and heating rate of 100 ◦C/ min for 10 min under vacuum. The relative densification of 85 % for binary and ~ 100 % for both ternary and quaternary UHTC was obtained."
+    ]
+  },
+  {
+    "category": "multi_hop",
+    "question": "Which sintering or heating temperature is higher: Zhuojie Shao's pressureless reaction sintering of high-entropy (Zr1/5Hf1/5Nb1/5Ta1/5Ti1/5)C, or Ambreen Nisar's spark plasma sintering (SPS) of quaternary (Ta,Nb,Hf,Ti)C?",
+    "reference_answer": "Zhuojie Shao's pressureless reaction sintering of the porous high-entropy (Zr1/5Hf1/5Nb1/5Ta1/5Ti1/5)C carbide was performed at 2000 degrees Celsius, which is higher than the 1850 degrees Celsius used in Ambreen Nisar's spark plasma sintering of the quaternary (Ta,Nb,Hf,Ti)C UHTC.",
+    "answer_keys": [["2000"], ["1850"], ["higher", "shao"]],
+    "evidence_any": [
+      "heated at 2000 °C for 2 h by using a vacuum graphite tube furnace",
+      "spark plasma sintering (SPS, Model 104, Thermal Technologies, Santa Rosa, CA, USA) at the 1850 ◦C, 60 MPa"
+    ],
+    "source_docs": [
+      "Shao_2022_MaterialsScience&Technology_Highentropy.pdf",
+      "Nisar_2024_RefractoryMetalsandHardMaterials_In-situcrack.pdf"
+    ],
+    "excerpts": [
+      "After demoulding, the green bodies were presintered at 1500 °C for 2 h. Finally, the pre-sintered samples were heated at 2000 °C for 2 h by using a vacuum graphite tube furnace (MT-18–22, Chen Hua, Shanghai, China). The porous high entropy carbide samples prepared from different solid contents of 7, 10, 15 and 20 vol.% as well as 2 wt.% SiC additive were designated as HEC-7, HEC-10, HEC-15 and HEC-20, respectively.",
+      "Powders were mixed in equimolar concentrations via ball-milling (Across International LLC, Livingston, NJ, USA) for 1 h with a powder ratio of 1:3 to obtain binary, ternary, and quaternary UHTCs. The powder mixture was consolidated using spark plasma sintering (SPS, Model 104, Thermal Technologies, Santa Rosa, CA, USA) at the 1850 ◦C, 60 MPa and heating rate of 100 ◦C/ min for 10 min under vacuum."
+    ]
+  },
+  {
+    "category": "multi_hop",
+    "question": "Which UHTC has a higher relative density: Ambreen Nisar's SPS-consolidated binary (Ta,Nb)C carbide, or Zhuojie Shao's densest porous high-entropy carbide sample, which has 86.4% porosity?",
+    "reference_answer": "Ambreen Nisar's binary (Ta,Nb)C UHTC reached about 85% relative densification, far denser than Zhuojie Shao's densest porous high-entropy carbide sample, which still has 86.4% porosity (only about 13.6% relative density).",
+    "answer_keys": [["85"], ["86.4"], ["binary", "nisar"]],
+    "evidence_any": [
+      "The relative densification of 85 % for binary and ~ 100 % for both ternary and quaternary UHTC was obtained.",
+      "It is noted that the strength (11.77 MPa, porosity: 86.4%) in this"
+    ],
+    "source_docs": [
+      "Nisar_2024_RefractoryMetalsandHardMaterials_In-situcrack.pdf",
+      "Shao_2022_MaterialsScience&Technology_Highentropy.pdf"
+    ],
+    "excerpts": [
+      "The powder mixture was consolidated using spark plasma sintering (SPS, Model 104, Thermal Technologies, Santa Rosa, CA, USA) at the 1850 ◦C, 60 MPa and heating rate of 100 ◦C/ min for 10 min under vacuum. The relative densification of 85 % for binary and ~ 100 % for both ternary and quaternary UHTC was obtained. The details of the processing, microstructure and solid-solutioning in these samples are reported elsewhere [18].",
+      "It should be mentioned here that the strength of our samples is superior to those of other porous oxides and carbides with similar porosities [34–39], which are plotted and compared in Fig. 6(a). It is noted that the strength (11.77 MPa, porosity: 86.4%) in this work is higher than that (3.45 MPa, porosity: 80.99%) of porous (Zr0.2Hf0.2Ti0.2Nb0.2Ta0.2)C [12]."
+    ]
+  },
+  {
+    "category": "multi_hop",
+    "question": "Ambreen Nisar's introduction states that formation of Hf6Ta2O17 oxide improves the oxidation resistance of multicomponent UHTCs (MC-UHTCs) by more than 40 times; by how many degrees Celsius does Zhuojie Shao's TG-DSC data show a 2 wt.% SiC additive raising the oxidation exothermic peak temperature of high-entropy carbide powders?",
+    "reference_answer": "Zhuojie Shao's TG-DSC results show that adding 2 wt.% SiC raises the oxidation exothermic peak temperature of the high-entropy carbide powders by 181.4 degrees Celsius, compared with Ambreen Nisar's cited finding that Hf6Ta2O17 oxide formation improves oxidation resistance of MC-UHTCs by more than 40 times.",
+    "answer_keys": [["181.4"], ["40 times", ">40"], ["oxidation"]],
+    "evidence_any": [
+      "the formation of protective complex mixed oxides with Hf6Ta2O17 (as the primary phase) improves the oxidation resistance by",
+      "181.4 °C when the amount of SiC additive is 2 wt.%."
+    ],
+    "source_docs": [
+      "Nisar_2024_RefractoryMetalsandHardMaterials_In-situcrack.pdf",
+      "Shao_2022_MaterialsScience&Technology_Highentropy.pdf"
+    ],
+    "excerpts": [
+      "Our earlier studies [18,19] revealed that the gradual addition of UHTC components to form binary, ternary, and quaternary UHTCs improved their mechanical properties and oxidation resistance remarkably. The resistance to indentation damage proved up to 72 % at an applied load of 200 N, while the formation of protective complex mixed oxides with Hf6Ta2O17 (as the primary phase) improves the oxidation resistance by >40 times in MC-UHTCs. Hf6Ta2O17 has a melting temperature > 2400 ◦C, low thermal conductivity, and oxygen diffusion, and no phase transformation from RT up to the melting point.",
+      "The initial oxidation temperatures and maximum exothermic peaks of high entropy carbide powders are higher than those of the mixed powders and further enhanced with more SiC addition. It shows that high entropy carbide powders have better oxidation resistance than mixed raw powders, which enhances about 119.2 °C. The addition of SiC additive also improves oxidation resistance of high entropy carbide powders, and the increment reaches 181.4 °C when the amount of SiC additive is 2 wt.%."
+    ]
+  },
+  {
+    "category": "multi_hop",
+    "question": "In Kai Zhao's ZrC-SiC closed-cell ceramics, SiC is introduced via CVI using a specific MTS-to-H2 gas ratio; what weight percentage of SiC additive did Zhuojie Shao find optimal for densifying porous high-entropy (Zr1/5Hf1/5Nb1/5Ta1/5Ti1/5)C?",
+    "reference_answer": "Kai Zhao deposited SiC into the ZrC hollow-microsphere preform by CVI using a methyl trichlorosilane (MTS) to hydrogen gas ratio of 1:10, whereas Zhuojie Shao found that 2 wt.% SiC sintering additive gave the best crystallinity and was used as the optimal amount for densifying the high-entropy carbide.",
+    "answer_keys": [["1:10"], ["2 wt"], ["sic"]],
+    "evidence_any": [
+      "a mixture of MTS and H2 accorded with a ratio of 1:10, the reactor",
+      "2 wt.% SiC content shows the best crystallinity, and thus this"
+    ],
+    "source_docs": [
+      "Zhao_2024_MaterialsScience&Technology_ZrC-SiCclosed-cell.pdf",
+      "Shao_2022_MaterialsScience&Technology_Highentropy.pdf"
+    ],
+    "excerpts": [
+      "The SiC matrix was deposited into the ZrC HMs preform via CVI, employing methyl trichlorosilane (MTS, CH3SiCl3) as the precursor. Transport of MTS vapor was facilitated by bubbling hydrogen through the system, with the inclusion of argon as a dilution gas to adjust the chemical reaction rate during deposition. The specific deposition parameters employed in this work were as follows: a mixture of MTS and H2 accorded with a ratio of 1:10, the reactor system was maintained at a pressure of 3 kPa, and the deposition temperature was kept at 1100 °C for a duration of 80 h.",
+      "It is suggested that SiC not only serves as sintering additive to lower the solid solution temperature, but also acts as a reducing agent to consume the residual oxygen during the preparation of sample. As shown in XRD patterns, 2 wt.% SiC content shows the best crystallinity, and thus this content is used as optimal addition amount in this work."
+    ]
+  },
+  {
+    "category": "multi_hop",
+    "question": "Ambreen Nisar reports quaternary (Ta,Nb,Hf,Ti)C achieved a flexural strength of 726 MPa; how does this compare to the highest compressive strength Zhuojie Shao measured for porous high-entropy (Zr1/5Hf1/5Nb1/5Ta1/5Ti1/5)C?",
+    "reference_answer": "Ambreen Nisar's dense quaternary (Ta,Nb,Hf,Ti)C carbide had a flexural strength of 726 MPa, far higher than the maximum compressive strength of 11.77 MPa that Zhuojie Shao measured for the porous high-entropy (Zr1/5Hf1/5Nb1/5Ta1/5Ti1/5)C, whose strength ranges from 0.70 to 11.77 MPa due to its high porosity.",
+    "answer_keys": [["726"], ["11.77"], ["higher", "far"]],
+    "evidence_any": [
+      "Quaternary UHTCs showed the highest flexural strength of 726 MPa, representing an improvement of",
+      "and low thermal conductivity of 0.70–11.77 MPa and 0.164–0.239 W/(m&#2;K), respectively."
+    ],
+    "source_docs": [
+      "Nisar_2024_RefractoryMetalsandHardMaterials_In-situcrack.pdf",
+      "Shao_2022_MaterialsScience&Technology_Highentropy.pdf"
+    ],
+    "excerpts": [
+      "Herein, MC-UHTCs are synthesized by varying the components from binary up to quaternary in (Ta,Nb,Hf,Ti)C system using spark plasma sintering (SPS). The present work identifies real-time quantitative failure events such as cracking, crack propagation and fracture using a high-speed camera during 4-point flexural testing in MC-UHTCs. Quaternary UHTCs showed the highest flexural strength of 726 MPa, representing an improvement of ~166 % over binary and ~ 24 % over ternary UHTCs.",
+      "We herein report a novel highly porous high entropy (Zr1/5Hf1/5Nb1/5Ta1/5Ti1/5)C fabricated by foam-gelcasting-freeze drying technology combined with in-situ pressureless reaction sintering. The porous (Zr1/5Hf1/5Nb1/5Ta1/5Ti1/5)C exhibited ultra-high porosity of 86.4%-95.9%, as well as high strength and low thermal conductivity of 0.70–11.77 MPa and 0.164–0.239 W/(m&#2;K), respectively."
+    ]
+  },
+  {
+    "category": "multi_hop",
+    "question": "Zhuojie Shao's introduction cites an intrinsic thermal conductivity for ZrC; is this value higher or lower than the intrinsic ZrC thermal conductivity Kai Zhao's interfacial-thermal-resistance model assigns to κZ for the ZrC-SiC closed-cell ceramics?",
+    "reference_answer": "Zhuojie Shao's introduction cites ZrC's intrinsic thermal conductivity as 33.5 W/(m·K), which is higher than the 20.5 W/(m·K) value that Kai Zhao assigns to κZ (intrinsic ZrC conductivity) in the interfacial thermal resistance model for the ZrC-SiC closed-cell ceramics.",
+    "answer_keys": [["33.5"], ["20.5"], ["higher"]],
+    "evidence_any": [
+      "is considerably high, for instance, 33.5 W/(m&#2;K) for ZrC and",
+      "values of 0.023, 20.5, and 15 W (m K)–1, respectively."
+    ],
+    "source_docs": [
+      "Shao_2022_MaterialsScience&Technology_Highentropy.pdf",
+      "Zhao_2024_MaterialsScience&Technology_ZrC-SiCclosed-cell.pdf"
+    ],
+    "excerpts": [
+      "Ultra-high temperature carbides ZrC, HfC, NbC, TaC and TiC are promising ultra-high temperature thermal insulation materials, which stem from their high melting temperature (>3000 °C), excellent thermochemical stability, high strength and ablation resistance. However, the intrinsic thermal conductivity of these ultra-high temperature carbides is considerably high, for instance, 33.5 W/(m&#2;K) for ZrC and 29.3 W/(m&#2;K) for HfC.",
+      "κA, κZ, and κS are the intrinsic thermal conductivities of air, ZrC, and SiC, which take the values of 0.023, 20.5, and 15 W (m K)–1, respectively. α = Rkκ S/r is a dimensionless parameter indicating the strength of the interfacial thermal resistance."
+    ]
+  },
+  {
+    "category": "multi_hop",
+    "question": "Ambreen Nisar reports approximately 14% porosity in her binary (Ta,Nb)C UHTC. Which of Kai Zhao's ZrC-SiC closed-cell ceramic samples has an almost identical closed porosity value, and what is that sample's ZrC hollow-microsphere content?",
+    "reference_answer": "Kai Zhao's S-30 sample, containing 30 vol.% ZrC hollow microspheres, has a closed porosity of 14.05%, which nearly matches the approximately 14% porosity Ambreen Nisar reports for her binary (Ta,Nb)C UHTC.",
+    "answer_keys": [["14.05"], ["s-30", "30 vol"], ["14 %", "~14"]],
+    "evidence_any": [
+      "the density of the prepared porous ceramics is 2.09 g cm–3, with a closed porosity of 14.05%",
+      "which is ~14 % in binary (Fig. 1a) and negligible in ternary and"
+    ],
+    "source_docs": [
+      "Zhao_2024_MaterialsScience&Technology_ZrC-SiCclosed-cell.pdf",
+      "Nisar_2024_RefractoryMetalsandHardMaterials_In-situcrack.pdf"
+    ],
+    "excerpts": [
+      "In this paper, ZrC-SiC closed-cell ceramics were first successfully prepared through a combination of tape casting and chemical vapor infiltration (CVI) techniques, utilizing the self-developed ZrC HMs as the primary raw material. The results indicate that when the content of ZrC HMs is 30 vol.%, the density of the prepared porous ceramics is 2.09 g cm–3, with a closed porosity of 14.05% and a thermal conductivity of 1.69 W (m K)–1.",
+      "The characteristic fractured micrographs and the EDS spectra of the investigated MC-UHTCs are illustrated in Fig. 1. The observed porosity in the microstructure is in good agreement with the density measurements, which is ~14 % in binary (Fig. 1a) and negligible in ternary and quaternary UHTCs (Figs. 1b-c)."
+    ]
+  },
+  {
+    "category": "multi_hop",
+    "question": "Kai Zhao's mercury-intrusion analysis shows ZrC-SiC closed-cell ceramic pore sizes shifting toward about 1.05 μm for sample S-10; how do these submicron pore sizes compare to the large-pore size range Zhuojie Shao reports for sample HEC-10 of the porous high-entropy carbide?",
+    "reference_answer": "Kai Zhao's ZrC-SiC closed-cell ceramics have submicron pore sizes, around 1.05 micrometers for sample S-10, which are far smaller than the large pores in Zhuojie Shao's HEC-10 porous high-entropy carbide, which range from about 65 to 296 micrometers.",
+    "answer_keys": [["1.05"], ["65", "296"], ["smaller", "far"]],
+    "evidence_any": [
+      "shifts towards a smaller size, from 1.05 μm corresponding to S-10",
+      "large pores for HEC-10, HEC-15 and HEC-20 are about 65–296 μm,"
+    ],
+    "source_docs": [
+      "Zhao_2024_MaterialsScience&Technology_ZrC-SiCclosed-cell.pdf",
+      "Shao_2022_MaterialsScience&Technology_Highentropy.pdf"
+    ],
+    "excerpts": [
+      "The pore size distribution of ZrC-SiC closed-cell ceramics, with varying volume fractions of ZrC HMs, was measured using the mercury intrusion method, as depicted in Fig. 6(a). The pore sizes of all three ceramics are less than 2 μm. As the volume fraction of ZrC HMs increases, the peak corresponding to the pore size gradually shifts towards a smaller size, from 1.05 μm corresponding to S-10 to 0.67 μm corresponding to S-30.",
+      "Fig. 2 presents micrographs of HEC-10, HEC-15 and HEC-20. It reveals that all samples exhibit a uniform isotropic multiple pore structure, including large pores, windows and small pores in the skeleton. As displayed in Fig. 2(a), (d) and (g), size distributions of large pores for HEC-10, HEC-15 and HEC-20 are about 65–296 μm, 67–267 μm and 60–242 μm, respectively."
+    ]
+  }
+]

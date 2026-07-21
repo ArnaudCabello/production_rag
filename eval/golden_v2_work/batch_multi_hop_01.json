@@ -1,0 +1,182 @@
+[
+  {
+    "category": "multi_hop",
+    "question": "Between He et al. (2013)'s pressureless sintering of the aqueous-gelcast HfB2–20 vol.% MoSi2 composite and Zhang et al. (2025)'s boro/carbothermal reduction synthesis of hollow-spherical HfB2-Glucose powder, which process used a higher peak processing temperature, and what was that peak temperature?",
+    "reference_answer": "He et al. (2013) pressureless sintered the HfB2–20 vol.% MoSi2 gelcast composite at 1950 °C, which is higher than the 1550 °C peak temperature Zhang et al. (2025) used during boro/carbothermal reduction to form hollow-spherical HfB2-Glucose powder.",
+    "answer_keys": [["1950"], ["he", "gelcast"], ["higher"]],
+    "evidence_any": [
+      "subsequently pressureless sintered at 1950 °C with a holding time of 2 h in flowing N2 atmosphere",
+      "heated at 1550 ℃ for 2 h, the final HfB2 powders could be obtained"
+    ],
+    "source_docs": [
+      "He_2013_Materials&Design_Effectsofsolids.pdf",
+      "Zhang_2025_AlloysandCompounds_Synthesisofhollow-spherical-structured.pdf"
+    ],
+    "excerpts": [
+      "APS and TEMED were added to the suspensions at a constant stirring rate of 60 s1. Then the resulting suspension was poured into an mold at 70 °C. After the monomers polymerized, the gelled wet body was demolded and dried at room temperature for 48 h and then put into a drying oven at 70 °C for 72 h. After drying, the green body was firstly heated to 600 °C with a heating rate of 1 °C/min and held for 2 h to remove the organic substances in an electric resistance furnace assembled in our laboratory. Then the binder burnout body was embedded in ZrB2 powders and subsequently pressureless sintered at 1950 °C with a holding time of 2 h in flowing N2 atmosphere (1 atm) in a graphite resistant furnace (ZRY-80, Jinzhou Hangxing Vacuum Equipment Co. Ltd., China).",
+      "The precipitate was then collected and treated at 60 ℃ for 3 h, followed by drying at 120 ℃ for 12 h to obtain the respective HfB2 precursor. After grinding in an agate mortar, the HfB2 precursor was placed in a graphite boat and heated in a tube furnace (GSL-1700X, Hefei Kejing Material Technology Co., Ltd.) in an argon atmosphere. The temperature was first raised to 1000 ℃ at a rate of 5 ℃/min and then to 1550 ℃ at a rate of 2 ℃/min. After maintaining at 1550 ℃ for 2 h, the final HfB2 powders could be obtained. During such a thermal treatment process, the boro/carbothermal reaction proceeded to completion."
+    ]
+  },
+  {
+    "category": "multi_hop",
+    "question": "Comparing the minimum reflection loss values reported for HfB2-Glucose hollow-spherical powder in Zhang et al. (2025) and for the TiC/SiOC-80 wt% Al2O3 coating in Yang & Xu (2023), which material system achieved a deeper (more negative) minimum reflection loss, and at what absorber thickness was each value measured?",
+    "reference_answer": "Yang & Xu (2023) achieved a deeper minimum reflection loss of -58.26 dB with the TiC/SiOC-80 wt% Al2O3 coating at only 0.38 mm thickness, compared to Zhang et al. (2025)'s -57.8 dB for hollow-spherical HfB2-Glucose powder at a much greater 3.3 mm thickness.",
+    "answer_keys": [["58.26", "-58.26"], ["yang", "tic/sioc"], ["thinner", "0.38"]],
+    "evidence_any": [
+      "the minimum reflection loss of HfB2-Glucose is -57.8 dB at 2.96 GHz with a thickness of 3.3 mm",
+      "The lowest observed RL value (RLmin) is − 58.26 dB for the TiC/SiOC-80 wt % Al2O3 coating"
+    ],
+    "source_docs": [
+      "Zhang_2025_AlloysandCompounds_Synthesisofhollow-spherical-structured.pdf",
+      "Yang_2023_CompositesCommunications_Ultrathinpolymer-derived.pdf"
+    ],
+    "excerpts": [
+      "The calculated 3D plots of RL are illustrated in Fig. 10. The minimum RL of HfB2-Sorbitol only reaches -4.34 dB at a thickness of 5 mm, which is outside the effective range for EMW absorption. However, the minimum reflection loss of HfB2-Glucose is -57.8 dB at 2.96 GHz with a thickness of 3.3 mm, an effective absorption bandwidth (EAB) of 2.96 GHz can be achieved at a thickness of 1.45 mm. The hollow spherical carbon structure within HfB2-Glucose nanopowders makes a significant contribution to achieving such excellent EMW absorption capability.",
+      "The optimal performance is achieved with TiC/SiOC-50 wt% Al2O3 at an optimal thickness (dm) of only 0.60 mm. This configuration exhibits RL values below − 10 dB (corresponding to >90% absorption) and covers the entire Ka band from 26.5 to 40 GHz, providing an effective absorption bandwidth (EAB) of 13.5 GHz. The lowest observed RL value (RLmin) is − 58.26 dB for the TiC/SiOC-80 wt % Al2O3 coating at 34.62 GHz, with a dm of 0.38 mm. The TiC/SiOC-80 wt % Al2O3 coating exhibits an RL value of smaller than − 10 dB (corresponding to > 90% EM absorption) over a bandwidth of 10.74 GHz, spanning the frequency range of 29.26 GHz–40 GHz."
+    ]
+  },
+  {
+    "category": "multi_hop",
+    "question": "Zhang et al. (2025) report the effective absorption bandwidth (EAB) achieved by hollow-spherical HfB2-Glucose powder, and Yang & Xu (2023) report the EAB achieved by the TiC/SiOC-50 wt% Al2O3 coating. Which material system provides the substantially wider EAB?",
+    "reference_answer": "The TiC/SiOC-50 wt% Al2O3 coating from Yang & Xu (2023) provides a much wider effective absorption bandwidth of 13.5 GHz, compared to only 2.96 GHz achieved by the hollow-spherical HfB2-Glucose powder in Zhang et al. (2025).",
+    "answer_keys": [["13.5"], ["tic/sioc", "yang"], ["wider", "wide", "broader"]],
+    "evidence_any": [
+      "an effective absorption bandwidth (EAB) of 2.96 GHz can be achieved at a thickness of 1.45 mm",
+      "showcasing an exceptionally wide EAB of 13.5 GHz, effectively spanning the entire Ka-band at a thin thickness"
+    ],
+    "source_docs": [
+      "Zhang_2025_AlloysandCompounds_Synthesisofhollow-spherical-structured.pdf",
+      "Yang_2023_CompositesCommunications_Ultrathinpolymer-derived.pdf"
+    ],
+    "excerpts": [
+      "The calculated 3D plots of RL are illustrated in Fig. 10. The minimum RL of HfB2-Sorbitol only reaches -4.34 dB at a thickness of 5 mm, which is outside the effective range for EMW absorption. However, the minimum reflection loss of HfB2-Glucose is -57.8 dB at 2.96 GHz with a thickness of 3.3 mm, an effective absorption bandwidth (EAB) of 2.96 GHz can be achieved at a thickness of 1.45 mm. The hollow spherical carbon structure within HfB2-Glucose nanopowders makes a significant contribution to achieving such excellent EMW absorption capability.",
+      "The experimental outcomes present compelling evidence of the coating system's remarkable EM performance, with the TiC/SiOC-50 wt % Al2O3 variant showcasing an exceptionally wide EAB of 13.5 GHz, effectively spanning the entire Ka-band at a thin thickness of 0.60 mm. Additionally, the TiC/SiOC-80 wt% Al2O3 system exhibits excellent EM characteristics, exemplified by a RLmin of − 58.26 dB, an EAB of 10.74 GHz, and an ultrathin thickness of 0.38 mm. Remarkably, this marks the first reported instance of a coating with a thickness below 0.5 mm demonstrating such exceptional EM properties."
+    ]
+  },
+  {
+    "category": "multi_hop",
+    "question": "He et al. (2013) pressureless sintered the HfB2–20 vol.% MoSi2 gelcast composite at 1950 °C, while Yang & Xu (2023) note that the TiC/SiOC-0.25 precursor was pyrolyzed at 1400 °C to form SiC and TiC phases. Which of these two UHTC-related thermal treatments reached the higher temperature?",
+    "reference_answer": "He et al. (2013)'s pressureless sintering of the HfB2–20 vol.% MoSi2 gelcast composite at 1950 °C reached a higher temperature than Yang & Xu (2023)'s pyrolysis of the TiC/SiOC-0.25 precursor at 1400 °C.",
+    "answer_keys": [["1950"], ["he", "hfb2"], ["higher"]],
+    "evidence_any": [
+      "subsequently pressureless sintered at 1950 °C with a holding time of 2 h in flowing N2 atmosphere",
+      "XRD analysis revealed the clear presence of SiC and TiC phases in the pattern of TiC/SiOC-0.25 pyrolyzed at 1400"
+    ],
+    "source_docs": [
+      "He_2013_Materials&Design_Effectsofsolids.pdf",
+      "Yang_2023_CompositesCommunications_Ultrathinpolymer-derived.pdf"
+    ],
+    "excerpts": [
+      "APS and TEMED were added to the suspensions at a constant stirring rate of 60 s1. Then the resulting suspension was poured into an mold at 70 °C. After the monomers polymerized, the gelled wet body was demolded and dried at room temperature for 48 h and then put into a drying oven at 70 °C for 72 h. After drying, the green body was firstly heated to 600 °C with a heating rate of 1 °C/min and held for 2 h to remove the organic substances in an electric resistance furnace assembled in our laboratory. Then the binder burnout body was embedded in ZrB2 powders and subsequently pressureless sintered at 1950 °C with a holding time of 2 h in flowing N2 atmosphere (1 atm) in a graphite resistant furnace.",
+      "Fig. 1(a) illustrates the phase composition of the TiC/SiOC-0.25 absorbing coatings with varying Al2O3 contents. The TiC/SiOC-0.25 sample is the ceramic resulting from the pyrolysis of titanium isopropoxide and polycarbosiloxane, with a corresponding weight ratio of 25 wt%. XRD analysis revealed the clear presence of SiC and TiC phases in the pattern of TiC/SiOC-0.25 pyrolyzed at 1400 ◦C. However, based on similar lattice parameters, distinguishing between the SiC and TiC phases was challenging. TEM/EDS analysis provides insights into the nanoscale characteristics of the TiC phase. The TiC crystallites exhibited an average size of approximately 20 nm, displaying a spherical-like shape and a uniform dispersion within the ceramic matrix."
+    ]
+  },
+  {
+    "category": "multi_hop",
+    "question": "He et al. (2013) report the solids loading that produced the most homogeneous HfB2–MoSi2 gelcast microstructure, and Zhang et al. (2025) report the size of the individual HfB2 particles that aggregate into hollow spheres in HfB2-Glucose powder. What is the optimal solids loading vol.% found in He et al. (2013), and what is the individual HfB2 particle size range reported in Zhang et al. (2025) before they aggregate into spheres?",
+    "reference_answer": "He et al. (2013) found that 45 vol.% solids loading gave the most homogeneous HfB2–MoSi2 microstructure, while Zhang et al. (2025) report that individual HfB2 particles in HfB2-Glucose are less than 100 nm in size before aggregating into spheres 3-5 μm in diameter.",
+    "answer_keys": [["45"], ["homogeneous", "loading"], ["100 nm", "less than 100"]],
+    "evidence_any": [
+      "The highest relative density, mechanical properties and the most homogeneous microstructure was obtained when the solids loading was 45 vol.%",
+      "the HfB2 particles themselves are less than 100 nm in size, and these particles aggregate to form spheres"
+    ],
+    "source_docs": [
+      "He_2013_Materials&Design_Effectsofsolids.pdf",
+      "Zhang_2025_AlloysandCompounds_Synthesisofhollow-spherical-structured.pdf"
+    ],
+    "excerpts": [
+      "HfB2–20 vol.% MoSi2 ultra high temperature ceramic composites were prepared through aqueous gelcasting route. The stability of HfB2 and MoSi2 suspensions were studied by zeta potential measurements, sedimentation tests and apparent viscosity measurements. The solids loading had significant effects on the green and sintered densities, microstructure and mechanical properties of HfB2–MoSi2 composites. The values of flexural strength of the green and sintered bodies ranged from 18.3 to 38.7, and 111.5 to 415.9 MPa, respectively, which were strongly dependent on the solids loading. The values of fracture toughness of the sintered bodies ranged from 2.18 to 4.24 MPa m1/2. The highest relative density, mechanical properties and the most homogeneous microstructure was obtained when the solids loading was 45 vol.%.",
+      "In contrast, HfB₂-Glucose and HfB2-Inositol possess a spherical morphology. The HfB2 particles themselves are less than 100 nm in size, and these particles aggregate to form spheres with diameters distributed in the range of 3-5 μm. This unique morphology of HfB2 powders contributes to the reduced particle size, indicating a strong correlation between the structure of the raw carbon source and the resulting HfB2 morphology."
+    ]
+  },
+  {
+    "category": "multi_hop",
+    "question": "He et al. (2013) report that the 45 vol.% solids-loading HfB2–MoSi2 gelcast sample had the highest relative densities among all loadings tested, while Zhang et al. (2025) report that the hollow rod-shaped HfB2-Glucose sample performed far worse in electromagnetic wave absorption than its spherical counterpart despite also being hollow. What ranking did the 45 vol.% sample achieve for density in He et al. (2013), and what ranking did the rod-shaped sample achieve for absorption in Zhang et al. (2025)?",
+    "reference_answer": "In He et al. (2013), the 45 vol.% solids-loading HfB2–MoSi2 sample achieved the highest relative green and sintered densities of all loadings tested, whereas in Zhang et al. (2025) the hollow rod-shaped HfB2-Glucose sample exhibited only minimal electromagnetic wave absorption compared to the hollow spherical HfB2-Glucose sample.",
+    "answer_keys": [["45 vol", "45"], ["highest", "best"], ["rod", "minimal"]],
+    "evidence_any": [
+      "the sample with 45 vol.% solids loading had the highest relative green and sintered densities",
+      "the hollow rod-shaped HfB2, despite sharing a hollow architecture with the spherical variant, exhibits minimal absorption"
+    ],
+    "source_docs": [
+      "He_2013_Materials&Design_Effectsofsolids.pdf",
+      "Zhang_2025_AlloysandCompounds_Synthesisofhollow-spherical-structured.pdf"
+    ],
+    "excerpts": [
+      "In the above sections, the sample with 45 vol.% solids loading had the highest relative green and sintered densities, as well as the most homogeneous green and sintered microstructure. Therefore, the HfB2–MoSi2 composite with 45 vol.% solids loading was believed to have the highest mechanical properties. Table 1 lists the mechanical properties of the HfB2–MoSi2 composites with different solids loading. The variation trends of the mechanical properties, such as green and sintered flexural strength, and fracture toughness showed a good agreement with the above experimental results.",
+      "Notably, the hollow rod-shaped HfB2, despite sharing a hollow architecture with the spherical variant, exhibits minimal absorption (see Supporting Information, Fig. S3, RLmin= -6.12 dB). This demonstrates that the hollow characteristic alone is insufficient for strong EMW absorption; the spherical geometry provides optimal conditions for multiple scattering and interface polarization effects."
+    ]
+  },
+  {
+    "category": "multi_hop",
+    "question": "Comparing peak processing temperatures for ultra-high-temperature-ceramic powders: Zhang et al. (2025) synthesized hollow-spherical HfB2-Glucose powder via boro/carbothermal reduction, and Yang & Xu (2023) formed the TiC/SiOC-0.25 ceramic precursor via pyrolysis. Which synthesis reached the higher peak temperature?",
+    "reference_answer": "Zhang et al. (2025)'s boro/carbothermal reduction of HfB2-Glucose powder reached a higher peak temperature of 1550 °C, compared to the 1400 °C pyrolysis temperature used by Yang & Xu (2023) to form the TiC/SiOC-0.25 precursor.",
+    "answer_keys": [["1550"], ["zhang", "hfb2"], ["higher"]],
+    "evidence_any": [
+      "heated at 1550 ℃ for 2 h, the final HfB2 powders could be obtained",
+      "XRD analysis revealed the clear presence of SiC and TiC phases in the pattern of TiC/SiOC-0.25 pyrolyzed at 1400"
+    ],
+    "source_docs": [
+      "Zhang_2025_AlloysandCompounds_Synthesisofhollow-spherical-structured.pdf",
+      "Yang_2023_CompositesCommunications_Ultrathinpolymer-derived.pdf"
+    ],
+    "excerpts": [
+      "The precipitate was then collected and treated at 60 ℃ for 3 h, followed by drying at 120 ℃ for 12 h to obtain the respective HfB2 precursor. After grinding in an agate mortar, the HfB2 precursor was placed in a graphite boat and heated in a tube furnace in an argon atmosphere. The temperature was first raised to 1000 ℃ at a rate of 5 ℃/min and then to 1550 ℃ at a rate of 2 ℃/min. After maintaining at 1550 ℃ for 2 h, the final HfB2 powders could be obtained. During such a thermal treatment process, the boro/carbothermal reaction proceeded to completion.",
+      "Fig. 1(a) illustrates the phase composition of the TiC/SiOC-0.25 absorbing coatings with varying Al2O3 contents. The TiC/SiOC-0.25 sample is the ceramic resulting from the pyrolysis of titanium isopropoxide and polycarbosiloxane, with a corresponding weight ratio of 25 wt%. XRD analysis revealed the clear presence of SiC and TiC phases in the pattern of TiC/SiOC-0.25 pyrolyzed at 1400 ◦C. However, based on similar lattice parameters, distinguishing between the SiC and TiC phases was challenging."
+    ]
+  },
+  {
+    "category": "multi_hop",
+    "question": "He et al. (2013) report the optimal polyacrylic acid (PAA) dispersant content for stabilizing HfB2–MoSi2 aqueous suspensions, and Zhang et al. (2025) identify which carbon sources promote a spherical (rather than granular) HfB2 morphology. What was the optimal PAA content and pH in He et al. (2013), and which carbon source structure does Zhang et al. (2025) say favors the spherical HfB2 morphology?",
+    "reference_answer": "He et al. (2013) found 0.8 wt.% PAA at pH 10 optimally stabilized HfB2 and MoSi2 suspensions, while Zhang et al. (2025) found that carbon sources with a hexagonal ring structure, such as glucose after cyclization and inositol, favor formation of the spherical HfB2 morphology.",
+    "answer_keys": [["0.8 wt"], ["he", "paa"], ["hexagonal ring", "glucose"]],
+    "evidence_any": [
+      "HfB2 and MoSi2 could achieve stable when using 0.8 wt.% PAA at pH 10",
+      "a spherical morphology is more readily formed from carbon sources with a hexagonal ring structure"
+    ],
+    "source_docs": [
+      "He_2013_Materials&Design_Effectsofsolids.pdf",
+      "Zhang_2025_AlloysandCompounds_Synthesisofhollow-spherical-structured.pdf"
+    ],
+    "excerpts": [
+      "Besides, it was also found that the HfB2 and MoSi2 suspension had the lowest viscosity when using 0.8 wt.% PAA. When PAA content below 0.8 wt.%, it was unsaturated adsorbed onto the particle surface, resulting in low electrostatic repulsion between ceramic particles and thereby forcing particles together, finally caused a high viscosity. When PAA content above 0.8 wt.%, it was over-saturated adsorbed, inducing an inevitable increase of viscosity. Consequently, it was believed that HfB2 and MoSi2 could achieve stable when using 0.8 wt.% PAA at pH 10.",
+      "In conclusion, a spherical morphology is more readily formed from carbon sources with a hexagonal ring structure (e.g., glucose after cyclization, inositol) than from those with a linear chain structure. This is demonstrated by the distinct morphologies of HfB2-Glucose and HfB2-Inositol compared to those derived from other carbon sources."
+    ]
+  },
+  {
+    "category": "multi_hop",
+    "question": "Zhang et al. (2025) attribute the exceptional electromagnetic wave absorption of hollow-spherical HfB2-Glucose primarily to interface polarization, while Yang & Xu (2023) attribute part of the TiC/SiOC–Al2O3 coating's absorption to the nanoscale surface area of TiC nanoparticles. What dissipation mechanism does Zhang et al. (2025) identify as dominant, and what property of TiC nanoparticles does Yang & Xu (2023) say enables enhanced absorption?",
+    "reference_answer": "Zhang et al. (2025) identify interface polarization as the dominant dissipation mechanism in hollow-spherical HfB2-Glucose, while Yang & Xu (2023) attribute enhanced absorption in the TiC/SiOC–Al2O3 coating to the significantly higher surface area-to-volume ratio of TiC nanoparticles compared to larger absorbents.",
+    "answer_keys": [["interface polarization"], ["zhang", "hfb2"], ["surface area", "tic"]],
+    "evidence_any": [
+      "This disparity unequivocally identifies interface polarization as the dominant dissipation mechanism",
+      "TiC NPs offer a significantly higher surface area-to-volume ratio compared to larger-sized absorbents, enabling"
+    ],
+    "source_docs": [
+      "Zhang_2025_AlloysandCompounds_Synthesisofhollow-spherical-structured.pdf",
+      "Yang_2023_CompositesCommunications_Ultrathinpolymer-derived.pdf"
+    ],
+    "excerpts": [
+      "This disparity unequivocally identifies interface polarization as the dominant dissipation mechanism. The unique hollow core-shell architecture of the spherical sample provides a high density of internal interfaces, including those between HfB2 nanoparticles, between HfB2 and the carbon matrix, and at the void surfaces. Under an alternating electromagnetic field, these interfaces act as potent centers for charge accumulation and relaxation, leading to the dramatically increased polarization loss. The granular structure, lacking such an intricate interface network, fails to generate substantial polarization, resulting in its poor absorption performance.",
+      "Nano-sized absorbents play a critical role in enhancing EM absorption capabilities. TiC NPs offer a significantly higher surface area-to-volume ratio compared to larger-sized absorbents, enabling more interaction sites and repeated scattering events with EM waves. The size and shape of these nano-sized absorbents can be precisely engineered to match specific resonance frequencies of EM waves. Notably, TiC NPs exhibit efficient EM absorption even at reduced thicknesses while maintaining high absorption performance."
+    ]
+  },
+  {
+    "category": "multi_hop",
+    "question": "He et al. (2013) name specific hypersonic vehicle components that HfB2-based UHTCs protect thermally, and Yang & Xu (2023) identify a specific mechanical property responsible for CFRP's use in aircraft structures. Which vehicle components does He et al. (2013) name for HfB2 UHTC thermal protection, and which property of CFRP does Yang & Xu (2023) credit for its aerospace use?",
+    "reference_answer": "He et al. (2013) name leading edges and nosecones of reusable hypersonic re-entry space vehicles as components protected by HfB2-based UHTCs, while Yang & Xu (2023) credit CFRP's high strength-to-weight ratio for making it attractive for use in aircraft structures.",
+    "answer_keys": [["leading edges", "nosecones"], ["he", "hfb2"], ["strength-to-weight"]],
+    "evidence_any": [
+      "thermal protection systems for leading edges, nosecones and thermal protection system for reusable hypersonic re-entry space vehicles",
+      "The high strength-to-weight ratio of CFRP makes it an attractive material for use in aircraft structures"
+    ],
+    "source_docs": [
+      "He_2013_Materials&Design_Effectsofsolids.pdf",
+      "Yang_2023_CompositesCommunications_Ultrathinpolymer-derived.pdf"
+    ],
+    "excerpts": [
+      "Hafnium diboride (HfB2), as a important member of the family of ultra high temperature ceramics (UHTCs), find its use in high temperature applications, such as thermal protection systems for leading edges, nosecones and thermal protection system for reusable hypersonic re-entry space vehicles, owing to the excellent combination of physicochemical properties, i.e., high melting point, high thermal conductivity and excellent resistance to oxidation and thermal shock.",
+      "Carbon Fiber Reinforced Polymer (CFRP) has attracted significant attention in the aerospace industry due to its exceptional mechanical properties, including high strength-to-weight ratio, stiffness, and corrosion resistance. The high strength-to-weight ratio of CFRP makes it an attractive material for use in aircraft structures, as the lightweight nature of CFRP allows for significant weight savings, which can convert into reduced fuel consumption and emissions."
+    ]
+  }
+]
