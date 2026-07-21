@@ -88,7 +88,48 @@ def build_agentic(model, provider, top_k, trace=False):
     return answer
 
 
-PIPELINES = {"baseline": build_baseline, "agentic": build_agentic}
+CLOSED_BOOK_SYSTEM = """You are a precise question-answering assistant.
+Answer the question from your own knowledge. Rules:
+- If you do not know the answer, say so plainly — never guess.
+- Quote exact numbers and names; do not round or paraphrase figures.
+- Write plain text only — your answer is displayed verbatim, not rendered. No Markdown
+  (**bold**, # headings, | tables) and no LaTeX ($...$, \\frac, $_{x}$ subscripts).
+  Write formulas with plain characters, e.g. HfC0.5N0.5, MPa m^1/2, 1800 C.
+  For lists, start lines with "- "."""
+
+CLOSED_BOOK_USER = """Question: {question}
+
+Answer:"""
+
+
+def build_closed_book(model, provider, top_k, trace=False):
+    """Contamination control (PRD §3c): no retrieval, question-only prompt.
+
+    Prompt mirrors the baseline SYSTEM_PROMPT minus the sources/citation rules,
+    so the judge compares like with like.
+    """
+    from langchain_core.messages import HumanMessage, SystemMessage
+
+    from generation.llm import get_llm
+
+    llm = get_llm(model, provider)
+
+    def answer(question: str) -> dict:
+        messages = [
+            SystemMessage(content=CLOSED_BOOK_SYSTEM),
+            HumanMessage(content=CLOSED_BOOK_USER.format(question=question)),
+        ]
+        return {
+            "answer": llm.invoke(messages).content,
+            "chunks": [],
+            "llm_calls": 1,
+            "retrieval_calls": 0,
+        }
+    return answer
+
+
+PIPELINES = {"baseline": build_baseline, "agentic": build_agentic,
+             "closed_book": build_closed_book}
 
 
 def main():

@@ -23,9 +23,41 @@ Module status board (update the table too):
 | M3 retrieval loop | done | agent/plans/M3_retrieval_loop.md | check node = M4 seam |
 | M4 evidence check + refusal | done | agent/plans/M4_evidence_check.md | shape report + smoke passed after prompt recalibration |
 | M5 synthesis | done | agent/plans/M5_synthesis.md | smoke: cite✓ 100%, invalid=0, ev_recall 19.4% held |
-| M6 benchmark run + tuning | not started | — | baseline run in progress on Colab (results land in Drive eval_v2/results) |
+| M6 benchmark run + tuning | in-progress | agent/plans/M6_benchmark_tuning.md | Phase 0 (closed_book adapter) done; awaiting Colab full runs |
 
 ---
+
+## 2026-07-21 M6 benchmark run + tuning — in-progress (Phase 0 done, Colab runs pending)
+- What was done: plan written with the human (agent/plans/M6_benchmark_tuning.md,
+  approved). Decisions: measure FIRST (full 306-q agentic run of the pipeline
+  exactly as M5 left it, before any tuning), closed-book control over all 306,
+  tuning validated on shape reports + a fixed ~20-30 id slice with ONE final
+  full run for the headline compare. Phase 0 implemented test-first:
+  `--pipeline closed_book` adapter in eval/run_benchmark.py (question-only
+  prompt mirroring baseline SYSTEM_PROMPT minus sources/citation rules;
+  chunks=[], llm_calls=1, retrieval_calls=0; no retriever import). Scorer needs
+  no changes (handles chunks=[]: ev_recall 0, citation_validity None).
+  eval/README.md closed-book note updated from "to build" to "to run".
+- Files touched: eval/run_benchmark.py (CLOSED_BOOK_SYSTEM/USER,
+  build_closed_book, PIPELINES), tests/test_closed_book.py (new),
+  eval/README.md, agent/plans/M6_benchmark_tuning.md (new), agent/PROGRESS.md
+- Tests: `python tests/test_closed_book.py` — passing (4 checks); full suite
+  (test_synthesis, test_check, test_retrieval_loop, test_planner,
+  test_agentic_parity, test_pipeline) — passing.
+- Next step for the following agent: human runs on Colab (all resumable):
+  (1) `python eval/run_benchmark.py --pipeline agentic --model Qwen/Qwen3-14B`
+  (NO --trace; hours; copy JSONL to Drive eval_v2/results between sessions),
+  (2) `python eval/score_benchmark.py eval/results_v2/bench_agentic.jsonl --judge`,
+  (3) `python eval/run_benchmark.py --pipeline closed_book --model Qwen/Qwen3-14B`
+  + score with --judge,
+  (4) `python eval/compare.py eval/results_v2/bench_baseline_scored.json
+  eval/results_v2/bench_agentic_scored.json`. Then Phase 3: agent writes
+  eval/results_v2/M6_report.md against every PRD §3 criterion, then the
+  Phase 4 tuning loop (factual sufficient=false wastes a round; unanswerable
+  burns 4 rounds; also eyeball dropped_chunks in a --trace --ids run).
+- Gotchas discovered: none new. Standing: never re-score baseline without
+  `--judge-file eval/results_v2/bench_baseline_judge.jsonl`; don't overwrite
+  bench_baseline*; Gemini key capped at 20 calls/day (spot checks only).
 
 ## 2026-07-21 M5 synthesis with citations — done (Colab 3-q smoke pending)
 - What was done: plan (agent/plans/M5_synthesis.md, approved) then build.

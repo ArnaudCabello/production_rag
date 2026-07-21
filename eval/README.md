@@ -31,13 +31,15 @@ calls), not the LLM's parametric knowledge. What exists today:
   generator actually saw. A judge-correct answer with evidence_recall 0 is a
   contamination red flag — inspect those questions, don't celebrate them.
 
-What still needs to be run/built (target: M6):
+What still needs to be run (target: M6):
 
 - **Closed-book control run**: the same generator answering the golden set
   with retrieval disabled (no chunks in the prompt), scored with the same
   judge. Its correct rate is the parametric-knowledge floor; baseline/agentic
-  gains only count above it. Needs a small `closed_book` adapter in
-  `run_benchmark.py` (`--top-k 0` currently does nothing — 0 is falsy).
+  gains only count above it. Built as `--pipeline closed_book` in
+  `run_benchmark.py` (M6); still to RUN on Colab:
+  `python eval/run_benchmark.py --pipeline closed_book --model Qwen/Qwen3-14B`
+  (`--top-k 0` does nothing — 0 is falsy; use the closed_book pipeline).
 - **Citation validity** (M5 tests): every citation in an answer must resolve
   to a chunk that was actually retrieved in that run.
 
