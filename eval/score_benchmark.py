@@ -34,6 +34,8 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO_ROOT))
 
+from agentic.citations import extract_citations  # noqa: E402
+
 JUDGE_MODEL = "Qwen/Qwen2.5-14B-Instruct"
 HEDGES = ("multiple", "several", "vary", "varies", "varying", "range", "depend", "differ")
 REFUSAL = re.compile(r"\b(not (available|found|present|contain|provided|mentioned)"
@@ -83,6 +85,14 @@ def evidence_recall(chunks, evidence):
     return sum(norm(ev) in joined for ev in evidence) / len(evidence)
 
 
+def citation_validity(answer, chunks):
+    """Fraction of [n] markers resolving to a retrieved chunk; None if uncited."""
+    c = extract_citations(answer, len(chunks))
+    if not c["markers"]:
+        return None
+    return sum(n in c["valid"] for n in c["markers"]) / len(c["markers"])
+
+
 def objective_row(q, a):
     cat = q["category"]
     row = {
@@ -92,6 +102,8 @@ def objective_row(q, a):
         "evidence_recall": evidence_recall(a.get("chunks", []), q.get("evidence_any", [])),
         "latency_s": a.get("latency_s"), "llm_calls": a.get("llm_calls"),
         "retrieval_calls": a.get("retrieval_calls"),
+        "citations_total": len(extract_citations(a["answer"], 0)["markers"]),
+        "citation_validity": citation_validity(a["answer"], a.get("chunks", [])),
     }
     if cat == "unanswerable":
         row["refused"] = bool(REFUSAL.search(a["answer"]))
@@ -193,7 +205,8 @@ def main():
     by_cat = defaultdict(list)
     for r in rows:
         by_cat[r["category"]].append(r)
-    header = f"{'category':16} {'n':>3}  {'key_match':>9} {'ev_recall':>9} {'judge✓':>7} {'grounded':>8}"
+    header = (f"{'category':16} {'n':>3}  {'key_match':>9} {'ev_recall':>9} "
+              f"{'cite✓':>6} {'judge✓':>7} {'grounded':>8}")
     print(header + "\n" + "-" * len(header))
     for cat in sorted(by_cat):
         rs = by_cat[cat]
@@ -201,11 +214,18 @@ def main():
         gr = [r.get("faithfulness") == "grounded" for r in rs if r.get("faithfulness")]
         print(f"{cat:16} {len(rs):>3}  {pct([r['key_match'] for r in rs]):>9} "
               f"{pct([r['evidence_recall'] for r in rs]):>9} "
+              f"{pct([r['citation_validity'] for r in rs]):>6} "
               f"{pct(jm) if jm else '     —':>7} {pct(gr) if gr else '      —':>8}")
     print("-" * len(header))
     jm = [r.get("correctness") == "correct" for r in rows if r.get("correctness")]
     print(f"{'TOTAL':16} {n:>3}  {pct([r['key_match'] for r in rows]):>9} "
-          f"{pct([r['evidence_recall'] for r in rows]):>9} {pct(jm) if jm else '     —':>7}")
+          f"{pct([r['evidence_recall'] for r in rows]):>9} "
+          f"{pct([r['citation_validity'] for r in rows]):>6} "
+          f"{pct(jm) if jm else '     —':>7}")
+    answered = [r for r in rows if not (r["category"] == "unanswerable" and r.get("refused"))]
+    if answered:
+        print(f"cited answers: {pct([r['citations_total'] > 0 for r in answered])} "
+              f"(≥1 [n] marker, refusals excluded)")
     un = [r for r in rows if r["category"] == "unanswerable"]
     if un:
         print(f"unanswerable: correct refusal {pct([r['refused'] for r in un])}, "

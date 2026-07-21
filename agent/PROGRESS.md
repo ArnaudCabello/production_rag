@@ -22,10 +22,49 @@ Module status board (update the table too):
 | M2 planner | done | agent/plans/M2_planner.md | Colab shape report pending (eval/planner_shapes.py) |
 | M3 retrieval loop | done | agent/plans/M3_retrieval_loop.md | check node = M4 seam |
 | M4 evidence check + refusal | done | agent/plans/M4_evidence_check.md | shape report + smoke passed after prompt recalibration |
-| M5 synthesis | not started | — | |
+| M5 synthesis | done | agent/plans/M5_synthesis.md | Colab 3-q smoke pending |
 | M6 benchmark run + tuning | not started | — | baseline run in progress on Colab (results land in Drive eval_v2/results) |
 
 ---
+
+## 2026-07-21 M5 synthesis with citations — done (Colab 3-q smoke pending)
+- What was done: plan (agent/plans/M5_synthesis.md, approved) then build.
+  Deterministic, ZERO new LLM calls (budget already at the cap of 6):
+  `agentic/citations.py` — `extract_citations(answer, n_chunks)` parses [n] /
+  [2][3] / [1, 2] markers (regex), splits into valid (1..n_chunks) / invalid;
+  synthesize node caps the multi-round union at MAX_SYNTH_CHUNKS=20 (first-N of
+  retrieval order), writes back `chunks: capped` (record = what the LLM saw),
+  validates citations against the CAPPED list and stores
+  state["citations"]={markers,valid,invalid,chunk_ids}; trace event gains
+  dropped_chunks/citations_valid/citations_invalid. Prompt unchanged when
+  gaps==[] (baseline already demands [n] citations) — parity intact. Runner
+  persists `gaps` + `citations` in the JSONL (trace-style, only when present).
+  Scorer: `citation_validity` (valid/total markers, None when uncited) shared
+  via agentic.citations; summary gains cite✓ column + "cited answers" line;
+  works on old result files (computed from answer+chunks, no new keys needed).
+- Files touched: agentic/citations.py (new), agentic/graph.py,
+  eval/run_benchmark.py, eval/score_benchmark.py, tests/test_synthesis.py (new),
+  agent/plans/M5_synthesis.md (new). NO existing-test changes needed: no node
+  reads state["citations"], and the parity trace assert only indexes
+  context_chunks.
+- Tests: `python tests/test_synthesis.py` — passing (10 checks); full suite
+  (test_check, test_retrieval_loop, test_planner, test_agentic_parity,
+  test_pipeline) — passing. Scorer verified against
+  eval/results_v2/bench_baseline.jsonl: cite✓ 98.6%, cited answers 80.1%
+  (baseline_scored.json regenerated WITH --judge-file to keep judge columns —
+  plain re-scoring drops them; judge✓ 49.2% confirmed intact).
+- Next step for the following agent: human runs the Colab 3-q smoke
+  (`python eval/run_benchmark.py --pipeline agentic --limit 3 --trace`):
+  expect [n] markers in answers, citations.valid non-empty on substantive
+  answers, invalid ≈ 0, dropped_chunks > 0 on the aggregation question. Then
+  plan M6 (full benchmark run + tuning). M6 carry-overs: factual 4/5
+  sufficient=false wastes a round; unanswerable burns all 4 rounds
+  (~3 queries/round); closed-book control run adapter still to build.
+- Gotchas discovered: re-running score_benchmark.py without --judge/--judge-file
+  overwrites <run>_scored.json WITHOUT judge columns — always pass
+  --judge-file eval/results_v2/bench_baseline_judge.jsonl when re-scoring the
+  baseline. citation_validity is marker-level (dupes counted); citations_total
+  uses extract_citations(answer, 0) just for the marker count.
 
 ## 2026-07-21 M4 prompt recalibration — done (Colab re-run pending)
 - What was done: first Colab shape report + 3-q smoke exposed over-strictness:

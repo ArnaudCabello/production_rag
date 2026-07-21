@@ -8,7 +8,8 @@ cross-round dedup of queries and chunks). M4: the check is an LLM sufficiency
 judgment (agentic/checker.py) that enqueues refinement queries and records
 uncovered gaps; remaining gaps make synthesize prepend a refuse/hedge
 instruction. The check= hook still injects stubs in tests.
-M5 replaces the synthesize internals without changing this structure. No multi-doc
+M5: synthesize caps the multi-round chunk union (MAX_SYNTH_CHUNKS) and validates
+the answer's [n] citations deterministically (agentic/citations.py). No multi-doc
 fan-out or vision routing: the planner/loop modules replace the former, and
 vision is out of scope for the agentic pipeline.
 """
@@ -18,12 +19,15 @@ from langchain_core.messages import HumanMessage, SystemMessage
 from langgraph.graph import END, START, StateGraph
 
 from agentic.checker import make_check
+from agentic.citations import extract_citations
 from agentic.planner import MAX_SUB_QUERIES, make_plan
 from generation.pipeline import SYSTEM_PROMPT, USER_TEMPLATE, format_context
 
 MAX_ROUNDS = 4              # hard cap on retrieval rounds (PRD §4)
 AGG_SUBQUERY_TOP_K = 8      # broad, un-reranked recall for aggregation sub-queries
 MAX_PENDING_PER_ROUND = 3   # refinement queries per round (the check fills pending_queries)
+MAX_SYNTH_CHUNKS = 20       # cap on the multi-round union shown to the generator (M5);
+                            # first-N of retrieval order — question's reranked hits come first
 
 # Prepended to the synthesis user message when the check left uncovered gaps.
 # "not available in the corpus" wording matches eval/score_benchmark.py's REFUSAL regex.
@@ -54,6 +58,7 @@ class AgentState(TypedDict):
     pending_queries: list[str]  # enqueued for the next round; M4's check populates
     queries_run: list[str]  # normalized queries already searched (cross-round dedup)
     gaps: list[str]  # uncovered parts per the last check verdict; drives refusal/hedging
+    citations: dict  # M5: {"markers", "valid", "invalid", "chunk_ids"} parsed from the answer
     trace: list[dict]  # per-node events when trace=True; init to [] in the invoke input
 
 
@@ -135,19 +140,29 @@ def build_agentic_graph(retriever, llm, trace: bool = False, check=None):
         return "retrieve" if state["pending_queries"] else "synthesize"
 
     def synthesize(state: AgentState):
+        capped = state["chunks"][:MAX_SYNTH_CHUNKS]
         user = USER_TEMPLATE.format(
-            context=format_context(state["chunks"]), question=state["question"])
-        if state["gaps"]:  # evidence-driven refusal/hedging (M4); full synthesis is M5
+            context=format_context(capped), question=state["question"])
+        if state["gaps"]:  # evidence-driven refusal/hedging (M4)
             user = GAP_NOTE.format(gaps="\n".join(f"- {g}" for g in state["gaps"])) + user
         messages = [
             SystemMessage(content=SYSTEM_PROMPT),
             HumanMessage(content=user),
         ]
-        update = {"answer": llm.invoke(messages).content,
-                  "llm_calls": state["llm_calls"] + 1}
+        answer = llm.invoke(messages).content
+        # M5: deterministic citation validation — [n] resolves to capped[n-1]
+        cites = extract_citations(answer, len(capped))
+        cites["chunk_ids"] = [capped[n - 1]["chunk_id"] for n in cites["valid"]]
+        update = {"answer": answer,
+                  "llm_calls": state["llm_calls"] + 1,
+                  "chunks": capped,  # record exactly what the generator saw
+                  "citations": cites}
         if trace:
             update["trace"] = state["trace"] + [
-                {"node": "synthesize", "context_chunks": len(state["chunks"])}]
+                {"node": "synthesize", "context_chunks": len(capped),
+                 "dropped_chunks": len(state["chunks"]) - len(capped),
+                 "citations_valid": len(cites["valid"]),
+                 "citations_invalid": len(cites["invalid"])}]
         return update
 
     graph = StateGraph(AgentState)

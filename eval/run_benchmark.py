@@ -72,7 +72,7 @@ def build_agentic(model, provider, top_k, trace=False):
         result = graph.invoke({"question": question, "llm_calls": 0,
                                "retrieval_calls": 0, "chunks": [], "rounds": 0,
                                "pending_queries": [], "queries_run": [],
-                               "gaps": [], "trace": []})
+                               "gaps": [], "citations": {}, "trace": []})
         out = {
             "answer": result["answer"],
             "chunks": [{"chunk_id": c["chunk_id"], "text": c["text"]}
@@ -80,6 +80,7 @@ def build_agentic(model, provider, top_k, trace=False):
             "llm_calls": result["llm_calls"],
             "retrieval_calls": result["retrieval_calls"],
             "gaps": result["gaps"],
+            "citations": result["citations"],
         }
         if trace:
             out["trace"] = result["trace"]
@@ -151,8 +152,9 @@ def main():
                 "retrieval_calls": result.get("retrieval_calls"),
                 "latency_s": round(time.monotonic() - t0, 2),
             }
-            if "trace" in result:
-                record["trace"] = result["trace"]
+            for key in ("gaps", "citations", "trace"):
+                if key in result:
+                    record[key] = result[key]
             f.write(json.dumps(record) + "\n")
             f.flush()  # a crash mid-run must not lose finished answers to buffering
             print(f"[{len(done) + i}] {q['id']} ({record['latency_s']}s): "
