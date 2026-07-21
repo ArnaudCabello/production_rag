@@ -22,18 +22,18 @@
     "question": "What is the Young's modulus in GPa of TaC as measured by nano-indentation in the Manaud 2024 study?",
     "reference_answer": "The Young's modulus of TaC measured by nano-indentation is 704 ± 35 GPa, which is higher than typical literature values for similar UHTC materials.",
     "answer_keys": [["704"], ["35", "gpa"], ["tac"]],
-    "evidence_any": ["TaC 704 ± 35 Young's Modulus GPa", "The Young's moduli measured by nano indentation were approx 600 700 GPa"],
+    "evidence_any": ["The Young's moduli measured by nano indentation were approx 600 700 GPa", "The TaC sample exhibited a higher value of Young modulus 704 plus minus 35 GPa"],
     "source_docs": ["Manaud_2024_OpenCeramics_Sparkplasma.pdf"],
-    "excerpts": ["Table 3 Young's modulus and hardness of the different samples averaged among all the tests results.\n\nSample Young's Modulus (GPa) Hardness (GPa)\n\nTaC 704 ± 35 16.4 ± 0.8 Ta2C1.5N0.5 606 ± 37 20.5 ± 1.5 Ta2CN 609 ± 29 22.9 ± 1.2 Ta2C0.5N1.5 648 ± 32 26.5 ± 2.2 TaN 634 ± 23 27.9 ± 1.3"]
+    "excerpts": ["Table 3 Young's modulus and hardness of the different samples averaged among all the tests results.\n\nSample Young's Modulus (GPa) Hardness (GPa)\n\nTaC 704 ± 35 16.4 ± 0.8 Ta2C1.5N0.5 606 ± 37 20.5 ± 1.5 Ta2CN 609 ± 29 22.9 ± 1.2 Ta2C0.5N1.5 648 ± 32 26.5 ± 2.2 TaN 634 ± 23 27.9 ± 1.3\n\nThe TaC sample exhibited a higher value of Young modulus of 704 ± 35 GPa than the rest of the series ranging from 606 to 648 GPa. Indeed the tantalum carbonitride samples have a Young modulus closer to TaN."]
   },
   {
     "category": "table",
     "question": "According to Manaud 2024, what is the hardness in GPa of the TaN tantalum nitride sample measured by nano-indentation?",
     "reference_answer": "The hardness of TaN measured by nano-indentation is 27.9 ± 1.3 GPa, representing the highest hardness value in the tantalum carbonitride series.",
-    "answer_keys": [["27.9"], ["1.3", "gpa"], ["tan", "nitride"]],
-    "evidence_any": ["TaN 634 ± 23 27.9 ± 1.3", "The hardness values increased from 16.4 0.8 GPa for TaC to 27.9 1.3 GPa for TaN"],
+    "answer_keys": [["27.9"], ["1.3", "gpa"], ["tan"]],
+    "evidence_any": ["The hardness values increased from 16.4 0.8 GPa for TaC to 27.9 1.3 GPa for TaN", "TaN possess the highest hardness with an approximately linear trend"],
     "source_docs": ["Manaud_2024_OpenCeramics_Sparkplasma.pdf"],
-    "excerpts": ["Table 3 Young's modulus and hardness of the different samples averaged among all the tests results.\n\nSample Young's Modulus (GPa) Hardness (GPa)\n\nTaC 704 ± 35 16.4 ± 0.8 Ta2C1.5N0.5 606 ± 37 20.5 ± 1.5 Ta2CN 609 ± 29 22.9 ± 1.2 Ta2C0.5N1.5 648 ± 32 26.5 ± 2.2 TaN 634 ± 23 27.9 ± 1.3"]
+    "excerpts": ["Table 3 Young's modulus and hardness of the different samples averaged among all the tests results.\n\nSample Young's Modulus (GPa) Hardness (GPa)\n\nTaC 704 ± 35 16.4 ± 0.8 Ta2C1.5N0.5 606 ± 37 20.5 ± 1.5 Ta2CN 609 ± 29 22.9 ± 1.2 Ta2C0.5N1.5 648 ± 32 26.5 ± 2.2 TaN 634 ± 23 27.9 ± 1.3\n\nTaC exhibit the lowest hardness 16.4 ± 0.8 GPa, while TaN possesses the highest hardness 27.9 ± 1.3 GPa within this set. In between the carbonitride materials show an approximately linear trend with hardness increasing with increasing nitride content."]
   },
   {
     "category": "table",
