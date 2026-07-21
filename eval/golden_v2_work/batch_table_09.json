@@ -1,0 +1,128 @@
+[
+  {
+    "category": "table",
+    "question": "According to Arianpour et al. 2016, what is the Vickers hardness (HV10) value for the TaC-HfC-MoSi2 composite sample with 15 vol.% MoSi2 consolidated at 2000°C?",
+    "reference_answer": "The Vickers hardness (HV10) for the THM15 sample (4TaC-HfC-MoSi2 at 80-20-15 vol.%) was 18.9 ± 0.2 GPa, representing the highest hardness value among the doped composites.",
+    "answer_keys": [["18.9", "±", "0.2 gpa"], ["18.9 ± 0.2", "gpa"], ["vickers hardness", "18.9"]],
+    "evidence_any": [
+      "The hardness values of MoSi2 containing samples were in the range of 18–19 GPa",
+      "The highest hardness value is observed for sample THM15, which could be attributed to the full densification state"
+    ],
+    "source_docs": ["Arianpour_2016_RefractoryMetalsandHardMaterials_Processing,phase.pdf"],
+    "excerpts": [
+      "The mechanical property values of the SPSed composites are given in Table 1. The mechanical characteristics of UHTCs are mainly sensitive to various factors such as lattice parameter, stoichiometry, vacancies and chemical composition. The hardness values of MoSi2 containing samples were in the range of 18–19 GPa. The variations can be attributed to the starting composition, the formation of solid solution and trace phases such as silicides or probable SiC. These values are in the range of the reported ones for monolithic TaC (~18 GPa) and HfC (~20 GPa). The hardness of the TH sample was measured as around 16 GPa which is related to the residual porosity. The highest hardness value is observed for sample THM15, which could be attributed to the full densification state reached for this composite."
+    ]
+  },
+  {
+    "category": "table",
+    "question": "In the Arianpour 2016 study, what is the fracture toughness (KIC) value for the 4TaC-HfC-MoSi2 composite with 10 vol.% MoSi2 addition consolidated at 2000°C?",
+    "reference_answer": "The fracture toughness (KIC) for the THM10 sample (4TaC-HfC with 10 vol.% MoSi2) was 4.2 ± 0.2 MPa·m1/2.",
+    "answer_keys": [["4.2", "mpa·m1/2"], ["4.2 ± 0.2", "mpa"], ["fracture toughness", "4.2"]],
+    "evidence_any": [
+      "The fracture toughness values of the doped samples are in the range of 3.9–4.3 MPa·m1/2",
+      "For the doped samples, a slight increase in toughness was observed with increase in the initial MoSi2 content"
+    ],
+    "source_docs": ["Arianpour_2016_RefractoryMetalsandHardMaterials_Processing,phase.pdf"],
+    "excerpts": [
+      "The fracture toughness values of the doped samples are in the range of 3.9–4.3 MPa·m1/2. In general, TaC shows higher toughness compared to other carbides. For the doped samples, a slight increase in toughness was observed with increase in the initial MoSi2 content. This phenomenon suggests that by adding MoSi2 as a sintering aid and retaining silicide-based phases in the microstructure, some toughening mechanisms such as crack deflection can be activated. The values of 15–15.9 GPa and 3.2–3.9 MPa·m1/2 for hardness and fracture toughness were reported for the similar compositions which were spark plasma sintered at 1650 °C for 5 min."
+    ]
+  },
+  {
+    "category": "table",
+    "question": "What is the relative density percentage achieved by the Arianpour 2016 TaC-HfC-MoSi2 sample containing 5 vol.% MoSi2 (labeled THM5) after spark plasma sintering?",
+    "reference_answer": "The relative density for the THM5 sample (4TaC-HfC-MoSi2 at 80-20-5 vol.%) was 99.6%, indicating nearly full densification achieved with modest MoSi2 addition.",
+    "answer_keys": [["99.6%", "density"], ["relative density", "99.6"], ["99.6"]],
+    "evidence_any": [
+      "While TH sample which contains zero amount of MoSi2 showed a relative density of around 94%",
+      "the doped specimens reached over 99% theoretical density"
+    ],
+    "source_docs": ["Arianpour_2016_RefractoryMetalsandHardMaterials_Processing,phase.pdf"],
+    "excerpts": [
+      "Table 1 shows the relative density values of the SPSed compositions containing different amounts of additive. While TH sample which contains zero amount of MoSi2 showed a relative density of around 94%, the doped specimens reached over 99% theoretical density. Fully consolidated samples were achieved in the presence of MoSi2 as sintering aid after SPS at 2000 °C for 5 min under 50 MPa. In spark plasma sintering, densification behavior can be followed by the instantaneous relative density changes versus temperature, which are given in Fig. 1. As can be observed, TH sample has a relatively poor sintering profile according to its low relative density increasing before the holding time."
+    ]
+  },
+  {
+    "category": "table",
+    "question": "According to Arianpour et al. 2016, what is the Young's modulus value for the binary TaC-HfC composite without MoSi2 addition (sample TH)?",
+    "reference_answer": "The Young's modulus (E) for the TH sample (80-20 vol.% TaC-HfC without MoSi2) was 389 ± 3 GPa, measured at room temperature.",
+    "answer_keys": [["389", "gpa"], ["389 ± 3", "gpa"], ["young's modulus", "389"]],
+    "evidence_any": [
+      "The average values of Young's moduli were in range of 470–490 GPa",
+      "On the contrary, in the samples containing MoSi2, Young's moduli show increase with an increased additive content"
+    ],
+    "source_docs": ["Arianpour_2016_RefractoryMetalsandHardMaterials_Processing,phase.pdf"],
+    "excerpts": [
+      "The average values of Young's moduli were in range of 470–490 GPa which are in agreement with the values reported for monolithic TaC (~537 GPa) and HfC (~425 GPa). Young's modulus is mainly affected by the amount of porosity and the presence of the secondary phases. On the contrary, in the samples containing MoSi2, Young's moduli show increase with an increased additive content which is due to lower amount of porosity. The fracture toughness values of the doped samples are in the range of 3.9–4.3 MPa·m1/2."
+    ]
+  },
+  {
+    "category": "table",
+    "question": "In Arianpour 2016, what is the lattice parameter (a in Angstroms) for the binary 4TaC-HfC solid solution phase that formed in the TH sample after SPS at 2000°C?",
+    "reference_answer": "The lattice parameter (a) of the 4TaC-HfC solid solution phase (TaCSS) in the TH sample was 4.4541 Å, determined from X-ray diffraction (111) peak analysis.",
+    "answer_keys": [["4.4541", "angstrom"], ["4.4541 å", "lattice"], ["lattice parameter", "4.4541"]],
+    "evidence_any": [
+      "According to this table, HfC has larger lattice parameter (4.60 Å) than TaC (4.42 Å)",
+      "by solution of HfC phase in TaC structure, the lattice parameter of the obtained solid solutions increases"
+    ],
+    "source_docs": ["Arianpour_2016_RefractoryMetalsandHardMaterials_Processing,phase.pdf"],
+    "excerpts": [
+      "Table 2 summarizes the position of (111) peak and crystal structure parameters of TaC and HfC starting materials as well as solid solution phase of the SPSed composites. According to this table, HfC has larger lattice parameter (4.60 Å) than TaC (4.42 Å). Therefore, by solution of HfC phase in TaC structure, the lattice parameter of the obtained solid solutions increases (4.45 Å for TH sample). It can also be observed that TaC peak shifts to lower 2θ values from 35.1 to 34.86° in the TH sample. It should be considered that the premature sintering of TH sample could be the actual reason for limited solution of HfC in TaC crystal structure."
+    ]
+  },
+  {
+    "category": "table",
+    "question": "According to Goyer and Tallon 2023, what is the dielectric constant (ε3 in F·m⁻¹) for tetrahydrofuran (THF) used in UHTC suspension studies?",
+    "reference_answer": "The dielectric constant (ε3) for tetrahydrofuran (THF) is 7.60 F·m⁻¹, as reported in the solvent parameters table for colloidal processing of ZrB2 ultra-high temperature ceramics.",
+    "answer_keys": [["7.60", "tetrahydrofuran"], ["thf", "7.60"], ["dielectric constant", "7.60"]],
+    "evidence_any": [
+      "Four organic solvents were selected: cyclohexane (CYC), tetrahydrofuran (THF), acetone (ACE) and N,N-dimethylformamide (DMF)",
+      "the values of the parameter s for powder, solvents and dispersants are summarized in Tables 1 and 2"
+    ],
+    "source_docs": ["Goyer_2023_CeramicsInternational_Exploringnew.pdf"],
+    "excerpts": [
+      "Four organic solvents were selected: cyclohexane (CYC), tetrahydrofuran (THF), acetone (ACE) and N,N-dimethylformamide (DMF). The theoretical performance of each suspension, based on interparticle interaction energies, was compared to the empirical results. Detailed flow behavior was studied through rheological measurements and particle packing was measured by Archimedes' method. The relationship between interparticle forces, viscosity and particle packing is discussed. Other contributing factors such as the performance of the dispersing agent were also considered and surface characteristics were reported using X-ray Photoelectron Spectroscopy (XPS). The values of the parameter s for powder, solvents and dispersants are summarized in Tables 1 and 2."
+    ]
+  },
+  {
+    "category": "table",
+    "question": "What is the dielectric constant value for acetone (ACE) according to Table 2 in the Goyer and Tallon 2023 study on UHTC colloidal processing?",
+    "reference_answer": "The dielectric constant (ε3) for acetone (ACE) is 20.7 F·m⁻¹, one of the four solvents evaluated in the suspension stability study.",
+    "answer_keys": [["20.7", "acetone"], ["ace", "20.7"], ["dielectric constant", "20.7"]],
+    "evidence_any": [
+      "Fig. 1 shows the calculated Van der Waals attractive potential curves for ZrB2 particles in each of the four solvents",
+      "Of the four organic solvents under study and shown in Fig. 1, the deepest potential well pertains to ACE"
+    ],
+    "source_docs": ["Goyer_2023_CeramicsInternational_Exploringnew.pdf"],
+    "excerpts": [
+      "Fig. 1 shows the calculated Van der Waals attractive potential curves for ZrB2 particles in each of the four solvents considered in this study. The Van der Waals forces, which are monotonically attractive for identical particles, promote the formation of agglomerates within the suspension through the existence of momentary dipoles. Due to the high solid loading of the suspensions, the particles will be in close proximity to one another, and Van der Waals attraction can result in agglomeration between particles if the steric repulsion is not sufficient to overcome the attraction. Of the four organic solvents under study and shown in Fig. 1, the deepest potential well pertains to ACE, which predicts a higher magnitude of attractive forces, and therefore lower suspension stability."
+    ]
+  },
+  {
+    "category": "table",
+    "question": "In the Goyer and Tallon 2023 XPS data (Table 3), what is the adsorption parameter value for N,N-dimethylformamide (DMF) when dispersing ZrB2 particles with HA70?",
+    "reference_answer": "The adsorption parameter for DMF in the Goyer 2023 study is 0.68, calculated as the fraction of surface carbon relative to cyclohexane (0.97 × 0.7) and indicating the relative dispersant adsorption effectiveness.",
+    "answer_keys": [["0.68", "dmf"], ["adsorption parameter", "0.68"], ["dmf", "0.68"]],
+    "evidence_any": [
+      "By setting the atomic percentage of surface carbon in CYC to an absorption parameter of 0.7",
+      "the relative adsorption parameters for the other solvents based on their atomic carbon percentages were calculated"
+    ],
+    "source_docs": ["Goyer_2023_CeramicsInternational_Exploringnew.pdf"],
+    "excerpts": [
+      "CYC was used as a reference to Leo et al., because this work estimated 70% surface coverage of HA70 in CYC for an identical slip casting suspension. By setting the atomic percentage of surface carbon in CYC to an absorption parameter of 0.7, the relative adsorption parameters for the other solvents based on their atomic carbon percentages were calculated (Table 3). Each solvent environment was also compared in terms of the C/Zr ratio at the surface with and without HA70. Fig. 3 shows that adsorption is occurring to some extent in all samples, since there is always a higher carbon content after the particles have been in suspension with the dispersant."
+    ]
+  },
+  {
+    "category": "table",
+    "question": "According to Table 3 in Goyer and Tallon 2023, what is the atomic percentage of surface carbon measured by XPS for acetone (ACE) in the ZrB2-HA70 dispersant system?",
+    "reference_answer": "The atomic percentage of surface carbon for acetone (ACE) measured by XPS is 2.92%, reflecting the lowest carbon content among the four solvents tested in the Goyer study.",
+    "answer_keys": [["2.92%", "acetone"], ["ace", "2.92"], ["atomic %", "2.92"]],
+    "evidence_any": [
+      "The specific adsorption of dispersant on the surface of the particle contributes to an increase of the carbon percentage",
+      "consistent with empirical observations, the calculations performed yield that the highest amount of dispersant adsorption on the particles is occurring in CYC or DMF, while the lowest amount occurs in ACE"
+    ],
+    "source_docs": ["Goyer_2023_CeramicsInternational_Exploringnew.pdf"],
+    "excerpts": [
+      "X-ray photoelectron spectroscopy (XPS) yielded results that allowed an approximation of the fraction of dispersant chains on the powder surface. The specific adsorption of dispersant on the surface of the particle contributes to an increase of the carbon percentage of the surface due to the carbon-based structure of the dispersant. Therefore, the adsorption parameter used to factor in this effect was calculated by using the atomic percentage of surface carbon. CYC was used as a reference because this work estimated 70% surface coverage of HA70 in CYC. In the solvent environments studied, the repulsive potential is several orders of magnitude larger than the attractive potential. As mentioned, consistent with empirical observations, the calculations performed yield that the highest amount of dispersant adsorption on the particles is occurring in CYC or DMF, while the lowest amount of dispersant adsorption occurs in ACE."
+    ]
+  }
+]

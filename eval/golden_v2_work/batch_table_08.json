@@ -1,0 +1,83 @@
+[
+  {
+    "category": "table",
+    "question": "According to Lin et al. (2025), what is the oxidation time constant (τ_ox) in seconds for spark plasma sintered ZrC at 600°C under 2.0% oxygen partial pressure?",
+    "reference_answer": "The oxidation time constant for SPS-sintered ZrC at 600°C and 2.0% O2 is 4000 seconds, as reported in Table 3 of Lin et al. (2025).",
+    "answer_keys": [["4000", "s"], ["4000 s"], ["τox is 4000"]],
+    "evidence_any": ["ð¡ððð¥ (s) under 600–800 °C and 2.0–21.0 % O2", "Temp (°C) 600 4000 s 4000 s 2000 s 1000 s"],
+    "source_docs": ["Lin_2025_EuropeanCeramicSociety_Oxidationfronts.pdf"],
+    "excerpts": ["Table 3: ð¡ððð¥ (s) under 600–800 °C and 2.0–21.0 % O2.\n\nPO2 (% O2) 2.0 5.0 10.0 21.0 Temp (°C) 600 4000 s 4000 s 2000 s 1000 s 700 1500 s 500 s 500 s 200 s 800 0 s 0 s 0 s 0 s\n\nThis table presents the oxidation time constants for ZrC at different temperatures and oxygen partial pressures. The time constant represents the characteristic time scale for the transition between oxidation regimes."]
+  },
+  {
+    "category": "table",
+    "question": "In the study by Lin et al. (2025), what is the oxidation time constant (τ_ox) in seconds for spark plasma sintered ZrC at 700°C under 10.0% oxygen partial pressure?",
+    "reference_answer": "The oxidation time constant for SPS-sintered ZrC at 700°C and 10.0% O2 is 500 seconds, as shown in Table 3 of Lin et al. (2025).",
+    "answer_keys": [["500", "s"], ["500 s"], ["τox is 500"]],
+    "evidence_any": ["ð¡ððð¥ (s) under 600–800 °C and 2.0–21.0 % O2", "700 1500 s 500 s 500 s 200 s"],
+    "source_docs": ["Lin_2025_EuropeanCeramicSociety_Oxidationfronts.pdf"],
+    "excerpts": ["Table 3: ð¡ððð¥ (s) under 600–800 °C and 2.0–21.0 % O2.\n\nPO2 (% O2) 2.0 5.0 10.0 21.0 Temp (°C) 600 4000 s 4000 s 2000 s 1000 s 700 1500 s 500 s 500 s 200 s 800 0 s 0 s 0 s 0 s\n\nThe table presents oxide scale growth time constants for SPS-sintered ZrC under various isothermal oxidation conditions. At 700°C, the time constant decreases with increasing oxygen partial pressure from 1500 s at 2.0% O2 to 200 s at 21.0% O2."]
+  },
+  {
+    "category": "table",
+    "question": "According to Table 4 in Lin et al. (2025), what is the power-law coefficient α (in µm·s⁻¹·(%O2⁻ᵐ)) for the oxide scale growth model of spark plasma sintered ZrC at 700°C?",
+    "reference_answer": "The power-law coefficient α for SPS-sintered ZrC oxidation at 700°C is 217930 µm·s⁻¹·(%O2⁻ᵐ), as listed in Table 4 of Lin et al. (2025).",
+    "answer_keys": [["217930", "µm·s⁻¹·(%O2⁻ᵐ)"], ["217930"], ["α is 217930"]],
+    "evidence_any": ["ð¼ and ð under different temperatures", "700 217930 0.19"],
+    "source_docs": ["Lin_2025_EuropeanCeramicSociety_Oxidationfronts.pdf"],
+    "excerpts": ["Table 4: ð¼ and ð under different temperatures.\n\nTemperature (°C) ð¼ (µm⋅s-1⋅(% O2-m)) ð 600 112905 0.27 700 217930 0.19 800 107065 0.54\n\nThis table provides the fitted parameters from the phenomenological oxide scale growth model. The coefficient α represents the pre-exponential factor in the power-law relationship between oxide thickness and environmental conditions, while β is the exponent capturing the oxygen partial pressure dependence of the oxidation kinetics."]
+  },
+  {
+    "category": "table",
+    "question": "What is the power-law exponent β for the oxide scale growth model of spark plasma sintered ZrC at 800°C according to Table 4 in Lin et al. (2025)?",
+    "reference_answer": "The power-law exponent β for SPS-sintered ZrC oxidation at 800°C is 0.54, as reported in Table 4 of Lin et al. (2025).",
+    "answer_keys": [["0.54"], ["β is 0.54"], ["exponent 0.54"]],
+    "evidence_any": ["ð¼ and ð under different temperatures", "800 107065 0.54"],
+    "source_docs": ["Lin_2025_EuropeanCeramicSociety_Oxidationfronts.pdf"],
+    "excerpts": ["Table 4: ð¼ and ð under different temperatures.\n\nTemperature (°C) ð¼ (µm⋅s-1⋅(% O2-m)) ð 600 112905 0.27 700 217930 0.19 800 107065 0.54\n\nThe exponent β quantifies how the oxidation rate scales with oxygen partial pressure at each temperature. Higher β values indicate greater sensitivity to changes in oxygen availability."]
+  },
+  {
+    "category": "table",
+    "question": "According to Table 5 in Lin et al. (2025), what is the model-predicted oxide scale thickness in micrometers for spark plasma sintered ZrC at 700°C under 5.0% oxygen partial pressure after 10800 seconds?",
+    "reference_answer": "The model-predicted oxide scale thickness for SPS-sintered ZrC at 700°C and 5.0% O2 after 10800 s is 6.96 micrometers, as shown in Table 5 of Lin et al. (2025).",
+    "answer_keys": [["6.96", "µm"], ["6.96 µm"], ["model prediction 6.96"]],
+    "evidence_any": ["Model-predicted value (µm) at 700 °C", "700 700 5.0 700 6.96"],
+    "source_docs": ["Lin_2025_EuropeanCeramicSociety_Oxidationfronts.pdf"],
+    "excerpts": ["Table 5: Comparison between model predictions and experimental values at 10800 s. The model-predicted values are obtained from the established phenomenological oxide scale growth model. The mean experimental values represent the average of repeated experimental measurements, and the standard deviation quantifies the variability in the experimental data.\n\nTemp (°C) 600 700 800 PO2 (% O2) 2.0 5.0 10.0 21.0 2.0 5.0 10.0 21.0 2.0 5.0 10.0 21.0 Model-predicted value (µm) 3.91 4.74 5.0 5.8 7.83 6.96 10.7 9.0 70.7 71.8 93.1 94.8 106.2 106.4 125.7 115.9 258.3 234.9 424 492 617.7 923.1 633.6 858.2"]
+  },
+  {
+    "category": "table",
+    "question": "What is the mean experimental oxide scale thickness in micrometers for spark plasma sintered ZrC at 800°C under 2.0% oxygen partial pressure after 10800 seconds, according to Table 5 in Lin et al. (2025)?",
+    "reference_answer": "The mean experimental oxide scale thickness for SPS-sintered ZrC at 800°C and 2.0% O2 after 10800 s is 258.3 micrometers, as reported in Table 5 of Lin et al. (2025).",
+    "answer_keys": [["258.3", "µm"], ["258.3 µm"], ["experimental 258.3"]],
+    "evidence_any": ["Mean experimental value (µm) at 800 °C", "800 2.0 258.3 234.9"],
+    "source_docs": ["Lin_2025_EuropeanCeramicSociety_Oxidationfronts.pdf"],
+    "excerpts": ["Table 5: Comparison between model predictions and experimental values at 10800 s. The model-predicted values are obtained from the established phenomenological oxide scale growth model. The mean experimental values represent the average of repeated experimental measurements, and the standard deviation quantifies the variability in the experimental data.\n\nTemp (°C) 600 700 800 PO2 (% O2) 2.0 5.0 10.0 21.0 2.0 5.0 10.0 21.0 2.0 5.0 10.0 21.0 Model-predicted value (µm) 3.91 4.74 5.0 5.8 7.83 6.96 10.7 9.0 70.7 71.8 93.1 94.8 106.2 106.4 125.7 115.9 258.3 234.9 424 492 617.7 923.1 633.6 858.2"]
+  },
+  {
+    "category": "table",
+    "question": "According to Table 1 in He et al. (2022), what is the zero-pressure adiabatic bulk modulus (B₀) in GPa for polycrystalline hafnium carbide (HfC) determined from ultrasonic measurements?",
+    "reference_answer": "The zero-pressure adiabatic bulk modulus for polycrystalline HfC determined from ultrasonic measurements is 272.6 GPa with uncertainty of 2.7 GPa, as reported in Table 1 of He et al. (2022).",
+    "answer_keys": [["272.6", "gpa"], ["272.6 gpa"], ["b0 272.6"]],
+    "evidence_any": ["bulk and shear moduli with their pressure dependence have been determined as B0", "B0 = 272.6(2.7) GPa"],
+    "source_docs": ["He_2022_EuropeanCeramicSociety_Elasticity,mechanical.pdf"],
+    "excerpts": ["The bulk and shear moduli with their pressure dependence have been determined as B0 = 272.6(2.7) GPa, G0 = 215.8(2.2) GPa, ∂B/∂P = 3.44(5), and ∂G/∂P = 1.74(3) for HfC, B0 = 355.9(3.6) GPa, G0 = 236.6(2.4) GPa, ∂B/∂P = 3.98(5), and ∂G/∂P = 1.65(2) for TaC. The Vickers hardness and fracture toughness of HfC and TaC are generated from empirical models. The present work provides deep insights into the engineering application of UHTCs HfC and TaC under high-pressure extreme conditions."]
+  },
+  {
+    "category": "table",
+    "question": "What is the zero-pressure adiabatic shear modulus (G₀) in GPa for polycrystalline tantalum carbide (TaC) from ultrasonic measurements, according to He et al. (2022)?",
+    "reference_answer": "The zero-pressure adiabatic shear modulus for polycrystalline TaC determined from ultrasonic measurements is 236.6 GPa with uncertainty of 2.4 GPa, as stated in He et al. (2022).",
+    "answer_keys": [["236.6", "gpa"], ["236.6 gpa"], ["g0 236.6"]],
+    "evidence_any": ["shear moduli with their pressure dependence have been determined", "G0 = 236.6(2.4) GPa, ∂B/∂P = 3.98"],
+    "source_docs": ["He_2022_EuropeanCeramicSociety_Elasticity,mechanical.pdf"],
+    "excerpts": ["The bulk and shear moduli with their pressure dependence have been determined as B0 = 272.6(2.7) GPa, G0 = 215.8(2.2) GPa, ∂B/∂P = 3.44(5), and ∂G/∂P = 1.74(3) for HfC, B0 = 355.9(3.6) GPa, G0 = 236.6(2.4) GPa, ∂B/∂P = 3.98(5), and ∂G/∂P = 1.65(2) for TaC. The Vickers hardness and fracture toughness of HfC and TaC are generated from empirical models."]
+  },
+  {
+    "category": "table",
+    "question": "According to He et al. (2022), what is the zero-pressure Young's modulus (E₀) in GPa for polycrystalline hafnium carbide (HfC) derived from ultrasonic measurements?",
+    "reference_answer": "The zero-pressure Young's modulus for polycrystalline HfC derived from the bulk and shear moduli is 512.2 GPa, as reported in He et al. (2022).",
+    "answer_keys": [["512.2", "gpa"], ["512.2 gpa"], ["e0 512.2"]],
+    "evidence_any": ["Based on the zero-pressure bulk and shear moduli, Young's modulus", "E0 = 512.2 GPa, v = 0.20"],
+    "source_docs": ["He_2022_EuropeanCeramicSociety_Elasticity,mechanical.pdf"],
+    "excerpts": ["Based on the zero-pressure bulk and shear moduli, the Young's modulus and Poisson's ratio for HfC (E0 = 512.2 GPa, v = 0.20) and TaC (E0 = 581.1 GPa, v = 0.23) are also determined. Young's modulus can also be obtained by nanoindentation in addition to ultrasonic measurements provided that several grains of different orientations are measured since the isotropic elastic properties are a statistical average of random grain orientations."]
+  }
+]
