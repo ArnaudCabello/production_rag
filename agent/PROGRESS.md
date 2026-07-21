@@ -21,7 +21,7 @@ Module status board (update the table too):
 | M1 skeleton + adapter | done | agent/plans/M1_skeleton.md | parity test green |
 | M2 planner | done | agent/plans/M2_planner.md | Colab shape report pending (eval/planner_shapes.py) |
 | M3 retrieval loop | done | agent/plans/M3_retrieval_loop.md | check node = M4 seam |
-| M4 evidence check + refusal | done | agent/plans/M4_evidence_check.md | Colab shape report pending (eval/check_shapes.py); GPU smoke pending |
+| M4 evidence check + refusal | done | agent/plans/M4_evidence_check.md | shape report + smoke passed after prompt recalibration |
 | M5 synthesis | not started | — | |
 | M6 benchmark run + tuning | not started | — | baseline run in progress on Colab (results land in Drive eval_v2/results) |
 
@@ -39,12 +39,18 @@ Module status board (update the table too):
   (answer from the evidence that IS there, refuse only when nothing relevant
   at all). Parse fallback rate was 0 — JSON structure is solid.
 - Files touched: agentic/checker.py (CHECK_SYSTEM), agentic/graph.py (GAP_NOTE)
-- Tests: all local suites passing (wording-independent). Colab re-run pending:
-  check_shapes.py then the 3-q smoke; watch factual→sufficient=true and
-  smoke answers no longer refusing.
-- Next step for the following agent: if the re-run still over-refuses,
-  consider gating GAP_NOTE on gaps covering the WHOLE question (structural)
-  instead of more prompt tuning. Then plan M5.
+- Tests: all local suites passing (wording-independent). Colab re-run DONE:
+  shape report improved (semantic 3/5, table 3/5 sufficient=true; unanswerable
+  held at 5/5 false) and the 3-q smoke now answers instead of refusing
+  (v2q001/003 substantive, v2q002 a scoped no-evidence statement). Smoke
+  key_match 0% == baseline on the same 3 aggregation questions, but agentic
+  ev_recall 19.4% vs baseline 0.0% — accepted; M4 CLOSED.
+- Next step for the following agent: plan M5 (synthesis with citations) with
+  the human. Carry-over tuning targets for M6: factual still 4/5
+  sufficient=false (wastes a round + latency on easy questions);
+  unanswerable emits ~3 queries/round instead of settling on queries=[]
+  (runs the full 4 rounds, 60-90s). If over-refusal ever reappears, the
+  structural lever is gating GAP_NOTE on gaps covering the WHOLE question.
 - Gotchas discovered: unanswerable questions emit ~3 queries/round (burning
   rounds, 60-90s latency) instead of settling on queries=[]; acceptable under
   the cap but a target for M5/M6 tuning.
