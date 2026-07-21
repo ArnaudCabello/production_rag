@@ -66,7 +66,7 @@
     "answer_keys": [["2650", "2800", "arc-jet"], ["1850", "glassy sio2", "volatiliz"]],
     "evidence_any": [
       "achieving temperatures up to 2650 and 2800 K",
-      "the poor densification behavior produced by the high temperature in CLVD process, which resulted in a low density"
+      "This glassy SiO2 gas-tight oxide layer protected the composites from ablation up to 1850 C"
     ],
     "source_docs": ["Silvestroni_2019_CorrosionScience_Effectofhypersonic.pdf", "Didenko_2025_LightweightMaterialsandManufacture_Advancescarbon-ceramic.pdf"],
     "excerpts": [
@@ -81,7 +81,7 @@
     "answer_keys": [["temperature jump", "500", "600"], ["oxide film", "protective", "passivat"]],
     "evidence_any": [
       "Temperature jumps of 500–600 K were observed in both environments at constant flow conditions",
-      "presence of oxygen in the incoming flow is beneficial for retarding the material consumption"
+      "formation and evolution of passivating heterogeneous oxide films, which are represented mainly by the refractory MeO2 phase"
     ],
     "source_docs": ["Silvestroni_2019_CorrosionScience_Effectofhypersonic.pdf", "Didenko_2025_LightweightMaterialsandManufacture_Advancescarbon-ceramic.pdf"],
     "excerpts": [
@@ -125,13 +125,13 @@
     "reference_answer": "Silvestroni et al. (2019) found that in their ZrB2-WC-SiC ceramic, silicon carbide forms an outermost SiO2 glassy coating that mitigates bursting phenomena during arc-jet exposure to air, providing a partially healing oxidation mechanism. Didenko and Astapov (2025) describe an analogous role for SiC in Cf/ZrB2-SiC composites, where passive oxidation of SiC forms a glassy SiO2 gas-tight oxide layer that protects the composite from ablation up to about 1850 degrees C before it eventually volatilizes.",
     "answer_keys": [["sic", "silica", "glass"], ["passive oxidation", "gas-tight", "1850"]],
     "evidence_any": [
-      "presence of oxygen in the incoming flow is beneficial for retarding the material consumption",
-      "As the preparation temperature increased, the open porosity of the composites increased, allowing greater oxidant"
+      "formation of surface silica-based glass mitigated bursting phenomena",
+      "This glassy SiO2 gas-tight oxide layer protected the composites from ablation up to 1850 C"
     ],
     "source_docs": ["Silvestroni_2019_CorrosionScience_Effectofhypersonic.pdf", "Didenko_2025_LightweightMaterialsandManufacture_Advancescarbon-ceramic.pdf"],
     "excerpts": [
       "In the sample exposed to air, formation of surface silica-based glass mitigated bursting phenomena. The solid crystalline compounds, ZrO2, W and WO3 were present in a wide spectrum of morphologies, testifying large partial pressure variation from point-to-point. It is our opinion that the presence of oxygen in the incoming flow is beneficial for retarding the material consumption thanks to the activation of partially healing mechanism by SiC oxidation and B2O3 retention into a protective silica glass.",
-      "Li et al. evaluated ablation properties of PIP-prepared Cf/ZrC composites under oxyacetylene flame with a heat flux of 4.187 MW/m2 for 60 s depending on the synthesis temperature (1500, 1550, or 1600 C). As the preparation temperature increased, the open porosity of the composites increased, allowing greater oxidant transport into the composite volume, which in turn weakened the ablation resistance."
+      "As the operating temperature approached 1300 C or above, the glassy SiO2 phase formed by passive oxidation of SiC particles accumulated under capillary forces. This glassy SiO2 gas-tight oxide layer protected the composites from ablation up to 1850 C. With a further increase in temperature, the glassy SiO2 layer was either volatilized or peeled off. The losses were compensated by the upwelling of the SiO2 internal phase under the action of capillary forces and high SiO vapor pressure, forming a dense layer of ZrO2 + SiO2 on the surface and a porous layer under it. Thereafter, SiC was subjected to active oxidation, resulting in the formation of a SiC-depleted layer."
     ]
   },
   {

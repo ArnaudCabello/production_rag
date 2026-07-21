@@ -1,0 +1,179 @@
+[
+  {
+    "category": "aggregation",
+    "question": "Across studies on ZrB2, HfB2, ZrC, HfC, and their oxidation products, what range of melting points has been reported for these ultra-high-temperature ceramic borides, carbides, and oxides?",
+    "reference_answer": "Reported melting points range from about 1625-1800 degrees C for lower-melting additives such as ZrSi2 and Ta2O5 up to nearly 3890 degrees C for HfC, with intermediate values including ZrB2 at about 3245 degrees C, HfB2 at about 3380-3400 degrees C, ZrC at 3540 degrees C, and TaC at 3880 degrees C.",
+    "answer_keys": [["1625", "1800"], ["3245", "3200", "3380", "3400"], ["3540", "3880", "3890"]],
+    "evidence_any": [
+      "a melting temperature of 3245 ◦C. With ZrSi2 as a sintering additive (melting point: 1625 ◦C)",
+      "Refractory carbides including HfC (3890 C), TaC (3880 C) and ZrC (3540 C) with the highest melting points among UHTCs",
+      "lower melting point than SiC (∼2800", "such as Al2O3, which has a similar melting point (∼2100"
+    ],
+    "source_docs": [
+      "Zapata-Solvas_2013_EuropeanCeramicSociety_Mechanicalproperties.pdf",
+      "Pasagada_2022_CeramicsInternational_Electronbeam.pdf",
+      "Xu_2023_MaterialsResearchandTechnology_Effectofsolid.pdf"
+    ],
+    "excerpts": [
+      "ZrB2 and HfB2 are used as baseline materials for ultra-high temperature ceramics (UHTCs), which are promising for aerospace applications due to their exceptional combination of high melting point, high thermal conductivity and excellent mechanical properties. These features make UHTCs particularly attractive and potential candidates for use in sharp wing leading edges (WLEs) and nose tips for thermal protection of hypersonic vehicles during re-entry conditions. However, the surface temperature on the stagnation region can potentially exceed 2000 C under an aggressive oxidizing flow environment, which limits the range of materials that can be used. La2O3 (about 2100 C) has a lower melting point than SiC (about 2800 C), ZrB2 (about 3200 C) and HfB2 (about 3400 C) which induces plastic deformation at lower temperatures. This has been observed in other ceramic systems such as Al2O3, which has a similar melting point (about 2100 C) to La2O3 and plastic deformation.",
+      "Metal Boride UHTCs are unusual materials that possess ceramic-like properties such as high melting point, hardness, as well as metal-like properties such as high electrical and thermal conductivity. The UHTC material chosen for this research is ZrB2, which has an electrical and thermal conductivity of 1.08 x 10^7 S/m and 60 W/mK, respectively, and a melting temperature of 3245 degrees C. With ZrSi2 as a sintering additive (melting point: 1625 degrees C), it can be selectively melted, forming a liquid phase that binds the ZrB2 powder particles together, resulting in processing temperature around 1700 degrees C that is easily attainable by the EBM machines. Additionally, ZrSi2 softens around 800 degrees C, hence a liquid phase sintering process would most likely occur at temperatures less than 1700 degrees C by an intergranular viscous ZrSi2 phase.",
+      "Refractory carbides including HfC (3890 C), TaC (3880 C) and ZrC (3540 C) with the highest melting points among UHTCs were reported to have lower vapor pressures than those of nitrides and borides, which were considered promising candidate materials for TPS. The corresponding solid oxidation products, HfO2 (2810 C) and ZrO2 (2715 C) have higher melting points than that of Ta2O5 (1800 C), which could be more stable in environments above 2000 C. However, the implementation of pure HfC and ZrC is restricted due to the weak oxidation inhibition at intermediate temperatures, forming porous oxide scale and making it susceptible to the ablative environment."
+    ]
+  },
+  {
+    "category": "aggregation",
+    "question": "What densities have been reported for ZrB2 powder or ZrB2-based ultra-high-temperature ceramics in studies on spark-plasma-sintered UHTCs and electron-beam-processed UHTCs?",
+    "reference_answer": "ZrB2 has been reported with a density of about 6.085-6.119 g/cm3 in both spark-plasma-sintering and electron-beam-sintering feedstock studies, while related UHTC constituents range higher, such as HfB2 at 10.5-11.212 g/cm3 and lower, such as ZrSi2 sintering additive at 4.88 g/cm3.",
+    "answer_keys": [["6.085", "6.119"], ["density"], ["hfb2", "zrsi2", "10.5", "11.212", "4.88"]],
+    "evidence_any": [
+      "ZrB2 powder (>99%, d50 ∼ 2.5 μm, ρ = 6.085 g/cm3, Sigma",
+      "Bulk Density (g/cm3) 6.119 4.88 Melting Point"
+    ],
+    "source_docs": [
+      "Zapata-Solvas_2013_EuropeanCeramicSociety_Mechanicalproperties.pdf",
+      "Pasagada_2022_CeramicsInternational_Electronbeam.pdf"
+    ],
+    "excerpts": [
+      "ZrB2 powder (>99%, d50 approximately 2.5 μm, density = 6.085 g/cm3, Sigma Aldrich, Gillingham, UK), HfB2 powder (>99%, d50 approximately 5.0 μm, density = 10.5 g/cm3, Sigma Aldrich, Gillingham, UK), SiC powder (alpha-SiC, 99%, d50 approximately 0.7 μm, density = 3.217 g/cm3, Good Fellow Chemicals, Huntingdon, UK) and La2O3 (>99%, d50 approximately 10 μm, density = 6.51 g/cm3, Fluka chemicals supplied through Sigma Aldrich, Steinheim, Germany) were used to form different UHTC compositions. Density (g/cm3) ZrB2 6.119, HfB2 11.212, Young's modulus (GPa) ZrB2 489, HfB2 480.",
+      "Manufacturer ALB Materials (Nevada, USA) ESPI Metals (Oregon, USA) Purity 99% N/A Particle Size (micrometers) 45-100 45-75 Bulk Density (g/cm3) 6.119 4.88 Melting Point (degrees C) 3245 1620. The UHTC material chosen for this research is ZrB2, which has an electrical and thermal conductivity of 1.08 x 10^7 S/m and 60 W/mK, respectively, and a melting temperature of 3245 degrees C. With ZrSi2 as a sintering additive, it can be selectively melted, forming a liquid phase that binds the ZrB2 powder particles together."
+    ]
+  },
+  {
+    "category": "aggregation",
+    "question": "What thermal conductivity values have been reported for ZrB2-based ultra-high-temperature ceramics, including monolithic ZrB2, HfB2, and ZrB2-ZrSi2 composite feedstocks?",
+    "reference_answer": "Monolithic ZrB2 has a room-temperature thermal conductivity of about 60 W/mK, HfB2 is higher at about 104 W/mK, and a ZrB2 with 30 vol% ZrSi2 composite used for electron beam sintering reaches about 86.81 W/mK.",
+    "answer_keys": [["60"], ["104"], ["86.81", "zrsi2"]],
+    "evidence_any": [
+      "RT thermal conductivity (W/mK1) 60",
+      "electrical (11.9 × 106 S/m) and thermal conductivities (86.81 W/mK) without compromising the mechanical behavior"
+    ],
+    "source_docs": [
+      "Zapata-Solvas_2013_EuropeanCeramicSociety_Mechanicalproperties.pdf",
+      "Pasagada_2022_CeramicsInternational_Electronbeam.pdf"
+    ],
+    "excerpts": [
+      "Summary of some physical properties of monolithic ZrB2 and HfB2. Coefficient of thermal expansion values are from RT to 600 degrees C. Property ZrB2 HfB2. Density (g/cm3) 6.119, 11.212. Young's modulus (GPa) 489, 480. Poisson's ratio 0.11, 0.12. Coefficient of thermal expansion (K-1) 5.9 x 10-6, 6.3 x 10-6. RT Electrical conductivity (S/m) 10^7, 9.1 x 10^6. RT thermal conductivity (W/mK) 60, 104. Melting temperature (degrees C) 3245, 3380.",
+      "The UHTC material chosen for this research is ZrB2, which has an electrical and thermal conductivity of 1.08 x 10^7 S/m and 60 W/mK, respectively, and a melting temperature of 3245 degrees C. It was determined by S. Guo et al. that in the traditional UHTC sintering process, the addition of ZrSi2 in the 30% volume fraction is critical in maintaining good electrical (11.9 x 10^6 S/m) and thermal conductivities (86.81 W/mK) without compromising the mechanical behavior. The high electrical conductivity of the UHTC materials makes them compatible with the EBM process."
+    ]
+  },
+  {
+    "category": "aggregation",
+    "question": "What room-temperature electrical conductivity values have been reported for ZrB2 and HfB2-based ultra-high-temperature ceramics?",
+    "reference_answer": "ZrB2 electrical conductivity has been reported around 1.08 x 10^7 to 10^7 S/m, HfB2 around 9.1 x 10^6 S/m, and a ZrB2-30vol% ZrSi2 composite feedstock around 11.9 x 10^6 S/m.",
+    "answer_keys": [["10^7", "1.08", "107"], ["9.1"], ["11.9"]],
+    "evidence_any": [
+      "RT Electrical conductivity (S/m) 107",
+      "which has an electrical and thermal conductivity of 1.08 × 107 S/m and 60 W/mK, respectively"
+    ],
+    "source_docs": [
+      "Zapata-Solvas_2013_EuropeanCeramicSociety_Mechanicalproperties.pdf",
+      "Pasagada_2022_CeramicsInternational_Electronbeam.pdf"
+    ],
+    "excerpts": [
+      "Summary of some physical properties of monolithic ZrB2 and HfB2. Property ZrB2 HfB2. Density (g/cm3) 6.119, 11.212. Young's modulus (GPa) 489, 480. Poisson's ratio 0.11, 0.12. Coefficient of thermal expansion (K-1) 5.9 x 10-6, 6.3 x 10-6. RT Electrical conductivity (S/m) 10^7, 9.1 x 10^6. RT thermal conductivity (W/mK) 60, 104. Melting temperature (degrees C) 3245, 3380.",
+      "The UHTC material chosen for this research is ZrB2, which has an electrical and thermal conductivity of 1.08 x 10^7 S/m and 60 W/mK, respectively, and a melting temperature of 3245 degrees C. It was determined by S. Guo et al. that in the traditional UHTC sintering process, the addition of ZrSi2 in the 30% volume fraction is critical in maintaining good electrical (11.9 x 10^6 S/m) and thermal conductivities (86.81 W/mK) without compromising the mechanical behavior."
+    ]
+  },
+  {
+    "category": "aggregation",
+    "question": "What sintering or processing temperatures have been used to fabricate ZrB2-based UHTCs by spark plasma sintering, ZrB2-ZrSi2 UHTC feedstock by electron beam sintering, and La2Ti2O7-based piezoelectric ceramics by solid-state reaction?",
+    "reference_answer": "Reported fabrication temperatures range from about 1500 degrees C for solid-state sintering of La2Ti2O7-based ceramics, to about 1700 degrees C for electron beam sintering of ZrB2-ZrSi2 UHTC feedstock, up to 1950-2100 degrees C for spark plasma sintering of ZrB2- and HfB2-based UHTCs.",
+    "answer_keys": [["1500"], ["1700"], ["1950", "2100", "2000"]],
+    "evidence_any": [
+      "sintering temperature of 2000",
+      "resulting in pro- cessing temperature around 1700 ◦C that is easily attainable",
+      "were sintered in a furnace 1500 ± 10 ◦C for 4"
+    ],
+    "source_docs": [
+      "Zapata-Solvas_2013_EuropeanCeramicSociety_Mechanicalproperties.pdf",
+      "Pasagada_2022_CeramicsInternational_Electronbeam.pdf",
+      "Tang_2024_EuropeanCeramicSociety_Realizationofultra-high.pdf"
+    ],
+    "excerpts": [
+      "A 40 mm graphite die was used and covered with graphite felt to reduce heat loss, the temperature was monitored and controlled by an optical pyrometer. A sintering temperature of 2000 degrees C was used for monolithic ZrB2, HS20 and HS20La, 1950 degrees C for ZS20 and ZS20La and 2100 degrees C for HfB2, a heating rate of 100 degrees C per minute was applied.",
+      "With ZrSi2 as a sintering additive (melting point: 1625 degrees C), it can be selectively melted, forming a liquid phase that binds the ZrB2 powder particles together, resulting in processing temperature around 1700 degrees C that is easily attainable by the EBM machines. Additionally, ZrSi2 softens around 800 degrees C, hence a liquid phase sintering process would most likely occur at temperatures less than 1700 degrees C by an intergranular viscous ZrSi2 phase.",
+      "A polyvinyl alcohol (PVA) binder with a concentration of 8 wt% was mixed into the prepared powder and then compacted into 10 mm diameter pellets. The pellets after the thermal decomposition of the binder were sintered in a furnace 1500 ± 10 degrees C for 4 to 8 hours. The dried pastes were calcinated at 1200 degrees C for 4 to 8 hours and then ball-milled again for 10 to 20 hours to mitigate agglomeration and refine particle dimensions."
+    ]
+  },
+  {
+    "category": "aggregation",
+    "question": "What high-temperature conditions have been used to evaluate the oxidation, ablation, or thermal stability of ultra-high-temperature ceramics and high-Curie-temperature piezoelectric ceramics, such as ZrB2-SiC UHTCs, ZrC/HfC plasma-sprayed coatings, and La2Ti2O7-based ceramics?",
+    "reference_answer": "Reported evaluation temperatures range from 1000-1600 degrees C for annealing and thermal depolarization tests on La2Ti2O7-based ceramics, through 1 hour of oxidation testing at 1400 degrees C for ZrB2- and HfB2-based UHTCs, up to plasma ablation surface temperatures of 2000-2600 degrees C for ZrC and HfC based coatings.",
+    "answer_keys": [["1400"], ["2000", "2600", "2500", "2100"], ["1000", "1600"]],
+    "evidence_any": [
+      "were determined for ZrB2- and HfB2-based ultra-high temperature ceramics (UHTCs)",
+      "The surface temperature of ZrC and HfC coating reached 2600 and 2500",
+      "after thermal depolarization at 1000 ◦C for 48 h"
+    ],
+    "source_docs": [
+      "Zapata-Solvas_2013_EuropeanCeramicSociety_Mechanicalproperties.pdf",
+      "Xu_2023_MaterialsResearchandTechnology_Effectofsolid.pdf",
+      "Tang_2024_EuropeanCeramicSociety_Realizationofultra-high.pdf"
+    ],
+    "excerpts": [
+      "Flexural strengths at room temperature, at 1400 degrees C in air and at room temperature after 1 h oxidation at 1400 degrees C were determined for ZrB2- and HfB2-based ultra-high temperature ceramics (UHTCs). Defects caused by electrical discharge machining (EDM) lowered measured strengths significantly and were used to calculate fracture toughness via a fracture mechanics approach.",
+      "Fig. 5 shows the surface temperature graphs of ZrC, ZS, HfC and HS coatings during the ablation process. The surface temperature of ZrC and HfC coating reached 2600 and 2500 degrees C immediately. By contrast, the surface temperature of ZS and HS coating raised rapidly within the first 30 s, then stabilized at 2100 and 2000 degrees C respectively. It can be found that the addition of SiC obviously decreased the coating surface temperature.",
+      "Notably, after thermal depolarization at 1000 degrees C for 48 h, the d33 of pristine LTO experienced a reduction from 1.5 pC/N to 1.2 pC/N, whereas the d33 of modified ceramics exhibited negligible variation. This conclusion is further substantiated by the annealing curves. Even following annealing from 200 degrees C to 1600 degrees C at each temperature for 2 h, the d33 of the pristine LBTV0 dropped to 1.1 pC/N, while the d33 of LBTV9 increased to 4.2 pC/N."
+    ]
+  },
+  {
+    "category": "aggregation",
+    "question": "What oxide scale or oxide layer thicknesses have been reported after high-temperature oxidation or ablation testing of ZrB2-SiC, HfB2-SiC, ZrC, ZrC-SiC, HfC, and HfC-SiC based ultra-high-temperature ceramics?",
+    "reference_answer": "Oxide layer thickness after high-temperature exposure has been reported as small as about 12 micrometers for HfB2-SiC after 1 hour of oxidation at 1400 degrees C, around 45 micrometers for ZrB2-SiC under the same conditions, and up to 80-270 micrometers for ZrC and HfC based coatings after 60-600 seconds of plasma ablation above 2000 degrees C.",
+    "answer_keys": [["12", "45"], ["80", "270", "180", "230"], ["oxide layer", "oxide scale"]],
+    "evidence_any": [
+      "with an oxide layer thickness of 45 ± 5 μm",
+      "the thickness of oxidized coating was 180 and 80"
+    ],
+    "source_docs": [
+      "Zapata-Solvas_2013_EuropeanCeramicSociety_Mechanicalproperties.pdf",
+      "Xu_2023_MaterialsResearchandTechnology_Effectofsolid.pdf"
+    ],
+    "excerpts": [
+      "ZrB2 with 20 vol.% SiC had room temperature strength of 700 ± 90 MPa, fracture toughness of 6.4 ± 0.6 MPa, Vickers hardness at 9.8 N load of 21.1 ± 0.6 GPa, 1400 degrees C strength of 400 ± 30 MPa and room temperature strength after 1 h oxidation at 1400 degrees C of 678 ± 15 MPa with an oxide layer thickness of 45 ± 5 μm. HfB2 with 20 vol.% SiC showed room temperature strength of 620 ± 50 MPa, fracture toughness of 5.0 ± 0.4 MPa, and room temperature strength after 1 h oxidation at 1400 degrees C of 660 ± 25 MPa with an oxide layer thickness of 12 ± 1 μm.",
+      "There was a penetrating fissure between the oxide scale and the un-oxidized layer, as evidenced in cross-sectional morphologies. The thickness of the un-oxidized coating of ZrC and HfC coating was about 190 and 200 mm, respectively. Considering the original thickness of the as-sprayed coatings (ZrC:370 mm; HfC:280 mm), by difference, the thickness of oxidized coating was 180 and 80 mm, respectively. After 600 s ablation, the thickness of the oxide layer of the ZS coating was about 270 mm, and for the HS coating, the oxide scale showcased a more dense structure and its thickness was only 150 mm."
+    ]
+  },
+  {
+    "category": "aggregation",
+    "question": "What particle sizes have been reported for ZrB2, HfB2, ZrC, HfC, and SiC feedstock powders used to fabricate ultra-high-temperature ceramics?",
+    "reference_answer": "Feedstock powder particle sizes reported for these UHTCs range from about d50 0.7 micrometers for fine SiC powder used in spark plasma sintering up to 45-100 micrometers for ZrB2 powder used in electron beam sintering, with ZrC, HfC and SiC powders for plasma-sprayed coatings falling in the 1-3 micrometer range.",
+    "answer_keys": [["0.7", "2.5", "5.0"], ["45", "100"], ["1", "3"]],
+    "evidence_any": [
+      "SiC powder (α-SiC, 99%, d50 ∼ 0.7 μm, ρ = 3.217 g/cm3",
+      "Particle Size (μm) 45–100 45–75",
+      "particle size: 1e3 mm, purity: >99.9%"
+    ],
+    "source_docs": [
+      "Zapata-Solvas_2013_EuropeanCeramicSociety_Mechanicalproperties.pdf",
+      "Pasagada_2022_CeramicsInternational_Electronbeam.pdf",
+      "Xu_2023_MaterialsResearchandTechnology_Effectofsolid.pdf"
+    ],
+    "excerpts": [
+      "ZrB2 powder (>99%, d50 approximately 2.5 μm, density = 6.085 g/cm3, Sigma Aldrich, Gillingham, UK), HfB2 powder (>99%, d50 approximately 5.0 μm, density = 10.5 g/cm3, Sigma Aldrich, Gillingham, UK), SiC powder (alpha-SiC, 99%, d50 approximately 0.7 μm, density = 3.217 g/cm3, Good Fellow Chemicals, Huntingdon, UK) and La2O3 (>99%, d50 approximately 10 μm, density = 6.51 g/cm3, Fluka chemicals supplied through Sigma Aldrich, Steinheim, Germany) were used to form different UHTC compositions.",
+      "Manufacturer ALB Materials (Nevada, USA) ESPI Metals (Oregon, USA) Purity 99% N/A Particle Size (micrometers) 45-100 45-75 Bulk Density (g/cm3) 6.119 4.88 Melting Point (degrees C) 3245 1620. The UHTC material chosen for this research is ZrB2, with ZrSi2 as a sintering additive, forming a liquid phase that binds the ZrB2 powder particles together.",
+      "Raw materials were selected from commercially available ZrC, HfC, and SiC powders (particle size: 1 to 3 micrometers, purity: >99.9%, Qinhuangdao Eno Advanced Material Co., Ltd., China). Powder blends of various compositions, which including ZrC, ZrC-30vol.%SiC (marked as ZS), HfC and HfC-30vol.%SiC (marked as HS), were prepared by ball mixing in alcohol and then clustered in a spray dryer to meet the spray necessities for flowability."
+    ]
+  },
+  {
+    "category": "aggregation",
+    "question": "What volume or weight percentages of secondary-phase additives (such as SiC, ZrSi2, La2O3, or Al2O3) have been used to modify ultra-high-temperature ceramic matrices in ablation, sintering, and processing studies?",
+    "reference_answer": "Reported additive contents range from about 2 wt% La2O3 added to ZrB2- and HfB2-SiC UHTCs, to 20-30 vol% SiC used in ZrC- and HfC-based ablation coatings and ZrB2-HfB2 UHTCs, up to 30 vol% ZrSi2 used as a sintering aid for electron-beam-sintered ZrB2 feedstock.",
+    "answer_keys": [["2 wt", "2%"], ["20", "30"], ["zrsi2", "sic"]],
+    "evidence_any": [
+      "2 wt.% La2O3 addition to UHTCs slightly reduced mechanical performance",
+      "ZrC-30vol.%SiC (marked as ZS), HfC and HfC-30vol.%SiC",
+      "a representative ZrB2 UHTC was mixed with 30 vol% of ZrSi2"
+    ],
+    "source_docs": [
+      "Zapata-Solvas_2013_EuropeanCeramicSociety_Mechanicalproperties.pdf",
+      "Xu_2023_MaterialsResearchandTechnology_Effectofsolid.pdf",
+      "Pasagada_2022_CeramicsInternational_Electronbeam.pdf"
+    ],
+    "excerpts": [
+      "HfB2 with 20 vol.% SiC showed room temperature strength of 620 ± 50 MPa, fracture toughness of 5.0 ± 0.4 MPa. 2 wt.% La2O3 addition to UHTCs slightly reduced mechanical performance while increasing tolerance to property degradation after oxidation and effectively aided internal stress relaxation during spark plasma sintering (SPS) cooling, as quantified by X-ray diffraction (XRD).",
+      "Powder blends of various compositions, which including ZrC, ZrC-30vol.%SiC (marked as ZS), HfC and HfC-30vol.%SiC (marked as HS), were prepared by ball mixing in alcohol and then clustered in a spray dryer to meet the spray necessities for flowability. Huo et al. introduced various contents of Al2O3 (10, 20, 30 wt.%) into ZrC-20wt.%SiC coating using supersonic atmospheric plasma spray technique and evaluated their ablation resistance.",
+      "In the current study, a representative ZrB2 UHTC was mixed with 30 vol% of ZrSi2, which acts as a densification aid. It was determined by S. Guo et al. that in the traditional UHTC sintering process, the addition of ZrSi2 in the 30% volume fraction is critical in maintaining good electrical and thermal conductivities without compromising the mechanical behavior."
+    ]
+  }
+]
