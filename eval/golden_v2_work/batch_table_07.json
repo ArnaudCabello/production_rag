@@ -66,10 +66,10 @@
     "category": "table",
     "question": "According to Jayaseelan 2011, what is the initial total porosity percentage of the porous C/C composite tubes measured using the Archimedes method?",
     "reference_answer": "The porous C/C composite tubes had an initial total porosity of approximately 60%, measured using the Archimedes method.",
-    "answer_keys": [["60", "percent"], ["porosity"], ["composite", "c/c"]],
-    "evidence_any": ["The porous C/C composite tubes had a total porosity of 60%", "measured using Archimedes method with bimodal pore size distribution"],
+    "answer_keys": [["60"], ["percent"], ["porosity"]],
+    "evidence_any": ["The porous C/C composite tubes had a total porosity of about 60 measured", "measured using Archimedes method and bimodal pore size distribution"],
     "source_docs": ["Jayaseelan_2011_EuropeanCeramicSociety_Reactiveinfiltration.pdf"],
-    "excerpts": ["Porous C/C tubes of 17.75mm OD x 3.90 mm ID x 45 mm long were used in the present study for ZrB2 infiltration. The porous C/C composite tubes had a total porosity of ∼60% (measured using Archimedes method) and bimodal pore size distribution (determined using laser diffraction particle size analyser) with average pore sizes of 150μm and 10μm, respectively."]
+    "excerpts": ["Porous C/C tubes of 17.75 mm OD times 3.90 mm ID times 45 mm long were used in the present study for ZrB2 infiltration. The porous C/C composite tubes had a total porosity of approximately 60 percent (measured using Archimedes method) and bimodal pore size distribution (determined using laser diffraction particle size analyser) with average pore sizes of 150 micrometers and 10 micrometers, respectively."]
   },
   {
     "category": "table",
