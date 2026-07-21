@@ -24,6 +24,18 @@
     "question": "What particle sizes have been reported for ZrB2, HfB2, ZrC, HfC, and SiC feedstock powders used to fabricate ultra-high-temperature ceramics?"
   },
   {
+    "batch": "batch_aggregation_04.json",
+    "error": "category quota full",
+    "category": "aggregation",
+    "question": "What range of heating rates have been used during sintering/consolidation of ZrB2-SiC composites, HfC-TaC carbides, and HfC-TaC-HfO2 ceramics?"
+  },
+  {
+    "batch": "batch_aggregation_04.json",
+    "error": "category quota full",
+    "category": "aggregation",
+    "question": "What range of indentation test loads have been used to characterize the hardness of UHTC materials like ZrB2-SiC composites, HfC-TaC-HfO2 ceramics, and HfC-TaC carbides?"
+  },
+  {
     "batch": "batch_ambiguous_01.json",
     "error": "ambiguous missing hedge group",
     "category": "ambiguous",
@@ -46,6 +58,24 @@
     "error": "evidence not verbatim in excerpts",
     "category": "ambiguous",
     "question": "What hardness values were measured for the ultra-high temperature ceramic materials?"
+  },
+  {
+    "batch": "batch_ambiguous_03.json",
+    "error": "evidence not verbatim in excerpts",
+    "category": "ambiguous",
+    "question": "What thermal conductivity do advanced ceramic materials exhibit for aerospace applications?"
+  },
+  {
+    "batch": "batch_ambiguous_03.json",
+    "error": "evidence not verbatim in excerpts",
+    "category": "ambiguous",
+    "question": "What thermal expansion coefficients do ceramic materials exhibit at elevated temperatures?"
+  },
+  {
+    "batch": "batch_ambiguous_03.json",
+    "error": "evidence not verbatim in excerpts",
+    "category": "ambiguous",
+    "question": "What structural properties do materials designed for thermal protection systems need to demonstrate?"
   },
   {
     "batch": "batch_cross_document_01.json",
@@ -79,7 +109,7 @@
   },
   {
     "batch": "batch_factual_02.json",
-    "error": "answer_key not in reference",
+    "error": "evidence not verbatim in excerpts",
     "category": "factual",
     "question": "What temperature was used for the tensile simulations of grain boundary strength in Dai et al. 2022 study of Zr0.95W0.05C?"
   },
@@ -91,13 +121,13 @@
   },
   {
     "batch": "batch_factual_06.json",
-    "error": "answer_key not in reference",
+    "error": "category quota full",
     "category": "factual",
     "question": "What was the thickness of the metallic niobium coating deposited on the Cf-ZrB2/SiC composite in Vinci et al. 2025 using magnetron sputtering?"
   },
   {
     "batch": "batch_factual_06.json",
-    "error": "answer_key not in reference",
+    "error": "category quota full",
     "category": "factual",
     "question": "In Vinci et al. 2025, what was the measured oxide scale thickness of the annealed Cf-ZrB2/SiC specimen with NbB2/NbC coating after oxidation at 1700\u00b0C?"
   },
@@ -109,7 +139,7 @@
   },
   {
     "batch": "batch_factual_06.json",
-    "error": "answer_key not in reference",
+    "error": "category quota full",
     "category": "factual",
     "question": "What were the measured density and porosity values of the sintered Cf-ZrB2/SiC baseline composite material in Vinci et al. 2025?"
   },
@@ -121,7 +151,7 @@
   },
   {
     "batch": "batch_factual_06.json",
-    "error": "answer_key not in reference",
+    "error": "category quota full",
     "category": "factual",
     "question": "In Vinci et al. 2025, what was the oxide scale thickness of the uncoated baseline Cf-ZrB2/SiC composite after oxidation at 1700\u00b0C?"
   },
@@ -145,7 +175,7 @@
   },
   {
     "batch": "batch_factual_07.json",
-    "error": "answer_key not in reference",
+    "error": "category quota full",
     "category": "factual",
     "question": "What powder materials and milling procedure were employed to prepare Ta0.8Hf0.2C in Ghaffari et al. (2013)?"
   },
@@ -253,24 +283,6 @@
   },
   {
     "batch": "batch_multi_chunk_03.json",
-    "error": "answer_key not in reference",
-    "category": "multi_chunk",
-    "question": "In the Chen 2025 first-principles study, how does the addition of titanium to zirconium carbide affect lattice parameters, and what causes this change in lattice constants?"
-  },
-  {
-    "batch": "batch_multi_chunk_03.json",
-    "error": "answer_key not in reference",
-    "category": "multi_chunk",
-    "question": "In the Chen 2025 study, how do the bonding characteristics of Ti-C versus Zr-C bonds in (Zr1\u2212xTix)C solid solution relate to differences in elastic constants C11 and C44?"
-  },
-  {
-    "batch": "batch_multi_chunk_03.json",
-    "error": "answer_key not in reference",
-    "category": "multi_chunk",
-    "question": "In the Chen 2025 study, how does nitrogen doping affect the thermodynamic stability of (Zr1\u2212xTix)C solid solution, and what does this mean for synthesis processing temperatures?"
-  },
-  {
-    "batch": "batch_multi_chunk_03.json",
     "error": "evidence not verbatim in excerpts",
     "category": "multi_chunk",
     "question": "In the Chen 2025 study, at what nitrogen concentration do mechanical properties of (Zr1\u2212xTix)C,N reach their maximum values, and which properties show this peak?"
@@ -280,6 +292,66 @@
     "error": "evidence not verbatim in excerpts",
     "category": "multi_chunk",
     "question": "In the Chen 2025 study, how does nitrogen doping enhance bonding between titanium and carbon atoms, and what evidence from charge density analysis supports this mechanism?"
+  },
+  {
+    "batch": "batch_multi_chunk_04.json",
+    "error": "answer_key not in reference",
+    "category": "multi_chunk",
+    "question": "In Liu et al. (2023), what was the significance of the two distinct rapid densification stages observed in the C-doped ZrB2-ZrSi2 ceramic, and what physical processes were responsible for each stage?"
+  },
+  {
+    "batch": "batch_multi_chunk_04.json",
+    "error": "answer_key not in reference",
+    "category": "multi_chunk",
+    "question": "In Licheri et al. (2019), how did the porosity gradient in porous graded ZrB2 ceramics vary across the sample thickness when sintered at different holding temperatures using the modified asymmetric die configuration?"
+  },
+  {
+    "batch": "batch_multi_chunk_04.json",
+    "error": "answer_key not in reference",
+    "category": "multi_chunk",
+    "question": "In Licheri et al. (2019), what was the relationship between the temperature gradient established during SPS processing of porous graded ZrB2 ceramics and the resulting porosity distribution across the sample?"
+  },
+  {
+    "batch": "batch_multi_chunk_04.json",
+    "error": "answer_key not in reference",
+    "category": "multi_chunk",
+    "question": "In Licheri et al. (2019), how did the solar absorbance and spectral selectivity properties of porous graded ZrB2 ceramics produced at 1500\u00b0C compare to dense ZrB2 and the reference solar absorber material silicon carbide?"
+  },
+  {
+    "batch": "batch_multi_chunk_04.json",
+    "error": "answer_key not in reference",
+    "category": "multi_chunk",
+    "question": "In Licheri et al. (2019), what was the initial composition and synthesis method used to prepare the ZrB2 powders, and what phase confirmation was obtained after the SHS process?"
+  },
+  {
+    "batch": "batch_multi_chunk_05.json",
+    "error": "answer_key not in reference",
+    "category": "multi_chunk",
+    "question": "In Jayaseelan et al. 2015, what material composition and oxidation conditions were applied to ZSLB (ZS20/10 wt.% LaB6), and what was the measured thickness of the outer oxidized layer?"
+  },
+  {
+    "batch": "batch_multi_chunk_05.json",
+    "error": "answer_key not in reference",
+    "category": "multi_chunk",
+    "question": "In Jayaseelan et al. 2015, what common oxidized layer structure features were observed across all three rare-earth-doped ZrB2/SiC samples after 1 hour oxidation at 1600\u00b0C?"
+  },
+  {
+    "batch": "batch_multi_chunk_05.json",
+    "error": "evidence not verbatim in excerpts",
+    "category": "multi_chunk",
+    "question": "In Chen et al. 2019, what was the determined formation temperature for ZrC based on thermal analysis, and what porosity was achieved in the final porous ZrC ceramic?"
+  },
+  {
+    "batch": "batch_multi_chunk_05.json",
+    "error": "answer_key not in reference",
+    "category": "multi_chunk",
+    "question": "In Chen et al. 2019, what partial sintering temperature was applied after the in-situ reaction stage, and how did the thermal conductivity of the resulting porous ZrC compare to dense ZrC?"
+  },
+  {
+    "batch": "batch_multi_chunk_05.json",
+    "error": "answer_key not in reference",
+    "category": "multi_chunk",
+    "question": "In Chen et al. 2019, what temperature range showed obvious mass loss in the thermal analysis of ZrO2/C, and how did the thermal gravimetry curve relate to the shrinkage behavior observed?"
   },
   {
     "batch": "batch_semantic_01.json",
@@ -328,6 +400,18 @@
     "error": "answer_key not in reference",
     "category": "semantic",
     "question": "In the 2014 study by Balat-Pichelin et al., what is the significance of measuring the radiative energy output from the surface of ZrB2-SiC fiber composites at extreme temperatures exceeding 2000 K?"
+  },
+  {
+    "batch": "batch_semantic_05.json",
+    "error": "evidence not verbatim in excerpts",
+    "category": "semantic",
+    "question": "Did Wang and colleagues observe any structural rearrangement or phase transformation in GdB6 following exposure to extreme temperatures of 2100\u00b0C in an inert argon atmosphere for 20 minutes?"
+  },
+  {
+    "batch": "batch_semantic_05.json",
+    "error": "category quota full",
+    "category": "semantic",
+    "question": "What occurs to the structural integrity and fracture response of Zoli and coauthors' ZrB2-carbon fiber composites when processing temperature reaches the eutectic threshold of the multi-phase system?"
   },
   {
     "batch": "batch_table_02.json",
@@ -544,6 +628,42 @@
     "error": "evidence not verbatim in excerpts",
     "category": "table",
     "question": "What is the solid loading percentage of ZrB2 in the slurry used for infiltration in the Jayaseelan 2011 reactive infiltration study?"
+  },
+  {
+    "batch": "batch_table_08.json",
+    "error": "non-standalone phrasing",
+    "category": "table",
+    "question": "In the study by Lin et al. (2025), what is the oxidation time constant (\u03c4_ox) in seconds for spark plasma sintered ZrC at 700\u00b0C under 10.0% oxygen partial pressure?"
+  },
+  {
+    "batch": "batch_table_08.json",
+    "error": "bad evidence span",
+    "category": "table",
+    "question": "According to Table 4 in Lin et al. (2025), what is the power-law coefficient \u03b1 (in \u00b5m\u00b7s\u207b\u00b9\u00b7(%O2\u207b\u1d50)) for the oxide scale growth model of spark plasma sintered ZrC at 700\u00b0C?"
+  },
+  {
+    "batch": "batch_table_08.json",
+    "error": "answer_key not in reference",
+    "category": "table",
+    "question": "What is the power-law exponent \u03b2 for the oxide scale growth model of spark plasma sintered ZrC at 800\u00b0C according to Table 4 in Lin et al. (2025)?"
+  },
+  {
+    "batch": "batch_table_08.json",
+    "error": "evidence not verbatim in excerpts",
+    "category": "table",
+    "question": "According to Table 5 in Lin et al. (2025), what is the model-predicted oxide scale thickness in micrometers for spark plasma sintered ZrC at 700\u00b0C under 5.0% oxygen partial pressure after 10800 seconds?"
+  },
+  {
+    "batch": "batch_table_08.json",
+    "error": "evidence not verbatim in excerpts",
+    "category": "table",
+    "question": "What is the mean experimental oxide scale thickness in micrometers for spark plasma sintered ZrC at 800\u00b0C under 2.0% oxygen partial pressure after 10800 seconds, according to Table 5 in Lin et al. (2025)?"
+  },
+  {
+    "batch": "batch_table_08.json",
+    "error": "bad evidence span",
+    "category": "table",
+    "question": "According to Table 1 in He et al. (2022), what is the zero-pressure adiabatic bulk modulus (B\u2080) in GPa for polycrystalline hafnium carbide (HfC) determined from ultrasonic measurements?"
   },
   {
     "batch": "batch_unanswerable_02.json",

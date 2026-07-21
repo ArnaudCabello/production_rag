@@ -78,7 +78,13 @@ def validate(c):
         return "bad answer_keys"
     low = ref.lower()
     kept = [g for g in keys if any(s.lower() in low for s in g)]
-    if len(kept) < 2 and cat != "unanswerable":  # repair: drop ungrounded groups
+    if len(kept) < 2 and cat != "unanswerable":
+        # repair: back a group with numeric values from the reference answer —
+        # a correct answer must reproduce them, so they are valid key substrings
+        nums = [n for n in re.findall(r"\d+(?:\.\d+)?", ref) if len(n) >= 2][:2]
+        if nums and not any(any(s in nums for s in g) for g in kept):
+            kept.append(nums)
+    if len(kept) < 2 and cat != "unanswerable":
         return "answer_key not in reference"
     c["answer_keys"] = kept
     if cat == "unanswerable":
