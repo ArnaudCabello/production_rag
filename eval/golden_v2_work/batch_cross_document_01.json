@@ -1,0 +1,167 @@
+[
+  {
+    "category": "cross_document",
+    "question": "How does the mass loss reported for SiC/UHTC/SiC-coated C/SiC composites (Hu et al., 2019) at 1500 C compare to the hardness improvement reported for the Ta0.5Hf0.5C solid solution over TaC (Thomas et al., 2023)?",
+    "reference_answer": "Hu et al. (2019) reported the coated C/SiC composites had a mass loss of only 3.45 mg/cm2 after 68 h of oxidation at 1500 C, while Thomas et al. (2023) reported that Ta0.5Hf0.5C achieved a compressive strength of 1870 MPa, a 36% improvement over TaC, under high strain rate loading. These are different UHTC systems addressing different extreme-environment challenges: oxidation protection versus dynamic impact strength.",
+    "answer_keys": [["3.45", "1500"], ["1870", "36%", "36 %"]],
+    "evidence_any": [
+      "the coated composites exhibited mass losses of only 0.36, 1.65 and 3.45 mg/cm2",
+      "Ta0.5Hf0.5C exhibits the highest compressive strength of 1870 MPa, representing a 36% improvement over TaC"
+    ],
+    "source_docs": ["Hu_2019_CorrosionScience_Long-termoxidation.pdf", "Thomas_2023_CeramicsInternational_Highstrain.pdf"],
+    "excerpts": [
+      "The oxidation resistance of the C/SiC composites are significantly improved by applying the SiC/UHTC/SiC three-layer coating, as indicated in the specific mass loss curves in Fig. 5a. The mass losses of the coated C/SiC composites are 0.36mg/cm2 at 1100°C for 114h, 1.65 mg/cm2 at 1300 °C for 114 h and 3.45 mg/cm2 at 1500 °C for 68 h, respectively. According to the mass change against the oxidation time curves in log–log coordinates in Fig. 5b, the oxidation process of the coated C/SiC composites belongs to one stage at 1100 °C for 114 h and 1500 °C for 68 h with n values of 0.59 and 0.77, respectively, but it can be divided into two stages at 1300 °C for 114 h and the n values is 0.96 and 3.74 before and after 90 h, respectively.",
+      "Among the different compositions, Ta0.5Hf0.5C exhibits the highest compressive strength of 1870 MPa, representing a 36% improvement over TaC and 54% over HfC. High frame rate videos and deformation analysis reveal that Ta0.5Hf0.5C, characterized by extensive Ta–Hf bonding, significantly reduces the crack propagation rate by approximately 1435% compared to TaC and 4050% compared to HfC. This effect is attributed to the dislocation pile-ups, nano-twin formation, inter grain twisting exhibited mostly along {111} plane as Hf substitutes Ta in TaxHf1-xC samples."
+    ]
+  },
+  {
+    "category": "cross_document",
+    "question": "What role does ZrB2 play as a UHTC constituent in the SiC/UHTC/SiC coating studied by Hu et al. (2019), compared to the role Vickers hardness plays in evaluating the (M,Hf,Ti,Zr)B2-(M,Hf,Ti,Zr)C dual-phase ceramics studied by Feltrin et al. (2025)?",
+    "reference_answer": "Hu et al. (2019) used a ZrB2-based UHTC middle layer to consume oxygen and provide self-healing oxidation protection for C/SiC composites at high temperature. Feltrin et al. (2025) used Vickers hardness measurements to compare mechanical performance across dual-phase (M,Hf,Ti,Zr)B2-(M,Hf,Ti,Zr)C ceramics, finding the vanadium-containing composition had the highest hardness (HV1 = 25.5 GPa) among dual-phase compositions.",
+    "answer_keys": [["zrb2", "oxidation", "consum"], ["vickers", "hardness", "25.5"]],
+    "evidence_any": [
+      "A ZrB2-based UHTC layer with self-healing capability, containing an original composition of ZrB2",
+      "the composition containing V exhibited the highest hardness (HV1 = 25.5 ± 0.6 GPa)"
+    ],
+    "source_docs": ["Hu_2019_CorrosionScience_Long-termoxidation.pdf", "Feltrin_2025_EuropeanCeramicSociety_Integratedcomputational.pdf"],
+    "excerpts": [
+      "A ZrB2-based UHTC layer with self-healing capability, containing an original composition of ZrB2, SiC, SiO2, B2O3 and Al2O3, was designed as a middle layer. As shown in Fig. 1b, the greatest slope of the TGA curve of ZrB2 powder locates at temperature of about 800 °C, indicating that ZrB2 can oxidize dramatically at temperatures above ∼800 °C in an oxidizing environment. On one hand, the oxidation of ZrB2 can consume oxygen and prevent the ingress of oxygen. Moreover, the formed glassy B2O3 has excellent healing ability at 600–1100 °C.",
+      "From the dual-phase ceramics, the composition containing V exhibited the highest hardness (HV1 = 25.5 ± 0.6 GPa) combined with smaller grain sizes (0.99 ± 0.33 μm for the boride and 1.15 ± 0.31 μm for the carbide phases). Our findings provide insights into phase formation and elemental segregation and help the design of next-generation dual-phase UHTCs with tailored properties."
+    ]
+  },
+  {
+    "category": "cross_document",
+    "question": "How do the processing routes differ between the slurry brushing-sintering technique used for the ZrB2-based UHTC layer by Hu et al. (2019) and the spark plasma sintering (SPS) process used for the HEDP dual-phase ceramics by Feltrin et al. (2025)?",
+    "reference_answer": "Hu et al. (2019) applied the ZrB2-based UHTC middle layer by slurry brushing of powders onto C/SiC substrates followed by heat treatment at 900 C for 2 h in a slightly oxidizing Ar/air atmosphere. Feltrin et al. (2025) densified the (M,Hf,Ti,Zr)B2-(M,Hf,Ti,Zr)C dual-phase ceramics by spark plasma sintering at a maximum temperature of 1950 C (2050 C for the W-containing composition) using a two-step process. The two techniques differ substantially in temperature and mechanism: Hu's low-temperature brushing-sintering versus Feltrin's high-temperature SPS densification.",
+    "answer_keys": [["brush", "sintering", "900"], ["spark plasma", "sps", "1950"]],
+    "evidence_any": [
+      "the specimens were heat treated at 900 °C for 2h in an electric furnace",
+      "Sintering was performed at a maximum temperature of 1950"
+    ],
+    "source_docs": ["Hu_2019_CorrosionScience_Long-termoxidation.pdf", "Feltrin_2025_EuropeanCeramicSociety_Integratedcomputational.pdf"],
+    "excerpts": [
+      "The powders were mixed with a caking agent and then directly brushed on the SiC-coated C/SiC. After drying at 120 °C, the specimens were heat treated at 900 °C for 2h in an electric furnace. A gaseous mixture of 70vol.% Ar and 30 vol.% air was injected to achieve a slight oxidizing atmosphere in order to prepare a dense UHTC layer. Finally, a SiC outer layer was deposited by HTCVD at a relatively high temperature of 1200–1250 °C for two 24 h.",
+      "The reacted powders were densified in 20 mm round graphite dies lined with graphite foil and a two-step spark plasma sintering (SPS, DCS10, Thermal Technology, Minden, USA) process was carried out. The sintering steps were the same as previously described in [25]. Sintering was performed at a maximum temperature of 1950 ◦C for all compositions, except for HEDP-W, which required a temperature of 2050 ◦C for full densification."
+    ]
+  },
+  {
+    "category": "cross_document",
+    "question": "What sintering temperature was used by Feltrin et al. (2025) to densify the HEDP dual-phase UHTC ceramics, and how does it compare to the spark plasma sintering temperature used by Thomas et al. (2023) to produce the TaxHf1-xC solid solutions?",
+    "reference_answer": "Feltrin et al. (2025) densified the HEDP compositions by spark plasma sintering at a maximum temperature of 1950 C (2050 C for HEDP-W), while Thomas et al. (2023) sintered the TaxHf1-xC samples by spark plasma sintering at a maximum temperature of 1850 C, applying 60 MPa pressure for 10 minutes. Both studies used spark plasma sintering, but Feltrin's HEDP ceramics required a higher processing temperature than Thomas's TaC-HfC solid solutions.",
+    "answer_keys": [["1950", "2050"], ["1850", "60 mpa"]],
+    "evidence_any": [
+      "Sintering was performed at a maximum temperature of 1950",
+      "sintered using spark plasma sintering (SPS, Model 104, Thermal Tech- nologies, CA, USA) at a maximum temperature of 1850"
+    ],
+    "source_docs": ["Feltrin_2025_EuropeanCeramicSociety_Integratedcomputational.pdf", "Thomas_2023_CeramicsInternational_Highstrain.pdf"],
+    "excerpts": [
+      "The reacted powders were densified in 20 mm round graphite dies lined with graphite foil and a two-step spark plasma sintering (SPS, DCS10, Thermal Technology, Minden, USA) process was carried out. The sintering steps were the same as previously described in [25]. Sintering was performed at a maximum temperature of 1950 ◦C for all compositions, except for HEDP-W, which required a temperature of 2050 ◦C for full densification.",
+      "The samples were then sintered using spark plasma sintering (SPS, Model 104, Thermal Tech- nologies, CA, USA) at a maximum temperature of 1850 ◦C, applied pressure of 60 MPa for 10 min with a 100 ◦C/min heating rate under vaccum. The obtained SPS samples were cylindrical in shape with a diameter of 20 mm and thickness of ~4 mm."
+    ]
+  },
+  {
+    "category": "cross_document",
+    "question": "How does the compressive strength reported by Thomas et al. (2023) for HfC compare to the Vickers hardness values reported for dual-phase HEDP ceramics containing Hf by Feltrin et al. (2025)?",
+    "reference_answer": "Thomas et al. (2023) reported that monolithic HfC had a compressive strength of only 852.2 MPa under high strain rate SHPB testing, the lowest among the TaxHf1-xC compositions tested. Feltrin et al. (2025) reported Vickers hardness values ranging from 22.7 to 27.4 GPa at a 9.8 N load for their Hf-containing dual-phase HEDP-M ceramics, which are entirely different mechanical metrics (compressive strength under dynamic loading versus static indentation hardness) measured on different material systems.",
+    "answer_keys": [["852.2", "hfc"], ["22.7", "27.4", "hardness"]],
+    "evidence_any": [
+      "HfC 4.6405 ± 0.0005 2.13 2.6793",
+      "The other hardnesses at 9.8 N were 22.7 ± 0.6 GPa for HEDP-Nb"
+    ],
+    "source_docs": ["Thomas_2023_CeramicsInternational_Highstrain.pdf", "Feltrin_2025_EuropeanCeramicSociety_Integratedcomputational.pdf"],
+    "excerpts": [
+      "Composition Rietveld Analysis TEM Analysis SHPB Test ... TaC 4.4420 ± 0.0001 2.00 2.5672 ± 0.0012 4.4465 ± 0.0009 1203 61 T80H20 4.4963 ± 0.0001 2.27 2.2481 ± 0.002 4.4971 ± 0.0003 1200.1 42 T50H50 4.5330 ± 0.0002 2.84 2.6179 ± 0.0001 4.5343 ± 0.0002 1870.0 183 T20H80 4.5854 ± 0.0001 2.41 2.6483 ± 0.0009 4.5869 ± 0.0005 1450.5 120 HfC 4.6405 ± 0.0005 2.13 2.6793 ± 0.0006 4.6407 ± 0.0003 852.2 27",
+      "At the maximum load of 9.8 N, HEDP-W (27.4 ± 0.7 GPa), -V (25.5 ± 0.2 GPa), and -Mo (25.2 ± 0.2 GPa) had relatively higher hardness values compared to the other compositions. The other hardnesses at 9.8 N were 22.7 ± 0.6 GPa for HEDP-Nb, 23.8 ± 0.8 GPa for HEDP-Ta, and 23.8 ± 0.7 GPa for HEDP-Cr (Fig. 4)."
+    ]
+  },
+  {
+    "category": "cross_document",
+    "question": "What multi-phase coating strategy for wide-temperature-range oxidation protection did Hu et al. (2019) design for C/SiC composites, and how does it contrast with the design goal of introducing Group V and VI metals into (M,Hf,Ti,Zr)B2-(M,Hf,Ti,Zr)C ceramics by Feltrin et al. (2025)?",
+    "reference_answer": "Hu et al. (2019) designed a SiC/UHTC/SiC three-layer coating with a ZrB2-based UHTC middle layer specifically to protect C/SiC composites from oxidation over a wide temperature range of 1100-1500 C. Feltrin et al. (2025) instead incorporated Group V and VI metals (V, Nb, Ta, Cr, Mo, W) into a Hf-Ti-Zr diboride-carbide base composition to tailor phase stability, microstructure, and mechanical hardness rather than oxidation resistance.",
+    "answer_keys": [["three-layer", "sic/uhtc/sic", "wide temperature"], ["group v", "group vi", "hardness", "phase stability"]],
+    "evidence_any": [
+      "a multi-composition and multi-layer coating system of SiC/UHTC/SiC is designed to achieve long-time oxidation protection",
+      "we systematically incorporated metals from Groups V and VI"
+    ],
+    "source_docs": ["Hu_2019_CorrosionScience_Long-termoxidation.pdf", "Feltrin_2025_EuropeanCeramicSociety_Integratedcomputational.pdf"],
+    "excerpts": [
+      "As mentioned earlier, single composition, as well as a monolayer structure makes it difficult to achieve oxidation protection over a wide range of temperatures, especially beyond the optimum usage temperatures of Si-based and B-based ceramics for a long time. Thus, a multi-composition and multi-layer coating system of SiC/UHTC/SiC is designed to achieve long-time oxidation protection for C/SiC over a wide range of temperatures.",
+      "In this study, we systematically incorporated metals from Groups V and VI (M = V, Nb, Ta, Cr, Mo, W), while maintaining Group IV metals (Hf, Ti, Zr) constant in four element carbide-boride ceramics. This resulted in six multicomponent (M,Hf,Ti,Zr)B2-(M,Hf,Ti,Zr)C compositions that are designated HEDP-V, HEDP-Nb, HEDP-Ta, HEDP-Cr, HEDP-Mo and HEDP-W."
+    ]
+  },
+  {
+    "category": "cross_document",
+    "question": "How does the crack propagation rate for Ta0.5Hf0.5C reported by Thomas et al. (2023) relate to the grain size refinement observed for the vanadium-containing HEDP-V composition reported by Feltrin et al. (2025)?",
+    "reference_answer": "Thomas et al. (2023) found that Ta0.5Hf0.5C had the lowest crack propagation rate, about 13 m/s, among the TaxHf1-xC compositions tested at high strain rate. Feltrin et al. (2025) found the finest grain sizes among their dual-phase HEDP ceramics were in the HEDP-V and HEDP-Nb compositions, with HEDP-V refining to 0.99 micrometers for the boride phase; both papers link microstructural refinement or bonding character to improved mechanical resistance, though in different UHTC systems.",
+    "answer_keys": [["13 m/s", "crack propagation"], ["0.99", "hedp-v", "grain siz"]],
+    "evidence_any": [
+      "T50H50 can withstand high strain rates with the lowest crack propa- gation rate (~13 m/s)",
+      "The finest grain sizes were observed in the HEDP-V and -Nb compositions"
+    ],
+    "source_docs": ["Thomas_2023_CeramicsInternational_Highstrain.pdf", "Feltrin_2025_EuropeanCeramicSociety_Integratedcomputational.pdf"],
+    "excerpts": [
+      "Table 3 shows that T50H50 can withstand high strain rates with the lowest crack propa- gation rate (~13 m/s) due to the ability to form more dislocation pile ups (see Fig. 2) via slip band interaction (Fig. 1) than any other material system in this study. This ability of T50H50 stems from the extensive hybridization of Ta5d, Hf5d, and C2p states, reported previously.",
+      "Besides the HEDP-Cr composition, grain sizes were comparable with the previous reported HEDP ceramic (HfNbTaTiZr)B2-(HfNbTaTiZr)C, with grain sizes ranging from 0.9 to 2.3 μm. The finest grain sizes were observed in the HEDP-V and -Nb compositions, suggesting that these elements contribute to refining the microstructure."
+    ]
+  },
+  {
+    "category": "cross_document",
+    "question": "What deposition method did Hu et al. (2019) use to apply the SiC bonding layer onto C/SiC composites, and how does it differ from the boro/carbothermal reduction synthesis route Feltrin et al. (2025) used to prepare HEDP dual-phase powders?",
+    "reference_answer": "Hu et al. (2019) applied the SiC bonding layer by low-temperature chemical vapor deposition (LTCVD) at 1050-1150 C for 48 h via pyrolysis of methyltrichlorosilane. Feltrin et al. (2025) instead prepared their HEDP powders through a boro/carbothermal reduction reaction of metal oxides with carbon black and boron carbide at 1660 C for 3 h, a solid-state reaction route rather than a vapor deposition process.",
+    "answer_keys": [["ltcvd", "chemical vapor deposition", "1050"], ["boro/carbothermal", "1660"]],
+    "evidence_any": [
+      "a SiC bonding layer was applied on the C/SiC substrates by LTCVD at a relatively low temperature of 1050",
+      "boro/carbothermal reduction was performed at 1660 ◦C for 3 h"
+    ],
+    "source_docs": ["Hu_2019_CorrosionScience_Long-termoxidation.pdf", "Feltrin_2025_EuropeanCeramicSociety_Integratedcomputational.pdf"],
+    "excerpts": [
+      "Low-temperature CVD (LTCVD), slurry brushing with a novel sintering technique and high-temperature CVD (HTCVD) were successively applied for the preparation of the SiC/UHTC/SiC coating. Firstly, a SiC bonding layer was applied on the C/SiC substrates by LTCVD at a relatively low temperature of 1050–1150°C for 48h through the pyrolysis of methyltrichlorosilane (CH3SiCl3, MTS).",
+      "The sieved powders were pressed under a 2 MPa pressure in a 25 mm stainless steel die, and boro/carbothermal reduc- tion was performed at 1660 ◦C for 3 h in a resistance-heated graphite element furnace (HP50–7010 G, Thermal Technology, Santa Rosa, USA) under a vacuum of ~ 3 Pa."
+    ]
+  },
+  {
+    "category": "cross_document",
+    "question": "How does the melting point cited for the ZrO2 oxidation product in Hu et al. (2019) compare to the melting point reported for Ta0.2Hf0.8C by Thomas et al. (2023)?",
+    "reference_answer": "Hu et al. (2019) cited the ZrO2 formed from ZrB2 oxidation as having a high melting point of approximately 2700 C, which acts as an in-situ oxygen barrier in the UHTC coating. Thomas et al. (2023) reported that Ta0.2Hf0.8C exhibits a record highest melting temperature of 4215 C among the TaxHf1-xC solid solutions, substantially higher than the ZrO2 melting point cited in the coating study.",
+    "answer_keys": [["2700", "zro2"], ["4215", "ta0.2hf0.8c", "t20h80"]],
+    "evidence_any": [
+      "the formed ZrO2 product possesses a high melting point (∼2700 °C)",
+      "a record highest melting temperature of 4215 ◦C is reported for Ta0.2Hf0.8C"
+    ],
+    "source_docs": ["Hu_2019_CorrosionScience_Long-termoxidation.pdf", "Thomas_2023_CeramicsInternational_Highstrain.pdf"],
+    "excerpts": [
+      "On one hand, the oxidation of ZrB2 can con- sume oxygen and prevent the ingress of oxygen. Moreover, the formed glassy B2O3 has excellent healing ability at 600–1100 °C. Also, the formed ZrO2 product possesses a high melting point (∼2700 °C) which can be an in-situ oxygen barrier and skeleton to hold the low-viscosity phases.",
+      "In particular, a record highest melting temperature of 4215 ◦C is reported for Ta0.2Hf0.8C in the solid solution of TaxHf1-xC (x = 0, 0.2, 0.5, 0.8 and 1). The production of single-phase solid-solution of (Ta, Hf)C is intricate as it is a function of sintering time and temperature to complete the diffusion process."
+    ]
+  },
+  {
+    "category": "cross_document",
+    "question": "How does the thermodynamic model proposed by Smith et al. and used by Feltrin et al. (2025) for predicting metal segregation in HEDP boride-carbide ceramics compare to the empirical strengthening explanation Thomas et al. (2023) gives for Ta0.5Hf0.5C based on hybridization of Ta5d, Hf5d, and C2p states?",
+    "reference_answer": "Feltrin et al. (2025) used a first-principles thermodynamic model based on standard Gibbs free energies of formation, following Smith et al., to predict that metals segregate to the boride phase in the order Cr less than Ti less than Zr less than Nb less than Mo less than V less than Hf less than Ta less than W. Thomas et al. (2023) instead explained the superior strength of Ta0.5Hf0.5C using prior X-ray emission spectroscopy evidence of strong hybridization of Ta5d, Hf5d, and C2p states that produces extensive Ta-Hf metallic bonding, a bonding-based rather than segregation-based mechanism.",
+    "answer_keys": [["gibbs", "segregation", "cr < ti", "cr \\< ti"], ["hybridization", "ta5d", "ta–hf", "ta-hf"]],
+    "evidence_any": [
+      "the tendency for segregation to the boride phase follows the order: Cr",
+      "The compound with an equal ratio of Ta and Hf had the highest intensity peaks of hy-bridization states"
+    ],
+    "source_docs": ["Feltrin_2025_EuropeanCeramicSociety_Integratedcomputational.pdf", "Thomas_2023_CeramicsInternational_Highstrain.pdf"],
+    "excerpts": [
+      "Subsequently, Smith et al. [13] proposed a model based on the standard Gibbs Free energies of formation to explain metal segregation. Their findings indicated that the tendency for segregation to the boride phase follows the order: Cr < Ti < Zr < Nb < Mo < V < Hf < Ta < W, which was different from Qin's model.",
+      "Nazarova et al. [42] conducted one of the earliest N3 X-ray emission spectra with three distinct peaks attrib-uted to the hybridization of Ta5d, Hf5d, and C2p states. The compound with an equal ratio of Ta and Hf had the highest intensity peaks of hybridization states, retaining more Ta–Hf metallic bonds."
+    ]
+  },
+  {
+    "category": "cross_document",
+    "question": "How does the densification percentage for T50H50 (Ta0.5Hf0.5C) reported by Thomas et al. (2023) compare to the phase purity outcomes for the HEDP-V dual-phase composition reported by Feltrin et al. (2025)?",
+    "reference_answer": "Thomas et al. (2023) reported that the T50H50 (Ta0.5Hf0.5C) sample reached 98.2% densification with a grain size of 3.8 micrometers after spark plasma sintering. Feltrin et al. (2025) reported that the HEDP-V composition formed a dual-phase ceramic with no detectable third phases, distinguishing it from compositions like HEDP-W and HEDP-Mo that developed impurity phases.",
+    "answer_keys": [["98.2", "t50h50", "densif"], ["hedp-v", "no detectable third phase", "no third phase"]],
+    "evidence_any": [
+      "T50H50 10.03 3.77 98.2 3.8",
+      "the next highest boride content was for HEDP-V, which had no detectable third phases"
+    ],
+    "source_docs": ["Thomas_2023_CeramicsInternational_Highstrain.pdf", "Feltrin_2025_EuropeanCeramicSociety_Integratedcomputational.pdf"],
+    "excerpts": [
+      "Table 1 Sample dimensions used in SHPB compressive test, densification and grain size of the TaC-HfC composites. Composition Diameter (mm) Thickness Densification (%) Grain size (mm) TaC 9.90 2.82 96.7 6.8 ± 1.4 T80H20 10.03 3.30 97.8 6.2 ± 2.1 T50H50 10.03 3.77 98.2 3.8 ± 1.2 T20H80 10.02 3.44 98.8 3.1 ± 1.1 HfC 10.03 3.70 98.5 2.3 ± 0.7",
+      "HEDP-Cr had the highest boride phase fraction when considering only the primary solid-solution boride phase, though it also contained a minor second boride phase. The next highest boride content was for HEDP-V, which had no detectable third phases. The HEDP-Ta ceramic had the highest carbide phase content, followed by HEDP-Nb."
+    ]
+  }
+]
