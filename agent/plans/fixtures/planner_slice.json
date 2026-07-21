@@ -1,0 +1,230 @@
+{
+  "description": "First 5 questions per golden_set_v2 category; ids/questions only, for planner shape spot-checks (eval/planner_shapes.py). No answers on purpose.",
+  "questions": [
+    {
+      "id": "v2q001",
+      "question": "Across studies on ZrB2, HfB2, ZrC, HfC, and their oxidation products, what range of melting points has been reported for these ultra-high-temperature ceramic borides, carbides, and oxides?",
+      "category": "aggregation"
+    },
+    {
+      "id": "v2q002",
+      "question": "What densities have been reported for ZrB2 powder or ZrB2-based ultra-high-temperature ceramics in studies on spark-plasma-sintered UHTCs and electron-beam-processed UHTCs?",
+      "category": "aggregation"
+    },
+    {
+      "id": "v2q003",
+      "question": "What high-temperature conditions have been used to evaluate the oxidation, ablation, or thermal stability of ultra-high-temperature ceramics and high-Curie-temperature piezoelectric ceramics, such as ZrB2-SiC UHTCs, ZrC/HfC plasma-sprayed coatings, and La2Ti2O7-based ceramics?",
+      "category": "aggregation"
+    },
+    {
+      "id": "v2q004",
+      "question": "What oxide scale or oxide layer thicknesses have been reported after high-temperature oxidation or ablation testing of ZrB2-SiC, HfB2-SiC, ZrC, ZrC-SiC, HfC, and HfC-SiC based ultra-high-temperature ceramics?",
+      "category": "aggregation"
+    },
+    {
+      "id": "v2q005",
+      "question": "What volume or weight percentages of secondary-phase additives (such as SiC, ZrSi2, La2O3, or Al2O3) have been used to modify ultra-high-temperature ceramic matrices in ablation, sintering, and processing studies?",
+      "category": "aggregation"
+    },
+    {
+      "id": "v2q026",
+      "question": "How many infiltration and pyrolysis cycles were required to consolidate the carbon-fiber-reinforced UHTC composite?",
+      "category": "ambiguous"
+    },
+    {
+      "id": "v2q027",
+      "question": "What processing temperature was employed for densifying UHTC ceramics via infiltration and sintering methods?",
+      "category": "ambiguous"
+    },
+    {
+      "id": "v2q028",
+      "question": "What final density values were achieved in sintered and infiltrated UHTC materials?",
+      "category": "ambiguous"
+    },
+    {
+      "id": "v2q029",
+      "question": "What activation energy values were determined for the densification and sintering kinetics of UHTC ceramics?",
+      "category": "ambiguous"
+    },
+    {
+      "id": "v2q030",
+      "question": "What grain size range was produced in the UHTC ceramics after high-temperature spark plasma sintering?",
+      "category": "ambiguous"
+    },
+    {
+      "id": "v2q040",
+      "question": "What role does ZrB2 play as a UHTC constituent in the SiC/UHTC/SiC coating studied by Hu et al. (2019), compared to the role Vickers hardness plays in evaluating the (M,Hf,Ti,Zr)B2-(M,Hf,Ti,Zr)C dual-phase ceramics studied by Feltrin et al. (2025)?",
+      "category": "cross_document"
+    },
+    {
+      "id": "v2q041",
+      "question": "How do the processing routes differ between the slurry brushing-sintering technique used for the ZrB2-based UHTC layer by Hu et al. (2019) and the spark plasma sintering (SPS) process used for the HEDP dual-phase ceramics by Feltrin et al. (2025)?",
+      "category": "cross_document"
+    },
+    {
+      "id": "v2q042",
+      "question": "What sintering temperature was used by Feltrin et al. (2025) to densify the HEDP dual-phase UHTC ceramics, and how does it compare to the spark plasma sintering temperature used by Thomas et al. (2023) to produce the TaxHf1-xC solid solutions?",
+      "category": "cross_document"
+    },
+    {
+      "id": "v2q043",
+      "question": "How does the compressive strength reported by Thomas et al. (2023) for HfC compare to the Vickers hardness values reported for dual-phase HEDP ceramics containing Hf by Feltrin et al. (2025)?",
+      "category": "cross_document"
+    },
+    {
+      "id": "v2q044",
+      "question": "What multi-phase coating strategy for wide-temperature-range oxidation protection did Hu et al. (2019) design for C/SiC composites, and how does it contrast with the design goal of introducing Group V and VI metals into (M,Hf,Ti,Zr)B2-(M,Hf,Ti,Zr)C ceramics by Feltrin et al. (2025)?",
+      "category": "cross_document"
+    },
+    {
+      "id": "v2q090",
+      "question": "In the Hoque et al. 2023 study on high-entropy metal diboride (Hf0.2Zr0.2Ti0.2Ta0.2Nb0.2)B2, what was the room-temperature thermal conductivity value measured for the HEB specimen?",
+      "category": "factual"
+    },
+    {
+      "id": "v2q091",
+      "question": "According to Hoque et al. (2023), what maximum temperature was reached when measuring the thermal conductivity of the high-entropy diboride (Hf0.2Zr0.2Ti0.2Ta0.2Nb0.2)B2 using laser flash analysis (LFA)?",
+      "category": "factual"
+    },
+    {
+      "id": "v2q092",
+      "question": "In the Hoque et al. (2023) paper on (Hf0.2Zr0.2Ti0.2Ta0.2Nb0.2)B2, what was the sintering temperature and duration used during the reactive spark plasma sintering process?",
+      "category": "factual"
+    },
+    {
+      "id": "v2q093",
+      "question": "What was the measured electrical conductivity of the high-entropy diboride (Hf0.2Zr0.2Ti0.2Ta0.2Nb0.2)B2 specimen reported by Hoque et al. (2023), and what does this value correspond to for electron contribution to thermal conductivity?",
+      "category": "factual"
+    },
+    {
+      "id": "v2q094",
+      "question": "In the Hoque et al. (2023) ablation study, what were the measured laser ablation thresholds reported for the high-entropy diboride (Hf0.2Zr0.2Ti0.2Ta0.2Nb0.2)B2 and ZrB2, and what does this indicate about their bond strengths?",
+      "category": "factual"
+    },
+    {
+      "id": "v2q150",
+      "question": "In Zamharir 2015, what relative density was achieved for ZrB2-25vol% SiC at the optimal hot pressing conditions of 1850\u00b0C, 90 min holding time, 16 MPa pressure, and 200 nm SiC particle size?",
+      "category": "multi_chunk"
+    },
+    {
+      "id": "v2q151",
+      "question": "Why did Zamharir 2015 add ultrafine SiC particles to the ZrB2 matrix for the densification of this ceramic composite?",
+      "category": "multi_chunk"
+    },
+    {
+      "id": "v2q152",
+      "question": "In Fang et al. 2021, the hydrothermal carbon (HTC) coating applied to carbon fiber in the CF/ZrB2/SiBCN composite had a thickness of 200 nm and was prepared using an environmentally friendly hydrothermal method. How much did this coating increase the surface energy of the carbon fiber compared to the uncoated fiber?",
+      "category": "multi_chunk"
+    },
+    {
+      "id": "v2q153",
+      "question": "According to Fang et al. 2021, how did the hydrothermal carbon coating affect the bulk density of the green body after ZrB2 slurry injection into the carbon fabric in the CF/ZrB2/SiBCN system?",
+      "category": "multi_chunk"
+    },
+    {
+      "id": "v2q154",
+      "question": "In Fang et al. 2021, what were the mechanical properties (flexural strength and fracture toughness) achieved by the HCZS composite, and how did these compare to the performance after different oxidation exposure times?",
+      "category": "multi_chunk"
+    },
+    {
+      "id": "v2q176",
+      "question": "Between He et al. (2013)'s pressureless sintering of the aqueous-gelcast HfB2\u201320 vol.% MoSi2 composite and Zhang et al. (2025)'s boro/carbothermal reduction synthesis of hollow-spherical HfB2-Glucose powder, which process used a higher peak processing temperature, and what was that peak temperature?",
+      "category": "multi_hop"
+    },
+    {
+      "id": "v2q177",
+      "question": "Comparing the minimum reflection loss values reported for HfB2-Glucose hollow-spherical powder in Zhang et al. (2025) and for the TiC/SiOC-80 wt% Al2O3 coating in Yang & Xu (2023), which material system achieved a deeper (more negative) minimum reflection loss, and at what absorber thickness was each value measured?",
+      "category": "multi_hop"
+    },
+    {
+      "id": "v2q178",
+      "question": "Zhang et al. (2025) report the effective absorption bandwidth (EAB) achieved by hollow-spherical HfB2-Glucose powder, and Yang & Xu (2023) report the EAB achieved by the TiC/SiOC-50 wt% Al2O3 coating. Which material system provides the substantially wider EAB?",
+      "category": "multi_hop"
+    },
+    {
+      "id": "v2q179",
+      "question": "He et al. (2013) pressureless sintered the HfB2\u201320 vol.% MoSi2 gelcast composite at 1950 \u00b0C, while Yang & Xu (2023) note that the TiC/SiOC-0.25 precursor was pyrolyzed at 1400 \u00b0C to form SiC and TiC phases. Which of these two UHTC-related thermal treatments reached the higher temperature?",
+      "category": "multi_hop"
+    },
+    {
+      "id": "v2q180",
+      "question": "He et al. (2013) report the solids loading that produced the most homogeneous HfB2\u2013MoSi2 gelcast microstructure, and Zhang et al. (2025) report the size of the individual HfB2 particles that aggregate into hollow spheres in HfB2-Glucose powder. What is the optimal solids loading vol.% found in He et al. (2013), and what is the individual HfB2 particle size range reported in Zhang et al. (2025) before they aggregate into spheres?",
+      "category": "multi_hop"
+    },
+    {
+      "id": "v2q206",
+      "question": "What electrical resistivity per unit dimension does the Li/Ce-doped La2Ti2O7:0.2MnO2 ceramic retain when exposed to 1000 degrees Celsius?",
+      "category": "semantic"
+    },
+    {
+      "id": "v2q207",
+      "question": "How does the introduction of manganese in the La1.97Li0.015Ce0.015Ti2O7:0.2MnO2 system influence the switching behavior of electric domains within the crystal lattice?",
+      "category": "semantic"
+    },
+    {
+      "id": "v2q208",
+      "question": "What minimum thermal decomposition point characterizes the class of materials known as ultra-high-temperature ceramics (UHTCs)?",
+      "category": "semantic"
+    },
+    {
+      "id": "v2q209",
+      "question": "What synergistic combination of thermal and mechanical properties renders TiB2, ZrB2, and HfB2 diborides suitable as protective barriers in high-stress thermal environments?",
+      "category": "semantic"
+    },
+    {
+      "id": "v2q210",
+      "question": "In which aerospace applications have TiB2, ZrB2, and HfB2 diborides been proposed for use as thermal insulating systems?",
+      "category": "semantic"
+    },
+    {
+      "id": "v2q246",
+      "question": "What is the density of zirconium carbide (ZrC) in g/cm\u00b3 according to Kim et al. 2024 study on vacuum plasma spray coating of ZrC on carbon-carbon composites?",
+      "category": "table"
+    },
+    {
+      "id": "v2q247",
+      "question": "In Table 1 of the Kim et al. 2024 study on powder size-dependent ZrC coating, what is the applied power in kilowatts for Case B with 49 \u03bcm powder at 50 mbar?",
+      "category": "table"
+    },
+    {
+      "id": "v2q248",
+      "question": "What is the melting point temperature of zirconium carbide (ZrC) in degrees Celsius as stated in the Kim et al. 2024 paper on UHTC coatings?",
+      "category": "table"
+    },
+    {
+      "id": "v2q249",
+      "question": "In Table 1 of Kim et al. 2024, what is the applied current in amperes for Case A with the largest powder size (49 \u03bcm) at 50 mbar chamber pressure?",
+      "category": "table"
+    },
+    {
+      "id": "v2q250",
+      "question": "What is the chamber pressure in millibar for Case D in Table 1 of the Kim et al. 2024 vacuum plasma spray study on ZrC powder coatings?",
+      "category": "table"
+    },
+    {
+      "id": "v2q282",
+      "question": "What is the fracture toughness of HfB2-ZrC-30 vol% SiC composites prepared by spark plasma sintering at 2000\u00b0C?",
+      "category": "unanswerable"
+    },
+    {
+      "id": "v2q283",
+      "question": "How does the electrical conductivity of ZrB2-5 vol% graphene composites compare to graphene-free ZrB2 when tested at room temperature?",
+      "category": "unanswerable"
+    },
+    {
+      "id": "v2q284",
+      "question": "What densification results are achieved for ZrB2-20 vol% SiC composites sintered at 1800\u00b0C using spark plasma sintering?",
+      "category": "unanswerable"
+    },
+    {
+      "id": "v2q285",
+      "question": "What is the ablation rate of TaC-W cermet composites in a solid rocket motor environment at 3200\u00b0C?",
+      "category": "unanswerable"
+    },
+    {
+      "id": "v2q286",
+      "question": "How does the thermal conductivity of TaB2-SiC-graphene composites change over a temperature range of 300-1500\u00b0C?",
+      "category": "unanswerable"
+    }
+  ]
+}

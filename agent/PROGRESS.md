@@ -19,13 +19,45 @@ Module status board (update the table too):
 | Module | Status | Plan | Notes |
 |--------|--------|------|-------|
 | M1 skeleton + adapter | done | agent/plans/M1_skeleton.md | parity test green |
-| M2 planner | not started | — | |
+| M2 planner | done | agent/plans/M2_planner.md | Colab shape report pending (eval/planner_shapes.py) |
 | M3 retrieval loop | not started | — | |
 | M4 evidence check + refusal | not started | — | |
 | M5 synthesis | not started | — | |
 | M6 benchmark run + tuning | not started | — | baseline run in progress on Colab (results land in Drive eval_v2/results) |
 
 ---
+
+## 2026-07-21 M2 planner — done (Colab shape report pending)
+- What was done: LLM planner replaces the pass-through plan node —
+  `agentic/planner.py` (PLANNER_SYSTEM/USER prompts, `parse_plan` with strict
+  validation + deterministic fallback to {"category":"simple",
+  "sub_queries":[question]}, `make_plan`); plan node in graph.py builds
+  queries = [question] + sub_queries (dedup, cap 1+4), sets
+  state["category"], llm_calls += 1, trace event with
+  category/sub_queries/fallback/raw. Labels are the PRD's five
+  (simple|comparative|multi_hop|aggregation|unanswerable_maybe), confirmed
+  with the human. Parity test redefined (confirmed): parity = fallback
+  behaviour, llm_calls == 2, baseline prompt is the LAST llm call.
+  Fixture `agent/plans/fixtures/planner_slice.json` (5 ids/category, no
+  answers) + `eval/planner_shapes.py` shape report (Colab, not run here —
+  no GPU locally).
+- Files touched: agentic/planner.py (new), agentic/graph.py,
+  tests/test_planner.py (new), tests/test_agentic_parity.py,
+  eval/planner_shapes.py (new), agent/plans/fixtures/planner_slice.json (new),
+  agent/plans/M2_planner.md (new)
+- Tests: `python tests/test_planner.py` — passing;
+  `python tests/test_agentic_parity.py` — passing;
+  `python tests/test_pipeline.py` — passing. GPU smoke + shape report NOT
+  run (no GPU here).
+- Next step for the following agent: human runs
+  `python eval/planner_shapes.py --model Qwen/Qwen3-14B` on Colab and
+  reviews label/sub-query shapes BEFORE M3 branches on state["category"];
+  then plan M3 (retrieval loop) with the human.
+- Gotchas discovered: a string value for sub_queries iterates as characters —
+  parse_plan requires isinstance(list). PLANNER_USER contains literal JSON
+  braces, escaped as {{ }} for .format. StubLLM "ANSWER" is deliberately
+  unparseable JSON, which is what makes the parity test exercise the
+  fallback path.
 
 ## 2026-07-21 tracing + groundedness docs — done
 - What was done: toggleable agent trace — `build_agentic_graph(..., trace=True)`

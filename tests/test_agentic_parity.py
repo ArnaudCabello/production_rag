@@ -1,4 +1,10 @@
-"""M1 parity tests: the agentic pass-through graph == baseline, with stubs (no models)."""
+"""Parity tests: the agentic graph == baseline, with stubs (no models).
+
+M2 redefinition: the StubLLM's "ANSWER" output is unparseable planner JSON, so
+the planner falls back to [question] — behavioural parity (same retrieval, same
+final prompt) holds, but llm_calls == 2 (planner + synthesis) and the baseline
+prompt is the LAST llm call.
+"""
 import sys
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
@@ -49,15 +55,17 @@ assert ag["answer"] == base["answer"]
 assert [c["chunk_id"] for c in ag["chunks"]] == [c["chunk_id"] for c in base["chunks"]]
 print("parity: same answer and chunk sequence as baseline: OK")
 
-# 2. prompt parity: identical system + user message text
-assert len(ag_llm.messages) == 1 and len(base_llm.messages) == 1
-assert [m.content for m in ag_llm.messages[0]] == [m.content for m in base_llm.messages[0]]
-print("parity: identical prompts (system + user): OK")
+# 2. prompt parity: the final (synthesis) call has identical system + user text;
+# the extra first call is the planner
+assert len(ag_llm.messages) == 2 and len(base_llm.messages) == 1
+assert [m.content for m in ag_llm.messages[-1]] == [m.content for m in base_llm.messages[0]]
+print("parity: identical synthesis prompts (system + user): OK")
 
-# 3. retriever-call parity: one search with baseline defaults; real counters say 1/1
+# 3. retriever-call parity: one search with baseline defaults; counters 2 (planner
+# + synthesis) / 1
 assert ag_ret.calls == [("what is X", 5, None, True)], ag_ret.calls
-assert ag["llm_calls"] == 1 and ag["retrieval_calls"] == 1
-print("parity: single search with baseline defaults, counters 1/1: OK")
+assert ag["llm_calls"] == 2 and ag["retrieval_calls"] == 1
+print("parity: single search with baseline defaults, counters 2/1: OK")
 
 # 4. deliberate divergence: no multi-doc fan-out in the M1 skeleton — the M2
 # planner + M3 loop replace it with targeted sub-queries

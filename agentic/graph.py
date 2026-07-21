@@ -1,9 +1,9 @@
 """Agentic RAG pipeline skeleton: plan → retrieve → synthesize (see PRD.md).
 
-M1: every node is a trivial pass-through so behaviour matches the baseline
-linear pipeline on plain questions — the planner emits the question as the
-single sub-query, retrieval runs once, synthesis uses the baseline prompts.
-M2-M5 replace node internals without changing this structure. No multi-doc
+M2: the planner classifies the question and emits sub-queries (agentic/planner.py);
+on unparseable planner output it falls back to [question], matching the M1
+pass-through. Retrieval runs once per query; synthesis uses baseline prompts.
+M3-M5 replace node internals without changing this structure. No multi-doc
 fan-out or vision routing: the planner/loop modules replace the former, and
 vision is out of scope for the agentic pipeline.
 """
@@ -12,12 +12,14 @@ from typing import TypedDict
 from langchain_core.messages import HumanMessage, SystemMessage
 from langgraph.graph import END, START, StateGraph
 
+from agentic.planner import MAX_SUB_QUERIES, make_plan
 from generation.pipeline import SYSTEM_PROMPT, USER_TEMPLATE, format_context
 
 
 class AgentState(TypedDict):
     question: str
-    sub_queries: list[str]  # M2 planner output; M1: just [question]
+    category: str  # M2 planner label: simple|comparative|multi_hop|aggregation|unanswerable_maybe
+    sub_queries: list[str]  # M2 planner output; question always first
     chunks: list[dict]  # union across retrievals, deduped by chunk_id
     answer: str
     llm_calls: int
@@ -27,10 +29,19 @@ class AgentState(TypedDict):
 
 def build_agentic_graph(retriever, llm, trace: bool = False):
     def plan(state: AgentState):
-        update = {"sub_queries": [state["question"]]}
+        p = make_plan(llm, state["question"])
+        queries = [state["question"]]  # question always first — sub-queries only add recall
+        for q in p["sub_queries"]:
+            if q.strip().lower() != state["question"].strip().lower() and q not in queries:
+                queries.append(q)
+        update = {"sub_queries": queries[:1 + MAX_SUB_QUERIES],
+                  "category": p["category"],
+                  "llm_calls": state["llm_calls"] + 1}
         if trace:
             update["trace"] = state["trace"] + [
-                {"node": "plan", "sub_queries": update["sub_queries"]}]
+                {"node": "plan", "category": p["category"],
+                 "sub_queries": update["sub_queries"],
+                 "fallback": p.get("fallback", False), "raw": p["raw"][:500]}]
         return update
 
     def retrieve(state: AgentState):
