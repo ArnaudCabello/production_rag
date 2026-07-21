@@ -1,0 +1,156 @@
+[
+  {
+    "category": "aggregation",
+    "question": "What range of heat-treatment or sintering temperatures has been reported for producing ZrB2-based one-dimensional crystals, ZrB2/HfB2-SiC fiber composites, and high-entropy pyrochlore zirconate ceramics?",
+    "reference_answer": "Reported sintering and heat-treatment temperatures for ZrB2-based UHTC systems and related zirconate ceramics range from about 1369°C to 1900°C: a two-step treatment at 1369°C and 1600°C was used to grow tube-like ZrB2 crystals, ZrB2/HfB2-SiC fiber composites were densified at temperatures between about 1550°C and 1900°C depending on the sintering aid used, and pyrochlore-structured high-entropy zirconate ceramics were pressureless sintered at 1600°C for 24 h.",
+    "answer_keys": [["1369"], ["1550", "1900"], ["1600"]],
+    "evidence_any": [
+      "an initial treatment at 1369 ◦C for 30 min, followed by a second holding step at 1600",
+      "with Si3N4 it was completed at 1700 °C for both borides",
+      "were subjected to pressureless sintering at 1600 ◦C for 24 h in air"
+    ],
+    "source_docs": [
+      "Chen_2025_CeramicsInternational_One-dimensionalZrB2.pdf",
+      "Sciti_2014_Materials&Design_AreshortHi-Nicalon.pdf",
+      "Chen_2025_CeramicsInternational_Pyrochlore-structuredhigh-entropy.pdf"
+    ],
+    "excerpts": [
+      "A stepwise heat treatment approach was decided based on a thor- ough thermal analysis of the starting mixtures using thermogravimetric, differential scanning calorimetry (TG-DSC, STA449F3, NETZSCH, Ger- many), and mass spectrometry (MS, JMS-Q1600, JEOL, Japan). This boro/carbothermal reduction reaction also caused a significant thermal change in the DSC curve at 1369 ◦C (Tmax), which showed a proportional extent to the mass loss rate (i.e., DTG). It indicates the occurrence of a highly vigorous reaction at Tmax. A holding step of 30 min at Tmax was then designed to investigate the impact of a stabilized thermal environment on the morphology, compared with the continuous heating profile used in our previous work. Accordingly, the heat treat- ment profile was determined to be stepwise, including an initial treatment at 1369 ◦C for 30 min, followed by a second holding step at 1600 ◦C for 60 min. This additional treatment at 1600 ◦C is beneficial for the anisotropic crystal growth based on our former work. These were performed in an ultra-high-temperature furnace with an Argon atmosphere.",
+      "Sintering aids dictate the sintering temperature necessary for full densification of the composite. With ZrSi2 addition, densification was completed at 1600 °C for ZrB2 and 1550 °C for HfB2, with Si3N4 it was completed at 1700 °C for both borides. With MoSi2 addition ZrB2 densification was completed at 1750 °C. According to previous studies, after sintering fibers have a multi- layered structure composed of a SiC core, with characteristics similar to those of the original fiber, and a rim area with coarsened SiC grains and spurious phases. In the case of ZrB2 matrices, tests were carried out by hot pressing at 1450–1500-1550–1650 °C for ZrSi2 additions, 1700–1720 °C for Si3N4 additions and 1650–1750–1800–1900 °C for MoSi2 additions. For HfB2, sintering tests were performed by spark plasma sintering at 1300–1350-1450–1550 °C for ZrSi2 additions, and 1425–1500–1600–1700 °C for Si3N4 additions.",
+      "The raw materials—La2O3, Nd2O3, Sm2O3, Eu2O3, Dy2O3, Ho2O3, Er2O3, and ZrO2—were purchased from Shanghai Aladdin Bio-Chem Technology Co., Ltd. The oxides were precisely weighed in a molar ratio of La:Nd:Sm:Eu:A:Zr = 1:1:1:1:1:5 and subjected to ball milling in an agate jar using agate balls as the grinding medium and ethanol as the dispersant. The resulting slurry was dried at 80 ◦C and subsequently calcined at 1400 ◦C for 6 h to form an intermediate precursor. The precursor was cold isostatically pressed at 300 MPa to produce round billets with a diameter of 10 mm and a thickness of 1 mm. Finally, the billets were subjected to pressureless sintering at 1600 ◦C for 24 h in air to obtain the final (La0.2Nd0.2Sm0.2Eu0.2A0.2)2Zr2O7 ceramics."
+    ]
+  },
+  {
+    "category": "aggregation",
+    "question": "What temperature thresholds around 1500-2000°C are described as critical operating or stability limits for ZrB2 ceramics, Hi-Nicalon SiC-fiber-reinforced borides, high-entropy pyrochlore thermistor ceramics, and hypersonic UHTC leading edges?",
+    "reference_answer": "UHTC-related research repeatedly identifies temperatures around 1500-2000°C as critical thresholds: ultra-high-temperature ceramics are described as desirable for structural applications above 1500°C, Hi-Nicalon SiC fibers become unstable above 1500°C even in inert atmosphere, high-entropy pyrochlore zirconate ceramics are rated for operation up to 1500°C, and hypersonic wing-leading-edge surfaces can reach temperatures approaching 2000°C.",
+    "answer_keys": [["1500"], ["2000"], ["unstable", "structural", "operat"]],
+    "evidence_any": [
+      "desirable for structural applications at temperatures above 1500 ◦C",
+      "they are not stable at temperatures higher than 1500 °C even in inert atmosphere",
+      "capable of operating at temperatures up to 1500 ◦C and exhibiting exceptional sensitivity",
+      "operate in environments from room temperature to nearly 2000"
+    ],
+    "source_docs": [
+      "Chen_2025_CeramicsInternational_One-dimensionalZrB2.pdf",
+      "Sciti_2014_Materials&Design_AreshortHi-Nicalon.pdf",
+      "Chen_2025_CeramicsInternational_Pyrochlore-structuredhigh-entropy.pdf",
+      "Squire_2010_EuropeanCeramicSociety_Materialproperty.pdf"
+    ],
+    "excerpts": [
+      "Ultra-high temperature ceramics (UHTCs) are commonly referred to as ceramics with melting points exceeding 3000 ◦C and are desirable for structural applications at temperatures above 1500 ◦C. Owing to its excellent properties, like high melting point and lowest density in UHTCs, ZrB2 has been extensively studied. Based on the difficulties in densification of monolithic ZrB2 due to strong covalent bonds, low diffusion coefficient, and limited fracture toughness, numerous studies focused on using sintering additives and reinforcing phases to fabricate ZrB2-based composite ceramics with comparatively improved properties.",
+      "A major concern in the use of Hi-Nicalon SiC fibers in UHTC matrices is that they are not stable at temperatures higher than 1500 °C even in inert atmosphere, but at this temperature densification of ZrB2 or HfB2 is not complete. Therefore, sintering aids must be employed for lowering the sintering temperature as much as possible, and amongst all the possibilities, those permitting densification at relatively low temperature are ZrSi2 (1550 °C), Si3N4 (1700 °C), MoSi2 (1750 °C). Recent published research has outlined that the change of sintering aid has consequences on mechanical properties both at room and high temperature and on stability in extreme environments.",
+      "Electrical measurements demonstrated that these ceramics are capable of operating at temperatures up to 1500 ◦C and exhibiting exceptional sensitivity within the 400–1500 ◦C range, both of which are attributed to their high resistivity at elevated temperatures and a large material constant B value across the entire operating temperature span. Notably, these ceramics also maintained a resistivity drift rate of ≤0.53 % after 500 h of continuous exposure at 1500 ◦C, a result ascribed to the high-entropy effect suppressing lattice distortion.",
+      "Few materials can survive extended periods at these temperatures and retain their dimensional and structural integrity in an aggressive oxidizing flow environment. Because UHTC components have to operate in environments from room temperature to nearly 2000 ◦C, it is important that most UHTC properties be measured over this entire temperature range. The surface temperature on the stagnation region of such sharp leading edges can potentially exceed 2000 ◦C."
+    ]
+  },
+  {
+    "category": "aggregation",
+    "question": "What range of crystal or grain sizes has been measured for one-dimensional ZrB2 ceramic crystals compared with pyrochlore-structured high-entropy rare-earth zirconate ceramics?",
+    "reference_answer": "Reported crystal sizes for ZrB2-based one-dimensional crystals range from about 1.88 to 5 micrometers, including rod-like ZrB2 grains 1.88-3.76 micrometers long and tube-like ZrB2 crystals about 5 micrometers long, whereas pyrochlore-structured high-entropy zirconate (La0.2Nd0.2Sm0.2Eu0.2A0.2)2Zr2O7 ceramics show much smaller average crystallite sizes of 64.98 to 133.12 nanometers.",
+    "answer_keys": [["1.88", "5 μm"], ["64.98", "133.12"], ["zrb2", "zirconate"]],
+    "evidence_any": [
+      "have a length of approximately 5 μm with a gradient hole dimension along the tube axis",
+      "rod-like ZrB2 powders with a length ranging from about 1.88 to 3.76 μm",
+      "the ceramics average crystalline size are 64.98 nm, 102.32 nm, and 133.12 nm"
+    ],
+    "source_docs": [
+      "Chen_2025_CeramicsInternational_One-dimensionalZrB2.pdf",
+      "Chen_2025_CeramicsInternational_Pyrochlore-structuredhigh-entropy.pdf"
+    ],
+    "excerpts": [
+      "One-dimensional (1D) ZrB2 crystals with a distinctive tube-like morphology were reported in this communication. The synthesis method is facile and involves a unique hybrid B4C/activated carbon reductive system and a two-step heat treatment approach. The crystals, which contain the tube-like structure, have a length of approximately 5 μm with a gradient hole dimension along the tube axis. Borothermal reduction has been utilized to synthesize rod-like ZrB2 grains, which measure approximately 1 μm in length, using ZrO2 and B2O3 as raw materials. Furthermore, the use of a carbon reductant has been shown to enhance the length of the product. Liu et al. produced rod-like ZrB2 powders with a length ranging from about 1.88 to 3.76 μm through boro/carbothermal reduction, employing ZrO2, B4C, and graphite. High-aspect-ratio rod-like ZrB2 crystals have also been synthesized by a facile boro/carbothermal-reduction-assisted synthesis in our previous work.",
+      "Additionally, the average crystalline size of the ceramics was estimated using the Williamson-Hall (W-H) method. The W-H relation relates the diffraction angle, the full width at half maxima of the diffraction peak, the lattice strain, the X-ray wavelength, and the average crystallite size. Based on this equation, a plot of 4sinθ versus βcosθ was constructed. The y-intercept of the linear fit corresponds to the average crystallite size. According to this analysis, the ceramics average crystalline size are 64.98 nm, 102.32 nm, and 133.12 nm."
+    ]
+  },
+  {
+    "category": "aggregation",
+    "question": "What range of fracture toughness (KIc) values has been reported in the literature for ZrB2- and HfB2-based UHTC composites, including those reinforced with SiC whiskers, elongated grains, or Hi-Nicalon SiC fibers?",
+    "reference_answer": "Fracture toughness values reported for ZrB2- and HfB2-based UHTC composites range from about 3.5 to 6.81 MPa·m1/2: a ZrB2-MoSi2 composite with elongated grains reached approximately 4.9 MPa·m1/2, ZrB2-SiC composites with AlN/Si3N4 sintering aids reached 5.46 to 6.81 MPa·m1/2, and Hi-Nicalon SiC fiber-reinforced ZrB2 and HfB2 composites measured directly by chevron notched beam testing ranged from 3.5 to 6.2 MPa·m1/2 depending on the sintering aid and temperature.",
+    "answer_keys": [["4.9"], ["6.2", "6.81"], ["zrb2", "hfb2"]],
+    "evidence_any": [
+      "The existence of elongated grains successfully increased the fracture toughness to",
+      "have obtained fracture toughness values above 6 MPa m1/2"
+    ],
+    "source_docs": [
+      "Chen_2025_CeramicsInternational_One-dimensionalZrB2.pdf",
+      "Sciti_2014_Materials&Design_AreshortHi-Nicalon.pdf"
+    ],
+    "excerpts": [
+      "Considering the complexity and the potential feeble caused by the formation of different structures and grain boundaries, some researchers used anisotropic ZrB2 grains to fabricate self-toughened ZrB2 ceramics. Introducing anisotropic particles into ceramics, similar to the multi-phase super-composite or fiber-reinforced structures, has the potential to activate toughening mechanisms such as crack bridging and reflection for effective dissipation of applied stresses. Wu et al. fabricated a ZrB2-MoSi2 composite with elongated ZrB2 grains using reactive hot pressing. The existence of elongated grains successfully increased the fracture toughness to ~4.9 MPa m1/2. Different anisotropic ZrB2 morphologies have been reported using various starting materials, such as elemental Zr and its oxides, elemental B and its compounds.",
+      "A well-known method for increasing the fracture toughness of brittle ceramics is the addition of a higher aspect ratio reinforcing phase. Recent studies report on the development of self-reinforced microstructures, controlled growth of SiC platelets, and the use of discontinuous SiC whiskers. The authors of the present work have extensively studied the effect of the addition of Hi-Nicalon SiC short fiber to borides matrices and have obtained fracture toughness values above 6 MPa m1/2. In most cases an increase of toughness of 40–50% is obtained upon addition of short SiC fibers. However, for each matrix material, ZrB2 or HfB2, the fracture toughness values of the respective composites are quite scattered, ranging from about 3.5 to 6.2 MPa m1/2 across the different sintering aids and temperatures studied."
+    ]
+  },
+  {
+    "category": "aggregation",
+    "question": "What relative densities have been reported for Hi-Nicalon SiC fiber-reinforced ZrB2/HfB2 composites and for pyrochlore-structured high-entropy zirconate thermistor ceramics?",
+    "reference_answer": "Reported densification levels for UHTC-related ceramics include relative densities above 98% for ZrB2- and HfB2-based composites reinforced with Hi-Nicalon SiC fibers selected for fracture toughness testing, and above 97% for pyrochlore-structured high-entropy zirconate (La0.2Nd0.2Sm0.2Eu0.2A0.2)2Zr2O7 ceramics used as NTC thermistors.",
+    "answer_keys": [["98"], ["97"], ["density", "densif"]],
+    "evidence_any": [
+      "with relative density higher than 98% to avoid any effect of the residual porosity",
+      "have achieved full densification, exhibiting a uniform grain distribution characterized by distinct grain boundaries"
+    ],
+    "source_docs": [
+      "Sciti_2014_Materials&Design_AreshortHi-Nicalon.pdf",
+      "Chen_2025_CeramicsInternational_Pyrochlore-structuredhigh-entropy.pdf"
+    ],
+    "excerpts": [
+      "The fracture toughness was measured only on selected materials according to Ref. [24] with relative density higher than 98% to avoid any effect of the residual porosity. For the sake of comparison toughness values are reported also for unreinforced matrices, e.g. ZrB2 + 5 vol% Si3N4, ZrB2 + 10 vol% ZrSi2, ZrB2 + 15 vol% MoSi2, HfB2 + 8 vol% Si3N4. In most cases an increase of toughness of 40–50% is obtained upon addition of short SiC fibers.",
+      "During the manufacturing of thermistors, the thermosensitive ceramics must exhibit a dense and uniform microstructure, as diamond blades are required to cut them into chips. The SEM analysis confirms that all samples have achieved full densification, exhibiting a uniform grain distribution characterized by distinct grain boundaries and a pore-free microstructure with a relative density exceeding 97 %. Furthermore, the EDS analysis indicates that the stoichiometric ratios of rare-earth and zirconium elements in these ceramics closely match those of the target composition, with elemental mapping demonstrating a homogeneous distribution throughout the samples and no evidence of elemental segregation or localized compositional enrichment."
+    ]
+  },
+  {
+    "category": "aggregation",
+    "question": "What hardness values (in GPa) have been reported for Zr-Ta multiboride ceramic composites compared with the core and rim regions of Hi-Nicalon SiC fibers embedded in ZrB2 matrices?",
+    "reference_answer": "Hardness values reported for UHTC-related ceramics range widely, from about 22.6 to 28.6 GPa for a reaction-driven Zr-Ta multiboride composite (depending on whether a 196 N or 98 N indentation load was used), and from about 32 to 38.6 GPa for the SiC fiber core and rim regions measured by nanoindentation in ZrB2-based composites.",
+    "answer_keys": [["28.6", "22.6"], ["32", "38"], ["gpa"]],
+    "evidence_any": [
+      "extremely high hardness (28.6 GPa and 22.6 GPa using 98 N and 196 N loads)",
+      "the hardness and stiffness of the core are around 32GPa and 330GPa, respectively"
+    ],
+    "source_docs": [
+      "Chen_2025_CeramicsInternational_One-dimensionalZrB2.pdf",
+      "Sciti_2014_Materials&Design_AreshortHi-Nicalon.pdf"
+    ],
+    "excerpts": [
+      "Demirskyi et al. reported a Zr-Ta multiboride ceramic composite with highly reproducible repetitive superstructure via reaction-driven consolidation of ZrB2, Ta, and amorphous B powders, which led to extremely high hardness (28.6 GPa and 22.6 GPa using 98 N and 196 N loads). Considering the complexity and the potential feeble caused by the formation of different structures and grain boundaries, some researchers used anisotropic ZrB2 grains to fabricate self-toughened ZrB2 ceramics.",
+      "The results of the nanoindentation tests are summarized in Table 1. As for ZrB2, the hardness and stiffness of the core are around 32GPa and 330GPa, respectively, and increase up to 38 and 410 GPa in the rim. For HfB2, the core hardness and stiffness are around 25 and 290GPa, whilst in the rim they are 37 and 450 GPa, respectively. The experimental data reveal that the fiber core is always softer and less stiff than the fiber rim."
+    ]
+  },
+  {
+    "category": "aggregation",
+    "question": "What melting point values have been reported for ultra-high-temperature ceramics generally versus hafnium and zirconium diborides, carbides, and their oxides specifically?",
+    "reference_answer": "Ultra-high-temperature ceramics are generally defined as having melting points exceeding 3000°C, while hafnium and zirconium diborides and carbides, as well as their oxides hafnia and zirconia, are reported to have melting points in excess of 2500°C (4530°F).",
+    "answer_keys": [["3000"], ["2500"], ["melting point"]],
+    "evidence_any": [
+      "referred to as ceramics with melting points exceeding 3000 ◦C and are desirable",
+      "have extremely high melting points, all in excess of 2500"
+    ],
+    "source_docs": [
+      "Chen_2025_CeramicsInternational_One-dimensionalZrB2.pdf",
+      "Squire_2010_EuropeanCeramicSociety_Materialproperty.pdf"
+    ],
+    "excerpts": [
+      "Ultra-high temperature ceramics (UHTCs) are commonly referred to as ceramics with melting points exceeding 3000 ◦C and are desirable for structural applications at temperatures above 1500 ◦C. Owing to its excellent properties, like high melting point and lowest density in UHTCs, ZrB2 has been extensively studied. Based on the difficulties in densification of monolithic ZrB2 due to strong covalent bonds, low diffusion coefficient, and limited fracture toughness, numerous studies focused on using sintering additives and reinforcing phases.",
+      "Certain characteristics of ultra-high-temperature ceramic (UHTC) materials containing transition metal borides and carbides give them a potential advantage over more traditional materials for use in hypersonic applications. In particular, hafnium and zirconium diborides and carbides, as well as their oxides, hafnia and zirconia, have extremely high melting points, all in excess of 2500 ◦C (4530 ◦F). While HfC and ZrC have higher melting points than HfB2 and ZrB2, the diborides have substantially higher thermal conductivities than the carbides."
+    ]
+  },
+  {
+    "category": "aggregation",
+    "question": "What volume-fraction ranges have been reported for sintering additives and silica-forming secondary phases in boride-based UHTC composites?",
+    "reference_answer": "Reported additive and secondary-phase volume fractions in boride-based UHTC composites range from about 5 to 30 vol%: sintering aids such as ZrSi2, Si3N4, and MoSi2 were used at 10, 5-8, and 15 vol% respectively in Hi-Nicalon SiC fiber-reinforced ZrB2/HfB2 composites, while silica-forming secondary phases such as SiC typically make up 10-30 vol% of monolithic diboride UHTC compositions.",
+    "answer_keys": [["10"], ["30", "15"], ["vol%", "vol."]],
+    "evidence_any": [
+      "the minimum necessary to ensure full densification of the boride matrix, i.e. 10 vol% ZrSi2",
+      "The most common compositions typically contain 10–30 vol.% SiC"
+    ],
+    "source_docs": [
+      "Sciti_2014_Materials&Design_AreshortHi-Nicalon.pdf",
+      "Squire_2010_EuropeanCeramicSociety_Materialproperty.pdf"
+    ],
+    "excerpts": [
+      "Starting materials were commercial products: ZrB2 grade B, HfB2, Si3N4 Baysind, ZrSi2-F, MoSi2 <2 μm; SiC chopped fibers with composition (wt%) Si:C:O = 63.7:35.8:0.5, diameter: 15 μm, length: 1 mm. According to previous studies, for each system the amount of sintering aid was the minimum necessary to ensure full densification of the boride matrix, i.e. 10 vol% ZrSi2, 5–8 vol% Si3N4 and 15 vol% MoSi2. In order to study the fiber evolution as a function of the temperature, densification experiments were conducted in several temperature ranges.",
+      "In practice, the high-temperature oxidation resistance of pure diboride materials is not sufficient for aerothermal flight environments. The best oxidation performance is found for monolithic materials hot-pressed from mixtures of ceramic powders containing a silica former as a minor component. The most common compositions typically contain 10–30 vol.% SiC, although other silica formers like MoSi2 and TaSi2 have also been investigated."
+    ]
+  }
+]
