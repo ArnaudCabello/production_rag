@@ -1,0 +1,56 @@
+[
+  {
+    "category": "semantic",
+    "question": "What is the resistance to indentation loading measured via Vickers method for Wang et al.'s GdB6 ceramics prepared by reactive spark plasma sintering at 1800°C?",
+    "reference_answer": "Wang and colleagues fabricated GdB6 ceramics using in-situ reactive spark plasma sintering and measured resistance to indentation loading of 18.9 GPa using the Vickers hardness method. The elastic modulus was 209 GPa and fracture toughness was 1.6 MPa·m^1/2.",
+    "answer_keys": [["18.9", "gpa"], ["hardness", "resistance", "vickers"]],
+    "evidence_any": ["Vickers hardness, elastic modulus and fracture toughness of the as-obtained GdB6 bulk ceramics were 18.9"],
+    "source_docs": ["Wang_2024_EuropeanCeramicSociety_Microstructure,mechanical.pdf"],
+    "excerpts": ["The Vickers hardness, elastic modulus and fracture toughness of the as-obtained GdB6 bulk ceramics were 18.9 GPa, 209 GPa and 1.6 MPa⋅m1/2, respectively. The thermal conductivity of GdB6 at room temperature was 28.68 W⋅m− 1⋅K− 1, 70 % of which was mainly attributed to phonon vibration, while the remaining 30 % to the electrical thermal conduc- tivity. In addition, the as-obtained GdB6 ceramics showed no phase transformation after heat treatment at a relatively high temperature of 2100 ◦C for 20 min in Ar atmosphere. The highly covalent octahedral boron framework played a critical role in maintaining the phase stability of the GdB6 crystal lattice. This suggested that GdB6 ceramics could be used as potential ultra-high temperature ceramics for aerospace applications and high- power vacuum electronic devices operated at high temperatures."]
+  },
+  {
+    "category": "semantic",
+    "question": "According to Wang et al., what proportion of the heat transport through GdB6 at room temperature is due to atomic lattice vibrations as opposed to electronic charge carrier movement?",
+    "reference_answer": "In Wang et al.'s study, approximately 70% of the thermal conductivity of GdB6 at room temperature was attributed to phonon vibration (atomic lattice vibrations), while the remaining 30% was due to electrical thermal conductivity from electronic charge carriers.",
+    "answer_keys": [["70%", "seventy"], ["phonon", "vibration", "lattice"]],
+    "evidence_any": ["thermal conductivity of GdB6 at room temperature was 28.68 W⋅m− 1⋅K− 1, 70 % of which was"],
+    "source_docs": ["Wang_2024_EuropeanCeramicSociety_Microstructure,mechanical.pdf"],
+    "excerpts": ["The thermal conductivity of GdB6 at room temperature was 28.68 W⋅m− 1⋅K− 1, 70 % of which was mainly attributed to phonon vibration, while the remaining 30 % to the electrical thermal conduc- tivity. In the electronic structure of GdB6, the Gd atom of the trivalent nature provides two electrons to the undercharged boron sublattice, leaving a surplus of electrons, and allowing GdB6 to behave as a metal-like conductor. Therefore, the contribution of the charge carriers to the thermal conductivity of the materials at room temperature was not negligible (∼30 %). The thermal conductivity of the GdB6 sample sintered at 1800 ◦C (28.68 W⋅m− 1⋅K− 1) was higher than that of the sample prepared at 1700 ◦C (27.54 W⋅m− 1⋅K− 1)."]
+  },
+  {
+    "category": "semantic",
+    "question": "Did Wang and colleagues observe any structural rearrangement or phase transformation in GdB6 following exposure to extreme temperatures of 2100°C in an inert argon atmosphere for 20 minutes?",
+    "reference_answer": "Wang et al. observed no phase transformation in GdB6 ceramics after heat treatment at the extremely high temperature of 2100°C for 20 minutes in an argon atmosphere. The octahedral boron framework maintained structural stability despite the severe thermal conditions.",
+    "answer_keys": [["no", "none"], ["phase transformation", "structural change"]],
+    "evidence_any": ["the as-obtained GdB6 ceramics showed no phase transformation after heat treatment at a relatively high temperature of 2100"],
+    "source_docs": ["Wang_2024_EuropeanCeramicSociety_Microstructure,mechanical.pdf"],
+    "excerpts": ["The phase composition of the GdB6 sample after heat treatment at 2100 ◦C was further determined by XRD analysis. It is interesting to note that no obvious phase transformation was observed in the heat-treated sample, when compared to the original as-sintered GdB6 ceramics. However, the typical diffraction peak of (100) plane of the sample heat treated at 2100 ◦C was shifted to a higher 2 theta angle compared to the as-obtained GdB6 ceramic. As shown in Table 3, the lattice parameter of the sample after heat treatment at 2100 ◦C decreased to 4.0837 Å when compared to the as-sintered GdB6 (4.1071 Å), according to the Rietveld refinement of the XRD patterns. The decrement in the lattice parameters after heat treatment can be attributed to the volatilization of Gd atoms."]
+  },
+  {
+    "category": "semantic",
+    "question": "In Zoli et al.'s carbon fiber-reinforced ZrB2 composite system, how consistently were the reinforcing filaments distributed throughout the ceramic matrix without clustering?",
+    "reference_answer": "Zoli and colleagues observed that the dispersion of carbon fibers into the ZrB2 matrix was homogeneous for all samples, with no agglomeration or clustering of the fibers detected. This uniform distribution was maintained despite the high aspect ratio of the fibers.",
+    "answer_keys": [["homogeneous", "uniform"], ["no agglomeration", "evenly distributed"]],
+    "evidence_any": ["dispersion of the fibres into the matrix is homogeneous for all of the samples, since"],
+    "source_docs": ["Zoli_2017_Materials&Design_Rapidspark.pdf"],
+    "excerpts": ["As shown in Fig. 1a–o (left column) the dispersion of the fibres into the matrix is homogeneous for all of the samples, since no agglomeration was found. The maximum length of the fibres measured on the surface perpendicular to the pressing direction is around 300 μm, an order of magnitude lower than the starting fibres. This reduction on the size length is due to the milling process as already reported. The groove pointed by the black arrows in Fig. 1 are fibres removed during polishing. Furthermore the same images highlight that most of the fibres tend to align their long axis perpendicularly to the applied pressure (here defined as Z-axis) during sintering, even if they are distributed randomly along the XY axes. The preferential distribution is due both to the shaping process and the applied pressure during sintering."]
+  },
+  {
+    "category": "semantic",
+    "question": "What bulk density fraction was successfully achieved in Zoli et al.'s ZrB2-carbon fiber composites when the holding time during spark plasma sintering was extended to 90 seconds at constant pressure?",
+    "reference_answer": "When Zoli and coauthors extended the holding time to 90 seconds (sample B), they achieved a densification degree higher than 90% relative density in their ZrB2-carbon fiber composite. This represented a significant improvement from the initial density achieved at shorter holding times.",
+    "answer_keys": [["90%", "higher than 90"], ["holding time", "dwell time"]],
+    "evidence_any": ["When the dwell time was extended to 90 s (B), a densification degree higher than 90% was"],
+    "source_docs": ["Zoli_2017_Materials&Design_Rapidspark.pdf"],
+    "excerpts": ["The bulk density and the residual porosity of the composites are reported in Table 1. The lowest relative density of 84% was obtained for the sample sintered at 1800 ◦C for a dwell time of 40 s (A). When the dwell time was extended to 90 s (B), a densification degree higher than 90% was achieved. An increase in the sintering temperature from 1800 ◦C to 1850 ◦C led to a decrease of the porosity from 8.3% (C) to 4.5% (D); a further increase of the sintering temperature to 1900 ◦C did not have any major effects on densification (E). When a heating rate of ∼3000 ◦C/min was used, like in flash SPS, extreme damage of the carbon fibres was observed (F), as illustrated later."]
+  },
+  {
+    "category": "semantic",
+    "question": "What occurs to the structural integrity and fracture response of Zoli and coauthors' ZrB2-carbon fiber composites when processing temperature reaches the eutectic threshold of the multi-phase system?",
+    "reference_answer": "When the processing temperature in Zoli et al.'s ZrB2-Cf composites exceeded the eutectic threshold (approximately 2270°C for the three-component system), carbon fiber structural damage occurred, along with interpenetration of ZrB2 grains inside the fibers, leading to brittle fracture without the toughening mechanism of fiber pull-out.",
+    "answer_keys": [["damage", "degradation", "brittle"], ["eutectic", "2270"]],
+    "evidence_any": ["the interpenetration of ZrB2 grains inside the fibres in sample F and notable fibre damage lead to brittle"],
+    "source_docs": ["Zoli_2017_Materials&Design_Rapidspark.pdf"],
+    "excerpts": ["The microstructure of the polished and fractured surface of the sample sintered at a ultra-high heating rate, sample F, is shown in Fig. 4a and b respectively. The morphology of the fibres is no longer rounded, but rather irregular and open. Moreover, some of the carbon fibres embed ZrB2 grains inside their layered structure and some of the grains display the typical lamellar structure of ZrB2-SiC produced by solidification from the eutectic phase. Such behaviour can only be explained by the sintering temperature exceeding 2270 °C. Unfortunately, precise control of the final temperature and an estimate of the heating ramp were not possible for this sample due to the high power/heating rate applied. Also of note, the interpenetration of ZrB2 grains inside the fibres in sample F and notable fibre damage lead to brittle fracture without fibre pull-out, with graphite spikes rising only a few μm over the ZrB2 grains, as shown in Fig. 4b."]
+  }
+]
