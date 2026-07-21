@@ -40,18 +40,18 @@
     "question": "What is the hardness value in GPa of the Ta2CN carbonitride composition in the Manaud 2024 nano-indentation study?",
     "reference_answer": "The hardness of Ta2CN measured by nano-indentation is 22.9 ± 1.2 GPa.",
     "answer_keys": [["22.9"], ["1.2", "gpa"], ["ta2cn"]],
-    "evidence_any": ["Ta2CN 609 ± 29 22.9 ± 1.2", "the carbonitride samples show an approximately linear trend with hardness values"],
+    "evidence_any": ["the carbonitride materials show an approximately linear trend with hardness increasing", "Table 3 summarizes the Young modulus and hardness results as averages"],
     "source_docs": ["Manaud_2024_OpenCeramics_Sparkplasma.pdf"],
-    "excerpts": ["Table 3 Young's modulus and hardness of the different samples averaged among all the tests results.\n\nSample Young's Modulus (GPa) Hardness (GPa)\n\nTaC 704 ± 35 16.4 ± 0.8 Ta2C1.5N0.5 606 ± 37 20.5 ± 1.5 Ta2CN 609 ± 29 22.9 ± 1.2 Ta2C0.5N1.5 648 ± 32 26.5 ± 2.2 TaN 634 ± 23 27.9 ± 1.3"]
+    "excerpts": ["Table 3 Young's modulus and hardness of the different samples averaged among all the tests results.\n\nSample Young's Modulus (GPa) Hardness (GPa)\n\nTaC 704 ± 35 16.4 ± 0.8 Ta2C1.5N0.5 606 ± 37 20.5 ± 1.5 Ta2CN 609 ± 29 22.9 ± 1.2 Ta2C0.5N1.5 648 ± 32 26.5 ± 2.2 TaN 634 ± 23 27.9 ± 1.3\n\nIn between the carbonitride materials show an approximately linear trend with hardness increasing with increasing nitride content. The values of hardness measured on these samples are in line with reported hardness values for UHTC materials."]
   },
   {
     "category": "table",
     "question": "In the Manaud 2024 study, what is the unit cell parameter a in Angstroms for cubic TaC determined by Rietveld refinement from PXRD data?",
     "reference_answer": "The unit cell parameter a for TaC determined by Rietveld refinement is 4.4430(1) Å.",
-    "answer_keys": [["4.4430"], ["angstrom", "tac"], ["rietveld"]],
-    "evidence_any": ["TaC Cubic 4.4430 1 0.92 0.98", "TaC has a unit cell parameter a equals 4.4430 1 Angstrom"],
+    "answer_keys": [["4.4430"], ["angstrom"], ["tac"]],
+    "evidence_any": ["TaC has a unit cell parameter a equal 4.4430 1 Angstrom", "The PXRD diagrams of the sintered TaC confirm the cubic structure"],
     "source_docs": ["Manaud_2024_OpenCeramics_Sparkplasma.pdf"],
-    "excerpts": ["Table 2 Crystallography parameters determined by Rietveld refinement on PXRD diagrams and microstructural parameters measured on ion polished cross sections of each sample from TaC to TaN after SPS sintering.\n\nSample Phase Structure Unit cell parameters\n\n(Å)\n\n6 Volume fraction (− )\n\nd50 (μm)\n\nTaC TaC Cubic 4.4430(1) 0.92 0.98 1.79 4.1 5.2"]
+    "excerpts": ["Table 2 Crystallography parameters determined by Rietveld refinement on PXRD diagrams and microstructural parameters measured on ion-polished cross-sections of each sample from TaC to TaN after SPS sintering.\n\nSample Phase Structure Unit cell parameters (Å) Volume fraction\n\nTaC TaC Cubic 4.4430(1) 0.92 0.98 1.79 4.1 5.2\n\nThe PXRD diagrams of the sintered TaC Ta2C1.5N0.5 and Ta2CN pellets show only one phase. The TaC sample is made of the cubic Fm-3m TaC."]
   },
   {
     "category": "table",

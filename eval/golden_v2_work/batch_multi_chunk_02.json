@@ -1,0 +1,182 @@
+[
+  {
+    "category": "multi_chunk",
+    "question": "In Fang et al. 2021, the hydrothermal carbon (HTC) coating applied to carbon fiber in the CF/ZrB2/SiBCN composite had a thickness of 200 nm and was prepared using an environmentally friendly hydrothermal method. How much did this coating increase the surface energy of the carbon fiber compared to the uncoated fiber?",
+    "reference_answer": "The HTC coating increased the surface energy of carbon fiber from 9.3 mJ/m2 to 43.1 mJ/m2, representing an approximately 4.6-fold increase. This substantial enhancement was due to abundant oxygen-containing functional groups in the HTC coating that greatly improved wettability between the fiber and ceramic slurry.",
+    "answer_keys": [
+      ["surface energy", "43.1", "9.3"],
+      ["4.6", "times", "increased"]
+    ],
+    "evidence_any": [
+      "hydrothermal carbon coating was constructed on the surface of CF with the thickness of 200 nm",
+      "surface energy of HTC/CF was 43.1 mJ/m2, increasing by around 4.6 times than that of CF"
+    ],
+    "source_docs": ["Fang_2021_EuropeanCeramicSociety_Influenceofhydrothermal.pdf"],
+    "excerpts": [
+      "In this study, hydrothermal carbon coating was constructed on the surface of CF with the thickness of 200 nm. The surface energy of the modified fiber was investigated by the wetting angle measurement method. ZrB2 slurry was injected into the CF fabric with and without HTC coating, respectively. The improvement of the injection efficiency after the introduction of HTC coating was demonstrated by the morphology characterization of CF/ZrB2 green bodies. Polyborosilazane was used as the precursor to compact the green body continually by a PIP procedure. The influence of HTC coating on the mechanical and oxidation properties of CF/ZrB2/SiBCN composites was analyzed in detail.",
+      "The CF demonstrated a polar surface energy of 7.2 mJ/m2 with the dispersive surface energy of 2.1 mJ/m2, which increased to 29.3 and 13.8 mJ/m2, respectively. The total surface energy of HTC/CF was 43.1 mJ/m2, increasing by around 4.6 times than that of CF (9.3 mJ/m2). Generally, solids with higher surface free energy were more likely to be wetted by liquid on their surface. The results clearly showed that the introduction of the HTC coating greatly enhanced the surface energy of CF, which would effectively promote the wetting of CF fabric by ceramic slurry."
+    ]
+  },
+  {
+    "category": "multi_chunk",
+    "question": "According to Fang et al. 2021, how did the hydrothermal carbon coating affect the bulk density of the green body after ZrB2 slurry injection into the carbon fabric in the CF/ZrB2/SiBCN system?",
+    "reference_answer": "The HTC coating significantly improved green body compaction. The uncoated CF fabric produced a green body with bulk density of 34.2 vol%, while the HTC-coated CF fabric achieved a bulk density of 42.0 vol%, a 7.8 vol% improvement, due to enhanced wettability promoting more uniform ceramic powder distribution.",
+    "answer_keys": [
+      ["42.0", "34.2", "density"],
+      ["green body", "injection", "slurry"]
+    ],
+    "evidence_any": [
+      "green body generated from original CF braid had a bulk density of 34.2 vol%",
+      "higher density of body was obtained from the HTC/CF fabric, whose bulk density reached up to 42.0 vol%"
+    ],
+    "source_docs": ["Fang_2021_EuropeanCeramicSociety_Influenceofhydrothermal.pdf"],
+    "excerpts": [
+      "In order to further explore the relationship between the wettability of the fiber and the efficiency of the injection process, the fabric of CF and HTC/CF were injected by ZrB2 slurry separately. The volume density of the original CF fabric was 10.1 vol.%, which increased to 11.5 vol.% after coating by HTC. After injecting the slurry, the macroscopic morphology and microstructure of the two green body were shown in Fig.3. The green body generated from original CF braid had a bulk density of 34.2 vol.% (Fig.3a). The distribution of fibers and ceramics in the fiber framework were shown in Fig.3b∼d. Excessive and large pores could be observed and numerous CFs were not wrapped closely by the ZrB2 powers, which was attributed to the lower wettability of the original CFs.",
+      "While a higher density of body was obtained from the HTC/CF fabric, whose bulk density reached up to 42.0 vol.% (Fig.3e). The ceramic powders were uniformly distributed around the HTC/CFs, which could be observed from Fig.3f∼h. The improvement of the uniformity and density of the green body was of great significance for the subsequent preparation process of CF/UHTCs. In general terms, a higher density composite product could be easily obtained from a higher density green body. Additionally, the uniformly distributed structure of green body would prevent the formation of closed pores in the subsequent PIP process."
+    ]
+  },
+  {
+    "category": "multi_chunk",
+    "question": "In Fang et al. 2021, what were the mechanical properties (flexural strength and fracture toughness) achieved by the HCZS composite, and how did these compare to the performance after different oxidation exposure times?",
+    "reference_answer": "The HCZS composite (CF/ZrB2/SiBCN with HTC coating) achieved flexural strength of 206±16 MPa and fracture toughness of 6.14±0.91 MPa m^1/2. After oxidation at 1600°C for 5 minutes, flexural strength decreased to 168±19 MPa, and after 30 minutes, it further declined to 74±31 MPa, demonstrating that the HTC coating reduced fiber degradation during oxidation.",
+    "answer_keys": [
+      ["HCZS", "206", "flexural"],
+      ["oxidation", "1600", "carbon"]
+    ],
+    "evidence_any": [
+      "Both excellent flexural strength of 206 ± 16 MPa and fracture toughness of 6.14 ± 0.91 MPa m1/2 were obtained for the HCZS",
+      "flexural strength of the CZS and HCZS finally dropped to 26 ± 17 MPa and 74 ± 31 MPa after oxidation for 30 min"
+    ],
+    "source_docs": ["Fang_2021_EuropeanCeramicSociety_Influenceofhydrothermal.pdf"],
+    "excerpts": [
+      "Table.1 summarized the densities and mechanical properties of the samples prepared in the present study. Both excellent flexural strength of 206 ± 16 MPa and fracture toughness of 6.14 ± 0.91 MPa m1/2 were obtained for the HCZS, which were much higher than that of CZS. The enhanced mechanical properties of HCZS could be attributed to the higher density and uniformity of the composite. The load-displacement curve of the CZS and HCZS was shown in Fig.6b. The addition of HTC coating could convert the fracture mode and increase greatly the fracture strain of the product.",
+      "Table.S1 displayed the mechanical properties of the CZS and HCZS after being oxidized at 1600 ℃ for 5 min and 30 min. After oxidation for 5 min, the flexural strength of the CZS and HCZS decreased to 98 ± 24 MPa and 168 ± 19 MPa, respectively. In addition, the flexural strength of the CZS and HCZS finally dropped to 26 ± 17 MPa and 74 ± 31 MPa after oxidation for 30 min. The HCZS presented a higher strength retention rate after oxidation, which could be attributed to the damage inhibition of carbon fibers in HCZS."
+    ]
+  },
+  {
+    "category": "multi_chunk",
+    "question": "In Fang et al. 2021, during the fabrication of CF/ZrB2/SiBCN composites, how did the monofilament tensile strength of carbon fiber change after HTC coating, and what was the significance of this property for the toughening mechanism?",
+    "reference_answer": "The monofilament tensile strength of carbon fiber decreased from 5.2±0.4 GPa to 4.1±0.3 GPa after HTC coating. However, this strength level was still considered sufficient for UHTC applications, as high fiber strength is essential for achieving fiber extraction and bridging toughening mechanisms in the composite during deformation.",
+    "answer_keys": [
+      ["tensile", "5.2", "4.1"],
+      ["fiber strength", "toughening", "GPa"]
+    ],
+    "evidence_any": [
+      "strength of the original fiber was 5.2 ± 0.4 GPa, which slightly dropped to 4.1 ± 0.3 GPa after coating",
+      "The high strength of the CF was an important prerequisite to achieve the fiber bridging and extraction during the deformation of CF/UHTC"
+    ],
+    "source_docs": ["Fang_2021_EuropeanCeramicSociety_Influenceofhydrothermal.pdf"],
+    "excerpts": [
+      "The high strength of the CF was an important prerequisite to achieve the fiber bridging and extraction during the deformation of CF/UHTC. A substantial sacrifice of fiber strength would not be tolerated for any fiber surface treatment method. Therefore, it was essential to characterize the fiber strength before and after coating. The monofilament tensile results were shown in Fig.1g. The strength of the original fiber was 5.2 ± 0.4 GPa, which slightly dropped to 4.1 ± 0.3 GPa after coating. However, this strength level was still surplus in the application of UHTC.",
+      "With the rapid development of rocket engines and reusable supersonic spacecraft, the ultra-high-temperature ceramic composites (UHTCs) are gaining increasing attention for their excellent mechanical and oxidation resistance. However, the engineering application of UHTCs is serious limited by its low toughness. Ceramics with single component are extremely sensitive to cracks, which are tend to fail after being impacted by the abrupt heat or force. Carbon fibers (CFs) with excellent mechanical properties are considered to be excellent toughening materials for UHTCs, which will introduce various toughening mechanisms such as fiber extraction, fiber bridging, and crack deflection."
+    ]
+  },
+  {
+    "category": "multi_chunk",
+    "question": "In Fang et al. 2021, the HTC-coated carbon fiber composite (HCZS) showed improved oxidation resistance compared to the uncoated composite (CZS). What mechanism did the authors propose for how the HTC coating protected the carbon fibers from oxidation damage at 1600°C?",
+    "reference_answer": "The HTC coating acted as a sacrificial layer and a transition interface between the carbon fiber and the ceramic matrix. At 1600°C, it isolated direct contact between fiber and matrix, with the coating reacting with the matrix while the fiber-coating interface remained intact, allowing fibers to be pulled out and protecting them from oxidation-induced damage.",
+    "answer_keys": [
+      ["sacrifice", "sacrificial", "layer"],
+      ["oxidation", "protection", "HTC"]
+    ],
+    "evidence_any": [
+      "HTC coating separated the direct contact between the fiber and the matrix, which could inhibit the dramatic fiber damage during the preparation process",
+      "the HTC coating could act as a sacrifice layer to prevent the fibers from damage"
+    ],
+    "source_docs": ["Fang_2021_EuropeanCeramicSociety_Influenceofhydrothermal.pdf"],
+    "excerpts": [
+      "Notably, CFs were severely deformed after multiple PIP cycles, leading an extreme decline of the fiber mechanical properties. Nevertheless, the HCZS exhibited a uniform and compact surface (Fig.7d). Apparently, HTC coating separated the direct contact between the fiber and the matrix, which could inhibit the dramatic fiber damage during the preparation process. More importantly, the HTC coating also acted as a transition layer between the two materials. The coating still tended to react with the matrix to form a strong interface, while the interface between the coating and the fiber was not affected.",
+      "Moreover, the CZS fiber would completely fail and could no longer afford the toughening ability when the oxidation time increased to 30 min (Fig.9a). The microstructure of HCZS displayed in Fig.9b suggested that the HTC coating made itself a sacrificial layer to protect the fibers from damage. Table.S1 displayed the mechanical properties of the CZS and HCZS after being oxidized at 1600 ℃ for 5 min and 30 min. After oxidation for 5 min, the flexural strength of the CZS and HCZS decreased to 98 ± 24 MPa and 168 ± 19 MPa, respectively."
+    ]
+  },
+  {
+    "category": "multi_chunk",
+    "question": "In Zapata-Solvas et al. 2014, ZS20La (ZrB2 with 20 vol% SiC and 2 wt% La2O3) exhibited a highly protective oxidation kinetic exponent of 8 at 1600°C for oxide layer thickness. What new oxidation products were identified as responsible for this unusually high protective behavior?",
+    "reference_answer": "At 1600°C, new ZrO_xC_y and SiO_xC_y particles were detected within the borosilicate (BS) melt and on the oxide layer surface. These oxycarbon phases formed an active-protective barrier that continuously oxidized, with the presence of La2O3 increasing BS melt viscosity and reducing oxygen and CO2 diffusion coefficients, enabling the formation of these protective particles.",
+    "answer_keys": [
+      ["ZrO", "ZrO_xC_y", "SiO"],
+      ["protective", "1600", "particles"]
+    ],
+    "evidence_any": [
+      "ZrO_xC_y particles were detected by EDS within the BS melt and on top of the oxide layer",
+      "the ZrO_xC_y and SiO_xC_y particles formed act as an active-protective barrier"
+    ],
+    "source_docs": ["Zapata-Solvas_2014_EuropeanCeramicSociety_EffectofLA2O3.pdf"],
+    "excerpts": [
+      "Furthermore, a completely new phenomena was observed on samples oxidized at 1600 ◦C. ZrO_xC_y particles were detected by EDS within the BS melt and on top of the oxide layer, as shown in Fig.8a and b. This top ZrO_xC_y gets oxidized with time and formed ZrO2, while intermediate ZrO_xC_y still remains deeper in the oxidized layer after long exposures times. Similar behavior was found for formation of SiO_xC_y particles. Therefore, the ZrO_xC_y and SiO_xC_y particles formed act as an active-protective barrier that becomes further oxidized after long exposures times, which could account for the high oxidation protective behavior observed in oxidation kinetics for ZS20La.",
+      "The ZrO2 particles could react with C(s) after SiC oxidation produced according to Eq. (4). ZrO2(s) + xC(s) → ZrO2C_x(s). Detection of C by EDS in the SEM is difficult and phase identification is uncertain. Different compositions were quantified by EDS, such as ZrO2C3, Zr2O3C4, ZrO5C4 and ZrO4C6. The only trend observed is that after long exposure times the very top surface comprises ZrO2 particles, whereas C concentration in ZrO2C_x does not follow any trend and C atomic concentration ranges from 40 to 60 atomic %."
+    ]
+  },
+  {
+    "category": "multi_chunk",
+    "question": "In Zapata-Solvas et al. 2014, the HfB2-based UHTC HS20 showed unstable oxidation behavior with kinetic exponents of 0.5 at 1500°C and 1600°C, in contrast to the protective behavior of ZS20. What microstructural feature was identified as the primary cause of this difference in oxidation kinetics?",
+    "reference_answer": "The HfB2-based HS20 composite contained large SiC agglomerates up to 20 μm in diameter due to the large density difference between SiC and HfB2, whereas the ZrB2-based ZS20 showed homogeneous SiC dispersion. These agglomerates created large cavities upon oxidation, reducing capillary forces for borosilicate melt transport and promoting oxidation instabilities.",
+    "answer_keys": [
+      ["agglomerate", "SiC", "20"],
+      ["HS20", "HfB2", "microstructure"]
+    ],
+    "evidence_any": [
+      "HfB2-based UHTCs contain an inhomogeneous dispersion of SiC throughout the HfB2 matrix with SiC agglomerates as large as 20 μm",
+      "once the oxide scale is thicker than 20 μm some SiC agglomerates have been already oxidized leaving larger cavities"
+    ],
+    "source_docs": ["Zapata-Solvas_2014_EuropeanCeramicSociety_EffectofLA2O3.pdf"],
+    "excerpts": [
+      "The main microstructural features of SPS UHTCs, as shown in previous work and Fig. 1, are; (I) high density (>99% of theoretical relative density); (II) ZrB2-based UHTCs contain a homogeneous dispersion of SiC throughout the ZrB2 matrix with SiC grain sizes between ∼1 and 2 μm while HfB2-based UHTCs contain an inhomogeneous dispersion of SiC throughout the HfB2 matrix with SiC agglomerates as large as 20 μm; (III) La2O3 particles are often in close proximity to SiC particles. Large agglomerates of SiC arise from the density difference between SiC (ρ = 3.217 g/cm3) and HfB2 (ρ = 10.5 g/cm3), which promotes their non-homogeneous mixing during thermo-rotary drying of HfB2-based UHTCs solutions.",
+      "HfB2 has a lower reactivity with oxygen and HfO2 has lower oxygen permeability compared to ZrB2 and ZrO2, respectively. As a result B2O3 content in the BS melt in HS20 samples may be lower or even negligible compared to ZS20. Therefore, a much thinner BS layer protects the HfB2-based UHTCs more effectively than in ZrB2-based UHTCs, as seen in Fig. 2. However, there is an important microstructural difference between ZS20 and HS20, which is that the distribution of SiC particles throughout the HfB2 matrix is not homogeneous and there are large SiC agglomerates (up to 20 μm dia.). Therefore, once the oxide scale is thicker than 20 μm some SiC agglomerates have been already oxidized leaving larger cavities."
+    ]
+  },
+  {
+    "category": "multi_chunk",
+    "question": "In Zapata-Solvas et al. 2014, Spark Plasma Sintering (SPS) was used to process ZS20 and ZS20La, but the resulting microstructure showed that La2O3 location affected SiC particle dispersion. How did the proximity of La2O3 to SiC particles influence the homogeneity of the microstructure in the La2O3-doped composition?",
+    "reference_answer": "La2O3 particles were often positioned close to SiC particles, and their closer density to SiC (6.51 g/cm3) compared to HfB2 (10.5 g/cm3) assisted particle dispersion in solutions. In ZS20La, this proximity reduced SiC agglomeration, resulting in smaller agglomerates (~10 μm in HS20La) compared to undoped HS20 (~20 μm), improving overall microstructural homogeneity.",
+    "answer_keys": [
+      ["La2O3", "SiC", "proximity"],
+      ["dispersion", "agglomerate", "density"]
+    ],
+    "evidence_any": [
+      "La2O3 particles are often in close proximity to SiC particles",
+      "location of La2O3 particles near to SiC particles and its closer density to SiC than HfB2 assist particle dispersion"
+    ],
+    "source_docs": ["Zapata-Solvas_2014_EuropeanCeramicSociety_EffectofLA2O3.pdf"],
+    "excerpts": [
+      "The main microstructural features of SPS UHTCs, as shown in previous work and Fig. 1, are; (I) high density (>99% of theoretical relative density); (II) ZrB2-based UHTCs contain a homogeneous dispersion of SiC throughout the ZrB2 matrix with SiC grain sizes between ∼1 and 2 μm while HfB2-based UHTCs contain an inhomogeneous dispersion of SiC throughout the HfB2 matrix with SiC agglomerates as large as 20 μm; (III) La2O3 particles are often in close proximity to SiC particles. Large agglomerates of SiC arise from the density difference between SiC (ρ = 3.217 g/cm3) and HfB2 (ρ = 10.5 g/cm3), which promotes their non-homogeneous mixing during thermo-rotary drying of HfB2-based UHTCs solutions.",
+      "The use of a surfactant might overcome this limitation and is being investigated. HS20La contains some SiC agglomerates of ∼10 μm, which is about half the size of the HS20 agglomerates. The location of La2O3 (ρ = 6.51 g/cm3) particles near to SiC particles and its closer density to SiC than HfB2 assist particle dispersion in the solutions reducing the formation of SiC agglomerates. However, SiC distribution is more homogeneous throughout ZrB2 matrix than HfB2 matrix due to lower density difference between SiC and ZrB2 than between SiC and HfB2."
+    ]
+  },
+  {
+    "category": "multi_chunk",
+    "question": "In Zapata-Solvas et al. 2014, ZS20 oxidation experiments were conducted at 1400°C, 1500°C, and 1600°C, revealing paradoxical oxidation behavior. How did boron oxide (B2O3) volatilization explain the difference in oxidation scale thickness between 1400°C and 1500°C?",
+    "reference_answer": "At 1400°C, the borosilicate (BS) layer contained approximately 10 wt% B2O3 (90 wt% SiO2). At higher temperatures, B2O3 volatilized more rapidly, increasing SiO2 content to ~95 wt% at 1500°C. The thicker BS layer at 1400°C (2.5 times thicker than at 1500°C) was due to lower B2O3 evaporation, which reduced oxygen diffusion; at 1500°C, more protective but thinner SiO2-rich layers formed.",
+    "answer_keys": [
+      ["B2O3", "volatil", "B2O"],
+      ["1400", "1500", "temperature"]
+    ],
+    "evidence_any": [
+      "B2O3 content in the BS melt decreases with temperature and approximately stabilizes in the range 1200–1400 °C to a level of 10 wt.% B2O3",
+      "BS melt thickness at 1400 ◦C is ∼2.5 times thicker than BS melt thickness at 1500 ◦C"
+    ],
+    "source_docs": ["Zapata-Solvas_2014_EuropeanCeramicSociety_EffectofLA2O3.pdf"],
+    "excerpts": [
+      "Oxidation of ZS20 is explained in terms of an oxidation power law with exponent n from 1 to 2 in the temperature range 1400–1600 ◦C. In addition, mass gain and oxide scale thickness of the BS layer is larger at 1400 ◦C than at 1500 ◦C for the same oxidation time as seen in Figs. 2 and 4 respectively, which is explained in terms of lower boria content, which vaporizes from the BS layer more rapidly at 1500 ◦C than at 1400 ◦C. In fact, oxygen penetrates deeper in ZS20 at 1400 ◦C than at 1500 ◦C as the oxygen diffusion coefficient is greatly reduced by boria evaporation, as seen in Fig. 5 which reveals a much thicker scale at 1400 than 1500 ◦C.",
+      "According to Opeka et al., B2O3 content in the BS melt decreases with temperature and approximately stabilizes in the range 1200–1400 ◦C to a level of 10 wt.% B2O3, which corresponds to a 90wt.% (∼89mol%) SiO2 BS melt. However, there are no data on the boria content after oxidation at 1500 ◦C when presumably B2O3 content in the BS melt should have been reduced. Considering a SiO2 concentration increase of 5 mol% as a consequence of B2O3 evaporation, which is reasonable, the oxygen diffusion coefficient through the BS melt is reduced ∼5 times at 1550 ◦C."
+    ]
+  },
+  {
+    "category": "multi_chunk",
+    "question": "In Zapata-Solvas et al. 2014, mass gain kinetic exponents and oxide layer thickness kinetic exponents were measured for ZS20La at 1600°C and found to differ significantly (2.1 vs 7.5). What mechanism was proposed to explain this large discrepancy between the two measurements?",
+    "reference_answer": "The four-fold difference in kinetic exponents (mass gain n=2.1 vs oxide layer n=7.5) indicated mass adsorption in the oxide layer. Continuous oxidation of ZrO_xC_y and SiO_xC_y particles combined with adsorption of oxygen-containing species meant that large increases in mass gain produced relatively small increases in oxide scale thickness, explaining why kinetic exponents differed substantially.",
+    "answer_keys": [
+      ["mass", "adsorption", "adsorb"],
+      ["kinetic exponent", "oxide", "ZS20La"]
+    ],
+    "evidence_any": [
+      "values of n for mass gain and oxide scale thickness at 1600 ◦C are different by almost four times, 2.1 for mass gain and 7.5 for oxide scale, which indicates that an oxygen adsorption mechanism may be active",
+      "large mass gain change produces a relatively small increase of oxide scale thickness as a consequence of oxidation kinetics exponent between mass gain and oxide layer"
+    ],
+    "source_docs": ["Zapata-Solvas_2014_EuropeanCeramicSociety_EffectofLA2O3.pdf"],
+    "excerpts": [
+      "ZS20La showed pure parabolic behavior at 1400 ◦C (n ∼ 2) and its oxidation kinetic exponent increases with temperature to ∼2.5 at 1500 ◦C. In addition, values of n for mass gain and oxide scale thickness at 1600 ◦C are different by almost four times, 2.1 for mass gain and 7.5 for oxide scale, which indicates that an oxygen adsorption mechanism may be active because large changes in mass gain lead to small changes in oxide scale. Oxide scale thickness of ZS20La is smaller than oxide scale thickness of ZS20 at 1400 ◦C while the converse applies for 1500 ◦C and 1600 ◦C as seen in Fig. 2, presumably due to the higher volatilization of B2O3 present in the BS layer of ZS20 at these temperatures.",
+      "The adsorption of species is also noticeable and confirmed by the difference between mass gain kinetics and oxide layer thickness kinetics. Moreover, a large mass gain change produces a relatively small increase of oxide scale thickness as a consequence of oxidation kinetics exponent between mass gain and oxide layer (2 and 8, respectively), as seen in Fig. 2. An oxidation kinetic exponent as high as 8 could be obtained if Fick's law for atomic diffusion is constrained by the presence of a particle sink. Furthermore, the more particles formed within the oxide scale, the more limited the oxygen diffusion."
+    ]
+  }
+]
