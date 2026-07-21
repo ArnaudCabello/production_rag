@@ -1,0 +1,128 @@
+[
+  {
+    "category": "aggregation",
+    "question": "Across studies on ZrB2-SiC composites, TaC-HfC solid solutions, and HfC/TaC binary carbides, what range of melting points has been reported for these ultra-high-temperature ceramic (UHTC) systems?",
+    "reference_answer": "Reported melting points for UHTC compounds range from about 3245°C for ZrB2 up to over 3900°C for the TaC-HfC ternary solid solution, with HfC and TaC individually cited as having melting points over 4000 K, near the top of the known UHTC range.",
+    "answer_keys": [["3245"], ["3900"], ["4000 k", "4000"]],
+    "evidence_any": [
+      "due to its high melting point (3245",
+      "the highest experimentally measured melting temperatures, exceeding 3900 ◦C",
+      "as they are the only two binary UHTCs with a melting point over 4000 K"
+    ],
+    "source_docs": [
+      "Krishnarao_2015_DefenceTechnology_Gastungsten.pdf",
+      "Albert_2024_EuropeanCeramicSociety_Mechanicalproperties.pdf",
+      "Tan_2024_CompositesCommunications_High-toughnessmechanism.pdf"
+    ],
+    "excerpts": [
+      "1. Introduction\n\nZrB2 is the leading material among ultra-high-temperature\n\nceramics due to its high melting point (3245\n\nC), high hard-\n\nness (23 GPa), high thermal conductivity (~60 W m\n\n1 $k1\n\n),\n\nelectrical conductivity (~107 S m\n\n1\n\n), and relatively low den-\n\nsity (6.09 g cm\n\n3\n\n), high strength at elevated temperatures, and\n\nstability in extreme environments [1]. The addition of SiC and\n\ncarbon can inhibit the grain growth, improve the sinterability,\n\nand increase the thermal and mechanical properties and\n\noxidation resistance [2,3]. ZrB2eSiC based ceramics are\n\nattractive for aerospace applications such as thermal protection\n\nsystems, leading edges, trailing edges, and propulsion com-\n\nponents for hypersonic flight vehicles [4,5].\n\nThe components of ZrB2eSiC composite are generally\n\nmade by pressureless sintering (PS) or hot pressing (HP). The\n\ndifficulty in fabricating the large size or complex shapes limits\n\nthe application of ZrB2eSiC composites.",
+      "The leading material candidates that meet these requirements are ultra-high temperature ceramics (UHTCs), which are a class of materials traditionally defined by their high melting points, generally greater than 3000 ◦C [12], composed of select transition metal carbides, nitrides, and borides [13,14]. The ternary solid solution of the TaC-HfC system boasts\n\nthe highest experimentally measured melting temperatures, exceeding 3900 ◦C [15–18]. Furthermore, it has been predicted that tailoring the stoichiometry of Ta0.8Hf0.2C can lead to the formation of an UHT-stable oxide phase (Hf6Ta2O17) that may reduce oxygen diffusion rates and thus the rate of subsequent oxidation [17,19–21]. These promising attributes have prompted investigations exploring the synthesis of TaC-HfC ternary carbides by both traditional sintering [22,23] and melting techniques [24].",
+      "Ultra-high temperature ceramics (UHTCs), encompassing carbides, borides, and nitrides of transition metals from Groups IV and V, exhibit properties like high melting point, corrosion resistance, high hardness, and strength. These exceptional qualities make them ideally suited for demanding applications in extreme environments, including aerospace engines, wear-resistant components, and fuel cladding [1–7]. However, the constant concern is that UHTCs are unable to withstand complex mechanical loads, such as impact stress and vibration, due to their low fracture toughness [8]. Consequently, the requirement for ultra-high tem- perature sintering, exceeding 2000 ◦C, to attain complete densification of UHTCs inevitably results in the formation of a homogeneous solid solution phase. For example, HfC and TaC have attracted signifi-\n\ncant attention as they are the only two binary UHTCs with a melting point over 4000 K, which surpasses even the flame temperature pro-\n\nduced by rocket propellant [3]."
+    ]
+  },
+  {
+    "category": "aggregation",
+    "question": "What range of processing/sintering temperatures have been used to densify UHTC materials such as ZrB2-SiC-B4C-YAG composites, HfC-TaC carbides, and HfC-TaC-HfO2 ceramics?",
+    "reference_answer": "Sintering and densification temperatures for these UHTC systems range from about 1650°C for pressureless sintering of ZrB2-SiC-B4C-YAG composites, to 1800°C for spark plasma sintering of HfC-TaC-HfO2 ceramics, up to 2100-2400°C for field assisted sintering of HfC-TaC carbides.",
+    "answer_keys": [["1650"], ["1800"], ["2100", "2400"]],
+    "evidence_any": [
+      "pressurelessly sintered at 1650\n\nC in argon atmosphere for 1 h",
+      "using SPS equipment under 45 MPa at 1800 ◦C for 30 min",
+      "soak temperatures were 2100 and 2400 ◦C, pressures were 55 and 30 MPa"
+    ],
+    "source_docs": [
+      "Krishnarao_2015_DefenceTechnology_Gastungsten.pdf",
+      "Tan_2024_CompositesCommunications_High-toughnessmechanism.pdf",
+      "Albert_2024_EuropeanCeramicSociety_Mechanicalproperties.pdf"
+    ],
+    "excerpts": [
+      "(ZrB2eSiCeB4C) composite was pressurelessly sintered\n\nwith addition of YAG (Y2O3 + Al2O3). The ZrB2 powder used\n\nin this work was synthesized by reacting ZrO2 with B4C ac-\n\ncording to reaction 7ZrO2 + 5B4C / 7ZrB2 + 5CO + 3B2O3. To obtain a single phase ZrB2 without impurities like un-\n\nreacted ZrO2, B4C, and free C, the excess of B4C was taken\n\nin wt. ratio of ZrO2/B4C = 2.5 where the stoichiometric wt.\n\nratio was ~3.0. The dry mixing of powders was done for 24 h in a polythene\n\nbottle with alumina balls, and the 60 mm diameter green\n\ncompacts were made using PVA binder in water solution. The pressure-\n\nless sintering was carried out in a graphite resistance heating\n\nfurnace (ASTRO, USA, Model 1000-3060-FP20). The furnace\n\nwas evacuated to a moderate vacuum and back\n\nfilled with argon up to a pressure of 1 atm. Heating rate was about 15\n\nC/min\n\n1\n\n. The composites were\n\npressurelessly sintered at 1650\n\nC in argon atmosphere for 1 h.",
+      "The two types of powders were then mixed in a 1:1 vol ratio. Secondly, 5 vol% HfO2 powder (China New Metal Materials Technology Co. Ltd., purity ≥99.9 %, 1200 mesh, particle size ＜ 14 μm) was added to the HfC-TaC mixture powders. The HfC-TaC-HfO2 powders were ground in a planet ball-miller under a rotary speed of 50 rpm with ethanol and tungsten carbide (WC) ball for 20 h in a WC vacuum tank. Then the slurry was dried at 80 ◦C for 24 h in a vacuum oven. A graphite mold with a diameter of 20 mm was used, and the desired thickness of the ceramic was set at 5 mm. The sintering process was performed using SPS equipment under 45 MPa at 1800 ◦C for 30 min (LABOX-600 equipment, Sinter Land Inc.). A heating rate of 100 ◦C/min was adopted. For com- parison, binary TaC and HfC ceramic blocks were obtained under the same sintering conditions.",
+      "All of the FAST trials were carried out under vacuum with a base pressure between 600 and 1000 Pa. The samples were heated at a rate of 100 ◦C/min from room temperature to their soak temperature of 2100 ◦C. Unlike previously published work exploring various processing conditions, identical processing conditions were used for all compositions to isolate compo- sitional and microstructural effects on performance. The sintering pro- cess was a two-step process, where soak temperatures were 2100 and 2400 ◦C, pressures were 55 and 30 MPa, and hold times were 30 and 20 minutes, respectively. After sintering, the samples were removed from the die set and grit blasted with 100 grit aluminum oxide to remove residual graphite foil."
+    ]
+  },
+  {
+    "category": "aggregation",
+    "question": "What range of starting powder particle sizes have been used to fabricate ZrB2-SiC ceramics, HfC-TaC carbides, and HfC-TaC-HfO2 ceramics?",
+    "reference_answer": "Starting powder particle sizes for these UHTC materials range from sub-micron to over 100 micrometers: Krishnarao et al. used ZrB2 and SiC powders with d50 around 1.5-3 micrometers, Albert et al. used TaC and HfC powders sized 1-3 micrometers, and Tan et al. sieved TaC/HfC powders into coarse fractions of 48-150 micrometers and fine fractions below 6.5 micrometers.",
+    "answer_keys": [["1.5", "1-3"], ["48", "150"], ["6.5"]],
+    "evidence_any": [
+      "with average particle sizes\n\n(d50 ~ 1.5e3 mm) and (d50 ~ 1.5 mm)",
+      "coarse powders ranging from 100 to 300 mesh (Particle size: 48 μm–150 μm)",
+      "with 99.5 % purity and particle size of 1–3 µm was purchased"
+    ],
+    "source_docs": [
+      "Krishnarao_2015_DefenceTechnology_Gastungsten.pdf",
+      "Tan_2024_CompositesCommunications_High-toughnessmechanism.pdf",
+      "Albert_2024_EuropeanCeramicSociety_Mechanicalproperties.pdf"
+    ],
+    "excerpts": [
+      "2.1. Materials\n\nPowders of ZrB2 and SiC with average particle sizes\n\n(d50 ~ 1.5e3 mm) and (d50 ~ 1.5 mm) respectively obtained\n\nfrom H. C. Strack, Germany and B4C powder of (d50 ~ 7 mm)\n\nsupplied by Electro Abrasive Corporation, USA were used to\n\nfabricate ZrB2-20 vol.% SiC composite. For (ZrB2eSiCeB4C)\n\ncomposite with addition of YAG (Y2O3 + Al2O3), ZrB2 was\n\nproduced using ZrO2 powder supplied by Nuclear Fuel Com-\n\nplex, Hyderabad, India and B4C powder supplied by China\n\nAbrasives, Zingzhou, China. SiC powder with particle size\n\n(d50 ~ 0.8 mm) was supplied by H.C. Starck, Germany. Al2O3\n\nwith super fine size (d50 ~ 0.7 mm) obtained from Alcan and\n\nsub-micron sized Y2O3 were used.",
+      "Firstly, TaC and HfC powders (China Qi Jin New Materials Co. Ltd., purity ≥99.9 %.) were sieved to obtain coarse powders ranging from 100 to 300 mesh (Particle size: 48 μm–150 μm), and fine powders of 2000 mesh (Particle size＜6.5 μm) were obtained simultaneously. The two types of powders were then mixed in a 1:1 vol ratio. Secondly, 5 vol% HfO2 powder (China New Metal Materials Technology Co. Ltd., purity ≥99.9 %, 1200 mesh, particle size ＜ 14 μm) was added to the HfC-TaC mixture powders. The HfC-TaC-HfO2 powders were ground in a planet ball-miller under a rotary speed of 50 rpm with ethanol and tungsten carbide (WC) ball for 20 h in a WC vacuum tank.",
+      "2.1. Materials and powder processing\n\nTantalum carbide powder (14.5 g/cm3) with 99.5 % purity and particle size of 1–3 µm was purchased from Stanford Advanced Materials (Irvine, CA; lot ID: OC200713–10365). The hafnium carbide powder (12.2 g/cm3) (Reade Advanced Materials, Newton, MA) had a purity of 99 % with a quoted and experimentally measured average particle diameter between 1 μm and 3 μm. Five compositions were explored in this study: two binary 0/100 and 100/0, and three ternary solid so- lution compositions of 10/90, 50/50, 90/10 vol% HfC:TaC. For the HfC-TaC mixture, a 3:1 milling media (8 mol % yttria-stabilized zirconia, Inframat, Manchester, CT) to powder ratio was used to blend the three compositions in a Nalgene plastic jar."
+    ]
+  },
+  {
+    "category": "aggregation",
+    "question": "What range of applied consolidation pressures have been reported for hot pressing, spark plasma sintering, and field-assisted sintering of UHTC materials like ZrB2-SiC, HfC-TaC-HfO2, and HfC-TaC?",
+    "reference_answer": "Applied consolidation pressures for these UHTC processing routes range from about 25 MPa for hot pressing of ZrB2-SiC composites (Krishnarao et al.), to 45 MPa for spark plasma sintering of HfC-TaC-HfO2 ceramics (Tan et al.), up to 55 MPa in the field-assisted sintering of HfC-TaC carbides (Albert et al.).",
+    "answer_keys": [["25"], ["45"], ["55"]],
+    "evidence_any": [
+      "a heating rate of 15\n\nC/min and a uniaxial pressure of\n\n25 MPa for 1 h",
+      "using SPS equipment under 45 MPa at 1800 ◦C for 30 min",
+      "pressures were 55 and 30 MPa, and hold times were 30 and 20 minutes"
+    ],
+    "source_docs": [
+      "Krishnarao_2015_DefenceTechnology_Gastungsten.pdf",
+      "Tan_2024_CompositesCommunications_High-toughnessmechanism.pdf",
+      "Albert_2024_EuropeanCeramicSociety_Mechanicalproperties.pdf"
+    ],
+    "excerpts": [
+      "2.2. Hot-pressing\n\nZrB2-20 vol.% SiC composite was fabricated by hot\n\npressing under vacuum. ZrB2-20 vol.% SiC with 1 wt% B4C\n\npowder was mixed in a polythene bottle with alumina balls\n\nfor 24 h and then hot-pressed in graphite dies at 2000\n\nC with\n\na heating rate of 15\n\nC/min and a uniaxial pressure of\n\n25 MPa for 1 h. The bulk density, theoretical density and\n\ngrain size of the composite (ZrB2-20 vol.% SiC-1 wt.% B4C)\n\ndesignated ZS are 5.43 g cm\n\n3\n\n, 5.44 g cm\n\n3\n\nand 4.02 mm,\n\nrespectively.",
+      "A graphite mold with a diameter of 20 mm was used, and the desired thickness of the ceramic was set at 5 mm. The sintering process was performed using SPS equipment under 45 MPa at 1800 ◦C for 30 min (LABOX-600 equipment, Sinter Land Inc.). A heating rate of 100 ◦C/min was adopted. For com- parison, binary TaC and HfC ceramic blocks were obtained under the same sintering conditions.",
+      "All of the FAST trials were carried out under vacuum with a base pressure between 600 and 1000 Pa. The samples were heated at a rate of 100 ◦C/min from room temperature to their soak temperature of 2100 ◦C. The sintering pro- cess was a two-step process, where soak temperatures were 2100 and 2400 ◦C, pressures were 55 and 30 MPa, and hold times were 30 and 20 minutes, respectively. After sintering, the samples were removed from the die set and grit blasted with 100 grit aluminum oxide to remove residual graphite foil."
+    ]
+  },
+  {
+    "category": "aggregation",
+    "question": "What range of heating rates have been used during sintering/consolidation of ZrB2-SiC composites, HfC-TaC carbides, and HfC-TaC-HfO2 ceramics?",
+    "reference_answer": "Heating rates used to process these UHTC ceramics range from about 15°C/min for hot pressing and pressureless sintering of ZrB2-SiC composites (Krishnarao et al.) up to 100°C/min for field-assisted sintering of HfC-TaC carbides (Albert et al.) and spark plasma sintering of HfC-TaC-HfO2 ceramics (Tan et al.).",
+    "answer_keys": [["15"], ["100"]],
+    "evidence_any": [
+      "a heating rate of 15\n\nC/min and a uniaxial pressure of",
+      "heated at a rate of 100 ◦C/min from room temperature",
+      "A heating rate of 100 ◦C/min was adopted"
+    ],
+    "source_docs": [
+      "Krishnarao_2015_DefenceTechnology_Gastungsten.pdf",
+      "Albert_2024_EuropeanCeramicSociety_Mechanicalproperties.pdf",
+      "Tan_2024_CompositesCommunications_High-toughnessmechanism.pdf"
+    ],
+    "excerpts": [
+      "2.2. Hot-pressing\n\nZrB2-20 vol.% SiC composite was fabricated by hot\n\npressing under vacuum. ZrB2-20 vol.% SiC with 1 wt% B4C\n\npowder was mixed in a polythene bottle with alumina balls\n\nfor 24 h and then hot-pressed in graphite dies at 2000\n\nC with\n\na heating rate of 15\n\nC/min and a uniaxial pressure of\n\n25 MPa for 1 h. The bulk density, theoretical density and\n\ngrain size of the composite (ZrB2-20 vol.% SiC-1 wt.% B4C)\n\ndesignated ZS are 5.43 g cm\n\n3\n\n, 5.44 g cm\n\n3\n\nand 4.02 mm,\n\nrespectively.",
+      "The ceramic powders were consolidated into test coupons using a using a 25 Ton FAST system (FCT Systeme GmbH, Frankenblick, Ger- many). The test coupons were fabricated in a 40 mm outer diameter (OD) graphite die, where the final geometry was a 40 mm OD pellet with a thickness of approximately 5 mm. All of the FAST trials were carried out under vacuum with a base pressure between 600 and 1000 Pa. The samples were heated at a rate of 100 ◦C/min from room temperature to their soak temperature of 2100 ◦C. Unlike previously published work exploring various processing conditions, identical processing conditions were used for all compositions to isolate compo- sitional and microstructural effects on performance.",
+      "The HfC-TaC-HfO2 powders were ground in a planet ball-miller under a rotary speed of 50 rpm with ethanol and tungsten carbide (WC) ball for 20 h in a WC vacuum tank. Then the slurry was dried at 80 ◦C for 24 h in a vacuum oven. A graphite mold with a diameter of 20 mm was used, and the desired thickness of the ceramic was set at 5 mm. The sintering process was performed using SPS equipment under 45 MPa at 1800 ◦C for 30 min (LABOX-600 equipment, Sinter Land Inc.). A heating rate of 100 ◦C/min was adopted. For com- parison, binary TaC and HfC ceramic blocks were obtained under the same sintering conditions."
+    ]
+  },
+  {
+    "category": "aggregation",
+    "question": "What range of indentation test loads have been used to characterize the hardness of UHTC materials like ZrB2-SiC composites, HfC-TaC-HfO2 ceramics, and HfC-TaC carbides?",
+    "reference_answer": "Indentation loads used to characterize hardness of these UHTC ceramics vary widely by technique: Krishnarao et al. used a Vickers micro-hardness load of 200 g, Tan et al. used a Vickers holding load of 29.4 N, and Albert et al. performed nanoindentation with a much smaller 5 mN load.",
+    "answer_keys": [["200 g", "200"], ["29.4"], ["5 mn", "5 mn load"]],
+    "evidence_any": [
+      "a load of 200 g for a dwell time of 15 s",
+      "with a holding load of 29.4 N for 10s",
+      "5×5 square grids with 5 μm spacing with 5 mN load"
+    ],
+    "source_docs": [
+      "Krishnarao_2015_DefenceTechnology_Gastungsten.pdf",
+      "Tan_2024_CompositesCommunications_High-toughnessmechanism.pdf",
+      "Albert_2024_EuropeanCeramicSociety_Mechanicalproperties.pdf"
+    ],
+    "excerpts": [
+      "2.6. Characterization\n\nThe bulk density was calculated using water displacement\n\nmethod. The joints were cut perpendicular to the welding di-\n\nrection using diamond cutting wheel or CNC wire cut EDM.\n\nThe cut welds were mounted in epoxy and polished to a mirror\n\nfinish using fine diamond (0.25 mm) abrasive. The polished\n\ncross sections were analyzed for microstructure using an op-\n\ntical microscope and scanning electron microscope (SEM of\n\nFEI Quanta 400, Netherlands). The Vickers micro-hardness\n\nwas measured using DM H-2, Matsuzawa Seiki, Japan, with\n\na load of 200 g for a dwell time of 15 s. A Philips X-ray\n\ndiffractometer, Model PW3710, with Cu Ka radiation through\n\nNi filter was used to identify different phases in composite.",
+      "The residual porosity of the\n\nceramics was evaluated through image analysis of polished SEM images. The mechanical properties of the ceramics were measured by the Vickers indentation instrument (ZHVST-30F, Shanghai Zhongyan Co. Ltd.) with a holding load of 29.4 N for 10s. The hardness (Hv) and fracture toughness (KIC) were calculated using the formula described in Ref. [14]. Five test points were randomly selected on the ceramic sam- ples to obtain the average mechanical properties and the standard deviation.",
+      "For high resolution indentations, indents were spaced in a 5×5 square grids with 5 μm spacing with 5 mN load for each sample. The loading profiles for the indents were quasi-static (QS) trapezoids, with 5- second loading/unloading times and 2-second hold times, where the hardness was measured using the Oliver-Pharr method. In addition, these quasi-static trapezoid profiles were subsequently scanned with in-situ scanning probe microscopy (SPM) to confirm the validity of the nanoindents. An additional set of indents with analogous parameters (15×15 spaced 5 μm at 5mN, 0.5–0.2–0.5 s profile) was applied using the accelerated-property mapping (XPM) mode and complemented the quasi-static (QS) mode results to confirm observed trends."
+    ]
+  }
+]

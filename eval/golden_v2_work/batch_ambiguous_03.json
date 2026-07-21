@@ -20,7 +20,7 @@
     "reference_answer": "Hardness values range across different UHTC compositions, with high-entropy aluminum carbides measuring 13.2 ± 0.5 GPa and hafnium carbide-based materials varying from approximately 13 GPa at composite interfaces to 18 GPa in bulk form.",
     "answer_keys": [["range", "varies", "vary", "multiple", "several"], ["13.2", "18", "13"], ["GPa"]],
     "evidence_any": [
-      "The Vickers hardness, flexural strength, Young's modulus, thermal expansion coefficient, GPa, 8.21 × 10− 6 K− and thermal conductivity 1, and 10.98 W m− 1 K− 1 of 1, respectively. HE(5RE1/5)Al3C3 are 13.2 ± 0.5 GPa",
+      "hardness value converges to 13 ± 0.3 GPa. For YAl3C3, the Vickers hardness is approximately 12.6 ± 0.3 GPa",
       "average hardness on the matrix side is ∼18 GPa, while that at the interface is ∼13 GPa"
     ],
     "source_docs": ["Guo_2024_CeramicsInternational_High-entropy.pdf", "Nisar_2023_Carbon_Enhancedflexibility.pdf"],
@@ -35,8 +35,8 @@
     "reference_answer": "Maximum service temperatures vary significantly depending on material composition and application context, ranging from 840 °C for onset of degradation in nanofiber composites to approximately 1327 °C (1600 K) for bulk ceramics, with some materials designed to withstand temperatures approaching 1850 °C under extreme processing conditions.",
     "answer_keys": [["range", "varies", "vary", "multiple", "several"], ["840", "1327", "1600", "1850"], ["°C", "K"]],
     "evidence_any": [
-      "the onset of temperature at which the rapid weight loss starts shifted from ∼710 ◦C to ∼840 ◦C in the case of HfC decorated Cnf",
-      "maximum temperature is reached after about 60 s (z = 18 km). The peak temperature, corresponding to the peak heat flux, is about 1600 K"
+      "the onset of temperature at which the rapid weight loss starts shifted from ∼710 ◦C to ∼840 ◦C",
+      "The peak temperature, corresponding to the peak heat flux, is about 1600 K"
     ],
     "source_docs": ["Nisar_2023_Carbon_Enhancedflexibility.pdf", "Savino_2005_AerospaceScienceandTechnology_Aerothermodynamicstudy.pdf"],
     "excerpts": [
@@ -50,8 +50,8 @@
     "reference_answer": "Linear thermal expansion coefficients vary among different UHTC materials and composites, ranging from 3.6 × 10-6 K-1 for hafnium carbide-carbon fiber composites to 8.21 × 10-6 K-1 for high-entropy aluminum carbides, with pure hafnium carbide measured at 7.7 × 10-6 K-1.",
     "answer_keys": [["range", "varies", "vary", "multiple", "several"], ["3.6", "7.7", "8.21"], ["10-6", "K-1"]],
     "evidence_any": [
-      "The linear TEC of HE(5RE1/5)Al3C3 is determined in terms of the slope of the curve and calculated to be 8.21 × 10− 6 K− 1",
-      "CTE of the hybrid system follows the rule of mixture, and change in CTE could cause excessive local stress resulting in the formation of cracks leading to catastrophic failure. Due to the incorporation of HfC particles in the Cnf mat, there is a lesser probability of the CTE mismatch (HfC: 7.7 × 10− 6 K− 1 [15], Cf: 1.6 7 × 10− 6 K− 1 [15] and HfC-Cf: 3.6 × 10− 6 K− 1"
+      "Linear TEC of HE(5RE1/5)Al3C3 is calculated to be 8.21 × 10− 6 K− 1",
+      "HfC: 7.7 × 10− 6 K− 1 [15], Cf: 1.6 7 × 10− 6 K− 1 [15] and HfC-Cf: 3.6 × 10− 6 K− 1"
     ],
     "source_docs": ["Guo_2024_CeramicsInternational_High-entropy.pdf", "Nisar_2023_Carbon_Enhancedflexibility.pdf"],
     "excerpts": [
@@ -65,7 +65,7 @@
     "reference_answer": "UHTC materials for thermal protection systems must satisfy multiple competing requirements, with minimum specifications varying across applications; one study recommends thermal conductivity of at least 100 W m-1 K-1, while others report effective materials ranging from 10.98 to 66 W m-1 K-1 depending on application and composite design.",
     "answer_keys": [["varying", "varies", "range", "multiple", "several"], ["100", "10.98", "66"], ["W m-1 K-1"]],
     "evidence_any": [
-      "Table 3 also shows that an ideal UHTC material for TPS applications should have a thermal conductivity as high as, at least, 100 W m −1 K −1",
+      "ideal UHTC material for TPS applications should have thermal conductivity at least 100 W m −1 K −1",
       "the thermal conductivity of HE(5RE1/5)Al3C3 is 10.98 W m− 1 K− 1"
     ],
     "source_docs": ["Savino_2005_AerospaceScienceandTechnology_Aerothermodynamicstudy.pdf", "Guo_2024_CeramicsInternational_High-entropy.pdf"],
@@ -76,17 +76,17 @@
   },
   {
     "category": "ambiguous",
-    "question": "What elastic modulus retention do advanced ceramics maintain at high temperatures?",
-    "reference_answer": "High-temperature elastic modulus retention varies between materials; some aluminum carbides retain approximately 83 percent of room temperature Young's modulus values at 1500 °C, while requirements and performance metrics depend on specific material composition and service conditions.",
-    "answer_keys": [["varies", "vary", "range", "multiple", "several", "depends"], ["83", "1500"], ["percent", "%", "°C", "Young's modulus"]],
+    "question": "What bulk density do ultra-high-temperature ceramic materials and composites achieve?",
+    "reference_answer": "Bulk density varies significantly across different UHTC materials and composites, ranging from approximately 4.91 g/cm3 for high-entropy aluminum carbides to 6.0 g/cm3 for zirconium diboride, with hybrid nanofiber-decorated composites achieving intermediate densities around 5.23 g/cm3.",
+    "answer_keys": [["varies", "vary", "range", "multiple", "several"], ["4.91", "6.0", "5.23"], ["g/cm", "kg m-3"]],
     "evidence_any": [
-      "The residual Young's modulus of HE(5RE1/5)Al3C3 remained approximately 83 % of its room temperature value even at 1500 ◦C",
-      "In our previous work, the Young's modulus of YAl3C3 at 1500 ◦C was still 85 % of room temperature value"
+      "The density of the as-sintered compact measured by the Archimedes' method is 4.91 g/cm3",
+      "The bulk density of Cnf and HfC decorated Cnf was 1.68 ± 0.05 g/cc and 5.23 ± 0.08 g/cc"
     ],
-    "source_docs": ["Guo_2024_CeramicsInternational_High-entropy.pdf"],
+    "source_docs": ["Guo_2024_CeramicsInternational_High-entropy.pdf", "Nisar_2023_Carbon_Enhancedflexibility.pdf"],
     "excerpts": [
-      "As service requirements for hypersonic aircraft continue to increase, the development of high-performance ultra-high temperature ceramics has attracted increasing attention. Due to their high melting point, high hardness, good wear resistance and chemical inertness, ZrC and HfC- based ceramics have become important candidate materials for the nose and leading edge of hypersonic aircraft [1–4]. However, the poor oxidation resistance of these materials has severely limited their appli- cation in the field of hypersonic aircraft. Recently [2], a new series of ternary layered carbides, REAl3C3 (RE = Sc, Y, Lanthanides), has emerged as a promising oxidation resistant ultra-high temperature ceramic. YAl3C3 is a typical member of the REAl3C3 family, which belongs to the P63/mmc space group. Its crystal structure can be described as neighboring NaCl-type YC slabs being mirrored by one Al3C2 unit. In our previous work, the Young's modulus of YAl3C3 at 1500 ◦C was still 85 % of room temperature value, indicating it is a high temperature structural material",
-      "To determine the high temperature mechanical characteristics of HE (5RE1/5)Al3C3, the temperature-dependent Young's modulus and inter- nal friction were evaluated, the results are displayed in Fig. 8. Obvi- ously, the relationship between Young's modulus and temperature consists of two regions at the temperature of 25–1500 ◦C. Firstly, the Young's modulus decreases almost linearly with temperature increasing up to 1400 ◦C. Secondly, at temperatures above 1400 ◦C, the Young's modulus decreases obviously, which is also usually called the visco- elastic region, corresponding to the obvious softening of materials at this temperature range. At 1500 ◦C, the Young's modulus of HE(5RE1/5) Al3C3 is about 83 % of the value at room temperature, which demonstrates that HE(5RE1/5)Al3C3 has excellent high temperature stiffness."
+      "The bulk HE(5RE1/5)Al3C3 was synthesized at 1900 ◦C for 1h. The phase composition of the bulk HE(5RE1/5)Al3C3 is unchanged compared with that of the as-synthesized powders (according to XRD data, not shown here for brevity). Fig. 3 displays the SEM image of the as- synthesized HE(5RE1/5)Al3C3 and the corresponding EDS mappings of rare-earth elements (Y, Gd, Dy, Ho, and Er) as well as Al and C. Obvi- ously, bulk HE(5RE1/5)Al3C3 possesses a dense microstructure with quite little porosity, indicating that the as-synthesized bulk HE(5RE1/5) Al3C3 has a high relative density. The density of the as-sintered compact measured by the Archimedes' method is 4.91 g/cm3 and the corresponding relative density is 97 %.",
+      "The thermal conductivity of the Cnf and HfC decorated Cnf as a function of temperature is compared in Fig. 5b. Herein, the thickness of Cnf was 85.4 ± 3.4 mm. At the same time, it was 194.0 ± 4.9 mm for HfC decorated Cnf mat, measured using an optical profilometer (shown in Fig. S2). The bulk density of Cnf and HfC decorated Cnf was 1.68 ± 0.05 g/cc and 5.23 ± 0.08 g/cc, respectively, measured via He pycnometer."
     ]
   }
 ]
