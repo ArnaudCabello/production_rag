@@ -1,0 +1,190 @@
+[
+  {
+    "category": "table",
+    "question": "In the Cheng 2017 study on synthesis of nanocrystalline TaC powders via high temperature spray pyrolysis, what mass of phenolic resin was used in recipe R1?",
+    "reference_answer": "Recipe R1 used 0.138 grams of phenolic resin as the carbon precursor in the HTSP synthesis method.",
+    "answer_keys": [
+      ["0.138", "gram"],
+      ["phenol", "resin"],
+      ["recipe r1", "r1"]
+    ],
+    "evidence_any": [
+      "for recipe R1, phenolic resin was first dissolved in ethanol to form an orange-colored solution",
+      "Table 1 Summary of recipes for different mixed solutions used for the synthesis of nanocrystalline TaC powders",
+      "Recipe R1 0.330 tantalum chloride g 0.138 phenolic resin g"
+    ],
+    "source_docs": [
+      "Cheng_2017_CeramicsInternational_Synthesisofnanocrystalline.pdf"
+    ],
+    "excerpts": [
+      "In particular, for the synthesis of nanocrystalline TaC UHTC powders via the single-step HTSP process, the starting tantalum precursor used is tantalum pentachloride (TaCl5, 99.8%, Alfa Aesar #14164), the carbon precursor used is Novolac phenolic resin (Plenco, 14353, R5420), and the solvents used are absolute ethanol (99.5+%, Acros Organics #61509-0020) or 1-pentanol (99+%, Alfa Aesar # 30898). Two recipes were adopted, as summarized in Table 1: for recipe R1, phenolic resin was first dissolved in ethanol to form an orange-colored solution. TaCl5 was dissolved separately in 1-pentanol, into which the phenolic resin-ethanol solution was then added. For recipe R2, ethanol was used as the solvent for both phenolic resin and TaCl5."
+    ]
+  },
+  {
+    "category": "table",
+    "question": "According to Table 1 in Cheng et al. 2017, what was the C:Ta2O5 molar ratio specified for recipe R2 in the nanocrystalline TaC synthesis?",
+    "reference_answer": "Recipe R2 was designed with a C:Ta2O5 molar ratio of 9:1, calculated assuming phenolic resin gives a carbon yield of 40 wt% after thermolysis.",
+    "answer_keys": [
+      ["9:1", "9:1 ratio", "9 to 1"],
+      ["recipe r2", "r2"],
+      ["c:ta2o5", "molar ratio"]
+    ],
+    "evidence_any": [
+      "Table 1 Summary of recipes for different mixed solutions used for the synthesis",
+      "Recipe R2 0.796 tantalum chloride g 0.300 phenolic resin g C:Ta2O5 molar ratioa 9: 1"
+    ],
+    "source_docs": [
+      "Cheng_2017_CeramicsInternational_Synthesisofnanocrystalline.pdf"
+    ],
+    "excerpts": [
+      "Two recipes were adopted, as summarized in Table 1: for recipe R1, phenolic resin was first dissolved in ethanol to form an orange-colored solution. TaCl5 was dissolved separately in 1-pentanol, into which the phenolic resin-ethanol solution was then added. For recipe R2, ethanol was used as the solvent for both phenolic resin and TaCl5. The precursor solutions were either used directly for HTSP as carried out for R1, or mixed with a small amount of ammonia solution (2 M solution in ethanol, Sigma-Aldrich #392685) to remove Cl ion as precipitated NH4Cl crystals from the precursor solution and then used for HTSP as carried out for R2."
+    ]
+  },
+  {
+    "category": "table",
+    "question": "In the You et al. 2025 work on 2D SiC/SiC composites, what was the average crack spacing measured at room temperature according to Table 2?",
+    "reference_answer": "The average crack spacing at room temperature was 26.89 micrometers with a variance of 7.76, measured from periodically distributed matrix cracks.",
+    "answer_keys": [
+      ["26.89", "26.89 micrometers", "μm"],
+      ["room temperature", "rt", "25"],
+      ["crack spacing", "spacing"]
+    ],
+    "evidence_any": [
+      "Table 2 Variation of crack spacing with temperature T /oC Crack spacing/μm Average/μm",
+      "RT 16.28 27.20 25.47 27.39 38.12 26.89 7.76",
+      "Quantitative characterization from Fig. 7a revealed periodically distributed matrix cracks"
+    ],
+    "source_docs": [
+      "You_2025_MaterialsCharacterization_Stress-oxidationinduced.pdf"
+    ],
+    "excerpts": [
+      "Quantitative characterization from Fig. 7a revealed periodically distributed matrix cracks adjacent to fracture surface, with statistically analyzed crack spacing data presented in Table 2. Table 2 Variation of crack spacing with temperature T /oC Crack spacing/μm Average/μm Variance RT 16.28 27.20 25.47 27.39 38.12 26.89 7.76 1000℃ 32.25 33.15 16.84 18.10 14.51 22.97 8.98 1250℃ 20.07 9.85 21.50 22.93 21.32 19.13 5.29 1350℃ 29.74 14.69 15.77 21.68 23.65 21.10 6.14 1500℃ 8.781 19.71 21.50 18.45 16.66 17.02 4.934"
+    ]
+  },
+  {
+    "category": "table",
+    "question": "What was the measured tensile modulus of 2D SiC/SiC composites at 1500 degrees Celsius in the You et al. 2025 study, based on Table 3?",
+    "reference_answer": "The measured tensile modulus at 1500 degrees Celsius was 199.60 GPa, compared to a calculated value of 171.50 GPa with an error of 8.52%.",
+    "answer_keys": [
+      ["199.60", "199.6", "gpa"],
+      ["1500", "measured"],
+      ["tensile modulus", "modulus"]
+    ],
+    "evidence_any": [
+      "Table 3 Comparison of calculated and measured values of tensile modulus Ec",
+      "At 1500℃ Calculated 171.50 Measured 199.60 Error 8.52%",
+      "the tensile modulus Ec of 2D SiC/SiC composites exhibited significant temperature dependence"
+    ],
+    "source_docs": [
+      "You_2025_MaterialsCharacterization_Stress-oxidationinduced.pdf"
+    ],
+    "excerpts": [
+      "Under high-temperature tensile conditions, the tensile modulus (Ec) of 2D SiC/SiC composites exhibited significant temperature dependence, decreasing from 262.20GPa at room temperature to 171.50GPa at 1500°C. Prior to matrix cracking, the fibers were not exposed to the air environment, so the fiber modulus was assumed to be a constant value attenuation experimentally the dependent GPa within primarily during temperature 3.3.2 As 1000℃ 1250℃ 1350℃ 1500℃ 1500℃ T/℃ As at of Matrix 20%, dynamic 1500°C. of shown 350GPa. originated mixtures degradation, Calculated conditions. of Table validating measured in cracking The tensile structural 215.25 209.74 200.68 207.38 199.60 Table 3 (Eq. Comparison values/GPa from Jdeviations odegradation decreasing loading, the 3, (5)), variations two ustress rthe constituents reliability predictions rfactors, Measured calculated between nbetween and Eafrom in behavior c262.20 209.30 197.20 191.10 171.50 =Eperformance l the variations values/GPa calculated of fVPpredicted of 215.25 values in SiC fthe +EEc rprimarily m2D matrix GPa in Error/% 17.91% 16.39% -0.21% 1.77% 8.52%"
+    ]
+  },
+  {
+    "category": "table",
+    "question": "According to Table 4 in You et al. 2025, what was the measured matrix cracking stress at room temperature in the 2D SiC/SiC composites?",
+    "reference_answer": "The measured matrix cracking stress (sigma_mc) at room temperature was 139.30 megapascals, slightly higher than the calculated value of 115.78 megapascals with an error of 5.51%.",
+    "answer_keys": [
+      ["139.30", "139.3", "mpa"],
+      ["room temperature", "as received"],
+      ["matrix crack", "cracking stress"]
+    ],
+    "evidence_any": [
+      "Table 4 Comparison between calculated and measured values of sigma_mc",
+      "As received 115.78 139.30 5.51%",
+      "σmc could be effectively predicted based on interphase parameters obtained from push-in tests"
+    ],
+    "source_docs": [
+      "You_2025_MaterialsCharacterization_Stress-oxidationinduced.pdf"
+    ],
+    "excerpts": [
+      "According to Evans et al., the matrix cracking stress (σmc) exhibited a strong correlation with interphase parameters (τc, Γi), with their quantitative relationship characterized by Eq. (7). Consequently, σmc could be effectively predicted based on interphase parameters obtained from push-in tests. Furthermore, employing the proportional limit stress (PLS) theory proposed by Liu et al., the experimentally measured values could be equivalently represented by PLS. The final comparison between measured and calculated values was presented in Table 4. Table 4 Comparison between calculated and measured values of σmc T/℃ Calculated values/MPa Measured values/MPa Error/% As received 115.78 139.30 5.51% 1000℃ 155.41 155.60 12.24% 1250℃ 115.48 121.70 19.24% 1350℃ 130.36 144.60 29.25% 1500℃ 130.18 128.30 6.28%"
+    ]
+  },
+  {
+    "category": "table",
+    "question": "In the You 2025 study, what was the measured tensile strength of 2D SiC/SiC composites at 1000 degrees Celsius according to Table 5?",
+    "reference_answer": "The measured tensile strength at 1000 degrees Celsius was 300.25 megapascals, showing good agreement with the calculated value of 328.81 megapascals with a 1.66% error.",
+    "answer_keys": [
+      ["300.25", "300.3", "mpa"],
+      ["1000", "1000c"],
+      ["tensile strength", "sigma p"]
+    ],
+    "evidence_any": [
+      "Table 5 Comparison between calculated and measured values of σp T/℃ 1000℃",
+      "1000℃ 328.81 300.25 1.66%",
+      "σp similarly demonstrated significant temperature-dependent degradation"
+    ],
+    "source_docs": [
+      "You_2025_MaterialsCharacterization_Stress-oxidationinduced.pdf"
+    ],
+    "excerpts": [
+      "As presented in Table 5, σp similarly demonstrated significant temperature-dependent degradation. The prediction errors remained within 30% across the entire temperature range from room temperature to 1500°C, indicating good overall reliability of the predictive model. The primary sources of prediction error originate from, dynamic variations in fiber volume fraction during high-temperature tensile loading, and the influence of test region selection on characteristic length measurements. Table 5 Comparison between calculated and measured values of σp T/℃ Calculated values/MPa Measured values/MPa Error/% As received 303.03 397.48 17.70% 1000℃ 328.81 300.25 1.66% 1250℃ 286.86 248.44 2.23% 1350℃ 299.00 204.26 -28.40% 1500℃ 313.35 287.90 0.07%"
+    ]
+  },
+  {
+    "category": "table",
+    "question": "According to Table 6 in You et al. 2025, incorporating stress-oxidation effects, what was the measured tensile strength of 2D SiC/SiC composites at 1250 degrees Celsius?",
+    "reference_answer": "The measured tensile strength at 1250 degrees Celsius was 248.44 megapascals, with a calculated value accounting for stress-oxidation of 221.54 megapascals and an error of 10.83%.",
+    "answer_keys": [
+      ["248.44", "248.4", "mpa"],
+      ["1250", "1250c"],
+      ["stress-oxid", "table 6"]
+    ],
+    "evidence_any": [
+      "Table 6 Comparison between calculated and measured tensile strength values",
+      "1250℃ 221.54 248.44 10.83%",
+      "the tensile strength of the composite material could be predicted based on Eq"
+    ],
+    "source_docs": [
+      "You_2025_MaterialsCharacterization_Stress-oxidationinduced.pdf"
+    ],
+    "excerpts": [
+      "By substituting these into Eq. (16), the tensile strength relationship incorporating stress-oxidation effects (Eq. (21)) was derived. The calculated tensile strength results were summarized in Table 6. 3.3.4 mechanisms composites substantial evidenced and growth the 1000℃ 1250℃ 1350℃ 1500℃ T/℃ RT response SiC Fig. was fibers Stress-oxidation Calculated 13 by oxidation observed under entered Table illustrated a maintained 397.48 256.70 221.54 208.69 187.26 color values/MPa 6 high-temperature Comparison Jand a change in nonlinear othe SiC surface structural uMeasured evolution fibers. from rbetween induced nparticle phase 397.48 300.25 248.44 204.26 287.90 dark aUpon values/MPa integrity \\]12 oxidative pof calculated laccording to density and increase due to oxidation at high temperatures"
+    ]
+  },
+  {
+    "category": "table",
+    "question": "In the Cheng 2017 TaC synthesis study, what volume of 1-pentanol was used in recipe R1 according to Table 1?",
+    "reference_answer": "Recipe R1 required 2.840 grams of 1-pentanol as one of the solvents for dissolving the tantalum chloride precursor.",
+    "answer_keys": [
+      ["2.840", "2.84", "gram"],
+      ["1-pentanol", "pentanol"],
+      ["recipe r1", "r1"]
+    ],
+    "evidence_any": [
+      "Table 1 Summary of recipes for different mixed solutions Recipe R1 1-Pentanol g 2.840",
+      "TaCl5 was dissolved separately in 1-pentanol, into which the phenolic resin-ethanol solution was then added",
+      "the solvents used are absolute ethanol or 1-pentanol"
+    ],
+    "source_docs": [
+      "Cheng_2017_CeramicsInternational_Synthesisofnanocrystalline.pdf"
+    ],
+    "excerpts": [
+      "In particular, for the synthesis of nanocrystalline TaC UHTC powders via the single-step HTSP process, the starting tantalum precursor used is tantalum pentachloride (TaCl5, 99.8%, Alfa Aesar #14164), the carbon precursor used is Novolac phenolic resin (Plenco, 14353, R5420), and the solvents used are absolute ethanol (99.5+%, Acros Organics #61509-0020) or 1-pentanol (99+%, Alfa Aesar # 30898). Two recipes were adopted, as summarized in Table 1: for recipe R1, phenolic resin was first dissolved in ethanol to form an orange-colored solution. TaCl5 was dissolved separately in 1-pentanol, into which the phenolic resin-ethanol solution was then added. For recipe R2, ethanol was used as the solvent for both phenolic resin and TaCl5."
+    ]
+  },
+  {
+    "category": "table",
+    "question": "According to Table 2 in You et al. 2025, what was the average crack spacing at 1500 degrees Celsius in the 2D SiC/SiC composites?",
+    "reference_answer": "The average crack spacing at 1500 degrees Celsius was 17.02 micrometers with a variance of 4.934, representing the smallest average spacing across all tested temperatures.",
+    "answer_keys": [
+      ["17.02", "17.0", "micrometers"],
+      ["1500", "1500c"],
+      ["crack spacing", "spacing"]
+    ],
+    "evidence_any": [
+      "Table 2 Variation of crack spacing with temperature 1500℃ 8.781 19.71 21.50 18.45 16.66 17.02",
+      "periodically distributed matrix cracks adjacent to fracture surface were observed",
+      "Quantitative characterization from Fig. 7a revealed crack spacing data presented in Table 2"
+    ],
+    "source_docs": [
+      "You_2025_MaterialsCharacterization_Stress-oxidationinduced.pdf"
+    ],
+    "excerpts": [
+      "Quantitative characterization from Fig. 7a revealed periodically distributed matrix cracks adjacent to fracture surface, with statistically analyzed crack spacing data presented in Table 2. Table 2 Variation of crack spacing with temperature T /oC Crack spacing/μm Average/μm Variance RT 16.28 27.20 25.47 27.39 38.12 26.89 7.76 1000℃ 32.25 33.15 16.84 18.10 14.51 22.97 8.98 1250℃ 20.07 9.85 21.50 22.93 21.32 19.13 5.29 1350℃ 29.74 14.69 15.77 21.68 23.65 21.10 6.14 1500℃ 8.781 19.71 21.50 18.45 16.66 17.02 4.934 Fig. 7c presented CT image of the 1250°C tensile fracture surface, employing intelligent phase identification with color-coding"
+    ]
+  }
+]

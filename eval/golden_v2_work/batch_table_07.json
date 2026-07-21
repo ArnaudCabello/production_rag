@@ -1,0 +1,83 @@
+[
+  {
+    "category": "table",
+    "question": "According to Manaud 2024, what is the relative density (percentage) of TaC sintered by spark plasma sintering at 1873 K?",
+    "reference_answer": "The relative density of TaC sintered at 1873 K is 96 ± 1%.",
+    "answer_keys": [["96"], ["1", "percent"], ["tac"]],
+    "evidence_any": ["Dense tantalum-based carbonitride materials featuring greater than 95 percent relative density TaC", "The values reported in Table 1 show that the relative densities of the Ta2CN pellets"],
+    "source_docs": ["Manaud_2024_OpenCeramics_Sparkplasma.pdf"],
+    "excerpts": ["Table 1 Relative densities of pellets after sintering by SPS from TaC to TaN with the three intermediate compounds.\n\nComposition Tsintering (K) Relative density (%)\n\nTaC 1873 96 ± 1 Ta2C1.5N0.5 1873 95 ± 2 Ta2CN 1873 97 ± 1 Ta2CN 1973 97 ± 1 Ta2C0.5N1.5 1873 96 ± 1 TaN 1873 95 ± 2\n\nThe values reported in Table 1 show that the relative densities of the Ta2CN pellets are the same meaning that a sintering temperature as low as 1873 K appears sufficient for our study."]
+  },
+  {
+    "category": "table",
+    "question": "In the Manaud 2024 study, what is the relative density (percentage) of the Ta2CN carbonitride when sintered at 1973 K?",
+    "reference_answer": "The relative density of Ta2CN sintered at 1973 K is 97 ± 1%.",
+    "answer_keys": [["97"], ["1", "percent"], ["ta2cn"]],
+    "evidence_any": ["then we performed the sintering of a series of samples from TaC to TaN", "To decide which temperature to select for the rest of the study we checked"],
+    "source_docs": ["Manaud_2024_OpenCeramics_Sparkplasma.pdf"],
+    "excerpts": ["Table 1 Relative densities of pellets after sintering by SPS from TaC to TaN with the three intermediate compounds.\n\nComposition Tsintering (K) Relative density (%)\n\nTaC 1873 96 ± 1 Ta2C1.5N0.5 1873 95 ± 2 Ta2CN 1873 97 ± 1 Ta2CN 1973 97 ± 1 Ta2C0.5N1.5 1873 96 ± 1 TaN 1873 95 ± 2\n\nTo decide which temperature to select for the rest of the study we checked the relative density of the Ta2CN pellets prepared at 1873 K and 1973 K. The values reported in Table 1 show that the relative densities of the Ta2CN pellets are the same."]
+  },
+  {
+    "category": "table",
+    "question": "What is the Young's modulus in GPa of TaC as measured by nano-indentation in the Manaud 2024 study?",
+    "reference_answer": "The Young's modulus of TaC measured by nano-indentation is 704 ± 35 GPa, which is higher than typical literature values for similar UHTC materials.",
+    "answer_keys": [["704"], ["35", "gpa"], ["tac"]],
+    "evidence_any": ["TaC 704 ± 35 Young's Modulus GPa", "The Young's moduli measured by nano indentation were approx 600 700 GPa"],
+    "source_docs": ["Manaud_2024_OpenCeramics_Sparkplasma.pdf"],
+    "excerpts": ["Table 3 Young's modulus and hardness of the different samples averaged among all the tests results.\n\nSample Young's Modulus (GPa) Hardness (GPa)\n\nTaC 704 ± 35 16.4 ± 0.8 Ta2C1.5N0.5 606 ± 37 20.5 ± 1.5 Ta2CN 609 ± 29 22.9 ± 1.2 Ta2C0.5N1.5 648 ± 32 26.5 ± 2.2 TaN 634 ± 23 27.9 ± 1.3"]
+  },
+  {
+    "category": "table",
+    "question": "According to Manaud 2024, what is the hardness in GPa of the TaN tantalum nitride sample measured by nano-indentation?",
+    "reference_answer": "The hardness of TaN measured by nano-indentation is 27.9 ± 1.3 GPa, representing the highest hardness value in the tantalum carbonitride series.",
+    "answer_keys": [["27.9"], ["1.3", "gpa"], ["tan", "nitride"]],
+    "evidence_any": ["TaN 634 ± 23 27.9 ± 1.3", "The hardness values increased from 16.4 0.8 GPa for TaC to 27.9 1.3 GPa for TaN"],
+    "source_docs": ["Manaud_2024_OpenCeramics_Sparkplasma.pdf"],
+    "excerpts": ["Table 3 Young's modulus and hardness of the different samples averaged among all the tests results.\n\nSample Young's Modulus (GPa) Hardness (GPa)\n\nTaC 704 ± 35 16.4 ± 0.8 Ta2C1.5N0.5 606 ± 37 20.5 ± 1.5 Ta2CN 609 ± 29 22.9 ± 1.2 Ta2C0.5N1.5 648 ± 32 26.5 ± 2.2 TaN 634 ± 23 27.9 ± 1.3"]
+  },
+  {
+    "category": "table",
+    "question": "What is the hardness value in GPa of the Ta2CN carbonitride composition in the Manaud 2024 nano-indentation study?",
+    "reference_answer": "The hardness of Ta2CN measured by nano-indentation is 22.9 ± 1.2 GPa.",
+    "answer_keys": [["22.9"], ["1.2", "gpa"], ["ta2cn"]],
+    "evidence_any": ["Ta2CN 609 ± 29 22.9 ± 1.2", "the carbonitride samples show an approximately linear trend with hardness values"],
+    "source_docs": ["Manaud_2024_OpenCeramics_Sparkplasma.pdf"],
+    "excerpts": ["Table 3 Young's modulus and hardness of the different samples averaged among all the tests results.\n\nSample Young's Modulus (GPa) Hardness (GPa)\n\nTaC 704 ± 35 16.4 ± 0.8 Ta2C1.5N0.5 606 ± 37 20.5 ± 1.5 Ta2CN 609 ± 29 22.9 ± 1.2 Ta2C0.5N1.5 648 ± 32 26.5 ± 2.2 TaN 634 ± 23 27.9 ± 1.3"]
+  },
+  {
+    "category": "table",
+    "question": "In the Manaud 2024 study, what is the unit cell parameter a in Angstroms for cubic TaC determined by Rietveld refinement from PXRD data?",
+    "reference_answer": "The unit cell parameter a for TaC determined by Rietveld refinement is 4.4430(1) Å.",
+    "answer_keys": [["4.4430"], ["angstrom", "tac"], ["rietveld"]],
+    "evidence_any": ["TaC Cubic 4.4430 1 0.92 0.98", "TaC has a unit cell parameter a equals 4.4430 1 Angstrom"],
+    "source_docs": ["Manaud_2024_OpenCeramics_Sparkplasma.pdf"],
+    "excerpts": ["Table 2 Crystallography parameters determined by Rietveld refinement on PXRD diagrams and microstructural parameters measured on ion polished cross sections of each sample from TaC to TaN after SPS sintering.\n\nSample Phase Structure Unit cell parameters\n\n(Å)\n\n6 Volume fraction (− )\n\nd50 (μm)\n\nTaC TaC Cubic 4.4430(1) 0.92 0.98 1.79 4.1 5.2"]
+  },
+  {
+    "category": "table",
+    "question": "What is the median grain diameter d50 in micrometers of the main TaC phase in the Manaud 2024 EBSD/EDS analysis?",
+    "reference_answer": "The median grain diameter d50 of the main TaC phase is 1.79 micrometers.",
+    "answer_keys": [["1.79"], ["micrometers", "micrometer"], ["tac"]],
+    "evidence_any": ["TaC Cubic 4.4430 1 0.92 0.98 1.79 4.1", "d50 of the main phase TaC or Ta2CxNy decreases monotonically"],
+    "source_docs": ["Manaud_2024_OpenCeramics_Sparkplasma.pdf"],
+    "excerpts": ["Table 2 Crystallography parameters determined by Rietveld refinement on PXRD diagrams and microstructural parameters measured on ion polished cross sections of each sample from TaC to TaN after SPS sintering.\n\nSample Phase Structure Unit cell parameters\n\n(Å)\n\n6 Volume fraction (− )\n\nd50 (μm)\n\nTaC TaC Cubic 4.4430(1) 0.92 0.98 1.79 4.1 5.2"]
+  },
+  {
+    "category": "table",
+    "question": "According to Jayaseelan 2011, what is the initial total porosity percentage of the porous C/C composite tubes measured using the Archimedes method?",
+    "reference_answer": "The porous C/C composite tubes had an initial total porosity of approximately 60%, measured using the Archimedes method.",
+    "answer_keys": [["60", "percent"], ["porosity"], ["composite", "c/c"]],
+    "evidence_any": ["The porous C/C composite tubes had a total porosity of 60%", "measured using Archimedes method with bimodal pore size distribution"],
+    "source_docs": ["Jayaseelan_2011_EuropeanCeramicSociety_Reactiveinfiltration.pdf"],
+    "excerpts": ["Porous C/C tubes of 17.75mm OD x 3.90 mm ID x 45 mm long were used in the present study for ZrB2 infiltration. The porous C/C composite tubes had a total porosity of ∼60% (measured using Archimedes method) and bimodal pore size distribution (determined using laser diffraction particle size analyser) with average pore sizes of 150μm and 10μm, respectively."]
+  },
+  {
+    "category": "table",
+    "question": "What is the solid loading percentage of ZrB2 in the slurry used for infiltration in the Jayaseelan 2011 reactive infiltration study?",
+    "reference_answer": "The slurry used for reactive infiltration of C/C composite tubes contained 40 to 50 percent ZrB2 solid loading particles, with the gel composite approach using 50 weight percent total solid loading.",
+    "answer_keys": [["40", "50", "percent"], ["zrb2", "solid"], ["slurry", "infiltration"]],
+    "evidence_any": ["A slurry with 40 50% ZrB2 solid loading particles was used", "Wet slurry containing 50wt% solid loading of ZrB2 was prepared"],
+    "source_docs": ["Jayaseelan_2011_EuropeanCeramicSociety_Reactiveinfiltration.pdf"],
+    "excerpts": ["A novel reactive infiltration processing (RIP) technique was employed to infiltrate porous carbon fibre reinforced carbon (C/C) composite hollow tubes with ultra high temperature ceramic (UHTC) particles such as ZrB2. The C/C composite tubes had initial porosity of ∼60% with a bimodal (10μm and 100μm) pore size distribution. A slurry with 40–50% ZrB2 solid loading particles was used to infiltrate the C/C tubes."]
+  }
+]
