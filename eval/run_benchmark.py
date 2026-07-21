@@ -60,11 +60,25 @@ def build_baseline(model, provider, top_k):
 
 
 def build_agentic(model, provider, top_k):
-    # Wire the agentic pipeline in here once it exists. It must return the same
-    # record shape; put the UNION of all chunks retrieved across its steps in
-    # "chunks" (that is what evidence recall is measured against) and count
-    # every LLM and retrieval call.
-    sys.exit("agentic pipeline not implemented yet — see build_agentic() in eval/run_benchmark.py")
+    from agentic.graph import build_agentic_graph
+    from generation.llm import get_llm
+    from retrieval.retriever import HybridRetriever
+
+    if top_k:
+        config.RERANK_TOP_N = top_k
+    graph = build_agentic_graph(HybridRetriever(), get_llm(model, provider))
+
+    def answer(question: str) -> dict:
+        result = graph.invoke({"question": question,
+                               "llm_calls": 0, "retrieval_calls": 0})
+        return {
+            "answer": result["answer"],
+            "chunks": [{"chunk_id": c["chunk_id"], "text": c["text"]}
+                       for c in result["chunks"]],
+            "llm_calls": result["llm_calls"],
+            "retrieval_calls": result["retrieval_calls"],
+        }
+    return answer
 
 
 PIPELINES = {"baseline": build_baseline, "agentic": build_agentic}
