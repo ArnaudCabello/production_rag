@@ -30,6 +30,14 @@ The baseline retrieves once and generates once. Tier-B questions need:
 - Cost ceiling: ≤ 6 LLM calls and ≤ 5× baseline latency per question (median).
 - Every module lands with its own test/validation set BEFORE implementation
   (see /build workflow in .claude/commands/build.md).
+- Groundedness: answers must come from retrieval, not the model's parametric
+  knowledge (see "Tool-use / groundedness verification" in eval/README.md):
+  (a) `retrieval_calls ≥ 1` on every answered question, (b) evidence_recall
+  correlates with correctness (a correct answer with 0 evidence recall is a
+  contamination red flag), (c) a closed-book control run (retrieval disabled)
+  scored with the same judge — its correct rate is the contamination floor and
+  the agentic pipeline's gain is only credible above it, (d) M5 citation
+  validity: every citation must resolve to an actually-retrieved chunk.
 
 ## 4. Architecture (target)
 

@@ -75,3 +75,16 @@ class DupRetriever(StubRetriever):
 ag = run_agentic(DupRetriever(), StubLLM(), "what is X")
 assert [c["chunk_id"] for c in ag["chunks"]] == ["a-1"]
 print("dedup by chunk_id: OK")
+
+# 6. trace toggle: off by default (no trace in result), on records per-node events
+ag = run_agentic(StubRetriever(), StubLLM(), "what is X")
+assert not ag.get("trace"), ag.get("trace")
+graph = build_agentic_graph(StubRetriever(), StubLLM(), trace=True)
+ag = graph.invoke({"question": "what is X", "llm_calls": 0,
+                   "retrieval_calls": 0, "trace": []})
+assert [e["node"] for e in ag["trace"]] == ["plan", "retrieve", "synthesize"], ag["trace"]
+assert ag["trace"][0]["sub_queries"] == ["what is X"]
+assert ag["trace"][1] == {"node": "retrieve", "query": "what is X",
+                          "chunk_ids": ["a-1", "b-1"]}
+assert ag["trace"][2]["context_chunks"] == 2
+print("trace: off by default, on records plan/retrieve/synthesize events: OK")

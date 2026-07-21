@@ -27,6 +27,25 @@ Module status board (update the table too):
 
 ---
 
+## 2026-07-21 tracing + groundedness docs — done
+- What was done: toggleable agent trace — `build_agentic_graph(..., trace=True)`
+  makes each node append events to state["trace"] (plan: sub_queries;
+  retrieve: query + returned chunk_ids per call; synthesize: context size);
+  `run_benchmark.py --trace` writes it into the JSONL. Off by default — full
+  306-q runs unaffected. Documented groundedness verification protocol
+  (PRD success criteria + eval/README.md): counters, evidence_recall red
+  flags, closed-book control run (to build in M6), M5 citation validity.
+- Files touched: agentic/graph.py, eval/run_benchmark.py,
+  tests/test_agentic_parity.py (trace test), eval/README.md, PRD.md
+- Tests: `python tests/test_agentic_parity.py` — passing;
+  `python tests/test_pipeline.py` — passing.
+- Next step for the following agent: unchanged — plan M2 (planner). M2-M5
+  nodes should append their own trace events (loop rounds, evidence-check
+  verdicts) following the same pattern.
+- Gotchas discovered: human's Gemini API key (.env) is capped at 20
+  calls/day — spot checks only, never a full judging pass. `--top-k 0` does
+  nothing (0 is falsy) — the closed-book control needs its own adapter.
+
 ## 2026-07-21 M1 skeleton + adapter — done
 - What was done: `agentic/` package with the target plan → retrieve →
   synthesize LangGraph (all nodes trivial pass-throughs, == baseline on plain

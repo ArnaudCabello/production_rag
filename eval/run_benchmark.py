@@ -38,7 +38,7 @@ load_dotenv(REPO_ROOT / ".env")
 import config  # noqa: E402
 
 
-def build_baseline(model, provider, top_k):
+def build_baseline(model, provider, top_k, trace=False):
     from generation.llm import get_llm
     from generation.pipeline import build_graph
     from retrieval.retriever import HybridRetriever
@@ -59,25 +59,28 @@ def build_baseline(model, provider, top_k):
     return answer
 
 
-def build_agentic(model, provider, top_k):
+def build_agentic(model, provider, top_k, trace=False):
     from agentic.graph import build_agentic_graph
     from generation.llm import get_llm
     from retrieval.retriever import HybridRetriever
 
     if top_k:
         config.RERANK_TOP_N = top_k
-    graph = build_agentic_graph(HybridRetriever(), get_llm(model, provider))
+    graph = build_agentic_graph(HybridRetriever(), get_llm(model, provider), trace=trace)
 
     def answer(question: str) -> dict:
-        result = graph.invoke({"question": question,
-                               "llm_calls": 0, "retrieval_calls": 0})
-        return {
+        result = graph.invoke({"question": question, "llm_calls": 0,
+                               "retrieval_calls": 0, "trace": []})
+        out = {
             "answer": result["answer"],
             "chunks": [{"chunk_id": c["chunk_id"], "text": c["text"]}
                        for c in result["chunks"]],
             "llm_calls": result["llm_calls"],
             "retrieval_calls": result["retrieval_calls"],
         }
+        if trace:
+            out["trace"] = result["trace"]
+        return out
     return answer
 
 
@@ -97,6 +100,9 @@ def main():
                     help="chunks shown to the generator (ablation; default config.RERANK_TOP_N)")
     ap.add_argument("--limit", type=int, default=None)
     ap.add_argument("--ids", default=None, help="comma-separated question ids")
+    ap.add_argument("--trace", action="store_true",
+                    help="record per-node agent trace in the output (agentic only; "
+                         "use on small --ids/--limit runs, not the full set)")
     args = ap.parse_args()
 
     output = args.output or (Path(__file__).resolve().parent / "results_v2"
@@ -119,7 +125,8 @@ def main():
         print("Nothing to do.")
         return
 
-    answer_fn = PIPELINES[args.pipeline](args.model, args.provider, args.top_k)
+    answer_fn = PIPELINES[args.pipeline](args.model, args.provider, args.top_k,
+                                         trace=args.trace)
 
     with output.open("a", encoding="utf-8") as f:
         for i, q in enumerate(golden, 1):
@@ -141,6 +148,8 @@ def main():
                 "retrieval_calls": result.get("retrieval_calls"),
                 "latency_s": round(time.monotonic() - t0, 2),
             }
+            if "trace" in result:
+                record["trace"] = result["trace"]
             f.write(json.dumps(record) + "\n")
             f.flush()  # a crash mid-run must not lose finished answers to buffering
             print(f"[{len(done) + i}] {q['id']} ({record['latency_s']}s): "

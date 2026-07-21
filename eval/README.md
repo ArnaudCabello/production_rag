@@ -13,6 +13,41 @@ python eval/score_benchmark.py eval/results_v2/bench_baseline.jsonl --judge  # m
 python eval/compare.py eval/results_v2/bench_baseline_scored.json eval/results_v2/bench_agentic_scored.json
 ```
 
+## Tool-use / groundedness verification
+
+We must be able to show the pipeline's answers come from retrieval (tool
+calls), not the LLM's parametric knowledge. What exists today:
+
+- `run_benchmark.py` records `retrieval_calls` / `llm_calls` per question —
+  any answered question with `retrieval_calls == 0` means the agent skipped
+  the tool and answered from memory. Check this when scoring agentic runs.
+- `--trace` (agentic only) records a per-node trace in each JSONL record:
+  planner sub-queries, every retrieval query with the chunk_ids it returned,
+  and synthesis context size — so you can see the agent actually calling its
+  tools. OFF by default; keep it off for the full 306-question run and turn it
+  on for small targeted runs, e.g.
+  `python eval/run_benchmark.py --pipeline agentic --trace --ids f01,mh03 --output eval/results_v2/trace_check.jsonl`
+- `score_benchmark.py` computes `evidence_recall` over the chunks the
+  generator actually saw. A judge-correct answer with evidence_recall 0 is a
+  contamination red flag — inspect those questions, don't celebrate them.
+
+What still needs to be run/built (target: M6):
+
+- **Closed-book control run**: the same generator answering the golden set
+  with retrieval disabled (no chunks in the prompt), scored with the same
+  judge. Its correct rate is the parametric-knowledge floor; baseline/agentic
+  gains only count above it. Needs a small `closed_book` adapter in
+  `run_benchmark.py` (`--top-k 0` currently does nothing — 0 is falsy).
+- **Citation validity** (M5 tests): every citation in an answer must resolve
+  to a chunk that was actually retrieved in that run.
+
+## External judge (Gemini)
+
+A Gemini API key is available in `.env` for testing/judging, but it is hard
+capped at **20 calls/day**. Never burn it on a full 306-question pass — use it
+for spot checks (≤ ~15 questions per run, leave headroom). Full-set judging
+stays on the local Qwen judge.
+
 Everything below this line documents the LEGACY 30/54-question harness; its
 recorded results stay in `eval/results/`.
 

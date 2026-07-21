@@ -22,22 +22,34 @@ class AgentState(TypedDict):
     answer: str
     llm_calls: int
     retrieval_calls: int
+    trace: list[dict]  # per-node events when trace=True; init to [] in the invoke input
 
 
-def build_agentic_graph(retriever, llm):
+def build_agentic_graph(retriever, llm, trace: bool = False):
     def plan(state: AgentState):
-        return {"sub_queries": [state["question"]]}
+        update = {"sub_queries": [state["question"]]}
+        if trace:
+            update["trace"] = state["trace"] + [
+                {"node": "plan", "sub_queries": update["sub_queries"]}]
+        return update
 
     def retrieve(state: AgentState):
-        chunks, seen = [], set()
+        chunks, seen, events = [], set(), []
         calls = state["retrieval_calls"]
         for query in state["sub_queries"]:
             calls += 1
-            for chunk in retriever.search(query):
+            hits = retriever.search(query)
+            if trace:
+                events.append({"node": "retrieve", "query": query,
+                               "chunk_ids": [c["chunk_id"] for c in hits]})
+            for chunk in hits:
                 if chunk["chunk_id"] not in seen:
                     seen.add(chunk["chunk_id"])
                     chunks.append(chunk)
-        return {"chunks": chunks, "retrieval_calls": calls}
+        update = {"chunks": chunks, "retrieval_calls": calls}
+        if trace:
+            update["trace"] = state["trace"] + events
+        return update
 
     def synthesize(state: AgentState):
         messages = [
@@ -45,8 +57,12 @@ def build_agentic_graph(retriever, llm):
             HumanMessage(content=USER_TEMPLATE.format(
                 context=format_context(state["chunks"]), question=state["question"])),
         ]
-        return {"answer": llm.invoke(messages).content,
-                "llm_calls": state["llm_calls"] + 1}
+        update = {"answer": llm.invoke(messages).content,
+                  "llm_calls": state["llm_calls"] + 1}
+        if trace:
+            update["trace"] = state["trace"] + [
+                {"node": "synthesize", "context_chunks": len(state["chunks"])}]
+        return update
 
     graph = StateGraph(AgentState)
     graph.add_node("plan", plan)
