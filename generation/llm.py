@@ -38,7 +38,15 @@ def get_llm(model_name: str = None, provider: str = None):
                 "return_full_text": False,
             },
         )
-        return ChatHuggingFace(llm=pipe)
+        chat = ChatHuggingFace(llm=pipe)
+        if "qwen3" in model_name.lower():
+            # Qwen3 chat template defaults to thinking mode: slow and leaks
+            # <think> blocks into answers. Disable it at the template level.
+            import functools
+            tok = chat.tokenizer
+            tok.apply_chat_template = functools.partial(
+                tok.apply_chat_template, enable_thinking=False)
+        return chat
 
     from langchain.chat_models import init_chat_model
 
