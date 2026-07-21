@@ -2,6 +2,16 @@
 
 Guidelines for working in this codebase.
 
+## 0. Agentic pipeline project (branch `agentic_pipeline`)
+
+If you are working on the agentic RAG pipeline: `PRD.md` defines what we are
+building, `agent/PROGRESS.md` is the single source of truth for where the
+last agent stopped (update it when you finish anything), module plans live in
+`agent/plans/`. Onboard with `/onboard`; implement planned modules with
+`/build MX` — validation set first, then code. The v2 benchmark
+(`eval/golden_set_v2.json` + run/score/compare in `eval/`) is the yardstick;
+never tune against the golden set itself.
+
 ## 1. Think Before Coding
 
 Don't assume. Don't hide confusion. Surface tradeoffs.
