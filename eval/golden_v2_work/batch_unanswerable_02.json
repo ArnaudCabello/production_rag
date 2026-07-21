@@ -1,0 +1,119 @@
+[
+  {
+    "category": "unanswerable",
+    "question": "What is the ablation rate and oxide layer composition when ZrB2-SiC coatings are deposited by supersonic atmospheric plasma spraying on C/C composites and exposed to an oxyacetylene torch at 2200°C for 150 seconds?",
+    "reference_answer": "This information is not available in the corpus.",
+    "answer_keys": [["not", "no ", "unable", "cannot", "doesn't", "does not"]],
+    "evidence_any": [],
+    "source_docs": ["He_2021_SurfaceandCoatingsTechnology_Self-healingperformance.pdf"],
+    "excerpts": []
+  },
+  {
+    "category": "unanswerable",
+    "question": "How do NbC coatings modified with 75 mol% HfC perform under oxyacetylene flame ablation testing for 180 seconds, and what is the effective ablation time compared to the 50 mol% HfC composition?",
+    "reference_answer": "This information is not available in the corpus.",
+    "answer_keys": [["not", "no ", "unable", "cannot", "doesn't", "does not"]],
+    "evidence_any": [],
+    "source_docs": ["He_2021_SurfaceandCoatingsTechnology_Self-healingperformance.pdf"],
+    "excerpts": []
+  },
+  {
+    "category": "unanswerable",
+    "question": "What are the quantified oxide phases and thermal stability of TaC-ZrC binary coatings when exposed to plasma jet conditions exceeding 3000°C?",
+    "reference_answer": "This information is not available in the corpus.",
+    "answer_keys": [["not", "no ", "unable", "cannot", "doesn't", "does not"]],
+    "evidence_any": [],
+    "source_docs": ["Nisar_2022_AppliedSurfaceScience_Quantificationofcomplex.pdf"],
+    "excerpts": []
+  },
+  {
+    "category": "unanswerable",
+    "question": "How does the viscosity and thermal stability of the oxide film formed on NbC-ZrC coatings change when subjected to peak temperatures of 2500°C instead of 2100°C during oxyacetylene testing?",
+    "reference_answer": "This information is not available in the corpus.",
+    "answer_keys": [["not", "no ", "unable", "cannot", "doesn't", "does not"]],
+    "evidence_any": [],
+    "source_docs": ["He_2021_SurfaceandCoatingsTechnology_Self-healingperformance.pdf"],
+    "excerpts": []
+  },
+  {
+    "category": "unanswerable",
+    "question": "What is the oxidation resistance and preferential oxidation mechanism of multi-component UHTC systems incorporating tungsten carbide (WC) components when exposed to plasma jet at temperatures above 2800°C?",
+    "reference_answer": "This information is not available in the corpus.",
+    "answer_keys": [["not", "no ", "unable", "cannot", "doesn't", "does not"]],
+    "evidence_any": [],
+    "source_docs": ["Nisar_2022_AppliedSurfaceScience_Quantificationofcomplex.pdf"],
+    "excerpts": []
+  },
+  {
+    "category": "unanswerable",
+    "question": "How does adding vanadium carbide (VC) to the (Ta,Nb,Hf,Ti)C quaternary system affect the preferential oxidation mechanism and complex oxide phase distribution during plasma arc jet exposure?",
+    "reference_answer": "This information is not available in the corpus.",
+    "answer_keys": [["not", "no ", "unable", "cannot", "doesn't", "does not"]],
+    "evidence_any": [],
+    "source_docs": ["Nisar_2022_AppliedSurfaceScience_Quantificationofcomplex.pdf"],
+    "excerpts": []
+  },
+  {
+    "category": "unanswerable",
+    "question": "What are the mechanical properties and residual coating strength for NbC-HfC coatings on C/C composites after extended oxyacetylene ablation testing exceeding 300 seconds?",
+    "reference_answer": "This information is not available in the corpus.",
+    "answer_keys": [["not", "no ", "unable", "cannot", "doesn't", "does not"]],
+    "evidence_any": [],
+    "source_docs": ["He_2021_SurfaceandCoatingsTechnology_Self-healingperformance.pdf"],
+    "excerpts": []
+  },
+  {
+    "category": "unanswerable",
+    "question": "How does increasing the spark plasma sintering pressure from 60 MPa to 120 MPa affect the oxidation resistance and microstructure of (Ta,Nb,Hf,Ti)C high-entropy carbides during plasma jet exposure?",
+    "reference_answer": "This information is not available in the corpus.",
+    "answer_keys": [["not", "no ", "unable", "cannot", "doesn't", "does not"]],
+    "evidence_any": [],
+    "source_docs": ["Nisar_2022_AppliedSurfaceScience_Quantificationofcomplex.pdf"],
+    "excerpts": []
+  },
+  {
+    "category": "unanswerable",
+    "question": "What is the oxidation behavior and oxide scale thickness of TaC-HfC-ZrC ternary coatings prepared by supersonic plasma spraying when exposed to water vapor environments at temperatures above 1800°C?",
+    "reference_answer": "This information is not available in the corpus.",
+    "answer_keys": [["not", "no ", "unable", "cannot", "doesn't", "does not"]],
+    "evidence_any": [],
+    "source_docs": ["He_2021_SurfaceandCoatingsTechnology_Self-healingperformance.pdf"],
+    "excerpts": []
+  },
+  {
+    "category": "unanswerable",
+    "question": "How do multi-component UHTCs containing molybdenum carbide (MoC) components compare to group IV and V element-based UHTCs in terms of preferential oxidation and complex oxide layer formation after plasma jet exposure?",
+    "reference_answer": "This information is not available in the corpus.",
+    "answer_keys": [["not", "no ", "unable", "cannot", "doesn't", "does not"]],
+    "evidence_any": [],
+    "source_docs": ["Nisar_2022_AppliedSurfaceScience_Quantificationofcomplex.pdf"],
+    "excerpts": []
+  },
+  {
+    "category": "unanswerable",
+    "question": "What are the quantified oxide phases, thermal stability, and phase transformation mechanisms for binary (Ta,Zr)C and ternary (Ta,Zr,Hf)C systems exposed to plasma jet conditions at 2800°C?",
+    "reference_answer": "This information is not available in the corpus.",
+    "answer_keys": [["not", "no ", "unable", "cannot", "doesn't", "does not"]],
+    "evidence_any": [],
+    "source_docs": ["Nisar_2022_AppliedSurfaceScience_Quantificationofcomplex.pdf"],
+    "excerpts": []
+  },
+  {
+    "category": "unanswerable",
+    "question": "What is the effect of carbon stoichiometry deviation (both hyper-stoichiometric and hypo-stoichiometric compositions) on the ablation resistance and self-healing performance of NbC-HfC coatings during oxyacetylene torch ablation testing?",
+    "reference_answer": "This information is not available in the corpus.",
+    "answer_keys": [["not", "no ", "unable", "cannot", "doesn't", "does not"]],
+    "evidence_any": [],
+    "source_docs": ["He_2021_SurfaceandCoatingsTechnology_Self-healingperformance.pdf"],
+    "excerpts": []
+  },
+  {
+    "category": "unanswerable",
+    "question": "How does the oxide scale thickness, composition, and protective mechanisms of SiC-free NbC-based UHTC coatings vary when applied to different substrate materials such as Al2O3 versus ZrO2 ceramics under extreme oxyacetylene thermal conditions?",
+    "reference_answer": "This information is not available in the corpus.",
+    "answer_keys": [["not", "no ", "unable", "cannot", "doesn't", "does not"]],
+    "evidence_any": [],
+    "source_docs": ["He_2021_SurfaceandCoatingsTechnology_Self-healingperformance.pdf"],
+    "excerpts": []
+  }
+]

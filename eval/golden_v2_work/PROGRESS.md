@@ -21,14 +21,22 @@ Protocol (for any session resuming this work):
    real index to repair/drop evidence spans that don't match indexed chunks,
    then freeze `eval/golden_set_v2.json`.
 
-## Status
+## Status (2026-07-21 ~12:00 UTC — session limit hit, resumes 22:40 UTC)
 
 - [x] papers_manifest.tsv
-- [ ] Wave 1: factual (60), semantic (40)
-- [ ] Wave 2: table (40), multi_chunk (30), unanswerable (25)
-- [ ] Wave 3: cross_document (50), multi_hop (30)
-- [ ] Wave 4: aggregation (25), ambiguous (15)
+- [x] factual 60/60, unanswerable 25/25
+- [ ] semantic 26/40 (need ~2 more batches of 8)
+- [ ] table 15/40 (need ~3 more batches of 9; batch_table_03 never landed)
+- [ ] multi_chunk 0/30 (batch 01 agent died mid-write — relaunch 3 batches of 11)
+- [ ] cross_document 0/50 (Sonnet, 5 batches of 11)
+- [ ] multi_hop 0/30 (Sonnet, 3 batches of 11)
+- [ ] aggregation 0/25 (Sonnet, 3 batches of 9, 4-5 papers each)
+- [ ] ambiguous 0/15 (Haiku, 2 batches of 8, 3-4 papers each)
 - [ ] assemble + verify + freeze
+
+Resume: launch agents per AGENT_PROMPT_TEMPLATE.md with unused papers from
+papers_manifest.tsv (see used list below / batch source_docs), run
+assemble.py after each wave, commit + push.
 
 Update the checkboxes and paper-assignment notes below as waves complete, so
 the next session doesn't reuse the same papers.

@@ -67,7 +67,7 @@
     "question": "In Vinci et al. 2025, what was the measured oxide scale thickness of the annealed Cf-ZrB2/SiC specimen with NbB2/NbC coating after oxidation at 1700°C?",
     "reference_answer": "Vinci et al. (2025) measured the oxide scale thickness of the vacuum-annealed NbB2/NbC-coated composite at approximately 79 ± 3 micrometers after oxidation at 1700°C in dry air, which was thinner and more homogeneous than the uncoated baseline material at 118 ± 9 µm.",
     "answer_keys": [["79 µm"], ["oxide scale", "1700°C"]],
-    "evidence_any": ["The oxide scale thickness was measured as ≈79 µm and found to be homogeneous across the length"]],
+    "evidence_any": ["The oxide scale thickness was measured as ≈79 µm and found to be homogeneous across the length"],
     "source_docs": ["Vinci_2025_CorrosionScience_Enhancedoxidation.pdf"],
     "excerpts": ["The cross-sectional analysis revealed the layered oxide scale containing an outer compact scale of large ZrO2 grains surrounded by SiO2, and an intermediate porous layer of finer ZrO2-Nb2O5 grains. The oxide scale thickness was measured as ≈79 µm and found to be homogeneous across the length of the specimen (Figure 13 c). The high magnification picture of the outer scale showed the dendritic morphology of the Nb2O5 growing alongside the ZrO2 grains (Figure 13 d). After oxidation at 1700 °C, the oxide scale thickness of the uncoated specimen almost doubled, while the coated and annealed specimens were characterized by a considerably lower thickness increase. Table 1 shows the oxide scale thickness values for all conditions tested."]
   },

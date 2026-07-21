@@ -1,0 +1,101 @@
+[
+  {
+    "category": "table",
+    "question": "What was the density of the Xu et al. 2021 ZF-ZS composite sample prepared by reactive infiltration of K2ZrF6 molten salt?",
+    "reference_answer": "The ZF-ZS composite sample had a density of 3.55 ± 0.05 g/cm³.",
+    "answer_keys": [["3.55", "g/cm"], ["zf-zs", "density"]],
+    "evidence_any": ["ZF-ZS 8 4.8 3.2 1 10.2 3.55 ± 0.05"],
+    "source_docs": ["Xu_2021_EuropeanCeramicSociety_Ablationproperties.pdf"],
+    "excerpts": ["Table 1 Density and final open porosity of infiltrated composites. Sample Powder ratio (mass ratio) Open porosity(%) Density(g/ cm3) K2ZrF6 K2TiF6 Si Zr NaCl ZF-S 8 8 1 7.6 2.75 ± 0.05 TF-S 8 8 1 8.0 2.81 ± 0.04 TF-ZS 8 4.8 3.2 1 9.3 2.73 ± 0.03 ZF-ZS 8 4.8 3.2 1 10.2 3.55 ± 0.05"]
+  },
+  {
+    "category": "table",
+    "question": "In Xu et al. 2021, what was the mass ablation rate of the ZF-ZS C/C-UHTC composite when tested under oxyacetylene flame at 2800 degrees Celsius surface temperature for 60 seconds?",
+    "reference_answer": "The ZF-ZS composite prepared by Xu and colleagues exhibited a mass ablation rate of 2.6 ± 0.02 mg/s.",
+    "answer_keys": [["2.6", "mg/s"], ["zf-zs", "mass ablation"]],
+    "evidence_any": ["ZF-ZS Molten salt + RMI O2:1.96 L/s, C2H2:0.696 L/s, Surface 2800 ℃ 60 2.6±0.02 0.82 ±0.04"],
+    "source_docs": ["Xu_2021_EuropeanCeramicSociety_Ablationproperties.pdf"],
+    "excerpts": ["Table 2 Ablation properties of multiphase UHTC modified C/C composites. Materials Modified method Ablation Test Ablation Time (s) Mass ablation rate (mg/s) Linear ablation rate (μm/ s) Ref. ZF-S Molten salt + RMI O2:1.96 L/s, C2H2:0.696 L/s, Surface 2800 ℃ 60 4.6 ±0.05 1.67 ±0.10 Current study ZF-ZS Molten salt + RMI O2:1.96 L/s, C2H2:0.696 L/s, Surface 2800 ℃ 60 2.6±0.02 0.82 ±0.04 Current study TF-S Molten salt + RMI O2:1.96 L/s, C2H2:0.696 L/s, Surface 2800 ℃ 60 17.3±0.58 60.17±1.34 Current study TF-ZS Molten salt + RMI O2:1.96 L/s, C2H2:0.696 L/s, Surface 2800 ℃ 60 16.0±0.70 38.33±5.58 Current study"]
+  },
+  {
+    "category": "table",
+    "question": "According to Xu et al. 2021 Table 2, what was the linear ablation rate in micrometers per second for the ZF-ZS composite material at a flame temperature of 2800 degrees Celsius?",
+    "reference_answer": "The ZF-ZS composite had a linear ablation rate of 0.82 ± 0.04 μm/s under oxyacetylene flame ablation.",
+    "answer_keys": [["0.82", "μm/s"], ["zf-zs", "linear ablation"]],
+    "evidence_any": ["ZF-ZS Molten salt + RMI O2:1.96 L/s, C2H2:0.696 L/s, Surface 2800 ℃ 60 2.6±0.02 0.82 ±0.04"],
+    "source_docs": ["Xu_2021_EuropeanCeramicSociety_Ablationproperties.pdf"],
+    "excerpts": ["Table 2 Ablation properties of multiphase UHTC modified C/C composites. Materials Modified method Ablation Test Ablation Time (s) Mass ablation rate (mg/s) Linear ablation rate (μm/ s) Ref. ZF-S Molten salt + RMI O2:1.96 L/s, C2H2:0.696 L/s, Surface 2800 ℃ 60 4.6 ±0.05 1.67 ±0.10 Current study ZF-ZS Molten salt + RMI O2:1.96 L/s, C2H2:0.696 L/s, Surface 2800 ℃ 60 2.6±0.02 0.82 ±0.04 Current study"]
+  },
+  {
+    "category": "table",
+    "question": "What was the mass ablation rate reported by Xu et al. 2021 for the TF-S C/C-Ti3SiC2-SiC composite material tested at 2800 degrees Celsius surface temperature?",
+    "reference_answer": "The TF-S composite sample had a mass ablation rate of 17.3 ± 0.58 mg/s.",
+    "answer_keys": [["17.3", "mg/s"], ["tf-s", "mass ablation"]],
+    "evidence_any": ["TF-S Molten salt + RMI O2:1.96 L/s, C2H2:0.696 L/s, Surface 2800 ℃ 60 17.3±0.58 60.17±1.34"],
+    "source_docs": ["Xu_2021_EuropeanCeramicSociety_Ablationproperties.pdf"],
+    "excerpts": ["Table 2 Ablation properties of multiphase UHTC modified C/C composites. Materials Modified method Ablation Test Ablation Time (s) Mass ablation rate (mg/s) Linear ablation rate (μm/ s) Ref. TF-S Molten salt + RMI O2:1.96 L/s, C2H2:0.696 L/s, Surface 2800 ℃ 60 17.3±0.58 60.17±1.34 Current study TF-ZS Molten salt + RMI O2:1.96 L/s, C2H2:0.696 L/s, Surface 2800 ℃ 60 16.0±0.70 38.33±5.58 Current study"]
+  },
+  {
+    "category": "table",
+    "question": "In the Xu et al. 2021 study, what was the open porosity percentage of the ZF-S composite prepared by reactive infiltration of K2ZrF6 molten salt?",
+    "reference_answer": "The ZF-S sample had an open porosity of 7.6%.",
+    "answer_keys": [["7.6", "%"], ["zf-s", "open porosity"]],
+    "evidence_any": ["ZF-S 8 8 1 7.6 2.75 ± 0.05"],
+    "source_docs": ["Xu_2021_EuropeanCeramicSociety_Ablationproperties.pdf"],
+    "excerpts": ["Table 1 Density and final open porosity of infiltrated composites. Sample Powder ratio (mass ratio) Open porosity(%) Density(g/ cm3) K2ZrF6 K2TiF6 Si Zr NaCl ZF-S 8 8 1 7.6 2.75 ± 0.05 TF-S 8 8 1 8.0 2.81 ± 0.04 TF-ZS 8 4.8 3.2 1 9.3 2.73 ± 0.03 ZF-ZS 8 4.8 3.2 1 10.2 3.55 ± 0.05"]
+  },
+  {
+    "category": "table",
+    "question": "According to Xu et al. 2021 Table 2, what was the mass ablation rate of the C/C-ZrC-SiC composite prepared by ICVI plus reactive melt infiltration?",
+    "reference_answer": "The C/C-ZrC-SiC composite prepared by ICVI and RMI had a mass ablation rate of 0.21 mg/s.",
+    "answer_keys": [["0.21", "mg/s"], ["icvi", "rmi", "c/c-zrc-sic"]],
+    "evidence_any": ["C/C-ZrC-SiC ICVI + RMI O2:0.21 L/s, C2H2:0.155 L/s, Flame 2300 ℃ 90 0.21 1.44"],
+    "source_docs": ["Xu_2021_EuropeanCeramicSociety_Ablationproperties.pdf"],
+    "excerpts": ["Table 2 Ablation properties of multiphase UHTC modified C/C composites. Materials Modified method Ablation Test Ablation Time (s) Mass ablation rate (mg/s) Linear ablation rate (μm/ s) Ref. C/C-ZrC-SiC TCVI + PIP O2:0.42 L/s, C2H2:0.31 L/s, Surface 2400 ℃ 120 1.9 12.00 33 C/C-ZrC-SiC TCVI + PIP O2:0.42 L/s, C2H2:0.31 L/s, Flame 3000 ℃ 120 − 0.33 2.79 34 C/C-ZrC-SiC ICVI + RMI O2:0.21 L/s, C2H2:0.155 L/s, Flame 2300 ℃ 90 0.21 1.44 35"]
+  },
+  {
+    "category": "table",
+    "question": "In the Popov et al. 2024 study, what was the Vickers hardness of the TiB2-SiC ceramic composite with 3.8 wt% reduced graphene oxide additive (sample TSG03)?",
+    "reference_answer": "The TSG03 composite containing 3.8 wt% reduced graphene oxide had a Vickers hardness of 26.1 ± 1.2 GPa.",
+    "answer_keys": [["26.1", "gpa"], ["tsg03", "3.8", "rgo", "hardness"]],
+    "evidence_any": ["TSG03 3.8 - 3.85 3.71 6.6 ± 0.3 26.1 ± 1.2 69 ± 1.5"],
+    "source_docs": ["Popov_2024_EuropeanCeramicSociety_Influenceofreduced.pdf"],
+    "excerpts": ["Table 2 Carbon content, density, mechanical properties, and thermal conductivity of the sintered samples. Sample ID rGO(wt%) Carbon black (wt%) ρ (g/cm3) ρth*(g/cm3) K1 C (MPa⋅m1/2) HV (GPa) k (W/m•K) Reference TS00 - - 3.82 3.81 6.1±0.3 22.5±1 45±1.2 rGO TSG01 1 - 3.88 3.79 6.0±0.3 22.8±1 45±1.3 TSG02 2 - 3.76 3.76 7.4±0.4 22.1±1.2 58±1.4 TSG03 3.8 - 3.85 3.71 6.6±0.3 26.1±1.2 69±1.5 TSG04 7.4 - 3.76 3.60 6.6±0.3 19.5±1 42±3"]
+  },
+  {
+    "category": "table",
+    "question": "What was the fracture toughness (K1C) value reported by Popov et al. 2024 for the TiB2-SiC composite with 3.8 wt% reduced graphene oxide (TSG03)?",
+    "reference_answer": "The TSG03 sample with 3.8 wt% rGO demonstrated a fracture toughness of 6.6 ± 0.3 MPa•m^1/2.",
+    "answer_keys": [["6.6", "mpa"], ["tsg03", "fracture toughness"]],
+    "evidence_any": ["TSG03 3.8 - 3.85 3.71 6.6 ± 0.3 26.1 ± 1.2 69 ± 1.5"],
+    "source_docs": ["Popov_2024_EuropeanCeramicSociety_Influenceofreduced.pdf"],
+    "excerpts": ["Table 2 Carbon content, density, mechanical properties, and thermal conductivity of the sintered samples. Sample ID rGO(wt%) Carbon black (wt%) ρ (g/cm3) ρth*(g/cm3) K1 C (MPa⋅m1/2) HV (GPa) k (W/m•K) rGO TSG03 3.8 - 3.85 3.71 6.6±0.3 26.1±1.2 69±1.5 TSG04 7.4 - 3.76 3.60 6.6±0.3 19.5±1 42±3"]
+  },
+  {
+    "category": "table",
+    "question": "According to Popov et al. 2024 Table 2, what was the thermal conductivity of the TiB2-SiC composite with 3.8 wt% reduced graphene oxide (sample TSG03)?",
+    "reference_answer": "The TSG03 composite containing 3.8 wt% reduced graphene oxide exhibited a thermal conductivity of 69 ± 1.5 W/m•K.",
+    "answer_keys": [["69", "w/m"], ["tsg03", "thermal conductivity"]],
+    "evidence_any": ["TSG03 3.8 - 3.85 3.71 6.6 ± 0.3 26.1 ± 1.2 69 ± 1.5"],
+    "source_docs": ["Popov_2024_EuropeanCeramicSociety_Influenceofreduced.pdf"],
+    "excerpts": ["Table 2 Carbon content, density, mechanical properties, and thermal conductivity of the sintered samples. Sample ID rGO(wt%) Carbon black (wt%) ρ (g/cm3) ρth*(g/cm3) K1 C (MPa⋅m1/2) HV (GPa) k (W/m•K) rGO TSG03 3.8 - 3.85 3.71 6.6±0.3 26.1±1.2 69±1.5 TSG04 7.4 - 3.76 3.60 6.6±0.3 19.5±1 42±3"]
+  },
+  {
+    "category": "table",
+    "question": "In Popov et al. 2024, what was the Vickers hardness of the TiB2-SiC ceramic with 3.8 wt% carbon black additive (sample TSC03)?",
+    "reference_answer": "The TSC03 sample with 3.8 wt% carbon black had a Vickers hardness of 15.9 ± 0.8 GPa.",
+    "answer_keys": [["15.9", "gpa"], ["tsc03", "carbon black", "hardness"]],
+    "evidence_any": ["TSC03 - 3.8 3.93 3.71 6.2 ± 0.2 15.9 ± 0.8 41 ± 1.8"],
+    "source_docs": ["Popov_2024_EuropeanCeramicSociety_Influenceofreduced.pdf"],
+    "excerpts": ["Table 2 Carbon content, density, mechanical properties, and thermal conductivity of the sintered samples. Sample ID rGO(wt%) Carbon black (wt%) ρ (g/cm3) ρth*(g/cm3) K1 C (MPa⋅m1/2) HV (GPa) k (W/m•K) Carbon black TSC01 - 1 4.06 3.79 5.8±0.6 20.9±0.9 48±1.5 TSC02 - 2 4.10 3.76 5.5±0.8 17.7±1 45±1.5 TSC03 - 3.8 3.93 3.71 6.2±0.2 15.9±0.8 41±1.8 TSC04 - 7.4 3.77 3.60 5.9±0.3 16.4±0.7 45±3"]
+  },
+  {
+    "category": "table",
+    "question": "What was the Vickers hardness of the reference TiB2-SiC ceramic sample without any carbon additive (TS00) in the Popov et al. 2024 study?",
+    "reference_answer": "The reference TS00 TiB2-SiC ceramic without carbon additives had a Vickers hardness of 22.5 ± 1 GPa.",
+    "answer_keys": [["22.5", "gpa"], ["ts00", "reference", "hardness"]],
+    "evidence_any": ["Reference TS00 - - 3.82 3.81 6.1±0.3 22.5±1 45±1.2"],
+    "source_docs": ["Popov_2024_EuropeanCeramicSociety_Influenceofreduced.pdf"],
+    "excerpts": ["Table 2 Carbon content, density, mechanical properties, and thermal conductivity of the sintered samples. Sample ID rGO(wt%) Carbon black (wt%) ρ (g/cm3) ρth*(g/cm3) K1 C (MPa⋅m1/2) HV (GPa) k (W/m•K) Reference TS00 - - 3.82 3.81 6.1±0.3 22.5±1 45±1.2"]
+  }
+]

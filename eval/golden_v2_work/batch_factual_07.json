@@ -1,0 +1,83 @@
+[
+  {
+    "category": "factual",
+    "question": "What melting point is reported for Ta0.8Hf0.2C ceramic in Ghaffari et al. (2013) pressureless sintering study with MoSi2?",
+    "reference_answer": "Ghaffari et al. (2013) reports that Ta0.8Hf0.2C ceramic has a melting point of 4000°C, which is the highest among known materials.",
+    "answer_keys": [["4000"], ["melting"]],
+    "evidence_any": ["Ta0.8Hf0.2C ceramic has the highest melting point among the known materials (4000 1C)"],
+    "source_docs": ["Ghaffari_2013_CeramicsInternational_Pressurelesssintering.pdf"],
+    "excerpts": ["Ta0.8Hf0.2C ceramic has the highest melting point among the known materials (4000 1C). However, this high melting point makes the ceramic difficult to be sintered at temperatures lower than 2300 1C, pressurelessly. The purpose of this study is to consolidate Ta0.8Hf0.2C UHTC by pressureless sintering at 2000 1C using MoSi2 as sintering aid. In this regard, effect of different amounts of MoSi2 on sintering behavior of Ta0.8Hf0.2 UHTC was investigated. It was observed that condensation of the UHTC after sintering at 2000 1C was enhanced by increasing MoSi2 content and the highest relative density of 95% was obtained in the presence of 24 vol.% MoSi2. XRD pattern of the sintered UHTC confirmed the formation of single phase TaC–HfC solid solution. SEM micrographs revealed the presence of MoSi2 as a residual phase. Oxidation test of Ta0.8Hf0.2C/24 vol.% MoSi2 sample by oxidized flame at 3000 1C showed the formation of double protective oxide layers on the surface of UHTC."]
+  },
+  {
+    "category": "factual",
+    "question": "What MoSi2 content and resulting relative density were optimal for Ta0.8Hf0.2C sintering at 2000°C in Ghaffari et al. (2013)?",
+    "reference_answer": "In Ghaffari et al. (2013), 24 vol.% MoSi2 was the optimum amount, yielding the highest relative density of 95% for Ta0.8Hf0.2C sintered at 2000°C for 1 hour.",
+    "answer_keys": [["24"], ["95"]],
+    "evidence_any": ["It seems that MoSi2 addition above 24 vol.% does not increase the final density, noticeably. Therefore, it can be concluded that 24 vol.% is an optimum amount for MoSi2 as sintering aid."],
+    "source_docs": ["Ghaffari_2013_CeramicsInternational_Pressurelesssintering.pdf"],
+    "excerpts": ["To fabricate high density Ta0.8Hf0.2C ceramic, commercial powders of TaC (Treibacher, o5 μm, 99%), HfC (Treibacher, o5 μm, 99%) and MoSi2 (Treibacher, o5 μm, 99%) were used as starting materials. To investigate effect of sintering aid content, various amounts of MoSi2 (4, 8, 12, 24 and 30 vol.%, based on Ta0.8Hf0.2C) were added. As illustrated in Fig. 1, final relative density of the Ta0.8Hf0.2C samples was increased when MoSi2 content was raised. It seems that MoSi2 addition above 24 vol.% does not increase the final density, noticeably. Therefore, it can be concluded that 24 vol.% is an optimum amount for MoSi2 as sintering aid. According to the SEM images shown in Fig. 2, the microstructure of Ta0.8Hf0.2C sample containing 24 vol.% MoSi2 consists of dark pockets (MoSi2 phase) which are distributed within a bright matrix as a single phase. Morphology of the Ta0.8Hf0.2C grains with very low dihedral angles suggests a liquid phase sintering behavior in the presence of MoSi2-based melt."]
+  },
+  {
+    "category": "factual",
+    "question": "What protective oxide layers formed on Ta0.8Hf0.2C/24 vol.% MoSi2 during flame oxidation testing in Ghaffari et al. (2013)?",
+    "reference_answer": "Ghaffari et al. (2013) observed two protective layers during flame oxidation: an outer porous Ta and Hf oxide layer (50 μm thickness) and an inner Ta-Hf-Mo oxycarbide diffusion barrier layer (10-30 μm thickness).",
+    "answer_keys": [["two"], ["protective"]],
+    "evidence_any": ["formation of two different protective layers on the top surface of sample after the flame test, an outer porous layer with 50 μm thickness and an inner layer with 10–30 μm thickness"],
+    "source_docs": ["Ghaffari_2013_CeramicsInternational_Pressurelesssintering.pdf"],
+    "excerpts": ["Oxidation rate of the Ta0.8Hf0.2C/24 vol.% MoSi2 UHTC in direct contact of oxyacetylene flame for 30s was 0.14 mm/s. Cross section image of the attacked sample in Fig. 5 demonstrates the formation of two different protective layers on the top surface of sample after the flame test, an outer porous layer with 50 μm thickness and an inner layer with 10–30 μm thickness. The outer layer consists of a mixed oxide of Ta and Hf, while the inner layer is a diffusion barrier based on Ta–Hf–Mo oxycarbide. As reported before, the formed oxycarbide layer is more resistant to oxidation rather than transition metal oxide layer. Sciti et al. reported that Mo and Si from the oxycarbide phases escape as a gaseous state during thermal oxidation. The porous morphology of outer layer and high amount of Mo and Si in the inner layer confirm that the origin of porosity in outer layer comes from evaporation of Mo and Si from the inner layer. The SEM image of outer layer in Fig. 5 also shows a good adherence between outer layer, inner layer and original body."]
+  },
+  {
+    "category": "factual",
+    "question": "What powder materials and milling procedure were employed to prepare Ta0.8Hf0.2C in Ghaffari et al. (2013)?",
+    "reference_answer": "Ghaffari et al. (2013) used commercial TaC, HfC, and MoSi2 powders (all from Treibacher, less than 5 μm, 99% pure) milled for 24 hours in absolute ethanol with SiC milling media.",
+    "answer_keys": [["24h"], ["ethanol"]],
+    "evidence_any": ["The powder mixtures were milled for 24h in absolute ethanol using SiC milling media"],
+    "source_docs": ["Ghaffari_2013_CeramicsInternational_Pressurelesssintering.pdf"],
+    "excerpts": ["To fabricate high density Ta0.8Hf0.2C ceramic, commercial powders of TaC (Treibacher, o5 μm, 99%), HfC (Treibacher, o5 μm, 99%) and MoSi2 (Treibacher, o5 μm, 99%) were used as starting materials. The powder mixtures were milled for 24h in absolute ethanol using SiC milling media, dried in a rotary evaporator, pressed in 15mm-diameter discs and cold isostatically pressed under a 500 MPa pressure. Then, the formed discs were pressurelessly sintered in a resistance-heated graphite furnace under a flowing argon atmosphere at 2000 1C for 1 h. Density of sintered samples was measured by Archimedes method. Identification of the crystalline phases was carried out using X-ray diffractometer (Philips, Xpert, TW1800), with CuKa radiation, a step size of 0.04 1 and detecting time of 1 s. Microstructural and elemental analysis of the samples were investigated by an scanning electron microscope (TESCAN-Vega II, equipped with EDAX)."]
+  },
+  {
+    "category": "factual",
+    "question": "How did HfC content affect the relative density of TaC-based composites in Ghaffari et al. (2013)?",
+    "reference_answer": "In Ghaffari et al. (2013), increasing HfC content from 0% to 20 vol.% in TaC with fixed 12 vol.% MoSi2 caused the final relative density to decrease to 80%.",
+    "answer_keys": [["80"], ["hfc"]],
+    "evidence_any": ["the final relative density decreases down to 80% when HfC content increases up to 20 vol.%"],
+    "source_docs": ["Ghaffari_2013_CeramicsInternational_Pressurelesssintering.pdf"],
+    "excerpts": ["Fig. 4 presents effect of HfC addition on densification of TaC in the presence of a fixed MoSi2 content (12 vol.%). As it seems, the final relative density decreases down to 80% when HfC content increases up to 20 vol.%. Densification of Hf and Ta carbides with MoSi2 occurs via liquid-phase sintering, which is constituted by transition metal silicides. Mo5Si3 is likely to be the starting phase for liquid phase sintering. On the other hand, substitution mobility of transition metal carbides decreases from Hf to Ta. Transition metal atoms must substitute Mo in Mo5Si3 to form a liquid phase based on Ta–Si or Hf–Si systems. There is a competition between metallic atoms to substitute in TaC–HfC–MoSi2 system. When HfC dissolves in TaC, lattice parameter increases. Comparing XRD results of Ta0.8Hf0.2C in Fig. 3 with the standard XRD pattern of TaC reveals an increase in the unit cell parameter from 4.459 for TaC to 4.473 nm for Ta0.8Hf0.2C."]
+  },
+  {
+    "category": "factual",
+    "question": "What advantages did the colloidal process provide for carbon fiber-toughened ZrB2–ZrSi2 in Sha et al. (2016)?",
+    "reference_answer": "In Sha et al. (2016), the colloidal process stabilized fibers and ceramic powder in solvent, enabling homogeneous fiber dispersion while avoiding ball-milling damage.",
+    "answer_keys": [["colloidal"], ["stabilized"]],
+    "evidence_any": ["By colloidal process, the short fibers and ceramic powder can be stabilized in a solvent, which is possible to disperse the short fibers into matrix homogeneously"],
+    "source_docs": ["Sha_2016_RefractoryMetalsandHardMaterials_Improvedmicrostructure.pdf"],
+    "excerpts": ["Although the ball milling enhanced the dispersion of short fibers into ceramic powder, an inevitable issue was that the short fibers underwent serious milling damage. During milling, some fibers were even grinded into debris, which weakened the fibers' toughening effects. Furthermore, a rough surface of fibers caused by ball milling would become more reactive with the matrix phase. To solve the problems mentioned above, new process without ball milling will be an alternative route for the fabrication of short fiber-toughened UHTCs. Colloidal process has been applied to fabricate the ceramics by some researchers. However, it was rarely reported about the short fiber-toughened UHTCs by this route. By colloidal process, the short fibers and ceramic powder can be stabilized in a solvent, which is possible to disperse the short fibers into matrix homogeneously and avoid the fibers' damage caused by ball milling procedure. Therefore, the purpose of the current work is to fabricate the short carbon fiber-toughed ZrB2–ZrSi2 UHTCs with homogeneously distributed fibers and improved fracture properties."]
+  },
+  {
+    "category": "factual",
+    "question": "What relative densities were achieved for CZS1 and CZS2 composites in Sha et al. (2016)?",
+    "reference_answer": "Sha et al. (2016) achieved relative densities of 94.16% for CZS1 (conventional processing) and 98.35% for CZS2 (colloidal process) in carbon fiber-toughened ZrB2–ZrSi2 composites.",
+    "answer_keys": [["94.16"], ["98.35"]],
+    "evidence_any": ["The relative densities are 94.16% for CZS1 and 98.35% for CZS2, which correspond to an open porosity of 2.27% and 0.57%, respectively"],
+    "source_docs": ["Sha_2016_RefractoryMetalsandHardMaterials_Improvedmicrostructure.pdf"],
+    "excerpts": ["Fig. 3 shows the macro images for the hot-pressed CZS1 and CZS2 composites after polishing. It is clear that the CZS1 presents a non-homogeneous distribution of fibers even on a macro scale. Fig. 3a) shows the agglomeration zones of fibers in matrix as indicated by the arrows. In contrast, CZS2 has no obvious agglomeration of fibers and shows a shiny surface, implying its high relative density as shown in Fig. 3(b). The relative densities are 94.16% for CZS1 and 98.35% for CZS2, which correspond to an open porosity of 2.27% and 0.57%, respectively. The high relative density of CZS2 could be attributed to the homogeneous distribution of carbon fibers in powder. By the colloidal process, the scattered fibers could be stabilized in the colloidal suspension. After drying of colloidal suspension, the fibers and the matrix powder can achieve an intimate contact, and the agglomeration of fibers can be reduced to a large extent. Unlike the CZS1 fabricated by conventional process, the short fibers could easily agglomerate together during the rotary evaporation."]
+  },
+  {
+    "category": "factual",
+    "question": "What flexural strengths were measured for CZS1 and CZS2 composites in Sha et al. (2016)?",
+    "reference_answer": "Sha et al. (2016) measured flexural strengths of 376 ± 21 MPa for CZS1 and 458 ± 11 MPa for CZS2 carbon fiber-toughened ZrB2–ZrSi2 composites.",
+    "answer_keys": [["376"], ["458"]],
+    "evidence_any": ["The flexural strengths are 376 ± 21 MPa for CZS1 and 458 ± 11 MPa for CZS2, respectively"],
+    "source_docs": ["Sha_2016_RefractoryMetalsandHardMaterials_Improvedmicrostructure.pdf"],
+    "excerpts": ["Fig. 6 shows the flexural strength and the fracture toughness of the fabricated composites. The flexural strengths are 376 ± 21 MPa for CZS1 and 458 ± 11 MPa for CZS2, respectively. The strength of CZS1 is lower than that of CZS2, which is probably caused by the change of the flaw population and flaw size due to the non-homogeneous incorporation of fibers into the matrix. The strength of ceramics with a brittle nature is quite dependent on the size of critical flaws. Moreover, the values of the standard deviations of the mechanical properties for the CZS1 are larger than that of CZS2 as shown in Fig. 6. This convinced that the structural homogeneity of CZS2 was improved through the colloidal processing route. Fig. 7 shows the typical morphologies of the fracture surfaces of CZS1 and CZS2 after SENB tests. For the CZS1, the fractured fibers can be seen clearly, but the length of the pulled-out fiber is very limited as shown in Fig. 7(a)."]
+  },
+  {
+    "category": "factual",
+    "question": "By what percentage did fracture toughness improve in CZS2 compared to CZS1 in Sha et al. (2016)?",
+    "reference_answer": "Sha et al. (2016) demonstrated that CZS2 (colloidal process) achieved fracture toughness of 6.9 ± 0.2 MPa·m1/2, a 47% improvement over CZS1's 4.7 ± 0.5 MPa·m1/2.",
+    "answer_keys": [["47%"], ["toughness"]],
+    "evidence_any": ["The fracture toughness of CZS2 is 6.9 ± 0.2 MPa·m1/2, which increased by 47% as compared to CZS1"],
+    "source_docs": ["Sha_2016_RefractoryMetalsandHardMaterials_Improvedmicrostructure.pdf"],
+    "excerpts": ["The fracture toughness (KIC) of CZS1 is 4.7 ± 0.5 MPa·m1/2, which is somewhat higher than that of ZrB2–ZrSi2 ceramics (3.8-4.4 MPa·m1/2). The fracture toughness of CZS2 is 6.9 ± 0.2 MPa·m1/2, which increased by 47% as compared to CZS1. The low mechanical properties of CZS1 are associated with the milling damage and agglomeration of fibers. The agglomerated fibers in CZS1 would cause the structural defects, which can act as flaws and weaken the load-transfer ability. Moreover, the values of the standard deviations of the mechanical properties for the CZS1 are larger than that of CZS2 as shown in Fig. 6. This convinced that the structural homogeneity of CZS2 was improved through the colloidal processing route. Long propagation path of cracks and high load-bearing ability of fibers in CZS2 mean that more fracture work is consumed during the SENB tests."]
+  }
+]

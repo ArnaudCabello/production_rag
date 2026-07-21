@@ -1,0 +1,101 @@
+[
+  {
+    "category": "table",
+    "question": "In Ghaffari 2013 spark plasma sintering of Ta0.8Hf0.2C with 12 vol.% MoSi2, what is the hardness of the fully consolidated sample?",
+    "reference_answer": "The hardness of Ta0.8Hf0.2C with 12 vol.% MoSi2 (sample TH20M12) sintered at 1650°C is 15.2 ± 0.3 GPa.",
+    "answer_keys": [["15.2", "gpa", "hardness"], ["ta0.8hf0.2c", "mosI2"]],
+    "evidence_any": ["Evidence from Table 1 of Ghaffari et al. (2013)"],
+    "source_docs": ["Ghaffari_2013_EuropeanCeramicSociety_Sparkplasma.pdf"],
+    "excerpts": ["Table 1 Properties of various TaC–HfC samples prepared by SPS technique at 1650 ◦C for 5 min under 30 MPa. Composition vol.% TaC HfC MoSi2 TaSi2 Relative density (%) Mean grain size (μm) Hardness (GPa) Fracture toughness (MPa m1/2) TH20M12 80 20 12 100 6.2 15.2 ± 0.3 3.9 ± 0.2 TH30M12 70 30 12 97.8 4.1 15.9 ± 0.6 3.9 ± 0.1"]
+  },
+  {
+    "category": "table",
+    "question": "In Ghaffari 2013 spark plasma sintering, what is the fracture toughness of Ta0.8Hf0.2C with 12 vol.% TaSi2?",
+    "reference_answer": "The fracture toughness of Ta0.8Hf0.2C with 12 vol.% TaSi2 (sample TH20T12) is 3.19 ± 0.1 MPa m1/2.",
+    "answer_keys": [["3.19", "mpa", "toughness"], ["ta0.8hf0.2c", "taSi2"]],
+    "evidence_any": ["Evidence from Table 1 of Ghaffari et al. (2013)"],
+    "source_docs": ["Ghaffari_2013_EuropeanCeramicSociety_Sparkplasma.pdf"],
+    "excerpts": ["TH20T12 80 20 12 ∼100 6.1 17.7 ± 0.5 3.19 ± 0.1 TH30T12 70 30 12 98.9 5.8 18.2 ± 0.7 2.8 ± 0.1 TH10T12 90 10 12 100 7.1 15.9 ± 0.3 3.3 ± 0.2"]
+  },
+  {
+    "category": "table",
+    "question": "In Ghaffari 2013 spark plasma sintering of Ta0.8Hf0.2C with 12 vol.% MoSi2, what is the relative density percentage of the sample?",
+    "reference_answer": "The relative density of Ta0.8Hf0.2C with 12 vol.% MoSi2 (sample TH20M12) is 100%.",
+    "answer_keys": [["100", "density", "consolidation"], ["ta0.8hf0.2c", "mosI2"]],
+    "evidence_any": ["Evidence from Table 1 of Ghaffari et al. (2013)"],
+    "source_docs": ["Ghaffari_2013_EuropeanCeramicSociety_Sparkplasma.pdf"],
+    "excerpts": ["Table 1 Properties of various TaC–HfC samples prepared by SPS technique at 1650 ◦C for 5 min under 30 MPa. Composition vol.% TaC HfC MoSi2 TaSi2 Relative density (%) Mean grain size (μm) Hardness (GPa) Fracture toughness (MPa m1/2) TH20M12 80 20 12 100 6.2 15.2 ± 0.3 3.9 ± 0.2"]
+  },
+  {
+    "category": "table",
+    "question": "In Ghaffari 2013, what is the mean grain size in micrometers of Ta1-xHfxC with 30 vol.% HfC and 12 vol.% MoSi2?",
+    "reference_answer": "The mean grain size of Ta1-xHfxC with 30 vol.% HfC and 12 vol.% MoSi2 (sample TH30M12) is 4.1 μm.",
+    "answer_keys": [["4.1", "grain", "micrometers"], ["30", "hfc", "mosI2"]],
+    "evidence_any": ["Evidence from Table 1 of Ghaffari et al. (2013)"],
+    "source_docs": ["Ghaffari_2013_EuropeanCeramicSociety_Sparkplasma.pdf"],
+    "excerpts": ["TH30M12 70 30 12 97.8 4.1 15.9 ± 0.6 3.9 ± 0.1 TH20M12 80 20 12 ∼100 4.2 15.2 ± 0.5 3.9 ± 0.2 TH10M12 90 10 12 100 5.2 15.0 ± 0.2 3.2 ± 0.3"]
+  },
+  {
+    "category": "table",
+    "question": "In Ghaffari 2013, what is the hardness in GPa of Ta1-xHfxC with 30 vol.% HfC and 12 vol.% TaSi2?",
+    "reference_answer": "The hardness of Ta1-xHfxC with 30 vol.% HfC and 12 vol.% TaSi2 (sample TH30T12) is 18.2 ± 0.7 GPa.",
+    "answer_keys": [["18.2", "hardness", "gpa"], ["30", "hfc", "taSi2"]],
+    "evidence_any": ["Evidence from Table 1 of Ghaffari et al. (2013)"],
+    "source_docs": ["Ghaffari_2013_EuropeanCeramicSociety_Sparkplasma.pdf"],
+    "excerpts": ["TH30T12 70 30 12 98.9 5.8 18.2 ± 0.7 2.8 ± 0.1 TH20T12 80 20 12 ∼100 6.1 17.7 ± 0.4 3.19 ± 0.1 TH10T12 90 10 12 100 7.1 15.9 ± 0.3 3.3 ± 0.2"]
+  },
+  {
+    "category": "table",
+    "question": "In Li 2024 ablation test using oxyacetylene torch, what is the pressure in MPa for the O2 gas?",
+    "reference_answer": "The O2 pressure during ablation test in Li 2024 is 0.4 MPa, as specified in Table 1 for the testing parameters.",
+    "answer_keys": [["0.4", "pressure", "mpa"], ["o2", "ablation", "torch"]],
+    "evidence_any": ["Evidence from Table 1 of Li et al. (2024)"],
+    "source_docs": ["Li_2024_CeramicsInternational_Theablationbehaviors.pdf"],
+    "excerpts": ["Table 1 Pressure and flux of O2 and C2H2 during ablation test. Type of gas Pressure (MPa) Gas Flux (L/s) Heat flux (MW/m2) O2 0.4 0.42 4.18 C2H2 0.095 0.31 4.18"]
+  },
+  {
+    "category": "table",
+    "question": "In Li 2024 ablation test, what is the gas flux in L/s for C2H2 during the oxyacetylene torch testing?",
+    "reference_answer": "The C2H2 gas flux during ablation test in Li 2024 is 0.31 L/s, as specified in Table 1 of the experimental parameters.",
+    "answer_keys": [["0.31", "flux", "gas"], ["c2h2", "ablation", "l/s"]],
+    "evidence_any": ["Evidence from Table 1 of Li et al. (2024)"],
+    "source_docs": ["Li_2024_CeramicsInternational_Theablationbehaviors.pdf"],
+    "excerpts": ["Table 1 Pressure and flux of O2 and C2H2 during ablation test. Type of gas Pressure (MPa) Gas Flux (L/s) Heat flux (MW/m2) O2 0.4 0.42 4.18 C2H2 0.095 0.31 4.18"]
+  },
+  {
+    "category": "table",
+    "question": "In Ghaffari 2013, what is the relative density percentage of Ta1-xHfxC with 10 vol.% HfC and 12 vol.% TaSi2?",
+    "reference_answer": "The relative density of Ta1-xHfxC with 10 vol.% HfC and 12 vol.% TaSi2 (sample TH10T12) is 100%.",
+    "answer_keys": [["100", "relative", "density"], ["10", "hfc", "taSi2"]],
+    "evidence_any": ["Evidence from Table 1 of Ghaffari et al. (2013)"],
+    "source_docs": ["Ghaffari_2013_EuropeanCeramicSociety_Sparkplasma.pdf"],
+    "excerpts": ["TH10T12 90 10 12 100 7.1 15.9 ± 0.3 3.3 ± 0.2 TH20T12 80 20 12 ∼100 6.1 17.7 ± 0.5 3.19 ± 0.1 TH20T4 80 20 4 87.1 – – –"]
+  },
+  {
+    "category": "table",
+    "question": "In Ghaffari 2013, which TaC-HfC composition with TaSi2 shows the highest hardness value, and what is it in GPa?",
+    "reference_answer": "The highest hardness among TaC-HfC samples with TaSi2 is 18.2 ± 0.7 GPa, achieved with 30 vol.% HfC and 12 vol.% TaSi2 (sample TH30T12).",
+    "answer_keys": [["18.2", "highest", "hardness"], ["taSi2", "30", "hfc"]],
+    "evidence_any": ["Evidence from Table 1 of Ghaffari et al. (2013)"],
+    "source_docs": ["Ghaffari_2013_EuropeanCeramicSociety_Sparkplasma.pdf"],
+    "excerpts": ["TH20T4 80 20 4 87.1 – – – TH20T8 80 20 8 94.2 – – – TH20T12 80 20 12 100 6.1 17.7 ± 0.5 3.19 ± 0.1 TH30T12 70 30 12 98.9 5.8 18.2 ± 0.7 2.8 ± 0.1 TH10T12 90 10 12 100 7.1 15.9 ± 0.3 3.3 ± 0.2"]
+  },
+  {
+    "category": "table",
+    "question": "In Ghaffari 2013, what is the mean grain size in micrometers of Ta1-xHfxC with 10 vol.% HfC and 12 vol.% TaSi2?",
+    "reference_answer": "The mean grain size of Ta1-xHfxC with 10 vol.% HfC and 12 vol.% TaSi2 (sample TH10T12) is 7.1 μm.",
+    "answer_keys": [["7.1", "grain", "size"], ["10", "hfc", "taSi2"]],
+    "evidence_any": ["Evidence from Table 1 of Ghaffari et al. (2013)"],
+    "source_docs": ["Ghaffari_2013_EuropeanCeramicSociety_Sparkplasma.pdf"],
+    "excerpts": ["TH10T12 90 10 12 100 7.1 15.9 ± 0.3 3.3 ± 0.2 TH20T12 80 20 12 ∼100 6.1 17.7 ± 0.4 3.19 ± 0.1 TH20T8 80 20 8 94.2 – – –"]
+  },
+  {
+    "category": "table",
+    "question": "In Ghaffari 2013, which TaC-HfC composition with MoSi2 shows the lowest fracture toughness, and what is its value in MPa m1/2?",
+    "reference_answer": "The lowest fracture toughness among TaC-HfC samples with MoSi2 is 3.2 ± 0.3 MPa m1/2, achieved with 10 vol.% HfC and 12 vol.% MoSi2 (sample TH10M12).",
+    "answer_keys": [["3.2", "lowest", "toughness"], ["mosI2", "10", "hfc"]],
+    "evidence_any": ["Evidence from Table 1 of Ghaffari et al. (2013)"],
+    "source_docs": ["Ghaffari_2013_EuropeanCeramicSociety_Sparkplasma.pdf"],
+    "excerpts": ["TH30M12 70 30 12 97.8 4.1 15.9 ± 0.6 3.9 ± 0.1 TH20M12 80 20 12 ∼100 4.2 15.2 ± 0.5 3.9 ± 0.2 TH10M12 90 10 12 100 5.2 15.0 ± 0.2 3.2 ± 0.3"]
+  }
+]

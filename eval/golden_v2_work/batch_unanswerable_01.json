@@ -1,0 +1,119 @@
+[
+  {
+    "category": "unanswerable",
+    "question": "What is the fracture toughness of HfB2-ZrC-30 vol% SiC composites prepared by spark plasma sintering at 2000°C?",
+    "reference_answer": "This information is not available in the corpus.",
+    "answer_keys": [["not", "no ", "unable", "cannot", "doesn't", "does not"]],
+    "evidence_any": [],
+    "source_docs": ["Cygan_2025_CeramicsInternational_Densification,mechanical.pdf"],
+    "excerpts": []
+  },
+  {
+    "category": "unanswerable",
+    "question": "How does the electrical conductivity of ZrB2-5 vol% graphene composites compare to graphene-free ZrB2 when tested at room temperature?",
+    "reference_answer": "This information is not available in the corpus.",
+    "answer_keys": [["not", "no ", "unable", "cannot", "doesn't", "does not"]],
+    "evidence_any": [],
+    "source_docs": ["Cygan_2025_CeramicsInternational_Densification,mechanical.pdf"],
+    "excerpts": []
+  },
+  {
+    "category": "unanswerable",
+    "question": "What densification results are achieved for ZrB2-20 vol% SiC composites sintered at 1800°C using spark plasma sintering?",
+    "reference_answer": "This information is not available in the corpus.",
+    "answer_keys": [["not", "no ", "unable", "cannot", "doesn't", "does not"]],
+    "evidence_any": [],
+    "source_docs": ["Cygan_2025_CeramicsInternational_Densification,mechanical.pdf"],
+    "excerpts": []
+  },
+  {
+    "category": "unanswerable",
+    "question": "What is the ablation rate of TaC-W cermet composites in a solid rocket motor environment at 3200°C?",
+    "reference_answer": "This information is not available in the corpus.",
+    "answer_keys": [["not", "no ", "unable", "cannot", "doesn't", "does not"]],
+    "evidence_any": [],
+    "source_docs": ["Xu_2025_MaterialsScience&Technology_Ablationbehavior.pdf"],
+    "excerpts": []
+  },
+  {
+    "category": "unanswerable",
+    "question": "How does the thermal conductivity of TaB2-SiC-graphene composites change over a temperature range of 300-1500°C?",
+    "reference_answer": "This information is not available in the corpus.",
+    "answer_keys": [["not", "no ", "unable", "cannot", "doesn't", "does not"]],
+    "evidence_any": [],
+    "source_docs": ["Cygan_2025_CeramicsInternational_Densification,mechanical.pdf"],
+    "excerpts": []
+  },
+  {
+    "category": "unanswerable",
+    "question": "What is the compressive strength of ZrB2-50 vol% SiC composites at 2000°C after spark plasma sintering?",
+    "reference_answer": "This information is not available in the corpus.",
+    "answer_keys": [["not", "no ", "unable", "cannot", "doesn't", "does not"]],
+    "evidence_any": [],
+    "source_docs": ["Cygan_2025_CeramicsInternational_Densification,mechanical.pdf"],
+    "excerpts": []
+  },
+  {
+    "category": "unanswerable",
+    "question": "What is the erosion resistance of C/C-ZrC-SiC-Graphite composites when exposed to 120 seconds of ablation in a solid rocket motor environment?",
+    "reference_answer": "This information is not available in the corpus.",
+    "answer_keys": [["not", "no ", "unable", "cannot", "doesn't", "does not"]],
+    "evidence_any": [],
+    "source_docs": ["Xu_2025_MaterialsScience&Technology_Ablationbehavior.pdf"],
+    "excerpts": []
+  },
+  {
+    "category": "unanswerable",
+    "question": "What Young's modulus is measured for pure TiB2 ceramic after consolidation by spark plasma sintering at 1900°C?",
+    "reference_answer": "This information is not available in the corpus.",
+    "answer_keys": [["not", "no ", "unable", "cannot", "doesn't", "does not"]],
+    "evidence_any": [],
+    "source_docs": ["Cygan_2025_CeramicsInternational_Densification,mechanical.pdf"],
+    "excerpts": []
+  },
+  {
+    "category": "unanswerable",
+    "question": "How does the oxidation resistance of HfC-ZrC-10 vol% SiC ceramics perform at 2200°C in air?",
+    "reference_answer": "This information is not available in the corpus.",
+    "answer_keys": [["not", "no ", "unable", "cannot", "doesn't", "does not"]],
+    "evidence_any": [],
+    "source_docs": ["Cygan_2025_CeramicsInternational_Densification,mechanical.pdf"],
+    "excerpts": []
+  },
+  {
+    "category": "unanswerable",
+    "question": "What is the fracture toughness of C/C-NbC-B4C-W-Mo cermet composites tested after reactive melt infiltration at 1500°C?",
+    "reference_answer": "This information is not available in the corpus.",
+    "answer_keys": [["not", "no ", "unable", "cannot", "doesn't", "does not"]],
+    "evidence_any": [],
+    "source_docs": ["Xu_2025_MaterialsScience&Technology_Ablationbehavior.pdf"],
+    "excerpts": []
+  },
+  {
+    "category": "unanswerable",
+    "question": "How does the relative density of ZrB2-40 vol% SiC-3 vol% graphene composites change when processed using hot pressing instead of spark plasma sintering?",
+    "reference_answer": "This information is not available in the corpus.",
+    "answer_keys": [["not", "no ", "unable", "cannot", "doesn't", "does not"]],
+    "evidence_any": [],
+    "source_docs": ["Cygan_2025_CeramicsInternational_Densification,mechanical.pdf"],
+    "excerpts": []
+  },
+  {
+    "category": "unanswerable",
+    "question": "What is the thermal shock resistance of HfB2-ZrC-SiC-W-Cu composites after thermal cycling between 200°C and 2000°C?",
+    "reference_answer": "This information is not available in the corpus.",
+    "answer_keys": [["not", "no ", "unable", "cannot", "doesn't", "does not"]],
+    "evidence_any": [],
+    "source_docs": ["Xu_2025_MaterialsScience&Technology_Ablationbehavior.pdf"],
+    "excerpts": []
+  },
+  {
+    "category": "unanswerable",
+    "question": "What hardness values are obtained for ZrB2-25 vol% SiC-1.5 vol% multi-walled carbon nanotubes composites prepared by spark plasma sintering at 2100°C?",
+    "reference_answer": "This information is not available in the corpus.",
+    "answer_keys": [["not", "no ", "unable", "cannot", "doesn't", "does not"]],
+    "evidence_any": [],
+    "source_docs": ["Cygan_2025_CeramicsInternational_Densification,mechanical.pdf"],
+    "excerpts": []
+  }
+]

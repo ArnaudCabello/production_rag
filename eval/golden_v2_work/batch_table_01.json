@@ -1,0 +1,101 @@
+[
+  {
+    "category": "table",
+    "question": "What is the density of zirconium carbide (ZrC) in g/cm³ according to Kim et al. 2024 study on vacuum plasma spray coating of ZrC on carbon-carbon composites?",
+    "reference_answer": "Zirconium carbide has a density of 6.73 g/cm³.",
+    "answer_keys": [["6.73"], ["density", "zrc", "g/cm"]],
+    "evidence_any": ["ZrC exhibits excellent resistance to corrosion and possesses a density of 6.73 g/cm3"],
+    "source_docs": ["Kim_2024_CurrentAppliedPhysics_Modulationofparticle.pdf"],
+    "excerpts": ["Furthermore, ZrC exhibits excellent resistance to corrosion and possesses a density of 6.73 g/cm3 [10], which is notably lower compared to other UHTCs such as HfC (12.7 g/cm3) [11], TaC (14.5 g/cm3) [12], and WC (15.8 g/cm3) [13]. To coat ZrC layer on the C/C composite, it is crucial to utilize the corresponding ZrC powders in the VPS method. Consequently, it becomes inevitable to consider the effects of the particle size of the raw powders on the quality of the coating layer."]
+  },
+  {
+    "category": "table",
+    "question": "In Table 1 of the Kim et al. 2024 study on powder size-dependent ZrC coating, what is the applied power in kilowatts for Case B with 49 μm powder at 50 mbar?",
+    "reference_answer": "Case B in Kim et al. 2024 applied a power of 54 kilowatts.",
+    "answer_keys": [["54"], ["power", "kw", "case b"]],
+    "evidence_any": ["B 49 730 54 50 10 24 50 4.6"],
+    "source_docs": ["Kim_2024_CurrentAppliedPhysics_Modulationofparticle.pdf"],
+    "excerpts": ["Table 1 Experimental conditions according to powder size. Case Powder size (μm) Current (A) Power (kW) Gas flow rate (NLPM) Chamber pressure (mbar) Feeding rate (g/min) Ar H2 He A 49 630 42 50 10 – 50 4.6 B 49 730 54 50 10 24 50 4.6 C 42 730 54 50 10 24 50 4.6 D 42 760 54 40 10 24 100 4.6 E 42 760 54 40 10 24 150 4.6 F 33 760 54 40 10 24 150 4.5 G 10 760 54 40 10 24 150 3.7 a NLPM (Normal Liter Per Minute)."]
+  },
+  {
+    "category": "table",
+    "question": "What is the melting point temperature of zirconium carbide (ZrC) in degrees Celsius as stated in the Kim et al. 2024 paper on UHTC coatings?",
+    "reference_answer": "Zirconium carbide has a melting point of 3530 degrees Celsius.",
+    "answer_keys": [["3530"], ["melting", "zrc", "celsius"]],
+    "evidence_any": ["zirconium carbide (ZrC) has a remarkably high melting point of 3530"],
+    "source_docs": ["Kim_2024_CurrentAppliedPhysics_Modulationofparticle.pdf"],
+    "excerpts": ["Among UHTCs, zirconium carbide (ZrC) has a remarkably high melting point of 3530 ◦C [7,8]. Additionally, its oxide, ZrO2, also has a high melting point of 2700 ◦C [9]. Furthermore, ZrC exhibits excellent resistance to corrosion and possesses a density of 6.73 g/cm3 [10], which is notably lower compared to other UHTCs such as HfC (12.7 g/cm3) [11], TaC (14.5 g/cm3) [12], and WC (15.8 g/cm3) [13]."]
+  },
+  {
+    "category": "table",
+    "question": "In Table 1 of Kim et al. 2024, what is the applied current in amperes for Case A with the largest powder size (49 μm) at 50 mbar chamber pressure?",
+    "reference_answer": "Case A in the Kim et al. 2024 study used a current of 630 amperes.",
+    "answer_keys": [["630"], ["current", "amperes", "case a"]],
+    "evidence_any": ["A 49 630 42 50 10 – 50 4.6"],
+    "source_docs": ["Kim_2024_CurrentAppliedPhysics_Modulationofparticle.pdf"],
+    "excerpts": ["Table 1 Experimental conditions according to powder size. Case Powder size (μm) Current (A) Power (kW) Gas flow rate (NLPM) Chamber pressure (mbar) Feeding rate (g/min) Ar H2 He A 49 630 42 50 10 – 50 4.6 B 49 730 54 50 10 24 50 4.6 C 42 730 54 50 10 24 50 4.6 D 42 760 54 40 10 24 100 4.6 E 42 760 54 40 10 24 150 4.6 F 33 760 54 40 10 24 150 4.5 G 10 760 54 40 10 24 150 3.7"]
+  },
+  {
+    "category": "table",
+    "question": "What is the chamber pressure in millibar for Case D in Table 1 of the Kim et al. 2024 vacuum plasma spray study on ZrC powder coatings?",
+    "reference_answer": "Case D in Kim et al. 2024 operated at a chamber pressure of 100 millibar.",
+    "answer_keys": [["100"], ["pressure", "mbar", "case d"]],
+    "evidence_any": ["D 42 760 54 40 10 24 100 4.6"],
+    "source_docs": ["Kim_2024_CurrentAppliedPhysics_Modulationofparticle.pdf"],
+    "excerpts": ["Table 1 Experimental conditions according to powder size. Case Powder size (μm) Current (A) Power (kW) Gas flow rate (NLPM) Chamber pressure (mbar) Feeding rate (g/min) Ar H2 He A 49 630 42 50 10 – 50 4.6 B 49 730 54 50 10 24 50 4.6 C 42 730 54 50 10 24 50 4.6 D 42 760 54 40 10 24 100 4.6 E 42 760 54 40 10 24 150 4.6 F 33 760 54 40 10 24 150 4.5 G 10 760 54 40 10 24 150 3.7"]
+  },
+  {
+    "category": "table",
+    "question": "According to Figure 6 in Kim et al. 2024, what is the ZrC coating layer thickness in micrometers achieved in Case F using 33 μm powder at 150 mbar chamber pressure?",
+    "reference_answer": "Case F in the Kim et al. 2024 study achieved a ZrC coating thickness of 50 micrometers.",
+    "answer_keys": [["50"], ["thickness", "case f", "micrometer"]],
+    "evidence_any": ["Case F exhibited the highest thickness (50 μm) and very smooth roughness"],
+    "source_docs": ["Kim_2024_CurrentAppliedPhysics_Modulationofparticle.pdf"],
+    "excerpts": ["By decreasing powder size, the Sa was dramatically reduced from 128 μm to 3 μm but the thickness of ZrC coating layer was rapidly increased, conversely. Notably, the Case F exhibited the highest thickness (50 μm) and very smooth roughness (16 μm) of ZrC coating layer, which was attributed to the well formation of splats on the surface by increased droplets of melted powders due to the use of smaller powder size (D50 = 33.85 μm), higher pressure and higher power conditions."]
+  },
+  {
+    "category": "table",
+    "question": "In Table 1 of Thimmappa et al. 2021, what is the nanoindentation hardness in GPa for the ZrB2-20 vol% SiC-10 wt% Ta (ZS-10Ta) composition?",
+    "reference_answer": "The ZrB2-20 vol% SiC-10 wt% Ta composition in Thimmappa et al. 2021 has a nanoindentation hardness of 18.62 GPa.",
+    "answer_keys": [["18.62"], ["hardness", "gpa", "zs-10ta"]],
+    "evidence_any": ["ZrB2-20 vol% SiC-10 wt% Ta (ZS-10Ta) ... 99.63 18.62"],
+    "source_docs": ["Thimmappa_2021_CeramicsInternational_Nanoindentationhigh.pdf"],
+    "excerpts": ["Table 1 Comparison of densification and mechanical properties of ZrB2–SiC–Ta composites with the other ZrB2 composites reported in the literature. Composition Sintering conditions Relative Hardness Elastic density (GPa) modulus (GPa) ZrB2-20 vol% SiC-2.5 wt% Ta (ZS-2.5Ta) SPS, 1900, 50, 3 99.11 16.81 ± 1.95 445.5 ± 82.0 ZrB2-20 vol% SiC-5wt.% Ta (ZS-5Ta) 99.11 15.23 ± 0.95 341.1 ± 18.2 ZrB2-20 vol% SiC-10 wt% Ta (ZS-10Ta) 99.63 18.62 ± 1.36 451.6 ± 24.2"]
+  },
+  {
+    "category": "table",
+    "question": "According to Table 1 in Thimmappa et al. 2021, what is the elastic modulus in GPa for the ZrB2-20 vol% SiC-10 wt% Ta (ZS-10Ta) composition?",
+    "reference_answer": "The ZrB2-20 vol% SiC-10 wt% Ta composition has an elastic modulus of 451.6 GPa according to Thimmappa et al. 2021.",
+    "answer_keys": [["451.6"], ["elastic", "modulus", "zs-10ta"]],
+    "evidence_any": ["ZrB2-20 vol% SiC-10 wt% Ta (ZS-10Ta) ... 451.6"],
+    "source_docs": ["Thimmappa_2021_CeramicsInternational_Nanoindentationhigh.pdf"],
+    "excerpts": ["Table 1 Comparison of densification and mechanical properties of ZrB2–SiC–Ta composites with the other ZrB2 composites reported in the literature. Composition Sintering conditions Relative Hardness Elastic density (GPa) modulus (GPa) ZrB2-20 vol% SiC-2.5 wt% Ta (ZS-2.5Ta) SPS, 1900, 50, 3 99.11 16.81 ± 1.95 445.5 ± 82.0 ZrB2-20 vol% SiC-5wt.% Ta (ZS-5Ta) 99.11 15.23 ± 0.95 341.1 ± 18.2 ZrB2-20 vol% SiC-10 wt% Ta (ZS-10Ta) 99.63 18.62 ± 1.36 451.6 ± 24.2"]
+  },
+  {
+    "category": "table",
+    "question": "In Table 2 of Thimmappa et al. 2021, what is the oxide layer thickness in micrometers for the ZrB2-20 vol% SiC-10 wt% Ta (ZS-10Ta) composite after oxidation at 1600°C for 10 hours?",
+    "reference_answer": "The oxide layer thickness for ZS-10Ta after oxidation at 1600 degrees Celsius for 10 hours is 255 micrometers according to Thimmappa et al. 2021.",
+    "answer_keys": [["255"], ["oxide", "layer", "zs-10ta"]],
+    "evidence_any": ["ZrB2-20 vol% SiC-10 wt% Ta (ZS-10Ta) ... 1600, 10 16.65 255"],
+    "source_docs": ["Thimmappa_2021_CeramicsInternational_Nanoindentationhigh.pdf"],
+    "excerpts": ["Table 2 Specific weight gain and oxide layer thickness of ZrB2–SiC–Ta composites and its comparison with the literature data. Composition Oxidation conditions Mass Oxide layer gain thickness (mg/ (μm) cm2) Oxide phases Ref ZrB2-20 vol% SiC-2.5 wt% Ta (ZS-2.5Ta) 1600, 10 21.04 320 SiO2, ZrO2, TaZr2.75O8 ZrB2-20 vol% SiC-5wt.% Ta (ZS-5Ta) 1600, 10 17.45 303 SiO2, ZrO2, TaZr2.75O8 ZrB2-20 vol% SiC-10 wt% Ta (ZS-10Ta) 1600, 10 16.65 255 SiO2, ZrO2, TaZr2.75O8"]
+  },
+  {
+    "category": "table",
+    "question": "According to Table 2 in Thimmappa et al. 2021, what is the specific weight gain in mg/cm² for the ZrB2-20 vol% SiC-2.5 wt% Ta (ZS-2.5Ta) composition after high temperature oxidation testing?",
+    "reference_answer": "The ZrB2-20 vol% SiC-2.5 wt% Ta composition shows a specific weight gain of 21.04 mg/cm² after oxidation at 1600 degrees Celsius for 10 hours according to Thimmappa et al. 2021.",
+    "answer_keys": [["21.04"], ["weight", "gain", "zs-2.5ta"]],
+    "evidence_any": ["ZrB2-20 vol% SiC-2.5 wt% Ta (ZS-2.5Ta) 1600, 10 21.04"],
+    "source_docs": ["Thimmappa_2021_CeramicsInternational_Nanoindentationhigh.pdf"],
+    "excerpts": ["Table 2 Specific weight gain and oxide layer thickness of ZrB2–SiC–Ta composites and its comparison with the literature data. Composition Oxidation conditions Mass Oxide layer gain thickness (mg/ (μm) cm2) Oxide phases Ref ZrB2-20 vol% SiC-2.5 wt% Ta (ZS-2.5Ta) 1600, 10 21.04 320 SiO2, ZrO2, TaZr2.75O8 ZrB2-20 vol% SiC-5wt.% Ta (ZS-5Ta) 1600, 10 17.45 303 SiO2, ZrO2, TaZr2.75O8 ZrB2-20 vol% SiC-10 wt% Ta (ZS-10Ta) 1600, 10 16.65 255 SiO2, ZrO2, TaZr2.75O8"]
+  },
+  {
+    "category": "table",
+    "question": "In Table 1 of Thimmappa et al. 2021, what is the relative density percentage for the ZrB2-20 vol% SiC-10 wt% Ta (ZS-10Ta) composition processed at 1900°C?",
+    "reference_answer": "The ZrB2-20 vol% SiC-10 wt% Ta composition achieved a relative density of 99.63 percent according to Thimmappa et al. 2021.",
+    "answer_keys": [["99.63"], ["relative", "density", "zs-10ta"]],
+    "evidence_any": ["ZrB2-20 vol% SiC-10 wt% Ta (ZS-10Ta) 99.63"],
+    "source_docs": ["Thimmappa_2021_CeramicsInternational_Nanoindentationhigh.pdf"],
+    "excerpts": ["Table 1 Comparison of densification and mechanical properties of ZrB2–SiC–Ta composites with the other ZrB2 composites reported in the literature. Composition Sintering conditions Relative Hardness Elastic density (GPa) modulus (GPa) ZrB2-20 vol% SiC-2.5 wt% Ta (ZS-2.5Ta) SPS, 1900, 50, 3 99.11 16.81 ± 1.95 445.5 ± 82.0 ZrB2-20 vol% SiC-5wt.% Ta (ZS-5Ta) 99.11 15.23 ± 0.95 341.1 ± 18.2 ZrB2-20 vol% SiC-10 wt% Ta (ZS-10Ta) 99.63 18.62 ± 1.36 451.6 ± 24.2"]
+  }
+]
