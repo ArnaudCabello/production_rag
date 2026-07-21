@@ -1,0 +1,92 @@
+[
+  {
+    "category": "ambiguous",
+    "question": "What thermal conductivity do advanced ceramic materials exhibit for aerospace applications?",
+    "reference_answer": "Thermal conductivity varies significantly across different UHTC materials, ranging from 10.98 W m-1 K-1 for high-entropy aluminum carbides to 66 W m-1 K-1 for zirconium diboride, with hybrid nanofiber composites exhibiting intermediate values around 1.13-1.97 W m-1 K-1.",
+    "answer_keys": [["varies", "vary", "range", "multiple", "several"], ["10.98", "66", "1.13", "1.97"], ["W m-1 K-1", "W/m/K"]],
+    "evidence_any": [
+      "thermal conductivity of HE(5RE1/5)Al3C3 is 10.98 W m− 1 K− 1",
+      "thermal conductivity (λ), thermal conductivity (W m−1 K−1) 66"
+    ],
+    "source_docs": ["Guo_2024_CeramicsInternational_High-entropy.pdf", "Savino_2005_AerospaceScienceandTechnology_Aerothermodynamicstudy.pdf"],
+    "excerpts": [
+      "The Vickers hardness, flexural strength, Young's modulus, thermal expansion coefficient, GPa, 8.21 × 10− 6 K− and thermal conductivity 1, and 10.98 W m− 1 K− 1 of 1, respectively. HE(5RE1/5)Al3C3 are 13.2 ± The residual Young's 0.5 GPa, 148 ± 15 MPa, 375 modulus of HE(5RE1/5)Al3C3 remained approximately 83 % of its room temperature value even at 1500 ◦C Additionally, compared to YAl3C3, HE(5RE1/5)Al3C3 has a high Debye temperature (921 K) and a high initial oxidation temperature (980 ◦C). These results indicate HE(5RE1/5)Al3C3 is a highly promising oxidation resistant ultra-high temperature structural material.",
+      "Table 2 ZrB2 properties [29] ZrB2 properties ρ, density (kg m−3) 6000 cp, specific heat (J kg−1 K−1) 628 λ, thermal conductivity (W m−1 K−1) 66 ε, emissivity 0.8 The USV vehicle will be released by a balloon at an altitude of about 35 km."
+    ]
+  },
+  {
+    "category": "ambiguous",
+    "question": "What is the hardness of ceramic materials used in extreme thermal environments?",
+    "reference_answer": "Hardness values range across different UHTC compositions, with high-entropy aluminum carbides measuring 13.2 ± 0.5 GPa and hafnium carbide-based materials varying from approximately 13 GPa at composite interfaces to 18 GPa in bulk form.",
+    "answer_keys": [["range", "varies", "vary", "multiple", "several"], ["13.2", "18", "13"], ["GPa"]],
+    "evidence_any": [
+      "The Vickers hardness, flexural strength, Young's modulus, thermal expansion coefficient, GPa, 8.21 × 10− 6 K− and thermal conductivity 1, and 10.98 W m− 1 K− 1 of 1, respectively. HE(5RE1/5)Al3C3 are 13.2 ± 0.5 GPa",
+      "average hardness on the matrix side is ∼18 GPa, while that at the interface is ∼13 GPa"
+    ],
+    "source_docs": ["Guo_2024_CeramicsInternational_High-entropy.pdf", "Nisar_2023_Carbon_Enhancedflexibility.pdf"],
+    "excerpts": [
+      "The Vickers hardness and flexural strength for the as-prepared HE(5RE1/5)Al3C3 were measured. Fig. 6 displays the Vickers hardness result for HE(5RE1/5)Al3C3. It demonstrates that when the load increases from 3 N to 100 N, the hardness progressively falls from 13.7 ± 0.5 GPa to 12.9 ± 0.5 GPa. Above 30 N, the hardness value converges to 13 ± 0.3 GPa. For YAl3C3, the Vickers hardness is approximately 12.6 ± 0.3 GPa when the load exceeds 30 N.",
+      "The structural integrity of the layered structure was assessed in terms of hardness (at 10 N load) of the matrix and the interface, see Fig. 8a. The hardness at the interface clearly shows a dipping interface attributed to the lower hardness contribution from carbon fibers. Similarly, the hardness of the TaC-CNT composite during SPS processing was reduced from 15.5 GPa to 12.6 GPa [29]. However, the hardness values at the interface are still within the matrix's range to sustain similar load-bearing capabilities. The average hardness on the matrix side is ∼18 GPa, while that at the interface is ∼13 GPa."
+    ]
+  },
+  {
+    "category": "ambiguous",
+    "question": "What maximum temperature can ultra-high-temperature ceramic materials tolerate in service?",
+    "reference_answer": "Maximum service temperatures vary significantly depending on material composition and application context, ranging from 840 °C for onset of degradation in nanofiber composites to approximately 1327 °C (1600 K) for bulk ceramics, with some materials designed to withstand temperatures approaching 1850 °C under extreme processing conditions.",
+    "answer_keys": [["range", "varies", "vary", "multiple", "several"], ["840", "1327", "1600", "1850"], ["°C", "K"]],
+    "evidence_any": [
+      "the onset of temperature at which the rapid weight loss starts shifted from ∼710 ◦C to ∼840 ◦C in the case of HfC decorated Cnf",
+      "maximum temperature is reached after about 60 s (z = 18 km). The peak temperature, corresponding to the peak heat flux, is about 1600 K"
+    ],
+    "source_docs": ["Nisar_2023_Carbon_Enhancedflexibility.pdf", "Savino_2005_AerospaceScienceandTechnology_Aerothermodynamicstudy.pdf"],
+    "excerpts": [
+      "Improved thermal stability of HfC decorated Cnf mat over Cnf can be seen from the TGA analysis shown in Fig. 5a. The slight weight loss at temperatures ∼106.5 ◦C in both Cnf and HfC decorated Cnf is owing to the moisture content in the sample which evaporates during the initial heating. Due to the absence of oxygen, with further increase in temperature (up to 600 ◦C), the weight loss in both samples has been attributed to the decomposition and evaporation of hydrocarbon. Beyond 600 ◦C, rapid weight loss occurred in both samples due to the thermal decomposition in carbon nanofibers, leading to carbon burning [23]. Also, the onset of temperature at which the rapid weight loss starts shifted from ∼710 ◦C to ∼840 ◦C in the case of HfC decorated Cnf.",
+      "The stagnation point convective heat fluxes and temperature profiles along the trajectory are shown in Figs. 9(a), (b). The maximum stagnation point heat flux, attained at t = 55 s, is about 3.5 MW m −2 , corresponding to an altitude of about 22 km, while maximum temperature is reached after about 60 s (z = 18 km). The peak temperature, corresponding to the peak heat flux, is about 1600 K; this value is about 800 K lower than the local radiative equilibrium temperature"
+    ]
+  },
+  {
+    "category": "ambiguous",
+    "question": "What thermal expansion coefficients do ceramic materials exhibit at elevated temperatures?",
+    "reference_answer": "Linear thermal expansion coefficients vary among different UHTC materials and composites, ranging from 3.6 × 10-6 K-1 for hafnium carbide-carbon fiber composites to 8.21 × 10-6 K-1 for high-entropy aluminum carbides, with pure hafnium carbide measured at 7.7 × 10-6 K-1.",
+    "answer_keys": [["range", "varies", "vary", "multiple", "several"], ["3.6", "7.7", "8.21"], ["10-6", "K-1"]],
+    "evidence_any": [
+      "The linear TEC of HE(5RE1/5)Al3C3 is determined in terms of the slope of the curve and calculated to be 8.21 × 10− 6 K− 1",
+      "CTE of the hybrid system follows the rule of mixture, and change in CTE could cause excessive local stress resulting in the formation of cracks leading to catastrophic failure. Due to the incorporation of HfC particles in the Cnf mat, there is a lesser probability of the CTE mismatch (HfC: 7.7 × 10− 6 K− 1 [15], Cf: 1.6 7 × 10− 6 K− 1 [15] and HfC-Cf: 3.6 × 10− 6 K− 1"
+    ],
+    "source_docs": ["Guo_2024_CeramicsInternational_High-entropy.pdf", "Nisar_2023_Carbon_Enhancedflexibility.pdf"],
+    "excerpts": [
+      "The linear thermal expansion coefficient (TEC) of HE(5RE1/5)Al3C3 was measured from 25 to 1300 ◦C (Fig. 9). It can be seen that the expansion increases linearly with temperature without excessive fluctuation, indicating no occurrence of phase transition or decomposition. The linear TEC of HE(5RE1/5)Al3C3 is determined in terms of the slope of the curve and calculated to be 8.21 × 10− 6 K− 1, lower than YAl3C3 (10.3 × 10− 6 K− 1 at 300–1573 K) [10]. The dimensional stability of high entropy ceramics is due to the lattice distortion caused by high entropy effect, which hinders the movement of atoms and mass transfer, and inhibits the sintering and grain growth [13].",
+      "The sample containing in-house fabricated HfC decorated Cnf mat remained intact (see Fig. 6a) after SPS processing, while the sample containing procured Cf spalled off while removal from the SPS die (Fig. 6b). The spallation occurred through the interface, as seen in Fig. 6b. This elicits the interlayer poor bonding of the procured Cf mat with HfC ceramic, attributed to its larger diameter. However, due to the smaller diameter and incorporation of HfC nanoparticles in the HfC decorated Cnf, the interfacial bonding between the interlayer and HfC ceramic is stronger. It is to be noted here that the CTE of the hybrid system follows the rule of mixture, and change in CTE could cause excessive local stress resulting in the formation of cracks leading to catastrophic failure. Due to the incorporation of HfC particles in the Cnf mat, there is a lesser probability of the CTE mismatch (HfC: 7.7 × 10− 6 K− 1 [15], Cf: 1.6 7 × 10− 6 K− 1 [15] and HfC-Cf: 3.6 × 10− 6 K− 1 [15])"
+    ]
+  },
+  {
+    "category": "ambiguous",
+    "question": "What structural properties do materials designed for thermal protection systems need to demonstrate?",
+    "reference_answer": "UHTC materials for thermal protection systems must satisfy multiple competing requirements, with minimum specifications varying across applications; one study recommends thermal conductivity of at least 100 W m-1 K-1, while others report effective materials ranging from 10.98 to 66 W m-1 K-1 depending on application and composite design.",
+    "answer_keys": [["varying", "varies", "range", "multiple", "several"], ["100", "10.98", "66"], ["W m-1 K-1"]],
+    "evidence_any": [
+      "Table 3 also shows that an ideal UHTC material for TPS applications should have a thermal conductivity as high as, at least, 100 W m −1 K −1",
+      "the thermal conductivity of HE(5RE1/5)Al3C3 is 10.98 W m− 1 K− 1"
+    ],
+    "source_docs": ["Savino_2005_AerospaceScienceandTechnology_Aerothermodynamicstudy.pdf", "Guo_2024_CeramicsInternational_High-entropy.pdf"],
+    "excerpts": [
+      "In particular, Table 3 also confirms that, when thermal conductivity is sufficiently high, the effect of surface emissivity is almost negligible. Table 3 also shows that an ideal UHTC material for TPS applications should have a thermal conductivity as high as, at least, 100 W m −1 K −1 . In particular, the peak stagnation point temperature along the reentry trajectory increase from 2100 K, for ε = 0.8, to 2300 K, for ε = 0.1 and λ = 10 Wm−1 K −1",
+      "The Vickers hardness, flexural strength, Young's modulus, thermal expansion coefficient, GPa, 8.21 × 10− 6 K− and thermal conductivity 1, and 10.98 W m− 1 K− 1 of 1, respectively. HE(5RE1/5)Al3C3 are 13.2 ± The residual Young's 0.5 GPa, 148 ± 15 MPa, 375 modulus of HE(5RE1/5)Al3C3 remained approximately 83 % of its room temperature value even at 1500 ◦C"
+    ]
+  },
+  {
+    "category": "ambiguous",
+    "question": "What elastic modulus retention do advanced ceramics maintain at high temperatures?",
+    "reference_answer": "High-temperature elastic modulus retention varies between materials; some aluminum carbides retain approximately 83 percent of room temperature Young's modulus values at 1500 °C, while requirements and performance metrics depend on specific material composition and service conditions.",
+    "answer_keys": [["varies", "vary", "range", "multiple", "several", "depends"], ["83", "1500"], ["percent", "%", "°C", "Young's modulus"]],
+    "evidence_any": [
+      "The residual Young's modulus of HE(5RE1/5)Al3C3 remained approximately 83 % of its room temperature value even at 1500 ◦C",
+      "In our previous work, the Young's modulus of YAl3C3 at 1500 ◦C was still 85 % of room temperature value"
+    ],
+    "source_docs": ["Guo_2024_CeramicsInternational_High-entropy.pdf"],
+    "excerpts": [
+      "As service requirements for hypersonic aircraft continue to increase, the development of high-performance ultra-high temperature ceramics has attracted increasing attention. Due to their high melting point, high hardness, good wear resistance and chemical inertness, ZrC and HfC- based ceramics have become important candidate materials for the nose and leading edge of hypersonic aircraft [1–4]. However, the poor oxidation resistance of these materials has severely limited their appli- cation in the field of hypersonic aircraft. Recently [2], a new series of ternary layered carbides, REAl3C3 (RE = Sc, Y, Lanthanides), has emerged as a promising oxidation resistant ultra-high temperature ceramic. YAl3C3 is a typical member of the REAl3C3 family, which belongs to the P63/mmc space group. Its crystal structure can be described as neighboring NaCl-type YC slabs being mirrored by one Al3C2 unit. In our previous work, the Young's modulus of YAl3C3 at 1500 ◦C was still 85 % of room temperature value, indicating it is a high temperature structural material",
+      "To determine the high temperature mechanical characteristics of HE (5RE1/5)Al3C3, the temperature-dependent Young's modulus and inter- nal friction were evaluated, the results are displayed in Fig. 8. Obvi- ously, the relationship between Young's modulus and temperature consists of two regions at the temperature of 25–1500 ◦C. Firstly, the Young's modulus decreases almost linearly with temperature increasing up to 1400 ◦C. Secondly, at temperatures above 1400 ◦C, the Young's modulus decreases obviously, which is also usually called the visco- elastic region, corresponding to the obvious softening of materials at this temperature range. At 1500 ◦C, the Young's modulus of HE(5RE1/5) Al3C3 is about 83 % of the value at room temperature, which demonstrates that HE(5RE1/5)Al3C3 has excellent high temperature stiffness."
+    ]
+  }
+]
