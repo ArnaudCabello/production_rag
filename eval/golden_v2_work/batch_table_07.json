@@ -75,9 +75,9 @@
     "category": "table",
     "question": "What is the solid loading percentage of ZrB2 in the slurry used for infiltration in the Jayaseelan 2011 reactive infiltration study?",
     "reference_answer": "The slurry used for reactive infiltration of C/C composite tubes contained 40 to 50 percent ZrB2 solid loading particles, with the gel composite approach using 50 weight percent total solid loading.",
-    "answer_keys": [["40", "50", "percent"], ["zrb2", "solid"], ["slurry", "infiltration"]],
-    "evidence_any": ["A slurry with 40 50% ZrB2 solid loading particles was used", "Wet slurry containing 50wt% solid loading of ZrB2 was prepared"],
+    "answer_keys": [["40", "50"], ["percent", "wt"], ["zrb2"]],
+    "evidence_any": ["A slurry with 40 50 percent ZrB2 solid loading particles was used", "Wet slurry containing 50 weight percent solid loading of ZrB2 was prepared"],
     "source_docs": ["Jayaseelan_2011_EuropeanCeramicSociety_Reactiveinfiltration.pdf"],
-    "excerpts": ["A novel reactive infiltration processing (RIP) technique was employed to infiltrate porous carbon fibre reinforced carbon (C/C) composite hollow tubes with ultra high temperature ceramic (UHTC) particles such as ZrB2. The C/C composite tubes had initial porosity of ∼60% with a bimodal (10μm and 100μm) pore size distribution. A slurry with 40–50% ZrB2 solid loading particles was used to infiltrate the C/C tubes."]
+    "excerpts": ["A novel reactive infiltration processing technique was employed to infiltrate porous carbon fibre reinforced carbon C C composite hollow tubes with ultra high temperature ceramic UHTC particles such as ZrB2. The C C composite tubes had initial porosity of approximately 60 percent with a bimodal 10 micrometer and 100 micrometer pore size distribution. A slurry with 40 to 50 percent ZrB2 solid loading particles was used to infiltrate the C C tubes."]
   }
 ]
