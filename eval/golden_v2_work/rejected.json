@@ -1,63 +1,93 @@
 [
   {
+    "batch": "batch_aggregation_01.json",
+    "error": "evidence not verbatim in excerpts",
+    "category": "aggregation",
+    "question": "What thermal conductivity values have been reported for ZrB2-based ultra-high-temperature ceramics, including monolithic ZrB2, HfB2, and ZrB2-ZrSi2 composite feedstocks?"
+  },
+  {
+    "batch": "batch_aggregation_01.json",
+    "error": "evidence not verbatim in excerpts",
+    "category": "aggregation",
+    "question": "What room-temperature electrical conductivity values have been reported for ZrB2 and HfB2-based ultra-high-temperature ceramics?"
+  },
+  {
+    "batch": "batch_aggregation_01.json",
+    "error": "bad evidence span",
+    "category": "aggregation",
+    "question": "What sintering or processing temperatures have been used to fabricate ZrB2-based UHTCs by spark plasma sintering, ZrB2-ZrSi2 UHTC feedstock by electron beam sintering, and La2Ti2O7-based piezoelectric ceramics by solid-state reaction?"
+  },
+  {
+    "batch": "batch_aggregation_01.json",
+    "error": "evidence not verbatim in excerpts",
+    "category": "aggregation",
+    "question": "What particle sizes have been reported for ZrB2, HfB2, ZrC, HfC, and SiC feedstock powders used to fabricate ultra-high-temperature ceramics?"
+  },
+  {
+    "batch": "batch_ambiguous_01.json",
+    "error": "ambiguous missing hedge group",
+    "category": "ambiguous",
+    "question": "What flexural strength values were reported for carbon-fiber-reinforced UHTC composites after three-point bending tests?"
+  },
+  {
+    "batch": "batch_ambiguous_01.json",
+    "error": "ambiguous missing hedge group",
+    "category": "ambiguous",
+    "question": "What fracture toughness values were measured for the carbon-fiber-reinforced composite specimens using SENB testing?"
+  },
+  {
+    "batch": "batch_ambiguous_01.json",
+    "error": "ambiguous missing hedge group",
+    "category": "ambiguous",
+    "question": "What work of fracture was achieved for carbon-fiber-reinforced UHTC composites during crack propagation?"
+  },
+  {
+    "batch": "batch_ambiguous_02.json",
+    "error": "evidence not verbatim in excerpts",
+    "category": "ambiguous",
+    "question": "What hardness values were measured for the ultra-high temperature ceramic materials?"
+  },
+  {
+    "batch": "batch_cross_document_01.json",
+    "error": "evidence not verbatim in excerpts",
+    "category": "cross_document",
+    "question": "How does the mass loss reported for SiC/UHTC/SiC-coated C/SiC composites (Hu et al., 2019) at 1500 C compare to the hardness improvement reported for the Ta0.5Hf0.5C solid solution over TaC (Thomas et al., 2023)?"
+  },
+  {
+    "batch": "batch_cross_document_02.json",
+    "error": "evidence not verbatim in excerpts",
+    "category": "cross_document",
+    "question": "Compare the atomic oxygen recombination coefficients measured by Alfano et al. 2010 for ZrB2-SiC based UHTCs against the linear ablation rate reported by Song et al. 2011 for Ti2AlC, as measures of surface reactivity under thermal exposure."
+  },
+  {
+    "batch": "batch_cross_document_02.json",
+    "error": "bad evidence span",
+    "category": "cross_document",
+    "question": "What role do voids and porosity play in the ablated sub-surface layer of Ti2AlC in Song et al. 2011 compared to the defects observed in pyrolyzed ZrB2-SiC fiber composites made by direct ink writing in Kemp et al. 2021?"
+  },
+  {
+    "batch": "batch_cross_document_05.json",
+    "error": "category quota full",
+    "category": "cross_document",
+    "question": "Guo et al. 2024 describe UHTCs such as ZrB2 and HfB2 as having melting points exceeding 3000 degrees Celsius. How does this melting-point range compare to the melting temperatures reported for high entropy borides, nitrides, and carbides by Ujah and Olubambi 2025?"
+  },
+  {
+    "batch": "batch_cross_document_05.json",
+    "error": "category quota full",
+    "category": "cross_document",
+    "question": "Guo et al. 2024 used a combination of experimental literature data and machine learning to optimize ZrB2-SiC oxidation resistance, while Li et al. 2025 used a combination of first-principles calculations and oxyacetylene ablation experiments to optimize (Hf-Zr-Ta-Nb)C coatings. What methodology did each study primarily rely on for its optimization design?"
+  },
+  {
     "batch": "batch_factual_02.json",
     "error": "answer_key not in reference",
     "category": "factual",
     "question": "What temperature was used for the tensile simulations of grain boundary strength in Dai et al. 2022 study of Zr0.95W0.05C?"
   },
   {
-    "batch": "batch_factual_02.json",
-    "error": "evidence not verbatim in excerpts",
-    "category": "factual",
-    "question": "How many grain boundaries did Dai et al. 2022 construct for each carbide composition in their study?"
-  },
-  {
-    "batch": "batch_factual_02.json",
-    "error": "evidence not verbatim in excerpts",
-    "category": "factual",
-    "question": "Which density functional theory functional was used for DFT calculations in Dai et al. 2022 study on UHTCs?"
-  },
-  {
-    "batch": "batch_factual_02.json",
-    "error": "evidence not verbatim in excerpts",
-    "category": "factual",
-    "question": "What was the strain rate applied to grain boundaries in the virtual tensile experiments performed by Dai et al. 2022?"
-  },
-  {
-    "batch": "batch_factual_04.json",
-    "error": "answer_key not in reference",
-    "category": "factual",
-    "question": "In Dai et al. 2022, what material composition was selected for the ZrC-SiC functionally graded UHTC (FG-UHTC) heat-resistant outer layer in the multilayer thermal protection system?"
-  },
-  {
-    "batch": "batch_factual_04.json",
-    "error": "evidence not verbatim in excerpts",
-    "category": "factual",
-    "question": "What were the constant material property parameters (thermal conductivity, density, elastic modulus) used for SiC ceramic in the verification example in Dai et al. 2022?"
-  },
-  {
-    "batch": "batch_factual_05.json",
-    "error": "evidence not verbatim in excerpts",
-    "category": "factual",
-    "question": "At what temperature and for how long were the freeze-dried cast bodies sintered in the Hong et al. 2009 study?"
-  },
-  {
-    "batch": "batch_factual_06.json",
-    "error": "evidence not verbatim in excerpts",
-    "category": "factual",
-    "question": "What was the mass ablation rate of the Ren 2017 ZrB2-SiC/SiC multilayer coating with HfC nanowires after 90 seconds of oxyacetylene torch ablation?"
-  },
-  {
     "batch": "batch_factual_06.json",
     "error": "evidence not verbatim in excerpts",
     "category": "factual",
     "question": "According to Ren et al. 2017, what was the percentage improvement in fracture toughness of the ZrB2-SiC coating after incorporating HfC nanowires?"
-  },
-  {
-    "batch": "batch_factual_06.json",
-    "error": "evidence not verbatim in excerpts",
-    "category": "factual",
-    "question": "What were the flow rates of CH\u2084, H\u2082, and Ar gases specified in Ren et al. 2017 for the CVD synthesis of HfC nanowires?"
   },
   {
     "batch": "batch_factual_06.json",
@@ -73,13 +103,19 @@
   },
   {
     "batch": "batch_factual_06.json",
+    "error": "category quota full",
+    "category": "factual",
+    "question": "According to Vinci et al. 2025, what was the peak temperature and duration for which it was maintained during the vacuum annealing of the niobium-coated composite?"
+  },
+  {
+    "batch": "batch_factual_06.json",
     "error": "answer_key not in reference",
     "category": "factual",
     "question": "What were the measured density and porosity values of the sintered Cf-ZrB2/SiC baseline composite material in Vinci et al. 2025?"
   },
   {
     "batch": "batch_factual_06.json",
-    "error": "evidence not verbatim in excerpts",
+    "error": "category quota full",
     "category": "factual",
     "question": "According to XRD analysis in Vinci et al. 2025, what were the main crystalline phases identified in the vacuum-annealed NbB2/NbC coating?"
   },
@@ -91,6 +127,24 @@
   },
   {
     "batch": "batch_factual_07.json",
+    "error": "category quota full",
+    "category": "factual",
+    "question": "What melting point is reported for Ta0.8Hf0.2C ceramic in Ghaffari et al. (2013) pressureless sintering study with MoSi2?"
+  },
+  {
+    "batch": "batch_factual_07.json",
+    "error": "category quota full",
+    "category": "factual",
+    "question": "What MoSi2 content and resulting relative density were optimal for Ta0.8Hf0.2C sintering at 2000\u00b0C in Ghaffari et al. (2013)?"
+  },
+  {
+    "batch": "batch_factual_07.json",
+    "error": "category quota full",
+    "category": "factual",
+    "question": "What protective oxide layers formed on Ta0.8Hf0.2C/24 vol.% MoSi2 during flame oxidation testing in Ghaffari et al. (2013)?"
+  },
+  {
+    "batch": "batch_factual_07.json",
     "error": "answer_key not in reference",
     "category": "factual",
     "question": "What powder materials and milling procedure were employed to prepare Ta0.8Hf0.2C in Ghaffari et al. (2013)?"
@@ -99,7 +153,133 @@
     "batch": "batch_factual_07.json",
     "error": "category quota full",
     "category": "factual",
+    "question": "How did HfC content affect the relative density of TaC-based composites in Ghaffari et al. (2013)?"
+  },
+  {
+    "batch": "batch_factual_07.json",
+    "error": "category quota full",
+    "category": "factual",
+    "question": "What advantages did the colloidal process provide for carbon fiber-toughened ZrB2\u2013ZrSi2 in Sha et al. (2016)?"
+  },
+  {
+    "batch": "batch_factual_07.json",
+    "error": "category quota full",
+    "category": "factual",
+    "question": "What relative densities were achieved for CZS1 and CZS2 composites in Sha et al. (2016)?"
+  },
+  {
+    "batch": "batch_factual_07.json",
+    "error": "category quota full",
+    "category": "factual",
+    "question": "What flexural strengths were measured for CZS1 and CZS2 composites in Sha et al. (2016)?"
+  },
+  {
+    "batch": "batch_factual_07.json",
+    "error": "category quota full",
+    "category": "factual",
     "question": "By what percentage did fracture toughness improve in CZS2 compared to CZS1 in Sha et al. (2016)?"
+  },
+  {
+    "batch": "batch_multi_chunk_01.json",
+    "error": "needs 2 evidence spans",
+    "category": "multi_chunk",
+    "question": "In Zamharil 2015, why did the ZrB2-25vol% SiC composite sintered at 1700\u00b0C show particle fragmentation and rearrangement as the dominant densification mechanisms?"
+  },
+  {
+    "batch": "batch_multi_chunk_01.json",
+    "error": "needs 2 evidence spans",
+    "category": "multi_chunk",
+    "question": "In Zamharir 2015, why did trial T-8 with 20 nm SiC particles achieve lower density (86.64%) compared to trial T-7 with 200 nm SiC particles (96.5%), despite having finer particles?"
+  },
+  {
+    "batch": "batch_multi_chunk_01.json",
+    "error": "needs 2 evidence spans",
+    "category": "multi_chunk",
+    "question": "In Zamharir 2015, what was the role of glassy borosilicate phases observed in the microstructure of trial T-7 sintered at 1850\u00b0C with 200 nm SiC particles?"
+  },
+  {
+    "batch": "batch_multi_chunk_01.json",
+    "error": "needs 2 evidence spans",
+    "category": "multi_chunk",
+    "question": "In Rizzi 2024, what was the particle size range of TiC-TiAl powder after self-propagating high-temperature synthesis (SHS), and why was milling necessary before spark plasma sintering?"
+  },
+  {
+    "batch": "batch_multi_chunk_01.json",
+    "error": "needs 2 evidence spans",
+    "category": "multi_chunk",
+    "question": "In Rizzi 2024, what were the SPS sintering conditions used for TiC with 20 vol% TiAl, and what relative density was achieved at 1350\u00b0C?"
+  },
+  {
+    "batch": "batch_multi_chunk_01.json",
+    "error": "needs 2 evidence spans",
+    "category": "multi_chunk",
+    "question": "In Rizzi 2024, how did the aluminum content in TiC20TiAl evolve during SPS sintering, and what mechanism did this enable for densification?"
+  },
+  {
+    "batch": "batch_multi_chunk_01.json",
+    "error": "needs 2 evidence spans",
+    "category": "multi_chunk",
+    "question": "In Rizzi 2024, how did the microstructure of TiC20TiAl change from 1150\u00b0C to 1700\u00b0C during SPS, and what caused the aluminum-rich phase to form spherical clusters?"
+  },
+  {
+    "batch": "batch_multi_chunk_01.json",
+    "error": "needs 2 evidence spans",
+    "category": "multi_chunk",
+    "question": "In Rizzi 2024, how did the Vickers hardness of TiC doped with different TiAl contents (5, 10, and 20 vol%) compare, and what explained these differences?"
+  },
+  {
+    "batch": "batch_multi_chunk_02.json",
+    "error": "non-standalone phrasing",
+    "category": "multi_chunk",
+    "question": "In Fang et al. 2021, the HTC-coated carbon fiber composite (HCZS) showed improved oxidation resistance compared to the uncoated composite (CZS). What mechanism did the authors propose for how the HTC coating protected the carbon fibers from oxidation damage at 1600\u00b0C?"
+  },
+  {
+    "batch": "batch_multi_chunk_02.json",
+    "error": "evidence not verbatim in excerpts",
+    "category": "multi_chunk",
+    "question": "In Zapata-Solvas et al. 2014, ZS20 oxidation experiments were conducted at 1400\u00b0C, 1500\u00b0C, and 1600\u00b0C, revealing paradoxical oxidation behavior. How did boron oxide (B2O3) volatilization explain the difference in oxidation scale thickness between 1400\u00b0C and 1500\u00b0C?"
+  },
+  {
+    "batch": "batch_multi_chunk_03.json",
+    "error": "evidence not verbatim in excerpts",
+    "category": "multi_chunk",
+    "question": "In the Galizia 2024 study, what was the sintering temperature and dwell time used for ZrB2-6WC (ZW6), and what thermal conductivity range was achieved after processing?"
+  },
+  {
+    "batch": "batch_multi_chunk_03.json",
+    "error": "evidence not verbatim in excerpts",
+    "category": "multi_chunk",
+    "question": "In the Galizia 2024 study, why was a longer isothermal dwell time required for HfB2-6WC (HW6) compared to ZrB2-6WC, and how did this relate to the material's refractory characteristics?"
+  },
+  {
+    "batch": "batch_multi_chunk_03.json",
+    "error": "answer_key not in reference",
+    "category": "multi_chunk",
+    "question": "In the Chen 2025 first-principles study, how does the addition of titanium to zirconium carbide affect lattice parameters, and what causes this change in lattice constants?"
+  },
+  {
+    "batch": "batch_multi_chunk_03.json",
+    "error": "answer_key not in reference",
+    "category": "multi_chunk",
+    "question": "In the Chen 2025 study, how do the bonding characteristics of Ti-C versus Zr-C bonds in (Zr1\u2212xTix)C solid solution relate to differences in elastic constants C11 and C44?"
+  },
+  {
+    "batch": "batch_multi_chunk_03.json",
+    "error": "answer_key not in reference",
+    "category": "multi_chunk",
+    "question": "In the Chen 2025 study, how does nitrogen doping affect the thermodynamic stability of (Zr1\u2212xTix)C solid solution, and what does this mean for synthesis processing temperatures?"
+  },
+  {
+    "batch": "batch_multi_chunk_03.json",
+    "error": "evidence not verbatim in excerpts",
+    "category": "multi_chunk",
+    "question": "In the Chen 2025 study, at what nitrogen concentration do mechanical properties of (Zr1\u2212xTix)C,N reach their maximum values, and which properties show this peak?"
+  },
+  {
+    "batch": "batch_multi_chunk_03.json",
+    "error": "evidence not verbatim in excerpts",
+    "category": "multi_chunk",
+    "question": "In the Chen 2025 study, how does nitrogen doping enhance bonding between titanium and carbon atoms, and what evidence from charge density analysis supports this mechanism?"
   },
   {
     "batch": "batch_semantic_01.json",
@@ -126,52 +306,16 @@
     "question": "What is the amount of permanent electric polarization that persists in the La1.97Li0.015Ce0.015Ti2O7:0.2MnO2 ceramic after removal of an external electric field?"
   },
   {
-    "batch": "batch_semantic_01.json",
-    "error": "evidence not verbatim in excerpts",
-    "category": "semantic",
-    "question": "What minimum thermal decomposition point characterizes the class of materials known as ultra-high-temperature ceramics (UHTCs)?"
-  },
-  {
-    "batch": "batch_semantic_01.json",
-    "error": "answer_key not in reference",
-    "category": "semantic",
-    "question": "What synergistic combination of thermal and mechanical properties renders TiB2, ZrB2, and HfB2 diborides suitable as protective barriers in high-stress thermal environments?"
-  },
-  {
-    "batch": "batch_semantic_01.json",
-    "error": "evidence not verbatim in excerpts",
-    "category": "semantic",
-    "question": "What computational thermodynamic methodology did Cacciamani and colleagues use to predict phase stability and thermodynamic properties across multiple interacting metallic and ceramic components?"
-  },
-  {
     "batch": "batch_semantic_02.json",
     "error": "evidence not verbatim in excerpts",
     "category": "semantic",
     "question": "In the 2023 ablation study by SHAO et al. of protective coatings containing zirconium carbide, silicon carbide, and molybdenum disilicide on carbon composite substrates, how did the material loss rate under high-temperature flame exposure respond to progressively higher oxygen and acetylene flow rates when comparing coatings with lower versus higher zirconium content (34 wt% vs. 60 wt%)?"
   },
   {
-    "batch": "batch_semantic_02.json",
-    "error": "answer_key not in reference",
-    "category": "semantic",
-    "question": "In SHAO et al. 2023, how did the microstructural features and phase compositions of the oxidized coating surface differ between the central region (maximum heat exposure) and the surrounding transition region after the zirconium carbide-silicon carbide-molybdenum disilicide coated specimens were subjected to 60 seconds of oxyacetylene flame ablation?"
-  },
-  {
     "batch": "batch_semantic_03.json",
     "error": "evidence not verbatim in excerpts",
     "category": "semantic",
     "question": "In Zhang et al. 2019, what thermal processing method was employed to manufacture the directionally solidified ZrB2-SiC composite, and what were the key operational parameters that characterized this fabrication technique?"
-  },
-  {
-    "batch": "batch_semantic_03.json",
-    "error": "evidence not verbatim in excerpts",
-    "category": "semantic",
-    "question": "In Hu et al. 2023's study of thermally sprayed ZrB2 coatings, what crystalline boron-oxide phase remains in the deposited material after plasma treatment, and what specific temperature range characterizes the thermal behavior of this residual phase?"
-  },
-  {
-    "batch": "batch_semantic_03.json",
-    "error": "evidence not verbatim in excerpts",
-    "category": "semantic",
-    "question": "In Zhang et al. 2019's comparison of processing methods for ZrB2-SiC composites, how did the melt-solidified directionally aligned samples differ in oxidation protection from conventionally sintered samples prepared using spark-plasma techniques?"
   },
   {
     "batch": "batch_semantic_04.json",
@@ -181,69 +325,15 @@
   },
   {
     "batch": "batch_semantic_04.json",
-    "error": "evidence not verbatim in excerpts",
-    "category": "semantic",
-    "question": "In Dubey 2022, which pure phase in the HfB2-ZrB2-SiC-CNT composite system exhibits the lowest capacity for electrical charge transport, and what does this imply for overall conductivity?"
-  },
-  {
-    "batch": "batch_semantic_04.json",
     "error": "answer_key not in reference",
     "category": "semantic",
     "question": "In the 2014 study by Balat-Pichelin et al., what is the significance of measuring the radiative energy output from the surface of ZrB2-SiC fiber composites at extreme temperatures exceeding 2000 K?"
-  },
-  {
-    "batch": "batch_semantic_04.json",
-    "error": "answer_key not in reference",
-    "category": "semantic",
-    "question": "How do the two sintering additives (Si3N4 and ZrSi2) studied in Balat-Pichelin 2014 differentially affect the resistance to degradation through chemical reaction with atmospheric oxygen?"
-  },
-  {
-    "batch": "batch_semantic_04.json",
-    "error": "answer_key not in reference",
-    "category": "semantic",
-    "question": "Both Dubey 2022 and Balat-Pichelin 2014 address ultra-high temperature ceramics for aerospace applications. What is the common thermal management challenge these materials must overcome in hypersonic vehicle designs?"
-  },
-  {
-    "batch": "batch_semantic_04.json",
-    "error": "answer_key not in reference",
-    "category": "semantic",
-    "question": "What does the negative Seebeck coefficient observed in Dubey 2022 for HfB2-ZrB2 composites indicate about the type of mobile charge carriers responsible for electrical transport?"
-  },
-  {
-    "batch": "batch_table_01.json",
-    "error": "evidence not verbatim in excerpts",
-    "category": "table",
-    "question": "In Table 1 of Thimmappa et al. 2021, what is the nanoindentation hardness in GPa for the ZrB2-20 vol% SiC-10 wt% Ta (ZS-10Ta) composition?"
-  },
-  {
-    "batch": "batch_table_01.json",
-    "error": "evidence not verbatim in excerpts",
-    "category": "table",
-    "question": "According to Table 1 in Thimmappa et al. 2021, what is the elastic modulus in GPa for the ZrB2-20 vol% SiC-10 wt% Ta (ZS-10Ta) composition?"
-  },
-  {
-    "batch": "batch_table_01.json",
-    "error": "evidence not verbatim in excerpts",
-    "category": "table",
-    "question": "In Table 2 of Thimmappa et al. 2021, what is the oxide layer thickness in micrometers for the ZrB2-20 vol% SiC-10 wt% Ta (ZS-10Ta) composite after oxidation at 1600\u00b0C for 10 hours?"
   },
   {
     "batch": "batch_table_02.json",
     "error": "evidence not verbatim in excerpts",
     "category": "table",
     "question": "In the Popov et al. 2024 study, what was the Vickers hardness of the TiB2-SiC ceramic composite with 3.8 wt% reduced graphene oxide additive (sample TSG03)?"
-  },
-  {
-    "batch": "batch_table_02.json",
-    "error": "evidence not verbatim in excerpts",
-    "category": "table",
-    "question": "What was the fracture toughness (K1C) value reported by Popov et al. 2024 for the TiB2-SiC composite with 3.8 wt% reduced graphene oxide (TSG03)?"
-  },
-  {
-    "batch": "batch_table_02.json",
-    "error": "evidence not verbatim in excerpts",
-    "category": "table",
-    "question": "According to Popov et al. 2024 Table 2, what was the thermal conductivity of the TiB2-SiC composite with 3.8 wt% reduced graphene oxide (sample TSG03)?"
   },
   {
     "batch": "batch_table_02.json",
@@ -316,6 +406,144 @@
     "error": "evidence not verbatim in excerpts",
     "category": "table",
     "question": "In Ghaffari 2013, which TaC-HfC composition with MoSi2 shows the lowest fracture toughness, and what is its value in MPa m1/2?"
+  },
+  {
+    "batch": "batch_table_05.json",
+    "error": "evidence not verbatim in excerpts",
+    "category": "table",
+    "question": "According to Feng 2021, what was the flexural strength of SiCf/HfC-SiC composites before ablation, measured by three-point bending test?"
+  },
+  {
+    "batch": "batch_table_05.json",
+    "error": "evidence not verbatim in excerpts",
+    "category": "table",
+    "question": "In Feng 2021's study, what was the flexural strength of Cf/HfC-SiC composites after three cycles of ablation under oxyacetylene flame?"
+  },
+  {
+    "batch": "batch_table_05.json",
+    "error": "evidence not verbatim in excerpts",
+    "category": "table",
+    "question": "What percentage decrease in flexural strength did SiCf/HfC-SiC composites experience after three cycles of ablation in Feng 2021's oxyacetylene ablation tests?"
+  },
+  {
+    "batch": "batch_table_05.json",
+    "error": "bad evidence span",
+    "category": "table",
+    "question": "According to Table 1 in Nallusamy 2025, what is the Young's modulus of titanium diboride (TiB2) nanoparticles?"
+  },
+  {
+    "batch": "batch_table_05.json",
+    "error": "evidence not verbatim in excerpts",
+    "category": "table",
+    "question": "What is the melting point of zirconium diboride (ZrB2) listed in Nallusamy 2025's materials properties table?"
+  },
+  {
+    "batch": "batch_table_05.json",
+    "error": "evidence not verbatim in excerpts",
+    "category": "table",
+    "question": "In Nallusamy 2025, what was the relative density percentage of composite S4 (40% ZrB2-20% TiB2) after sintering?"
+  },
+  {
+    "batch": "batch_table_05.json",
+    "error": "bad evidence span",
+    "category": "table",
+    "question": "According to Nallusamy 2025's Table 5, what was the total mass gain of composite S4 at 1400 degrees Celsius?"
+  },
+  {
+    "batch": "batch_table_05.json",
+    "error": "bad evidence span",
+    "category": "table",
+    "question": "In Nallusamy 2025, at what temperature did composite S3 (30% ZrB2-30% TiB2) show its oxidation starting point?"
+  },
+  {
+    "batch": "batch_table_06.json",
+    "error": "evidence not verbatim in excerpts",
+    "category": "table",
+    "question": "In the Cheng 2017 study on synthesis of nanocrystalline TaC powders via high temperature spray pyrolysis, what mass of phenolic resin was used in recipe R1?"
+  },
+  {
+    "batch": "batch_table_06.json",
+    "error": "evidence not verbatim in excerpts",
+    "category": "table",
+    "question": "According to Table 1 in Cheng et al. 2017, what was the C:Ta2O5 molar ratio specified for recipe R2 in the nanocrystalline TaC synthesis?"
+  },
+  {
+    "batch": "batch_table_06.json",
+    "error": "evidence not verbatim in excerpts",
+    "category": "table",
+    "question": "What was the measured tensile modulus of 2D SiC/SiC composites at 1500 degrees Celsius in the You et al. 2025 study, based on Table 3?"
+  },
+  {
+    "batch": "batch_table_06.json",
+    "error": "bad evidence span",
+    "category": "table",
+    "question": "In the You 2025 study, what was the measured tensile strength of 2D SiC/SiC composites at 1000 degrees Celsius according to Table 5?"
+  },
+  {
+    "batch": "batch_table_06.json",
+    "error": "evidence not verbatim in excerpts",
+    "category": "table",
+    "question": "According to Table 6 in You et al. 2025, incorporating stress-oxidation effects, what was the measured tensile strength of 2D SiC/SiC composites at 1250 degrees Celsius?"
+  },
+  {
+    "batch": "batch_table_06.json",
+    "error": "evidence not verbatim in excerpts",
+    "category": "table",
+    "question": "In the Cheng 2017 TaC synthesis study, what volume of 1-pentanol was used in recipe R1 according to Table 1?"
+  },
+  {
+    "batch": "batch_table_06.json",
+    "error": "evidence not verbatim in excerpts",
+    "category": "table",
+    "question": "According to Table 2 in You et al. 2025, what was the average crack spacing at 1500 degrees Celsius in the 2D SiC/SiC composites?"
+  },
+  {
+    "batch": "batch_table_07.json",
+    "error": "evidence not verbatim in excerpts",
+    "category": "table",
+    "question": "According to Manaud 2024, what is the relative density (percentage) of TaC sintered by spark plasma sintering at 1873 K?"
+  },
+  {
+    "batch": "batch_table_07.json",
+    "error": "evidence not verbatim in excerpts",
+    "category": "table",
+    "question": "In the Manaud 2024 study, what is the relative density (percentage) of the Ta2CN carbonitride when sintered at 1973 K?"
+  },
+  {
+    "batch": "batch_table_07.json",
+    "error": "evidence not verbatim in excerpts",
+    "category": "table",
+    "question": "What is the Young's modulus in GPa of TaC as measured by nano-indentation in the Manaud 2024 study?"
+  },
+  {
+    "batch": "batch_table_07.json",
+    "error": "evidence not verbatim in excerpts",
+    "category": "table",
+    "question": "According to Manaud 2024, what is the hardness in GPa of the TaN tantalum nitride sample measured by nano-indentation?"
+  },
+  {
+    "batch": "batch_table_07.json",
+    "error": "evidence not verbatim in excerpts",
+    "category": "table",
+    "question": "What is the hardness value in GPa of the Ta2CN carbonitride composition in the Manaud 2024 nano-indentation study?"
+  },
+  {
+    "batch": "batch_table_07.json",
+    "error": "evidence not verbatim in excerpts",
+    "category": "table",
+    "question": "In the Manaud 2024 study, what is the unit cell parameter a in Angstroms for cubic TaC determined by Rietveld refinement from PXRD data?"
+  },
+  {
+    "batch": "batch_table_07.json",
+    "error": "evidence not verbatim in excerpts",
+    "category": "table",
+    "question": "What is the median grain diameter d50 in micrometers of the main TaC phase in the Manaud 2024 EBSD/EDS analysis?"
+  },
+  {
+    "batch": "batch_table_07.json",
+    "error": "evidence not verbatim in excerpts",
+    "category": "table",
+    "question": "What is the solid loading percentage of ZrB2 in the slurry used for infiltration in the Jayaseelan 2011 reactive infiltration study?"
   },
   {
     "batch": "batch_unanswerable_02.json",

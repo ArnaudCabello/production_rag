@@ -13,8 +13,10 @@ files, so re-running after adding batches just extends the set.
 
 Run: python eval/golden_v2_work/assemble.py
 """
+import difflib
 import json
 import re
+import unicodedata
 from collections import defaultdict
 from pathlib import Path
 
@@ -31,8 +33,31 @@ BAD_PHRASES = re.compile(
     r"\b(this (study|paper|work|sample)|the (authors|study|paper|present work))\b", re.I)
 
 
-def norm(s):  # whitespace-tolerant matching: PDF extraction differs in spacing
-    return re.sub(r"\s+", " ", s).strip().lower()
+def norm(s):  # whitespace/unicode-tolerant matching: PDF extraction differs
+    s = unicodedata.normalize("NFKD", s)
+    s = "".join(ch for ch in s if not unicodedata.combining(ch))
+    s = s.replace("­", "")  # soft hyphen
+    return re.sub(r"[^a-z0-9 ]+", " ", re.sub(r"\s+", " ", s).strip().lower())
+
+
+def repair_span(span, excerpts):
+    """Span not verbatim: find the closest 8-20-word window in the excerpts and
+    substitute the excerpt's own wording (spans only locate passages, so taking
+    the source text verbatim is strictly more faithful than the agent's copy)."""
+    span_words = norm(span).split()
+    if not span_words:
+        return None
+    best, best_score = None, 0.0
+    for ex in excerpts:
+        words = ex.split()
+        n = min(max(len(span_words), 8), 20)
+        for i in range(0, max(1, len(words) - n + 1)):
+            window = words[i:i + n]
+            score = difflib.SequenceMatcher(
+                None, span_words, norm(" ".join(window)).split()).ratio()
+            if score > best_score:
+                best_score, best = score, " ".join(window)
+    return best if best_score >= 0.7 else None
 
 
 def validate(c):
@@ -52,21 +77,28 @@ def validate(c):
     if not keys or not all(isinstance(g, list) and g for g in keys):
         return "bad answer_keys"
     low = ref.lower()
-    for group in keys:
-        if not any(s.lower() in low for s in group):
-            return "answer_key not in reference"
+    kept = [g for g in keys if any(s.lower() in low for s in g)]
+    if len(kept) < 2 and cat != "unanswerable":  # repair: drop ungrounded groups
+        return "answer_key not in reference"
+    c["answer_keys"] = kept
     if cat == "unanswerable":
         return None
     if not evs:
         return "no evidence"
     if cat in MULTI_EVIDENCE and len(evs) < 2:
         return "needs 2 evidence spans"
-    joined = norm("\n".join(c.get("excerpts", [])))
+    excerpts = c.get("excerpts", [])
+    joined = norm("\n".join(excerpts))
+    fixed = []
     for ev in evs:
         if len(ev.split()) < 5 or "|" in ev:
             return "bad evidence span"
         if norm(ev) not in joined:
-            return "evidence not verbatim in excerpts"
+            ev = repair_span(ev, excerpts)  # substitute excerpt's own wording
+            if ev is None or norm(ev) not in joined:
+                return "evidence not verbatim in excerpts"
+        fixed.append(ev)
+    c["evidence_any"] = fixed
     if cat == "ambiguous":
         hedges = ("multiple", "several", "vary", "varies", "range", "depend")
         if not any(any(h in s.lower() for h in hedges) for g in keys for s in g):
