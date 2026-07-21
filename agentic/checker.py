@@ -22,12 +22,15 @@ decide whether the snippets contain enough evidence to answer every part of the 
 Respond with ONLY a JSON object:
 {"sufficient": <true|false>, "missing": ["<part of the question the snippets do not cover>", ...], "queries": ["<new search query>", ...]}
 Rules:
-- sufficient=true only if every part of the question is directly supported by snippet text; \
-then missing and queries must be [].
-- If evidence is missing AND a differently-worded search could plausibly find it, emit 1-3 \
-new queries (keyword-rich search strings, not questions; do not repeat queries already run).
-- If the corpus likely does not contain the information (searches already came back \
-off-topic), set sufficient=false with the missing parts and queries=[] — do not invent queries.
+- sufficient=true if the snippets contain enough evidence for a useful, grounded answer — \
+perfection is not required, and broad questions (ranges, trends, comparisons across studies) \
+are sufficiently covered by a representative sample. Then missing and queries must be [].
+- Most questions ARE answerable from the snippets; declare insufficiency only when a core \
+part of the question has NO relevant evidence in any snippet.
+- If a core part is uncovered AND a differently-worded search could plausibly find it, emit \
+1-3 new queries (keyword-rich search strings, not questions; do not repeat queries already run).
+- If the snippets for a part came back off-topic, the corpus likely lacks it: set \
+sufficient=false, list it in missing, and set queries=[] — do not keep inventing queries.
 - JSON only, no commentary."""
 
 CHECK_USER = """Question: {question}

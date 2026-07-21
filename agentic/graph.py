@@ -29,8 +29,11 @@ MAX_PENDING_PER_ROUND = 3   # refinement queries per round (the check fills pend
 # "not available in the corpus" wording matches eval/score_benchmark.py's REFUSAL regex.
 GAP_NOTE = """Note: retrieval found no evidence in the corpus for the following point(s):
 {gaps}
-Do not guess or use outside knowledge for these. If the context below does not support \
-an answer to the question at all, reply that this information is not available in the corpus.
+Answer the question from the context below using the evidence that IS there — do not refuse \
+just because the listed point(s) are uncovered; briefly note what is not covered instead. \
+Never guess or use outside knowledge for the missing points. Only if the context contains \
+no relevant evidence for the question at all, reply that this information is not available \
+in the corpus.
 
 """
 

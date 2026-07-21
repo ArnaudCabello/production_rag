@@ -27,6 +27,28 @@ Module status board (update the table too):
 
 ---
 
+## 2026-07-21 M4 prompt recalibration — done (Colab re-run pending)
+- What was done: first Colab shape report + 3-q smoke exposed over-strictness:
+  sufficient=false on ~90% of questions incl. 4/5 factual, and ALL 3 smoke
+  answers were refusals ("not available in the corpus") with 0% key match at
+  19% evidence recall — the "every part directly supported" rule made the
+  check a paranoid judge and the GAP_NOTE read as permission to refuse
+  wholesale. Recalibrated CHECK_SYSTEM (sufficient = enough for a useful
+  grounded answer; representative sample suffices for broad questions;
+  insufficiency only when a CORE part has no relevant evidence) and GAP_NOTE
+  (answer from the evidence that IS there, refuse only when nothing relevant
+  at all). Parse fallback rate was 0 — JSON structure is solid.
+- Files touched: agentic/checker.py (CHECK_SYSTEM), agentic/graph.py (GAP_NOTE)
+- Tests: all local suites passing (wording-independent). Colab re-run pending:
+  check_shapes.py then the 3-q smoke; watch factual→sufficient=true and
+  smoke answers no longer refusing.
+- Next step for the following agent: if the re-run still over-refuses,
+  consider gating GAP_NOTE on gaps covering the WHOLE question (structural)
+  instead of more prompt tuning. Then plan M5.
+- Gotchas discovered: unanswerable questions emit ~3 queries/round (burning
+  rounds, 60-90s latency) instead of settling on queries=[]; acceptable under
+  the cap but a target for M5/M6 tuning.
+
 ## 2026-07-21 M4 evidence check + refusal — done (Colab shape report + GPU smoke pending)
 - What was done: LLM evidence check replaces the always-sufficient stub —
   `agentic/checker.py` (CHECK_SYSTEM/CHECK_USER prompts, `parse_check` with
