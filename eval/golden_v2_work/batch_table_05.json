@@ -1,0 +1,128 @@
+[
+  {
+    "category": "table",
+    "question": "According to Feng 2021, what was the flexural strength of SiCf/HfC-SiC composites before ablation, measured by three-point bending test?",
+    "reference_answer": "The flexural strength of SiCf/HfC-SiC composites before ablation (ablation cycle 0) was 108.6 ± 2.0 MPa.",
+    "answer_keys": [["108", "mpa"], ["flexural", "strength"], ["sicf", "hfc"]],
+    "evidence_any": [
+      "The flexural strengths of Cf/HfC-SiC and SiCf/HfC-SiC composites before ablation were 98.3 ± 6.8 and 108.5 ± 1.9 MPa, respectively.",
+      "SiCf/HfC-SiC 0 108.6 ± 2.0"
+    ],
+    "source_docs": ["Feng_2021_CeramicsInternational_Flexuralproperties.pdf"],
+    "excerpts": [
+      "Flexural property was measured with reference to the international standard (ISO-14704). The tested specimens (3 × 4 × 40 mm3) were placed on the universal mechanical tester (WDW-100, Changchun Research Institute of Testing Machines, Jilin, China). The loading rate was 0.5 mm/min. The span of the three-point bending was 30 mm. The force displacement curves were recorded. The bending strengths of the specimens were calculated before and after different ablation cycles by the following formula: σ =(3P ×L)/(2b×h× h). Table 1 The bending strengths of Cf/HfC, Cf/HfC-SiC and SiCf/HfC-SiC composites after different cycles of ablation. Samples Ablation cycle Flexural strength/MPa. SiCf/HfC-SiC 0 108.6 ± 2.0 1 99.5 ± 4.1 2 93.2 ± 3.9 3 79.6 ± 4.3"
+    ]
+  },
+  {
+    "category": "table",
+    "question": "In Feng 2021's study, what was the flexural strength of Cf/HfC-SiC composites after three cycles of ablation under oxyacetylene flame?",
+    "reference_answer": "The flexural strength of Cf/HfC-SiC composites after three ablation cycles was 37.3 ± 2.4 MPa.",
+    "answer_keys": [["37", "mpa"], ["cf/hfc", "sic"], ["ablation", "cycle", "3"]],
+    "evidence_any": [
+      "After three cycles of ablation, the bending strengths of Cf/HfC, Cf/HfC-SiC and SiCf/HfC-SiC specimens decrease from 115.7 ± 10.1 to 42.9 ± 3.1 MPa, from 98.3 ± 7.4 to 37.3 ± 2.4 MPa and from 108.6 ± 2.0 to 79.6 ± 4.3 MPa, respectively.",
+      "Cf/HfC-SiC 3 37.3 ± 2.4"
+    ],
+    "source_docs": ["Feng_2021_CeramicsInternational_Flexuralproperties.pdf"],
+    "excerpts": [
+      "In order to verify the attenuation of mechanical property of two composites with increasing the number of ablation cycles, three-point bending tests of the specimens were carried out before and after different cycles of ablation. The results are shown in Table 1. After three cycles of ablation, the bending strength of Cf/HfC specimens decreased by 62.9%, which is consistence with that of ablated Cf/HfC-SiC specimens (62.2%). The bending strength of SiCf/HfC-SiC specimens only decreased by 26.6%. Table 1 The bending strengths of Cf/HfC, Cf/HfC-SiC and SiCf/HfC-SiC composites after different cycles of ablation. Cf/HfC-SiC 0 98.3 ± 7.4 1 58.7 ± 3.1 2 51.6 ± 2.3 3 37.3 ± 2.4"
+    ]
+  },
+  {
+    "category": "table",
+    "question": "What percentage decrease in flexural strength did SiCf/HfC-SiC composites experience after three cycles of ablation in Feng 2021's oxyacetylene ablation tests?",
+    "reference_answer": "SiCf/HfC-SiC composites experienced a 26.6% decrease in flexural strength after three ablation cycles, from 108.6 ± 2.0 MPa to 79.6 ± 4.3 MPa.",
+    "answer_keys": [["26.6", "percent"], ["sicf", "decrease"], ["ablation"]],
+    "evidence_any": [
+      "The bending strength of SiCf/HfC-SiC specimens only decreased by 26.6%.",
+      "from 108.6 ± 2.0 to 79.6 ± 4.3 MPa"
+    ],
+    "source_docs": ["Feng_2021_CeramicsInternational_Flexuralproperties.pdf"],
+    "excerpts": [
+      "The cyclic ablation test was carried out according to reference to the standard GJB323A-96. The heat flux density was 2.38 MW/m2. The number of ablation cycles were three and ablation time of each cycle was 60 s. After three cycles of ablation, the bending strength of Cf/HfC specimens decreased by 62.9%, which is consistence with that of ablated Cf/HfC-SiC specimens (62.2%). The bending strength of SiCf/HfC-SiC specimens only decreased by 26.6%. In conclusion, after three cycles of ablation, SiCf/HfC-SiC composites maintain high residual bending strength."
+    ]
+  },
+  {
+    "category": "table",
+    "question": "According to Table 1 in Nallusamy 2025, what is the Young's modulus of titanium diboride (TiB2) nanoparticles?",
+    "reference_answer": "The Young's modulus of titanium diboride (TiB2) is 550 GPa.",
+    "answer_keys": [["550", "gpa"], ["tib2", "diboride"], ["youngs", "modulus"]],
+    "evidence_any": [
+      "Young's modulus (GPa) 550",
+      "Chemical formula TiB2 Young's modulus 550"
+    ],
+    "source_docs": ["Nallusamy_2025_AppliedMaterialsToday_High-temperatureoxidation.pdf"],
+    "excerpts": [
+      "Raw materials Al2O3, SiC, ZrB2, and TiB2 nanopowders were purchased in high purity (≥99 %) from Hangwu International, Hong Kong, China. The properties of the raw materials are displayed in Table 1. Table 1 Properties of the Raw Materials. Name of the material Titanium Diboride Silicon Carbide Aluminum Oxide Zirconium Boride Chemical formula TiB2 SiC α-Al2O3 ZrB2 Density(kg/m3) 4520 3210 3986 6085 Melting point(°C) 3230 2730 2072 3246 Molar mass (g/mol) 69.489 40.11 101.96 112.85 Young's modulus (GPa) 550 410 405 450"
+    ]
+  },
+  {
+    "category": "table",
+    "question": "What is the melting point of zirconium diboride (ZrB2) listed in Nallusamy 2025's materials properties table?",
+    "reference_answer": "The melting point of zirconium diboride (ZrB2) is 3246 degrees Celsius.",
+    "answer_keys": [["3246", "celsius"], ["zrb2", "melting"], ["point"]],
+    "evidence_any": [
+      "Zirconium Boride Melting point(°C) 3246",
+      "Chemical formula ZrB2 Melting point(°C) 3246"
+    ],
+    "source_docs": ["Nallusamy_2025_AppliedMaterialsToday_High-temperatureoxidation.pdf"],
+    "excerpts": [
+      "Raw materials Al2O3, SiC, ZrB2, and TiB2 nanopowders were purchased in high purity (≥99 %) from Hangwu International, Hong Kong, China. The properties of the raw materials are displayed in Table 1. Table 1 Properties of the Raw Materials. Name of the material Titanium Diboride Silicon Carbide Aluminum Oxide Zirconium Boride Chemical formula TiB2 SiC α-Al2O3 ZrB2 Density(kg/m3) 4520 3210 3986 6085 Melting point(°C) 3230 2730 2072 3246"
+    ]
+  },
+  {
+    "category": "table",
+    "question": "In Nallusamy 2025, what was the relative density percentage of composite S4 (40% ZrB2-20% TiB2) after sintering?",
+    "reference_answer": "Composite S4 (40% ZrB2-20% TiB2) achieved a relative density of 93.9% after sintering, representing the highest densification among all five composites.",
+    "answer_keys": [["93.9", "percent"], ["s4", "relative", "density"], ["40", "zrb2"]],
+    "evidence_any": [
+      "S4 (40ZrB2–20TiB2) 4.93 4.63 93.9 5.1",
+      "S4, which demonstrated the highest oxidation resistance and lowest total mass gain, also exhibited the highest relative density (93.9 %)"
+    ],
+    "source_docs": ["Nallusamy_2025_AppliedMaterialsToday_High-temperatureoxidation.pdf"],
+    "excerpts": [
+      "After sintering, the bulk density and open porosity of the sintered composite pellets (S1–S5) were measured using the Archimedes water immersion method as per ASTM C373. The theoretical density was calculated using the rule of mixtures based on the volume fractions and individual densities of Al2O3, SiC, ZrB2, and TiB2. Table 3 Densification and Porosity of Sintered Composites (S1–S5). Composite Theoretical Density (g/cm3) Measured Density (g/cm³) Relative Density (%) Open Porosity (%) S4 (40ZrB2–20TiB2) 4.93 4.63 93.9 5.1"
+    ]
+  },
+  {
+    "category": "table",
+    "question": "According to Nallusamy 2025's Table 5, what was the total mass gain of composite S4 at 1400 degrees Celsius?",
+    "reference_answer": "Composite S4 (40% ZrB2-20% TiB2) exhibited a total mass gain of 28.5% at 1400 degrees Celsius, the lowest among all five composites tested.",
+    "answer_keys": [["28.5", "percent"], ["s4", "mass", "gain"], ["1400"]],
+    "evidence_any": [
+      "S4 880 1273 28.5",
+      "the composite containing 40 % ZrB2 and 20 % TiB2 (S4) exhibited the broadest oxidation-resistant range (880–1273 ◦C) and the lowest total mass gain of 28.5 %"
+    ],
+    "source_docs": ["Nallusamy_2025_AppliedMaterialsToday_High-temperatureoxidation.pdf"],
+    "excerpts": [
+      "Thermogravimetric (TG), differential thermal (DTA), and differential scanning calorimetry (DSC) analyses up to 1400 ◦C revealed that the composite containing 40 % ZrB2 and 20 % TiB2 (S4) exhibited the broadest oxidation-resistant range (880–1273 ◦C) and the lowest total mass gain of 28.5 %, representing a 29 % reduction compared to the highest mass gain observed in S3 (40 %). Table 5 Oxidation resistance region and total mass gain at 1400⁰C. Composite Symbol Oxidation resistance-starting point (⁰C) Oxidation resistance-ending point (⁰C) Total mass gain at 1400⁰C (%) S4 880 1273 28.5"
+    ]
+  },
+  {
+    "category": "table",
+    "question": "In Nallusamy 2025, at what temperature did composite S3 (30% ZrB2-30% TiB2) show its oxidation starting point?",
+    "reference_answer": "Composite S3 (30% ZrB2-30% TiB2) showed an oxidation starting point at 655 degrees Celsius, the highest oxidation onset temperature among all five composites.",
+    "answer_keys": [["655", "celsius"], ["s3", "oxidation", "start"], ["30"]],
+    "evidence_any": [
+      "S3 655 40.00",
+      "S3 (30 % ZrB2 / 30 % TiB2) exhibited the highest total mass gain (40 %) at 1400 ◦C"
+    ],
+    "source_docs": ["Nallusamy_2025_AppliedMaterialsToday_High-temperatureoxidation.pdf"],
+    "excerpts": [
+      "At the oxidation starting point, the mass gains reported by S1, S2, S3, S4, and S5 are 12 %, 12.5 %, 17 %, 9.5 %, and 13 %, respectively. The variation in mass gain may be due to the variation in activation energies of the individual constituents of the composites. Table 4 Comparison of Mass Gain and Oxidation Onset with Reported Literature. S3 (30ZrB₂–30TiB₂) 655 40.00 This work"
+    ]
+  },
+  {
+    "category": "table",
+    "question": "According to Table 3 in Nallusamy 2025, what was the open porosity of composite S4 after sintering?",
+    "reference_answer": "Composite S4 (40% ZrB2-20% TiB2) had an open porosity of 5.1%, which was the lowest among all five composites.",
+    "answer_keys": [["5.1", "percent"], ["s4", "porosity"], ["open"]],
+    "evidence_any": [
+      "S4 (40ZrB2–20TiB2) 4.93 4.63 93.9 5.1",
+      "S4, which demonstrated the highest oxidation resistance and lowest total mass gain, also exhibited the highest relative density (93.9 %) and lowest open porosity (5.1 %)"
+    ],
+    "source_docs": ["Nallusamy_2025_AppliedMaterialsToday_High-temperatureoxidation.pdf"],
+    "excerpts": [
+      "The densification behaviour directly influenced the oxidation resistance of the composites. S4, which demonstrated the highest oxidation resistance and lowest total mass gain, also exhibited the highest relative density (93.9 %) and lowest open porosity (5.1 %). A denser microstructure reduces the number of interconnected pores, thereby limiting oxygen pathways and enhancing the continuity and adherence of the protective oxide layers. Table 3 Densification and Porosity of Sintered Composites (S1–S5). Composite Theoretical Density (g/cm3) Measured Density (g/cm³) Relative Density (%) Open Porosity (%) S4 (40ZrB2–20TiB2) 4.93 4.63 93.9 5.1"
+    ]
+  }
+]
