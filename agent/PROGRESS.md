@@ -25,13 +25,41 @@ Module status board (update the table too):
 | M5 synthesis | done | agent/plans/M5_synthesis.md | smoke: cite✓ 100%, invalid=0, ev_recall 19.4% held |
 | M6 benchmark run + tuning | in-progress | agent/plans/M6_benchmark_tuning.md | Phases 0-3 done (first full run measured, M6_report.md); Phase 4 = tuning modules below (PRD_TUNING.md) |
 | T0 diagnosis harness + validation slice | done | agent/plans/T0_diagnosis_slice.md | slice FROZEN; findings in eval/results_v2/T0_findings.md |
-| T1 round efficiency (latency) | done | agent/plans/T1_round_efficiency.md | local green; Colab check_shapes + slice_T1 validation pending |
+| T1 round efficiency (latency) | done | agent/plans/T1_round_efficiency.md | slice validated: latency −20% (med 46.1s ≈ 5× target), refusals held |
 | T2 aggregation recall + synthesis | not started | — | after T0 |
 | T3 refusal + ambiguous calibration | not started | — | after T0 |
 | T4 synthesis conversion (cross_doc, multi_chunk) | not started | — | after T0 |
 | T5 final full run + close-out | not started | — | last; ONE full 306-q run |
 
 ---
+
+## 2026-07-22 T1 validation — accepted (slice compared; T1 CLOSED)
+- What was done: human ran check_shapes + 26-id slice on Colab (commit
+  cae8a1a: slice_T1.jsonl/_judge/_scored); agent compared vs the same 26 ids
+  in bench_agentic_scored.json. Latency: median 57.3→46.1s (−20%, ≈ the
+  ~46.5s 5×-baseline target), mean llm_calls 5.08→4.15, retrieval_calls
+  8.5→6.5; biggest cuts on the 4-round burners (table 60→30s, semantic
+  48→31s, factual 42→29s, worst unanswerable 114→76s). Refusals: all 4
+  unanswerable held. key_match 0.65→0.69; ev_recall 0.31→0.26. Judge 12→10
+  net −2: downgrades v2q227/250/264 all had km=False + ev_recall 0.0 in BOTH
+  runs (zero-evidence "correct" = contamination-flag pattern, discounted);
+  one real loss v2q205 (multi_hop, ev 0.5→0.0 at llm 6→4 — a stop cut
+  drift rounds that were finding evidence); v2q041/v2q063 flipped in
+  opposite directions at unchanged llm=6 (CHECK_SYSTEM edit changes all
+  check queries → run churn). check_shapes: unanswerable held 5/5
+  sufficient=false; factual did NOT flip (4/5 still false — rule too weak),
+  but factual still improved (judge 1/3→2/3, latency down) via the
+  structural stops, so accepted as-is.
+- Files touched: agent/PROGRESS.md only (analysis).
+- Tests: n/a (comparison). Result files: eval/results_v2/slice_T1*.jsonl/json.
+- Next step for the following agent: plan T2 (aggregation cap policy) with
+  the human from T0_findings §1 — MAX_SYNTH_CHUNKS=20 first-N drops 100% of
+  rounds-2-4 aggregation chunks; aggregation flat in this slice too
+  (judge 2→1, ev 0.19 unchanged) as expected.
+- Gotchas discovered: WATCH ITEM for T2/T4: the stalled stop can kill
+  productive paraphrase-drift retrieval (v2q205); revisit if cross_doc/
+  multi_hop look evidence-starved. The factual CHECK_SYSTEM rule did not
+  flip shape-report verdicts — a T-later candidate, not blocking.
 
 ## 2026-07-22 T1 round efficiency — done (Colab validation pending)
 - What was done: built per plan, tests first. (1) No-new-chunks early stop:
