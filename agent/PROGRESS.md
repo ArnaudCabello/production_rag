@@ -27,6 +27,27 @@ Module status board (update the table too):
 
 ---
 
+## 2026-07-22 M6 Phases 1-3 — done (full runs measured; tuning next)
+- What was done: human ran full 306-q agentic + closed_book runs + judges on
+  Colab; agent pulled, ran compare.py, wrote eval/results_v2/M6_report.md.
+  Headline: key_match +6.2 (p=0.005 SIGNIFICANT); Tier B judge +5.7
+  (26.7→32.4, target +10 NOT met); multi_hop +16.7 and table +17.1 are real
+  wins; aggregation flat at 8% for both is the blocker. Latency 6.2× baseline
+  (cap 5×). Unanswerable refusal 22/25 vs 23/25. Contamination floor low
+  (Tier B 6.7%); only 5 red-flag ids (see report); citation validity 99.4%.
+- Files touched: eval/results_v2/M6_report.md (new), agent/PROGRESS.md
+  (result files pulled from human's Colab commit 5d110cf).
+- Tests: n/a (analysis). compare.py paired on 305 (v2q251 absent from
+  baseline run only).
+- Next step for the following agent: Phase 4 tuning in priority order:
+  (1) aggregation recall/synthesis, (2) latency (factual wasted round,
+  early-stop on no-new-chunks rounds), (3) refusal/ambiguous calibration,
+  (4) cross_document/multi_chunk synthesis (evidence found, judge not
+  converting) — inspect with --trace --ids incl. dropped_chunks. Pick the
+  fixed ~20-30 id validation slice BEFORE tuning starts.
+- Gotchas discovered: closed-book answers 23/25 unanswerable questions —
+  never use closed-book refusal behaviour as a floor for refusal metrics.
+
 ## 2026-07-21 M6 benchmark run + tuning — in-progress (Phase 0 done, Colab runs pending)
 - What was done: plan written with the human (agent/plans/M6_benchmark_tuning.md,
   approved). Decisions: measure FIRST (full 306-q agentic run of the pipeline
