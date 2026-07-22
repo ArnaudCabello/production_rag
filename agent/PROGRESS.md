@@ -24,7 +24,7 @@ Module status board (update the table too):
 | M4 evidence check + refusal | done | agent/plans/M4_evidence_check.md | shape report + smoke passed after prompt recalibration |
 | M5 synthesis | done | agent/plans/M5_synthesis.md | smoke: cite✓ 100%, invalid=0, ev_recall 19.4% held |
 | M6 benchmark run + tuning | in-progress | agent/plans/M6_benchmark_tuning.md | Phases 0-3 done (first full run measured, M6_report.md); Phase 4 = tuning modules below (PRD_TUNING.md) |
-| T0 diagnosis harness + validation slice | in-progress | agent/plans/T0_diagnosis_slice.md | slice + diagnosis ids committed; Colab trace run pending |
+| T0 diagnosis harness + validation slice | done | agent/plans/T0_diagnosis_slice.md | slice FROZEN; findings in eval/results_v2/T0_findings.md |
 | T1 round efficiency (latency) | not started | — | after T0 |
 | T2 aggregation recall + synthesis | not started | — | after T0 |
 | T3 refusal + ambiguous calibration | not started | — | after T0 |
@@ -33,7 +33,38 @@ Module status board (update the table too):
 
 ---
 
-## 2026-07-22 T0 diagnosis harness + validation slice — in-progress (Step 1 done, Colab trace run pending)
+## 2026-07-22 T0 — done (findings written; slice frozen)
+- What was done: human ran the 25-id trace run on Colab
+  (eval/results_v2/trace_diagnosis.jsonl, commit 390a335); agent analyzed all
+  25 traces and wrote eval/results_v2/T0_findings.md. Headline findings:
+  (1) AGGREGATION: round 1 (5 broad sub-queries × top_k=8) overflows
+  MAX_SYNTH_CHUNKS=20 on 8/8 aggregation-labeled traces — 100% of rounds-2-4
+  chunks dropped; v2q020 re-queried the missing systems 3 rounds then answered
+  "not covered" because synthesis never saw them. Cap policy (first-N) is T2's
+  primary lever, not recall. (2) cross_document/multi_chunk: check all-F for
+  4 rounds with paraphrase re-queries adding ≤2 new chunks/round; late-round
+  TARGETED chunks are what first-N drops; half the misses have full evidence
+  in context (synthesis instruction lever for T4). (3) unanswerable false
+  answers (v2q283/284/299) = near-miss traps: check flips sufficient on
+  same-property-different-material/condition evidence → T3 rule. (4) ambiguous:
+  12/14 already acknowledge multiplicity; misses are retrieval-targeting
+  (wrong papers, ev_recall 0.0) — de-prioritized. (5) T1 stop conditions
+  supported by data: no-new-chunks early stop + stalled-`missing` stop
+  (1-3 redundant rounds ≈ 15-40s/q on the worst traces).
+- Files touched: eval/results_v2/T0_findings.md (new), agent/PROGRESS.md.
+- Tests: `python tests/test_tuning_slice.py` — passing; full suite (8 files)
+  — passing. No pipeline changes in T0.
+- Next step for the following agent: plan T1 (round efficiency/latency) with
+  the human, citing T0_findings §5 (stop conditions ranked) — or T2 first if
+  the human prefers attacking the Tier-B blocker; T2 design must start from
+  findings §1 (cap policy). Optional cheap Colab spot check: dropped-chunk
+  evidence on v2q020/v2q007 (findings, last section).
+- Gotchas discovered: ev_recall is measured against the CAPPED chunk record
+  (what the LLM saw), so aggregation's ev_recall 0 conflates cap loss with
+  recall miss — dropped chunk TEXT is not in the JSONL (ids only in trace).
+  Planner never emits unanswerable_maybe (0/25 here too).
+
+## 2026-07-22 T0 diagnosis harness + validation slice — in-progress (Step 1 done, Colab trace run pending — SUPERSEDED by entry above)
 - What was done: plan approved (agent/plans/T0_diagnosis_slice.md). Step 1
   built test-first: `eval/make_tuning_slice.py` (seeded, deterministic,
   SEED=20260722) selects from bench_agentic_scored.json (+ baseline for
