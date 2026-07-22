@@ -96,6 +96,27 @@ drops "for the asked material and condition" (the paranoia vector); rule
 conflict now prevented by the absence framing itself. Same validation gates;
 outputs → trap_T3b.jsonl / slice_T3b.jsonl (never overwrite the T3 run).
 
+## Revision T3.3 (after T3.2 slice run)
+
+slice_T3b vs slice_T2: collateral fully recovered (llm 4.04, latency flat,
+factual 3.7 calls, v2q105 + v2q041 correct; robust flips net 0, judge 13≈14)
+BUT the target regressed: traps 1/3 (v2q283 answers again — its subject is
+PARTIALLY present: snippets mention graphene composites, just not the 5 vol%
+comparison, so the absence test never fires) and slice unanswerable 2/4
+(v2q304 now answers with the neighbor's Mo value). Lesson: trap subjects are
+never entirely absent; "mentioned at all" is the wrong discriminator.
+
+T3.2 changed two things at once (framing verification→absence AND the
+attribution release valve). T3.3 separates them: v1's strict exclusion
+framing ("different material/composition/condition does not cover") PLUS the
+release valve (a snippet stating the property for the asked subject counts
+without authors/year/details). Factual rule keeps its T3.2 form (measured
+well). Outputs → trap_T3c.jsonl / slice_T3c.jsonl. Decision rule: traps
+≥2/3 + unanswerable 4/4 + v2q105/041 stay correct + llm ~4.0 → accept; if
+attribution paranoia returns (v2q105 refuses) → the valve is insufficient,
+revert checker.py to pre-T3 (git show b7248c1:agentic/checker.py) and close
+T3 as attempted.
+
 ## Files touched
 
 - `agentic/checker.py` (CHECK_SYSTEM two rules), this plan,

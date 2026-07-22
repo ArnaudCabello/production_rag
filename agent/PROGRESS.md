@@ -27,11 +27,40 @@ Module status board (update the table too):
 | T0 diagnosis harness + validation slice | done | agent/plans/T0_diagnosis_slice.md | slice FROZEN; findings in eval/results_v2/T0_findings.md |
 | T1 round efficiency (latency) | done | agent/plans/T1_round_efficiency.md | slice validated: latency −20% (med 46.1s ≈ 5× target), refusals held |
 | T2 aggregation recall + synthesis | done | agent/plans/T2_aggregation_cap.md | slice validated: judge 10→14, agg 1→2, refusals 4/4, latency ~flat |
-| T3 refusal + ambiguous calibration | in-progress | agent/plans/T3_refusal_calibration.md | v1 failed gates; T3.2 (absence-test rewrite) built, Colab validation pending |
+| T3 refusal + ambiguous calibration | in-progress | agent/plans/T3_refusal_calibration.md | v1 over-refused, v2 under-refused; T3.3 (v1 framing + release valve) built, Colab pending |
 | T4 synthesis conversion (cross_doc, multi_chunk) | not started | — | after T0 |
 | T5 final full run + close-out | not started | — | last; ONE full 306-q run |
 
 ---
+
+## 2026-07-22 T3.3 — built (Colab validation pending; T3.2 REJECTED on slice)
+- What was done: slice_T3b/trap_T3b analyzed vs T2. T3.2 fixed ALL v1
+  collateral (llm 4.04≈3.96, latency flat, factual 3.7 calls/34s, v2q105 and
+  v2q041 both judged correct — v2q041 better than T2; robust ev>0 flips net 0:
+  +v2q158 +v2q241 / −v2q083 −v2q127; judge 13 vs 14 within churn) but LOST
+  the target: traps 1/3 (only v2q299 refuses; v2q283 answers — its subject is
+  partially present so the absence test never fires) and slice unanswerable
+  2/4 HARD-GATE FAIL (v2q304 answers with the neighbor Mo value; v2q298
+  hedges to partial). Diagnosis: trap subjects are never ENTIRELY absent —
+  absence is the wrong discriminator. T3.2 changed framing AND release valve
+  together; T3.3 isolates the valve: v1's strict exclusion framing restored
+  ("different material/composition/condition does NOT cover; missing unless
+  a snippet states the property for the asked subject") + the valve kept
+  ("counts without authors/year/details"). Factual rule unchanged from T3.2.
+- Files touched: agentic/checker.py, agent/plans/T3_refusal_calibration.md
+  (§Revision T3.3), agent/PROGRESS.md.
+- Tests: full 11-file suite — passing, unchanged. Colab (human): same three
+  steps, outputs trap_T3c.jsonl / slice_T3c.jsonl + score --judge.
+- Next step for the following agent: compare slice_T3c vs T2. Decision rule
+  (pre-registered in the plan): traps ≥2/3 refuse + slice unanswerable 4/4 +
+  v2q105/v2q041 stay correct + llm ~4.0 → ACCEPT T3.3, T3 done. If v2q105
+  refuses again (paranoia back) → valve insufficient: revert checker.py to
+  `git show b7248c1:agentic/checker.py`, close T3 as attempted (bank v2q158
+  for T4). Three-way artifact set (slice_T3/T3b/T3c) all preserved.
+- Gotchas discovered: trap subjects are partially present in retrieved text
+  (family mentioned, variant absent) — any refusal rule keyed on subject
+  MENTION under-refuses; it must key on property-for-subject. v2q304 flips
+  every run at ev 0.0 — treat as churn-prone, never a single-id gate.
 
 ## 2026-07-22 T3.2 rewrite — built (Colab validation pending; v1 REJECTED on slice)
 - What was done: slice_T3 failed the gates (judge 14→9; unanswerable 3/4
