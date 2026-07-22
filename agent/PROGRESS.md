@@ -27,11 +27,44 @@ Module status board (update the table too):
 | T0 diagnosis harness + validation slice | done | agent/plans/T0_diagnosis_slice.md | slice FROZEN; findings in eval/results_v2/T0_findings.md |
 | T1 round efficiency (latency) | done | agent/plans/T1_round_efficiency.md | slice validated: latency −20% (med 46.1s ≈ 5× target), refusals held |
 | T2 aggregation recall + synthesis | done | agent/plans/T2_aggregation_cap.md | slice validated: judge 10→14, agg 1→2, refusals 4/4, latency ~flat |
-| T3 refusal + ambiguous calibration | planned | agent/plans/T3_refusal_calibration.md | refusal only (ambiguous deferred); ready for /build T3 |
+| T3 refusal + ambiguous calibration | in-progress | agent/plans/T3_refusal_calibration.md | built (prompt-only); Colab validation pending |
 | T4 synthesis conversion (cross_doc, multi_chunk) | not started | — | after T0 |
 | T5 final full run + close-out | not started | — | last; ONE full 306-q run |
 
 ---
+
+## 2026-07-22 T3 refusal calibration — built (Colab validation pending)
+- What was done: prompt-only edit to CHECK_SYSTEM in agentic/checker.py, per
+  plan. (1) Strengthened factual rule now the FIRST rule: single specific
+  fact/value directly stated "for the asked material and condition" →
+  sufficient=true immediately, corroboration never required (replaces the T1
+  wording). (2) NEW near-miss rule: asked property for a DIFFERENT material/
+  composition/test condition does NOT cover the question; if only near-neighbor
+  values present, part stays missing and `missing` must name the exact asked
+  material/composition/condition (so GAP_NOTE fires precisely); never present
+  a neighbor's value as the answer. No parser/graph/state/GAP_NOTE changes;
+  zero new LLM calls.
+- Files touched: agentic/checker.py (CHECK_SYSTEM only), agent/PROGRESS.md.
+- Tests: full 11-file suite — passing, UNCHANGED (no test edits; suite is
+  wording-independent as the plan expected). NOT run (no GPU here) — Colab
+  validation per plan §Validation:
+  (a) `python eval/check_shapes.py --model Qwen/Qwen3-14B` — factual ≥4/5
+  sufficient=true, unanswerable 5/5 false HOLDS (hard gate), semantic/table
+  not worse than 3/5;
+  (b) trap spot check `python eval/run_benchmark.py --pipeline agentic
+  --model Qwen/Qwen3-14B --trace --ids v2q283,v2q284,v2q299
+  --output eval/results_v2/trap_T3.jsonl` — all 3 refuse/hedge with gaps;
+  (c) slice run (same --ids command as T2) →
+  eval/results_v2/slice_T3.jsonl + score --judge.
+- Next step for the following agent: after the human's Colab runs, compare
+  slice_T3 vs slice_T2 on the 26 ids: unanswerable 4/4 judge-correct holds
+  (hard gate); factual llm_calls/latency down or flat, judge not worse; no
+  over-refusal in answered categories (count REFUSAL-regex hits per category);
+  overall judge within churn of 14 (zero-evidence flips discounted both ways,
+  T1/T2 convention). Accept → T3 done, then plan T4 (watch item v2q158).
+- Gotchas discovered: none new. If over-refusal appears, the plan's documented
+  structural lever is gating GAP_NOTE on gaps covering the whole question —
+  plan revision, not an improvised edit.
 
 ## 2026-07-22 T3 refusal calibration — planned
 - What was done: plan written with the human and approved
