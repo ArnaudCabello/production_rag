@@ -106,6 +106,7 @@ assert [c["chunk_id"] for c in ag["chunks"]] == [f"x-{i}" for i in range(MAX_SYN
 synth_ev = [e for e in ag["trace"] if e["node"] == "synthesize"][0]
 assert synth_ev["context_chunks"] == MAX_SYNTH_CHUNKS
 assert synth_ev["dropped_chunks"] == 5
+assert synth_ev["context_rounds"] == {1: MAX_SYNTH_CHUNKS}  # T2: all round-1 here
 print("graph: context capped deterministically, dropped count traced: OK")
 
 # 7. no-cap parity: ≤cap chunks → synthesis prompt byte-identical to baseline,

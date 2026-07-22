@@ -26,12 +26,48 @@ Module status board (update the table too):
 | M6 benchmark run + tuning | in-progress | agent/plans/M6_benchmark_tuning.md | Phases 0-3 done (first full run measured, M6_report.md); Phase 4 = tuning modules below (PRD_TUNING.md) |
 | T0 diagnosis harness + validation slice | done | agent/plans/T0_diagnosis_slice.md | slice FROZEN; findings in eval/results_v2/T0_findings.md |
 | T1 round efficiency (latency) | done | agent/plans/T1_round_efficiency.md | slice validated: latency −20% (med 46.1s ≈ 5× target), refusals held |
-| T2 aggregation recall + synthesis | planned | agent/plans/T2_aggregation_cap.md | ready for /build T2 |
+| T2 aggregation recall + synthesis | done | agent/plans/T2_aggregation_cap.md | built + tests green; Colab slice validation pending |
 | T3 refusal + ambiguous calibration | not started | — | after T0 |
 | T4 synthesis conversion (cross_doc, multi_chunk) | not started | — | after T0 |
 | T5 final full run + close-out | not started | — | last; ONE full 306-q run |
 
 ---
+
+## 2026-07-22 T2 aggregation cap policy — done (Colab slice validation pending)
+- What was done: built per plan, tests first. (1) retrieve annotates every
+  appended chunk COPY with `round` (rounds+1) and `q_idx` (global per-question
+  executed-search counter == pre-increment retrieval_calls); retriever dicts
+  never mutated. (2) `select_synth_chunks(chunks, cap)` in agentic/graph.py:
+  identity when union ≤ cap; else groups by q_idx in first-seen order
+  (question group 0 first, so its top hit stays chunk [1]) and round-robins
+  one pick per group until cap; missing q_idx → one group (degrades to
+  first-N for stubs/baseline chunks). (3) synthesize: cap =
+  MAX_SYNTH_CHUNKS_AGG (30) when category == "aggregation", else
+  MAX_SYNTH_CHUNKS (20); citations validate against the capped (reordered)
+  list as before; trace synthesize event gains `context_rounds`
+  ({round: count} histogram of the capped list). Zero new LLM calls; prompts,
+  checker, refusal rules untouched.
+- Files touched: agentic/graph.py, tests/test_synth_selection.py (new),
+  tests/test_synthesis.py (context_rounds assert in the cap test),
+  agent/PROGRESS.md.
+- Tests: `python tests/test_synth_selection.py` — passing (7 checks); full
+  suite (11 files incl. parity/retrieval_loop/round_efficiency) — passing.
+  NOT run (no GPU here): Colab slice validation per plan §Validation:
+  `python eval/run_benchmark.py --pipeline agentic --model Qwen/Qwen3-14B
+  --ids $(python -c "import json;print(','.join(q['id'] for q in json.load(open('eval/tuning_slice.json'))['questions']))")
+  --output eval/results_v2/slice_T2.jsonl` then score with --judge.
+- Next step for the following agent: after the human's Colab run, compare
+  slice_T2 vs slice_T1 AND the untuned run on the same 26 ids: aggregation
+  ev_recall/key_match/judge up (primary); cross_document/multi_chunk not
+  worse; latency ~flat; refusals 4/4 hold. Re-check watch item v2q205
+  (stalled stop starving drift retrieval — interleave should make surviving
+  late-round chunks count). Optional v2q020 --trace spot check
+  (context_rounds shows rounds 2-4 in context; answer stops claiming
+  re-queried systems "not covered"). Then plan T3 (refusal/ambiguous).
+- Gotchas discovered: ev_recall is measured against the capped RECORD, so
+  interleave changes the denominator population vs first-N — compare
+  ev_recall alongside judge/key_match, not alone. q_idx groups follow
+  executed-search order; skipped duplicate queries consume no q_idx.
 
 ## 2026-07-22 T2 aggregation cap policy — planned
 - What was done: plan written with the human and approved
