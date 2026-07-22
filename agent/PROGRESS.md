@@ -25,13 +25,37 @@ Module status board (update the table too):
 | M5 synthesis | done | agent/plans/M5_synthesis.md | smoke: cite✓ 100%, invalid=0, ev_recall 19.4% held |
 | M6 benchmark run + tuning | in-progress | agent/plans/M6_benchmark_tuning.md | Phases 0-3 done (first full run measured, M6_report.md); Phase 4 = tuning modules below (PRD_TUNING.md) |
 | T0 diagnosis harness + validation slice | done | agent/plans/T0_diagnosis_slice.md | slice FROZEN; findings in eval/results_v2/T0_findings.md |
-| T1 round efficiency (latency) | not started | — | after T0 |
+| T1 round efficiency (latency) | planned | agent/plans/T1_round_efficiency.md | ready for /build T1 |
 | T2 aggregation recall + synthesis | not started | — | after T0 |
 | T3 refusal + ambiguous calibration | not started | — | after T0 |
 | T4 synthesis conversion (cross_doc, multi_chunk) | not started | — | after T0 |
 | T5 final full run + close-out | not started | — | last; ONE full 306-q run |
 
 ---
+
+## 2026-07-22 T1 round efficiency — planned
+- What was done: plan written with the human (agent/plans/T1_round_efficiency.md,
+  approved). Three levers, all from T0_findings §5: (1) no-new-chunks early
+  stop as a NEW conditional edge retrieve→(check|synthesize) — skips the
+  check LLM call when round >1 adds 0 new chunks (threshold strictly 0;
+  round 1 always checks — it is the only unanswerable detector); (2)
+  stalled-check stop in the check node — insufficient verdict whose `missing`
+  equals previous `gaps` (normalized) forces pending_queries=[]; (3) one
+  CHECK_SYSTEM rule so factual settles round 1 (single stated fact =
+  sufficient). New state key `new_chunks` must be inited at EVERY invoke site
+  (M3 gotcha). No changes to cap policy (T2) or refusal rules (T3).
+- Files touched: agent/plans/T1_round_efficiency.md (new), agent/PROGRESS.md.
+- Tests: none yet — /build T1 writes tests/test_round_efficiency.py FIRST
+  (early-stop, no-stop-with-new-chunks, stalled-stop, MAX_ROUNDS backstop,
+  parity unchanged); existing exact-dict trace asserts + init dicts need the
+  new keys.
+- Next step for the following agent: `/build T1` per the plan. Validation
+  after local green: Colab check_shapes.py (factual→sufficient, unanswerable
+  holds 5/5 false), then slice run --ids from eval/tuning_slice.json →
+  slice_T1.jsonl + --judge, compared against the same 26 ids in
+  bench_agentic_scored.json (latency/llm_calls down, quality/refusal not
+  worse). Full 306-q run stays in T5.
+- Gotchas discovered: n/a (planning only).
 
 ## 2026-07-22 T0 — done (findings written; slice frozen)
 - What was done: human ran the 25-id trace run on Colab
