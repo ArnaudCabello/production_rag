@@ -26,12 +26,57 @@ Module status board (update the table too):
 | M6 benchmark run + tuning | in-progress | agent/plans/M6_benchmark_tuning.md | Phases 0-3 done (first full run measured, M6_report.md); Phase 4 = tuning modules below (PRD_TUNING.md) |
 | T0 diagnosis harness + validation slice | done | agent/plans/T0_diagnosis_slice.md | slice FROZEN; findings in eval/results_v2/T0_findings.md |
 | T1 round efficiency (latency) | done | agent/plans/T1_round_efficiency.md | slice validated: latency −20% (med 46.1s ≈ 5× target), refusals held |
-| T2 aggregation recall + synthesis | done | agent/plans/T2_aggregation_cap.md | built + tests green; Colab slice validation pending |
-| T3 refusal + ambiguous calibration | not started | — | after T0 |
+| T2 aggregation recall + synthesis | done | agent/plans/T2_aggregation_cap.md | slice validated: judge 10→14, agg 1→2, refusals 4/4, latency ~flat |
+| T3 refusal + ambiguous calibration | planned | agent/plans/T3_refusal_calibration.md | refusal only (ambiguous deferred); ready for /build T3 |
 | T4 synthesis conversion (cross_doc, multi_chunk) | not started | — | after T0 |
 | T5 final full run + close-out | not started | — | last; ONE full 306-q run |
 
 ---
+
+## 2026-07-22 T3 refusal calibration — planned
+- What was done: plan written with the human and approved
+  (agent/plans/T3_refusal_calibration.md). Scope: CHECK_SYSTEM prompt only
+  (agentic/checker.py) — (1) near-miss rule: same property for a DIFFERENT
+  material/composition/condition ≠ evidence; name the exact asked condition in
+  `missing` so GAP_NOTE fires; (2) strengthened factual round-1 rule (first
+  decision: single fact stated for the asked material/condition →
+  sufficient=true immediately). Ambiguous explicitly OUT (T0 §4:
+  retrieval-limited). Zero new LLM calls; GAP_NOTE wording untouched (REFUSAL
+  regex load-bearing).
+- Files touched: agent/plans/T3_refusal_calibration.md (new), agent/PROGRESS.md.
+- Tests: prompt-only — no new local test file; full 11-file suite must stay
+  green unchanged. Validation harnesses already exist: check_shapes.py
+  (fixture unanswerable ids include traps v2q283/284), trap spot check
+  --ids v2q283,v2q284,v2q299 --trace → trap_T3.jsonl, frozen slice →
+  slice_T3.jsonl + --judge vs slice_T2. Gates in the plan §Validation
+  (hard: unanswerable 5/5 false in shapes, slice refusals 4/4 hold, no
+  over-refusal in answered categories).
+- Next step for the following agent: `/build T3` per the plan.
+- Gotchas discovered: n/a (planning only). Watch item carried: v2q158
+  (multi_chunk partial→incorrect in T2, km True→False, ev 0.5 unchanged) —
+  eyeball in T4.
+
+## 2026-07-22 T2 validation — accepted (slice compared; T2 CLOSED)
+- What was done: human ran the 26-id slice on Colab (commit de8c4aa:
+  slice_T2.jsonl/_judge/_scored); agent compared vs slice_T1 and the untuned
+  run on the same ids. Judge 10→14 (untuned 12); km 0.65, ev 0.26 flat;
+  latency median 46.1→47.8s (~flat), mean llm_calls 4.15→3.96,
+  retrieval_calls 6.46→6.04; citation validity 1.0. Aggregation judge 1→2
+  (v2q012 partial→correct at ev 0.5 — the interleave working); agg ev_recall
+  flat 0.19, agg latency 46→52s median (30-chunk prompts). Unanswerable 4/4
+  judge-correct (2 exact-regex refusals + 2 scoped "sources do not contain"
+  statements the judge accepts — scorer REFUSAL regex undercounts these).
+  Honest discounting: gains v2q169/227/250 and loss v2q200 all flipped at
+  ev_recall 0.0 (zero-evidence churn, discounted symmetrically per T1
+  convention) → robust net ≈ +1-2, driven by v2q012 + unanswerable. Watch:
+  v2q205 incorrect→partial (mitigated, ev still 0.0); NEW watch v2q158
+  multi_chunk partial→incorrect (km True→False, ev 0.5 unchanged) → T4.
+- Files touched: agent/PROGRESS.md only (analysis).
+- Tests: n/a (comparison). Result files: eval/results_v2/slice_T2*.
+- Next step for the following agent: T3 planned (entry above) — /build T3.
+- Gotchas discovered: ev_recall denominator population changes under
+  interleave vs first-N (capped record differs) — never read ev_recall deltas
+  alone across cap policies; pair with judge/key_match.
 
 ## 2026-07-22 T2 aggregation cap policy — done (Colab slice validation pending)
 - What was done: built per plan, tests first. (1) retrieve annotates every
