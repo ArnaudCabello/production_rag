@@ -27,11 +27,42 @@ Module status board (update the table too):
 | T0 diagnosis harness + validation slice | done | agent/plans/T0_diagnosis_slice.md | slice FROZEN; findings in eval/results_v2/T0_findings.md |
 | T1 round efficiency (latency) | done | agent/plans/T1_round_efficiency.md | slice validated: latency −20% (med 46.1s ≈ 5× target), refusals held |
 | T2 aggregation recall + synthesis | done | agent/plans/T2_aggregation_cap.md | slice validated: judge 10→14, agg 1→2, refusals 4/4, latency ~flat |
-| T3 refusal + ambiguous calibration | in-progress | agent/plans/T3_refusal_calibration.md | built (prompt-only); Colab validation pending |
+| T3 refusal + ambiguous calibration | in-progress | agent/plans/T3_refusal_calibration.md | v1 failed gates; T3.2 (absence-test rewrite) built, Colab validation pending |
 | T4 synthesis conversion (cross_doc, multi_chunk) | not started | — | after T0 |
 | T5 final full run + close-out | not started | — | last; ONE full 306-q run |
 
 ---
+
+## 2026-07-22 T3.2 rewrite — built (Colab validation pending; v1 REJECTED on slice)
+- What was done: slice_T3 failed the gates (judge 14→9; unanswerable 3/4
+  HARD-GATE FAIL via v2q304 hedge; factual llm 3.7→4.0 + judge 2→1; v2q041
+  over-refusal at ev 0.5; cost up llm 3.96→4.50, ret 6.04→7.23). Root cause
+  isolated from traces/answers (see plan §Revision T3.2): v1's near-miss rule
+  demanded per-snippet verification of "the asked material and condition" that
+  the 300-char excerpt view cannot provide (chunks rarely carry author/year) —
+  v2q105 refused the exact asked values; trap wins v2q283/299 were real;
+  v2q284 = partial-match trap (1800°C matches, ZVC composition differs), also
+  failed in T2, not chased. Rewrite (CHECK_SYSTEM only): near-miss is now an
+  ABSENCE test (fires only when NO snippet mentions the asked subject at all)
+  + release valve (excerpts need not repeat attribution/conditions); factual
+  rule drops the "asked material and condition" clause. Zero new LLM calls.
+- Files touched: agentic/checker.py, agent/plans/T3_refusal_calibration.md
+  (§Revision T3.2), agent/PROGRESS.md.
+- Tests: full 11-file suite — passing, unchanged. Colab validation (human):
+  same three steps as v1 but outputs trap_T3b.jsonl / slice_T3b.jsonl
+  (+ score --judge) — NEVER overwrite the slice_T3/trap_T3 artifacts.
+- Next step for the following agent: compare slice_T3b vs slice_T2 (same
+  gates: unanswerable 4/4, factual llm/latency down or flat + judge not
+  worse, no over-refusal, judge within churn of 14) AND check the specific
+  predictions: v2q105+v2q041 answer again, traps v2q283/299 still refuse,
+  llm_calls back to ~4.0. Accept → T3 done; else revert checker.py to the
+  pre-T3 prompt (git show b7248c1:agentic/checker.py) and close T3 as
+  attempted, banking v2q158 observation for T4.
+- Gotchas discovered: v1 lesson — never ask the checker to verify attributes
+  (author/year/conditions) that MAX_CHUNK_CHARS=300 excerpts structurally
+  omit; rules must key on what IS visible (subject mentioned vs absent).
+  CHECK_SYSTEM edits churn round-2+ queries → citation-number churn on
+  multi-chunk answers (v2q012) — judge flips there are not signal.
 
 ## 2026-07-22 T3 refusal calibration — built (Colab validation pending)
 - What was done: prompt-only edit to CHECK_SYSTEM in agentic/checker.py, per

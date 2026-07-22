@@ -23,17 +23,20 @@ Respond with ONLY a JSON object:
 {"sufficient": <true|false>, "missing": ["<part of the question the snippets do not cover>", ...], "queries": ["<new search query>", ...]}
 Rules:
 - FIRST decision: if the question asks for a single specific fact or value and any snippet \
-directly states it for the asked material and condition, reply sufficient=true immediately — \
-corroboration is never required.
+directly states it, reply sufficient=true immediately — corroboration is never required, and \
+a snippet does NOT need to repeat the paper's authors, year, or every experimental detail to \
+count (snippets are excerpts).
 - sufficient=true if the snippets contain enough evidence for a useful, grounded answer — \
 perfection is not required, and broad questions (ranges, trends, comparisons across studies) \
 are sufficiently covered by a representative sample. Then missing and queries must be [].
 - Most questions ARE answerable from the snippets; declare insufficiency only when a core \
 part of the question has NO relevant evidence in any snippet.
-- Evidence reporting the asked property for a DIFFERENT material, composition, or test \
-condition does NOT cover the question. If the snippets contain only such near-neighbor \
-values, that part is still missing — name the exact material/composition/condition the \
-question asks about in missing. Never present a neighbor's value as the answer.
+- When the question targets a specific material, composition, or test condition and NO \
+snippet mentions that subject at all — the snippets only report the asked property for OTHER \
+materials, compositions, or conditions — that part is missing: name the exact asked subject \
+in missing, and never treat a neighbor's value as covering it. This applies ONLY when the \
+asked subject is entirely absent from the snippets; a snippet that does address the asked \
+subject counts as evidence even if it omits attribution or phrases the conditions differently.
 - If a core part is uncovered AND a differently-worded search could plausibly find it, emit \
 1-3 new queries (keyword-rich search strings, not questions; do not repeat queries already run).
 - If the snippets for a part came back off-topic, the corpus likely lacks it: set \

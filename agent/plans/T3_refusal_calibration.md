@@ -74,6 +74,28 @@ If over-refusal appears, the documented structural lever (from M4) is gating
 GAP_NOTE on gaps covering the whole question — that would be a plan revision,
 not an improvised edit.
 
+## Revision T3.2 (after first slice run failed the gates)
+
+slice_T3 vs slice_T2: judge 14→9 raw; hard gates failed (unanswerable 3/4,
+factual slower 3.7→4.0 llm + judge 2→1, over-refusal v2q041; cost up across
+the board llm 3.96→4.50). Trace/answer analysis isolated ONE mechanism behind
+the robust losses: the v1 near-miss rule demanded verification "for the asked
+material and condition" that the 300-char evidence view structurally cannot
+provide — chunks are excerpts and rarely carry their own author/year or full
+conditions (v2q105: snippet states the exact asked values, gap stayed open,
+answer self-contradicts; v2q041: Hu half refused despite ev 0.5). Trap wins
+(v2q283/299 refuse, gaps name the asked subject) were real; v2q284 is a
+partial-match trap (condition 1800°C matches, composition ZVC differs) that
+also failed in T2 — not chased further. v2q012/169/250/264 flips are churn or
+ev-0.0 discounts per convention.
+
+Fix (CHECK_SYSTEM only, again): reframe near-miss as an ABSENCE test — fires
+only when NO snippet mentions the asked subject at all; explicit release
+valve that excerpts need not repeat attribution/conditions. Factual rule
+drops "for the asked material and condition" (the paranoia vector); rule
+conflict now prevented by the absence framing itself. Same validation gates;
+outputs → trap_T3b.jsonl / slice_T3b.jsonl (never overwrite the T3 run).
+
 ## Files touched
 
 - `agentic/checker.py` (CHECK_SYSTEM two rules), this plan,
