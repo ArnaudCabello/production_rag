@@ -1,0 +1,135 @@
+{
+ "description": "T0 fixed validation slice for tuning modules T1-T4. FROZEN - chosen once, disjoint from diagnosis/red-flag ids, never tune against golden-set answers.",
+ "questions": [
+  {
+   "id": "v2q001",
+   "question": "Across studies on ZrB2, HfB2, ZrC, HfC, and their oxidation products, what range of melting points has been reported for these ultra-high-temperature ceramic borides, carbides, and oxides?",
+   "category": "aggregation"
+  },
+  {
+   "id": "v2q012",
+   "question": "What melting point values have been reported for ultra-high-temperature ceramics generally versus hafnium and zirconium diborides, carbides, and their oxides specifically?",
+   "category": "aggregation"
+  },
+  {
+   "id": "v2q013",
+   "question": "What volume-fraction ranges have been reported for sintering additives and silica-forming secondary phases in boride-based UHTC composites?",
+   "category": "aggregation"
+  },
+  {
+   "id": "v2q019",
+   "question": "What elastic (Young's) modulus values have been reported across these UHTC studies, for materials ranging from a Cf/C-UHTC composite to the ZrB2 phase and carbon-fiber reinforcement used in UHTC composites?",
+   "category": "aggregation"
+  },
+  {
+   "id": "v2q040",
+   "question": "What role does ZrB2 play as a UHTC constituent in the SiC/UHTC/SiC coating studied by Hu et al. (2019), compared to the role Vickers hardness plays in evaluating the (M,Hf,Ti,Zr)B2-(M,Hf,Ti,Zr)C dual-phase ceramics studied by Feltrin et al. (2025)?",
+   "category": "cross_document"
+  },
+  {
+   "id": "v2q041",
+   "question": "How do the processing routes differ between the slurry brushing-sintering technique used for the ZrB2-based UHTC layer by Hu et al. (2019) and the spark plasma sintering (SPS) process used for the HEDP dual-phase ceramics by Feltrin et al. (2025)?",
+   "category": "cross_document"
+  },
+  {
+   "id": "v2q063",
+   "question": "How do the peak flexural strength values of Demirskyi et al. (2017) TiB2\u2013boron ceramics compare with the microwave dielectric performance targets of Gao et al. (2025) CuO-ZnO-B2O3 glass-ceramics, in terms of what each study identifies as its record-setting metric?",
+   "category": "cross_document"
+  },
+  {
+   "id": "v2q083",
+   "question": "In terms of high-temperature protective performance, how does the reduction of Ta or Nb content in Li et al. 2025's (Hf-Zr-Ta-Nb)C ablative coatings compare with the general thermal conductivity behavior of high entropy carbides (HECbs) described by Ujah and Olubambi 2025?",
+   "category": "cross_document"
+  },
+  {
+   "id": "v2q296",
+   "question": "How do NbC coatings modified with 75 mol% HfC perform under oxyacetylene flame ablation testing for 180 seconds, and what is the effective ablation time compared to the 50 mol% HfC composition?",
+   "category": "unanswerable"
+  },
+  {
+   "id": "v2q298",
+   "question": "How does the viscosity and thermal stability of the oxide film formed on NbC-ZrC coatings change when subjected to peak temperatures of 2500\u00b0C instead of 2100\u00b0C during oxyacetylene testing?",
+   "category": "unanswerable"
+  },
+  {
+   "id": "v2q300",
+   "question": "How does adding vanadium carbide (VC) to the (Ta,Nb,Hf,Ti)C quaternary system affect the preferential oxidation mechanism and complex oxide phase distribution during plasma arc jet exposure?",
+   "category": "unanswerable"
+  },
+  {
+   "id": "v2q304",
+   "question": "How do multi-component UHTCs containing molybdenum carbide (MoC) components compare to group IV and V element-based UHTCs in terms of preferential oxidation and complex oxide layer formation after plasma jet exposure?",
+   "category": "unanswerable"
+  },
+  {
+   "id": "v2q029",
+   "question": "What activation energy values were determined for the densification and sintering kinetics of UHTC ceramics?",
+   "category": "ambiguous"
+  },
+  {
+   "id": "v2q034",
+   "question": "What holding or dwell time was used during sintering of the ceramic materials?",
+   "category": "ambiguous"
+  },
+  {
+   "id": "v2q158",
+   "question": "In Zapata-Solvas et al. 2014, Spark Plasma Sintering (SPS) was used to process ZS20 and ZS20La, but the resulting microstructure showed that La2O3 location affected SiC particle dispersion. How did the proximity of La2O3 to SiC particles influence the homogeneity of the microstructure in the La2O3-doped composition?",
+   "category": "multi_chunk"
+  },
+  {
+   "id": "v2q167",
+   "question": "In Liu et al. (2023), the C-doped ZrB2-ZrSi2 ceramic sintered at 1600\u00b0C for 2 hours exhibited what high-temperature strength at 1800\u00b0C, and how did this compare to the undoped version?",
+   "category": "multi_chunk"
+  },
+  {
+   "id": "v2q169",
+   "question": "In Liu et al. (2023), how did the microstructural morphology of C-doped ZrB2-ZrSi2 ceramics evolve from 1350\u00b0C to 1600\u00b0C during hot-press sintering, and what was the final state of the Zr-Si-C phases?",
+   "category": "multi_chunk"
+  },
+  {
+   "id": "v2q200",
+   "question": "Huang et al. 2016 thermally cycle ZrB2-SiC and ZrC-SiC coated PIP-C/SiC composites over a specified hot-and-cold temperature range simulating low-Earth orbit, while Borrelli et al. 2009 assume an initial temperature at the start of the Nose_2 re-entry trajectory in their FEM model. Which is colder: the low end of Huang's thermal shock range, or Borrelli's assumed initial re-entry temperature of 300 K?",
+   "category": "multi_hop"
+  },
+  {
+   "id": "v2q205",
+   "question": "Comparing porous YB2C2 ceramics at about 50% porosity fabricated by Yang et al. 2025 with ZrB2-SiC coated PIP-C/SiC composites after 200 thermal shock cycles fabricated by Huang et al. 2016: which material system reports the higher room-temperature strength value?",
+   "category": "multi_hop"
+  },
+  {
+   "id": "v2q105",
+   "question": "What were the energy and force prediction errors of the deep potential model trained by Dai et al. 2022 compared to DFT calculations?",
+   "category": "factual"
+  },
+  {
+   "id": "v2q127",
+   "question": "According to Zapata-Solvas 2018, what phase was detected on the external surface of HS20 samples at temperatures higher than 1800\u00b0C during compressive deformation?",
+   "category": "factual"
+  },
+  {
+   "id": "v2q146",
+   "question": "What was the mass ablation rate of the Ren 2017 ZrB2-SiC/SiC multilayer coating with HfC nanowires after 90 seconds of oxyacetylene torch ablation?",
+   "category": "factual"
+  },
+  {
+   "id": "v2q227",
+   "question": "In Zhang et al. 2019's directionally solidified ZrB2-SiC ultra-high-temperature ceramic composites, what was the characteristic architecture of the reinforcement phase at the microscale, and what was its measured thickness dimension?",
+   "category": "semantic"
+  },
+  {
+   "id": "v2q241",
+   "question": "What does the negative Seebeck coefficient observed in Dubey 2022 for HfB2-ZrB2 composites indicate about the type of mobile charge carriers responsible for electrical transport?",
+   "category": "semantic"
+  },
+  {
+   "id": "v2q250",
+   "question": "What is the chamber pressure in millibar for Case D in Table 1 of the Kim et al. 2024 vacuum plasma spray study on ZrC powder coatings?",
+   "category": "table"
+  },
+  {
+   "id": "v2q264",
+   "question": "According to Popov et al. 2024 Table 2, what was the thermal conductivity of the TiB2-SiC composite with 3.8 wt% reduced graphene oxide (sample TSG03)?",
+   "category": "table"
+  }
+ ]
+}

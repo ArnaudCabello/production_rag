@@ -1,0 +1,130 @@
+{
+ "description": "T0 diagnosis ids (agentic failures per failing category) - eyeballed via --trace; NOT part of the tuning slice.",
+ "questions": [
+  {
+   "id": "v2q007",
+   "category": "aggregation",
+   "reason": "aggregation judge-incorrect/partial - recall vs synthesis diagnosis"
+  },
+  {
+   "id": "v2q011",
+   "category": "aggregation",
+   "reason": "aggregation judge-incorrect/partial - recall vs synthesis diagnosis"
+  },
+  {
+   "id": "v2q020",
+   "category": "aggregation",
+   "reason": "aggregation judge-incorrect/partial - recall vs synthesis diagnosis"
+  },
+  {
+   "id": "v2q018",
+   "category": "aggregation",
+   "reason": "aggregation judge-incorrect/partial - recall vs synthesis diagnosis"
+  },
+  {
+   "id": "v2q002",
+   "category": "aggregation",
+   "reason": "aggregation judge-incorrect/partial - recall vs synthesis diagnosis"
+  },
+  {
+   "id": "v2q068",
+   "category": "cross_document",
+   "reason": "cross_document ev_recall>0 but judge not correct - conversion failure"
+  },
+  {
+   "id": "v2q089",
+   "category": "cross_document",
+   "reason": "cross_document ev_recall>0 but judge not correct - conversion failure"
+  },
+  {
+   "id": "v2q058",
+   "category": "cross_document",
+   "reason": "cross_document ev_recall>0 but judge not correct - conversion failure"
+  },
+  {
+   "id": "v2q051",
+   "category": "cross_document",
+   "reason": "cross_document ev_recall>0 but judge not correct - conversion failure"
+  },
+  {
+   "id": "v2q087",
+   "category": "cross_document",
+   "reason": "cross_document ev_recall>0 but judge not correct - conversion failure"
+  },
+  {
+   "id": "v2q283",
+   "category": "unanswerable",
+   "reason": "unanswerable answered instead of refused"
+  },
+  {
+   "id": "v2q284",
+   "category": "unanswerable",
+   "reason": "unanswerable answered instead of refused"
+  },
+  {
+   "id": "v2q299",
+   "category": "unanswerable",
+   "reason": "unanswerable answered instead of refused"
+  },
+  {
+   "id": "v2q288",
+   "category": "unanswerable",
+   "reason": "unanswerable refused but judge partial - round-burn diagnosis"
+  },
+  {
+   "id": "v2q286",
+   "category": "unanswerable",
+   "reason": "unanswerable refused but judge partial - round-burn diagnosis"
+  },
+  {
+   "id": "v2q035",
+   "category": "ambiguous",
+   "reason": "ambiguous judge-non-correct (no-ack ids prioritized)"
+  },
+  {
+   "id": "v2q038",
+   "category": "ambiguous",
+   "reason": "ambiguous judge-non-correct (no-ack ids prioritized)"
+  },
+  {
+   "id": "v2q031",
+   "category": "ambiguous",
+   "reason": "ambiguous judge-non-correct (no-ack ids prioritized)"
+  },
+  {
+   "id": "v2q037",
+   "category": "ambiguous",
+   "reason": "ambiguous judge-non-correct (no-ack ids prioritized)"
+  },
+  {
+   "id": "v2q027",
+   "category": "ambiguous",
+   "reason": "ambiguous judge-non-correct (no-ack ids prioritized)"
+  },
+  {
+   "id": "v2q165",
+   "category": "multi_chunk",
+   "reason": "multi_chunk regressed vs baseline / judge-non-correct"
+  },
+  {
+   "id": "v2q150",
+   "category": "multi_chunk",
+   "reason": "multi_chunk regressed vs baseline / judge-non-correct"
+  },
+  {
+   "id": "v2q151",
+   "category": "multi_chunk",
+   "reason": "multi_chunk regressed vs baseline / judge-non-correct"
+  },
+  {
+   "id": "v2q171",
+   "category": "multi_chunk",
+   "reason": "multi_chunk regressed vs baseline / judge-non-correct"
+  },
+  {
+   "id": "v2q170",
+   "category": "multi_chunk",
+   "reason": "multi_chunk regressed vs baseline / judge-non-correct"
+  }
+ ]
+}

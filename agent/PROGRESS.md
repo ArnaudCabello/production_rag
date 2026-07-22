@@ -24,7 +24,7 @@ Module status board (update the table too):
 | M4 evidence check + refusal | done | agent/plans/M4_evidence_check.md | shape report + smoke passed after prompt recalibration |
 | M5 synthesis | done | agent/plans/M5_synthesis.md | smoke: cite✓ 100%, invalid=0, ev_recall 19.4% held |
 | M6 benchmark run + tuning | in-progress | agent/plans/M6_benchmark_tuning.md | Phases 0-3 done (first full run measured, M6_report.md); Phase 4 = tuning modules below (PRD_TUNING.md) |
-| T0 diagnosis harness + validation slice | not started | — | see PRD_TUNING.md §4 |
+| T0 diagnosis harness + validation slice | in-progress | agent/plans/T0_diagnosis_slice.md | slice + diagnosis ids committed; Colab trace run pending |
 | T1 round efficiency (latency) | not started | — | after T0 |
 | T2 aggregation recall + synthesis | not started | — | after T0 |
 | T3 refusal + ambiguous calibration | not started | — | after T0 |
@@ -32,6 +32,36 @@ Module status board (update the table too):
 | T5 final full run + close-out | not started | — | last; ONE full 306-q run |
 
 ---
+
+## 2026-07-22 T0 diagnosis harness + validation slice — in-progress (Step 1 done, Colab trace run pending)
+- What was done: plan approved (agent/plans/T0_diagnosis_slice.md). Step 1
+  built test-first: `eval/make_tuning_slice.py` (seeded, deterministic,
+  SEED=20260722) selects from bench_agentic_scored.json (+ baseline for
+  multi_chunk regressions): 25 diagnosis ids (5 per failing category —
+  aggregation incorrect/partial, cross_document ev_recall>0-but-wrong, the 3
+  answered unanswerables + 2 refused-partial, ambiguous no-ack-first,
+  multi_chunk baseline-regressions-first) →
+  eval/results_v2/T0_diagnosis_ids.json, and the FROZEN 26-id tuning slice
+  (agg 4, cross_doc 4, unans 4, amb 2, multi_chunk 3, multi_hop 2, factual 3,
+  semantic 2, table 2; ~half correct/half wrong per category; disjoint from
+  diagnosis + red-flag ids v2q079/080/154/211/249 + unpaired v2q251) →
+  eval/tuning_slice.json. NO pipeline changes.
+- Files touched: eval/make_tuning_slice.py (new), eval/tuning_slice.json (new),
+  eval/results_v2/T0_diagnosis_ids.json (new), tests/test_tuning_slice.py (new),
+  agent/plans/T0_diagnosis_slice.md (new), agent/PROGRESS.md
+- Tests: `python tests/test_tuning_slice.py` — passing (193 checks, validates
+  the committed artifacts); full existing suite (7 files) — passing.
+- Next step for the following agent: HUMAN runs on Colab (resumable):
+  `python eval/run_benchmark.py --pipeline agentic --model Qwen/Qwen3-14B \
+  --trace --output eval/results_v2/trace_diagnosis.jsonl \
+  --ids v2q007,v2q011,v2q020,v2q018,v2q002,v2q068,v2q089,v2q058,v2q051,v2q087,v2q283,v2q284,v2q299,v2q288,v2q286,v2q035,v2q038,v2q031,v2q037,v2q027,v2q165,v2q150,v2q151,v2q171,v2q170`
+  (explicit --output is mandatory — default would clobber bench_agentic.jsonl).
+  No scoring/judge needed. Then the agent does Step 3: analyze traces →
+  eval/results_v2/T0_findings.md (section per failing category + latency
+  appendix for T1, each ending in "implication for TX" lines) → close T0.
+- Gotchas discovered: golden_set_v2.json top level is {description, questions},
+  not a bare list. tuning_slice.json is FROZEN once T0 closes — T1-T4 must
+  never edit or regenerate it (make_tuning_slice.py is one-shot).
 
 ## 2026-07-22 M6 Phases 1-3 — done (full runs measured; tuning next)
 - What was done: human ran full 306-q agentic + closed_book runs + judges on
