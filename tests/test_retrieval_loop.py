@@ -42,7 +42,7 @@ def run_agentic(retriever, llm, question, **kw):
     graph = build_agentic_graph(retriever, llm, **kw)
     state = {"question": question, "llm_calls": 0, "retrieval_calls": 0,
              "chunks": [], "rounds": 0, "pending_queries": [], "queries_run": [],
-             "gaps": []}
+             "gaps": [], "new_chunks": 0}
     if kw.get("trace"):
         state["trace"] = []
     return graph.invoke(state)
@@ -60,8 +60,17 @@ assert check_ev["sufficient"] is True and check_ev["rounds"] == 1
 assert ag["answer"] == "ANSWER"
 print("default: 1 round, fail-safe LLM check, counters 3/1: OK")
 
+# T1: rounds adding no new chunks now stop early, so cap/loop tests need a
+# retriever that keeps yielding fresh chunks (early stop has its own tests in
+# tests/test_round_efficiency.py)
+class OverlapRetriever(StubRetriever):
+    def search(self, q, top_k=5, pdfs=None, rerank=True):
+        self.calls.append((q, top_k, tuple(pdfs) if pdfs else None, rerank))
+        return [chunk("a-1"), chunk(f"new-{len(self.calls)}")]
+
+
 # 2. termination at cap: check always insufficient with fresh queries → exactly MAX_ROUNDS
-ret = StubRetriever()
+ret = OverlapRetriever()
 always_more = lambda s: {"sufficient": False, "pending_queries": [f"r{s['rounds']}"]}
 ag = run_agentic(ret, PlannerLLM(), Q, check=always_more)
 assert ag["rounds"] == MAX_ROUNDS, ag["rounds"]
@@ -79,11 +88,6 @@ assert ag["retrieval_calls"] == 1
 print("dedup: already-run query variant not re-searched, loop terminates: OK")
 
 # 4. cross-round chunk dedup: overlapping ids across rounds → unique union, first-seen order
-class OverlapRetriever(StubRetriever):
-    def search(self, q, top_k=5, pdfs=None, rerank=True):
-        self.calls.append((q, top_k, tuple(pdfs) if pdfs else None, rerank))
-        return [chunk("a-1"), chunk(f"new-{len(self.calls)}")]
-
 ret = OverlapRetriever()
 ag = run_agentic(ret, PlannerLLM(), Q, check=always_more)
 ids = [c["chunk_id"] for c in ag["chunks"]]
@@ -129,7 +133,7 @@ assert all(c[1] == 5 and c[3] is True for c in ret.calls), ret.calls
 print("comparative: all searches use reranked defaults: OK")
 
 # 9. trace: retrieve events carry round/broad; check events sufficient/rounds
-ret = StubRetriever()
+ret = OverlapRetriever()  # T1: fresh chunks so round 2 still reaches the check
 ag = run_agentic(ret, PlannerLLM(agg_plan), Q, trace=True, check=lambda s: (
     {"sufficient": False, "pending_queries": ["refined"]} if s["rounds"] == 1
     else {"sufficient": True}))

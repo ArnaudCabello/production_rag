@@ -44,7 +44,7 @@ class StubLLM:
 
 
 INIT = {"llm_calls": 0, "retrieval_calls": 0, "chunks": [], "rounds": 0,
-        "pending_queries": [], "queries_run": [], "gaps": []}
+        "pending_queries": [], "queries_run": [], "gaps": [], "new_chunks": 0}
 
 
 def run_agentic(retriever, llm, question):
@@ -98,7 +98,8 @@ ag = graph.invoke({"question": "what is X", **INIT, "trace": []})
 assert [e["node"] for e in ag["trace"]] == ["plan", "retrieve", "check", "synthesize"], ag["trace"]
 assert ag["trace"][0]["sub_queries"] == ["what is X"]
 assert ag["trace"][1] == {"node": "retrieve", "query": "what is X",
-                          "chunk_ids": ["a-1", "b-1"], "round": 1, "broad": False}
+                          "chunk_ids": ["a-1", "b-1"], "round": 1, "broad": False,
+                          "new_chunks": 2}
 assert ag["trace"][2] == {"node": "check", "sufficient": True, "rounds": 1,
                           "missing": [], "fallback": True}  # M4 fail-safe verdict
 assert ag["trace"][3]["context_chunks"] == 2

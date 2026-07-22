@@ -25,13 +25,52 @@ Module status board (update the table too):
 | M5 synthesis | done | agent/plans/M5_synthesis.md | smoke: cite✓ 100%, invalid=0, ev_recall 19.4% held |
 | M6 benchmark run + tuning | in-progress | agent/plans/M6_benchmark_tuning.md | Phases 0-3 done (first full run measured, M6_report.md); Phase 4 = tuning modules below (PRD_TUNING.md) |
 | T0 diagnosis harness + validation slice | done | agent/plans/T0_diagnosis_slice.md | slice FROZEN; findings in eval/results_v2/T0_findings.md |
-| T1 round efficiency (latency) | planned | agent/plans/T1_round_efficiency.md | ready for /build T1 |
+| T1 round efficiency (latency) | done | agent/plans/T1_round_efficiency.md | local green; Colab check_shapes + slice_T1 validation pending |
 | T2 aggregation recall + synthesis | not started | — | after T0 |
 | T3 refusal + ambiguous calibration | not started | — | after T0 |
 | T4 synthesis conversion (cross_doc, multi_chunk) | not started | — | after T0 |
 | T5 final full run + close-out | not started | — | last; ONE full 306-q run |
 
 ---
+
+## 2026-07-22 T1 round efficiency — done (Colab validation pending)
+- What was done: built per plan, tests first. (1) No-new-chunks early stop:
+  retrieve records `new_chunks` (round total) in state; new conditional edge
+  `route_after_retrieve` → synthesize when rounds>1 and new_chunks==0, else
+  check; round 1 always checks. Trace: per-query retrieve events gain
+  `new_chunks`; a skip emits {"node":"check","skipped":"no_new_chunks","rounds"}.
+  (2) Stalled-check stop in the check node: insufficient verdict whose
+  non-empty `missing` equals previous `gaps` (sorted, normalized strip/lower)
+  forces pending_queries=[]; trace check event gains `stalled: true`. Empty
+  missing never counts (round-1 immunity). (3) CHECK_SYSTEM gains one rule:
+  single specific fact/value directly stated by any snippet = sufficient.
+  `new_chunks: 0` added to every invoke init dict (run_benchmark + 5 test
+  files — M3 gotcha).
+- Files touched: agentic/graph.py, agentic/checker.py, eval/run_benchmark.py
+  (init key), tests/test_round_efficiency.py (new), tests/test_retrieval_loop.py
+  + tests/test_check.py (intentional redefinition: multi-round loop/budget
+  tests now use fresh-chunk retrievers, budget test varies `missing` per round
+  — duplicate-chunk rounds now early-stop BY DESIGN; noted inline),
+  tests/test_agentic_parity.py (init + retrieve trace event new_chunks: 2),
+  tests/test_planner.py + tests/test_synthesis.py (init key), agent/PROGRESS.md.
+- Tests: `python tests/test_round_efficiency.py` — passing (8 checks); full
+  suite (9 agentic/eval files) — passing. NOT run (no GPU here): Colab
+  validation per plan §Validation: (a) `python eval/check_shapes.py --model
+  Qwen/Qwen3-14B` — factual should flip mostly sufficient=true, unanswerable
+  must hold 5/5 sufficient=false; (b) slice run
+  `python eval/run_benchmark.py --pipeline agentic --model Qwen/Qwen3-14B
+  --ids $(python -c "import json;print(','.join(q['id'] for q in json.load(open('eval/tuning_slice.json'))['questions']))")
+  --output eval/results_v2/slice_T1.jsonl` + score with --judge.
+- Next step for the following agent: after human accepts Colab results,
+  compare slice_T1 vs the same 26 ids in bench_agentic_scored.json (latency +
+  llm_calls down, quality/refusal not worse), append findings here; then plan
+  T2 (aggregation cap policy, findings §1) with the human.
+- Gotchas discovered: the early stop makes any test whose retriever returns
+  duplicate chunks in round 2+ terminate at round 2 — stub retrievers for
+  multi-round tests must yield a fresh chunk per search. The stalled stop
+  compares SORTED normalized lists, so reordered `missing` still counts as
+  stalled. tuning_slice.json is {description, questions:[{id,...}]} — ids come
+  from questions[*]['id'] (command above verified against the file).
 
 ## 2026-07-22 T1 round efficiency — planned
 - What was done: plan written with the human (agent/plans/T1_round_efficiency.md,

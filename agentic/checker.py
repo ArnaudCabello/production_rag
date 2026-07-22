@@ -27,6 +27,8 @@ perfection is not required, and broad questions (ranges, trends, comparisons acr
 are sufficiently covered by a representative sample. Then missing and queries must be [].
 - Most questions ARE answerable from the snippets; declare insufficiency only when a core \
 part of the question has NO relevant evidence in any snippet.
+- If the question asks for a single specific fact or value and any snippet directly states \
+it, it is sufficient — do not request more evidence to corroborate an already-found fact.
 - If a core part is uncovered AND a differently-worded search could plausibly find it, emit \
 1-3 new queries (keyword-rich search strings, not questions; do not repeat queries already run).
 - If the snippets for a part came back off-topic, the corpus likely lacks it: set \

@@ -72,7 +72,8 @@ def build_agentic(model, provider, top_k, trace=False):
         result = graph.invoke({"question": question, "llm_calls": 0,
                                "retrieval_calls": 0, "chunks": [], "rounds": 0,
                                "pending_queries": [], "queries_run": [],
-                               "gaps": [], "citations": {}, "trace": []})
+                               "gaps": [], "new_chunks": 0,
+                               "citations": {}, "trace": []})
         out = {
             "answer": result["answer"],
             "chunks": [{"chunk_id": c["chunk_id"], "text": c["text"]}

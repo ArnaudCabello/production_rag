@@ -58,6 +58,7 @@ class AgentState(TypedDict):
     pending_queries: list[str]  # enqueued for the next round; M4's check populates
     queries_run: list[str]  # normalized queries already searched (cross-round dedup)
     gaps: list[str]  # uncovered parts per the last check verdict; drives refusal/hedging
+    new_chunks: int  # chunks added by the latest retrieve round (T1 early stop)
     citations: dict  # M5: {"markers", "valid", "invalid", "chunk_ids"} parsed from the answer
     trace: list[dict]  # per-node events when trace=True; init to [] in the invoke input
 
@@ -99,25 +100,48 @@ def build_agentic_graph(retriever, llm, trace: bool = False, check=None):
             broad = state["category"] == "aggregation" and not (first and i == 0)
             hits = (retriever.search(query, top_k=AGG_SUBQUERY_TOP_K, rerank=False)
                     if broad else retriever.search(query))
-            if trace:
-                events.append({"node": "retrieve", "query": query,
-                               "chunk_ids": [c["chunk_id"] for c in hits],
-                               "round": state["rounds"] + 1, "broad": broad})
+            added = 0
             for chunk in hits:
                 if chunk["chunk_id"] not in seen:
                     seen.add(chunk["chunk_id"])
                     chunks.append(chunk)
+                    added += 1
+            if trace:
+                events.append({"node": "retrieve", "query": query,
+                               "chunk_ids": [c["chunk_id"] for c in hits],
+                               "round": state["rounds"] + 1, "broad": broad,
+                               "new_chunks": added})
         update = {"chunks": chunks, "retrieval_calls": calls,
                   "rounds": state["rounds"] + 1, "pending_queries": [],
-                  "queries_run": state["queries_run"] + ran}
+                  "queries_run": state["queries_run"] + ran,
+                  "new_chunks": len(chunks) - len(state["chunks"])}
         if trace:
+            if update["rounds"] > 1 and update["new_chunks"] == 0:
+                events.append({"node": "check", "skipped": "no_new_chunks",
+                               "rounds": update["rounds"]})
             update["trace"] = state["trace"] + events
         return update
 
+    def route_after_retrieve(state: AgentState):
+        # T1 early stop: a refinement round that added nothing new has nothing
+        # to judge — skip the check LLM call. Round 1 always checks (the check
+        # is the only unanswerable detector). Gaps from the previous verdict
+        # persist, so GAP_NOTE still fires on the skip path.
+        if state["rounds"] > 1 and state["new_chunks"] == 0:
+            return "synthesize"
+        return "check"
+
     def check(state: AgentState):
         verdict = check_fn(state)  # LLM judgment by default; tests inject stubs
+        # T1 stalled stop: an insufficient verdict whose `missing` repeats the
+        # previous round's gaps verbatim means re-querying is not converging.
+        stalled = (not verdict["sufficient"] and verdict.get("missing")
+                   and sorted(_norm(m) for m in verdict["missing"])
+                   == sorted(_norm(g) for g in state["gaps"]))
         update = {}
-        if "pending_queries" in verdict:
+        if stalled:
+            update["pending_queries"] = []
+        elif "pending_queries" in verdict:
             update["pending_queries"] = verdict["pending_queries"]
         if "missing" in verdict:  # last verdict wins — a later round may close gaps
             update["gaps"] = verdict["missing"]
@@ -126,6 +150,8 @@ def build_agentic_graph(retriever, llm, trace: bool = False, check=None):
         if trace:
             event = {"node": "check", "sufficient": verdict["sufficient"],
                      "rounds": state["rounds"]}
+            if stalled:
+                event["stalled"] = True
             for key in ("missing", "fallback"):
                 if key in verdict:
                     event[key] = verdict[key]
@@ -172,7 +198,7 @@ def build_agentic_graph(retriever, llm, trace: bool = False, check=None):
     graph.add_node("synthesize", synthesize)
     graph.add_edge(START, "plan")
     graph.add_edge("plan", "retrieve")
-    graph.add_edge("retrieve", "check")
+    graph.add_conditional_edges("retrieve", route_after_retrieve)
     graph.add_conditional_edges("check", route_after_check)
     graph.add_edge("synthesize", END)
     return graph.compile()

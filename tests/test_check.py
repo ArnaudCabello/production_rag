@@ -25,6 +25,14 @@ class StubRetriever:
         return [chunk("a-1"), chunk("b-1", "beta.pdf")]
 
 
+class FreshRetriever(StubRetriever):
+    """T1: refinement rounds adding no new chunks skip the check, so multi-round
+    check tests need every search to yield a fresh chunk."""
+    def search(self, q, top_k=5, pdfs=None, rerank=True):
+        self.calls.append((q, top_k, tuple(pdfs) if pdfs else None, rerank))
+        return [chunk("a-1"), chunk(f"new-{len(self.calls)}")]
+
+
 class ScriptedLLM:
     """Returns scripted responses in invoke order (plan, check, check, ..., synthesis)."""
     def __init__(self, responses):
@@ -43,7 +51,7 @@ def run_agentic(retriever, llm, question, **kw):
     graph = build_agentic_graph(retriever, llm, **kw)
     state = {"question": question, "llm_calls": 0, "retrieval_calls": 0,
              "chunks": [], "rounds": 0, "pending_queries": [], "queries_run": [],
-             "gaps": []}
+             "gaps": [], "new_chunks": 0}
     if kw.get("trace"):
         state["trace"] = []
     return graph.invoke(state)
@@ -98,7 +106,7 @@ print("parse: sufficient forces no queries; strip/drop-empty/cap: OK")
 
 # 5. insufficient round 1 → refinement round runs the check's queries; llm_calls
 #    counts plan + each check + synthesis
-ret = StubRetriever()
+ret = FreshRetriever()
 llm = ScriptedLLM(["PLAN-GARBAGE",                       # plan → fallback [Q]
                    verdict_json(False, ["m1"], ["q2"]),  # check round 1
                    verdict_json(True),                   # check round 2
@@ -127,8 +135,9 @@ assert check_ev["sufficient"] is True and check_ev["fallback"] is True
 print("loop: unparseable check fails safe to synthesize: OK")
 
 # 8. budget: every check insufficient with fresh queries → MAX_ROUNDS, llm_calls ≤ 6
-ret = StubRetriever()
-responses = ["PLAN-GARBAGE"] + [verdict_json(False, ["m"], [f"r{i}"])
+#    (T1: missing must vary per round or the stalled stop ends the loop early)
+ret = FreshRetriever()
+responses = ["PLAN-GARBAGE"] + [verdict_json(False, [f"m{i}"], [f"r{i}"])
                                 for i in range(MAX_ROUNDS)] + ["ANSWER"]
 ag = run_agentic(ret, ScriptedLLM(responses), Q)
 assert ag["rounds"] == MAX_ROUNDS
