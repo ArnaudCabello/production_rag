@@ -5,7 +5,7 @@ Guidelines for working in this codebase.
 ## 0. Agentic pipeline project (branch `agentic_pipeline`)
 
 If you are working on the agentic RAG pipeline: `PRD.md` defines what we are
-building, `agent/PROGRESS.md` is the single source of truth for where the
+building (`PRD_TUNING.md` breaks the M6 tuning phase into T-modules), `agent/PROGRESS.md` is the single source of truth for where the
 last agent stopped (update it when you finish anything), module plans live in
 `agent/plans/`. Onboard with `/onboard`; implement planned modules with
 `/build MX` — validation set first, then code. The v2 benchmark

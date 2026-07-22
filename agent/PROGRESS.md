@@ -23,7 +23,13 @@ Module status board (update the table too):
 | M3 retrieval loop | done | agent/plans/M3_retrieval_loop.md | check node = M4 seam |
 | M4 evidence check + refusal | done | agent/plans/M4_evidence_check.md | shape report + smoke passed after prompt recalibration |
 | M5 synthesis | done | agent/plans/M5_synthesis.md | smoke: cite✓ 100%, invalid=0, ev_recall 19.4% held |
-| M6 benchmark run + tuning | in-progress | agent/plans/M6_benchmark_tuning.md | Phase 0 (closed_book adapter) done; awaiting Colab full runs |
+| M6 benchmark run + tuning | in-progress | agent/plans/M6_benchmark_tuning.md | Phases 0-3 done (first full run measured, M6_report.md); Phase 4 = tuning modules below (PRD_TUNING.md) |
+| T0 diagnosis harness + validation slice | not started | — | see PRD_TUNING.md §4 |
+| T1 round efficiency (latency) | not started | — | after T0 |
+| T2 aggregation recall + synthesis | not started | — | after T0 |
+| T3 refusal + ambiguous calibration | not started | — | after T0 |
+| T4 synthesis conversion (cross_doc, multi_chunk) | not started | — | after T0 |
+| T5 final full run + close-out | not started | — | last; ONE full 306-q run |
 
 ---
 
