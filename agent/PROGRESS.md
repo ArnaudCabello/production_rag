@@ -27,11 +27,39 @@ Module status board (update the table too):
 | T0 diagnosis harness + validation slice | done | agent/plans/T0_diagnosis_slice.md | slice FROZEN; findings in eval/results_v2/T0_findings.md |
 | T1 round efficiency (latency) | done | agent/plans/T1_round_efficiency.md | slice validated: latency −20% (med 46.1s ≈ 5× target), refusals held |
 | T2 aggregation recall + synthesis | done | agent/plans/T2_aggregation_cap.md | slice validated: judge 10→14, agg 1→2, refusals 4/4, latency ~flat |
-| T3 refusal + ambiguous calibration | in-progress | agent/plans/T3_refusal_calibration.md | v1 over-refused, v2 under-refused; T3.3 (v1 framing + release valve) built, Colab pending |
+| T3 refusal + ambiguous calibration | done | agent/plans/T3_refusal_calibration.md | T3.3 accepted: traps 3/3 refuse-or-hedge, cost flat, robust judge net 0 |
 | T4 synthesis conversion (cross_doc, multi_chunk) | not started | — | after T0 |
 | T5 final full run + close-out | not started | — | last; ONE full 306-q run |
 
 ---
+
+## 2026-07-23 T3.3 validation — ACCEPTED (T3 CLOSED)
+- What was done: human ran trap_T3c + slice_T3c on Colab; agent compared vs
+  slice_T2 per the pre-registered decision rule. Traps: effectively 3/3 —
+  v2q283 + v2q299 refuse with gaps naming the asked subject; v2q284's check
+  still flips (partial-match trap) but SYNTHESIS now hedges ("not explicitly
+  mentioned") instead of stating the false 99.6% value. Paranoia canary
+  v2q105 correct (strict framing + release valve coexist); v2q041 partial ==
+  T2 (known churn id). Cost flat: llm 4.08 (T2 3.96), retrieval 5.96 (down),
+  latency 48.0s vs 47.8s, factual unchanged 3.7/34s. Slice unanswerable 3/4:
+  miss is v2q298, whose answer IS a refusal judged partial (ev 0.0 churn;
+  refusal-regex count unchanged 3). Judge raw 12 vs 14; robust ev>0 flips
+  perfectly symmetric (−v2q083, −v2q127 / +v2q158, +v2q241) → net 0, rest is
+  ev-0.0 churn. Accepted on: target achieved (0/3 → 3/3 trap refusals),
+  zero robust quality/cost regression.
+- Files touched: agent/PROGRESS.md only (analysis). Artifacts:
+  eval/results_v2/{trap,slice}_T3{,b,c}* (three-way set preserved).
+- Tests: n/a (comparison). Checker state = commit 51a49a6 (T3.3).
+- Next step for the following agent: plan T4 (synthesis conversion) with the
+  human. Inputs: T0_findings §2 (half the cross_doc/multi_chunk misses have
+  full evidence in context — synthesis instruction lever); v2q158 improved
+  3 runs straight (ev 1.0, km True, still partial — conversion candidate);
+  v2q083/v2q127 regressed identically in T3b+T3c at ev 1.0 (correlates with
+  factual-rule/valve wording — eyeball in T4); v2q284-style partial-match
+  traps only survive via synthesis hedging, not the check.
+- Gotchas discovered: the judge downgrades refusals with "However..." hedge
+  tails to partial even when the refusal is correct — unanswerable judge
+  counts undercount honest refusals; pair with the refusal-regex count.
 
 ## 2026-07-22 T3.3 — built (Colab validation pending; T3.2 REJECTED on slice)
 - What was done: slice_T3b/trap_T3b analyzed vs T2. T3.2 fixed ALL v1
