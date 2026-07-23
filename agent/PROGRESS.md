@@ -29,9 +29,33 @@ Module status board (update the table too):
 | T2 aggregation recall + synthesis | done | agent/plans/T2_aggregation_cap.md | slice validated: judge 10→14, agg 1→2, refusals 4/4, latency ~flat |
 | T3 refusal + ambiguous calibration | done | agent/plans/T3_refusal_calibration.md | T3.3 accepted: traps 3/3 refuse-or-hedge, cost flat, robust judge net 0 |
 | T4 synthesis conversion (cross_doc, multi_chunk) | closed (attempted, reverted) | agent/plans/T4_synthesis_conversion.md | T4/T4.1 both failed trap gate; SYNTH_GUIDE reverted to T3c state |
-| T5 final full run + close-out | not started | — | last; ONE full 306-q run |
+| T5 final full run + close-out | planned | agent/plans/T5_final_run.md | Phase 1 pre-flight done; waiting on human's Colab full run |
 
 ---
+
+## 2026-07-23 T5 final full run — planned (Phase 1 pre-flight done; Colab run pending)
+- What was done: plan written with the human and approved
+  (agent/plans/T5_final_run.md). Scope: NO pipeline changes — ONE full 306-q
+  agentic run of the frozen T3c configuration, judge, compare, final
+  M6_report.md scoreboard, close-out. Phase 1 pre-flight executed:
+  `git diff 92a6f32 -- agentic/ eval/{run_benchmark,score_benchmark,compare}.py`
+  empty (frozen state confirmed); full 11-file suite green
+  (.venv/bin/python). No closed-book re-run needed (control unchanged since
+  M6 Phase 2). Untracked eval_run.log left alone (human's call).
+- Files touched: agent/plans/T5_final_run.md (new), agent/PROGRESS.md.
+- Tests: 11-file suite — passing, unchanged.
+- Next step for the following agent: HUMAN runs on Colab (resumable):
+  (1) `python eval/run_benchmark.py --pipeline agentic --model Qwen/Qwen3-14B
+  --output eval/results_v2/bench_agentic_T5.jsonl` (explicit --output
+  MANDATORY — default clobbers the untuned bench_agentic.jsonl; NO --trace),
+  (2) `python eval/score_benchmark.py eval/results_v2/bench_agentic_T5.jsonl
+  --judge`, (3) commit+push artifacts. Then the agent does Phase 3: sanity
+  gates (306 rows, llm ≤6, retrieval ≥1), compare vs bench_baseline_scored
+  (headline) AND vs bench_agentic_scored (tuning delta), final PRD §3
+  scoreboard in M6_report.md, then Phase 4 close-out.
+- Gotchas discovered: n/a (planning + pre-flight only). Standing: never
+  overwrite bench_baseline* or the untuned bench_agentic*; judge = local
+  Qwen only.
 
 ## 2026-07-23 T4 REVERTED — closed as attempted (T4.1 rejected on slice+trap)
 - What was done: slice_T4b/trap_T4b compared vs slice_T3c. T4.1 failed:
