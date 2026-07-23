@@ -6,7 +6,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 import json
 
 from agentic.citations import extract_citations
-from agentic.graph import MAX_SYNTH_CHUNKS, build_agentic_graph
+from agentic.graph import MAX_SYNTH_CHUNKS, SYNTH_GUIDE, build_agentic_graph
 from generation.pipeline import USER_TEMPLATE, format_context
 
 Q = "what is X"
@@ -136,6 +136,27 @@ assert ag["citations"]["valid"] == [1, MAX_SYNTH_CHUNKS]
 assert ag["citations"]["invalid"] == [MAX_SYNTH_CHUNKS + 3]
 assert ag["citations"]["chunk_ids"] == ["x-0", f"x-{MAX_SYNTH_CHUNKS - 1}"]
 print("graph: validity measured against the capped context: OK")
+
+
+# --- T4: SYNTH_GUIDE on the synthesis system message ---
+
+from generation.pipeline import SYSTEM_PROMPT  # noqa: E402
+
+# 10. the synthesize call's system message is baseline prompt + SYNTH_GUIDE
+#     (unconditional — T4); user message stays baseline (checked in 7 above)
+assert llm.messages[-1][0].content == SYSTEM_PROMPT + SYNTH_GUIDE
+print("T4: synthesis system message ends with SYNTH_GUIDE: OK")
+
+# 11. GAP_NOTE composition unchanged: gaps still prepend to the USER message,
+#     system message still baseline + SYNTH_GUIDE
+INSUFFICIENT = json.dumps({"sufficient": False, "missing": ["point-p"], "queries": []})
+ret = StubRetriever()
+llm = ScriptedLLM(["PLAN-GARBAGE", INSUFFICIENT, "ANSWER"])
+ag = run_agentic(ret, llm)
+assert llm.messages[-1][0].content == SYSTEM_PROMPT + SYNTH_GUIDE
+assert llm.messages[-1][1].content.startswith("Note: retrieval found no evidence")
+assert "point-p" in llm.messages[-1][1].content
+print("T4: GAP_NOTE still prepends to user message, composes with SYNTH_GUIDE: OK")
 
 
 # --- scorer metric ---

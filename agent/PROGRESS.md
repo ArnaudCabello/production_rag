@@ -28,10 +28,38 @@ Module status board (update the table too):
 | T1 round efficiency (latency) | done | agent/plans/T1_round_efficiency.md | slice validated: latency −20% (med 46.1s ≈ 5× target), refusals held |
 | T2 aggregation recall + synthesis | done | agent/plans/T2_aggregation_cap.md | slice validated: judge 10→14, agg 1→2, refusals 4/4, latency ~flat |
 | T3 refusal + ambiguous calibration | done | agent/plans/T3_refusal_calibration.md | T3.3 accepted: traps 3/3 refuse-or-hedge, cost flat, robust judge net 0 |
-| T4 synthesis conversion (cross_doc, multi_chunk) | planned | agent/plans/T4_synthesis_conversion.md | SYNTH_GUIDE (relation + specifics), unconditional; ready for /build T4 |
+| T4 synthesis conversion (cross_doc, multi_chunk) | done | agent/plans/T4_synthesis_conversion.md | built; Colab slice_T4 validation pending |
 | T5 final full run + close-out | not started | — | last; ONE full 306-q run |
 
 ---
+
+## 2026-07-23 T4 synthesis conversion — built (Colab slice validation pending)
+- What was done: built per plan, tests first. `SYNTH_GUIDE` module constant in
+  agentic/graph.py (two bullets: answer the asked relation explicitly with each
+  side cited, no generic similarities; cover every part with the sources'
+  specific values, not qualitative summaries), appended unconditionally to the
+  synthesize system message (`SYSTEM_PROMPT + SYNTH_GUIDE`). GAP_NOTE still
+  prepends to the USER message — composition unchanged. Zero new LLM calls;
+  checker, cap policy, baseline pipeline untouched.
+- Files touched: agentic/graph.py (SYNTH_GUIDE + one line in synthesize),
+  tests/test_synthesis.py (checks 10-11: system message == SYSTEM_PROMPT +
+  SYNTH_GUIDE with and without gaps; GAP_NOTE composition), tests/
+  test_agentic_parity.py (check 2 intentionally redefined per plan: last-call
+  system == baseline + SYNTH_GUIDE, user identical), agent/PROGRESS.md.
+- Tests: `python tests/test_synthesis.py` — passing (12 checks); full 11-file
+  suite — passing. NOT run (no GPU here): Colab validation per plan —
+  (a) frozen 26-id slice run (same --ids command as T2/T3) →
+  eval/results_v2/slice_T4.jsonl + `score --judge`; (b) optional trap re-check
+  `--ids v2q283,v2q284,v2q299 --trace` → trap_T4.jsonl.
+- Next step for the following agent: compare slice_T4 vs slice_T3c per the
+  plan's gates: cross_doc+multi_chunk judge up (v2q158 partial→correct is the
+  named target; v2q083 covers both sides); unanswerable ≥3/4 judge AND
+  refusal-regex ≥3; other categories not worse robustly (ev>0 flips only);
+  llm ~4.0, latency ~flat. If traps leak via the specifics demand, fallback
+  wording is in the plan (scope specifics to "the asked subject") — build-time
+  revision, document here. Accept → T4 done, plan T5 (final full run).
+- Gotchas discovered: none new. StubLLM-based parity keeps working because
+  SYNTH_GUIDE is a pure string concat — no new state keys, no init-dict churn.
 
 ## 2026-07-23 T4 synthesis conversion — planned
 - What was done: plan written with the human and approved
