@@ -112,7 +112,14 @@ slice_T4b, same gates; v2q284 must hedge again, v2q083 must stay correct.
   cap policy/select_synth_chunks, `eval/tuning_slice.json` (frozen),
   baseline artifacts.
 
-## After acceptance
+## Outcome — CLOSED AS ATTEMPTED (reverted)
 
-T4 done → only T5 remains (ONE full 306-q run + judge + compare + final
-M6_report.md scoreboard).
+T4.1 re-validation (slice_T4b/trap_T4b vs slice_T3c) failed both ways:
+v2q284 still answered the false 99.96% density value (traps 2/3 — the scoping
+clause did not stop the substitution), judge 11/26 (T3c 12), the v1 v2q083
+gain did not reproduce, paranoia canary v2q105 dropped correct→partial at
+ev 1.0, and cost drifted up monotonically across T3c→T4→T4b (llm 4.08→4.15→
+4.27, latency med 48.0→54.5→52.8s). v2q158 never converted under either
+wording (5 runs partial at ev 1.0). Decision with the human: full revert of
+SYNTH_GUIDE and the test redefinitions to the T3c state (commit 92a6f32);
+no T4.2. T5 proceeds from the T3c configuration.

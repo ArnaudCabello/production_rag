@@ -28,10 +28,40 @@ Module status board (update the table too):
 | T1 round efficiency (latency) | done | agent/plans/T1_round_efficiency.md | slice validated: latency −20% (med 46.1s ≈ 5× target), refusals held |
 | T2 aggregation recall + synthesis | done | agent/plans/T2_aggregation_cap.md | slice validated: judge 10→14, agg 1→2, refusals 4/4, latency ~flat |
 | T3 refusal + ambiguous calibration | done | agent/plans/T3_refusal_calibration.md | T3.3 accepted: traps 3/3 refuse-or-hedge, cost flat, robust judge net 0 |
-| T4 synthesis conversion (cross_doc, multi_chunk) | in-progress | agent/plans/T4_synthesis_conversion.md | T4.1 scoped-specifics fallback built; Colab slice_T4b/trap_T4b pending |
+| T4 synthesis conversion (cross_doc, multi_chunk) | closed (attempted, reverted) | agent/plans/T4_synthesis_conversion.md | T4/T4.1 both failed trap gate; SYNTH_GUIDE reverted to T3c state |
 | T5 final full run + close-out | not started | — | last; ONE full 306-q run |
 
 ---
+
+## 2026-07-23 T4 REVERTED — closed as attempted (T4.1 rejected on slice+trap)
+- What was done: slice_T4b/trap_T4b compared vs slice_T3c. T4.1 failed:
+  (1) trap v2q284 STILL answered the false 99.96% value — the scoping clause
+  does not stop value substitution (traps 2/3 both T4 versions); (2) judge
+  11/26 vs T3c 12; robust ev>0 flips: −v2q083 (the v1 gain did not
+  reproduce), −v2q105 (paranoia canary, first movement since T3.3),
+  +v2q127, +v2q241 restored — net negative; (3) v2q158 partial 5 runs
+  straight under every wording; (4) cost monotonically up T3c→T4→T4b
+  (llm 4.08→4.15→4.27, ret 5.96→6.50→6.77, lat med 48.0→54.5→52.8s — the
+  T4 latency bump was real, not churn). Human decided: full revert, no T4.2.
+  agentic/graph.py, tests/test_synthesis.py, tests/test_agentic_parity.py
+  restored from 92a6f32 (T3-close state); plan updated with §Outcome.
+- Files touched: agentic/graph.py, tests/test_synthesis.py,
+  tests/test_agentic_parity.py (all reverted to 92a6f32),
+  agent/plans/T4_synthesis_conversion.md, agent/PROGRESS.md. Artifacts kept:
+  eval/results_v2/{slice,trap}_T4{,b}* (negative results preserved).
+- Tests: full 11-file suite — passing (verified post-revert). Pipeline state
+  == T3c (commit 92a6f32 code paths; only docs/artifacts differ).
+- Next step for the following agent: plan T5 with the human — ONE full 306-q
+  agentic run from the T3c configuration + judge + compare vs baseline +
+  final M6_report.md scoreboard against every PRD §3 criterion. Nothing else
+  remains in PRD_TUNING.
+- Gotchas discovered: prompt-level "give specific values" instructions
+  override hedging on partial-match traps and neither scoping language nor
+  the checker stops it — the substitution happens in synthesis with full
+  chunk text visible. Any future synthesis-conversion attempt should gate on
+  trap_T4-style spot checks FIRST (cheap, 3 ids) before burning a slice run.
+  Also: run tests with .venv/bin/python — bare `python` here is the system
+  interpreter without langchain deps.
 
 ## 2026-07-23 T4.1 scoped specifics — built (Colab re-validation pending; T4 v1 REJECTED on trap)
 - What was done: slice_T4/trap_T4 compared vs slice_T3c. Gains: v2q083

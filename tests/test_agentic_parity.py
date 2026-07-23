@@ -61,14 +61,11 @@ assert ag["answer"] == base["answer"]
 assert [c["chunk_id"] for c in ag["chunks"]] == [c["chunk_id"] for c in base["chunks"]]
 print("parity: same answer and chunk sequence as baseline: OK")
 
-# 2. prompt parity: the final (synthesis) call has identical user text; T4
-# redefinition (intentional): the system message is baseline + SYNTH_GUIDE
-# (unconditional synthesis instruction — see agent/plans/T4_synthesis_conversion.md)
-from agentic.graph import SYNTH_GUIDE  # noqa: E402
+# 2. prompt parity: the final (synthesis) call has identical system + user text;
+# the extra calls are the planner (first) and the check
 assert len(ag_llm.messages) == 3 and len(base_llm.messages) == 1
-assert ag_llm.messages[-1][0].content == base_llm.messages[0][0].content + SYNTH_GUIDE
-assert ag_llm.messages[-1][1].content == base_llm.messages[0][1].content
-print("parity: baseline user prompt; system = baseline + SYNTH_GUIDE (T4): OK")
+assert [m.content for m in ag_llm.messages[-1]] == [m.content for m in base_llm.messages[0]]
+print("parity: identical synthesis prompts (system + user): OK")
 
 # 3. retriever-call parity: one search with baseline defaults; counters 3 (planner
 # + check + synthesis) / 1

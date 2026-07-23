@@ -45,21 +45,6 @@ in the corpus.
 """
 
 
-# T4: appended to the synthesis system message on every question (planner labels
-# are too unreliable to gate on). Targets cross_document/multi_chunk misses where
-# the evidence is in context but the answer hedges or drops the asked relation.
-SYNTH_GUIDE = """
-
-Additionally:
-- Answer exactly what the question asks. If it asks how things compare or relate, \
-state the comparison/relationship explicitly and cover EACH side with its own \
-citation — never reply with a generic similarity.
-- Address every part of the question, and give the sources' specific values \
-(numbers, sizes, temperatures, compositions) rather than qualitative summaries — \
-but only values the sources state for the asked subject; never substitute a \
-value reported for a different material, composition, or condition."""
-
-
 def _norm(q):
     return q.strip().lower()
 
@@ -221,7 +206,7 @@ def build_agentic_graph(retriever, llm, trace: bool = False, check=None):
         if state["gaps"]:  # evidence-driven refusal/hedging (M4)
             user = GAP_NOTE.format(gaps="\n".join(f"- {g}" for g in state["gaps"])) + user
         messages = [
-            SystemMessage(content=SYSTEM_PROMPT + SYNTH_GUIDE),  # T4
+            SystemMessage(content=SYSTEM_PROMPT),
             HumanMessage(content=user),
         ]
         answer = llm.invoke(messages).content
