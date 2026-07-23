@@ -90,6 +90,18 @@ message unchanged — the two compose without interaction.
   values the sources state for the asked subject" — a build-time revision,
   documented in PROGRESS if used.
 
+## Revision T4.1 (fallback triggered)
+
+The v1 slice/trap validation hit exactly the pre-registered risk: trap v2q284
+answered with the false 99.96% density value that T3c's synthesis hedged away
+(traps 2/3). Meanwhile v2q083 converted partial→correct (named target) and
+v2q127 recovered; v2q158 unchanged; refusal + cost gates passed. Per the
+fallback clause above, the specifics bullet is scoped: "only values the
+sources state for the asked subject; never substitute a value reported for a
+different material, composition, or condition" (second clause mirrors T3's
+accepted checker language). Re-validate: trap trio + slice → trap_T4b/
+slice_T4b, same gates; v2q284 must hedge again, v2q083 must stay correct.
+
 ## Files touched
 
 - `agentic/graph.py` (SYNTH_GUIDE + one line in synthesize),

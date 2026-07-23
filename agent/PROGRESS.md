@@ -28,10 +28,41 @@ Module status board (update the table too):
 | T1 round efficiency (latency) | done | agent/plans/T1_round_efficiency.md | slice validated: latency −20% (med 46.1s ≈ 5× target), refusals held |
 | T2 aggregation recall + synthesis | done | agent/plans/T2_aggregation_cap.md | slice validated: judge 10→14, agg 1→2, refusals 4/4, latency ~flat |
 | T3 refusal + ambiguous calibration | done | agent/plans/T3_refusal_calibration.md | T3.3 accepted: traps 3/3 refuse-or-hedge, cost flat, robust judge net 0 |
-| T4 synthesis conversion (cross_doc, multi_chunk) | done | agent/plans/T4_synthesis_conversion.md | built; Colab slice_T4 validation pending |
+| T4 synthesis conversion (cross_doc, multi_chunk) | in-progress | agent/plans/T4_synthesis_conversion.md | T4.1 scoped-specifics fallback built; Colab slice_T4b/trap_T4b pending |
 | T5 final full run + close-out | not started | — | last; ONE full 306-q run |
 
 ---
+
+## 2026-07-23 T4.1 scoped specifics — built (Colab re-validation pending; T4 v1 REJECTED on trap)
+- What was done: slice_T4/trap_T4 compared vs slice_T3c. Gains: v2q083
+  partial→correct at ev 1.0 (named target; cross_doc 1/4→2/4), v2q127
+  incorrect→partial — both T3b/T3c regressions recovered. Misses: v2q158
+  still partial (ev 1.0, km True, 4 runs); v2q241 correct→partial + v2q200
+  partial→incorrect (both ev>0) → robust net ≈ 0, judge 12/26 both runs.
+  Refusal gates passed (unanswerable 3/4 judge + 4/4 scorer-REFUSAL regex;
+  v2q298 partial churn as in T3c). Cost: llm 4.15≈4.08; retrieval 5.96→6.50,
+  latency med 48.0→54.5s (+14%, watch). REJECTED on the trap gate: v2q284
+  answered the false 99.96% density value T3c hedged away (traps 2/3) — the
+  pre-registered "specifics demand" leak. T4.1 = the plan's fallback: specifics
+  bullet scoped to "only values the sources state for the asked subject; never
+  substitute a value reported for a different material/composition/condition"
+  (plan §Revision T4.1). Tests unchanged (assert the constant concat).
+- Files touched: agentic/graph.py (SYNTH_GUIDE wording only),
+  agent/plans/T4_synthesis_conversion.md (§Revision T4.1), agent/PROGRESS.md.
+- Tests: full 11-file suite — passing, unchanged. Colab (human): trap trio +
+  slice, outputs trap_T4b.jsonl / slice_T4b.jsonl + score --judge — NEVER
+  overwrite slice_T4/trap_T4 artifacts.
+- Next step for the following agent: compare slice_T4b vs slice_T3c (same
+  gates). Specific predictions: v2q284 hedges again (trap 3/3 restored),
+  v2q083 stays correct, refusals hold 4/4 regex. If the scoping kills the
+  v2q083/v2q127 gains too (specifics now too timid), revert SYNTH_GUIDE to
+  the v1 wording is NOT an option (trap leak); instead close T4 as attempted
+  with the relation bullet only (drop the specifics bullet) — decision with
+  the human. Latency watch: if 54.5s persists in T4b it's real, not churn.
+- Gotchas discovered: the scorer REFUSAL regex hits 9 ids in T3c vs 7 in T4
+  across the whole slice — SYNTH_GUIDE's specifics push reduces scoped
+  "not available" phrasing on ANSWERED questions too (v2q013/v2q158 lost
+  their hedge tails); watch judged-partial drift on multi_chunk.
 
 ## 2026-07-23 T4 synthesis conversion — built (Colab slice validation pending)
 - What was done: built per plan, tests first. `SYNTH_GUIDE` module constant in

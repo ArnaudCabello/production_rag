@@ -55,7 +55,9 @@ Additionally:
 state the comparison/relationship explicitly and cover EACH side with its own \
 citation — never reply with a generic similarity.
 - Address every part of the question, and give the sources' specific values \
-(numbers, sizes, temperatures, compositions) rather than qualitative summaries."""
+(numbers, sizes, temperatures, compositions) rather than qualitative summaries — \
+but only values the sources state for the asked subject; never substitute a \
+value reported for a different material, composition, or condition."""
 
 
 def _norm(q):
