@@ -9,9 +9,7 @@ judgment (agentic/checker.py) that enqueues refinement queries and records
 uncovered gaps; remaining gaps make synthesize prepend a refuse/hedge
 instruction. The check= hook still injects stubs in tests.
 M5: synthesize caps the multi-round chunk union (MAX_SYNTH_CHUNKS) and validates
-the answer's [n] citations deterministically (agentic/citations.py). T2: chunks
-carry round/q_idx provenance; the cap selects by query-interleave
-(select_synth_chunks) and aggregation questions get MAX_SYNTH_CHUNKS_AGG. No multi-doc
+the answer's [n] citations deterministically (agentic/citations.py). No multi-doc
 fan-out or vision routing: the planner/loop modules replace the former, and
 vision is out of scope for the agentic pipeline.
 """
@@ -29,8 +27,7 @@ MAX_ROUNDS = 4              # hard cap on retrieval rounds (PRD §4)
 AGG_SUBQUERY_TOP_K = 8      # broad, un-reranked recall for aggregation sub-queries
 MAX_PENDING_PER_ROUND = 3   # refinement queries per round (the check fills pending_queries)
 MAX_SYNTH_CHUNKS = 20       # cap on the multi-round union shown to the generator (M5);
-                            # T2: query-interleave selection (select_synth_chunks)
-MAX_SYNTH_CHUNKS_AGG = 30   # T2: aggregation questions overflow 20 in round 1 alone
+                            # first-N of retrieval order — question's reranked hits come first
 
 # Prepended to the synthesis user message when the check left uncovered gaps.
 # "not available in the corpus" wording matches eval/score_benchmark.py's REFUSAL regex.
@@ -49,32 +46,6 @@ def _norm(q):
     return q.strip().lower()
 
 
-def select_synth_chunks(chunks: list[dict], cap: int) -> list[dict]:
-    """T2 cap selection: round-robin across q_idx query groups so every
-    sub-query and late-round targeted query keeps representation; within-group
-    relevance order preserved. Identity when the union fits the cap. Chunks
-    without q_idx share one group (degrades to first-N)."""
-    if len(chunks) <= cap:
-        return chunks
-    groups: dict = {}
-    order = []
-    for c in chunks:
-        k = c.get("q_idx")
-        if k not in groups:
-            groups[k] = []
-            order.append(k)
-        groups[k].append(c)
-    picked, i = [], 0
-    while len(picked) < cap:
-        for k in order:
-            if i < len(groups[k]):
-                picked.append(groups[k][i])
-                if len(picked) == cap:
-                    break
-        i += 1
-    return picked
-
-
 class AgentState(TypedDict):
     question: str
     category: str  # M2 planner label: simple|comparative|multi_hop|aggregation|unanswerable_maybe
@@ -87,7 +58,6 @@ class AgentState(TypedDict):
     pending_queries: list[str]  # enqueued for the next round; M4's check populates
     queries_run: list[str]  # normalized queries already searched (cross-round dedup)
     gaps: list[str]  # uncovered parts per the last check verdict; drives refusal/hedging
-    new_chunks: int  # chunks added by the latest retrieve round (T1 early stop)
     citations: dict  # M5: {"markers", "valid", "invalid", "chunk_ids"} parsed from the answer
     trace: list[dict]  # per-node events when trace=True; init to [] in the invoke input
 
@@ -123,57 +93,31 @@ def build_agentic_graph(retriever, llm, trace: bool = False, check=None):
                 continue
             run.add(_norm(query))
             ran.append(_norm(query))  # queries_run holds normalized forms
-            q_idx = calls  # global per-question query counter (T2 selection groups)
             calls += 1
             # aggregation needs recall beyond top-5: sub/refinement queries go
             # broad and skip the cross-encoder; the question keeps the full pass
             broad = state["category"] == "aggregation" and not (first and i == 0)
             hits = (retriever.search(query, top_k=AGG_SUBQUERY_TOP_K, rerank=False)
                     if broad else retriever.search(query))
-            added = 0
-            for chunk in hits:
-                if chunk["chunk_id"] not in seen:
-                    seen.add(chunk["chunk_id"])
-                    # copy — never mutate retriever-returned dicts (T2 provenance)
-                    chunks.append({**chunk, "round": state["rounds"] + 1,
-                                   "q_idx": q_idx})
-                    added += 1
             if trace:
                 events.append({"node": "retrieve", "query": query,
                                "chunk_ids": [c["chunk_id"] for c in hits],
-                               "round": state["rounds"] + 1, "broad": broad,
-                               "new_chunks": added})
+                               "round": state["rounds"] + 1, "broad": broad})
+            for chunk in hits:
+                if chunk["chunk_id"] not in seen:
+                    seen.add(chunk["chunk_id"])
+                    chunks.append(chunk)
         update = {"chunks": chunks, "retrieval_calls": calls,
                   "rounds": state["rounds"] + 1, "pending_queries": [],
-                  "queries_run": state["queries_run"] + ran,
-                  "new_chunks": len(chunks) - len(state["chunks"])}
+                  "queries_run": state["queries_run"] + ran}
         if trace:
-            if update["rounds"] > 1 and update["new_chunks"] == 0:
-                events.append({"node": "check", "skipped": "no_new_chunks",
-                               "rounds": update["rounds"]})
             update["trace"] = state["trace"] + events
         return update
 
-    def route_after_retrieve(state: AgentState):
-        # T1 early stop: a refinement round that added nothing new has nothing
-        # to judge — skip the check LLM call. Round 1 always checks (the check
-        # is the only unanswerable detector). Gaps from the previous verdict
-        # persist, so GAP_NOTE still fires on the skip path.
-        if state["rounds"] > 1 and state["new_chunks"] == 0:
-            return "synthesize"
-        return "check"
-
     def check(state: AgentState):
         verdict = check_fn(state)  # LLM judgment by default; tests inject stubs
-        # T1 stalled stop: an insufficient verdict whose `missing` repeats the
-        # previous round's gaps verbatim means re-querying is not converging.
-        stalled = (not verdict["sufficient"] and verdict.get("missing")
-                   and sorted(_norm(m) for m in verdict["missing"])
-                   == sorted(_norm(g) for g in state["gaps"]))
         update = {}
-        if stalled:
-            update["pending_queries"] = []
-        elif "pending_queries" in verdict:
+        if "pending_queries" in verdict:
             update["pending_queries"] = verdict["pending_queries"]
         if "missing" in verdict:  # last verdict wins — a later round may close gaps
             update["gaps"] = verdict["missing"]
@@ -182,8 +126,6 @@ def build_agentic_graph(retriever, llm, trace: bool = False, check=None):
         if trace:
             event = {"node": "check", "sufficient": verdict["sufficient"],
                      "rounds": state["rounds"]}
-            if stalled:
-                event["stalled"] = True
             for key in ("missing", "fallback"):
                 if key in verdict:
                     event[key] = verdict[key]
@@ -198,9 +140,7 @@ def build_agentic_graph(retriever, llm, trace: bool = False, check=None):
         return "retrieve" if state["pending_queries"] else "synthesize"
 
     def synthesize(state: AgentState):
-        cap = (MAX_SYNTH_CHUNKS_AGG if state["category"] == "aggregation"
-               else MAX_SYNTH_CHUNKS)
-        capped = select_synth_chunks(state["chunks"], cap)
+        capped = state["chunks"][:MAX_SYNTH_CHUNKS]
         user = USER_TEMPLATE.format(
             context=format_context(capped), question=state["question"])
         if state["gaps"]:  # evidence-driven refusal/hedging (M4)
@@ -218,14 +158,9 @@ def build_agentic_graph(retriever, llm, trace: bool = False, check=None):
                   "chunks": capped,  # record exactly what the generator saw
                   "citations": cites}
         if trace:
-            context_rounds: dict = {}
-            for c in capped:
-                r = c.get("round")
-                context_rounds[r] = context_rounds.get(r, 0) + 1
             update["trace"] = state["trace"] + [
                 {"node": "synthesize", "context_chunks": len(capped),
                  "dropped_chunks": len(state["chunks"]) - len(capped),
-                 "context_rounds": context_rounds,
                  "citations_valid": len(cites["valid"]),
                  "citations_invalid": len(cites["invalid"])}]
         return update
@@ -237,7 +172,7 @@ def build_agentic_graph(retriever, llm, trace: bool = False, check=None):
     graph.add_node("synthesize", synthesize)
     graph.add_edge(START, "plan")
     graph.add_edge("plan", "retrieve")
-    graph.add_conditional_edges("retrieve", route_after_retrieve)
+    graph.add_edge("retrieve", "check")
     graph.add_conditional_edges("check", route_after_check)
     graph.add_edge("synthesize", END)
     return graph.compile()

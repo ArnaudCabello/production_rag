@@ -29,9 +29,45 @@ Module status board (update the table too):
 | T2 aggregation recall + synthesis | done | agent/plans/T2_aggregation_cap.md | slice validated: judge 10→14, agg 1→2, refusals 4/4, latency ~flat |
 | T3 refusal + ambiguous calibration | done | agent/plans/T3_refusal_calibration.md | T3.3 accepted: traps 3/3 refuse-or-hedge, cost flat, robust judge net 0 |
 | T4 synthesis conversion (cross_doc, multi_chunk) | closed (attempted, reverted) | agent/plans/T4_synthesis_conversion.md | T4/T4.1 both failed trap gate; SYNTH_GUIDE reverted to T3c state |
-| T5 final full run + close-out | planned | agent/plans/T5_final_run.md | Phase 1 pre-flight done; waiting on human's Colab full run |
+| T5 final full run + close-out | done | agent/plans/T5_final_run.md | tuned run regressed quality (judge −5.2 vs untuned, p=0.007); REVERTED to baseline agentic (64ea7ba); M6_report.md final section |
 
 ---
+
+## 2026-07-23 T5 DONE — tuned run regressed on full set; REVERTED to baseline agentic
+- What was done: human ran the full 306-q agentic run of the tuned (T3c) config
+  on Colab (bench_agentic_T5{.jsonl,_judge.jsonl,_scored.json}, pushed
+  a442b72/7f1e658); agent pulled, ran sanity gates (306 rows, llm max 6/mean
+  4.17, retrieval ≥1 on all) and compare.py twice. RESULT: tuning traded
+  accuracy for latency. Tuned vs baseline-agentic judge-correct OVERALL −5.2,
+  bootstrap p=0.007 (SIGNIFICANT); multi_hop 63.3→46.7 (−16.7, T1 stops killed
+  drift retrieval — the flagged risk), factual 81.7→73.3 (−8.3, T1 single-fact
+  rule), unanswerable 76→68 (T3 didn't generalize). Tier B 32.4→25.7. Only win:
+  latency 6.2×→4.3× (under the 5× cap). Three-pipeline table (legacy 49.2 /
+  baseline-agentic 51.8 / tuned 46.6 overall) + PRD §3 scoreboard + lessons in
+  eval/results_v2/M6_report.md (final "T5" section). DECISION (human): revert
+  to baseline agentic — the strongest measured config.
+- Files touched: agentic/graph.py + agentic/checker.py reverted to 64ea7ba
+  (M5/baseline-agentic close); tests/test_agentic_parity.py, test_check.py,
+  test_retrieval_loop.py, test_planner.py, test_synthesis.py reverted to
+  64ea7ba; tests/test_round_efficiency.py + test_synth_selection.py removed
+  (T1/T2-only); eval/run_benchmark.py new_chunks init key dropped (closed_book
+  adapter + T0 slice infra KEPT); eval/results_v2/M6_report.md (T5 section);
+  agent/PROGRESS.md. Preserved: all slice_T*/trap_T*/bench_agentic_T5* artifacts.
+- Tests: 9-file suite (parity, check, closed_book, pipeline, planner,
+  retrieval_loop, scope, synthesis, tuning_slice) — passing with
+  .venv/bin/python. `git diff 64ea7ba -- agentic/` empty (behavioral revert
+  confirmed).
+- Next step for the following agent: M6/PRD_TUNING is CLOSED. Final pipeline =
+  baseline agentic. If tuning resumes: any change touching retrieval
+  termination or refusal MUST be validated at a per-category n large enough to
+  detect a 10-pt swing (or on a full run) — the 26-id slice hid the multi_hop/
+  unanswerable regressions (n≈2/4). Aggregation (8%, flat across all configs)
+  is the unsolved structural blocker.
+- Gotchas discovered: slice-validated tuning gains (traps 3/3, latency −20%,
+  agg nudged) were real on the slice but MISLEADING about the full set — small
+  per-category n. The untuned agentic pipeline outscored every tuned variant on
+  judge-correct. bench_agentic.jsonl (untuned full run) is the quality
+  reference; bench_agentic_T5* is the tuned run — never conflate.
 
 ## 2026-07-23 T5 final full run — planned (Phase 1 pre-flight done; Colab run pending)
 - What was done: plan written with the human and approved

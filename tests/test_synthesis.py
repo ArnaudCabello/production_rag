@@ -44,7 +44,7 @@ def run_agentic(retriever, llm, question=Q, **kw):
     graph = build_agentic_graph(retriever, llm, **kw)
     state = {"question": question, "llm_calls": 0, "retrieval_calls": 0,
              "chunks": [], "rounds": 0, "pending_queries": [], "queries_run": [],
-             "gaps": [], "new_chunks": 0}
+             "gaps": []}
     if kw.get("trace"):
         state["trace"] = []
     return graph.invoke(state)
@@ -106,7 +106,6 @@ assert [c["chunk_id"] for c in ag["chunks"]] == [f"x-{i}" for i in range(MAX_SYN
 synth_ev = [e for e in ag["trace"] if e["node"] == "synthesize"][0]
 assert synth_ev["context_chunks"] == MAX_SYNTH_CHUNKS
 assert synth_ev["dropped_chunks"] == 5
-assert synth_ev["context_rounds"] == {1: MAX_SYNTH_CHUNKS}  # T2: all round-1 here
 print("graph: context capped deterministically, dropped count traced: OK")
 
 # 7. no-cap parity: ≤cap chunks → synthesis prompt byte-identical to baseline,
