@@ -28,10 +28,33 @@ Module status board (update the table too):
 | T1 round efficiency (latency) | done | agent/plans/T1_round_efficiency.md | slice validated: latency −20% (med 46.1s ≈ 5× target), refusals held |
 | T2 aggregation recall + synthesis | done | agent/plans/T2_aggregation_cap.md | slice validated: judge 10→14, agg 1→2, refusals 4/4, latency ~flat |
 | T3 refusal + ambiguous calibration | done | agent/plans/T3_refusal_calibration.md | T3.3 accepted: traps 3/3 refuse-or-hedge, cost flat, robust judge net 0 |
-| T4 synthesis conversion (cross_doc, multi_chunk) | not started | — | after T0 |
+| T4 synthesis conversion (cross_doc, multi_chunk) | planned | agent/plans/T4_synthesis_conversion.md | SYNTH_GUIDE (relation + specifics), unconditional; ready for /build T4 |
 | T5 final full run + close-out | not started | — | last; ONE full 306-q run |
 
 ---
+
+## 2026-07-23 T4 synthesis conversion — planned
+- What was done: plan written with the human and approved
+  (agent/plans/T4_synthesis_conversion.md). Scope: agentic-only SYNTH_GUIDE
+  appended to the synthesize system message in agentic/graph.py —
+  (1) answer the asked relation explicitly, each side cited, no generic
+  similarities (v2q089/v2q083 failure mode); (2) every part + sources'
+  specific values, not qualitative summaries (v2q158 failure mode, partial
+  3 runs at ev 1.0). Unconditional (planner labels unreliable) — M1 parity
+  assert intentionally redefined to "baseline prompt + SYNTH_GUIDE".
+  v2q127 checked: judge churn, not a T4 target. Zero new LLM calls; checker/
+  GAP_NOTE/cap policy/baseline pipeline untouched.
+- Files touched: agent/plans/T4_synthesis_conversion.md (new),
+  agent/PROGRESS.md.
+- Tests: none yet — /build T4 extends tests/test_synthesis.py FIRST
+  (system message ends with SYNTH_GUIDE; GAP_NOTE composition unchanged) +
+  parity redefinition; full 11-file suite green.
+- Next step for the following agent: `/build T4` per the plan. Validation:
+  Colab slice → slice_T4.jsonl + --judge vs slice_T3c (cross_doc/multi_chunk
+  up, v2q158 conversion target; refusals hold ≥3/4 + regex ≥3; others not
+  worse robustly; cost flat). Optional trap_T4 re-check — watch the
+  specifics demand for near-miss leakage (fallback wording in plan).
+- Gotchas discovered: n/a (planning only).
 
 ## 2026-07-23 T3.3 validation — ACCEPTED (T3 CLOSED)
 - What was done: human ran trap_T3c + slice_T3c on Colab; agent compared vs
